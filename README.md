@@ -1,9 +1,10 @@
 # Fall-Real-Analysis
 Northwestern University 2021 Fall
 
-Content Covered:
-    * The Real Number System <br />
-    * Topology of Metric Spaces <br />
-    * Sequences & Series <br />
-    * Continuity <br />
-    * Differentiability <br />
+Content Covered: <br />
+    <ul>
+    <li> The Real Number System </li>
+    <li> Topology of Metric Spaces </li>
+    <li> Sequences & Series </li>
+    <li> Continuity </li>
+    <li> Differentiability </li>
