@@ -1,0 +1,79 @@
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage{latexsym}
+\usepackage{hyperref}
+    % URLs: \url{insert url here}
+        % Optional: \usepackage{indentfirst}
+% -----------------------------------------------------------------------------
+                                % Creates header
+\usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyhf{}
+    \lhead{\leftmark}
+    \rhead{\rightmark}
+    \cfoot{Page \thepage}
+% -----------------------------------------------------------------------------
+                                % Adjust line spacing
+\usepackage{setspace}
+    \singlespacing
+% -----------------------------------------------------------------------------
+                                % Includes specialized lists
+\usepackage{paralist}
+    % Format
+        % \begin{compactenum}
+        %   \item Item 1
+        %   \begin{compactitem}
+        %       \item Subitem
+        %   \end{compactitem}
+        % \end{compactenum}
+    
+\usepackage{enumitem}
+    % Format
+        % { \setlist{nolistsep}
+        %   \setitemize[1]{label = insert label here}
+        %   \setenumerate[1]{label = insert label here}
+        %
+        %   \begin{enumerate}
+        %       \item Item
+        %       \begin{itemize}
+        %           \item Subitem
+        %       \end{itemize}
+        %   \end{enumerate}
+        % }
+% -----------------------------------------------------------------------------
+                                % Adjust tables
+\usepackage{array}
+    \setlength{\extrarowheight}{2pt}
+            % Optional: \usepackage{booktabs}
+    % Format
+        % \begin{table}[placement]  i.e)   h = here, t = top, b = bot
+        %   \centering
+        %   \begin{tabular}{|c}     i.e)   | = vertical line, c = column
+        %       \stuff
+        %   \end{tabular}
+        % \caption{Name of table}
+        % \label{Table label}    
+        % \end{table}
+% -----------------------------------------------------------------------------
+                                % Include pictures
+\usepackage{graphicx}
+    % Format
+        % \begin{figure}[h]
+        %   \centering
+        %   \includegraphics[scale=0.25]{Picture}
+        %   \caption{Name of picture}
+        %   \label{Picture label}
+        % \end{figure}
+% -----------------------------------------------------------------------------
+                                % Include colors
+\usepackage{color}
+    % Format
+    %   \color{insert color here}
+    %   \definecolor{name}{RGB}{#, #, #}
+% -----------------------------------------------------------------------------  
+                                % Adjust paper size
+\usepackage[a4paper, inner=3cm, outer=3cm, top=2.5cm, bottom=2.5cm]{geometry}
+\setlength\headheight{15pt}
+\renewcommand{\headwidth}{15cm}
