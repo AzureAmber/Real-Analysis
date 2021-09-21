@@ -1,103 +1,120 @@
 \newpage
-\section[Day 1: The Real Number System]{The Real Number System}
+\section[Day 1: The Real Number System]{Least Upper Bound Property}
 
-$ \mathbb{N} = 1, 2, 3, ... $ \\
-$ \mathnn{Z} = -2, -1, 0, 1, 2 $ \\
-$ \mathbb{Q} = p/q $ where Q is countable and fails to have the least upper bound property\\
+\subsection{Number Systems}
 
-Ex 1.1 \\
-$ \alpha \in \mathbb{R} $ where $ \alpha^2 = 2 $ \\
-Let $ \alpha = p/q $ where p and q cannot both be even \\
+\begin{align*}
+	\text{Natural}:\ & \mathbb{N} = \{1, 2, 3, ... \} \\
+	\text{Integer}:\ & \mathbb{Z} = \{-2, -1, 0, 1, 2, ... \} \\
+	\text{Rational}:\ & \mathbb{Q} = \frac{p}{q} \ \text{where p,q} \in \mathbb{N}
+\end{align*}
+*** Q is countable, but fails to have the least upper bound property *** \\
 
-$
-Let set A = \{ x \in \mathbb{Q} \ for x^2 < 2 } where A is nonempty and 2is an upper bound for A \\
-$ \\
+{ \color{red} Example 1.1 }
 
-A has no least upper bound in R \\
-A has a least upper bound in Q \\
-\hfill \\
+\qquad Let $ \alpha \in \mathbb{R} $ where $ \alpha^2 = 2 $. Then $ \alpha $ cannot be rational.
+
+{ \color{magenta} \underline{Proof} }
+
+Let $ \alpha = \frac{p}{q} $ where p and q cannot both be even.
+
+Let set A = $\{ x \in \mathbb{Q} \ \text{for} \ x^2 < 2 \} $ where A $ \neq \emptyset $
+and 2 is an upper bound for A.
+
+A has no least upper bound in Q, but A has a least upper bound in R.
+
+\subsection{Real Number System}
 
 $ \mathbb{R} $ is the unique ordered field withthe least upper bound property. \\
-Theorem: $ \mathbb{R} $ exists and unique. \\
+$ \mathbb{R} $ exists and unique. \\
 
-Def 1.5 \\
-Let S be a set. An order on S is a relation < satisfying 2 axioms:
+{ \color{blue} Definition 1.5 }
+
+\qquad Let S be a set. An order on S is a relation $<$ satisfying two axioms:
+
 \begin{itemize}
-	\item Trichotomy: For all x,y \in S:
+	\item Trichotomy: For all x,y $ \in $ S, only one holds true:
 		\begin{itemize}
 			\item x $<$ y
 			\item x = y
 			\item x $>$ y
 		\end{itemize}
 	\item Transitivity: If x $<$ y and y $<$ z, then x $<$ z.
-\end{itemize} \\
-\hfill \\
+\end{itemize}
 
-Def 1.5 \\
-An ordered set is a set with an order.
+{ \color{blue} Definition 1.6 }
 
+\qquad An ordered set is a set with an order. \\
 
-\hfill \\
-Def 1.7 \\
-Let S be an ordered set. Let E \subset S. \\
-An upper bound of E is a $ \beta \in S $ where x \<= \beta for all x \in E. \\\
-If such a \beta exists, then E is bounded from above. \\
+{ \color{blue} Definition 1.7 }
 
-\hfill \\
-Def 1.8 \\
-Let S be an ordered set. Let E \subset S be bounded from above. \\
-here exists an \alpha where:
-\begin{itemize}
-	\item \alpha is an upper bound for E
-	\item if x \< \alpha, then x is not an upper bound for E
-\end{itemize} \\
-Then \alpha = sup(E). \\
+\qquad Let S be an ordered set. Let E $ \subset $ S.
 
-\hfill \\
-*** Lower Bound in textbook known as an inf(E) *** \\
-Example 1.9 \\
-Let S = $ (1,2) \cup [3,4) \cup (5,6) $ with an order $ < $ from $ \mathbb{R} $. \\
-For subsets E of S \\
-\begin{itemize}
-	\item E = (1,2) is bound above and sup(E) = 3
+\qquad An upper bound of E is a $ \beta \in $ S if x $ \leq \beta $ for all x $ \in $ E.
+
+\qquad If such a $ \beta $ exists, then E is bounded from above. \\
+
+\newpage
+
+{ \color{blue} Definition 1.8 }
+
+\qquad Let S be an ordered set. Let E $ \subset $ S be bounded from above.
+
+\qquad Then, there exists a least upper bound $ \alpha $ where:
+
+\begin{itemize}[leftmargin=2cm]
+	\item $ \alpha $ is an upper bound for E
+	\item If $ \gamma < \alpha $, then $ \gamma $ is not an upper bound for E.
+\end{itemize}
+
+\qquad Then $ \alpha $ = sup(E).
+
+*** Lower Bound: inf(E) *** \\
+
+{ \color{red} Example 1.9 }
+
+\qquad Let S = $ (1,2) \cup [3,4) \cup (5,6) $ with the order $ < $ from $ \mathbb{R} $.
+For subsets E of S:
+
+\begin{itemize}[leftmargin=2cm]
+	\item E = (1,2) is bounded above and sup(E) = 3
 	\item E = (5,6) is not bounded above so sup(E) = DNE
 	\item E = [3,4) is bounded below inf(E) = 3 and sup(E) = DNE
-\end{itemize} \\
+\end{itemize}
 
-\hfill \\
-Observations \\
-If sup E exists, it may or may not exists at E. \\
-If \alpha exists, then \alpha is unique.
-If $ \gamma \neq \alpha $, then $ \gamma < \alpha $ or $ \gamma > \alpha $ \\
+{ \color{green} Observations on the Least Upper Bound }
 
-\hfill \\
-Def 1.10 \\
-A is an ordered set of S. \\
-A has a least upper bound property if:
-\begin{itemize}
-	\item For every nonempty subset E \subset S that is bounded from above, sup(E) exists in S.
-\end{itemize} \\
+\qquad If sup E exists, it may or may not exists at E.
 
-\hill \\
-Example 1.1 \\
-$ \mathbb{Q} $ doesn't have a least upper bound property for example $ \sqrt(2) $. \\
-Proof is at textbook.
+\qquad If $ \alpha $ exists, then $ \alpha $ is unique.
+If $ \gamma \neq \alpha $, then $ \gamma < \alpha $ or $ \gamma > \alpha $. \\
 
-$ z = y - \frac{y^2-2}{y+2} then take z^2-2 = 2 \frac{2(y^2-2)}{(y+2)^2} $ \\
-Then compare if $y^2 < 2$ and $y^2 > 2$. \\
-\begin{itemize}
-	\item y^2 < 2 is not an upper bound for E
-	\item y^2 > 2 is an upper bound for E, but not a sup(E).
-\end{itemize} \\
-ThusE has no least upper bound in \mathbb{Q}. \\
-However, since E \subsetof R then \sqrt(2) is in E.
+\subsection{Least Upper Bound Property}
 
+{ \color{blue} Definition 1.10 }
 
+\qquad An ordered set of S has a least upper bound property if:
 
+\qquad \qquad For every nonempty subset E $ \subset $ S that is bounded from above:
 
+\qquad \qquad \qquad sup(E) exists in S. \\
 
+{ \color{red} Example 1.1 }
 
+\qquad $ \mathbb{Q} $ doesn't have a least upper bound property. For example, z = $ \sqrt{2} $.
 
+{\color{magenta} \underline{Proof}}
 
+\qquad Let $ z = y - \frac{y^2-2}{y+2} = \frac{2y+2}{y+2} $, then take $ z^2-2 = \frac{2(y^2-2)}{(y+2)^2} $.
 
+\qquad Let set A = $ \{ y > 0 \in \mathbb{Q} \ \text{where} \ y^2 < 2 \} $ and
+set B = $ \{ y > 0 \in \mathbb{Q} \ \text{where} \ y^2 > 2 \} $
 
+\begin{itemize}[leftmargin=2cm]
+	\item If $ y^2-2 < $ 0, then y is not an upper bound for E.
+	\item If $ y^2-2 > $ 0, y is an upper bound for E, but not the sup(E).
+\end{itemize}
+
+\qquad Thus, E has no least upper bound in $ \mathbb{Q} $.
+
+\qquad However in $ \mathbb{R} $, $ \sqrt{2} $ is in E.
