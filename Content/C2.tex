@@ -43,18 +43,26 @@ Thus, inf(B) = $\alpha$.
 Addition Axioms
 \begin{itemize}[leftmargin=2cm]
 	\item If x,y $\in$ F, then x+y $\in$ F
+	
 	\item x+y = y+x for all x,y $\in$ F
+	
 	\item (x+y)+z = x+(y+z) for all x,y,z $\in$ F
+	
 	\item There exists 0 $\in$ F such that 0+x = x for all x $\in$ F
+	
 	\item For every x $\in$ F, there is -x $\in$ F where x+(-x) = 0
 \end{itemize}
 
 Multiplicative xioms
 \begin{itemize}[leftmargin=2cm]
 	\item If x,y $\in$ F, then xy $\in$ F
+	
 	\item yx = xy for all x,y $\in$ F
+	
 	\item (xy)z = x(yx) for all x,y,z $\in$ F
+	
 	\item There exists 1 $\not =$ 0 $\in$ F such that 1x = x for all x $\in$ F
+	
 	\item If x $\not =$ 0 $\in$ F, there is $\frac{1}{x}$ $\in$ F where x($\frac{1}{x}$) = 1
 \end{itemize}
 
@@ -63,20 +71,90 @@ Distributive Law
 \qquad x(y+z) = xy + xz hold for all x,y,z $\in$ F. \\
 
 { \color{blue} Definition 2.2.1 }
-\begin{itemize}[leftmargin=2cm]
+\begin{enumerate}[label=(\alph*), leftmargin=2cm]
 	\item If x+y = x+z, then y = z
+
+		{ \color{magenta} \underline{Proof}  }
+		
+		\qquad y = 0+y = (-x)+x+y = (-x)+x+z = 0+z = z
+	
 	\item If x+y = x, then y = 0
+
+		{ \color{magenta} \underline{Proof} }
+
+		\qquad From (a), let z = 0.
+	
 	\item If x+y = 0, then y = -x
+	
+		{ \color{magenta} \underline{Proof} }
+
+		\qquad From(a), let z = -x.
+	
 	\item -(-x) = x
+
+		{ \color{magenta} \underline{Proof} }
+
+		\qquad From (a), let x = -x and y = x.
+	
 	\item If x $\not =$ 0 and xy = xz, then y = z
+
+		{ \color{magenta} \underline{Proof} } 
+		
+		\qquad y = 1y = $\frac{1}{x}$xy = $\frac{1}{x}$xz = 1z = z 
+	
 	\item If x $\not =$ 0 and xy = x, then y = 1
+
+		{ \color{magenta} \underline{Proof} } 
+		
+		\qquad From (e), let z = 1.
+	
 	\item If x $\not =$ 0 and xy = 1, then y = $\frac{1}{x}$
+
+		{ \color{magenta} \underline{Proof} } 
+		
+		\qquad From (e), let z = $\frac{1}{x}$.
+	
 	\item If x $\not =$ 0, then $\frac{1}{1/x}$ = x
+
+		{ \color{magenta} \underline{Proof} } 
+		
+		\qquad From (e), let x = $\frac{1}{x}$ and y = x.
+	
 	\item 0x = 0
+
+		{ \color{magenta} \underline{Proof} } 
+		
+		\qquad Since 0x + 0x = (0+0)x = 0x, then 0x = 0.
+	
 	\item If x,y $\not =$ 0, then xy $\not =$ 0
+
+		{ \color{magenta} \underline{Proof} } 
+		
+		\qquad Suppose xy = 0, then $\frac{1}{y}\frac{1}{x}$xy = $\frac{1}{y}$1y =
+				$\frac{1}{y}$y = 1.
+
+		\qquad xy = 0 = 1 is a contradiction.
+	
 	\item (-x)y = -(xy) = x(-y)
+
+		{ \color{magenta} \underline{Proof} } 
+		
+		\qquad xy + (-x)y = (x+(-x))y = 0y = 0.
+
+		\qquad Then by part (c), (-x)y = -(xy).
+
+		\qquad Similarly, xy + x(-y) = x(y+(-y)) = x0 = 0.
+	
+		\qquad Then by part (c), x(-y) = -(xy).
+	
 	\item (-x)(-y) = xy
-\end{itemize}
+
+		{ \color{magenta} \underline{Proof} } 
+		
+		\qquad By part (k), then (-x)(-y) = -[x(-y)] = -[-(xy)].
+
+		\qquad By part (d), -[-(xy)] = xy.
+\end{enumerate}
 
 
 
@@ -88,6 +166,7 @@ Distributive Law
 
 \begin{itemize}[leftmargin=2cm]
 	\item If y $<$ z, then y+x $<$ z+x
+	
 	\item If x,y $>$ 0, then xy $>$ 0
 \end{itemize}
 
@@ -100,9 +179,13 @@ Distributive Law
 \qquad Let F be an ordered field. For all x,y,z $\in$ F.
 \begin{itemize}[leftmargin=2cm]
 	\item If x $>$ 0, -x $<$ 0 and vice versa
+	
 	\item If x $>$ 0 and y $<$ z, then xy $<$ xz
+	
 	\item If x $ < $ 0 and y $ < $ z, then xy $ > $ xz
+	
 	\item If x $\neq$ 0, $x^2 > $ 0
+	
 	\item If 0 $< x < y$, then 0 $< 1/y < 1/x$
 \end{itemize}
 
@@ -118,7 +201,8 @@ Distributive Law
 
 For all x,y $\in$ $ \mathbb{R} $:
 \begin{itemize}[leftmargin=1cm]
-	\item {\color{lblue} Archimedean Property}: If x $>$ 0, there is n $\in$ $ \mathbb{Z} $ such that nx $>$ y.
+	\item {\color{lblue} Archimedean Property}:
+		If x $>$ 0, there is n $\in$ $ \mathbb{Z} $ such that nx $>$ y.
 	
 		{ \color{magenta} \underline{Proof} }
 
