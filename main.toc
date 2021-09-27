@@ -7,7 +7,9 @@
 \contentsline {subsection}{\numberline {2.1}Greatest Upper Bound Property}{5}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Fields}{5}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Ordered Fields}{7}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Day 3}{9}{section.3}%
+\contentsline {section}{\numberline {3}Day 3: Roots and Complex}{9}{section.3}%
 \contentsline {subsection}{\numberline {3.1}nth Root}{9}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Decimals and Extended Reals}{9}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Complex Numbers}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.2}Decimals}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Extended Reals}{10}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Complex Numbers}{10}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Day4:}{12}{section.4}%

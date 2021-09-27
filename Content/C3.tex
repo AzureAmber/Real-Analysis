@@ -1,123 +1,259 @@
 \newpage
-
-\section[Day 3]{Temp}
+\section[Day 3: Roots and Complex]{Roots \& Complex}
 
 \subsection{nth Root}
 
-If 0 $<$ t $<$ 1, then t$^\text{n}$ $ \leq $ t.
+\begin{itemize}[leftmargin=1cm]
+	\item If 0 $<$ t $\leq$ 1, then t$^\text{n}$ $ \leq $ t.
 
-If t $>$ 1, t$^\text{n}$ $ \geq $ t.
+		{ \color{magenta} \underline{Proof} } 
+		
+		Since t $>$ 0 and t $\leq$ 1, then t$^\text{2}$ $\leq$ t.
 
-If 0 $<$ s $<$t, s $^\text{n}$ $<$ t$^\text{n}$. \\
+		Since t$^\text2{}$ $\leq$ t, then t$^\text{3}$ $\leq$ t$^\text{2}$
+		so t$^\text{3}$ $\leq$ t$^\text{2}$ $\leq$ t.
 
-{ \color{blue} Theorem 3.1.1  }
+		Applying the process n times, then t$^\text{n}$ $\leq$ t.
+
+	\item If t $\geq$ 1, t$^\text{n}$ $ \geq $ t.
+
+		{ \color{magenta} \underline{Proof} } 
+		
+		Since 0 $<$ 1 $\leq$ t, then t $\leq$ t$^\text{2}$.
+
+		Since t $\leq$ t$^\text{2}$, then t$^\text{2}$ $\leq$ t$^\text{3}$
+		so t $\leq$ t$^\text{2}$ $\leq$ t$^\text{3}$.
+
+		Applying the process n times, t $\leq$ t$^\text{n}$.
+
+	\item If 0 $<$ s $<$ t, s$^\text{n}$ $<$ t$^\text{n}$.
+
+		{ \color{magenta} \underline{Proof} } 
+		
+		$\underbrace{\text{s} \cdot \text{s} \cdot ... \cdot \text{s}}_\text{n}$
+		$<$ t $\cdot$ s $\cdot$ ... $\cdot$ s
+		$<$ t $\cdot$ t $\cdot$ ... $\cdot$ s $<$ ... $<$
+		$\underbrace{\text{t} \cdot ... \cdot \text{t}}_\text{n}$
+\end{itemize}
+
+
+{ \color{blue} Theorem 3.1.1: y$^\text{n}$ = x has a unique y }
 
 \qquad Fix n. For every x $>$ 0, there exists a unique y $\in$ $ \mathbb{R} $ such that
 	y$^\text{n}$ = x.
 
 { \color{magenta} \underline{Proof} } 
 
-Uniqueness: y is unique since if y$_{1}$ $<$ y$_{2}$, then y$_{1}$$^\text{n}$ $<$ y$_{2}$$^\text{n}$.
+{ \color{lblue} Uniqueness: }
 
-Existence:
+y is unique since if y$_{1}$ $<$ y$_{2}$, then x = y$_{1}$$^\text{n}$ $<$ y$_{2}$$^\text{n}$ $\neq$ x.
 
-Let set A = \{ t $>$ 0 : t $^\text{n}$ $<$ x \}
+{ \color{lblue} Existence: }
 
-A $\not =$ $\emptyset$ since let t$_{1}$ = $\frac{x}{x+1}$ $<$ 1 and $<$ x.
+Let set A = \{ t $>$ 0 : t$^\text{n}$ $<$ x \}
 
-Thus, 0 $<$ t$_{1}$$^\text{n}$ $ \leq $ t$_{1}$ $<$ x so t$_{1}$ $\in$ A.
+A $\not =$ $\emptyset$ since let t$_{1}$ = $\frac{x}{x+1}$ $<$ 1 and $<$ x
+and thus, 0 $<$ t$_{1}$$^\text{n}$ $<$ t$_{1}$ $<$ x so t$_{1}$ $\in$ A.
 
-A is bounded above since t $ \geq $ x+1.
+A is bounded above since if t $ \geq $ x+1, then
+t $>$ 1 so t$^\text{n}$ $ \geq $ t $ \geq $ x+1 $>$ x so t $\not \in$ A.
 
-Then t $>$ 1 so t$^\text{n}$ $ \geq $ t $ \geq $ x+1 $>$ x so t $\not \in$ A.
+So x+1 is an upper bound of A.
 
-Thus, x+1 is an upper bound of A.
-
-By the least upper bound property, then y = sup(A).
+Thus by the least upper bound property, y = sup(A) exists.
 
 For y$^\text{n}$ = x, show y$^\text{n}$ $<$ x and y$^\text{n}$ $>$ x cannot hold true.
 
-***(Not an upper bound of A and y is not a least upper bound of A)
+***(Not an upper bound of A if $<$ and not a least upper bound of A if $>$)***
 
 For 0 $<$ $\alpha$ $<$ $\beta$:
 
-\qquad $\beta ^\text{n}$ - $\alpha^\text{n}$ $<$ ($\beta - \alpha$)n$\beta$$^\text{n-1}$ 
-{<\color{red} Insert Proof>}
+\qquad $\beta ^\text{n}$ - $\alpha^\text{n}$
+= ($\beta$ - $\alpha$)
+	($\underbrace{\beta^{n-1} + \beta^{n-2}\alpha^1 + ... + \alpha^{n-1}}
+	_{\beta^{n-1} \hspace{0.7cm} <\beta^{n-1} \hspace{1.3cm} <\beta^{n-1}}$)
+$<$ ($\beta - \alpha$)n$\beta$$^\text{n-1}$ 
 
-Suppose y$^\text{n}$ $<$ x. Pick 0 $<$ h $<$ 1 which contradicts the previous statement.
+Suppose y$^\text{n}$ $<$ x. Pick 0 $<$ h $<$ 1 and h $<$ $\frac{x-y^n}{n(y+1)^{n-1}}$.
 
-From inequality, let $\beta$ = y+h and $\alpha$ = y. <Insert Proof>
+\qquad From inequality, let $\beta$ = y+h and $\alpha$ = y
 
-Thus, (y+h)$^\text{n}$ $<$ x, thus (y+h) $\in$ A and thus, not an upper bound of A.
+\qquad \qquad (y+h)$^\text{n}$ - y$^\text{n}$ $<$ hn(y+h)$^\text{n-1}$
+$<$ hn(y+1)$^\text{n-1}$ $<$ x - y$^\text{n}$
 
-Suppose y$^\text{n}$ $>$ x. Pick k = $\frac{y^n - x}{ny^{n-1}}$ $<$ y. <Insert Proof>
+\begin{adjustbox}{minipage=14.2cm, right}
+	Thus, (y+h)$^\text{n}$ $<$ x so y+h $\in$ A and thus, not an upper bound of A
+	which is a contradiction since y = sup(A).
+\end{adjustbox}
 
-Consider t $ \geq $  y-k, then:
+Suppose y$^\text{n}$ $>$ x.
+Pick 0 $<$ k = $\frac{y^n - x}{ny^{n-1}}$ $<$ $\frac{y^n}{ny^{n-1}}$
+= $\frac{1}{n}y$ $<$ y.
 
-\qquad y$^\text{n}$ - t$^\text{n}$ $ \leq $  y$^\text{n}$ - (y-k)$^\text{n}$ $<$
-	kny$^\text{n-1}$ = y$^\text{n}$ - x
+\qquad Consider t $ \geq $  y-k, then:
+y$^\text{n}$ - t$^\text{n}$ $ \leq $  y$^\text{n}$ - (y-k)$^\text{n}$ $<$
+kny$^\text{n-1}$ = y$^\text{n}$ - x
 
-So t $\not \in$ A.
+\qquad Thus, t$^\text{n}$ $>$ x so t $\not \in$ A.
 
-Thus, y-k is not an upper bound of A contradicting y is the least upper bound of A.
+\qquad Thus, y-k is an upper bound of A which is a contradiction since y = sup(A).
 
 Since y$^\text{n}$ $<$ x and y$^\text{n}$ $>$ x, then y$^\text{n}$ = x. 
 
-\subsection{Decimals and Extended Reals}
+\newpage
+
+
+
+
+
+\subsection{Decimals}
+
+Let n$_0$ be the largest integer such that n$_0$ $\leq$ x for x $>$ 0 $\in$ $\mathbb{R}$.
+
+Then let n$_k$ be the largest integer such that:
+
+\qquad d$_k$ = n$_0$ + $\frac{n_1}{10}$ + ... + $\frac{n_k}{10^k}$ $\leq$ x
+
+Let E be the set of d$_k$ for k = 0, 1, ... $\infty$. Then, x = sup(E).
+
+
+
+
+
+\subsection{Extended Reals}
+
+The extended real number system consist of $\mathbb{R}$ and $\pm$$\infty$ such that:
+
+\qquad -$\infty$ $<$ x $<$ $\infty$	\qquad for every x $\in$ $\mathbb{R}$
+
+with the properties:
+\begin{itemize}[leftmargin=2cm]
+	\item x $\pm$ $\infty$ = $\pm$$\infty$
+	
+	\item x / $\pm$$\infty$ = 0
+
+	\item If x $>$ 0, then x($\pm$$\infty$) = $\pm$$\infty$
+
+	\item If x $<$ 0, then x($\pm$$\infty$) = $\mp$$\infty$
+\end{itemize}
+
+
+
+
 
 \subsection{Complex Numbers}
 
-	{ \color{blue} Definition 3.3.1 } 
+	{ \color{blue} Definition 3.3.1: Complex } 
 	
 	\qquad A complex number is an ordered pair (a,b) where a,b $\in$ $ \mathbb{R} $.
 	For x,y $\in$ $\mathbb{C}$
 	\begin{itemize}[leftmargin=2cm]
-		\item (a,b) + (c,d) = (a + c , b + d)
-		\item (a,b) * (c,d) = (ac - bd , ad + bc)
+		\item x + y = (a,b) + (c,d) = (a + c , b + d)
+		\item xy = (a,b) (c,d) = (ac - bd , ad + bc)
+		\item $\frac{1}{\text{x}}$  = (a$^2$ + b$^2$)(a,-b)
 	\end{itemize}
 
 	Thus, the axioms form a field where (0,0) = 0 and (1,0) = 1 and (0,1) = i. \\
 
-	{ \color{blue} Definition 3.3.2 } 
+	{ \color{blue} Definition 3.3.2: Imaginary i } 
 	
-	\qquad Let i = (0,1).
+	\qquad Let i = (0,1). Then, i$^2$ = -1.
 
 	{ \color{magenta} \underline{Proof} } 
 	
-	i$^\text{2}$ = -1. {\color{red} Insert Proof} \\
+	i$^\text{2}$ = (0,1)(0,1) = (0-1,0+0) = (-1,0) = -1 \\
 
-	{ \color{blue} Definition 3.3.3 } 
+	{ \color{blue} Definition 3.3.3: Form a + bi } 
 	
-	\qquad (a,b) = a + bi \\
+	\qquad (a,b) = a + bi
 
-	{ \color{blue} Definition 3.3.4 }
+	{ \color{magenta} \underline{Proof} } 
 	
-	\qquad Let conjugate: $\bar{z}$ = a - bi
+	(a,b) = (a,0) +(0,b) = (a,0) + (b,0)(0,1) = a + bi \\
 
+	{ \color{blue} Definition 3.3.4: Conjugate }
+	
+	\qquad Let conjugate: $\bar{z}$ = a - bi where Re(z) = a , Im(z) = b \\
+
+	\qquad Let z = (a,b) and w = (c,d):
 	\begin{itemize}[leftmargin=2cm]
-		\item $\bar{(z+w)}$ = $\bar{z}$ + $\bar{w}$
+		\item $\overline{z+w}$ = $\overline{z}$ + $\overline{w}$
 
-			\item Product
+			{ \color{magenta} \underline{Proof} } 
+			
+			$\overline{z+w}$ = $\overline{(a+c,b+d)}$ = (a+c,-b-d)
+			= (a,-b) + (c,-d) = $\overline{z}$ + $\overline{w}$
 
-			\item Real
+		\item $\overline{zw}$ = $\overline{z}$ $\overline{w}$
 
-			\item z$\bar{z}$ $ \geq $ 0 
+			{ \color{magenta} \underline{Proof} } 
+			
+			$\overline{zw}$ = $\overline{(ac-bd,ad+bc)}$ = (ac-bd,-ad-bc)
+			= (a,-b) (c,-d) = $\overline{z}$ $\overline{w}$
+
+		\item z + $\overline{z}$ = 2 Re(z) \qquad \qquad z - $\overline{z}$ = 2i Im(z)
+
+			{ \color{magenta} \underline{Proof} } 
+			
+			z + $\overline{z}$ = (a,b) + (a,-b) = (2a,0) = 2 Re(z)
+
+			z - $\overline{z}$ = (a,b) - (a,-b) = (0,2b) = (0,2) b = 2i Im(z)
+
+		\item z$\overline{z}$ $\geq$ 0
+
+			{ \color{magenta} \underline{Proof} } 
+			
+			z$\overline{z}$ = (a,b)(a,-b) = (a$^2$ + b$^2$ , -ab+ab) = a$^2$ + b$^2$ $\geq$ 0
 	\end{itemize}
 
-	{ \color{blue} Definition 3.3.5 } 
+	{ \color{blue} Definition 3.3.5: Absolute Value } 
 	
-	\qquad The \|z\| = \sqrt{z \bar{z}}.
+	\qquad Let absolute value: $|$ z $|$ = $\sqrt{z \overline{z}}$ \\
 
-	\qquad Insert propert for real numbers conjugate and absolute value. \\
+	\qquad Let z = (a,b) and w = (c,d):
+	\begin{itemize}[leftmargin=2cm]
+		\item If z $\neq$ 0, then $|$ z $|$ $>$ 0.
 
-{ \color{blue} Theorem 3.36  } 
+			{ \color{magenta} \underline{Proof} } 
+			
+			$\sqrt{z\overline{z}}$ = $\sqrt{a^2 + b^2}$ $\geq$ 0
+			where $|$ z $|$ = 0 only if a,b = 0 so only if z = (0,0).
 
-\begin{itemize}[leftmargin=2cm]
-	\item If x $\not =$ 0 abd \| x \| > 0, then 
-	\item conjuagte
-	\item product conjugate
-	\item Real part $<$ Actual for abs
-	\item \| z+w \| $ \leq $  \| z \| + \| w \|
-\end{itemize}
+		\item $|$ $\overline{z}$ $|$ = $|$ z  $|$
+
+			{ \color{magenta} \underline{Proof} } 
+			
+			$|$ $\overline{z}$ $|$ = $\sqrt{a^2 + (-b)^2}$ = $\sqrt{a^2 + b^2}$ = $|$ z $|$
+
+		\item $|$ zw $|$ = $|$ z $|$ $|$ w $|$
+
+			{ \color{magenta} \underline{Proof} } 
+			
+			$|$ zw $|$ = $|$ (ac-bd,ad+bc) $|$ = $\sqrt{(ac-bd)^2 + (ad+bc)^2}$
+			
+			= $\sqrt{a^2c^2 + b^2d^2 + a^2d^2 + b^2c^2}$
+			= $\sqrt{(a^2+b^2)(c^2+d^2)}$
+
+			= $\sqrt{a^2+b^2}$ $\sqrt{c^2+d^2}$ = $|$ z $|$ $|$ w $|$
+
+		\item $|$ Re(z) $|$ $\leq$ $|$ z $|$
+
+			{ \color{magenta} \underline{Proof} } 
+			
+			$|$ Re(z) $|$ = $|$ a $|$ = $\sqrt{a^2}$ $\leq$ $\sqrt{a^2+b^2}$
+			= $|$ z $|$
+
+		\item $|$ z+w $|$ $ \leq $  $|$ z $|$ + $|$ w $|$
+
+			{ \color{magenta} \underline{Proof} } 
+			
+			$| z+w |^2$ = (z+w)$\overline{(z+w)}$ = (z+w)($\overline{z} + \overline{w}$)
+			= z$\overline{z}$ + z$\overline{w}$ + w$\overline{z}$ + w$\overline{w}$
+			
+			= $|z|^2$ + $|w|^2$ + 2 Re(z$\overline{w}$)
+			$\leq$ $|z|^2$ + $|w|^2$ + 2 $|z\overline{w}|$
+			= $|z|^2$ + $|w|^2$ + 2$|z||w|$
+			= ($|z|$ + $|w|$)$^2$
+	\end{itemize}
 
 
