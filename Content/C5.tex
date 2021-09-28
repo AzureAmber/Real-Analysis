@@ -1,12 +1,140 @@
 \newpage
 \section[Day 5: ]{Temp}
 
+\subsection{ Set of Sets } 
 
+{ \color{blue} Definition 5.1.1: Union and Intersection } 
 
+	\begin{adjustbox}{minipage=14cm, right}
+		Let sets A,B be such that for each x $\in$ A, there is an associated E$_x$ $\subset$ B.
+		\begin{itemize}[leftmargin=1cm]
+			\item E = $\cup_{x=1}^{n}$ E$_x$ only if for every x $\in$ E, x $\in$ E$_x$ for
+				at least one x $\in$ A.
 
+			\item P = $\cap_{x=1}^{n}$ E$_x$ only if for every x $\in$ P, x $\in$ E$_x$ for
+				all x $\in$ A.
+		\end{itemize}
+		with properties:
+	\end{adjustbox}
 
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm]
+		\item A $\cup_{}^{}$ B = B $\cup_{}^{}$ A
+			\hspace{4cm} A $\cap_{}^{}$ B = B $\cap_{}^{}$ A
 
+		\item (A $\cup_{}^{}$ B) $\cup_{}^{}$ C = A $\cup_{}^{}$ (B $\cup_{}^{}$ C)
+			\hspace{1.6cm} (A $\cap_{}^{}$ B) $\cap_{}^{}$ C = A $\cap_{}^{}$ (B $\cap_{}^{}$ C)
 
+		\item A $\subset$ A $\cup_{}^{}$ B
+			\hspace{4.8cm} (A $\cap_{}^{}$ B) $\subset$ A
+
+		\item If A $\subset$ B, then A $\cup_{}^{}$ B = B and A $\cap_{}^{}$ B = A
+
+			{ \color{magenta} \underline{Proof} } 
+			
+				If x $\in$ A $\cup_{}^{}$ B, then x $\in$ A or/and x $\in$ B.
+				\begin{itemize}[leftmargin=1cm]
+					\item If x $\in$ A, since A $\subset$ B, then x $\in$ B.
+						Then, (A $\cup_{}^{}$ B) $\subset$ B.
+
+					\item If x $\in$ B, then immediately (A $\cup_{}^{}$ B) $\subset$ B.
+				\end{itemize}
+				If x $\in$ B, then x $\in$ A $\cup_{}^{}$ B so B $\subset$ (A $\cup_{}^{}$ B).
+				Thus, A $\cup_{}^{}$ B = B.
+
+				\vspace{0.5cm}
+
+				If x $\in$ A $\cap_{}^{}$ B, then x $\in$ A and x $\in$ B.
+				Thus, (A $\cap_{}^{}$ B) $\subset$ A.
+
+				If x $\in$ A, since A $\subset$ B, then x $\in$ B so x $\in$ A $\cap_{}^{}$ B.
+				Thus, A $\subset$ (A $\cap_{}^{}$ B).
+
+				Thus, A $\cap_{}^{}$ B = A.
+
+		\item A $\cap_{}^{}$ (B $\cup_{}^{}$ C) = (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C)
+
+			{ \color{magenta} \underline{Proof} } 
+			
+				If x $\in$ A $\cap_{}^{}$ (B $\cup_{}^{}$ C), then x $\in$ A
+				and (x $\in$ B or/and x $\in$ C).
+				\begin{itemize}[leftmargin=1cm]
+					\item If x $\in$ B, then x $\in$ (A $\cap_{}^{}$ B) so
+						x $\in$ (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C).
+
+					\item If x $\in$ C, then x $\in$ (A $\cap_{}^{}$ C) so
+						x $\in$ (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C).
+				\end{itemize}
+				Thus, A $\cap_{}^{}$ (B $\cup_{}^{}$ C)
+				$\subset$ (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C).
+				
+				If x $\in$ (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C),
+				then x $\in$ A and (x $\in$ B or/and x $\in$ C).
+
+				Thus, (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C)
+				$\subset$ A $\cap_{}^{}$ (B $\cup_{}^{}$ C).
+
+				Thus, A $\cap_{}^{}$ (B $\cup_{}^{}$ C)
+				= (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C).
+
+		\newpage
+
+		\item A $\cup_{}^{}$ (B $\cap_{}^{}$ C) = (A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C)
+
+			{ \color{magenta} \underline{Proof} } 
+			
+			If x $\in$ A $\cup_{}^{}$ (B $\cap_{}^{}$ C), then
+			x $\in$ A or/and (x $\in$ B and x $\in$ C).
+			\begin{itemize}[leftmargin=1cm]
+				\item If x $\in$ A, then x $\in$ (A $\cup_{}^{}$ B)
+					and x $\in$ (A $\cup_{}^{}$ C)
+					so A $\cup_{}^{}$ (B $\cap_{}^{}$ C) $\subset$
+					(A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C).
+
+				\item If x $\in$ B,C, then x $\in$ (A $\cup_{}^{}$ B)
+					and x $\in$ (A $\cup_{}^{}$ C)
+					so A $\cup_{}^{}$ (B $\cap_{}^{}$ C) $\subset$
+					(A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C).
+			\end{itemize}
+			If x $\in$ (A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C), then
+			x $\in$ A or/and (x $\in$ B and x $\in$ C).
+
+			Thus, (A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C)
+			$\subset$ A $\cup_{}^{}$ (B $\cap_{}^{}$ C).
+
+			Thus, A $\cup_{}^{}$ (B $\cap_{}^{}$ C)
+			= (A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C).
+	\end{enumerate}
+
+{ \color{red} Theorem 5.1.2: Union of countably infinite sets is countably infinite } 
+
+	\begin{adjustbox}{minipage=14cm, right}
+		If $E_1, E_2, ... $ are countably infinite sets, then S = $\cup_{n=1}^{\infty}$ $E_n$
+		is countably infinite.
+	\end{adjustbox}
+
+	{ \color{magenta} \underline{Proof} } 
+	
+		For each $E_n$, there is a sequence \{ $x_{n1}$, $x_{n2}$, ... \}.
+		Then construct an array as such:
+
+		$ \hspace{1cm}
+		\left(
+		\begin{array}{cccc}
+			x_{11} & x_{12} & x_{13} & ... \\
+			x_{21} & x_{22} & x_{23} & ... \\
+			x_{31} & x_{32} & x_{33} & ... \\
+			\vdots & \vdots & \vdots & \ddots \\
+		\end{array}
+		\right)
+		$
+		
+		Take elements diagonally, then sequence S$^*$ =
+		\{ $x_{11} \ ; \ x_{21}, x_{12} \ ; \ x_{31}, x_{32}, x_{33} \ ; \ ... $ \}.
+		
+		\begin{adjustbox}{minipage=15cm, right}
+			Since S$^*$ $\sim$ S and S is infinite since $E_1, E_2, ...$ are infinite,
+			then S is countably infinite.
+		\end{adjustbox}
 
 
 
