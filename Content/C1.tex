@@ -12,20 +12,21 @@
 	\text{Integer}:\ & \mathbb{Z} = \{-2, -1, 0, 1, 2, ... \} \\
 	\text{Rational}:\ & \mathbb{Q} = \frac{p}{q} \ \text{where p,q} \in \mathbb{N}
 \end{align*}
-*** Q is countable, but fails to have the least upper bound property *** \\
+*** $\mathbb{Q}$ is countable, but fails to have the least upper bound property *** \\
 
 { \color{purple} Example 1.1.1 }
 
-\qquad Let $ \alpha \in \mathbb{R} $ where $ \alpha^2 = 2 $. Then $ \alpha $ cannot be rational.
+	\qquad Let $ \alpha \in \mathbb{R} $ where $ \alpha^2 = 2 $. Then $ \alpha $ cannot be rational.
 
 { \color{magenta} \underline{Proof} }
 
-Let $ \alpha = \frac{p}{q} $ where p and q cannot both be even.
+	Let $ \alpha = \frac{p}{q} $ where p and q cannot both be even.
 
-Let set A = $\{ x \in \mathbb{Q} \ \text{for} \ x^2 < 2 \} $ where A $ \neq \emptyset $
-and 2 is an upper bound for A.
+	Let set A = $\{ x \in \mathbb{Q} \ \text{for} \ x^2 < 2 \} $ where A $ \neq \emptyset $
+	and 2 is an upper bound for A.
 
-Then, A has no least upper bound in $ \mathbb{Q} $ , but A has a least upper bound in $ \mathbb{R} $.
+	But, A has no least upper bound in $ \mathbb{Q} $,
+	but A has a least upper bound in $ \mathbb{R} $.
 
 
 
@@ -33,83 +34,83 @@ Then, A has no least upper bound in $ \mathbb{Q} $ , but A has a least upper bou
 
 \subsection{Real Number System}
 
-$ \mathbb{R} $ is the unique ordered field with the least upper bound property. \\
-Also, $ \mathbb{R} $ exists and unique. \\
+	$ \mathbb{R} $ is the unique ordered field with the least upper bound property. \\
+	Also, $ \mathbb{R} $ exists and unique. \\
 
 { \color{blue} Definition 1.2.1: Order }
 
-\qquad Let S be a set. An order on S is a relation $<$ satisfying two axioms:
+	\qquad Let S be a set. An order on S is a relation $<$ satisfying two axioms:
 
-\begin{itemize}[leftmargin=2cm]
-	\item { \color{lblue} Trichotomy}: For all x,y $ \in $ S, only one holds true:
-		\begin{itemize}[leftmargin=1cm]
-			\item x $<$ y
-			\item x = y
-			\item x $>$ y
-		\end{itemize}
+	\begin{itemize}[leftmargin=2cm]
+		\item { \color{lblue} Trichotomy}: For all x,y $ \in $ S, only one holds true:
+			\begin{itemize}[leftmargin=1cm]
+				\item x $<$ y
+				\item x = y
+				\item x $>$ y
+			\end{itemize}
 	
-	\item { \color{lblue} Transitivity}: If x $<$ y and y $<$ z, then x $<$ z.
-\end{itemize}
+		\item { \color{lblue} Transitivity}: If x $<$ y and y $<$ z, then x $<$ z.
+	\end{itemize}
 
 { \color{blue} Definition 1.2.2: Ordered Set }
 
-\qquad An ordered set is a set with an order. \\
+	\qquad An ordered set is a set with an order. \\
 
 { \color{blue} Definition 1.2.3: Bounds }
 
-\qquad Let S be an ordered set and E $ \subset $ S.
+	\qquad Let S be an ordered set and E $ \subset $ S.
 
-\qquad An upper bound of E is a $ \beta \in $ S if x $ \leq \beta $ for all x $ \in $ E.
+	\qquad An upper bound of E is a $ \beta \in $ S if x $ \leq \beta $ for all x $ \in $ E.
 
-\qquad \qquad If such a $ \beta $ exists, then E is bounded from above.
+	\qquad \qquad If such a $ \beta $ exists, then E is bounded from above.
 
-\qquad A lower bound of E is a $\alpha$ $\in$ S if x $ \geq $ $\alpha$ for all x $\in$ E.
+	\qquad A lower bound of E is a $\alpha$ $\in$ S if x $ \geq $ $\alpha$ for all x $\in$ E.
 
-\qquad \qquad If such a $\alpha$ exists, then E is bounded from below.
+	\qquad \qquad If such a $\alpha$ exists, then E is bounded from below.
 
 \newpage
 
 { \color{blue} Definition 1.2.4: Infimum \& Supremum}
 
-\qquad Let S be an ordered set.
+	\qquad Let S be an ordered set.
 
-\qquad Let E $ \subset $ S be bounded from above. Least upper bound $\beta$ $\in$ S exists if:
-\begin{itemize}[leftmargin=2cm]
-	\item $\beta$ is an upper bound for E
+	\qquad Let E $ \subset $ S be bounded from above. Least upper bound $\beta$ $\in$ S exists if:
+	\begin{itemize}[leftmargin=2cm]
+		\item $\beta$ is an upper bound for E
 	
-	\item If $\gamma < \beta$, then $ \gamma $ is not an upper bound for E.
-\end{itemize}
+		\item If $\gamma < \beta$, then $ \gamma $ is not an upper bound for E.
+	\end{itemize}
 
-\qquad \qquad Then $\beta$ = sup(E). \\
+	\qquad \qquad Then $\beta$ = sup(E). \\
 
-\qquad Let E $\subset$ S be bounded from below. Greatest lower bound $\alpha$ $\in$ S exists if:
-\begin{itemize}[leftmargin=2cm]
-	\item $\alpha$ is a lower bound for E
+	\qquad Let E $\subset$ S be bounded from below. Greatest lower bound $\alpha$ $\in$ S exists if:
+	\begin{itemize}[leftmargin=2cm]
+		\item $\alpha$ is a lower bound for E
 
-	\item If $\gamma > \alpha$, then $\gamma$ is not a lower bound for E.
-\end{itemize}
+		\item If $\gamma > \alpha$, then $\gamma$ is not a lower bound for E.
+	\end{itemize}
 
-\qquad \qquad Then $\alpha$ = inf(E). \\
+	\qquad \qquad Then $\alpha$ = inf(E). \\
 
 { \color{purple} Example 1.2.5 }
 
-\qquad Let S = $ (1,2) \cup [3,4) \cup (5,6) $ with the order $ < $ from $ \mathbb{R} $.
-For subsets E of S:
+	\qquad Let S = $ (1,2) \cup [3,4) \cup (5,6) $ with the order $ < $ from $ \mathbb{R} $.
+	For subsets E of S:
 
-\begin{itemize}[leftmargin=2cm]
-	\item E = (1,2) is bounded above and sup(E) = 3
+	\begin{itemize}[leftmargin=2cm]
+		\item E = (1,2) is bounded above and sup(E) = 3
 	
-	\item E = (5,6) is not bounded above so sup(E) = DNE
+		\item E = (5,6) is not bounded above so sup(E) = DNE
 	
-	\item E = [3,4) is bounded below inf(E) = 3 and sup(E) = DNE
-\end{itemize}
+		\item E = [3,4) is bounded below inf(E) = 3 and sup(E) = DNE
+	\end{itemize}
 
-{ \color{green} Observations on the Least Upper Bound }
+{ \color{blue} Observations on the Least Upper Bound }
 
-\qquad If sup(E) exists, it may or may not exists at S.
+	\qquad If sup(E) exists, it may or may not exists at S.
 
-\qquad If sup(E)  exists, then sup(E) is unique.
-If $ \gamma \neq \alpha $, then $ \gamma < \alpha $ or $ \gamma > \alpha $. \\
+	\qquad If sup(E)  exists, then sup(E) is unique.
+	If $ \gamma \neq \alpha $, then $ \gamma < \alpha $ or $ \gamma > \alpha $. \\
 
 
 
@@ -117,37 +118,38 @@ If $ \gamma \neq \alpha $, then $ \gamma < \alpha $ or $ \gamma > \alpha $. \\
 
 \subsection{Least Upper Bound Property}
 
-{ \color{red} Theorem 1.3.1 }
+{ \color{red} Theorem 1.3.1: Least Upper Bound Property }
 
-\qquad An ordered set S has a least upper bound property if:
+	\qquad An ordered set S has a least upper bound property if:
 
-\qquad \qquad For every nonempty subset E $ \subset $ S that is bounded from above:
+	\qquad \qquad For every nonempty subset E $ \subset $ S that is bounded from above:
 
-\qquad \qquad \qquad sup(E) exists in S. \\
+	\qquad \qquad \qquad sup(E) exists in S. \\
 
 { \color{purple} Example 1.3.2 }
 
-\qquad $ \mathbb{Q} $ doesn't have a least upper bound property. For example, z = $ \sqrt{2} $.
+	\qquad $ \mathbb{Q} $ doesn't have a least upper bound property. For example, z = $ \sqrt{2} $.
 
 {\color{magenta} \underline{Proof}}
 
-Let $ z = y - \frac{y^2-2}{y+2} = \frac{2y+2}{y+2} $, then take $ z^2-2 = \frac{2(y^2-2)}{(y+2)^2} $.
+	Let $ z = y - \frac{y^2-2}{y+2} = \frac{2y+2}{y+2} $,
+	then take $ z^2-2 = \frac{2(y^2-2)}{(y+2)^2} $.
 
-Let set A = $ \{ y > 0 \in \mathbb{Q} \ \text{where} \ y^2 < 2 \} $ and
-set B = $ \{ y > 0 \in \mathbb{Q} \ \text{where} \ y^2 > 2 \} $
+	Let set A = $ \{ y > 0 \in \mathbb{Q} \ \text{where} \ y^2 < 2 \} $ and
+	set B = $ \{ y > 0 \in \mathbb{Q} \ \text{where} \ y^2 > 2 \} $
 
-\begin{itemize}[leftmargin=1cm]
-	\item If $ y^2-2 < $ 0, then z $>$ y where z $\in$ A.
-		So, y is not a upper bound.
+	\begin{itemize}[leftmargin=1cm]
+		\item If $ y^2-2 < $ 0, then z $>$ y where z $\in$ A.
+			So, y is not a upper bound.
 
-		Since for any y, there is z $>$ y where z $\in$ A, then sup(A) doesn't
-		exists in $\mathbb{Q}$.
+			Since for any y, there is z $>$ y where z $\in$ A, then sup(A) doesn't
+			exists in $\mathbb{Q}$.
 	
-	\item If $ y^2-2 > $ 0, then z $<$ y where z $\in$ B.
-		So, y is an upper bound, but not sup(E).
+		\item If $ y^2-2 > $ 0, then z $<$ y where z $\in$ B.
+			So, y is an upper bound, but not sup(E).
 
-		Since for any y, there is z $<$ y where z $\in$ B, then inf(B) doesn't
-		exists in $\mathbb{Q}$.
-\end{itemize}
+			Since for any y, there is z $<$ y where z $\in$ B, then inf(B) doesn't
+			exists in $\mathbb{Q}$.
+	\end{itemize}
 
-Thus, $\mathbb{Q}$ doesn't have the least upper bound.
+	Thus, $\mathbb{Q}$ doesn't have the least upper bound.
