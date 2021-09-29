@@ -1,5 +1,5 @@
 \newpage
-\section[Day 5: ]{Temp}
+\section[Day 5: Metric Spaces and Set Types]{Metric Spaces}
 
 \subsection{ Set of Sets } 
 
@@ -133,19 +133,160 @@
 		
 		\begin{adjustbox}{minipage=15cm, right}
 			Since S$^*$ $\sim$ S and S is infinite since $E_1, E_2, ...$ are infinite,
-			then S is countably infinite.
+			then S is countably infinite. \\
 		\end{adjustbox}
 
+{ \color{red} Theorem 5.1.3: The set of countable n-tuples are countable } 
+
+	\begin{adjustbox}{minipage=14cm, right}
+		Let A be a countable set and B$_n$ be the set of all n-tuples ($a_1$,...,$a_n$)
+		where $a_k$ $\in$ A. Then $B_n$ is countable.
+	\end{adjustbox}
+
+	{ \color{magenta} \underline{Proof} } 
+	
+	The base case $B_1$ is countable since $B_1$ = A.
+
+	Suppose $B_{n-1}$ is countable. Then for every x $\in$ B:
+
+	\qquad x = (b,a) \qquad \qquad b $\in$ $B_{n-1}$ and a $\in$ A
+
+	Since for every fixed b, (b,a) $\sim$ A and thus, countably infinite.
+
+	Since B is a set of countably infinite sets, then $B_{n}$
+	is countably infinite. \\
+
+{ \color{blue} Definition 5.1.4: $\mathbb{Q}$ is countably infinite } 
+
+	\begin{adjustbox}{minipage=14cm, right}
+		Since $\mathbb{Q}$ are of form $\frac{a}{b}$ which is a 2-tuple and thus countable,
+		then $\mathbb{Q}$ is countable by the previous theorem. \\
+	\end{adjustbox}
+
+{ \color{purple} Example 5.1.5: Sequences of 0 and 1 are uncountable } 
+
+	\begin{adjustbox}{minipage=14cm, right}
+		Let A be the set of all sequences whose elements are digits 0 and 1.
+		Then A is uncountable.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+
+	Let set E be a countably infinite subset of A which consist of sequences $s_1,s_2,...$.
+
+	Then construct a sequence s as follows:
+
+	\qquad If the n-th digit in $s_n$ is 1, then let the n-th digit of s be 0
+	and vice versa.
+
+	Thus. s differs from every $s_n$ $\in$ E so s $\not \in$ E.
+
+	But, s $\in$ A so E is a proper subset of A.
+
+	Thus, every countably infinite subset of A is a proper subset of A.
+
+	If A is countably infinite, then A is a proper subset of A which
+	is a contradiction. \\
 
 
 
 
 
+\subsection{ Metric Spaces }
 
+{ \color{blue} Definition 5.2.1: Metric Spaces } 
 
+	\begin{adjustbox}{minipage=14cm, right}
+		A set X is a metric space if for ant p,q $\in$ X, there is an associated d(p,q) $\in$
+		$\mathbb{R}$ such that:	
+		\begin{itemize}[leftmargin=1cm]
+			\item d(p,q) $>$ 0 \qquad \qquad if p $\neq$ q and d(p,p) = 0
+			\item d(p,q) = d(q,p)
+			\item d(p,q) $\leq$ d(p,r) + d(r,q) \qquad \qquad for any r $\in$ $\mathbb{R}$.
+		\end{itemize}
 
+		For euclidean spaces $\mathbb{R}^k$, d(x,y) = $| x - y |$ where x,y $\in$ $\mathbb{R}^k$. \\
+	\end{adjustbox}
 
+{ \color{blue} Definition 5.2.2: Types of points and sets } 
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm]
+		\item {\color{lblue} Neighborhood}
 
+			\qquad For p $\in$ $\mathbb{R}^k$ and r $>$ 0, N$_r(p)$ is the set of all q
+			such that d(q,p) $<$ r
+
+		\item {\color{lblue} Limit Points and Closed Sets}
+
+			\qquad Closed set E contains all p where every N$_r(p)$ contains
+			a q $\neq$ p $\in$ E
+			\begin{itemize}[leftmargin=1cm]
+				\item Limit Points
+
+					\qquad For point p $\in$ E $\subset$ X, every N$_r(p)$ contains a
+					q $\neq$ p $\in$ E
+				
+				\item Isolated Points
+
+					\qquad If p $\in$ E is not a limit point of E
+
+				\item Closed
+
+					\qquad If every limit point p of E is a p $\in$ E
+			\end{itemize}
+
+		\item {\color{lblue} Interior Points and Open Sets}
+
+			\qquad Open set E contains all its p which has a N$_r(p)$ $\subset$ E
+			\begin{itemize}[leftmargin=1cm]
+				\item Interior Point
+
+					\qquad For p $\in$ E, there is a N$_r(p)$ $\subset$ E
+
+				\item Open
+
+					\qquad If every p $\in$ E is an interior point of E
+			\end{itemize}
+
+		\item {\color{lblue} More about Sets}
+			\begin{itemize}[leftmargin=1cm]
+				\item Bounded
+
+					\qquad If there is M $\in$ $\mathbb{R}$ , q $\in$ X such that d(p,q) $<$ M
+					for all p $\in$ E
+
+				\item Complement
+
+					\qquad From E, E$^\text{c}$ is the set of all p $\in$ X such that p $\not \in$ E
+
+				\item Perfect
+
+					\qquad If E is closed and if every p $\in$ E is a limit point of E
+
+				\item Dense
+
+					\qquad If every p $\in$ X is a limit point of E or/and p $\in$ E
+			\end{itemize}
+	\end{enumerate}
+
+	{ \color{blue} Definition 5.2.3: N$_r(p)$ is open } 
+
+	\begin{adjustbox}{minipage=14cm, right}
+		Every neighborhood is an open set.
+	\end{adjustbox}
+
+	{ \color{magenta} \underline{Proof} } 
+	
+		Let q $\in$ N$_r(p)$. Then there is a h $>$ 0 $\in$ $\mathbb{R}$ such that:
+
+		\qquad d(q,p) = r - h
+
+		Then for any s $\in$ N$_h(q)$:
+
+		\qquad d(s,p) $\leq$  d(s,q) + d(q,p) = h + (r - h) = r
+
+		Thus, for any q $\in$ N$_r(p)$, there exists a N$_h(q)$ $\subset$ N$_r(p)$.
+
+\subsection{}
 
 
 

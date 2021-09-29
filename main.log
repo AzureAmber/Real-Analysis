@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.8.13)  28 SEP 2021 03:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.8.13)  29 SEP 2021 01:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**/home/azure/Desktop/Math/main.tex
+(/home/azure/Desktop/Math/main.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -22,7 +22,7 @@ File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
-) (./Packages/Packages.tex (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+) (/home/azure/Desktop/Math/Packages/Packages.tex (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
@@ -210,8 +210,7 @@ Package atveryend Info: \enddocument detected (standard20110627).
 \c@bookmark@seq@number=\count199
  (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
@@ -350,7 +349,7 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count274
 \l__pdf_internal_box=\box52
-) (./main.aux)
+) (/home/azure/Desktop/Math/main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -383,12 +382,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 10.
 LaTeX Info: Redefining \pageref on input line 10.
 LaTeX Info: Redefining \nameref on input line 10.
- (./main.out) (./main.out)
+ (/home/azure/Desktop/Math/main.out) (/home/azure/Desktop/Math/main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count276
 \scratchdimen=\dimen176
@@ -458,47 +456,47 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 12.
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/home/azure/Desktop/Math/main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- (./Content/C1.tex [2]
+ (/home/azure/Desktop/Math/Content/C1.tex [2]
 Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--58
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--114
+Underfull \hbox (badness 10000) in paragraph at lines 113--115
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
-) (./Content/C2.tex [4]
-<Images/2.1.png, id=128, 527.72156pt x 167.87718pt>
+) (/home/azure/Desktop/Math/Content/C2.tex [4]
+<Images/2.1.png, id=138, 527.72156pt x 167.87718pt>
 File: Images/2.1.png Graphic file (type png)
 <use Images/2.1.png>
 Package pdftex.def Info: Images/2.1.png  used on input line 38.
@@ -508,7 +506,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-[5 <./Images/2.1.png>] [6]
+[5 </home/azure/Desktop/Math/Images/2.1.png>] [6]
 Underfull \hbox (badness 10000) in paragraph at lines 180--182
 
  []
@@ -524,7 +522,7 @@ File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 241.
-) (./Content/C3.tex [8] [9]
+) (/home/azure/Desktop/Math/Content/C3.tex [8] [9]
 Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
@@ -549,7 +547,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--212
 
  []
 
-) (./Content/C4.tex [11]
+) (/home/azure/Desktop/Math/Content/C4.tex [11]
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
@@ -599,34 +597,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
-) (./Content/C5.tex [14] [15]) (./Bibliography/Bibliography.tex [16]
+) (/home/azure/Desktop/Math/Content/C5.tex [14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--190
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
+
+ []
+
+[17]) (/home/azure/Desktop/Math/Bibliography/Bibliography.tex [18]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 5.
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 26.
- [17]
+ [19]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 26.
- (./main.aux)
+ (/home/azure/Desktop/Math/main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 26.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 26.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6671EC427A05ABB0B65DA12C0B326DCD;1202.
+(rerunfilecheck)             Checksum: 5E794241E318B3BC265F1EE7067E2F01;1344.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
  ) 
 Here is how much of TeX's memory you used:
- 9362 strings out of 481239
- 139528 string characters out of 5920377
+ 9376 strings out of 481239
+ 140434 string characters out of 5920377
  431885 words of memory out of 5000000
- 24307 multiletter control sequences out of 15000+600000
+ 24309 multiletter control sequences out of 15000+600000
  543593 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,12n,47p,304b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,12n,47p,329b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (17 pages, 193315 bytes).
+Output written on /home/azure/Desktop/Math/main.pdf (19 pages, 199496 bytes).
 PDF statistics:
- 295 PDF objects out of 1000 (max. 8388607)
- 258 compressed objects within 3 object streams
- 79 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 319 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
+ 87 named destinations out of 1000 (max. 500000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
 
