@@ -6,13 +6,14 @@
 { \color{blue} Definition 5.1.1: Union and Intersection } 
 
 	\begin{adjustbox}{minipage=14cm, right}
-		Let sets A,B be such that for each x $\in$ A, there is an associated E$_x$ $\subset$ B.
+		Let sets $\Omega$,B be such that for each x $\in$ $\Omega$,
+		there is an associated E$_x$ $\subset$ B.
 		\begin{itemize}[leftmargin=1cm]
 			\item E = $\cup_{x=1}^{n}$ E$_x$ only if for every x $\in$ E, x $\in$ E$_x$ for
-				at least one x $\in$ A.
+				at least one x $\in$ $\Omega$.
 
 			\item P = $\cap_{x=1}^{n}$ E$_x$ only if for every x $\in$ P, x $\in$ E$_x$ for
-				all x $\in$ A.
+				all x $\in$ $\Omega$.
 		\end{itemize}
 		with properties:
 	\end{adjustbox}
@@ -136,6 +137,13 @@
 			then S is countably infinite. \\
 		\end{adjustbox}
 
+	{ \color{magenta} \underline{Alternative Proof} } 
+
+		Apply the Fundamental theorem of algebra
+
+		{\color{red} Insert Proof here later, most countable $\rightarrow$ $E_k$ is infinite} \\
+	
+
 { \color{red} Theorem 5.1.3: The set of countable n-tuples are countable } 
 
 	\begin{adjustbox}{minipage=14cm, right}
@@ -160,8 +168,19 @@
 
 	\begin{adjustbox}{minipage=14cm, right}
 		Since $\mathbb{Q}$ are of form $\frac{a}{b}$ which is a 2-tuple and thus countable,
-		then $\mathbb{Q}$ is countable by the previous theorem. \\
+		then $\mathbb{Q}$ is countably infinite by the previous theorem. \\
 	\end{adjustbox}
+	{ \color{magenta} \underline{Alternative Proof} } 
+	
+		Let x = $(-1)^i$ $\frac{p}{q}$.  Let f(x) = $2^i$ $3^p$ $5^q$.
+
+		Then by the Fundamental theorem of algebra, f is a 1-1 mapping of
+		x to E $\subset$ $\mathbb{Z}_+$.
+
+		{\color{red} Insert proof here later, most countable $\rightarrow$
+		p and R are countably infinite $\rightarrow$ countably infinite} \\ 
+
+\newpage
 
 { \color{purple} Example 5.1.5: Sequences of 0 and 1 are uncountable } 
 
@@ -170,7 +189,7 @@
 		Then A is uncountable.
 	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof: Cantor's Diagonalizing Proof} } 
 
 	Let set E be a countably infinite subset of A which consist of sequences $s_1,s_2,...$.
 
@@ -200,9 +219,12 @@
 		A set X is a metric space if for ant p,q $\in$ X, there is an associated d(p,q) $\in$
 		$\mathbb{R}$ such that:	
 		\begin{itemize}[leftmargin=1cm]
-			\item d(p,q) $>$ 0 \qquad \qquad if p $\neq$ q and d(p,p) = 0
-			\item d(p,q) = d(q,p)
-			\item d(p,q) $\leq$ d(p,r) + d(r,q) \qquad \qquad for any r $\in$ $\mathbb{R}$.
+			\item d(p,q) $>$ 0 \qquad \qquad if p $\neq$ q
+			\item d(p,q) = 0 if and only if p = q
+			\item {\color{lblue} Symmetry}:
+				d(p,q) = d(q,p)
+			\item {\color{lblue} Triangle Inequality}:
+				d(p,q) $\leq$ d(p,r) + d(r,q) \qquad \qquad for any r $\in$ $\mathbb{R}$.
 		\end{itemize}
 
 		For euclidean spaces $\mathbb{R}^k$, d(x,y) = $| x - y |$ where x,y $\in$ $\mathbb{R}^k$. \\
@@ -268,11 +290,11 @@
 			\end{itemize}
 	\end{enumerate}
 
-	{ \color{blue} Definition 5.2.3: N$_r(p)$ is open } 
+	{ \color{red} Theorem 5.2.3: N$_r(p)$ is open } 
 
-	\begin{adjustbox}{minipage=14cm, right}
-		Every neighborhood is an open set.
-	\end{adjustbox}
+		\begin{adjustbox}{minipage=14cm, right}
+			Every neighborhood is an open set.
+		\end{adjustbox}
 
 	{ \color{magenta} \underline{Proof} } 
 	
@@ -284,9 +306,78 @@
 
 		\qquad d(s,p) $\leq$  d(s,q) + d(q,p) = h + (r - h) = r
 
-		Thus, for any q $\in$ N$_r(p)$, there exists a N$_h(q)$ $\subset$ N$_r(p)$.
+		Thus, for any q $\in$ N$_r(p)$, there exists a N$_h(q)$ $\subset$ N$_r(p)$. \\
+
+	{ \color{red} Theorem 5.2.4: If a set has a limit point, there are infinite q
+	$\in$ E in N$_r(p)$ } 
+	
+		\begin{adjustbox}{minipage=14cm, right}
+			If p is a limit point of set E, then every N$_r(p)$ contains infinitely many q $\in$ E.
+		\end{adjustbox}
+
+	{ \color{magenta} \underline{Proof} } 
+	
+		Suppose there is N$_{r_1}(p)$ which contains finitely many q = \{ q$_1$, ... , q$_n$ \}.
+
+		Let r = min$_{m \in [1,n]}$ d(p,q$_m$).
+
+		Then N$_r(p)$ contains no q $\in$ E such that q $\not =$ p.
+
+		So, p is not a limit point of E which is a contradiction since p is a limit point of E. \\
+
+	{ \color{blue} Definition 5.2.5: Corollary } 
+	
+		\begin{adjustbox}{minipage=14cm, right}
+			A finite set has no limit points. \\
+		\end{adjustbox}
+
+	{ \color{red} Theorem 5.2.6: Complement of union of sets = Intesection of complement of sets } 
+	
+		\begin{adjustbox}{minipage=14cm, right}
+			Let $E_1, E_2 , ... $ be a collection of sets. Then,
+			($\cup_{}^{}$ $E_x$)$^\text{c}$ = $\cap_{}^{}$ ($E_x$$^\text{c}$).
+		\end{adjustbox}
+
+	{ \color{magenta} \underline{Proof} } 
+	
+		If p $\in$ ($\cup_{}^{}$ $E_x$)$^\text{c}$, then p $\not \in$ ($\cup_{}^{}$ $E_x$).
+
+		Thus, p $\not \in$ $E_x$ for any x so p $\in$ E$_x^\text{c}$ for all x.
+		Thus, p $\in$ $\cap_{}^{}$ ($E_x^c$) so
+		($\cup_{}^{}$ $E_x$)$^c$ $\subset$ $\cap_{}^{}$ ($E_x^c$).
+
+		If p $\in$ $\cap_{}^{}$ ($E_x^c$)
+
+
+
+
+
+
+
+
 
 \subsection{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
