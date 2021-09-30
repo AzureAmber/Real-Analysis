@@ -113,36 +113,52 @@
 		is countably infinite.
 	\end{adjustbox}
 
-	{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof} } 
 	
-		For each $E_n$, there is a sequence \{ $x_{n1}$, $x_{n2}$, ... \}.
-		Then construct an array as such:
+	For each $E_n$, there is a sequence \{ $x_{n1}$, $x_{n2}$, ... \}.
+	Then construct an array as such:
 
-		$ \hspace{1cm}
-		\left(
-		\begin{array}{cccc}
-			x_{11} & x_{12} & x_{13} & ... \\
-			x_{21} & x_{22} & x_{23} & ... \\
-			x_{31} & x_{32} & x_{33} & ... \\
-			\vdots & \vdots & \vdots & \ddots \\
-		\end{array}
-		\right)
-		$
+	$ \hspace{1cm}
+	\left(
+	\begin{array}{cccc}
+		x_{11} & x_{12} & x_{13} & ... \\
+		x_{21} & x_{22} & x_{23} & ... \\
+		x_{31} & x_{32} & x_{33} & ... \\
+		\vdots & \vdots & \vdots & \ddots \\
+	\end{array}
+	\right)
+	$
 		
-		Take elements diagonally, then sequence S$^*$ =
-		\{ $x_{11} \ ; \ x_{21}, x_{12} \ ; \ x_{31}, x_{32}, x_{33} \ ; \ ... $ \}.
+	Take elements diagonally, then sequence S$^*$ =
+	\{ $x_{11} \ ; \ x_{21}, x_{12} \ ; \ x_{31}, x_{32}, x_{33} \ ; \ ... $ \}.
 		
-		\begin{adjustbox}{minipage=15cm, right}
-			Since S$^*$ $\sim$ S and S is infinite since $E_1, E_2, ...$ are infinite,
-			then S is countably infinite. \\
-		\end{adjustbox}
+	\begin{adjustbox}{minipage=15cm, right}
+		Since S$^*$ $\sim$ S so S is at most countable and S is infinite since
+		$E_1, E_2, ...$ are infinite, then S cannot be finite and thus, countably infinite.
+	\end{adjustbox}
 
-	{ \color{magenta} \underline{Alternative Proof} } 
+{ \color{magenta} \underline{Alternative Proof} } 
 
-		Apply the Fundamental theorem of algebra
+	For each $E_n$, let set $\widetilde{E_n}$ = $E_n$ - $\cup_{m=1}^{\infty}$ $E_m$ where
+	m $\neq$ n. Thus, S = $\cup_{n=1}^{\infty}$ $\widetilde{E_n}$.
 
-		{\color{red} Insert Proof here later, most countable $\rightarrow$ $E_k$ is infinite} \\
-	
+	Since each $E_n$ is countably infinite, there exists a 1-1 mapping
+	$\delta_n$: $E_n$ $\rightarrow$ $\mathbb{Z}_+$.
+
+	Thus, for each $\widetilde{E_n}$, there is a 1-1 mapping
+	$\delta_n$: $\widetilde{E_n}$ $\rightarrow$ A $\subset$ $\mathbb{Z}_+$.
+
+	Let $p_1, p_2, ... $ be distinct primes.
+
+	Since for s $\in$ S, there exists a unique $\widetilde{E_i}$ such that
+	s $\in$ $\widetilde{E_i}$, then let f(s) = $p_1^{\delta_1(s)} p_2^{\delta_2(s)}...$
+	where $p_k^{\delta_k(s)}$ = 1 if k $\neq$ i.
+
+	Then, by the Fundamental theorem of arithmetic, f maps s to a unique z $\in$ $\mathbb{Z}_+$
+	and thus, f is a 1-1 function so S is at most countable.
+
+	Since any $E_n$ $\subset$ S is countably infinite, then S cannot be finite
+	and thus, S is countably infinite. \\
 
 { \color{red} Theorem 5.1.3: The set of countable n-tuples are countable } 
 
@@ -151,7 +167,7 @@
 		where $a_k$ $\in$ A. Then $B_n$ is countable.
 	\end{adjustbox}
 
-	{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof} } 
 	
 	The base case $B_1$ is countable since $B_1$ = A.
 
@@ -164,23 +180,28 @@
 	Since B is a set of countably infinite sets, then $B_{n}$
 	is countably infinite. \\
 
+\newpage
+
 { \color{blue} Definition 5.1.4: $\mathbb{Q}$ is countably infinite } 
 
 	\begin{adjustbox}{minipage=14cm, right}
-		Since $\mathbb{Q}$ are of form $\frac{a}{b}$ which is a 2-tuple and thus countable,
-		then $\mathbb{Q}$ is countably infinite by the previous theorem. \\
+		The set of rational numbers, $\mathbb{Q}$, is countably infinite.
 	\end{adjustbox}
-	{ \color{magenta} \underline{Alternative Proof} } 
+
+{ \color{magenta} \underline{Proof} } 
 	
-		Let x = $(-1)^i$ $\frac{p}{q}$.  Let f(x) = $2^i$ $3^p$ $5^q$.
+	Since elements of $\mathbb{Q}$ are of form $\frac{a}{b}$ which is a
+	2-tuple, then by the {\color{red} theorem 5.1.3}, $\mathbb{Q}$ is countably infinite.
 
-		Then by the Fundamental theorem of algebra, f is a 1-1 mapping of
-		x to E $\subset$ $\mathbb{Z}_+$.
+{ \color{magenta} \underline{Alternative Proof} } 
+	
+	For every x $\in$ $\mathbb{Q}$, let x = $(-1)^i$ $\frac{p}{q}$ where p,q $\in$ $\mathbb{Z}_+$.
 
-		{\color{red} Insert proof here later, most countable $\rightarrow$
-		p and R are countably infinite $\rightarrow$ countably infinite} \\ 
+	Let f(x) = $2^i$ $3^p$ $5^q$. Then by the Fundamental theorem of arithmetic,
+	f is a 1-1 mapping of x to E $\subset$ $\mathbb{Z}_+$.
 
-\newpage
+	Thus, $\mathbb{Q}$ is at most countable, but since p,q $\in$ $\mathbb{Z}_+$,
+	then $\mathbb{Q}$ cannot be finite and thus, is countably infinite. \\
 
 { \color{purple} Example 5.1.5: Sequences of 0 and 1 are uncountable } 
 
@@ -189,7 +210,7 @@
 		Then A is uncountable.
 	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof: Cantor's Diagonalizing Proof} } 
+{ \color{magenta} \underline{Proof: Cantor's Diagonalization Proof} } 
 
 	Let set E be a countably infinite subset of A which consist of sequences $s_1,s_2,...$.
 
@@ -205,7 +226,7 @@
 	Thus, every countably infinite subset of A is a proper subset of A.
 
 	If A is countably infinite, then A is a proper subset of A which
-	is a contradiction. \\
+	is a contradiction.
 
 
 
@@ -242,9 +263,9 @@
 			\qquad Closed set E contains all p where every N$_r(p)$ contains
 			a q $\neq$ p $\in$ E
 			\begin{itemize}[leftmargin=1cm]
-				\item Limit Points
+				\item Limit Points 
 
-					\qquad For point p $\in$ E $\subset$ X, every N$_r(p)$ contains a
+					\qquad For point p $\in$ X, every N$_r(p)$ contains a
 					q $\neq$ p $\in$ E
 				
 				\item Isolated Points
@@ -262,7 +283,7 @@
 			\begin{itemize}[leftmargin=1cm]
 				\item Interior Point
 
-					\qquad For p $\in$ E, there is a N$_r(p)$ $\subset$ E
+					\qquad For p $\in$ X, there is a N$_r(p)$ $\subset$ E
 
 				\item Open
 
@@ -290,63 +311,132 @@
 			\end{itemize}
 	\end{enumerate}
 
-	{ \color{red} Theorem 5.2.3: N$_r(p)$ is open } 
+{ \color{red} Theorem 5.2.3: N$_r(p)$ is open } 
 
-		\begin{adjustbox}{minipage=14cm, right}
-			Every neighborhood is an open set.
-		\end{adjustbox}
+	\begin{adjustbox}{minipage=14cm, right}
+		Every neighborhood is an open set.
+	\end{adjustbox}
 
-	{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof} } 
 	
-		Let q $\in$ N$_r(p)$. Then there is a h $>$ 0 $\in$ $\mathbb{R}$ such that:
+	Let q $\in$ N$_r(p)$. Then there is a h $>$ 0 $\in$ $\mathbb{R}$ such that:
 
-		\qquad d(q,p) = r - h
+	\qquad d(q,p) = r - h
 
-		Then for any s $\in$ N$_h(q)$:
+	Then for any s $\in$ N$_h(q)$:
 
-		\qquad d(s,p) $\leq$  d(s,q) + d(q,p) = h + (r - h) = r
+	\qquad d(s,p) $\leq$  d(s,q) + d(q,p) = h + (r - h) = r
 
-		Thus, for any q $\in$ N$_r(p)$, there exists a N$_h(q)$ $\subset$ N$_r(p)$. \\
+	Thus, for any q $\in$ N$_r(p)$, there exists a N$_h(q)$ $\subset$ N$_r(p)$. \\
 
-	{ \color{red} Theorem 5.2.4: If a set has a limit point, there are infinite q
-	$\in$ E in N$_r(p)$ } 
+{ \color{red} Theorem 5.2.4: If a set has a limit point, there are infinite q
+$\in$ E in N$_r(p)$ } 
 	
-		\begin{adjustbox}{minipage=14cm, right}
-			If p is a limit point of set E, then every N$_r(p)$ contains infinitely many q $\in$ E.
-		\end{adjustbox}
+	\begin{adjustbox}{minipage=14cm, right}
+		If p is a limit point of set E, then every N$_r(p)$ contains infinitely many q $\in$ E.
+	\end{adjustbox}
 
-	{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof} } 
 	
-		Suppose there is N$_{r_1}(p)$ which contains finitely many q = \{ q$_1$, ... , q$_n$ \}.
+	Suppose there is N$_{r_1}(p)$ which contains finitely many q = \{ q$_1$, ... , q$_n$ \}.
 
-		Let r = min$_{m \in [1,n]}$ d(p,q$_m$).
+	Let r = min$_{m \in [1,n]}$ d(p,q$_m$). Then N$_r(p)$ contains no q $\in$ E such that q $\not =$ p.
 
-		Then N$_r(p)$ contains no q $\in$ E such that q $\not =$ p.
+	So, p is not a limit point of E which is a contradiction since p is a limit point of E. \\
 
-		So, p is not a limit point of E which is a contradiction since p is a limit point of E. \\
-
-	{ \color{blue} Definition 5.2.5: Corollary } 
+{ \color{orange} Corollary 5.2.5: Limit points do not exist in finite sets } 
 	
-		\begin{adjustbox}{minipage=14cm, right}
-			A finite set has no limit points. \\
-		\end{adjustbox}
+	\begin{adjustbox}{minipage=14cm, right}
+		A finite set has no limit points.
+	\end{adjustbox}
 
-	{ \color{red} Theorem 5.2.6: Complement of union of sets = Intesection of complement of sets } 
+{ \color{magenta} \underline{Proof} } 
+
+	Let p be a limit point of finite set E. By {\color{red} theorem 5.2.4}, 
+	then any N$_r(p)$ contain infinite q $\in$ E so E is an infinite set
+	which is a contradiction since E is finite.
+
+	So p cannot be limit point of E and thus, E has no limit points. \\
+
+{ \color{red} Theorem 5.2.6: Complement of union of sets = Intesection of complement of sets } 
 	
-		\begin{adjustbox}{minipage=14cm, right}
-			Let $E_1, E_2 , ... $ be a collection of sets. Then,
-			($\cup_{}^{}$ $E_x$)$^\text{c}$ = $\cap_{}^{}$ ($E_x$$^\text{c}$).
-		\end{adjustbox}
+	\begin{adjustbox}{minipage=14cm, right}
+		Let $E_1, E_2 , ... $ be a collection of sets. Then,
+		($\cup_{}^{}$ $E_x$)$^\text{c}$ = $\cap_{}^{}$ ($E_x$$^\text{c}$).
+	\end{adjustbox}
 
-	{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof} } 
 	
-		If p $\in$ ($\cup_{}^{}$ $E_x$)$^\text{c}$, then p $\not \in$ ($\cup_{}^{}$ $E_x$).
+	If p $\in$ ($\cup_{}^{}$ $E_x$)$^\text{c}$, then p $\not \in$ ($\cup_{}^{}$ $E_x$).
 
-		Thus, p $\not \in$ $E_x$ for any x so p $\in$ E$_x^\text{c}$ for all x.
-		Thus, p $\in$ $\cap_{}^{}$ ($E_x^c$) so
-		($\cup_{}^{}$ $E_x$)$^c$ $\subset$ $\cap_{}^{}$ ($E_x^c$).
+	Thus, p $\not \in$ $E_x$ for any x so p $\in$ E$_x^\text{c}$ for all x.
+	Thus, p $\in$ $\cap_{}^{}$ ($E_x^c$) so
+	($\cup_{}^{}$ $E_x$)$^c$ $\subset$ $\cap_{}^{}$ ($E_x^c$).
 
-		If p $\in$ $\cap_{}^{}$ ($E_x^c$)
+	If p $\in$ $\cap_{}^{}$ ($E_x^c$), then p $\in$ $E_x^c$ for all x.
+	
+	Thus, p $\not \in$ $E_x$ for any x so p $\not \in$ $\cup_{}^{}$ $E_x$.
+	Thus, p $\in$ ($\cup_{}^{}$ $E_x$)$^c$ so
+	$\cap_{}^{}$ ($E_x^c$) $\subset$ ($\cup_{}^{}$ $E_x$)$^c$.
+
+	Thus, ($\cup_{}^{}$ $E_x$)$^c$ = $\cap_{}^{}$ ($E_x^c$). \\
+
+{ \color{red} Theorem 5.2.7: Open set $\rightarrow$ Closed complement  } 
+
+	\begin{adjustbox}{minipage=14cm, right}
+		A set E is open if and only if E$^\text{c}$ is closed.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+
+	Suppose E is open. Let x be a limit point of E$^c$.
+
+	Then for every r $>$ 0, N$_r(x)$ must contain a p $\in$ E$^c$ such that p $\neq$ x.
+
+	Then, N$_r(x)$ $\not \subset$ E so x is not an interior point of E and
+	thus, x $\not \in$ E so x $\in$ E$^c$.
+
+	Since any limit point x of E$^c$ is a x $\in$ E$^c$, then E$^c$ is closed.
+
+	\vspace{0.2cm}
+
+	Suppose E$^c$ is closed. Let x $\in$ E.
+
+	Since x $\not \in$ E, x is not a limit point of E.
+
+	Then there exists a r $>$ 0 such that any p $\in$ N$_r(x)$ is not in E.
+
+	Thus, every p $\in$ N$_r(x)$ is p $\in$ E so N$_r(x)$ $\subset$ E and thus,
+	x is an interior point of E.
+
+	Since any x $\in$ E is an interior point of E, then E is open. \\
+
+{ \color{orange} Corollary 5.2.8: Closed set $\rightarrow$ Open complement } 
+
+	\begin{adjustbox}{minipage=14cm, right}
+		A set F is closed if only only if F$^\text{c}$ is open.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+
+	From {\color{red} theorem 5.2.7}, let E = F$^\text{c}$. \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

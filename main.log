@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.8.13)  29 SEP 2021 14:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.8.13)  30 SEP 2021 01:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -574,49 +574,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--82
 File: Images/4.3.1.png Graphic file (type png)
 <use Images/4.3.1.png>
 Package pdftex.def Info: Images/4.3.1.png  used on input line 150.
-(pdftex.def)             Requested size: 183.68579pt x 69.25858pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 156--167
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 156--167
-
- []
-
-[13 <./Images/4.3.1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 194--196
+(pdftex.def)             Requested size: 220.42519pt x 83.11113pt.
+ [13 <./Images/4.3.1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
 
  []
 
 <Images/4.3.5.png, id=217, 283.0575pt x 283.0575pt>
 File: Images/4.3.5.png Graphic file (type png)
 <use Images/4.3.5.png>
-Package pdftex.def Info: Images/4.3.5.png  used on input line 203.
-(pdftex.def)             Requested size: 169.8358pt x 169.8358pt.
+Package pdftex.def Info: Images/4.3.5.png  used on input line 204.
+(pdftex.def)             Requested size: 141.5284pt x 141.5284pt.
 <Images/4.3.6.png, id=219, 651.18282pt x 79.04532pt>
 File: Images/4.3.6.png Graphic file (type png)
 <use Images/4.3.6.png>
-Package pdftex.def Info: Images/4.3.6.png  used on input line 227.
-(pdftex.def)             Requested size: 293.02956pt x 35.57005pt.
+Package pdftex.def Info: Images/4.3.6.png  used on input line 228.
+(pdftex.def)             Requested size: 325.5906pt x 39.52255pt.
 ) (./Content/C5.tex [14 <./Images/4.3.5.png> <./Images/4.3.6.png>] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 136--138
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--166
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--172
+Underfull \hbox (badness 10000) in paragraph at lines 160--162
 
  []
 
@@ -626,37 +601,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 180--182
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 207--209
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--231
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
-) (./Bibliography/Bibliography.tex [18]
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--423
+
+ []
+
+) (./Bibliography/Bibliography.tex [19]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 5.
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 26.
- [19]
+ [20]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 26.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 26.
@@ -666,18 +656,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 26.
  ) 
 Here is how much of TeX's memory you used:
- 9393 strings out of 481239
- 139978 string characters out of 5920377
+ 9386 strings out of 481239
+ 139909 string characters out of 5920377
  431885 words of memory out of 5000000
- 24324 multiletter control sequences out of 15000+600000
- 543593 words of font info for 77 fonts, out of 8000000 for 9000
+ 24319 multiletter control sequences out of 15000+600000
+ 542775 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,12n,47p,304b,568s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (19 pages, 239751 bytes).
+Output written on main.pdf (20 pages, 243114 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
- 284 compressed objects within 3 object streams
- 90 named destinations out of 1000 (max. 500000)
+ 333 PDF objects out of 1000 (max. 8388607)
+ 288 compressed objects within 3 object streams
+ 91 named destinations out of 1000 (max. 500000)
  189 words of extra memory for PDF output out of 10000 (max. 10000000)
 
