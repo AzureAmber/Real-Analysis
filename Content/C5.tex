@@ -245,9 +245,12 @@
 		$\mathbb{R}$ such that:	
 		\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
 			\item d(p,q) $>$ 0 \qquad \qquad if p $\neq$ q
+			
 			\item d(p,q) = 0 if and only if p = q
+			
 			\item {\color{lblue} Symmetry}:
 				d(p,q) = d(q,p)
+			
 			\item {\color{lblue} Triangle Inequality}:
 				d(p,q) $\leq$ d(p,r) + d(r,q) \qquad \qquad for any r $\in$ $\mathbb{R}$.
 		\end{itemize}
@@ -388,7 +391,7 @@ $\in$ E in N$_r(p)$ }
 
 	So p cannot be limit point of E and thus, E has no limit points. \\
 
-{ \color{red} Theorem 5.2.6: Complement of union of sets = Intesection of complement of sets } 
+{ \color{red} Theorem 5.2.6: De Morgan's Laws } 
 	
 	\begin{adjustbox}{minipage=14cm, right}
 		Let $E_1, E_2 , ... $ be a collection of sets. Then,
@@ -411,7 +414,7 @@ $\in$ E in N$_r(p)$ }
 
 	Thus, ($\cup_{}^{}$ $E_x$)$^c$ = $\cap_{}^{}$ ($E_x^c$). \\
 
-{ \color{red} Theorem 5.2.7: Open set $\rightarrow$ Closed complement  } 
+{ \color{red} Theorem 5.2.7: Open set $\rightarrow$ Closed complement } 
 
 	\begin{adjustbox}{minipage=14cm, right}
 		A set E is open if and only if E$^\text{c}$ is closed.
@@ -451,72 +454,76 @@ $\in$ E in N$_r(p)$ }
 
 	From {\color{red} theorem 5.2.7}, let E = F$^\text{c}$. \\
 
+{ \color{red} Theorem 5.2.9: Union open $\rightarrow$ open and
+Intersection closed $\rightarrow$ closed } 
 
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.4em]
+		\item If $\{G_x\}$ is a finite or infinite collection of open sets,
+		then $\cup$ $G_x$ is open.
 
+			{ \color{magenta} \underline{Proof} }
 
+				If p $\in$ $\cup$ $G_x$, then p $\in$ $G_x$ for at least one x.
+				Let $\overline{x}$ be such an x.
 
+				Since $G_{\overline{x}}$ is open, then p is an interior point of
+				$G_{\overline{x}}$ and thus, there is a N$_r(p)$ such that
+				N$_r(p)$ $\subset$ $G_{\overline{x}}$ $\subset$ $\cup$ $G_x$.
+				So p is an interior point of $\cup$ $G_x$.
 
+				Since any p $\in$ $\cup$ $G_x$ is an interior point, then
+				$\cup$ $G_x$ is open.
 
+		\item If $\{F_x\}$ is a finite or infinite collection of closed sets,
+		then $\cap$ $F_x$ is closed.
 
+			{ \color{magenta} \underline{Proof} }
 
+				By {\color{orange} Corollary 5.2.8}, any $F_x^c$ is open.
+				Since $\{F_x^c\}$ is a finite or infinite collection of
+				open set, then by part (a), $\cup$ $F_x^c$ is open.
 
+				Thus, again by {\color{orange} Corollary 5.2.8},
+				($\cup$ $F_x^c$)$^c$ is closed.
 
+				By {\color{red} theorem 5.2.6},
+				($\cup$ $F_x^c$)$^c$ = $\cap$ $(F_x^c)^c$
+				= $\cap$ $F_x$.
+				
+		\item If $G_1, ... , G_n$ is a finite collection of open sets,
+		then $\cap_{x=1}^n$ $G_x$ is open.
 
+			{ \color{magenta} \underline{Proof} }
 
+				If p $\in$ $\cap_{x=1}^n$ $G_x$, then p $\in$ $G_x$ for
+				all $G_x$ for x = \{1, 2, ... , n\}.
 
+				Since each $G_x$ is open, then for any $G_x$, there is a
+				N$_{r_x}(p)$ $\subset$ $G_x$.
 
+				Let r = min($r_1, r_2 , ... , r_n$).
+				Thus, p $\in$ N$_r(p)$ $\subset$ N$_{r_x}(p)$ for all x.
 
+				So, N$_r(p)$ $\subset$ $\cap_{x=1}^n$ $G_x$ and thus,
+				p is an interior point of $\cap_{x=1}^n$ $G_x$ so
+			    $\cap_{x=1}^n$ $G_x$ is open.
 
+		\item If $F_1, ... , F_n$ is a finite collection of closed sets,
+		then $\cup_{x=1}^n$ $F_x$ is closed.
 
+			{ \color{magenta} \underline{Proof} }
 
+				By {\color{orange} Corollary 5.2.8}, any $F_x^c$ is open.
+				Since $F_1^c, ... , F_n^c$ is a finite collection of
+				open set, then by part (c), $\cap_{x=1}^n$ $F_x^c$ is open.
 
+				Thus, again by {\color{orange} Corollary 5.2.8},
+				($\cap_{x=1}^n$ $F_x^c$)$^c$ is closed.
 
-
-
-
-
-
-\subsection{}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+				By {\color{red} theorem 5.2.6},
+				($\cap_{x=1}^n$ $F_x^c$)$^c$ = $\cup_{x=1}^n$ $(F_x^c)^c$
+				= $\cup_{x=1}^n$ $F_x$.
+	\end{enumerate}
 
 
 

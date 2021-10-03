@@ -1,0 +1,270 @@
+\newpage
+\section[Day 6: Existence of $\mathbb{R}$]
+{Existence of $\mathbb{R}$: {\normalsize \color{red} Theorem 2.3.3}}
+
+	\begin{adjustbox}{minipage=14cm, right}
+		There exists an ordered field $\mathbb{R}$ which has the
+		least upper bound property.
+
+		Also, $\mathbb{R}$ contains $\mathbb{Q}$ as a subfield. \\
+	\end{adjustbox}
+	
+{ \color{blue} Definition 6.1: Cuts }
+
+	\begin{adjustbox}{minipage=14cm, right}
+		Define a cut as any set $\alpha$ $\subset$ $\mathbb{Q}$ with the properties:
+	\end{adjustbox}
+
+	\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+		\item $\alpha$ is not empty and $\alpha$ $\not =$ $\mathbb{Q}$
+		
+		\item If p $\in$ $\alpha$ and q $\in$ $\mathbb{Q}$ $<$ p,
+			then q $\in$ $\alpha$
+		
+			\item If p $\in$ $\alpha$, then p $<$ r $\in$ $\mathbb{Q}$ for
+			some r $\in$ $\alpha$ \\
+	\end{itemize}
+
+{ \color{blue} Proposition 7.1: Order of $\mathbb{R}$ $\rightarrow$ ordered set $\mathbb{R}$ }
+
+	\begin{adjustbox}{minipage=14cm, right}
+		Define $\alpha$ $<$ $\beta$ if $\alpha$ is a proper subset of $\beta$.
+
+		\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+			\item If $\alpha$ $\not \geq$ $\beta$, then $\beta$ is not a subset of $\alpha$.
+
+				Then there is a p $\in$ $\beta$ such that p $\not \in$ $\alpha$.
+
+				Then for any q $\in$ $\alpha$, q $<$ p and thus, q $\in$ $\beta$.
+
+				Thus, $\alpha$ $\subset$ $\beta$ and since $\alpha$ $\neq$ $\beta$,
+				then $\alpha$ $<$ $\beta$.
+
+			\item If $\alpha$ $\not <$ $\beta$ and $\alpha$ $\not >$ $\beta$,
+				then either $\alpha$ = $\beta$ or $\alpha$ $\neq$ $\beta$.
+
+				If $\alpha$ $\neq$ $\beta$, there are p,q such that
+				p $\in$ $\alpha$, but p $\not \in$ $\beta$ and q $\in$ $\beta$,
+				but q $\not \in$ $\alpha$.
+
+				But if p $\not \in$ $\beta$, then for any b $\in$ $\beta$, b $<$ p.
+				Thus, q $<$ p.
+
+				Similarly, if q $\not \in$ $\alpha$, then for any a $\in$ $\alpha$,
+				a $<$ q. Thus, p $<$ q.
+
+				Thus, there is a contradiction since p $>$ q and p $<$ q so
+				$\alpha$ = $\beta$.
+
+			\item If $\alpha$ $\not \leq$ $\beta$, then $\alpha$ is not a subset of $\beta$.
+
+				Then there is a p $\in$ $\alpha$ such that p $\not \in$ $\beta$.
+
+				Then for any q $\in$ $\beta$, q $<$ p and thus, q $\in$ $\alpha$.
+
+				Thus, $\beta$ $\subset$ $\alpha$ and since $\alpha$ $\neq$ $\beta$,
+				then $\beta$ $<$ $\alpha$.
+
+			\item If $\alpha$ $<$ $\beta$ and $\beta$ $<$ $\gamma$, then since
+				$\alpha$ is a proper subset of $\beta$ and $\beta$ is a proper subset
+				of $\gamma$, then $\alpha$ is a proper subset of $\gamma$.
+				Thus, $\alpha$ $<$ $\gamma$.
+		\end{itemize}
+
+		Thus, $\mathbb{R}$ is an ordered set with such an order $<$. \\
+	\end{adjustbox}
+
+{ \color{blue} Proposition 6.2: Least Upper Bound of $\mathbb{R}$
+$\rightarrow$ Least Upper Bound Property } 
+
+	\begin{adjustbox}{minipage=14cm, right}
+		Let A $\subset$ $\mathbb{R}$ and $\beta$ be an upper bound for A.
+		Let $\gamma$ be the union of all $\alpha$ $\in$ A.
+
+		Thus, p $\in$ $\gamma$ if and only if p $\in$ $\alpha$ for some $\alpha$ $\in$ A.
+
+		$\gamma$ defines a cut since:
+
+		\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+			\item Since A is nonempty, there exists a $\alpha_0$ $\in$ A where $\alpha_0$ is nonempty.
+
+				Since $\alpha_0$ is nonempty, then $\gamma$ is nonempty.
+
+				Since every $\alpha$ $\in$ A is $\alpha$ $<$ $\beta$, then $\gamma$ $<$ $\beta$
+				so $\gamma$ $\subset$ $\beta$ and thus, $\gamma$ $\neq$ $\mathbb{Q}$.
+
+			\item If p $\in$ $\gamma$, then p $\in$ $\alpha_1$ for some $\alpha_1$ $\in$ A.
+				If q $<$ p, then q $\in$ $\alpha_1$ so q $\in$ A.
+
+			\item If p $\in$ $\gamma$, then p $\in$ $\alpha_1$ for some $\alpha_1$ $\in$ A.
+				Thus, there is a r $\in$ $\alpha_1$ such that r $>$ p so r $\in$ $\gamma$.
+				Thus, there is a r $\in$ $\gamma$ where r $>$ p.
+		\end{itemize}
+
+		Since $\gamma$ defines a cut, then $\gamma$ $\in$ $\mathbb{R}$.
+		Since every $\alpha$ $\in$ A $\subset$ $\gamma$, then $\alpha$ $\leq$ $\gamma$
+		so $\gamma$ is an upper bound for A.
+
+		Suppose $\delta$ $<$ $\gamma$. Then there is a s $\in$ $\gamma$
+		such that s $\not \in$ $\delta$.
+		Since s $\in$ $\gamma$, then there is a $\alpha$ $\in$ A such that s $\in$ $\alpha$.
+		Since $\delta$ $<$ $\alpha$, then $\delta$ is not an upper bound of A.
+
+		Thus, $\gamma$ = sup(A).
+	\end{adjustbox}
+
+\newpage
+
+{ \color{blue} Proposition 6.3: $\mathbb{R}$ is a field} 
+
+	\begin{adjustbox}{minipage=14cm, right}
+		If $\alpha$, $\beta$ $\in$ $\mathbb{R}$, define $\alpha$ + $\beta$ as the set of all
+		sums r + s where r $\in$ $\alpha$ and s $\in$ $\beta$.
+
+		Also, let 0* be the set of all negative rational numbers which is a cut since:
+		
+			\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+				\item 0* is nonempty and 0* $\not =$ $\mathbb{Q}$
+
+				\item If p $\in$ 0*, then any q $\in$ $\mathbb{Q}$ $<$ p is a negative rational
+					and thus, q $\in$ 0*.
+
+				\item Since $\mathbb{Q}$ is dense in $\mathbb{R}$, then for any p $\in$ 0*,
+					there is a r $\in$ $\mathbb{Q}$ where p $<$ r $<$ 0 so r is a
+					negative rational so r $\in$ 0*.
+			\end{itemize}
+
+		$\alpha$ + $\beta$ $\in$ $\mathbb{R}$ since $\alpha$ + $\beta$ is a cut:
+
+			\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+				\item $\alpha$ + $\beta$ is non-empty since $\alpha$, $\beta$ are non-empty.
+					Take r' $\not \in$ $\alpha$, s' $\not \in$ $\beta$, then
+					r' + s' $>$ r + s for r $\in$ $\alpha$, s $\in$ $\beta$.
+					Thus, r' + s' $\not \in$ $\alpha$ + $\beta$ so
+					$\alpha$ + $\beta$ $\neq$ $\mathbb{Q}$.
+
+				\item If p $\in$ $\alpha$ + $\beta$, then p = r + s where r $\in$ $\alpha$
+					and s $\in$ $\beta$.
+
+					If q $<$ p, then q - s $<$ p - s = (r + s) - s = r so q - s $\in$ $\alpha$.
+
+					Since q - s $\in$ $\alpha$ and s $\in$ $\beta$, then
+					(q - s) + s = q $\in$ $\alpha$ + $\beta$.
+
+				\item If r $\in$ $\alpha$, then there is a t $\in$ $\alpha$ such that t $>$ r.
+					Let s $\in$ $\beta$.
+
+					Thus, for any p = r + s $\in$ $\alpha$ + $\beta$, there is a
+					q = t + s $\in$ $\alpha$ + $\beta$ such that p = r + s $<$ t + s = q.
+			\end{itemize}
+
+		$\alpha$ + $\beta$ = $\beta$ + $\alpha$
+
+			\qquad If p = r + s $\in$ $\alpha$ + $\beta$ where
+			r $\in$ $\alpha$, s $\in$ $\beta$, then s + r = r + s = p $\in$ $\beta$ + $\alpha$.
+
+		($\alpha$ + $\beta$) + $\gamma$  = $\alpha$ + ($\beta$ + $\gamma$)
+
+			\qquad If r $\in$ $\alpha$, s $\in$ $\beta$, t $\in$ $\gamma$, then
+			r + s + t = (r + s) + t $\in$ ($\alpha$ + $\beta$) + $\gamma$ and
+
+			\qquad r + s + t = r + (s + t) $\in$ $\alpha$ + ($\beta$ + $\gamma$).
+
+		$\alpha$ + 0* = $\alpha$
+
+			\qquad If r $\in$ $\alpha$, s $\in$ 0*, then r + s $<$ r. Thus, r + s $\in$ $\alpha$.
+			Thus, $\alpha$ + 0* $\subset$ $\alpha$.
+
+			\qquad If p $\in$ $\alpha$, there is a r $\in$ $\alpha$ where r $>$ p.
+			Thus, p - r $\in$ 0*.
+
+			\qquad Since p = r + (p - r) $\in$ $\alpha$ + 0*, then $\alpha$ $\subset$ $\alpha$ + 0*.
+			Thus, $\alpha$ + 0* = $\alpha$.
+
+		There is a -$\alpha$ such that $\alpha$ + -$\alpha$ = 0*
+
+			\qquad Fix $\alpha$ $\in$ $\mathbb{R}$. Let set $\beta$ be all p where
+			there is r $>$ 0 such that -p - r $\not \in$ $\alpha$.
+
+			\qquad $\beta$ $\in$ $\mathbb{R}$ since $\beta$ is a cut:
+
+			\begin{itemize}[leftmargin=2cm, itemsep=0.4em]
+				\item If s $\not \in$ $\alpha$ and p = -s - 1, then -p - 1 $\not \in$ $\alpha$.
+					Thus, p $\in$ $\beta$ so $\beta$ is nonempty.
+					If q $\in$ $\alpha$, then -q $\not \in$ $\beta$ so $\beta$ $\neq$ $\mathbb{R}$.
+
+				\item If p $\in$ $\beta$, let r $>$ 0 so -p - r $\not \in$ $\alpha$.
+					If q $<$ p, then -q - r $>$ -p - r and thus, -q - r $\not \in$ $\alpha$
+					so q $\in$ $\beta$.
+
+				\item If p $\in$ $\beta$, let t = p + (r/2). Then
+					-t - (r/2) = -p - r $\not \in$ $\alpha$ and thus, t $\in$ $\beta$
+					where p $<$ t.
+			\end{itemize}
+			
+			\qquad If r $\in$ $\alpha$, s $\in$ $\beta$, then s $\not \in$ $\alpha$. Thus,
+			r $<$ -s so r + s $<$ 0. Thus, $\alpha$ + $\beta$ $\subset$ 0*.
+
+			\qquad Let v $\in$ 0* and let w = -v/2 so w $>$ 0.
+
+			\qquad Thus, by the Achimedean property, there is an integer n such that
+			nw $\in$
+
+			\qquad $\alpha$, but (n+1)w $\not \in$ $\alpha$.
+			Let p = -(n+2)w so -p - w = (n+1)w $\not \in$ $\alpha$ so p $\in$ $\beta$.
+
+			\qquad Then, v = -2w = nw + -nw - 2w = nw + -(n+2)w = nw + p $\in$ $\alpha$ + $\beta$.
+
+			\qquad Since v $\in$ 0*, then 0* $\subset$ $\alpha$ + $\beta$.
+			Thus, $\alpha$ + $\beta$ = 0*. Then, let -$\alpha$ = $\beta$.
+
+		Thus, if $\alpha$, $\beta$, $\gamma$ $\in$ $\mathbb{R}$ and $\beta$ $<$ $\gamma$, then
+		$\alpha$ + $\beta$ $<$ $\alpha$ + $\gamma$.
+
+		Thus, if $\alpha$ $>$ 0*, then -$\alpha$ = -$\alpha$ + 0* $<$ -$\alpha$ + $\alpha$ = 0*
+		so -$\alpha$ $<$ 0*.
+
+		If $\alpha$, $\beta$ $\in$ $\mathbb{R}_+$, define $\alpha$$\beta$ as the set of all p
+		such that p $\leq$ rs for r $\in$ $\alpha$, s $\in$ $\beta$.
+
+		Define 1* as the set of all q $<$ 1.
+
+		Then all field axioms for multiplication holds with similar proofs as addition.
+
+		Also, note since $\alpha$, $\beta$ $>$ 0*, then $\alpha$$\beta$ $>$ 0*.
+
+		Also, $\alpha$($\beta$ + $\gamma$) = $\alpha$$\beta$ + $\alpha$$\gamma$ holds
+		through cases were $\alpha$, $\beta$, $\gamma$ $>$,$<$ 0*.
+	\end{adjustbox}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

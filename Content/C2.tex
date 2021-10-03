@@ -26,8 +26,8 @@
 
 	We claim that $\alpha$ = inf(B).
 
-	If $\gamma < \alpha$, then $\gamma$ is not an upper bound for L so y $\not \in$ B.
-
+	If $\gamma < \alpha$, then $\gamma$ is not an upper bound for L so y $\not \in$ B
+	since all upper bounds for L are in B.
 	Thus, for every x $\in$ B, $\alpha \leq$ x.
 
 	If $\gamma \geq \alpha$, then $\gamma$ is an upper bound of L so $\gamma \in$ B.
@@ -36,7 +36,6 @@
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.45]{Images/2.1.png}
-	\caption{Infimum, Supremum, \& Bounds}
 \end{figure}
 
 
@@ -131,16 +130,16 @@ Distributive Law
 
 			{ \color{magenta} \underline{Proof} } 
 		
-				Since 0x + 0x = (0+0)x = 0x, then 0x = 0.
+				Since 0x + 0x = (0+0)x = 0x = 0x + 0, then 0x = 0.
 	
 		\item If x,y $\not =$ 0, then xy $\not =$ 0
 
 			{ \color{magenta} \underline{Proof} } 
 		
-				Suppose xy = 0, then $\frac{1}{y}\frac{1}{x}$xy
-				= $\frac{1}{y}$1y = $\frac{1}{y}$y = 1.
+				Suppose xy = 0, then 1 = $\frac{1}{y}\frac{1}{x}$xy
+				= $\frac{1}{y}$$\frac{1}{x}$0 = 0. 
 
-				xy = 0 = 1 is a contradiction.
+				0 = 1 is a contradiction.
 	
 		\item (-x)y = -(xy) = x(-y)
 
@@ -188,11 +187,11 @@ Distributive Law
 
 	\qquad Let F be an ordered field. For all x,y,z $\in$ F.
 	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.4em]
-		\item If x $>$ 0, -x $<$ 0 and vice versa
+		\item If x $>$ 0, then -x $<$ 0 and vice versa
 	
 			{ \color{magenta} \underline{Proof} } 
 	
-				-x = (-x) + 0 $<$ (-x) + x = 0
+				-x = -x + 0 $<$ -x + x = 0
 
 		\item If x $>$ 0 and y $<$ z, then xy $<$ xz
 	
@@ -212,7 +211,8 @@ Distributive Law
 		
 				If x $>$ 0, then x$^\text{2}$ = x $\cdot$ x $>$ 0
 
-				If x $<$ 0, then x$^\text{2}$ = (-x) $\cdot$ (-x) $>$ 0
+				If x $<$ 0, then (-x)$^\text{2}$ = (-x) $\cdot$ (-x)
+				= x $\cdot$ x = x$^\text{2}$ $>$ 0
 	
 		\item If 0 $< x < y$, then 0 $< 1/y < 1/x$
 
@@ -225,7 +225,7 @@ Distributive Law
 				$<$ ($\frac{1}{\text{y}}$)($\frac{1}{\text{x}}$)y = $\frac{1}{\text{x}}$ \\
 	\end{enumerate}
 
-{\color{red} Theorem 2.3.3: $\mathbb{R}$ is a ordered field with $<$ }
+{\color{red} Theorem 2.3.3: $\mathbb{R}$ is an ordered field with $<$ }
 
 	\qquad There exists a unique ordered field $ \mathbb{R} $ with the least upper bound property.
 
@@ -246,7 +246,7 @@ Distributive Law
 
 				Then, A is nonempty and bounded from above by y.
 
-				Then by the least upper bound property by $ \mathbb{R} $,
+				Then by the least upper bound property of $ \mathbb{R} $,
 				$\alpha$ = sup(A) exists in $ \mathbb{R} $ .
 
 				Since x $>$ 0, then -x $<$ 0 so $\alpha - x < \alpha-0 = \alpha$.

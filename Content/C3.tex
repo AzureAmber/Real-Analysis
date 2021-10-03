@@ -26,7 +26,7 @@
 
 				Applying the process n times, t $\leq$ t$^\text{n}$.
 
-		\item If 0 $<$ s $<$ t, s$^\text{n}$ $<$ t$^\text{n}$.
+		\item If 0 $<$ s $<$ t, then s$^\text{n}$ $<$ t$^\text{n}$.
 
 			{ \color{magenta} \underline{Proof} } 
 		
@@ -39,8 +39,10 @@
 
 { \color{red} Theorem 3.1.1: y$^\text{n}$ = x has a unique y }
 
-	\qquad Fix n. For every x $>$ 0, there exists a unique y $\in$ $ \mathbb{R} $ such that
-		y$^\text{n}$ = x.
+	\qquad Fix n $\in$ $\mathbb{Z}_+$. For every x $>$ 0, there exists a unique y
+	$\in$ $ \mathbb{R} $ such that y$^\text{n}$ = x.
+
+	\qquad Also, such a y is written as y = $\sqrt[n]{\text{x}}$ = x$^{\frac{1}{\text{n}}}$.
 
 { \color{magenta} \underline{Proof} } 
 
@@ -51,9 +53,9 @@
 
 	{ \color{lblue} Existence: }
 
-	Let set A = \{ t $>$ 0 : t$^\text{n}$ $<$ x \}
+	Let set A = \{ t $>$ 0 : t$^\text{n}$ $<$ x \}.
 
-	A $\not =$ $\emptyset$ since let t$_{1}$ = $\frac{x}{x+1}$ $<$ 1 and $<$ x
+	A $\not =$ $\emptyset$ since let t$_{1}$ = $\frac{x}{x+1}$ $<$ 1 so t$_1$ $<$ x
 	and thus, 0 $<$ t$_{1}$$^\text{n}$ $<$ t$_{1}$ $<$ x so t$_{1}$ $\in$ A.
 
 	A is bounded above since if t $ \geq $ x+1, then
@@ -102,10 +104,34 @@
 
 \newpage
 
+{ \color{orange} Corollary 3.1.2: n-th root of product = product of n-th root} 
+
+	\begin{adjustbox}{minipage=14cm, right}
+		If a,b $>$ 0 and n $\in$ $\mathbb{Z}_+$, then
+		(ab)$^{\frac{1}{n}}$ = a$^{\frac{1}{n}}$b$^{\frac{1}{n}}$.  
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+
+	Let A = a$^{\frac{1}{n}}$ and B = b$^{\frac{1}{n}}$.
+
+	Then by {\color{red} theorem 3.1.1}, since A is a solution to $y_1^n$ = a, then A$^n$ = a.
+
+	Similarly, B is a solution of $y_2^n$ = b so B$^n$ = b. Thus:
+
+	\hspace{1cm} ab = $A^n$$B^n$ = $A_1A_2...A_nB_1B_2...B_n$
+
+	\hspace{1.6cm} = $A_1A_2...B_1A_nB_2...B_n$ = ... = $A_1B_1A_2...A_{n-1}A_nB_3...B_n$
+
+	\hspace{1.6cm} = ... = $A_1B_1A_2B_2...A_nB_n$ = $(AB)^n$
+
+	Then again by {\color{red} theorem 3.1.1}, there is a unique
+	(ab)$^{\frac{1}{n}}$ = AB = a$^{\frac{1}{n}}$b$^{\frac{1}{n}}$.
 
 
 
 
+	
 \subsection{Decimals}
 
 	Let n$_0$ be the largest integer such that n$_0$ $\leq$ x for x $>$ 0 $\in$ $\mathbb{R}$.
@@ -142,7 +168,7 @@
 
 \subsection{Complex Numbers}
 
-{ \color{blue} Definition 3.3.1: Complex } 
+{ \color{blue} Definition 3.4.1: Complex } 
 	
 	\qquad A complex number is an ordered pair (a,b) where a,b $\in$ $ \mathbb{R} $.
 	For x,y $\in$ $\mathbb{C}$
@@ -154,7 +180,7 @@
 
 	Thus, the axioms form a field where (0,0) = 0 and (1,0) = 1 and (0,1) = i. \\
 
-{ \color{blue} Definition 3.3.2: Imaginary i } 
+{ \color{blue} Definition 3.4.2: Imaginary i } 
 	
 	\qquad Let i = (0,1). Then, i$^2$ = -1.
 
@@ -162,7 +188,7 @@
 	
 	i$^\text{2}$ = (0,1)(0,1) = (0-1,0+0) = (-1,0) = -1 \\
 
-{ \color{blue} Definition 3.3.3: Form a + bi } 
+{ \color{blue} Definition 3.4.3: Form a + bi } 
 	
 	\qquad (a,b) = a + bi
 
@@ -170,7 +196,7 @@
 	
 	(a,b) = (a,0) +(0,b) = (a,0) + (b,0)(0,1) = a + bi \\
 
-{ \color{blue} Definition 3.3.4: Conjugate }
+{ \color{blue} Definition 3.4.4: Conjugate }
 	
 	\qquad Let conjugate: $\bar{z}$ = a - bi where Re(z) = a , Im(z) = b \\
 
@@ -205,7 +231,7 @@
 				z$\overline{z}$ = (a,b)(a,-b) = (a$^2$ + b$^2$ , -ab+ab) = a$^2$ + b$^2$ $\geq$ 0
 	\end{enumerate}
 
-{ \color{blue} Definition 3.3.5: Absolute Value } 
+{ \color{blue} Definition 3.4.5: Absolute Value } 
 	
 	\qquad Let absolute value: $|$ z $|$ = $\sqrt{z \overline{z}}$ \\
 
@@ -250,6 +276,7 @@
 			
 				= $|z|^2$ + $|w|^2$ + 2 Re(z$\overline{w}$)
 				$\leq$ $|z|^2$ + $|w|^2$ + 2 $|z\overline{w}|$
+
 				= $|z|^2$ + $|w|^2$ + 2$|z||w|$
 				= ($|z|$ + $|w|$)$^2$
 	\end{enumerate}
