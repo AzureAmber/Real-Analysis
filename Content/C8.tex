@@ -1,0 +1,170 @@
+\newpage
+\section[Day 8: Closure, Open Relative, and Compact]
+{Closure, Open Relative, \& Compact}
+
+\subsection{ Closure }
+
+{ \color{blue} Definition 8.1.1: Closure } 
+
+	\begin{adjustbox}{minipage=14cm, right}
+        Let E $\subset$ metric space X and E' be the set of all
+        limit points of E in X.
+
+        \qquad Then the closure of E:
+            \qquad cl(E) = $\overline{E}$ = E $\cup$ E'
+
+        with the properties:
+	\end{adjustbox}
+
+    \begin{itemize}[leftmargin=2cm, itemsep=0.4em]
+        \item $\overline{E}$ is closed
+        
+        \item E = $\overline{E}$ if and only if E is closed
+        
+        \item $\overline{E}$ $\subset$ F for every closed F $\subset$ X
+        such that E $\subset$ F \\
+    \end{itemize}
+
+{ \color{red} Theorem 8.1.2: sup(E) $\in$ $\overline{E}$ if E is bounded}
+
+    \begin{adjustbox}{minipage=14cm, right}
+        Let non-empty set of real numbers, E, be bounded above.
+        
+        Let y = sup(E). Then, y $\in$ $\overline{E}$.
+        Thus, y $\in$ E if E is closed.
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+	
+	If y $\in$ E, then y $\in$ $\overline{E}$. Suppose y $\not \in$ E.
+
+	For every h $>$ 0, there exists a x $\in$ E such that y-h $<$ x $<$ y
+	otherwise y-h is an upper bound for E which is a contradiction
+	since y = sup(E).
+
+	Thus, y is a limit point of E so y $\in$ $\overline{E}$.
+
+
+
+
+
+\subsection{ Open Relative }
+
+{ \color{blue} Definition 8.2.1: Open Relative }
+
+	\begin{adjustbox}{minipage=14cm, right}
+		Suppose E $\subset$ Y $\subset$ metric space X.
+
+		Then E is open relative to Y if for each p $\in$ E, there is an
+		r $>$ 0
+
+		such that q $\in$ E if d(q,p) $<$ r and q $\in$ Y. \\
+	\end{adjustbox}
+
+{ \color{red} Theorem 8.2.2: E is open relative to Y $\subset$ X
+if E = Y $\cap$ G and G is open in X} 
+
+	\begin{adjustbox}{minipage=14cm, right}
+		Suppose E $\subset$ Y $\subset$ X. E is open relative to Y if and
+		only if E = Y $\cap$ G for some open G $\subset$ X.
+	\end{adjustbox}
+
+
+
+
+\subsection{ Compact Sets }
+
+{ \color{blue} Definition 8.3.1: Open Cover } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.2cm 0cm}
+		An open cover of set E $\subset$ X is a collection $G_1, G_2, ...$
+		of open subsets of X such that E $\subset$ $\cup_{}^{}$ $G_i$. \\
+	\end{adjustbox}
+
+{ \color{blue} Definition 8.3.2: Compact } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.2cm 0cm}
+		K $\subset$ metric space X is compact if every open cover
+		of K contains a finite subcover.
+
+		\qquad If $G_1, G_2, ...$ is an open cover of K, then
+		K $\subset$ $\cup_{i=1}^{n}$ $G_i$ for some n. \\
+	\end{adjustbox}
+
+\newpage
+
+{ \color{red} Theorem 8.3.3: A compact set is compact in every metric space } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.2cm 0cm}
+		Suppose K $\subset$ Y $\subset$ X.
+
+		Then, K is compact relative to X if and only if K is
+		compact relative to Y.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+
+	{\color{purple} ***Insert Proof later} \\
+
+{ \color{red} Theorem 8.3.4: A compact set is closed } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.2cm 0cm}
+		Compact subsets of metric spaces are closed
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+
+	{\color{purple} ***Insert Proof later} \\
+
+{ \color{red} Theorem 8.3.5: If closed E $\subset$ compact set K, E is compact } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.2cm 0cm}
+		Closed subsets of compact sets are compact
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+
+	{\color{purple} ***Insert Proof later} \\
+
+{ \color{orange} Corollary 8.3.6: } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		If F is closed and K is compact, then F $\cap_{}^{}$ K is compact.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+
+	{\color{purple} ***Insert proof later}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{}    

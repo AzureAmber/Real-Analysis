@@ -20,8 +20,10 @@
 \contentsline {subsection}{\numberline {5.1} Set of Sets }{14}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2} Metric Spaces }{16}{subsection.5.2}%
 \contentsline {section}{\numberline {6}Day 6: Existence of $\mathbb {R}$}{20}{section.6}%
-\contentsline {section}{\numberline {7}Day 7: Closure, Open Relative, and Compact}{22}{section.7}%
-\contentsline {subsection}{\numberline {7.1} Closure }{22}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2} Open Relative }{22}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3} Compact Sets }{22}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}}{22}{subsection.7.4}%
+\contentsline {section}{\numberline {7}Day 7: Balls and Convex}{22}{section.7}%
+\contentsline {subsection}{\numberline {7.1} Intervals and Balls }{22}{subsection.7.1}%
+\contentsline {section}{\numberline {8}Day 8: Closure, Open Relative, and Compact}{23}{section.8}%
+\contentsline {subsection}{\numberline {8.1} Closure }{23}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2} Open Relative }{23}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3} Compact Sets }{23}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}}{24}{subsection.8.4}%

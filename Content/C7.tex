@@ -1,78 +1,63 @@
 \newpage
-\section[Day 7: Closure, Open Relative, and Compact]
-{Closure, Open Relative, \& Compact}
 
-\subsection{ Closure }
+\section[Day 7: Balls and Convex]{ Balls and Convex }
 
-{ \color{blue} Definition 7.1.1: Closure } 
+\subsection{ Intervals and Balls } 
 
-	\begin{adjustbox}{minipage=14cm, right}
-        Let E $\subset$ metric space X and E' be the set of all
-        limit points of E in X.
+{ \color{blue} Definition 7.1.1: Intervals } 
 
-        \qquad Then the closure of E:
-            \qquad cl(E) = $\overline{E}$ = E $\cup$ E'
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.2cm 0cm}
+		In $\mathbb{R}$, a segement is an open interval (a,b) = \{ x $\in$ $\mathbb{R}$ : a $<$ x $<$ b \}
 
-        with the properties:
+		In $\mathbb{R}$, a interval is a closed interval [a,b] = \{ x $\in$ $\mathbb{R}$ : a $\leq$ x $<$ b \} \\
 	\end{adjustbox}
 
-    \begin{itemize}[leftmargin=2cm, itemsep=0.4em]
-        \item $\overline{E}$ is closed
-        
-        \item E = $\overline{E}$ if and only if E is closed
-        
-        \item $\overline{E}$ $\subset$ F for every closed F $\subset$ X
-        such that E $\subset$ F \\
-    \end{itemize}
+{ \color{blue} Definition 7.1.2: Open Balls } 
 
-{ \color{red} Theorem 7.1.2: sup(E) $\in$ $\overline{E}$ if E is bounded}
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.2cm 0cm}
+		In $\mathbb{R}^k$, an open ball of radius r $>$ 0 centered at p is:
 
-    \begin{adjustbox}{minipage=14cm, right}
-        Let non-empty set of real numbers, E, be bounded above.
-        
-        Let y = sup(E). Then, y $\in$ $\overline{E}$.
-        Thus, y $\in$ E if E is closed.
-    \end{adjustbox}
+		\qquad N$_r(p)$ = \{ x $\in$ $\mathbb{R}^k$ : $|x-p|$ $<$ r \}
+		= \{ x $\in$ $\mathbb{R}^k$ : d(x,p) $<$ r \}
+
+		A closed ball has d(y,p) $\leq$ r. \\
+	\end{adjustbox}
+
+{ \color{blue} Definition 7.1.3: Convex } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.2cm 0cm}
+		E $\subset$ $\mathbb{R}^k$ is convex if for all
+		x,y $\in$ E and t $\in$ [0,1]:
+
+		\qquad tx + (1-t)y $\in$ E
+
+		Balls in $\mathbb{R}^k$ are convex.
+
+		{\color{purple} ***Insert Proof later} \\
+	\end{adjustbox}
+
+{ \color{blue} Definition 7.1.4: Dense } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.2cm 0cm}
+		E $\subset$ X is dense if every x $\in$ X is either in E or
+		a limit point of E. \\
+	\end{adjustbox}
+
+{ \color{purple} Example 7.1.5: $\mathbb{Q}$ is dense in $\mathbb{R}$ } 
+
+	\qquad Let X = $\mathbb{R}$.
+	Then, E = $\mathbb{Q}$ is dense in $\mathbb{R}$.
 
 { \color{magenta} \underline{Proof} } 
-	
-	If y $\in$ E, then y $\in$ $\overline{E}$. Suppose y $\not \in$ E.
 
-	For every h $>$ 0, there exists a x $\in$ E such that y-h $<$ x $<$ y
-	otherwise y-h is an upper bound for E which is a contradiction
-	since y = sup(E).
+	Fix x $\in$ $\mathbb{R}$ and r $>$ 0.
 
-	Thus, y is a limit point of E so y $\in$ $\overline{E}$.
+	There is a q $\in$ $\mathbb{Q}$ such that x-r $<$ q $<$ x.
 
+	So for any r $>$ 0 and q $\in$ $\mathbb{Q}$, q $\neq$ x and
+	q $\in$ N$_r(x)$.
 
-
-
-
-\subsection{ Open Relative }
-
-{ \color{blue} Definition 7.2.1: Open Relative }
-
-	\begin{adjustbox}{minipage=14cm, right}
-		Suppose E $\subset$ Y $\subset$ metric space X.
-
-		Then E is open relative to Y if for each p $\in$ E, there is an
-		r $>$ 0
-
-		such that q $\in$ E if d(q,p) $<$ r and q $\in$ Y.
-	\end{adjustbox}
-
-{ \color{red} Theorem 7.2.2: E is open relative to Y $\subset$ X
-if E = Y $\cap$ G and G is open in X} 
-
-	\begin{adjustbox}{minipage=14cm, right}
-		Suppose E $\subset$ Y $\subset$ X. E is open relative to Y if and
-		only if E = Y $\cap$ G for some open G $\subset$ X.
-	\end{adjustbox}
-
-
-
-
-\subsection{ Compact Sets }
+	Thus, every x $\in$ $\mathbb{R}$ is a limit point of $\mathbb{Q}$. \\
 
 
 
@@ -93,4 +78,20 @@ if E = Y $\cap$ G and G is open in X}
 
 
 
-\subsection{}    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
