@@ -4,7 +4,7 @@
 
 \subsection{ Intervals and Balls } 
 
-{ \color{blue} Definition 7.1.1: Intervals } 
+{ \color{blue} Definition 7.1.1: Segments and Intervals } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
 		In $\mathbb{R}$, a segement is an open interval (a,b) = \{ x $\in$ $\mathbb{R}$ : a $<$ x $<$ b \}
@@ -29,21 +29,37 @@
 		E $\subset$ $\mathbb{R}^k$ is convex if for all
 		x,y $\in$ E and t $\in$ [0,1]:
 
-		\qquad tx + (1-t)y $\in$ E
-
-		Balls in $\mathbb{R}^k$ are convex.
-
-		{\color{purple} ***Insert Proof later} \\
+		\qquad tx + (1-t)y $\in$ E \\
 	\end{adjustbox}
 
-{ \color{blue} Definition 7.1.4: Dense } 
+{ \color{purple} Example 7.1.4: Balls are convex }
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		Balls in $\mathbb{R}^k$ are convex.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+	Let x,y $\in$ open ball N$_r(p)$. Let z = tx + (1-t)y for t $\in$ [0,1].
+	
+	Since $|x - p| < r$ and $|y - p| < r$:
+
+	\hspace{1cm} $|z - p|$ = $|tx + (1-t)y - p|$ = $|tx + (1-t)y - tp + (t-1)p|$
+
+	\hspace{2.3cm} = $|t(x-p) + (1-t)(y-p)|$ $\leq$ $t|(x-p)|$ + $(1-t)|(y-p)|$
+
+	\hspace{2.3cm} $<$ tr + (1-t)r = r
+
+	Thus, z $\in$ N$_r(p)$ so balls are convex. Same proof applies to closed balls. \\
+
+{ \color{blue} Definition 7.1.5: Dense } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
 		E $\subset$ X is dense if every x $\in$ X is either in E or
 		a limit point of E. \\
 	\end{adjustbox}
 
-{ \color{purple} Example 7.1.5: $\mathbb{Q}$ is dense in $\mathbb{R}$ } 
+{ \color{purple} Example 7.1.6: $\mathbb{Q}$ is dense in $\mathbb{R}$ } 
 
 	\qquad Let X = $\mathbb{R}$.
 	Then, E = $\mathbb{Q}$ is dense in $\mathbb{R}$.
