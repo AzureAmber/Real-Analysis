@@ -1,4 +1,4 @@
-\babel@toc {english}{}\relax 
+\babel@toc {english}{}
 \contentsline {section}{\numberline {1}Day 1: The Real Number System}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Number Systems}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Real Number System}{3}{subsection.1.2}%
@@ -25,5 +25,5 @@
 \contentsline {section}{\numberline {8}Day 8: Closure, Open Relative, and Compact}{23}{section.8}%
 \contentsline {subsection}{\numberline {8.1} Closure }{23}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2} Open Relative }{23}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3} Compact Sets }{23}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.3} Compact Sets }{24}{subsection.8.3}%
 \contentsline {subsection}{\numberline {8.4}}{24}{subsection.8.4}%
