@@ -1,5 +1,5 @@
 \newpage
-\section[Day 8: Closure, Open Relative, and Compact]
+\section[Day 8: Open Relative and Compact]
 {Closure, Open Relative, \& Compact}
 
 \subsection{ Closure }
@@ -33,7 +33,7 @@
 	always a p $\in$ N$_r(x)$ where p $\in$ $\overline{E}$ so x is a limit point
 	of $\overline{E}$ so x $\in$ $\overline{E}$.
 	Thus, $\overline{E}^c$ is open so $\overline{E}$ is closed by
-	{\color{orange} Corollary 5.2.8}.
+	{\color{red} theorem 7.1.7}.
 
 	\vspace{0.2cm}
 
@@ -80,7 +80,7 @@
 		Then E is open relative to Y if for each p $\in$ E, there is an
 		r $>$ 0
 
-		such that q $\in$ E if d(q,p) $<$ r and q $\in$ Y. \\
+		such that for any q $\in$ Y, then q $\in$ E if d(q,p) $<$ r. \\
 	\end{adjustbox}
 
 { \color{red} Theorem 8.2.2: E is open relative to Y $\subset$ X
@@ -93,10 +93,27 @@ if E = Y $\cap$ G and G is open in X}
 		for some open G $\subset$ X.
 	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof}: *** This might need to be fixed *** } 
 
-	*** INSERT PROOF HERE ***
+	Suppose E is open relative to Y.
 
+	Then for each p $\in$ E, there is a r$_p$ $>$ 0 such that for
+	any q $\in$ Y where d(p,q) $<$ r$_p$, then q $\in$ E.
+	
+	Since Y $\subset$ X, let V$_p$ be the set of all q $\in$ X
+	such that d(p,q) $<$ r$_p$ and define G = $\cup_{p \in E}^{}$ V$_p$.
+	Since V$_q$ is open by {\color{red} theorem 7.1.3}, then by
+	{\color{red} theorem 7.1.9a}, open G $\subset$ X.
+
+	Since p $\in$ V$_p$ for all p $\in$ E, then E $\subset$ G $\cap_{}^{}$ Y.
+	Also, by construction, then V$_p$ $\cap_{}^{}$ Y $\subset$ E so
+	G $\cap_{}^{}$ Y $\subset$ E.
+	Thus, E = Y $\cap_{}^{}$ G.
+
+	If G is open in X and E = G $\cap_{}^{}$ Y, then every p $\in$ E has
+	a V$_p$ $\subset$ G.
+
+	Then, V$_p$ $\cap_{}^{}$ Y $\subset$ G $\cap_{}^{}$ Y = E so E is open relative to Y.
 \newpage	
 
 
@@ -108,14 +125,14 @@ if E = Y $\cap$ G and G is open in X}
 { \color{blue} Definition 8.3.1: Open Cover } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		An open cover of set E $\subset$ X is a collection $G_1, G_2, ...$
-		of open subsets of X such that E $\subset$ $\cup_{}^{}$ $G_i$. \\
+		An open cover of set E $\subset$ X is a collection of open $G_1, G_2, ...$
+		$\subset$ X such that E $\subset$ $\cup_{}^{}$ $G_i$. \\
 	\end{adjustbox}
 
 { \color{blue} Definition 8.3.2: Compact } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		K $\subset$ metric space X is compact if every open cover
+		K $\subset$ X is compact if every open cover
 		of K contains a finite subcover.
 
 		\qquad If $G_1, G_2, ...$ is an open cover of K, then
@@ -127,13 +144,39 @@ if E = Y $\cap$ G and G is open in X}
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
 		Suppose K $\subset$ Y $\subset$ X.
 
-		Then, K is compact relative to X if and only if K is
+		Then K is compact relative to X if and only if K is
 		compact relative to Y.
 	\end{adjustbox}
 
 { \color{magenta} \underline{Proof} } 
 
-	*** INSERT PROOF HERE *** \\
+	Suppose K is compact relative to X.
+
+	Let $V_1, V_2, ...$ be sets open relative to Y such that
+	K $\subset$ $\cup_{}^{}$ $V_x$.
+	Then by {\color{red} theorem 8.2.2} for each $V_x$, there is a
+	$G_x$ open relative to X where $V_x$ = Y $\cap_{}^{}$ $G_x$.
+
+	Since K is compact relative to X, then there is a n such that
+	K $\subset$ $G_{x_1}$ $\cup_{}^{}$ ... $\cup_{}^{}$ $G_{x_n}$.
+
+	Thus, K = K $\cap_{}^{}$ Y $\subset$ ($\cup_{i=1}^{n}$ $G_{x_i}$) $\cap_{}^{}$ Y
+	= ($\cup_{i=1}^{n}$ $G_{x_i}$ $\cap_{}^{}$ Y) = $\cup_{i=1}^{n}$ $V_{x_i}$.
+	
+	Since there are open $V_{x_1}, ... , V_{x_n}$ where
+	K $\subset$ $\cup_{i=1}^{n}$ $V_{x_i}$ so K is compact relative to Y.
+
+	Suppose K is compact relative to Y.
+
+	Let open $G_1, G_2, ...$ $\subset$ X such that X $\subset$ $\cup_{}^{}$ $G_x$.
+	For each $G_x$, let $V_x$ = Y $\cap_{}^{}$ $G_x$ $\subset$ Y.
+
+	Since K is compact relative to Y, there is a n such that
+	K $\subset$ $\cup_{i=1}^{n}$ $V_{x_i}$.
+
+	Thus, K $\subset$ $\cup_{i=1}^{n}$ $V_{x_i}$
+	= $\cup_{i=1}^{n}$ (Y $\cap_{}^{}$ $G_{x_i}$)
+	$\subset$ $\cup_{i=1}^{n}$ $G_{x_i}$ so K is compact relative to X. \\
 
 { \color{red} Theorem 8.3.4: A compact set is closed } 
 

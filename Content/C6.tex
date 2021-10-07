@@ -1,268 +1,335 @@
 \newpage
-\section[Day 6: Existence of $\mathbb{R}$]
-{Construction of $\mathbb{R}$: {\normalsize \color{red} Theorem 2.3.3}}
+\section[Day 6: Cardinality]{Cardinality}
+
+\subsection{Cardinality}
+
+{ \color{blue} Definition 6.1.1: Onto and 1-1 Mapping } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		There exists an ordered field $\mathbb{R}$ which has the
-		least upper bound property.
+		Suppose for every x $\in$ A, there is an associated f(x) $\in$ B.
 
-		Also, $\mathbb{R}$ contains $\mathbb{Q}$ as a subfield. \\
+		Then f maps A into B = f: A $\rightarrow$ B.
+		\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+			\item If f(A) = B, then f maps A onto B.
+			
+			\item If for each y $\in$ B, f$^{-1}$(y) consist of at most one x $\in$ A
+				where f$^{-1}$(y$_1$) = x$_1$ $\neq$ x$_2$ = f$^{-1}$(y$_2$) for y$_1$ $\neq$ y$_2$,
+				then f is a 1-1 mapping of A into B.
+		\end{itemize}
 	\end{adjustbox}
-	
-{ \color{blue} Definition 6.1: Cuts }
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.3]{Images/6.1.1.png}
+\end{figure}
+
+{ \color{blue} Definition  6.1.2: 1-1 Correspondence} 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Define a cut as any set $\alpha$ $\subset$ $\mathbb{Q}$ with the properties:
+		Sets A and B are equivalent {\color{lblue} (have the same cardinality)} if there is
+		a 1-1 onto function f: A $\rightarrow$ B. {\color{lblue} (1-1 correspondence between A and B)}
+		Then:
+
+		\qquad A $\sim$ B
+
+		If f: A $\rightarrow$ B is 1-1 and onto, then
+		there is a f$^{-1}$: B $\rightarrow$ A that is 1-1 and onto. \\
 	\end{adjustbox}
 
+{ \color{blue} Definition 6.1.3: Countability } 
 	\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
-		\item $\alpha$ is not empty and $\alpha$ $\not =$ $\mathbb{Q}$
-		
-		\item If p $\in$ $\alpha$ and q $\in$ $\mathbb{Q}$ $<$ p,
-			then q $\in$ $\alpha$
-		
-			\item If p $\in$ $\alpha$, then p $<$ r $\in$ $\mathbb{Q}$ for
-			some r $\in$ $\alpha$ \\
+		\item A is {\color{lblue} finite} if A $\sim$ J$_n$ = \{0, 1, ..., n\}
+			for some n $\in$ $\mathbb{N}$
+		\item A is {\color{lblue} infinite} if A is not finite
+		\item A is {\color{lblue} countably infinite} if A $\sim$ J = $\mathbb{Z}_+$
+		\item A is {\color{lblue} uncountable} if A is not finite or countably infinite
+		\item A is {\color{lblue} at most countable} if A is finite or countably infinite \\
 	\end{itemize}
 
-{ \color{blue} Proposition 6.2: Order of $\mathbb{R}$ $\rightarrow$ ordered set $\mathbb{R}$ }
+{ \color{purple} Example 6.1.4 } 
 
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Define $\alpha$ $<$ $\beta$ if $\alpha$ is a proper subset of $\beta$.
+	\qquad $\mathbb{Z}$ is countably infinite
 
-		\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
-			\item If $\alpha$ $\not \geq$ $\beta$, then $\beta$ is not a subset of $\alpha$.
+{ \color{magenta} \underline{Proof} } 
 
-				Then there is a p $\in$ $\beta$ such that p $\not \in$ $\alpha$.
+	Let f: $\mathbb{Z}_+$ $\rightarrow$ $\mathbb{Z}$
 
-				Then for any q $\in$ $\alpha$, q $<$ p and thus, q $\in$ $\beta$.
+	\hspace{0.5cm} f(n) = 
+	$
+	\begin{cases}
+		\frac{n}{2} & \text{n is even} \\
+		-\frac{n-1}{2} & \text{n is odd} \\
+	\end{cases}
+	$
 
-				Thus, $\alpha$ $\subset$ $\beta$ and since $\alpha$ $\neq$ $\beta$,
-				then $\alpha$ $<$ $\beta$.
-
-			\item If $\alpha$ $\not <$ $\beta$ and $\alpha$ $\not >$ $\beta$,
-				then either $\alpha$ = $\beta$ or $\alpha$ $\neq$ $\beta$.
-
-				If $\alpha$ $\neq$ $\beta$, there are p,q such that
-				p $\in$ $\alpha$, but p $\not \in$ $\beta$ and q $\in$ $\beta$,
-				but q $\not \in$ $\alpha$.
-
-				But if p $\not \in$ $\beta$, then for any b $\in$ $\beta$, b $<$ p.
-				Thus, q $<$ p.
-
-				Similarly, if q $\not \in$ $\alpha$, then for any a $\in$ $\alpha$,
-				a $<$ q. Thus, p $<$ q.
-
-				Thus, there is a contradiction since p $>$ q and p $<$ q so
-				$\alpha$ = $\beta$.
-
-			\item If $\alpha$ $\not \leq$ $\beta$, then $\alpha$ is not a subset of $\beta$.
-
-				Then there is a p $\in$ $\alpha$ such that p $\not \in$ $\beta$.
-
-				Then for any q $\in$ $\beta$, q $<$ p and thus, q $\in$ $\alpha$.
-
-				Thus, $\beta$ $\subset$ $\alpha$ and since $\alpha$ $\neq$ $\beta$,
-				then $\beta$ $<$ $\alpha$.
-
-			\item If $\alpha$ $<$ $\beta$ and $\beta$ $<$ $\gamma$, then since
-				$\alpha$ is a proper subset of $\beta$ and $\beta$ is a proper subset
-				of $\gamma$, then $\alpha$ is a proper subset of $\gamma$.
-				Thus, $\alpha$ $<$ $\gamma$.
-		\end{itemize}
-
-		Thus, $\mathbb{R}$ is an ordered set with such an order $<$. \\
-	\end{adjustbox}
-
-{ \color{blue} Proposition 6.3: Least Upper Bound of $\mathbb{R}$
-$\rightarrow$ Least Upper Bound Property } 
-
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Let A $\subset$ $\mathbb{R}$ and $\beta$ be an upper bound for A.
-		Let $\gamma$ be the union of all $\alpha$ $\in$ A.
-
-		Thus, p $\in$ $\gamma$ if and only if p $\in$ $\alpha$ for some $\alpha$ $\in$ A.
-
-		$\gamma$ defines a cut since:
-
-		\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
-			\item Since A is nonempty, there exists a $\alpha_0$ $\in$ A where $\alpha_0$ is nonempty.
-
-				Since $\alpha_0$ is nonempty, then $\gamma$ is nonempty.
-
-				Since every $\alpha$ $\in$ A is $\alpha$ $<$ $\beta$, then $\gamma$ $<$ $\beta$
-				so $\gamma$ $\subset$ $\beta$ and thus, $\gamma$ $\neq$ $\mathbb{Q}$.
-
-			\item If p $\in$ $\gamma$, then p $\in$ $\alpha_1$ for some $\alpha_1$ $\in$ A.
-				If q $<$ p, then q $\in$ $\alpha_1$ so q $\in$ A.
-
-			\item If p $\in$ $\gamma$, then p $\in$ $\alpha_1$ for some $\alpha_1$ $\in$ A.
-				Thus, there is a r $\in$ $\alpha_1$ such that r $>$ p so r $\in$ $\gamma$.
-				Thus, there is a r $\in$ $\gamma$ where r $>$ p.
-		\end{itemize}
-
-		Since $\gamma$ defines a cut, then $\gamma$ $\in$ $\mathbb{R}$.
-		Since every $\alpha$ $\in$ A $\subset$ $\gamma$, then $\alpha$ $\leq$ $\gamma$
-		so $\gamma$ is an upper bound for A.
-
-		Suppose $\delta$ $<$ $\gamma$. Then there is a s $\in$ $\gamma$
-		such that s $\not \in$ $\delta$.
-		Since s $\in$ $\gamma$, then there is a $\alpha$ $\in$ A such that s $\in$ $\alpha$.
-		Since $\delta$ $<$ $\alpha$, then $\delta$ is not an upper bound of A.
-
-		Thus, $\gamma$ = sup(A).
-	\end{adjustbox}
+	So 1 $\mapsto$ 0 , 2 $\mapsto$ 1, 3 $\mapsto$ -1, 4 $\mapsto$ 2, 5 $\mapsto$ -2 , etc.
+	Thus, $\mathbb{Z}$ $\sim$ $\mathbb{Z}_+$. \\ 
 
 \newpage
 
-{ \color{blue} Proposition 6.4: $\mathbb{R}$ is a field} 
+{ \color{blue} Definition 6.1.5: Pigeonhole Principle } 
+
+	\qquad If A is finite, A is not equivalent to any proper set of A.
+
+	\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{Images/6.1.5.png}
+\end{figure}
+
+{ \color{red} Theorem 6.1.6: Infinite subsets of countable sets are countable } 
+
+	\qquad An infinite subset E of a countably infinite set A is countably infinite.
+
+{ \color{magenta} \underline{Proof} } 
+
+	Let E $\subset$ A be an infinite subset.
+	For every distinct $x_i$ $\in$ A, let x = \{ $x_1, x_2, ...$ \}.
+
+	Let $n_1$ be smallest integer such that x$_{n_1}$ $\in$ E.
+
+	Then let $n_2$ be the smallest integer where $n_2$ $>$ $n_1$ such that x$_{n_2}$ $\in$ E.
+
+	Repeat the process to create sequence f(k) = \{ $x_{n_1}, x_{n_2}, ... , x_{n_k} , ...$ \}.
+
+	Thus, there is a 1-1 correspondence between E and $\mathbb{Z}_+$ so
+	E is countably infinite.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{Images/6.1.6.png}
+\end{figure}
+
+\subsection{ Set of Sets } 
+
+{ \color{blue} Definition 6.2.1: Union and Intersection } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		If $\alpha$, $\beta$ $\in$ $\mathbb{R}$, define $\alpha$ + $\beta$ as the set of all
-		sums r + s where r $\in$ $\alpha$ and s $\in$ $\beta$.
+		Let sets $\Omega$,B be such that for each x $\in$ $\Omega$,
+		there is an associated E$_x$ $\subset$ B.
+		\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+			\item E = $\cup_{x=1}^{n}$ E$_x$ only if for every x $\in$ E, x $\in$ E$_x$ for
+				at least one x $\in$ $\Omega$.
 
-		Also, let 0* be the set of all negative rational numbers which is a cut since:
-		
-			\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
-				\item 0* is nonempty and 0* $\not =$ $\mathbb{Q}$
-
-				\item If p $\in$ 0*, then any q $\in$ $\mathbb{Q}$ $<$ p is a negative rational
-					and thus, q $\in$ 0*.
-
-				\item Since $\mathbb{Q}$ is dense in $\mathbb{R}$, then for any p $\in$ 0*,
-					there is a r $\in$ $\mathbb{Q}$ where p $<$ r $<$ 0 so r is a
-					negative rational so r $\in$ 0*.
-			\end{itemize}
-
-		$\alpha$ + $\beta$ $\in$ $\mathbb{R}$ since $\alpha$ + $\beta$ is a cut:
-
-			\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
-				\item $\alpha$ + $\beta$ is non-empty since $\alpha$, $\beta$ are non-empty.
-					Take r' $\not \in$ $\alpha$, s' $\not \in$ $\beta$, then
-					r' + s' $>$ r + s for r $\in$ $\alpha$, s $\in$ $\beta$.
-					Thus, r' + s' $\not \in$ $\alpha$ + $\beta$ so
-					$\alpha$ + $\beta$ $\neq$ $\mathbb{Q}$.
-
-				\item If p $\in$ $\alpha$ + $\beta$, then p = r + s where r $\in$ $\alpha$
-					and s $\in$ $\beta$.
-
-					If q $<$ p, then q - s $<$ p - s = (r + s) - s = r so q - s $\in$ $\alpha$.
-
-					Since q - s $\in$ $\alpha$ and s $\in$ $\beta$, then
-					(q - s) + s = q $\in$ $\alpha$ + $\beta$.
-
-				\item If r $\in$ $\alpha$, then there is a t $\in$ $\alpha$ such that t $>$ r.
-					Let s $\in$ $\beta$.
-
-					Thus, for any p = r + s $\in$ $\alpha$ + $\beta$, there is a
-					q = t + s $\in$ $\alpha$ + $\beta$ such that p = r + s $<$ t + s = q.
-			\end{itemize}
-
-		$\alpha$ + $\beta$ = $\beta$ + $\alpha$
-
-			\qquad If p = r + s $\in$ $\alpha$ + $\beta$ where
-			r $\in$ $\alpha$, s $\in$ $\beta$, then s + r = r + s = p $\in$ $\beta$ + $\alpha$.
-
-		($\alpha$ + $\beta$) + $\gamma$  = $\alpha$ + ($\beta$ + $\gamma$)
-
-			\qquad If r $\in$ $\alpha$, s $\in$ $\beta$, t $\in$ $\gamma$, then
-			r + s + t = (r + s) + t $\in$ ($\alpha$ + $\beta$) + $\gamma$ and
-
-			\qquad r + s + t = r + (s + t) $\in$ $\alpha$ + ($\beta$ + $\gamma$).
-
-		$\alpha$ + 0* = $\alpha$
-
-			\qquad If r $\in$ $\alpha$, s $\in$ 0*, then r + s $<$ r. Thus, r + s $\in$ $\alpha$.
-			Thus, $\alpha$ + 0* $\subset$ $\alpha$.
-
-			\qquad If p $\in$ $\alpha$, there is a r $\in$ $\alpha$ where r $>$ p.
-			Thus, p - r $\in$ 0*.
-
-			\qquad Since p = r + (p - r) $\in$ $\alpha$ + 0*, then $\alpha$ $\subset$ $\alpha$ + 0*.
-			Thus, $\alpha$ + 0* = $\alpha$.
-
-		There is a -$\alpha$ such that $\alpha$ + -$\alpha$ = 0*
-
-			\qquad Fix $\alpha$ $\in$ $\mathbb{R}$. Let set $\beta$ be all p where
-			there is r $>$ 0 such that -p - r $\not \in$ $\alpha$.
-
-			\qquad $\beta$ $\in$ $\mathbb{R}$ since $\beta$ is a cut:
-
-			\begin{itemize}[leftmargin=2cm, itemsep=0.4em]
-				\item If s $\not \in$ $\alpha$ and p = -s - 1, then -p - 1 $\not \in$ $\alpha$.
-					Thus, p $\in$ $\beta$ so $\beta$ is nonempty.
-					If q $\in$ $\alpha$, then -q $\not \in$ $\beta$ so $\beta$ $\neq$ $\mathbb{R}$.
-
-				\item If p $\in$ $\beta$, let r $>$ 0 so -p - r $\not \in$ $\alpha$.
-					If q $<$ p, then -q - r $>$ -p - r and thus, -q - r $\not \in$ $\alpha$
-					so q $\in$ $\beta$.
-
-				\item If p $\in$ $\beta$, let t = p + (r/2). Then
-					-t - (r/2) = -p - r $\not \in$ $\alpha$ and thus, t $\in$ $\beta$
-					where p $<$ t.
-			\end{itemize}
-			
-			\qquad If r $\in$ $\alpha$, s $\in$ $\beta$, then s $\not \in$ $\alpha$. Thus,
-			r $<$ -s so r + s $<$ 0. Thus, $\alpha$ + $\beta$ $\subset$ 0*.
-
-			\qquad Let v $\in$ 0* and let w = -v/2 so w $>$ 0.
-
-			\qquad Thus, by the Achimedean property, there is an integer n such that
-			nw $\in$
-
-			\qquad $\alpha$, but (n+1)w $\not \in$ $\alpha$.
-			Let p = -(n+2)w so -p - w = (n+1)w $\not \in$ $\alpha$ so p $\in$ $\beta$.
-
-			\qquad Then, v = -2w = nw + -nw - 2w = nw + -(n+2)w = nw + p $\in$ $\alpha$ + $\beta$.
-
-			\qquad Since v $\in$ 0*, then 0* $\subset$ $\alpha$ + $\beta$.
-			Thus, $\alpha$ + $\beta$ = 0*. Then, let -$\alpha$ = $\beta$.
-
-		Thus, if $\alpha$, $\beta$, $\gamma$ $\in$ $\mathbb{R}$ and $\beta$ $<$ $\gamma$, then
-		$\alpha$ + $\beta$ $<$ $\alpha$ + $\gamma$.
-
-		Thus, if $\alpha$ $>$ 0*, then -$\alpha$ = -$\alpha$ + 0* $<$ -$\alpha$ + $\alpha$ = 0*
-		so -$\alpha$ $<$ 0*.
-
-		If $\alpha$, $\beta$ $\in$ $\mathbb{R}_+$, define $\alpha$$\beta$ as the set of all p
-		such that p $\leq$ rs for r $\in$ $\alpha$, s $\in$ $\beta$.
-
-		Define 1* as the set of all q $<$ 1.
-		Then all multiplication axioms holds with similar proofs as addition.
-		Also, note since $\alpha$, $\beta$ $>$ 0*, then $\alpha$$\beta$ $>$ 0*.
-
-		Also, $\alpha$($\beta$ + $\gamma$) = $\alpha$$\beta$ + $\alpha$$\gamma$ holds
-		through cases were $\alpha$, $\beta$, $\gamma$ $>$,$<$ 0*.
+			\item P = $\cap_{x=1}^{n}$ E$_x$ only if for every x $\in$ P, x $\in$ E$_x$ for
+				all x $\in$ $\Omega$.
+		\end{itemize}
+		with properties:
 	\end{adjustbox}
 
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.4em]
+		\item A $\cup_{}^{}$ B = B $\cup_{}^{}$ A
+			\hspace{4cm} A $\cap_{}^{}$ B = B $\cap_{}^{}$ A
+
+		\item (A $\cup_{}^{}$ B) $\cup_{}^{}$ C = A $\cup_{}^{}$ (B $\cup_{}^{}$ C)
+			\hspace{1.6cm} (A $\cap_{}^{}$ B) $\cap_{}^{}$ C = A $\cap_{}^{}$ (B $\cap_{}^{}$ C)
+
+		\item A $\subset$ A $\cup_{}^{}$ B
+			\hspace{4.8cm} (A $\cap_{}^{}$ B) $\subset$ A
+
+		\item If A $\subset$ B, then A $\cup_{}^{}$ B = B and A $\cap_{}^{}$ B = A
+
+			{ \color{magenta} \underline{Proof} } 
+			
+				If x $\in$ A $\cup_{}^{}$ B, then x $\in$ A or/and x $\in$ B.
+				\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+					\item If x $\in$ A, since A $\subset$ B, then x $\in$ B.
+						Then, (A $\cup_{}^{}$ B) $\subset$ B.
+
+					\item If x $\in$ B, then immediately (A $\cup_{}^{}$ B) $\subset$ B.
+				\end{itemize}
+				If x $\in$ B, then x $\in$ A $\cup_{}^{}$ B so B $\subset$ (A $\cup_{}^{}$ B).
+				Thus, A $\cup_{}^{}$ B = B.
+
+				\vspace{0.5cm}
+
+				If x $\in$ A $\cap_{}^{}$ B, then x $\in$ A and x $\in$ B.
+				Thus, (A $\cap_{}^{}$ B) $\subset$ A.
+
+				If x $\in$ A, since A $\subset$ B, then x $\in$ B so x $\in$ A $\cap_{}^{}$ B.
+				Thus, A $\subset$ (A $\cap_{}^{}$ B).
+
+				Thus, A $\cap_{}^{}$ B = A.
+
+		\item A $\cap_{}^{}$ (B $\cup_{}^{}$ C) = (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C)
+
+			{ \color{magenta} \underline{Proof} } 
+			
+				If x $\in$ A $\cap_{}^{}$ (B $\cup_{}^{}$ C), then x $\in$ A
+				and (x $\in$ B or/and x $\in$ C).
+				\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+					\item If x $\in$ B, then x $\in$ (A $\cap_{}^{}$ B) so
+						x $\in$ (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C).
+
+					\item If x $\in$ C, then x $\in$ (A $\cap_{}^{}$ C) so
+						x $\in$ (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C).
+				\end{itemize}
+				Thus, A $\cap_{}^{}$ (B $\cup_{}^{}$ C)
+				$\subset$ (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C).
+				
+				If x $\in$ (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C),
+				then x $\in$ A and (x $\in$ B or/and x $\in$ C).
+
+				Thus, (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C)
+				$\subset$ A $\cap_{}^{}$ (B $\cup_{}^{}$ C).
+
+				Thus, A $\cap_{}^{}$ (B $\cup_{}^{}$ C)
+				= (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C).
+
+		\item A $\cup_{}^{}$ (B $\cap_{}^{}$ C) = (A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C)
+
+			{ \color{magenta} \underline{Proof} } 
+			
+			If x $\in$ A $\cup_{}^{}$ (B $\cap_{}^{}$ C), then
+			x $\in$ A or/and (x $\in$ B and x $\in$ C).
+			\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+				\item If x $\in$ A, then x $\in$ (A $\cup_{}^{}$ B)
+					and x $\in$ (A $\cup_{}^{}$ C)
+					so A $\cup_{}^{}$ (B $\cap_{}^{}$ C) $\subset$
+					(A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C).
+
+				\item If x $\in$ B,C, then x $\in$ (A $\cup_{}^{}$ B)
+					and x $\in$ (A $\cup_{}^{}$ C)
+					so A $\cup_{}^{}$ (B $\cap_{}^{}$ C) $\subset$
+					(A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C).
+			\end{itemize}
+			If x $\in$ (A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C), then
+			x $\in$ A or/and (x $\in$ B and x $\in$ C).
+
+			Thus, (A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C)
+			$\subset$ A $\cup_{}^{}$ (B $\cap_{}^{}$ C).
+
+			Thus, A $\cup_{}^{}$ (B $\cap_{}^{}$ C)
+			= (A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C). \\
+	\end{enumerate}
+
+{ \color{red} Theorem 6.2.2: Union of countably infinite sets is countably infinite } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		If $E_1, E_2, ... $ are countably infinite sets, then S = $\cup_{n=1}^{\infty}$ $E_n$
+		is countably infinite.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+	
+	For each $E_n$, there is a sequence \{ $x_{n1}$, $x_{n2}$, ... \}.
+	Then construct an array as such:
+
+	$ \hspace{1cm}
+	\left(
+	\begin{array}{cccc}
+		x_{11} & x_{12} & x_{13} & ... \\
+		x_{21} & x_{22} & x_{23} & ... \\
+		x_{31} & x_{32} & x_{33} & ... \\
+		\vdots & \vdots & \vdots & \ddots \\
+	\end{array}
+	\right)
+	$
+		
+	Take elements diagonally, then sequence S$^*$ =
+	\{ $x_{11} \ ; \ x_{21}, x_{12} \ ; \ x_{31}, x_{32}, x_{33} \ ; \ ... $ \}.
+		
+	\begin{adjustbox}{minipage=15cm, right, vspace=0.1cm 0cm}
+		Since S$^*$ $\sim$ S so S is at most countable and S is infinite since
+		$E_1, E_2, ...$ are infinite, then S cannot be finite and thus, countably infinite.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Alternative Proof} } 
+
+	For each $E_n$, let set $\widetilde{E_n}$ = $E_n$ - $\cup_{m=1}^{\infty}$ $E_m$ where
+	m $\neq$ n. Thus, S = $\cup_{n=1}^{\infty}$ $\widetilde{E_n}$.
+
+	Since each $E_n$ is countably infinite, there exists a 1-1 mapping
+	$\delta_n$: $E_n$ $\rightarrow$ $\mathbb{Z}_+$.
+
+	Thus, for each $\widetilde{E_n}$, there is a 1-1 mapping
+	$\delta_n$: $\widetilde{E_n}$ $\rightarrow$ A $\subset$ $\mathbb{Z}_+$.
+
+	Let $p_1, p_2, ... $ be distinct primes.
+
+	Since for s $\in$ S, there exists a unique $\widetilde{E_i}$ such that
+	s $\in$ $\widetilde{E_i}$, then let f(s) = $p_1^{\delta_1(s)} p_2^{\delta_2(s)}...$
+	where $p_k^{\delta_k(s)}$ = 1 if k $\neq$ i.
+
+	Then, by the Fundamental theorem of arithmetic, f maps s to a unique z $\in$ $\mathbb{Z}_+$
+	and thus, f is a 1-1 function so S is at most countable.
+
+	Since any $E_n$ $\subset$ S is countably infinite, then S cannot be finite
+	and thus, S is countably infinite.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{Images/6.2.2.png}
+\end{figure}
+
+\newpage
+
+{ \color{red} Theorem 6.2.3: The set of countable n-tuples are countable } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		Let A be a countably infinite set and B$_n$ be the set of all
+		n-tuples ($a_1$,...,$a_n$) where $a_k$ $\in$ A.
+		Then $B_n$ is countably infinite.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+	
+	The base case $B_1$ is countably infinite since $B_1$ = A.
+
+	Suppose $B_{n-1}$ is countably infinite. Then for every x $\in$ B:
+
+	\qquad x = (b,a) \qquad \qquad b $\in$ $B_{n-1}$ and a $\in$ A
+
+	Since for every fixed b, (b,a) $\sim$ A and thus, countably infinite.
+
+	Since B is a set of countably infinite sets, then $B_{n}$
+	is countably infinite. \\
+
+{ \color{blue} Definition 6.2.4: $\mathbb{Q}$ is countably infinite } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		The set of rational numbers, $\mathbb{Q}$, is countably infinite.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+	
+	Since elements of $\mathbb{Q}$ are of form $\frac{a}{b}$ which is a
+	2-tuple, then by the {\color{red} theorem 6.2.3}, $\mathbb{Q}$ is countably infinite.
+
+{ \color{magenta} \underline{Alternative Proof} } 
+	
+	For every x $\in$ $\mathbb{Q}$, let x = $(-1)^i$ $\frac{p}{q}$ where p,q $\in$ $\mathbb{Z}_+$.
+
+	Let f(x) = $2^i$ $3^p$ $5^q$. Then by the Fundamental theorem of arithmetic,
+	f is a 1-1 mapping of x to E $\subset$ $\mathbb{Z}_+$.
+
+	Thus, $\mathbb{Q}$ is at most countable, but since p,q $\in$ $\mathbb{Z}_+$,
+	then $\mathbb{Q}$ cannot be finite and thus, is countably infinite. \\
+
+{ \color{purple} Example 6.2.5: Sequences of 0 and 1 are uncountable } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		Let A be the set of all sequences whose elements are digits 0 and 1.
+		Then A is uncountable.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof: Cantor's Diagonalization Proof} } 
+
+	Let set E be a countably infinite subset of A which consist of sequences $s_1,s_2,...$.
+
+	Then construct a sequence s as follows:
+
+	\qquad If the n-th digit in $s_n$ is 1, then let the n-th digit of s be 0
+	and vice versa.
+
+	Thus. s differs from every $s_n$ $\in$ E so s $\not \in$ E.
+
+	But, s $\in$ A so E is a proper subset of A.
+
+	Thus, every countably infinite subset of A is a proper subset of A.
+
+	If A is countably infinite, then A is a proper subset of A which
+	is a contradiction.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	

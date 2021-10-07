@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.3)  6 OCT 2021 00:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.3)  7 OCT 2021 04:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -473,27 +473,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--40
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--115
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
@@ -529,161 +534,62 @@ File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 245.
-) (/home/azure/Desktop/Math/Content/C3.tex [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+) (/home/azure/Desktop/Math/Content/C3.tex [7]
+Underfull \hbox (badness 10000) in paragraph at lines 33--37
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--235
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--240
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
 ) (/home/azure/Desktop/Math/Content/C4.tex [10]
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
-[11]
-<Images/4.3.1.png, id=236, 734.745pt x 277.035pt>
-File: Images/4.3.1.png Graphic file (type png)
-<use Images/4.3.1.png>
-Package pdftex.def Info: Images/4.3.1.png  used on input line 150.
-(pdftex.def)             Requested size: 220.42519pt x 83.11113pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--164
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
-
- []
-
-[12 </home/azure/Desktop/Math/Images/4.3.1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 194--196
-
- []
-
-<Images/4.3.5.png, id=245, 283.0575pt x 283.0575pt>
-File: Images/4.3.5.png Graphic file (type png)
-<use Images/4.3.5.png>
-Package pdftex.def Info: Images/4.3.5.png  used on input line 203.
-(pdftex.def)             Requested size: 141.5284pt x 141.5284pt.
-<Images/4.3.6.png, id=247, 651.18282pt x 79.04532pt>
-File: Images/4.3.6.png Graphic file (type png)
-<use Images/4.3.6.png>
-Package pdftex.def Info: Images/4.3.6.png  used on input line 226.
-(pdftex.def)             Requested size: 325.5906pt x 39.52255pt.
-) (/home/azure/Desktop/Math/Content/C5.tex [13 </home/azure/Desktop/Math/Images/4.3.5.png> </home/azure/Desktop/Math/Images/4.3.6.png>] [14]
-<Images/5.1.2.png, id=265, 597.73312pt x 258.9675pt>
-File: Images/5.1.2.png Graphic file (type png)
-<use Images/5.1.2.png>
-Package pdftex.def Info: Images/5.1.2.png  used on input line 165.
-(pdftex.def)             Requested size: 298.86583pt x 129.48341pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 186--188
-
- []
-
-[15 </home/azure/Desktop/Math/Images/5.1.2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 207--209
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
-
- []
-
-<Images/5.2.2a.png, id=271, 264.99pt x 264.99pt>
-File: Images/5.2.2a.png Graphic file (type png)
-<use Images/5.2.2a.png>
-Package pdftex.def Info: Images/5.2.2a.png  used on input line 270.
-(pdftex.def)             Requested size: 119.24438pt x 119.24438pt.
-[16 </home/azure/Desktop/Math/Images/5.2.2a.png>]
-<Images/5.2.2b.png, id=279, 453.94594pt x 453.94594pt>
-File: Images/5.2.2b.png Graphic file (type png)
-<use Images/5.2.2b.png>
-Package pdftex.def Info: Images/5.2.2b.png  used on input line 294.
-(pdftex.def)             Requested size: 136.18483pt x 136.18483pt.
-<Images/5.2.2c.png, id=280, 453.94594pt x 453.94594pt>
-File: Images/5.2.2c.png Graphic file (type png)
-<use Images/5.2.2c.png>
-Package pdftex.def Info: Images/5.2.2c.png  used on input line 312.
-(pdftex.def)             Requested size: 136.18483pt x 136.18483pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--333
-
- []
-
-[17 </home/azure/Desktop/Math/Images/5.2.2b.png> </home/azure/Desktop/Math/Images/5.2.2c.png>]
-<Images/5.2.3.png, id=289, 294.34969pt x 294.34969pt>
-File: Images/5.2.3.png Graphic file (type png)
-<use Images/5.2.3.png>
-Package pdftex.def Info: Images/5.2.3.png  used on input line 359.
-(pdftex.def)             Requested size: 105.96579pt x 105.96579pt.
-<Images/5.2.4.png, id=290, 363.60844pt x 363.60844pt>
-File: Images/5.2.4.png Graphic file (type png)
-<use Images/5.2.4.png>
-Package pdftex.def Info: Images/5.2.4.png  used on input line 379.
-(pdftex.def)             Requested size: 112.71744pt x 112.71744pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 395--396
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 418--419
-
- []
-
-[18 </home/azure/Desktop/Math/Images/5.2.3.png> </home/azure/Desktop/Math/Images/5.2.4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 450--451
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 460--461
-
- []
-
-) (/home/azure/Desktop/Math/Content/C6.tex [19]
+[11]) (/home/azure/Desktop/Math/Content/C5.tex [12]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 3.
@@ -707,37 +613,154 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
-[20]) (/home/azure/Desktop/Math/Content/C7.tex [21]
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+[13]) (/home/azure/Desktop/Math/Content/C6.tex [14]
+<Images/6.1.1.png, id=253, 734.745pt x 277.035pt>
+File: Images/6.1.1.png Graphic file (type png)
+<use Images/6.1.1.png>
+Package pdftex.def Info: Images/6.1.1.png  used on input line 23.
+(pdftex.def)             Requested size: 220.42519pt x 83.11113pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
+
+ []
+
+[15 </home/azure/Desktop/Math/Images/6.1.1.png>]
+<Images/6.1.5.png, id=258, 283.0575pt x 283.0575pt>
+File: Images/6.1.5.png Graphic file (type png)
+<use Images/6.1.5.png>
+Package pdftex.def Info: Images/6.1.5.png  used on input line 76.
+(pdftex.def)             Requested size: 141.5284pt x 141.5284pt.
+<Images/6.1.6.png, id=260, 651.18282pt x 79.04532pt>
+File: Images/6.1.6.png Graphic file (type png)
+<use Images/6.1.6.png>
+Package pdftex.def Info: Images/6.1.6.png  used on input line 99.
+(pdftex.def)             Requested size: 325.5906pt x 39.52255pt.
+ [16 </home/azure/Desktop/Math/Images/6.1.5.png> </home/azure/Desktop/Math/Images/6.1.6.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
+
+ []
+
+<Images/6.2.2.png, id=271, 597.73312pt x 258.9675pt>
+File: Images/6.2.2.png Graphic file (type png)
+<use Images/6.2.2.png>
+Package pdftex.def Info: Images/6.2.2.png  used on input line 261.
+(pdftex.def)             Requested size: 298.86583pt x 129.48341pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 284--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+Underfull \hbox (badness 10000) in paragraph at lines 305--307
+
+ []
+
+) (/home/azure/Desktop/Math/Content/C7.tex [18 </home/azure/Desktop/Math/Images/6.2.2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+<Images/7.1.2a.png, id=284, 264.99pt x 264.99pt>
+File: Images/7.1.2a.png Graphic file (type png)
+<use Images/7.1.2a.png>
+Package pdftex.def Info: Images/7.1.2a.png  used on input line 36.
+(pdftex.def)             Requested size: 119.24438pt x 119.24438pt.
+<Images/7.1.2b.png, id=285, 453.94594pt x 453.94594pt>
+File: Images/7.1.2b.png Graphic file (type png)
+<use Images/7.1.2b.png>
+Package pdftex.def Info: Images/7.1.2b.png  used on input line 60.
+(pdftex.def)             Requested size: 136.18483pt x 136.18483pt.
+[19 </home/azure/Desktop/Math/Images/7.1.2a.png> </home/azure/Desktop/Math/Images/7.1.2b.png>]
+<Images/7.1.2c.png, id=295, 453.94594pt x 453.94594pt>
+File: Images/7.1.2c.png Graphic file (type png)
+<use Images/7.1.2c.png>
+Package pdftex.def Info: Images/7.1.2c.png  used on input line 80.
+(pdftex.def)             Requested size: 136.18483pt x 136.18483pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--60
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+<Images/7.1.3.png, id=296, 294.34969pt x 294.34969pt>
+File: Images/7.1.3.png Graphic file (type png)
+<use Images/7.1.3.png>
+Package pdftex.def Info: Images/7.1.3.png  used on input line 125.
+(pdftex.def)             Requested size: 105.96579pt x 105.96579pt.
+[20 </home/azure/Desktop/Math/Images/7.1.2c.png> </home/azure/Desktop/Math/Images/7.1.3.png>]
+<Images/7.1.4.png, id=303, 363.60844pt x 363.60844pt>
+File: Images/7.1.4.png Graphic file (type png)
+<use Images/7.1.4.png>
+Package pdftex.def Info: Images/7.1.4.png  used on input line 147.
+(pdftex.def)             Requested size: 112.71744pt x 112.71744pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
-) (/home/azure/Desktop/Math/Content/C8.tex [22]
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
+
+ []
+
+[21 </home/azure/Desktop/Math/Images/7.1.4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--335
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
+
+ []
+
+) (/home/azure/Desktop/Math/Content/C8.tex [23]
 Underfull \hbox (badness 10000) in paragraph at lines 46--49
 
  []
@@ -747,57 +770,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 111--113
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 128--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--123
+Underfull \hbox (badness 10000) in paragraph at lines 138--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 177--180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 209--210
 
  []
 
-) (/home/azure/Desktop/Math/Bibliography/Bibliography.tex [24]
+) (/home/azure/Desktop/Math/Bibliography/Bibliography.tex [25]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 5.
 
-) [25] (/home/azure/Desktop/Math/main.aux)
+) [26] (/home/azure/Desktop/Math/main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F2E606ECC0BF57C08ACB724FB1E16161;1797.
+(rerunfilecheck)             Checksum: F80F129663CA8D43068F2322A63EC471;1795.
  ) 
 Here is how much of TeX's memory you used:
- 9777 strings out of 479304
- 147816 string characters out of 5869779
+ 9778 strings out of 479304
+ 147823 string characters out of 5869779
  506743 words of memory out of 5000000
  26598 multiletter control sequences out of 15000+600000
  415287 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,13n,77p,286b,577s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,13n,77p,286b,501s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on /home/azure/Desktop/Math/main.pdf (25 pages, 378141 bytes).
+Output written on /home/azure/Desktop/Math/main.pdf (26 pages, 381314 bytes).
 PDF statistics:
- 405 PDF objects out of 1000 (max. 8388607)
- 344 compressed objects within 4 object streams
- 106 named destinations out of 1000 (max. 500000)
+ 409 PDF objects out of 1000 (max. 8388607)
+ 347 compressed objects within 4 object streams
+ 107 named destinations out of 1000 (max. 500000)
  275 words of extra memory for PDF output out of 10000 (max. 10000000)
 
