@@ -181,24 +181,55 @@ if E = Y $\cap$ G and G is open in X}
 { \color{red} Theorem 8.3.4: A compact set is closed } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Compact subsets of metric spaces are closed
+		Compact subsets of metric spaces are closed.
 	\end{adjustbox}
 
 { \color{magenta} \underline{Proof} } 
 
-	*** INSERT PROOF HERE *** \\
+	Let compact K $\subset$ X.
+	Suppose p $\in$ X, but p $\not \in$ K so p $\in$ K$^c$.
+
+	If q $\in$ K, let W$_q$ be a neighborhood of q with
+	r $<$ $\frac{1}{2}$d(p,q).
+	Let V$_{p,q}$ be a neighbohood of p with r $<$ $\frac{1}{2}$d(p,q).
+
+	Since K is compact, then there are finite points $q_1, ... , q_n$
+	such that K $\subset$ W where W = W$_{q_1}$ $\cup$ ... $\cup$ W$_{q_n}$.
+
+	Let V = V$_{p,q_1}$ $\cap$ ... $\cap$ V$_{p,q_n}$, then
+	K $\cap$ V $\subset$ W $\cap$ V = $\emptyset$ so V $\subset$ K$^c$.
+
+	Since there is a neighborhood V for p $\in$ K$^c$ where V $\subset$ K$^c$,
+	then every p $\in$ K$^c$ is an interior point so K$^c$ is open.
+	Then by {\color{red} theorem 7.1.7}, K is closed. \\
 
 { \color{red} Theorem 8.3.5: If closed E $\subset$ compact set K, E is compact } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Closed subsets of compact sets are compact
+		Closed subsets of compact sets are compact.
 	\end{adjustbox}
 
 { \color{magenta} \underline{Proof} } 
 
-	*** INSERT PROOF HERE *** \\
+	Suppose F $\subset$ K $\subset$ X where F is closed relative to X
+	and K is compact.
 
-{ \color{orange} Corollary 8.3.6: } 
+	Let $V_1, V_2, ...$ be an open cover for F.
+	Let open set F$^c$ be all k $\in$ K where k $\not \in$ F.
+
+	\qquad K = F $\cup$ F$^c$ $\subset$ $V_1$ $\cup$ $V_2$ $\cup$ ... $\cup$ F$^c$
+
+	Thus, $V_1$ $\cup$ $V_2$ $\cup$ ... $\cup$ F$^c$ is an open cover for K.
+
+	Since K is compact, there is a finite subcover $\Omega$ that covers K
+	and thus, finite subcover $\Omega$ covers F $\cup$ F$^c$.
+	
+	Remove F$^c$ from $\Omega$. Since finite subcover $\Omega$ - F$^c$ covers F,
+	then F is compact. \\
+
+\newpage
+
+{ \color{orange} Corollary 8.3.6: Closed F $\cap$ compact K = compact } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
 		If F is closed and K is compact, then F $\cap_{}^{}$ K is compact.
@@ -206,12 +237,90 @@ if E = Y $\cap$ G and G is open in X}
 
 { \color{magenta} \underline{Proof} } 
 
-	*** INSERT PROOF HERE *** \\
+	Since K is compact, then K is closed by {\color{red} theorem 8.3.4}.
 
+	Then, by {\color{red} 7.1.9b}, F $\cap$ K is closed.
 
+	Since F $\cap$ K $\subset$ K, then by {\color{red} theorem 8.3.5},
+	F $\cap$ K is compact. \\
 
+{ \color{red} Theorem 8.3.7: Nonempty $\cap_{i=1}^n$ $K_i$ $\rightarrow$
+nonempty $\cap$ $K_i$ } 
 
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		For compact sets $K_1, K_2, ...$ $\subset$ X where any intersection
+		of finite $K_i$ is nonempty, then $\cap$ $K_i$ is nonempty.
+	\end{adjustbox}
 
+{ \color{magenta} \underline{Proof} } 
+
+	Fix $K_1$.
+
+	If there is a k $\in$ $K_1$ where k $\in$ $K_i$ for all i, then
+	k $\in$ $\cap$ $K_i$ so $\cap$ $K_i$ is nonempty.
+
+	Suppose for every k $\in$ $K_1$, k $\not \in$ $K_i$ for some i.
+
+	Then for every k $\in$ $K_1$, there is a $K_i$ such that
+	p $\not \in$ $K_i$ so p $\in$ $K_i^c$.
+
+	Thus, $K_2^c, k_3^c, ...$ form an open cover for $K_1$.
+
+	Since $K_1$ is compact, there is a n where
+	$K_1$ $\subset$ $K_{i_1}$ $\cup$ ... $\cup$ $K_{i_n}$.
+
+	But then, $K_1$ $\cap$ $K_{i_1}$ $\cap$ ... $\cap$ $K_{i_n}$
+	= $\emptyset$ which is a contradiction. \\
+
+{ \color{orange} Corollary 8.3.8: Nonempty $K_i$ where $K_{i+1}$ $\subset$ $K_i$
+$\rightarrow$ nonempty $\cap$ $K_i$}
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		If $K_1, K_2, ...$ is a sequence of nonempty compact sets
+		such that $K_{i+1}$ $\subset$ $K_i$, then $\cap$ $K_i$ is nonempty.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+
+	Since each $K_i$ is nonempty and if $i_1 < ... < i_n$, then
+	$K_{i_1}$ $\cap$ ... $\cap$ $K_{i_n}$
+	= $K_{i_n}$ is nonempty, then
+	by {\color{red} theorem 8.3.7}, $\cap$ $K_i$ is nonempty. \\
+
+{ \color{red} Theorem 8.3.9: Nonempty intervals $I_n$ where
+$I_{n+1}$ $\subset$ $I_n$ $\rightarrow$ nonempty $\cap$ $I_n$}
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		If $I_1, I_2, ...$ is a sequence of intervals in $\mathbb{R}^1$
+		such that $I_{n+1}$ $\subset$ $I_n$,
+		
+		then $\cap$ $I_n$ is nonempty.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+
+	Let $I_n$ = [$a_n$,$b_n$] and thus, each $I_n$ is nonempty.
+	If $n_1 < ... < n_m$, then
+
+	$I_{n_1}$ $\cap$ ... $\cap$ $I_{n_m}$
+	= [$a_{n_m}$,$b_{n_m}$] is nonempty.
+	Thus, by {\color{red} theorem 8.3.7}, $\cap$ $I_n$ is nonempty. \\
+
+{ \color{red} Theorem 8.3.10: p $\in$ E' exists if
+infinite E $\subset$ compact K }
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		If E is an infinite subset of compact set K, then E has a
+		limit point in K.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+
+	If no p $\in$ K is a p $\in$ K', then each p would have
+	a neighbohood $V_p$ contains at most p $\in$ E if p $\in$ E.
+	Thus, there is no finite subcover that covers E and thus,
+	there is no finite subcover that covers K since E $\subset$ K
+	which contradicts K is compact. \\
 
 
 
