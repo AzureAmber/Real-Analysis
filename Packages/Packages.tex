@@ -1,21 +1,42 @@
+% -----------------------------------------------------------------------------
+                                % Standard Packages
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+    \setlength\parindent{0pt} % set distance between paragraphs to 0
+% -----------------------------------------------------------------------------
+                                % Enhances mathematical formulas
 \usepackage{amsmath}
+% -----------------------------------------------------------------------------
+                                % Includes math symbols
 \usepackage{amsfonts}
+% -----------------------------------------------------------------------------
+                                % Include integral symbols
 \usepackage{esint}
+% -----------------------------------------------------------------------------
+                                % Include latex symbols
 \usepackage{latexsym}
+% -----------------------------------------------------------------------------
+                                % Include referencing
 \usepackage{hyperref}
-    % URLs: \url{insert url here}
-        % Optional: \usepackage{indentfirst}
-\setlength\parindent{0pt}
+    % URLs: \href{insert url here}{text}
+% -----------------------------------------------------------------------------
+                                % Indent first paragraph
+% Optional: \usepackage{indentfirst}
 % -----------------------------------------------------------------------------
                                 % Creates header
+\usepackage{lastpage}
 \usepackage{fancyhdr}
     \pagestyle{fancy}
     \fancyhf{}
-    \lhead{\leftmark}
-    \rhead{\rightmark}
-    \cfoot{Page \thepage}
+    \lhead{\small \leftmark}       % adds chapter name to left header
+    \rhead{\small \rightmark}      % adds section name to right header
+    \cfoot{Page $\thepage$ out of $\pageref*{LastPage}$}    % adds page numbers
+
+    % create custom header for first page
+    \fancypagestyle{customfirst}{
+        \renewcommand{\headrulewidth}{0pt}
+        \cfoot{Page $\thepage$ out of $\pageref*{LastPage}$}
+    }
 % -----------------------------------------------------------------------------
                                 % Adjust line spacing
 \usepackage{setspace}
@@ -43,11 +64,12 @@
         %       \item Subitem
         %   \end{itemize}
         % \end{enumerate}
-\setlist{nolistsep}
+
+    \setlist{nolistsep}         % spacing between lists and other stuff set to 0
 % -----------------------------------------------------------------------------
                                 % Adjust tables
 \usepackage{array}
-    \setlength{\extrarowheight}{2pt}
+    \setlength{\extrarowheight}{2pt}        % adds more height to table rows
             % Optional: \usepackage{booktabs}
     % Format
         % \begin{table}[placement]  i.e)   h = here, t = top, b = bot
@@ -69,19 +91,19 @@
         %   \label{Picture label}
         % \end{figure}
 % -----------------------------------------------------------------------------
-                                % Include colors
+                                % Include colors (also to tables)
 \usepackage{xcolor}
     % Format
     %   \color{insert color here}
     %   \definecolor{name}{RGB}{#, #, #}
 \usepackage{colortbl}
-\definecolor{purple}{RGB}{210, 0, 235}
-\definecolor{lblue}{RGB}{10, 180, 250}
+    \definecolor{purple}{RGB}{210, 0, 235}
+    \definecolor{lblue}{RGB}{10, 180, 250}
 % -----------------------------------------------------------------------------  
                                 % Adjust paper size
 \usepackage[a4paper, inner=3cm, outer=3cm, top=2.5cm, bottom=2.5cm]{geometry}
-\setlength\headheight{15pt}
-\renewcommand{\headwidth}{15cm}
+    \setlength\headheight{15pt}         % set heigh of header to 15pt
+    \renewcommand{\headwidth}{15cm}     % set width of header to 15cm
 % -----------------------------------------------------------------------------
 								% Include Textboxes
 \usepackage{adjustbox}
@@ -91,3 +113,7 @@
 								% Include crossed out statements
 \usepackage[thicklines]{cancel}
 \renewcommand\CancelColor{\color{red}}
+    % \cancel{text} = strikethrough from bot to top
+    % \bcancel{text} = strikethrough from top to bot
+    % \xcancel{text} = strikethrough form X
+    % \cancelto{value}{text} = strikethrough with superscript value
