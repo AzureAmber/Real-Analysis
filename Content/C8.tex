@@ -322,29 +322,86 @@ infinite E $\subset$ compact K }
 	there is no finite subcover that covers K since E $\subset$ K
 	which contradicts K is compact. \\
 
+\newpage
+
+{ \color{red} Theorem 8.3.11: Heine-Borel Theorem } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		If a set E $\subset$ $\mathbb{R}^k$ has one of the three properties,
+		then it has the other two:
+	\end{adjustbox}
+
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.4em]
+		\item E is closed and bounded
+		\item E is compact
+		\item Every infinite subset of E has a limit point in E
+	\end{enumerate}
+
+{ \color{magenta} \underline{Proof} } 
+
+	Suppose E is closed and bounded.
+
+	Then there exists a M $\in$ $\mathbb{R}$ and q $\in$ $\mathbb{R}^k$
+	such that d(p,q) $<$ M for all p $\in$ E.
+	
+	Thus, there is a k-cell
+	K = [$-M+q_1$,$q_1+M$] $\times$ ... $\times$ [$-M+q_k$,$q_k+M$]
+	such that E $\subset$ K.
+
+	Since K $\subset$ $N_{\sqrt{kM^2}}(q)$, then K is compact
+	and thus by {\color{red} theorem 8.3.5}, E is compact
+	so (a) $\rightarrow$ (b).
+
+	Then by {\color{red} thereom 8.3.10}, any infinite subset
+	of E has a limit point in E so (b) $\rightarrow$ (c).
+
+	Suppose E is not bounded.
+
+	Then there exists p $\in$ E such that d(p,q) $>$ M for
+	any M $\in$ $\mathbb{R}$ and q $\in$ $\mathbb{R}^k$.
+
+	Let S $\subset$ E be such points p.
+	
+	Then S is infinite else there is a maximal p and thus,
+	p is bounded.
+	Thus, S is infinite and contains no limit points in E
+	since any d($p_1$,$p_2$) $>$ M which contradicts that
+	every infinite subset of E has a limit point in E.
+	Thus, E is bounded.
+
+	Suppose E is not closed.
+
+	Then there exists a p $\in$ E', but p $\not \in$ E.
+
+	Since p is a limit point, then there is a
+	q $\in$ E such that $\frac{1}{n+1}$ $<$ d(q,p) $<$ $\frac{1}{n}$
+	for n = \{1, 2, ...\}.
+
+	Let S $\subset$ E be such points q.
+
+	Thus, p is the only limit point of S since for r $<$ $\frac{1}{n}$,
+	any N$_r(q_i)$ contains no points of S other than $q_i$ since
+	d($q_i$,$q_j$) $>$ $\frac{1}{n}$ for any $q_1$,$q_2$ $\in$ S.
+	
+	Thus, S is infinite, but the only p $\in$ S' is p $\not \in$ E
+	which contradicts that every infinite subset of E has a
+	limit point in E. Thus, E is closed. So, (c) $\rightarrow$ (a). \\
+
+{ \color{red} Theorem 8.3.12: Weierstrass } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		Every bounded infinite set E $\subset$ $\mathbb{R}^k$ has
+		a limit point in $\mathbb{R}^k$.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+
+	Since E is bounded, then there exists a k-cell K such that
+	E $\subset$ K.
+	Since K is compact, then by {\color{red} theorem 8.3.10},
+	E has a limit point in K and thus, in $\mathbb{R}^k$.
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subsection{}    

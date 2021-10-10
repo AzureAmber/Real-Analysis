@@ -26,4 +26,6 @@
 \contentsline {subsection}{\numberline {8.1} Closure }{24}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2} Open Relative }{24}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3} Compact Sets }{25}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}}{26}{subsection.8.4}%
+\contentsline {section}{\numberline {9}Day 9: Perfect \& Connected Sets}{28}{section.9}%
+\contentsline {subsection}{\numberline {9.1} Perfect Sets }{28}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2} Connected Sets }{28}{subsection.9.2}%
