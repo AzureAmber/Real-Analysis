@@ -1,30 +1,30 @@
-\BOOKMARK [1][-]{section.1}{Day 1: The Real Number System}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Number Systems}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{Real Number System}{section.1}% 3
-\BOOKMARK [2][-]{subsection.1.3}{Least Upper Bound Property}{section.1}% 4
-\BOOKMARK [1][-]{section.2}{Day 2: Fields and Order}{}% 5
-\BOOKMARK [2][-]{subsection.2.1}{Greatest Upper Bound Property}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.2}{Fields}{section.2}% 7
-\BOOKMARK [2][-]{subsection.2.3}{Ordered Fields}{section.2}% 8
-\BOOKMARK [1][-]{section.3}{Day 3: Roots and the Complex Field}{}% 9
-\BOOKMARK [2][-]{subsection.3.1}{nth Root}{section.3}% 10
-\BOOKMARK [2][-]{subsection.3.2}{Decimals}{section.3}% 11
-\BOOKMARK [2][-]{subsection.3.3}{Extended Reals}{section.3}% 12
-\BOOKMARK [2][-]{subsection.3.4}{Complex Numbers}{section.3}% 13
-\BOOKMARK [1][-]{section.4}{Day 4: Euclidean Spaces \046 Cauchy-Schwarz}{}% 14
-\BOOKMARK [2][-]{subsection.4.1}{Euclidean Spaces}{section.4}% 15
-\BOOKMARK [2][-]{subsection.4.2}{Cauchy-Schwarz}{section.4}% 16
-\BOOKMARK [1][-]{section.5}{Day 5: Existence of R}{}% 17
-\BOOKMARK [1][-]{section.6}{Day 6: Cardinality}{}% 18
-\BOOKMARK [2][-]{subsection.6.1}{Cardinality}{section.6}% 19
-\BOOKMARK [2][-]{subsection.6.2}{ Set of Sets }{section.6}% 20
-\BOOKMARK [1][-]{section.7}{Day 7: Metric Spaces and Closed/Open}{}% 21
-\BOOKMARK [2][-]{subsection.7.1}{ Metric Spaces }{section.7}% 22
-\BOOKMARK [2][-]{subsection.7.2}{ Intervals and Balls }{section.7}% 23
-\BOOKMARK [1][-]{section.8}{Day 8: Open Relative and Compact}{}% 24
-\BOOKMARK [2][-]{subsection.8.1}{ Closure }{section.8}% 25
-\BOOKMARK [2][-]{subsection.8.2}{ Open Relative }{section.8}% 26
-\BOOKMARK [2][-]{subsection.8.3}{ Compact Sets }{section.8}% 27
-\BOOKMARK [1][-]{section.9}{Day 9: Perfect \046 Connected Sets}{}% 28
-\BOOKMARK [2][-]{subsection.9.1}{ Perfect Sets }{section.9}% 29
-\BOOKMARK [2][-]{subsection.9.2}{ Connected Sets }{section.9}% 30
+\BOOKMARK [1][-]{section.1}{\376\377\000D\000a\000y\000\040\0001\000:\000\040\000T\000h\000e\000\040\000R\000e\000a\000l\000\040\000N\000u\000m\000b\000e\000r\000\040\000S\000y\000s\000t\000e\000m}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{\376\377\000N\000u\000m\000b\000e\000r\000\040\000S\000y\000s\000t\000e\000m\000s}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{\376\377\000R\000e\000a\000l\000\040\000N\000u\000m\000b\000e\000r\000\040\000S\000y\000s\000t\000e\000m}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{\376\377\000L\000e\000a\000s\000t\000\040\000U\000p\000p\000e\000r\000\040\000B\000o\000u\000n\000d\000\040\000P\000r\000o\000p\000e\000r\000t\000y}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{\376\377\000D\000a\000y\000\040\0002\000:\000\040\000F\000i\000e\000l\000d\000s\000\040\000a\000n\000d\000\040\000O\000r\000d\000e\000r}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{\376\377\000G\000r\000e\000a\000t\000e\000s\000t\000\040\000U\000p\000p\000e\000r\000\040\000B\000o\000u\000n\000d\000\040\000P\000r\000o\000p\000e\000r\000t\000y}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{\376\377\000F\000i\000e\000l\000d\000s}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{\376\377\000O\000r\000d\000e\000r\000e\000d\000\040\000F\000i\000e\000l\000d\000s}{section.2}% 8
+\BOOKMARK [1][-]{section.3}{\376\377\000D\000a\000y\000\040\0003\000:\000\040\000R\000o\000o\000t\000s\000\040\000a\000n\000d\000\040\000t\000h\000e\000\040\000C\000o\000m\000p\000l\000e\000x\000\040\000F\000i\000e\000l\000d}{}% 9
+\BOOKMARK [2][-]{subsection.3.1}{\376\377\000n\000t\000h\000\040\000R\000o\000o\000t}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.2}{\376\377\000D\000e\000c\000i\000m\000a\000l\000s}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.3}{\376\377\000E\000x\000t\000e\000n\000d\000e\000d\000\040\000R\000e\000a\000l\000s}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.4}{\376\377\000C\000o\000m\000p\000l\000e\000x\000\040\000N\000u\000m\000b\000e\000r\000s}{section.3}% 13
+\BOOKMARK [1][-]{section.4}{\376\377\000D\000a\000y\000\040\0004\000:\000\040\000E\000u\000c\000l\000i\000d\000e\000a\000n\000\040\000S\000p\000a\000c\000e\000s\000\040\000\046\000\040\000C\000a\000u\000c\000h\000y\000-\000S\000c\000h\000w\000a\000r\000z}{}% 14
+\BOOKMARK [2][-]{subsection.4.1}{\376\377\000E\000u\000c\000l\000i\000d\000e\000a\000n\000\040\000S\000p\000a\000c\000e\000s}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.2}{\376\377\000C\000a\000u\000c\000h\000y\000-\000S\000c\000h\000w\000a\000r\000z}{section.4}% 16
+\BOOKMARK [1][-]{section.5}{\376\377\000D\000a\000y\000\040\0005\000:\000\040\000E\000x\000i\000s\000t\000e\000n\000c\000e\000\040\000o\000f\000\040\000R}{}% 17
+\BOOKMARK [1][-]{section.6}{\376\377\000D\000a\000y\000\040\0006\000:\000\040\000C\000a\000r\000d\000i\000n\000a\000l\000i\000t\000y}{}% 18
+\BOOKMARK [2][-]{subsection.6.1}{\376\377\000C\000a\000r\000d\000i\000n\000a\000l\000i\000t\000y}{section.6}% 19
+\BOOKMARK [2][-]{subsection.6.2}{\376\377\000\040\000S\000e\000t\000\040\000o\000f\000\040\000S\000e\000t\000s\000\040}{section.6}% 20
+\BOOKMARK [1][-]{section.7}{\376\377\000D\000a\000y\000\040\0007\000:\000\040\000M\000e\000t\000r\000i\000c\000\040\000S\000p\000a\000c\000e\000s\000\040\000a\000n\000d\000\040\000C\000l\000o\000s\000e\000d\000/\000O\000p\000e\000n}{}% 21
+\BOOKMARK [2][-]{subsection.7.1}{\376\377\000\040\000M\000e\000t\000r\000i\000c\000\040\000S\000p\000a\000c\000e\000s\000\040}{section.7}% 22
+\BOOKMARK [2][-]{subsection.7.2}{\376\377\000\040\000I\000n\000t\000e\000r\000v\000a\000l\000s\000\040\000a\000n\000d\000\040\000B\000a\000l\000l\000s\000\040}{section.7}% 23
+\BOOKMARK [1][-]{section.8}{\376\377\000D\000a\000y\000\040\0008\000:\000\040\000O\000p\000e\000n\000\040\000R\000e\000l\000a\000t\000i\000v\000e\000\040\000a\000n\000d\000\040\000C\000o\000m\000p\000a\000c\000t}{}% 24
+\BOOKMARK [2][-]{subsection.8.1}{\376\377\000\040\000C\000l\000o\000s\000u\000r\000e\000\040}{section.8}% 25
+\BOOKMARK [2][-]{subsection.8.2}{\376\377\000\040\000O\000p\000e\000n\000\040\000R\000e\000l\000a\000t\000i\000v\000e\000\040}{section.8}% 26
+\BOOKMARK [2][-]{subsection.8.3}{\376\377\000\040\000C\000o\000m\000p\000a\000c\000t\000\040\000S\000e\000t\000s\000\040}{section.8}% 27
+\BOOKMARK [1][-]{section.9}{\376\377\000D\000a\000y\000\040\0009\000:\000\040\000P\000e\000r\000f\000e\000c\000t\000\040\000\046\000\040\000C\000o\000n\000n\000e\000c\000t\000e\000d\000\040\000S\000e\000t\000s}{}% 28
+\BOOKMARK [2][-]{subsection.9.1}{\376\377\000\040\000P\000e\000r\000f\000e\000c\000t\000\040\000S\000e\000t\000s\000\040}{section.9}% 29
+\BOOKMARK [2][-]{subsection.9.2}{\376\377\000\040\000C\000o\000n\000n\000e\000c\000t\000e\000d\000\040\000S\000e\000t\000s\000\040}{section.9}% 30

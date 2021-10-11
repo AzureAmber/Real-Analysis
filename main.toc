@@ -1,4 +1,4 @@
-\babel@toc {english}{}
+\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Day 1: The Real Number System}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Number Systems}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Real Number System}{3}{subsection.1.2}%
@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {6.2} Set of Sets }{16}{subsection.6.2}%
 \contentsline {section}{\numberline {7}Day 7: Metric Spaces and Closed/Open}{19}{section.7}%
 \contentsline {subsection}{\numberline {7.1} Metric Spaces }{19}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2} Intervals and Balls }{22}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.2} Intervals and Balls }{23}{subsection.7.2}%
 \contentsline {section}{\numberline {8}Day 8: Open Relative and Compact}{24}{section.8}%
 \contentsline {subsection}{\numberline {8.1} Closure }{24}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2} Open Relative }{24}{subsection.8.2}%

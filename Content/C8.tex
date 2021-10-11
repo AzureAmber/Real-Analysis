@@ -11,12 +11,12 @@
         limit points of E in X.
 
         \qquad Then the closure of E:
-            \qquad cl(E) = $\overline{E}$ = E $\cup$ E'
+            \qquad $\overline{E}$ = E $\cup$ E'
 
         with the properties:
 	\end{adjustbox}
 
-	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.4em]
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
         \item $\overline{E}$ is closed
         
         \item E = $\overline{E}$ if and only if E is closed
@@ -93,7 +93,7 @@ if E = Y $\cap$ G and G is open in X}
 		for some open G $\subset$ X.
 	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof}: *** This might need to be fixed *** } 
+{ \color{magenta} \underline{Proof}: } 
 
 	Suppose E is open relative to Y.
 
@@ -102,7 +102,7 @@ if E = Y $\cap$ G and G is open in X}
 	
 	Since Y $\subset$ X, let V$_p$ be the set of all q $\in$ X
 	such that d(p,q) $<$ r$_p$ and define G = $\cup_{p \in E}^{}$ V$_p$.
-	Since V$_q$ is open by {\color{red} theorem 7.1.3}, then by
+	Since V$_p$ is open by {\color{red} theorem 7.1.3}, then by
 	{\color{red} theorem 7.1.9a}, open G $\subset$ X.
 
 	Since p $\in$ V$_p$ for all p $\in$ E, then E $\subset$ G $\cap_{}^{}$ Y.
@@ -126,7 +126,9 @@ if E = Y $\cap$ G and G is open in X}
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
 		An open cover of set E $\subset$ X is a collection of open $G_1, G_2, ...$
-		$\subset$ X such that E $\subset$ $\cup_{}^{}$ $G_i$. \\
+		$\subset$ X
+		
+		such that E $\subset$ $\cup_{}^{}$ $G_i$. \\
 	\end{adjustbox}
 
 { \color{blue} Definition 8.3.2: Compact } 
@@ -176,7 +178,12 @@ if E = Y $\cap$ G and G is open in X}
 
 	Thus, K $\subset$ $\cup_{i=1}^{n}$ $V_{x_i}$
 	= $\cup_{i=1}^{n}$ (Y $\cap_{}^{}$ $G_{x_i}$)
-	$\subset$ $\cup_{i=1}^{n}$ $G_{x_i}$ so K is compact relative to X. \\
+	$\subset$ $\cup_{i=1}^{n}$ $G_{x_i}$ so K is compact relative to X.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.35]{Images/8.3.3.png}
+\end{figure}
 
 { \color{red} Theorem 8.3.4: A compact set is closed } 
 
@@ -203,6 +210,8 @@ if E = Y $\cap$ G and G is open in X}
 	then every p $\in$ K$^c$ is an interior point so K$^c$ is open.
 	Then by {\color{red} theorem 7.1.7}, K is closed. \\
 
+\newpage
+
 { \color{red} Theorem 8.3.5: If closed E $\subset$ compact set K, E is compact } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
@@ -226,8 +235,6 @@ if E = Y $\cap$ G and G is open in X}
 	
 	Remove F$^c$ from $\Omega$. Since finite subcover $\Omega$ - F$^c$ covers F,
 	then F is compact. \\
-
-\newpage
 
 { \color{orange} Corollary 8.3.6: Closed F $\cap$ compact K = compact } 
 
@@ -306,6 +313,8 @@ $I_{n+1}$ $\subset$ $I_n$ $\rightarrow$ nonempty $\cap$ $I_n$}
 	= [$a_{n_m}$,$b_{n_m}$] is nonempty.
 	Thus, by {\color{red} theorem 8.3.7}, $\cap$ $I_n$ is nonempty. \\
 
+\newpage
+
 { \color{red} Theorem 8.3.10: p $\in$ E' exists if
 infinite E $\subset$ compact K }
 
@@ -316,13 +325,11 @@ infinite E $\subset$ compact K }
 
 { \color{magenta} \underline{Proof} } 
 
-	If no p $\in$ K is a p $\in$ K', then each p would have
+	If no p $\in$ K is a p $\in$ E', then each p would have
 	a neighbohood $V_p$ contains at most p $\in$ E if p $\in$ E.
 	Thus, there is no finite subcover that covers E and thus,
 	there is no finite subcover that covers K since E $\subset$ K
 	which contradicts K is compact. \\
-
-\newpage
 
 { \color{red} Theorem 8.3.11: Heine-Borel Theorem } 
 
@@ -331,7 +338,7 @@ infinite E $\subset$ compact K }
 		then it has the other two:
 	\end{adjustbox}
 
-	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.4em]
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
 		\item E is closed and bounded
 		\item E is compact
 		\item Every infinite subset of E has a limit point in E

@@ -9,7 +9,8 @@
 		Suppose for every x $\in$ A, there is an associated f(x) $\in$ B.
 
 		Then f maps A into B = f: A $\rightarrow$ B.
-		\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+
+		\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
 			\item If f(A) = B, then f maps A onto B.
 			
 			\item If for each y $\in$ B, f$^{-1}$(y) consist of at most one x $\in$ A
@@ -37,7 +38,7 @@
 	\end{adjustbox}
 
 { \color{blue} Definition 6.1.3: Countability } 
-	\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+	\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
 		\item A is {\color{lblue} finite} if A $\sim$ J$_n$ = \{0, 1, ..., n\}
 			for some n $\in$ $\mathbb{N}$
 		\item A is {\color{lblue} infinite} if A is not finite
@@ -99,6 +100,10 @@
 	\includegraphics[scale=0.5]{Images/6.1.6.png}
 \end{figure}
 
+
+
+
+
 \subsection{ Set of Sets } 
 
 { \color{blue} Definition 6.2.1: Union and Intersection } 
@@ -106,7 +111,7 @@
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
 		Let sets $\Omega$,B be such that for each x $\in$ $\Omega$,
 		there is an associated E$_x$ $\subset$ B.
-		\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+		\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
 			\item E = $\cup_{x=1}^{n}$ E$_x$ only if for every x $\in$ E, x $\in$ E$_x$ for
 				at least one x $\in$ $\Omega$.
 
@@ -116,7 +121,7 @@
 		with properties:
 	\end{adjustbox}
 
-	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.4em]
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
 		\item A $\cup_{}^{}$ B = B $\cup_{}^{}$ A
 			\hspace{4cm} A $\cap_{}^{}$ B = B $\cap_{}^{}$ A
 
@@ -131,7 +136,7 @@
 			{ \color{magenta} \underline{Proof} } 
 			
 				If x $\in$ A $\cup_{}^{}$ B, then x $\in$ A or/and x $\in$ B.
-				\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+				\begin{itemize}[leftmargin=1cm, itemsep=0.2cm]
 					\item If x $\in$ A, since A $\subset$ B, then x $\in$ B.
 						Then, (A $\cup_{}^{}$ B) $\subset$ B.
 
@@ -156,7 +161,7 @@
 			
 				If x $\in$ A $\cap_{}^{}$ (B $\cup_{}^{}$ C), then x $\in$ A
 				and (x $\in$ B or/and x $\in$ C).
-				\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+				\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
 					\item If x $\in$ B, then x $\in$ (A $\cap_{}^{}$ B) so
 						x $\in$ (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C).
 
@@ -181,7 +186,7 @@
 			
 			If x $\in$ A $\cup_{}^{}$ (B $\cap_{}^{}$ C), then
 			x $\in$ A or/and (x $\in$ B and x $\in$ C).
-			\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+			\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
 				\item If x $\in$ A, then x $\in$ (A $\cup_{}^{}$ B)
 					and x $\in$ (A $\cup_{}^{}$ C)
 					so A $\cup_{}^{}$ (B $\cap_{}^{}$ C) $\subset$
@@ -214,16 +219,15 @@
 	For each $E_n$, there is a sequence \{ $x_{n1}$, $x_{n2}$, ... \}.
 	Then construct an array as such:
 
-	$ \hspace{1cm}
+	{\small $ \hspace{1cm}
 	\left(
-	\begin{array}{cccc}
-		x_{11} & x_{12} & x_{13} & ... \\
-		x_{21} & x_{22} & x_{23} & ... \\
-		x_{31} & x_{32} & x_{33} & ... \\
-		\vdots & \vdots & \vdots & \ddots \\
+	\begin{array}{ccc}
+		x_{11} & x_{12} & ... \\
+		x_{21} & x_{22} & ... \\
+		\vdots & \vdots & \ddots \\
 	\end{array}
 	\right)
-	$
+	$}
 		
 	Take elements diagonally, then sequence S$^*$ =
 	\{ $x_{11} \ ; \ x_{21}, x_{12} \ ; \ x_{31}, x_{32}, x_{33} \ ; \ ... $ \}.
@@ -245,20 +249,18 @@
 	$\delta_n$: $\widetilde{E_n}$ $\rightarrow$ A $\subset$ $\mathbb{Z}_+$.
 
 	Let $p_1, p_2, ... $ be distinct primes.
-
 	Since for s $\in$ S, there exists a unique $\widetilde{E_i}$ such that
 	s $\in$ $\widetilde{E_i}$, then let f(s) = $p_1^{\delta_1(s)} p_2^{\delta_2(s)}...$
 	where $p_k^{\delta_k(s)}$ = 1 if k $\neq$ i.
 
 	Then, by the Fundamental theorem of arithmetic, f maps s to a unique z $\in$ $\mathbb{Z}_+$
 	and thus, f is a 1-1 function so S is at most countable.
-
 	Since any $E_n$ $\subset$ S is countably infinite, then S cannot be finite
 	and thus, S is countably infinite.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.5]{Images/6.2.2.png}
+	\includegraphics[scale=0.38]{Images/6.2.2.png}
 \end{figure}
 
 \newpage
@@ -284,7 +286,7 @@
 	Since B is a set of countably infinite sets, then $B_{n}$
 	is countably infinite. \\
 
-{ \color{blue} Definition 6.2.4: $\mathbb{Q}$ is countably infinite } 
+{ \color{blue} Definition 6.2.4: $\mathbb{Q}$ is countable } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
 		The set of rational numbers, $\mathbb{Q}$, is countably infinite.

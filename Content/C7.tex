@@ -9,7 +9,7 @@
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
 		A set X is a metric space if for ant p,q $\in$ X, there is an associated d(p,q) $\in$
 		$\mathbb{R}$ such that:	
-		\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+		\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
 			\item d(p,q) $>$ 0 \qquad \qquad if p $\neq$ q
 			
 			\item d(p,q) = 0 if and only if p = q
@@ -25,7 +25,7 @@
 	\end{adjustbox}
 
 { \color{blue} Definition 7.1.2: Types of Points and Sets } 
-	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.4em]
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
 		\item {\color{lblue} Neighborhood}
 
 			\qquad For p $\in$ $\mathbb{R}^k$ and r $>$ 0, N$_r(p)$ is the set of all q $\in$ X
@@ -40,7 +40,8 @@
 
 			\hspace{0.1cm} Closed set E contain all p $\in$ X where every N$_r(p)$ contain
 			a q $\neq$ p $\in$ E
-			\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+
+			\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
 				\item Limit Points 
 
 					\qquad For point p $\in$ X, every N$_r(p)$ contains a
@@ -65,7 +66,8 @@
 		\item {\color{lblue} Interior Points and Open Sets}
 
 			\hspace{0.1cm} Open set E contains all its p which has a N$_r(p)$ $\subset$ E
-			\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+			
+			\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
 				\item Interior Point
 
 					\qquad For p $\in$ X, there is a N$_r(p)$ $\subset$ E
@@ -81,7 +83,8 @@
 			\end{figure}
 
 		\item {\color{lblue} More about Sets}
-			\begin{itemize}[leftmargin=1cm, itemsep=0.4em]
+			
+			\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
 				\item Bounded
 
 					\qquad If there is M $\in$ $\mathbb{R}$ , q $\in$ X such that d(p,q) $<$ M
@@ -185,6 +188,13 @@ $\in$ E in N$_r(p)$ }
 
 	Thus, ($\cup_{}^{}$ $E_x$)$^c$ = $\cap_{}^{}$ ($E_x^c$). \\
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.35]{Images/7.1.6.png}
+\end{figure}
+
+\newpage
+
 { \color{red} Theorem 7.1.7: Open set $\rightarrow$ Closed complement } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
@@ -214,8 +224,6 @@ $\in$ E in N$_r(p)$ }
 	x is an interior point of E.
 
 	Since any x $\in$ E is an interior point of E, then E is open. \\
-
-\newpage
 
 { \color{orange} Corollary 7.1.8: Closed set $\rightarrow$ Open complement } 
 
@@ -281,6 +289,12 @@ Intersection closed $\rightarrow$ closed }
 				p is an interior point of $\cap_{x=1}^n$ $G_x$ so
 			    $\cap_{x=1}^n$ $G_x$ is open.
 
+				\vspace{0.1cm}
+
+				{\color{purple} Infinite + Closed}: $G_i$ = $(-1/i,1/i)$
+				\hfill
+				{\color{purple} Infinite + Open}: $G_i$ = $(-i,i)$
+
 		\item If $F_1, ... , F_n$ is a finite collection of closed sets,
 		then $\cup_{x=1}^n$ $F_x$ is closed.
 
@@ -296,7 +310,15 @@ Intersection closed $\rightarrow$ closed }
 				By {\color{red} theorem 7.1.6},
 				($\cap_{x=1}^n$ $F_x^c$)$^c$ = $\cup_{x=1}^n$ $(F_x^c)^c$
 				= $\cup_{x=1}^n$ $F_x$.
+
+				\vspace{0.1cm}
+
+				{\color{purple} Infinite + Closed}: $F_i$ = $[-1/i,1/i]$
+				\hfill
+				{\color{purple} Infinite + Open}: $F_i$ = $[1/i,\infty)$
 	\end{enumerate}
+
+\newpage
 
 
 
@@ -307,34 +329,33 @@ Intersection closed $\rightarrow$ closed }
 { \color{blue} Definition 7.2.1: Segments and Intervals } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		In $\mathbb{R}$, a segement is an open interval
+		In $\mathbb{R}$, a {\color{lblue} segement} is an open interval
 		(a,b) = \{ x $\in$ $\mathbb{R}$ : a $<$ x $<$ b \}
 
-		In $\mathbb{R}$, a interval is a closed interval
+		In $\mathbb{R}$, a {\color{lblue} interval} is a closed interval
 		[a,b] = \{ x $\in$ $\mathbb{R}$ : a $\leq$ x $\leq$ b \} \\
 	\end{adjustbox}
 
 { \color{blue} Definition 7.2.2: Open Balls } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		In $\mathbb{R}^k$, an open ball of radius r $>$ 0 centered at p is:
+		In $\mathbb{R}^k$, an {\color{lblue} open ball} of radius
+		r $>$ 0 centered at p is:
 
 		\qquad N$_r(p)$ = \{ x $\in$ $\mathbb{R}^k$ : $|x-p|$ $<$ r \}
 		= \{ x $\in$ $\mathbb{R}^k$ : d(x,p) $<$ r \}
 
-		A closed ball has d(x,p) $\leq$ r. \\
+		A {\color{lblue} closed ball} has d(x,p) $\leq$ r. \\
 	\end{adjustbox}
 
 { \color{blue} Definition 7.2.3: Convex } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		E $\subset$ $\mathbb{R}^k$ is convex if for all
+		E $\subset$ $\mathbb{R}^k$ is {\color{lblue} convex} if for all
 		x,y $\in$ E and t $\in$ [0,1]:
 
 		\qquad tx + (1-t)y $\in$ E \\
 	\end{adjustbox}
-
-\newpage
 
 { \color{purple} Example 7.2.4: Balls are convex }
 
