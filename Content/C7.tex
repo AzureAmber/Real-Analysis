@@ -352,9 +352,7 @@ Intersection closed $\rightarrow$ closed }
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
 		E $\subset$ $\mathbb{R}^k$ is {\color{lblue} convex} if for all
-		x,y $\in$ E and t $\in$ [0,1]:
-
-		\qquad tx + (1-t)y $\in$ E \\
+		x,y $\in$ E and t $\in$ [0,1], tx + (1-t)y $\in$ E. \\
 	\end{adjustbox}
 
 { \color{purple} Example 7.2.4: Balls are convex }
@@ -392,12 +390,9 @@ Intersection closed $\rightarrow$ closed }
 { \color{magenta} \underline{Proof} } 
 
 	Fix x $\in$ $\mathbb{R}$ and r $>$ 0.
-
 	There is a q $\in$ $\mathbb{Q}$ such that x-r $<$ q $<$ x.
-
 	So for any r $>$ 0 and q $\in$ $\mathbb{Q}$, q $\neq$ x and
 	q $\in$ N$_r(x)$.
-
 	Thus, every x $\in$ $\mathbb{R}$ is a limit point of $\mathbb{Q}$.
 
 
@@ -410,7 +405,7 @@ Intersection closed $\rightarrow$ closed }
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
 		The set of all x = ($x_1, ... , x_k$) $\in$ $\mathbb{R}^k$
-		where $x_i$ $\in$ [$a_i,b_i$] for fixed $a_i,b_i$ $\in$ $\mathbb{R}$.
+		where $x_i$ $\in$ [$a_i,b_i$] for fixed $a_i,b_i$ $\in$ $\mathbb{R}$. \\
 	\end{adjustbox}
 
 { \color{red} Theorem 7.3.2: K-cells are compact } 
@@ -425,29 +420,23 @@ Intersection closed $\rightarrow$ closed }
 	$x_i$ $\in$ [$a_i,b_i$] for fixed $a_i,b_i$ $\in$ $\mathbb{R}$.
 
 	Let $\delta$ = $\sqrt{\sum_{i=1}^{k} (b_i - a_i)^2}$.
-
 	Thus, $|x-y|$ $\leq$ $\delta$ for $x,y$ $\in$ I.
 
+	Suppose there exists an open cover $G_1, G_2, ...$ of I which
+	contain no finite subcover.
 
+	Let $c_i$ = $\frac{a_i+b_i}{2}$.
+	Then each interval splits into [$a_i,c_i$] and [$c_i,b_i$]
+	for i $\in$ [1,k] so there now exists $2^k$ k-cells $Q_i$
+	whose union is I.
 
+	At least one $Q_i$ cannot be covered else I would be covered.
+	Then subdivide $Q_i$ as before and repeating the process
+	so $Q_{i+1}$ $\subset$ $Q_i$ and each are not covered.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	However, there is a point x* $\in$ $Q_{i_j}$ for all j
+	such that $N_r(x^*)$ $\subset$ $G$ so $Q_{i_1}$ is covered
+	which is a contradiction. 
 
 
 
