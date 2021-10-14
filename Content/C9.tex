@@ -102,12 +102,55 @@
 
 \subsection{ Connected Sets }
 
+{ \color{blue} Definition 9.2.1: Connected Set } 
 
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		A, B $\subset$ X are separated if both
+		A $\cap_{}^{}$ $\overline{B}$ and
+		$\overline{A}$ $\cap_{}^{}$ B are empty.
 
+		E $\subset$ X is connected if E is not the union of two nonempty
+		separated sets.
 
+		Separated sets are disjoint, but disjoint sets need not be separated. \\
+	\end{adjustbox}
 
+\newpage
 
+{ \color{red} Theorem 9.2.2: All points between points in connected sets exists } 
 
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		E $\subset$ $\mathbb{R}^1$ is connected if and only if:
+
+		\hspace{1cm} If x,y $\in$ E and x $<$ z $<$ y, then z $\in$ E.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+
+	If there exists x,y $\in$ E and z $\in$ (x,y) such that z $\not \in$ E,
+	then E = $A_z$ $\cup_{}^{}$ $B_z$ where
+	
+	$A_z$ = E $\cap_{}^{}$ ($-\infty,z$)
+	and $B_z$ = E $\cap_{}^{}$ ($z,\infty$).
+
+	Since x $\in$ $A_z$ and y $\in$ $B_z$, then A and B are nonempty.
+	Since $A_z$ $\subset$ ($-\infty,z$) and
+	
+	$B_z$ = ($z_,\infty$),
+	then $A_z$ and $B_z$ are separated. Thus, E is not connected.
+
+	\vspace{0.2cm}
+
+	Suppose E is not connected. Then, there are nonempty separated sets
+	A and B such that A $\cup_{}^{}$ B = E. Pick x $\in$ A, y $\in$ B
+	where x $<$ y. Let z = sup(A $\cap_{}^{}$ [x,y]).
+
+	Since, z $\in$ $\overline{A}$ so z $\not \in$ B, then x $\leq$ z $<$ y.
+	If z $\not \in$ A, then x $<$ z $<$ y so z $\not \in$ E.
+
+	If z $\in$ A, then z $\not \in$ $\overline{B}$ and thus,
+	there exists a $z_1$ such that z $<$ $z_1$ $<$ y and $z_1$ $\not \in$ B.
+	Then, x $<$ $z_1$ $<$ y so $z_1$ $\not \in$ E.
 
 
 

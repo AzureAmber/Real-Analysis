@@ -1,4 +1,4 @@
-\babel@toc {english}{}\relax 
+\babel@toc {english}{}
 \contentsline {section}{\numberline {1}Day 1: The Real Number System}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Number Systems}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Real Number System}{3}{subsection.1.2}%
