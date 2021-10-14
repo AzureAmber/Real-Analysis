@@ -1,4 +1,4 @@
-\babel@toc {english}{}
+\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Day 1: The Real Number System}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Number Systems}{3}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Real Number System}{3}{subsection.1.2}%
@@ -29,4 +29,4 @@
 \contentsline {subsection}{\numberline {8.3} Compact Sets }{25}{subsection.8.3}%
 \contentsline {section}{\numberline {9}Day 9: Perfect \& Connected Sets}{28}{section.9}%
 \contentsline {subsection}{\numberline {9.1} Perfect Sets }{28}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2} Connected Sets }{28}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.2} Connected Sets }{29}{subsection.9.2}%

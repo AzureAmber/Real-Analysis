@@ -199,7 +199,6 @@ if E = Y $\cap$ G and G is open in X}
 	If q $\in$ K, let W$_q$ be a neighborhood of q with
 	r $<$ $\frac{1}{2}$d(p,q).
 	Let V$_{p,q}$ be a neighbohood of p with r $<$ $\frac{1}{2}$d(p,q).
-
 	Since K is compact, then there are finite points $q_1, ... , q_n$
 	such that K $\subset$ W where W = W$_{q_1}$ $\cup$ ... $\cup$ W$_{q_n}$.
 
@@ -211,6 +210,11 @@ if E = Y $\cap$ G and G is open in X}
 	Then by {\color{red} theorem 7.1.7}, K is closed. \\
 
 \newpage
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.35]{Images/8.3.4.png}
+\end{figure}
 
 { \color{red} Theorem 8.3.5: If closed E $\subset$ compact set K, E is compact } 
 
@@ -262,9 +266,8 @@ nonempty $\cap$ $K_i$ }
 { \color{magenta} \underline{Proof} } 
 
 	Fix $K_1$.
-
 	If there is a k $\in$ $K_1$ where k $\in$ $K_i$ for all i, then
-	k $\in$ $\cap$ $K_i$ so $\cap$ $K_i$ is nonempty.
+	k $\in$ $\cap$ $K_i$ so $\cap$ $K_i$ $\not =$ $\emptyset$.
 
 	Suppose for every k $\in$ $K_1$, k $\not \in$ $K_i$ for some i.
 
@@ -294,6 +297,8 @@ $\rightarrow$ nonempty $\cap$ $K_i$}
 	= $K_{i_n}$ is nonempty, then
 	by {\color{red} theorem 8.3.7}, $\cap$ $K_i$ is nonempty. \\
 
+\newpage
+
 { \color{red} Theorem 8.3.9: Nonempty intervals $I_n$ where
 $I_{n+1}$ $\subset$ $I_n$ $\rightarrow$ nonempty $\cap$ $I_n$}
 
@@ -312,8 +317,6 @@ $I_{n+1}$ $\subset$ $I_n$ $\rightarrow$ nonempty $\cap$ $I_n$}
 	$I_{n_1}$ $\cap$ ... $\cap$ $I_{n_m}$
 	= [$a_{n_m}$,$b_{n_m}$] is nonempty.
 	Thus, by {\color{red} theorem 8.3.7}, $\cap$ $I_n$ is nonempty. \\
-
-\newpage
 
 { \color{red} Theorem 8.3.10: p $\in$ E' exists if
 infinite E $\subset$ compact K }
@@ -379,7 +382,6 @@ infinite E $\subset$ compact K }
 	Suppose E is not closed.
 
 	Then there exists a p $\in$ E', but p $\not \in$ E.
-
 	Since p is a limit point, then there is a
 	q $\in$ E such that $\frac{1}{n+1}$ $<$ d(q,p) $<$ $\frac{1}{n}$
 	for n = \{1, 2, ...\}.
