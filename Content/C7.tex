@@ -8,7 +8,8 @@
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
 		A set X is a metric space if for ant p,q $\in$ X, there is an associated d(p,q) $\in$
-		$\mathbb{R}$ such that:	
+		$\mathbb{R}$ such that:
+
 		\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
 			\item d(p,q) $>$ 0 \qquad \qquad if p $\neq$ q
 			
@@ -46,6 +47,8 @@
 
 					\qquad For point p $\in$ X, every N$_r(p)$ contains a
 					q $\neq$ p $\in$ E
+
+					\qquad The set of all limit points of E = E'
 				
 				\item Isolated Points
 
@@ -72,6 +75,8 @@
 
 					\qquad For p $\in$ X, there is a N$_r(p)$ $\subset$ E
 
+					\qquad The set of all interior points = E$^o$
+
 				\item Open
 
 					\qquad If every p $\in$ E is an interior point of E
@@ -79,7 +84,7 @@
 
 			\begin{figure}[h]
 				\centering
-				\includegraphics[scale=0.3]{Images/7.1.2c.png}
+				\includegraphics[scale=0.28]{Images/7.1.2c.png}
 			\end{figure}
 
 		\item {\color{lblue} More about Sets}
@@ -92,7 +97,7 @@
 
 				\item Complement
 
-					\qquad From E, E$^\text{c}$ is the set of all p $\in$ X such that p $\not \in$ E
+					\qquad From E, E$^c$ is the set of all p $\in$ X such that p $\not \in$ E
 
 				\item Perfect
 
@@ -100,11 +105,18 @@
 
 				\item Dense
 
-					\qquad If every p $\in$ X is a limit point of E or/and p $\in$ E \\
+					\qquad If every p $\in$ X is a limit point of E or/and p $\in$ E
+					
+				\item Boundary Point
+				
+					\qquad For  p $\in$ X, if every N$_r(p)$ contains a
+					x $\in$ E and y $\in$ E$^c$
+					
+					\qquad The set of all boundary points = $\partial$E \\
 			\end{itemize}
 	\end{enumerate}
 
-	\qquad For a metric space X, X and $\emptyset$ are both open and closed. \\
+	\qquad For a metric space X, \{X,$\emptyset$\} are both open and closed. \\
 
 { \color{red} Theorem 7.1.3: N$_r(p)$ is open } 
 
@@ -117,15 +129,14 @@
 	Let q $\in$ N$_r(p)$. Then there is a h $>$ 0 $\in$ $\mathbb{R}$
 	such that d(q,p) = r - h.
 
-	Then for any s $\in$ N$_h(q)$:
-
-	\qquad d(s,p) $\leq$  d(s,q) + d(q,p) = h + (r - h) = r
+	Then for any s $\in$ N$_h(q)$,
+	d(s,p) $\leq$  d(s,q) + d(q,p) = h + (r - h) = r.
 
 	Thus, for any q $\in$ N$_r(p)$, there exists a N$_h(q)$ $\subset$ N$_r(p)$.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.36]{Images/7.1.3.png}
+	\includegraphics[scale=0.34]{Images/7.1.3.png}
 \end{figure}
 
 \newpage
@@ -320,8 +331,43 @@ Intersection closed $\rightarrow$ closed }
 
 \newpage
 
+{ \color{red} Theorem 7.1.10: E' is closed }
 
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		Let  E $\subset$ X. Then, (E')' $\subset$ E'.
+		Thus, E' is closed.
+	\end{adjustbox}
 
+{ \color{magenta} \underline{Proof} }
+
+	If x $\in$ (E')', then for every $N_{r_1}(x)$, there is a
+	y $\not =$ x where y $\in$ E'.
+	
+	Since y $\in$ E', then for every $N_{r_2}(y)$, there is a
+	z $\not =$ y where z $\in$ E.
+
+	Let r = $r_1$ + $r_2$.
+
+	Then for every N$_r(x)$, there exists a z $\not =$ x where
+	z $\in$ E.
+	Thus, x $\in$ E' so (E')' $\subset$ E'. \\
+
+{ \color{red} Theorem 7.1.11: E$^o$ is open }
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		Let  E $\subset$ X. Then, E$^o$ is open.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+	If p $\in$ E$^o$, there is a r $>$ 0 such that
+	N$_r(p)$ $\subset$ E.
+
+	Then for 0 $<$ s $<$ r, N$_s(p)$ $\subset$ N$_r(p)$
+	so any q $\in$ N$_s(p)$ is q $\in$ E$^o$.
+
+	Since any p $\in$ E$^o$ have a N$_s(p)$ $\subset$ E$^o$,
+	then E$^o$ is open.
 
 
 \subsection{ Intervals and Balls } 
@@ -393,50 +439,7 @@ Intersection closed $\rightarrow$ closed }
 	There is a q $\in$ $\mathbb{Q}$ such that x-r $<$ q $<$ x.
 	So for any r $>$ 0 and q $\in$ $\mathbb{Q}$, q $\neq$ x and
 	q $\in$ N$_r(x)$.
-	Thus, every x $\in$ $\mathbb{R}$ is a limit point of $\mathbb{Q}$.
-
-
-
-
-
-\subsection{ K-cells } 
-
-{ \color{blue} Definition 7.3.1: K-cells } 
-
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		The set of all x = ($x_1, ... , x_k$) $\in$ $\mathbb{R}^k$
-		where $x_i$ $\in$ [$a_i,b_i$] for fixed $a_i,b_i$ $\in$ $\mathbb{R}$. \\
-	\end{adjustbox}
-
-{ \color{red} Theorem 7.3.2: K-cells are compact } 
-
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Every k-cell is compact.
-	\end{adjustbox}
-
-{ \color{magenta} \underline{Proof} } 
-
-	Let k-cell I consists of all x = ($x_1, ... , x_k$) where
-	$x_i$ $\in$ [$a_i,b_i$] for fixed $a_i,b_i$ $\in$ $\mathbb{R}$.
-
-	Let $\delta$ = $\sqrt{\sum_{i=1}^{k} (b_i - a_i)^2}$.
-	Thus, $|x-y|$ $\leq$ $\delta$ for $x,y$ $\in$ I.
-
-	Suppose there exists an open cover $G_1, G_2, ...$ of I which
-	contain no finite subcover.
-
-	Let $c_i$ = $\frac{a_i+b_i}{2}$.
-	Then each interval splits into [$a_i,c_i$] and [$c_i,b_i$]
-	for i $\in$ [1,k] so there now exists $2^k$ k-cells $Q_i$
-	whose union is I.
-
-	At least one $Q_i$ cannot be covered else I would be covered.
-	Then subdivide $Q_i$ as before and repeating the process
-	so $Q_{i+1}$ $\subset$ $Q_i$ and each are not covered.
-
-	However, there is a point x* $\in$ $Q_{i_j}$ for all j
-	such that $N_r(x^*)$ $\subset$ $G$ so $Q_{i_1}$ is covered
-	which is a contradiction. 
+	Thus, every x $\in$ $\mathbb{R}$ is a limit point of $\mathbb{Q}$. 
 
 
 

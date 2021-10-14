@@ -51,9 +51,11 @@
 
     \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
         Let non-empty set of real numbers, E, be bounded above.
-        
-        Let y = sup(E). Then, y $\in$ $\overline{E}$.
-        Thus, y $\in$ E if E is closed.
+        Let y = sup(E).
+		
+		Then, y $\in$ $\overline{E}$.
+        Thus, y $\in$ E if E is closed
+		and y $\not \in$ E if E is open in $\mathbb{R}$.
     \end{adjustbox}
 
 { \color{magenta} \underline{Proof} } 
@@ -64,7 +66,14 @@
 	otherwise y-h is an upper bound for E which is a contradiction
 	since y = sup(E).
 
-	Thus, y is a limit point of E so y $\in$ $\overline{E}$.
+	Thus, y is a limit point of E so y $\in$ E'.
+
+	If E is closed, then y $\in$ E since y $\in$ E'.	
+	Also, y $\in$ $\overline{E}$.
+	
+	If E is open, then any N$_r(y)$ $\not \subset$ E since 
+	N$_r(y)$ in $\mathbb{R}$ must contain a $\gamma$ $>$ y
+	so y $\not \in$ E$^o$.
 
 
 
@@ -82,6 +91,8 @@
 
 		such that for any q $\in$ Y, then q $\in$ E if d(q,p) $<$ r. \\
 	\end{adjustbox}
+
+\newpage
 
 { \color{red} Theorem 8.2.2: E is open relative to Y $\subset$ X
 if E = Y $\cap$ G and G is open in X} 
@@ -113,8 +124,8 @@ if E = Y $\cap$ G and G is open in X}
 	If G is open in X and E = G $\cap_{}^{}$ Y, then every p $\in$ E has
 	a V$_p$ $\subset$ G.
 
-	Then, V$_p$ $\cap_{}^{}$ Y $\subset$ G $\cap_{}^{}$ Y = E so E is open relative to Y.
-\newpage	
+	Then, V$_p$ $\cap_{}^{}$ Y $\subset$ G $\cap_{}^{}$ Y = E so
+	E is open relative to Y.
 
 
 
@@ -185,6 +196,8 @@ if E = Y $\cap$ G and G is open in X}
 	\includegraphics[scale=0.35]{Images/8.3.3.png}
 \end{figure}
 
+\newpage
+
 { \color{red} Theorem 8.3.4: A compact set is closed } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
@@ -208,8 +221,6 @@ if E = Y $\cap$ G and G is open in X}
 	Since there is a neighborhood V for p $\in$ K$^c$ where V $\subset$ K$^c$,
 	then every p $\in$ K$^c$ is an interior point so K$^c$ is open.
 	Then by {\color{red} theorem 7.1.7}, K is closed. \\
-
-\newpage
 
 \begin{figure}[h]
 	\centering
@@ -255,6 +266,8 @@ if E = Y $\cap$ G and G is open in X}
 	Since F $\cap$ K $\subset$ K, then by {\color{red} theorem 8.3.5},
 	F $\cap$ K is compact. \\
 
+\newpage
+
 { \color{red} Theorem 8.3.7: Nonempty $\cap_{i=1}^n$ $K_i$ $\rightarrow$
 nonempty $\cap$ $K_i$ } 
 
@@ -297,8 +310,6 @@ $\rightarrow$ nonempty $\cap$ $K_i$}
 	= $K_{i_n}$ is nonempty, then
 	by {\color{red} theorem 8.3.7}, $\cap$ $K_i$ is nonempty. \\
 
-\newpage
-
 { \color{red} Theorem 8.3.9: Nonempty intervals $I_n$ where
 $I_{n+1}$ $\subset$ $I_n$ $\rightarrow$ nonempty $\cap$ $I_n$}
 
@@ -334,7 +345,46 @@ infinite E $\subset$ compact K }
 	there is no finite subcover that covers K since E $\subset$ K
 	which contradicts K is compact. \\
 
-{ \color{red} Theorem 8.3.11: Heine-Borel Theorem } 
+{ \color{blue} Definition 8.3.11: K-cells } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		The set of all x = ($x_1, ... , x_k$) $\in$ $\mathbb{R}^k$
+		where $x_i$ $\in$ [$a_i,b_i$] for fixed $a_i,b_i$ $\in$ $\mathbb{R}$. \\
+	\end{adjustbox}
+
+{ \color{red} Theorem 8.3.12: K-cells are compact } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		Every k-cell is compact.
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} } 
+
+	Let k-cell I consists of all x = ($x_1, ... , x_k$) where
+	$x_i$ $\in$ [$a_i,b_i$] for fixed $a_i,b_i$ $\in$ $\mathbb{R}$.
+
+	Let $\delta$ = $\sqrt{\sum_{i=1}^{k} (b_i - a_i)^2}$.
+	Thus, $|x-y|$ $\leq$ $\delta$ for $x,y$ $\in$ I.
+
+	Suppose there exists an open cover $G_1, G_2, ...$ of I which
+	contain no finite subcover.
+
+	Let $c_i$ = $\frac{a_i+b_i}{2}$.
+	Then each interval splits into [$a_i,c_i$] and [$c_i,b_i$]
+	for i $\in$ [1,k] so there now exists $2^k$ k-cells $Q_i$
+	whose union is I.
+
+	At least one $Q_i$ cannot be covered else I would be covered.
+	Then subdivide $Q_i$ as before and repeating the process
+	so $Q_{i+1}$ $\subset$ $Q_i$ and each are not covered.
+
+	However, there is a point x* $\in$ $Q_{i_j}$ for all j
+	such that $N_r(x^*)$ $\subset$ $G$ so $Q_{i_1}$ is covered
+	which is a contradiction. \\
+
+\newpage
+
+{ \color{red} Theorem 8.3.13: Heine-Borel Theorem } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
 		If a set E $\subset$ $\mathbb{R}^k$ has one of the three properties,
@@ -357,8 +407,7 @@ infinite E $\subset$ compact K }
 	Thus, there is a k-cell
 	K = [$-M+q_1$,$q_1+M$] $\times$ ... $\times$ [$-M+q_k$,$q_k+M$]
 	such that E $\subset$ K.
-
-	Since K $\subset$ $N_{\sqrt{kM^2}}(q)$, then K is compact
+	Then by {\color{red} theorem 8.3.12}, K is compact
 	and thus by {\color{red} theorem 8.3.5}, E is compact
 	so (a) $\rightarrow$ (b).
 
@@ -396,7 +445,7 @@ infinite E $\subset$ compact K }
 	which contradicts that every infinite subset of E has a
 	limit point in E. Thus, E is closed. So, (c) $\rightarrow$ (a). \\
 
-{ \color{red} Theorem 8.3.12: Weierstrass Theorem } 
+{ \color{red} Theorem 8.3.14: Weierstrass Theorem } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
 		Every bounded infinite set E $\subset$ $\mathbb{R}^k$ has

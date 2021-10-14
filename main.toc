@@ -22,11 +22,10 @@
 \contentsline {section}{\numberline {7}Day 7: Metric Spaces and Closed/Open}{19}{section.7}%
 \contentsline {subsection}{\numberline {7.1} Metric Spaces }{19}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2} Intervals and Balls }{23}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3} K-cells }{23}{subsection.7.3}%
 \contentsline {section}{\numberline {8}Day 8: Open Relative and Compact}{24}{section.8}%
 \contentsline {subsection}{\numberline {8.1} Closure }{24}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2} Open Relative }{24}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3} Compact Sets }{25}{subsection.8.3}%
-\contentsline {section}{\numberline {9}Day 9: Perfect \& Connected Sets}{28}{section.9}%
-\contentsline {subsection}{\numberline {9.1} Perfect Sets }{28}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2} Connected Sets }{29}{subsection.9.2}%
+\contentsline {section}{\numberline {9}Day 9: Perfect \& Connected Sets}{29}{section.9}%
+\contentsline {subsection}{\numberline {9.1} Perfect Sets }{29}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2} Connected Sets }{30}{subsection.9.2}%
