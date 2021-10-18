@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.30)  14 OCT 2021 12:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.30)  18 OCT 2021 01:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -357,7 +357,10 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@roff=\dimen179
 )) (c:/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
-)) (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+)) (c:/texlive/2021/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup8
+) (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count288
 \l__pdf_internal_box=\box57
@@ -470,13 +473,17 @@ File: uesint.fd
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 12.
  (c:/texlive/2021/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 12.
+ (c:/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
-{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc)
+{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc [2])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- (./Content/C1.tex [2] [3]
+ (./Content/C1.tex [3]
 Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
@@ -517,7 +524,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
  []
 
 ) (./Content/C2.tex [5]
-<Images/2.1.png, id=194, 527.72156pt x 167.87718pt>
+<Images/2.1.png, id=199, 527.72156pt x 167.87718pt>
 File: Images/2.1.png Graphic file (type png)
 <use Images/2.1.png>
 Package pdftex.def Info: Images/2.1.png  used on input line 38.
@@ -628,7 +635,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
  []
 
 [14]) (./Content/C6.tex [15]
-<Images/6.1.1.png, id=273, 734.745pt x 277.035pt>
+<Images/6.1.1.png, id=278, 734.745pt x 277.035pt>
 File: Images/6.1.1.png Graphic file (type png)
 <use Images/6.1.1.png>
 Package pdftex.def Info: Images/6.1.1.png  used on input line 24.
@@ -649,12 +656,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--68
  []
 
 [16 <./Images/6.1.1.png>]
-<Images/6.1.5.png, id=278, 283.0575pt x 283.0575pt>
+<Images/6.1.5.png, id=283, 283.0575pt x 283.0575pt>
 File: Images/6.1.5.png Graphic file (type png)
 <use Images/6.1.5.png>
 Package pdftex.def Info: Images/6.1.5.png  used on input line 77.
 (pdftex.def)             Requested size: 141.5284pt x 141.5284pt.
-<Images/6.1.6.png, id=280, 651.18282pt x 79.04532pt>
+<Images/6.1.6.png, id=285, 651.18282pt x 79.04532pt>
 File: Images/6.1.6.png Graphic file (type png)
 <use Images/6.1.6.png>
 Package pdftex.def Info: Images/6.1.6.png  used on input line 100.
@@ -664,7 +671,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 206--208
 
  []
 
-<Images/6.2.2.png, id=292, 597.73312pt x 258.9675pt>
+<Images/6.2.2.png, id=297, 597.73312pt x 258.9675pt>
 File: Images/6.2.2.png Graphic file (type png)
 <use Images/6.2.2.png>
 Package pdftex.def Info: Images/6.2.2.png  used on input line 263.
@@ -684,18 +691,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
-<Images/7.1.2a.png, id=306, 264.99pt x 264.99pt>
+<Images/7.1.2a.png, id=311, 264.99pt x 264.99pt>
 File: Images/7.1.2a.png Graphic file (type png)
 <use Images/7.1.2a.png>
 Package pdftex.def Info: Images/7.1.2a.png  used on input line 37.
 (pdftex.def)             Requested size: 119.24438pt x 119.24438pt.
-<Images/7.1.2b.png, id=307, 453.94594pt x 453.94594pt>
+<Images/7.1.2b.png, id=312, 453.94594pt x 453.94594pt>
 File: Images/7.1.2b.png Graphic file (type png)
 <use Images/7.1.2b.png>
 Package pdftex.def Info: Images/7.1.2b.png  used on input line 64.
 (pdftex.def)             Requested size: 136.18483pt x 136.18483pt.
 [20 <./Images/7.1.2a.png> <./Images/7.1.2b.png>]
-<Images/7.1.2c.png, id=316, 453.94594pt x 453.94594pt>
+<Images/7.1.2c.png, id=321, 453.94594pt x 453.94594pt>
 File: Images/7.1.2c.png Graphic file (type png)
 <use Images/7.1.2c.png>
 Package pdftex.def Info: Images/7.1.2c.png  used on input line 87.
@@ -710,13 +717,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
-<Images/7.1.3.png, id=317, 294.34969pt x 294.34969pt>
+<Images/7.1.3.png, id=322, 294.34969pt x 294.34969pt>
 File: Images/7.1.3.png Graphic file (type png)
 <use Images/7.1.3.png>
 Package pdftex.def Info: Images/7.1.3.png  used on input line 139.
 (pdftex.def)             Requested size: 100.07756pt x 100.07756pt.
 [21 <./Images/7.1.2c.png> <./Images/7.1.3.png>]
-<Images/7.1.4.png, id=324, 363.60844pt x 363.60844pt>
+<Images/7.1.4.png, id=329, 363.60844pt x 363.60844pt>
 File: Images/7.1.4.png Graphic file (type png)
 <use Images/7.1.4.png>
 Package pdftex.def Info: Images/7.1.4.png  used on input line 161.
@@ -731,7 +738,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
-<Images/7.1.6.png, id=325, 403.5075pt x 398.99063pt>
+<Images/7.1.6.png, id=330, 403.5075pt x 398.99063pt>
 File: Images/7.1.6.png Graphic file (type png)
 <use Images/7.1.6.png>
 Package pdftex.def Info: Images/7.1.6.png  used on input line 204.
@@ -796,7 +803,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--153
 
  []
 
-<Images/8.3.3.png, id=352, 422.32782pt x 422.32782pt>
+<Images/8.3.3.png, id=357, 422.32782pt x 422.32782pt>
 File: Images/8.3.3.png Graphic file (type png)
 <use Images/8.3.3.png>
 Package pdftex.def Info: Images/8.3.3.png  used on input line 196.
@@ -806,7 +813,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 221--224
 
  []
 
-<Images/8.3.4.png, id=358, 384.6872pt x 384.6872pt>
+<Images/8.3.4.png, id=363, 384.6872pt x 384.6872pt>
 File: Images/8.3.4.png Graphic file (type png)
 <use Images/8.3.4.png>
 Package pdftex.def Info: Images/8.3.4.png  used on input line 227.
@@ -876,29 +883,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-) (./Content/C10.tex [31]) (./Bibliography/Bibliography.tex [32]
+) (./Content/C10.tex [31]
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+
+ []
+
+[32] [33]) (./Bibliography/Bibliography.tex
 
 LaTeX Warning: Empty `thebibliography' environment on input line 5.
 
 ) 
 AED: lastpage setting LastPage
-[33] (./main.aux)
+[34] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 49183780129CE35669D828EC85DACCCF;4918.
+(rerunfilecheck)             Checksum: 4B0C32F7038884ECB8BC8EA12665AF49;5081.
  ) 
 Here is how much of TeX's memory you used:
- 12769 strings out of 478599
- 191202 string characters out of 5858101
- 542603 words of memory out of 5000000
- 30245 multiletter control sequences out of 15000+600000
- 417008 words of font info for 90 fonts, out of 8000000 for 9000
+ 12814 strings out of 478599
+ 192003 string characters out of 5858101
+ 542687 words of memory out of 5000000
+ 30272 multiletter control sequences out of 15000+600000
+ 418328 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,14n,69p,350b,488s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,14n,69p,350b,530s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (33 pages, 528452 bytes).
+Output written on main.pdf (34 pages, 533613 bytes).
 PDF statistics:
- 496 PDF objects out of 1000 (max. 8388607)
- 402 compressed objects within 5 object streams
- 125 named destinations out of 1000 (max. 500000)
- 314 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 513 PDF objects out of 1000 (max. 8388607)
+ 418 compressed objects within 5 object streams
+ 133 named destinations out of 1000 (max. 500000)
+ 322 words of extra memory for PDF output out of 10000 (max. 10000000)
 

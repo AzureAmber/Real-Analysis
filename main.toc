@@ -30,3 +30,4 @@
 \contentsline {subsection}{\numberline {9.1} Perfect Sets }{30}{subsection.9.1}%
 \contentsline {subsection}{\numberline {9.2} Connected Sets }{31}{subsection.9.2}%
 \contentsline {section}{\numberline {10}Day 10: Sequences and Series}{32}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Convergent Sequences}{32}{subsection.10.1}%

@@ -2,15 +2,127 @@
 
 \section[Day 10: Sequences and Series]{Sequences and Series}
 
+\subsection{Convergent Sequences}
+
+{ \color{blue} Definition 10.1.1: Convergent Sequence } 
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        A sequence \{$x_n$\} in metric space X converge if
+        there is a x $\in$ X such that:
+
+        \hspace{1cm}
+        For every $\epsilon$ $>$ 0, there is a N $\in$ $\mathbb{Z}$ such that
+        for all n $\geq$ N, d($x_n$,x) $<$ $\epsilon$
+        
+        Then, \{$x_n$\} converges to x: \hspace{1cm}
+        $\lim_{n \rightarrow \infty}$ $x_n$ = x
+
+        If \{$x_n$\} does not converge, then it diverges. \\
+	\end{adjustbox}
+
+{ \color{purple} Example 10.1.2 }
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.4em]
+        \item Let $x_n$ = $\frac{1}{n}$ in $\mathbb{R}^2$.
+        Then, $\lim_{n \rightarrow \infty}$ $x_n$ = 0
+
+            { \color{magenta} \underline{Proof} }
+
+                For $\epsilon$ $>$ 0, there is a $\frac{1}{N}$ $<$ $\epsilon$.
+                Then:
+
+                \hspace{1cm}
+                d($x_n$,0) = $|x_n - 0|$ = $\frac{1}{n}$
+                $<$ $\frac{1}{N}$ $<$ $\epsilon$
+
+        \item Let $x_n$ = $(-1)^n$ + $\frac{1}{n}$ in $\mathbb{R}^2$.
+        Then, \{$x_n$\} diverges.
+
+            { \color{magenta} \underline{Proof} }
+
+                $\lim_{n \rightarrow \infty}$ $x_n$
+                = $\lim_{n \rightarrow \infty}$ $(-1)^n$
+                + $\lim_{n \rightarrow \infty}$ $\frac{1}{n}$
+                = $\lim_{n \rightarrow \infty}$ $(-1)^n$
+
+                Since $(-1)^n$ alternates between -1 and 1, then
+                \{$x_n$\} diverges. \\
+    \end{enumerate}
+
+{ \color{red} Theorem 10.1.3: }
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.4em]
+        \item \{$p_n$\} converges to p $\in$ X if and only if
+        every N$_r(p)$ contains $p_n$ for all, but finitely many n.
+
+            { \color{magenta} \underline{Proof} }
+
+                Suppose $p_n$ $\rightarrow$ p.
+
+                Then for N$_{\epsilon}(p)$, any q $\in$ X such that
+                d(q,p) $<$ $\epsilon$ is q $\in$ N$_{\epsilon}(p)$.
+                Since $p_n$ $\rightarrow$ p, there is a N such that for
+                n $\geq$ N, d($p_n$,p) $<$ $\epsilon$.
+
+                Thus, for n $\geq$ N, $p_n$ $\in$ N$_{\epsilon}(p)$.
+
+                Suppose every N$_r(p)$ contains $p_n$ for all, but finitely
+                many n.
+
+                For $\epsilon$ $>$ 0, let N$_{\epsilon}(p)$ be the set of
+                all q $\in$ X such that d(p,q) $<$ $\epsilon$.
+                Thus, there exists an N such that $p_n$ $\in$ N$_{\epsilon}(p)$
+                if n $\geq$ N.
+                
+                Thus, d($p_n$,p) $<$ $\epsilon$ so $p_n$ $\rightarrow$ p.
 
 
+        \item If p,p' $\in$ X and \{$p_n$\} converges to p and p', then
+        p = p'.
 
+            { \color{magenta} \underline{Proof} }
 
+                For $\epsilon$ $>$ 0, there exists N,N' such that:
 
+                \hspace{1cm}
+                d($p_n$,p) $<$ $\frac{\epsilon}{2}$ for n $\geq$ N
+                \hspace{1cm}
+                d($p_n$,p') $<$ $\frac{\epsilon}{2}$ for n $\geq$ N'
 
+                Then for n $\geq$ max(N,N'):
 
+                \hspace{1cm}
+                d(p,p') $\leq$ d(p,$p_n$) + d($p_n$,p') $<$ $\epsilon$
 
+                Thus, p = p'.
 
+        \item If \{$p_n$\} converges, then \{$p_n$\} is bounded.
+
+            { \color{magenta} \underline{Proof} }
+
+                If \{$p_n$\} $\rightarrow$ p,
+                there is a N such that for n $>$ N, d($p_n$,p) $<$ 1.
+
+                Let r = max( 1, d($p_1$,p), ... , d($p_N$,p) ).
+                Thus for all n, d($p_n$,p) $\leq$ r.
+
+        \item If E $\subset$ X and p $\in$ E', there is a \{$p_n$\}
+        in E such that p = $\lim_{n \rightarrow \infty}$ $p_n$.
+
+            { \color{magenta} \underline{Proof} }
+
+                Since p $\in$ E', then for each n $\in$ $\mathbb{Z}_+$,
+                there is a $p_n$ $\in$ E such that d($p_n$,p) $<$ $\frac{1}{n}$.
+                For $\epsilon$ $>$ 0, there is a $\frac{1}{N}$ $<$ $\epsilon$
+                so for n $\geq$ N,
+                d($p_n$,p) $<$ $\frac{1}{n}$ $<$ $\frac{1}{N}$ $<$ $\epsilon$.
+
+                Thus, p = $\lim_{n \rightarrow \infty}$ $p_n$. \\
+    \end{enumerate}
+
+\newpage
+
+    
 
 
 
