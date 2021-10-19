@@ -387,11 +387,78 @@
         \hspace{0.5cm}
         For every $\epsilon$ $>$ 0, there is a N $\in$ $\mathbb{Z}$ such that
         for all n,m $\geq$ N, d($p_n$,$p_m$) $<$ $\epsilon$
+
+        Let nonempty E $\subset$ X and S $\subset$ $\mathbb{R}$ of 
+        d(p,q) where p,q $\in$ E.
+        
+        Let sup(S) = diam(E).
+        If \{$p_n$\} $\in$ X, and $p_N, p_{N+1}, ... $ $\in$ $E_N$, then
+        \{$p_n$\} is a Cauchy sequence if and only if
+        $\lim_{N \rightarrow \infty}$ diam($E_N$) = 0. \\
     \end{adjustbox}
 
+{ \color{red} Theorem 10.3.2: Cauchy sequences and its closure have the same diam }
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item If $\overline{E}$ $\subset$ X, then diam($\overline{E}$) = diam(E).
+        
+            { \color{magenta} \underline{Proof} }
+
+                Since E $\subset$ $\overline{E}$, then
+                diam(E) $\leq$ diam($\overline{E}$).
+
+                For $\epsilon$ $>$ 0, let p,q $\in$ E'.
+
+                Thus, there are p',q' $\in$ E such that
+                d(p',p) $<$ $\epsilon$ and d(q',q) $<$ $\epsilon$.
+                Thus:
+
+                d(p,q) $\leq$ d(p,p') + d(p',q') + d(q',q)
+                $<$ 2$\epsilon$ + d(p',q')
+                $\leq$ 2$\epsilon$ + diam(E).
+
+                Thus, diam($\overline{E}$) $\leq$ 2$\epsilon$ + diam(E)
+                so diam($\overline{E}$) = diam(E).
+
+        \item If $K_n$ is a sequence of compact sets of X such that
+        $K_{n+1}$ $\subset$ $K_n$ and $\lim_{n \rightarrow \infty}$ diam($K_N$) = 0,
+        then $\cap$ $K_n$ consist of only one point.
+        
+            { \color{magenta} \underline{Proof} }
+
+                Let K = $\cap$ $K_n$.
+                Since $K_n$ is a sequence of compact sets, then
+                by { \color{orange} Corollary 8.3.8 }, K is nonempty.
+
+                If K contains more than one point, then diam(K) $>$ 0.
+
+                But since K $\subset$ $K_n$, then diam(K) $\leq$ diam($K_n$)
+                which contradicts that diam($K_n$) $\rightarrow$ 0. \\
+    \end{enumerate}
+
+{ \color{red} Theorem 10.3.3: Cauchy sequences are convergent }
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item In every metric space, every convergent sequence is a
+        a Cauchy sequence.
+
+            { \color{magenta} \underline{Proof} }
 
 
+        
+        \item If \{$p_n$\} is a Cauchy sequence in compact metric space X,
+        then \{$p_n$\} converges to some p $\in$ X.
 
+            { \color{magenta} \underline{Proof} }
+
+
+        
+        \item In $\mathbb{R}^k$, every Cauchy sequence converges.
+        
+            { \color{magenta} \underline{Proof} }
+
+                
+    \end{enumerate}
 
 
 
