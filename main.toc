@@ -29,6 +29,7 @@
 \contentsline {section}{\numberline {9}Day 9: Perfect \& Connected Sets}{30}{section.9}%
 \contentsline {subsection}{\numberline {9.1} Perfect Sets }{30}{subsection.9.1}%
 \contentsline {subsection}{\numberline {9.2} Connected Sets }{31}{subsection.9.2}%
-\contentsline {section}{\numberline {10}Day 10: Sequences and Series}{32}{section.10}%
+\contentsline {section}{\numberline {10}Day 10: Convergence \& Cauchy Sequences}{32}{section.10}%
 \contentsline {subsection}{\numberline {10.1}Convergent Sequences}{32}{subsection.10.1}%
 \contentsline {subsection}{\numberline {10.2}Subsequences}{34}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Cauchy Sequences}{35}{subsection.10.3}%

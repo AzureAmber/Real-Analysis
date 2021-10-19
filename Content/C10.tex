@@ -1,6 +1,6 @@
 \newpage
 
-\section[Day 10: Sequences and Series]{Sequences and Series}
+\section[Day 10: Convergence \& Cauchy Sequences]{Convergent and Cauchy Sequences}
 
 \subsection{Convergent Sequences}
 
@@ -268,27 +268,126 @@
 
 \newpage
 
+
+
+
+
 \subsection{Subsequences}
 
+{ \color{blue} Definition 10.2.1: Subsequence } 
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        For sequence \{$p_n$\}, let \{$n_k$\} $\in$ $\mathbb{Z}_+$
+        where $n_k$ $<$ $n_{k+1}$.
+
+        Then \{$p_{n_k}$\} is a subsequence of \{$p_n$\}.
+        
+        If \{$p_{n_k}$\} converges, then its limit is called
+        a subsequential limit. \\
+	\end{adjustbox}
+
+{ \color{red} Theorem 10.2.2:
+\{$p_n$\} $\rightarrow$ p $\rightleftharpoons$ \{$p_{n_k}$\} $\rightarrow$ p }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        \{$p_n$\} converges to p if and only if every subsequence
+        converges to p.
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    Suppose \{$p_n$\} converges to p.
+
+    Then for $\epsilon$ $>$ 0, there is a N such that for n $\geq$ N,
+    $|p_n - p|$ $<$ $\epsilon$.
+
+    Let \{$p_{n_k}$\} be a subsequence of \{$p_n$\}.
+
+    Then for $n_k$ $\geq$ N, $|p_{n_k} - p|$ $<$ $\epsilon$.
+    Thus, every \{$p_{n_k}$\} $\rightarrow$ p.
+
+    Suppose every subsequence converges to p.
+
+    Since \{$p_n$\} is a subsequence of itself, then
+    \{$p_n$\} converges to p. \\
+
+{ \color{red} Theorem 10.2.3:
+\{$p_n$\} in compact space have \{$p_{n_k}$\} $\rightarrow$ p }
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item If \{$p_n$\} is a sequence in a compact metric space X,
+        then some subsequence converges to p $\in$ X.
+
+            { \color{magenta} \underline{Proof} }
+
+                Let E be the range of \{$p_n$\}.
+
+                If E is finite, there is a p $\in$ E and sequence
+                \{$n_k$\} with $n_k$ $<$ $n_{k+1}$ such that
+                $p_{n_1}$ = $p_{n_2}$ = ... = p.
+                Thus, \{$p_{n_k}$\} $\rightarrow$ p.
+
+                If E is infinite, then by {\color{red} theorem 8.3.10},
+                then there exists a p $\in$ X.
+
+                Then choose $n_k$ such that d($p_{n_k}$,p) $<$ $\frac{1}{k}$.
+                Thus, \{$p_{n_k}$\} $\rightarrow$ p.
+
+        \item Every bounded sequence in $\mathbb{R}^k$ contains
+        a convergent subsequence.
+
+            { \color{magenta} \underline{Proof} }
+
+                Since every bounded set lies in a compact space in
+                $\mathbb{R}^k$, then by part a, every bounded sequence
+                contains a convergent subsequence. \\
+    \end{enumerate}
+
+{ \color{red} Theorem 10.2.4: The set of subsequential limits is closed }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        The subsequential limits of \{$p_n$\} in metric space X form
+        a closed subset of X.
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    Let E be the range of the set of all subsequential limits of \{$p_n$\}.
+    
+    If E is empty, then E is closed.
+    If E is finite, then E' is empty so E is closed.
+
+    Suppose E is infinite. Then, let q $\in$ E'.
+
+    Choose $n_1$ so $p_{n_1}$ $\not =$ q. Let $\frac{\epsilon}{2}$ = d($p_{n_1}$,q).
+
+    Since q $\in$ E', there is a x $\in$ E where d(x,q) $<$ $\frac{\epsilon}{2}$.
+
+    Since x $\in$ E, then there is a \{$p_{n_k}$\} $\rightarrow$ x
+    so d($p_{n_k}$,x) $<$ $\frac{\epsilon}{2}$.
+
+    Thus, d($p_{n_k}$,q) $\leq$ d($p_{n_k}$,x) + d(x,q) $<$ $\epsilon$
+    so q is a subsequential limit of \{$p_n$\}.
+    
+    Thus, q $\in$ E so E is closed. \\
+
+\newpage
 
 
 
 
 
+\subsection{Cauchy Sequences}
 
+{ \color{blue} Definition 10.3.1: Metric Spaces } 
 
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        Sequence \{$p_n$\} $\in$ X is a Cauchy sequence if:
 
-
-
-
-
-
-
-
-
-
-
-
+        \hspace{0.5cm}
+        For every $\epsilon$ $>$ 0, there is a N $\in$ $\mathbb{Z}$ such that
+        for all n,m $\geq$ N, d($p_n$,$p_m$) $<$ $\epsilon$
+    \end{adjustbox}
 
 
 
