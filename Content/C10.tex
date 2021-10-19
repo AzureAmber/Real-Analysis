@@ -49,7 +49,7 @@
                 \{$x_n$\} diverges. \\
     \end{enumerate}
 
-{ \color{red} Theorem 10.1.3: }
+{ \color{red} Theorem 10.1.3: A convergent sequence is unique }
 
     \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.4em]
         \item \{$p_n$\} converges to p $\in$ X if and only if
@@ -58,7 +58,6 @@
             { \color{magenta} \underline{Proof} }
 
                 Suppose $p_n$ $\rightarrow$ p.
-
                 Then for N$_{\epsilon}(p)$, any q $\in$ X such that
                 d(q,p) $<$ $\epsilon$ is q $\in$ N$_{\epsilon}(p)$.
                 Since $p_n$ $\rightarrow$ p, there is a N such that for
@@ -73,7 +72,7 @@
                 all q $\in$ X such that d(p,q) $<$ $\epsilon$.
                 Thus, there exists an N such that $p_n$ $\in$ N$_{\epsilon}(p)$
                 if n $\geq$ N.
-                
+
                 Thus, d($p_n$,p) $<$ $\epsilon$ so $p_n$ $\rightarrow$ p.
 
 
@@ -122,8 +121,154 @@
 
 \newpage
 
-    
+{ \color{red} Theorem 10.1.4: Arithmetic Operations for Sequences } 
 
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        Suppose \{$s_n$\},\{$t_n$\} $\in$ $\mathbb{C}$ where
+        $\lim_{n \rightarrow \infty}$ $s_n$ = s and
+        $\lim_{n \rightarrow \infty}$ $t_n$ = t.
+    \end{adjustbox}
+
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item $\lim_{n \rightarrow \infty}$ $s_n + t_n$ = s + t
+        
+            { \color{magenta} \underline{Proof} }
+
+                For $\epsilon$ $>$ 0, there exists $N_1$, $N_2$ such that
+
+                \hspace{1cm}
+                $|s_n - s|$ $<$ $\frac{\epsilon}{2}$ for n $\geq$ $N_1$
+                \hspace{1cm}
+                $|t_n - t|$ $<$ $\frac{\epsilon}{2}$ for n $\geq$ $N_2$
+
+                If N = max($N_1$,$N_2$), then for n $\geq$ N:
+
+                \hspace{1cm}
+                $|s_n+t_n - s+t|$ $\leq$ $|s_n - s|$ + $|t_n - t|$ $<$ $\epsilon$
+        
+        \item $\lim_{n \rightarrow \infty}$ $cs_n$ = cs and 
+        $\lim_{n \rightarrow \infty}$ $c + s_n$ = c + s
+
+            { \color{magenta} \underline{Proof} }
+
+                For $\epsilon$ $>$ 0, there exists a N such that
+
+                \hspace{1cm}
+                $|s_n - s|$ $<$ $\frac{\epsilon}{c}$ for n $\geq$ N
+
+                \hspace{1cm}
+                $|cs_n - cs|$ $\leq$ c $\cdot$ $|s_n - s|$ $<$ $\epsilon$
+        
+        \item $\lim_{n \rightarrow \infty}$ $s_n t_n$ = st
+        
+            { \color{magenta} \underline{Proof} }
+
+                Note $s_n t_n$ - st
+                = ($s_n - s$)($t_n - t$) + t($s_n$ - s) + s($t_n$ - t).
+
+                For $\epsilon$ $>$ 0, there exists $N_1$,$N_2$ such that
+
+                \hspace{1cm}
+                $|s_n - s|$ $<$ $\sqrt{\epsilon}$ for n $\geq$ $N_1$
+                \hspace{1cm}
+                $|t_n - t|$ $<$ $\sqrt{\epsilon}$ for n $\geq$ $N_2$
+
+                If N = max($N_1$,$N_2$), then for n $\geq$ N,
+                $|(s_n - s)(t_n - t)|$ $<$ $\epsilon$.
+
+                Thus, $\lim_{n \rightarrow \infty}$ 
+                $(s_n - s)(t_n - t)$ = 0.
+
+                \hspace{1cm}
+                $\lim_{n \rightarrow \infty}$ $(s_n t_n - st)$
+                = $\lim_{n \rightarrow \infty}$
+                $(s_n - s)(t_n - t) + t(s_n - s) + s(t_n - t)$
+
+                \hspace{4.4cm}
+                = 0 + t $\cdot$ 0 + s $\cdot$ 0 = 0
+
+        \item $\lim_{n \rightarrow \infty}$ $\frac{1}{s_n}$ = $\frac{1}{s}$
+        where $s_n, s$ $\not =$ 0
+
+            { \color{magenta} \underline{Proof} }
+
+                Choose m such that $|s_n - s|$ $<$ $\frac{1}{2} |s|$ if n $\geq$ m
+                so $|s_n|$ $>$ $\frac{1}{2} |s|$ for n $\geq$ m.
+
+                For $\epsilon$ $>$ 0, there is a N $>$ m such that for n $\geq$ N, 
+                $|s_n - s|$ $<$ $\frac{1}{2} |s|^2 \epsilon$.
+
+
+                Thus, for n $\geq$ N, 
+                $|\frac{1}{s_n} - \frac{1}{s}|$
+                = $\frac{s_n - s}{s_n s}$
+                $<$ $\frac{2}{|s|^2} |s_n - s|$
+                $<$ $\epsilon$. \\
+    \end{enumerate}
+
+{ \color{red} Theorem 10.1.5: Extension to $\mathbb{R}^k$ }
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item Suppose $x_n$ $\in$ $\mathbb{R}^k$ and $x_n$
+        = ($\alpha_{n_1}$, ... , $\alpha_{n_k}$).
+        Then \{$x_n$\} converges to x = ($\alpha_1$, ... , $\alpha_k$)
+        if and only if $\lim_{n \rightarrow \infty}$ $\alpha_{n_i}$ = $\alpha_i$
+        for i $\in$ [1,k].
+
+            { \color{magenta} \underline{Proof} }
+
+                Suppose \{$x_n$\} converges to x = ($\alpha_1$, ... , $\alpha_k$).
+                
+                Since for any i $\in$ [1,k],
+                $|\alpha_{n_i} - \alpha_i|$ $\leq$ $|x_n - x|$ $<$ $\epsilon$.
+                Then, $\lim_{n \rightarrow \infty}$ $\alpha_{n_i}$ = $\alpha_i$.
+
+                Suppose $\lim_{n \rightarrow \infty}$ $\alpha_{n_i}$ = $\alpha_i$
+                for i $\in$ [1,k].
+                
+                Then for $\epsilon$ $>$ 0, there is an N such that for n $\geq$ N:
+
+                \hspace{1cm}
+                $|\alpha_{n_i} - \alpha_i|$ $<$ $\frac{\epsilon}{\sqrt{k}}$
+                for i $\in$ [1,k]
+
+                \hspace{1cm}
+                $|x_n - x|$
+                = $\sqrt{\sum_{i=1}^k |\alpha_{n_i} - \alpha_i|^2}$
+                $<$ $\sqrt{k \cdot (\frac{\epsilon}{\sqrt{k}})^2}$
+                = $\epsilon$
+
+        \item Suppose \{$x_n$\},\{$y_n$\} $\in$ $\mathbb{R}^k$ and
+        \{$\beta_n$\} $\in$ $\mathbb{R}$ and $x_n$ $\rightarrow$ x,
+        $y_n$ $\rightarrow$ y, $\beta_n$ $\rightarrow$ $\beta$.
+        
+        $\lim_{n \rightarrow \infty}$ $x_n + y_n$ = x+y
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $x_n \cdot y_n$ = x$\cdot$y
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $\beta_n x_n$ = $\beta$x
+
+            { \color{magenta} \underline{Proof} }
+
+                By part a, then
+                $\lim_{n \rightarrow \infty}$ $x_{n_i} + y_{n_i}$
+                = $x_i + y_i$ so
+                \{$x_n + y_n$\} $\rightarrow$ x+y.
+
+                Also,
+                $\lim_{n \rightarrow \infty}$ $\sum_{i=1}^k x_{n_i} y_{n_i}$
+                = $\sum_{i=1}^k x_i y_i$ so
+                \{$x_n \cdot y_n$\} $\rightarrow$ x$\cdot$y.
+
+                Also,
+                $\lim_{n \rightarrow \infty}$ $\beta_i x_{n_i}$
+                = $\beta_i x_i$ so
+                \{$\beta_n x_n$\} $\rightarrow$ $\beta x$. \\
+    \end{enumerate}
+
+\newpage
+
+\subsection{Subsequences}
 
 
 
