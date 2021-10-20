@@ -444,19 +444,47 @@
 
             { \color{magenta} \underline{Proof} }
 
+				If $p_n$ $\rightarrow$ p and $\epsilon$ $>$ 0, there is a N such that
+				for all n $\geq$ N, d(p,$p_n$) $<$ $\epsilon$. Thus, for m,n $\geq$ N:
 
-        
+				\hspace{1cm}
+				d($p_n$,$p_m$) $\leq$ d($p_n$,p) + d(p,$p_m$) $<$ 2$\epsilon$.
+
+				Thus, \{$p_n$\} is a Cauchy sequence.
+
         \item If \{$p_n$\} is a Cauchy sequence in compact metric space X,
         then \{$p_n$\} converges to some p $\in$ X.
 
             { \color{magenta} \underline{Proof} }
 
+				Let \{$p_n$\} be a Cauchy sequence in compact space X.
 
-        
+				Let	$p_N, p_{N+1}, ... $ $\in$ $E_N$.
+
+				Since \{$p_n$\} is a Cauchy sequence, then
+				$\lim_{N \rightarrow \infty}$ diam($\overline{E_N}$) = 0.
+				Since $\overline{E_N}$ is closed in a compact set, then
+				by {\color{red} theorem 8.3.5}, $\overline{E_N}$ is compact.
+
+				Since $E_{N+1}$ $\subset$ $E_N$, then $\overline{E_{N+1}}$
+				$\subset$ $\overline{E_N}$ and thus, by {\color{red} theorem 10.3.2b},
+				then there is a unique p $\in$ $\overline{E_N}$ for every N.
+
+				Then for $\epsilon$ $>$ 0, there is a $N_0$ such that for N $\geq$ $N_0$
+				diam($\overline{E_{N_0}}$) $<$ $\epsilon$.
+
+				Since p $\in$ $\overline{E_N}$, then d(p,q) $<$ $\epsilon$ for every
+				q $\in$ $\overline{E_N}$ so every q $\in$ $E_N$.
+
+				Thus, \{$p_n$\} $\rightarrow$ p.
+
+\newpage
+
         \item In $\mathbb{R}^k$, every Cauchy sequence converges.
         
             { \color{magenta} \underline{Proof} }
 
+            
                 
     \end{enumerate}
 
