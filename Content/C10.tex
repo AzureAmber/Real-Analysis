@@ -484,35 +484,98 @@
         
             { \color{magenta} \underline{Proof} }
 
-            
-                
+				Let \{$x_n$\} be a Cauchy sequence in $\mathbb{R}^k$.
+				Let $x_N, x_{N+1}, ... $ $\in$ $E_N$.
+
+				Then for some N, diam($E_N$) $<$ 1.
+				Thus, the range of \{$x_n$\} = $E_N$ $\cup$ \{$x_1, ... , x_{N-1}$\}.
+				Thus, \{$x_n$\} is bounded.
+
+				Thus, the $\overline{\{x_n\}}$ is closed and bounded so
+				by {\color{red} theorem 8.3.13}, $\overline{\{x_n\}}$
+				is compact.
+				Thus, by part b, \{$x_n$\} converges to some p $\in$ $\mathbb{R}^k$. \\
     \end{enumerate}
 
 
 
 
 
+{ \color{blue} Definition 10.3.4: Complete } 
 
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		A metric space where every Cauchy sequence converges is complete.
 
+		Thus, by {\color{red} theorem 10.3.3}, all compact and Euclidean
+		metric spaces are complete. \\
+	\end{adjustbox}
 
+{ \color{blue} Definition 10.3.5: Monotonic Sequences } 
 
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		A sequence \{$s_n$\} of real numbers is:
+	\end{adjustbox}
 
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+		\item monotonically increasing if $s_n$ $\leq$ $s_{n+1}$
+		
+		\item monotonically decreasing if $s_n$ $\geq$ $s_{n+1}$ \\
+	\end{enumerate}
 
+{ \color{red} Theorem 10.3.6: Monotonic sequences converge if bounded } 
 
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		Suppose \{$s_n$\} is monotonic. Then \{$s_n$\} converges if
+		and only if it is bounded.
+	\end{adjustbox}
 
+{ \color{magenta} \underline{Proof} } 
 
+	Suppose $s_n$ $\leq$ $s_{n+1}$.
+	Let E be the range of \{$s_n$\}.
+	
+	Suppose \{$s_n$\} is bounded.
+	
+	Let s = sup(E) so $s_n$ $\leq$ s.
+	For every $\epsilon$ $>$ 0, there is a N such that
+	s - $\epsilon$ $<$ $s_N$ $\leq$ s
+	else s-$\epsilon$ would be an upper bound of E
+	which contradicts s = sup(E).
 
+	Since \{$s_n$\} increases, then for n $\geq$ N,
+	s - $\epsilon$ $<$ $s_N$ $\leq$ $s_n$ $\leq$ s
+	so \{$s_n$\} $\rightarrow$ s.
 
+	Suppose \{$s_n$\} converges to s.
 
+	Then for $\epsilon$ $>$ 0, there is a N such that for n $\geq$ N,
+	s - $\epsilon$ $<$ $s_N$ $\leq$ $s_n$ $\leq$ s.
 
+	Thus, \{$s_n$\} is bounded from above.
 
+	\vspace{0.2cm}
 
+	Suppose $s_n$ $\geq$ $s_{n+1}$. Let E be the range of \{$s_n$\}.
 
+	Suppose \{$s_n$\} is bounded.
 
+	Let s = inf(E) so $s_n$ $\geq$ s.
+	For every $\epsilon$ $>$ 0, there is a N such that
+	s $\leq$ $s_N$ $<$ s + $\epsilon$
+	else s+$\epsilon$ would be a lower bound of E
+	which contradicts s = inf(E).
 
+	Since \{$s_n$\} decreases, then for n $\geq$ N,
+	s $\leq$ $s_n$ $\leq$ $s_N$ $<$ s + $\epsilon$
+	so \{$s_n$\} $\rightarrow$ s.
+	
+	Suppose \{$s_n$\} converges to s.
 
+	Then for $\epsilon$ $>$ 0, there is a N such that for n $\geq$ N,
+	s $\leq$ $s_n$ $<$ $s_N$ $<$ s + $\epsilon$.
 
-
+	Thus, \{$s_n$\} is bounded from below. \\
+	
 
 
 
