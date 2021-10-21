@@ -1,4 +1,4 @@
-\babel@toc {english}{}
+\babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Day 1: The Real Number System}{4}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Number Systems}{4}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Real Number System}{4}{subsection.1.2}%
@@ -33,5 +33,5 @@
 \contentsline {subsection}{\numberline {10.1}Convergent Sequences}{32}{subsection.10.1}%
 \contentsline {subsection}{\numberline {10.2}Subsequences}{34}{subsection.10.2}%
 \contentsline {subsection}{\numberline {10.3}Cauchy Sequences}{35}{subsection.10.3}%
-\contentsline {section}{\numberline {11}Day 11: Limits \& Series}{37}{section.11}%
+\contentsline {section}{\numberline {11}Day 11: Limits \& Special Sequences}{37}{section.11}%
 \contentsline {subsection}{\numberline {11.1} Upper and Lower Limits }{37}{subsection.11.1}%

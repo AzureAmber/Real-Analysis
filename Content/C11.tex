@@ -1,6 +1,6 @@
 \newpage
 
-\section[Day 11: Limits \& Series]{Limits and Series}
+\section[Day 11: Limits \& Special Sequences]{Limits and Special Sequences}
 
 \subsection{ Upper and Lower Limits } 
 
@@ -43,9 +43,55 @@
 		$s_*$ = inf(E) \hspace{1.2cm} $\lim_{n \rightarrow \infty}$ inf($s_n$) = $s_*$ \\
 	\end{adjustbox}
 
+{ \color{red} Theorem 11.1.3: Upper and Lower limits are unique }
 
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0.1cm}
+		Let \{$s_n$\} be a sequence of real numbers.
+		Let E be the set of subsequential limits and
+		$s^*$ be the upper limit of \{$s_n$\}. Then:
+	\end{adjustbox}
 
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+		\item $s^*$ $\in$ E
+		
+			{ \color{magenta} \underline{Proof} }
 
+				If $s^*$ = $+\infty$, then there is a
+				\{$s_{n_k}$\} $\rightarrow$ $+\infty$ so E is not bounded above.
+				
+				If $s^*$ $\in$ $\mathbb{R}$, then E is bounded above so
+				$s^*$ $\in$ E'.
+
+				Then by {\color{red} theorem 10.2.4}, $s^*$ $\in$ E.
+
+				If $s^*$ = $-\infty$, then there are no subsequential limits
+				in E since there are no upper bounds.
+				Thus, for every M, there is a N such that for n $\geq$ N,
+				$s_n$ $\rightarrow$ $-\infty$ so $-\infty$ $\in$ E. 
+
+		\item If x $>$ $s^*$, there is a N such that for n $\geq$ N, $s_n$ $<$ x
+		
+			{ \color{magenta} \underline{Proof} }
+
+				Suppose there is a x $>$ $s^*$ such that $s_n$ $\geq$ x
+				for infinitely many n.
+
+				Then, there is a y $\in$ E such that y $\geq$ x $>$ $s^*$
+				which contradicts $s^*$ = sup(E).
+
+		\item $s^*$ is the only number that satisfies (a) and (b)
+		
+			{ \color{magenta} \underline{Proof} }
+
+				Suppose p,q statisfy part a and b where p $<$ q.
+
+				Choose x such that p $<$ x $<$ q.
+
+				Since p satisfies b, then $s_n$ $<$ x for n $\geq$ N.
+
+				Thus, q cannot satisfy a.
+
+	\end{enumerate}
 
 
 
