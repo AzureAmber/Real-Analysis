@@ -28,26 +28,34 @@
 
             { \color{magenta} \underline{Proof} }
 
+            \fbox{
+            \begin{minipage}{13cm}
                 For $\epsilon$ $>$ 0, there is a $\frac{1}{N}$ $<$ $\epsilon$.
                 Then:
 
                 \hspace{1cm}
                 d($x_n$,0) = $|x_n - 0|$ = $\frac{1}{n}$
                 $<$ $\frac{1}{N}$ $<$ $\epsilon$
+            \end{minipage} }
 
         \item Let $x_n$ = $(-1)^n$ + $\frac{1}{n}$ in $\mathbb{R}^2$.
         Then, \{$x_n$\} diverges.
 
             { \color{magenta} \underline{Proof} }
 
+            \fbox{
+            \begin{minipage}{13cm}
                 $\lim_{n \rightarrow \infty}$ $x_n$
                 = $\lim_{n \rightarrow \infty}$ $(-1)^n$
                 + $\lim_{n \rightarrow \infty}$ $\frac{1}{n}$
                 = $\lim_{n \rightarrow \infty}$ $(-1)^n$
 
                 Since $(-1)^n$ alternates between -1 and 1, then
-                \{$x_n$\} diverges. \\
+                \{$x_n$\} diverges.
+            \end{minipage} }
     \end{enumerate}
+
+    \vspace{0.5cm}
 
 { \color{red} Theorem 10.1.3: A convergent sequence is unique }
 
@@ -57,6 +65,8 @@
 
             { \color{magenta} \underline{Proof} }
 
+            \fbox{
+            \begin{minipage}{13cm}
                 Suppose $p_n$ $\rightarrow$ p.
                 Then for N$_{\epsilon}(p)$, any q $\in$ X such that
                 d(q,p) $<$ $\epsilon$ is q $\in$ N$_{\epsilon}(p)$.
@@ -70,17 +80,19 @@
 
                 For $\epsilon$ $>$ 0, let N$_{\epsilon}(p)$ be the set of
                 all q $\in$ X such that d(p,q) $<$ $\epsilon$.
-                Thus, there exists an N such that $p_n$ $\in$ N$_{\epsilon}(p)$
+                Thus, there exists a N such that $p_n$ $\in$ N$_{\epsilon}(p)$
                 if n $\geq$ N.
 
                 Thus, d($p_n$,p) $<$ $\epsilon$ so $p_n$ $\rightarrow$ p.
-
+            \end{minipage} }
 
         \item If p,p' $\in$ X and \{$p_n$\} converges to p and p', then
         p = p'.
 
             { \color{magenta} \underline{Proof} }
 
+            \fbox{
+            \begin{minipage}{13cm}
                 For $\epsilon$ $>$ 0, there exists N,N' such that:
 
                 \hspace{1cm}
@@ -88,35 +100,40 @@
                 \hspace{1cm}
                 d($p_n$,p') $<$ $\frac{\epsilon}{2}$ for n $\geq$ N'
 
-                Then for n $\geq$ max(N,N'):
-
-                \hspace{1cm}
-                d(p,p') $\leq$ d(p,$p_n$) + d($p_n$,p') $<$ $\epsilon$
+                Then for n $\geq$ max(N,N'),
+                d(p,p') $\leq$ d(p,$p_n$) + d($p_n$,p') $<$ $\epsilon$.
 
                 Thus, p = p'.
+            \end{minipage} }
 
         \item If \{$p_n$\} converges, then \{$p_n$\} is bounded.
 
             { \color{magenta} \underline{Proof} }
 
+            \fbox{
+            \begin{minipage}{13cm}
                 If \{$p_n$\} $\rightarrow$ p,
                 there is a N such that for n $>$ N, d($p_n$,p) $<$ 1.
 
                 Let r = max( 1, d($p_1$,p), ... , d($p_N$,p) ).
                 Thus for all n, d($p_n$,p) $\leq$ r.
+            \end{minipage} }
 
         \item If E $\subset$ X and p $\in$ E', there is a \{$p_n$\}
         in E such that p = $\lim_{n \rightarrow \infty}$ $p_n$.
 
             { \color{magenta} \underline{Proof} }
 
+            \fbox{
+            \begin{minipage}{13cm}
                 Since p $\in$ E', then for each n $\in$ $\mathbb{Z}_+$,
                 there is a $p_n$ $\in$ E such that d($p_n$,p) $<$ $\frac{1}{n}$.
                 For $\epsilon$ $>$ 0, there is a $\frac{1}{N}$ $<$ $\epsilon$
                 so for n $\geq$ N,
                 d($p_n$,p) $<$ $\frac{1}{n}$ $<$ $\frac{1}{N}$ $<$ $\epsilon$.
 
-                Thus, p = $\lim_{n \rightarrow \infty}$ $p_n$. \\
+                Thus, p = $\lim_{n \rightarrow \infty}$ $p_n$.
+            \end{minipage} }
     \end{enumerate}
 
 \newpage
@@ -134,6 +151,8 @@
         
             { \color{magenta} \underline{Proof} }
 
+            \fbox{
+            \begin{minipage}{13cm}
                 For $\epsilon$ $>$ 0, there exists $N_1$, $N_2$ such that
 
                 \hspace{1cm}
@@ -145,12 +164,15 @@
 
                 \hspace{1cm}
                 $|s_n+t_n - s+t|$ $\leq$ $|s_n - s|$ + $|t_n - t|$ $<$ $\epsilon$
+            \end{minipage} }
         
         \item $\lim_{n \rightarrow \infty}$ $cs_n$ = cs and 
         $\lim_{n \rightarrow \infty}$ $c + s_n$ = c + s
 
             { \color{magenta} \underline{Proof} }
 
+            \fbox{
+            \begin{minipage}{13cm}
                 For $\epsilon$ $>$ 0, there exists a N such that
 
                 \hspace{1cm}
@@ -158,11 +180,14 @@
 
                 \hspace{1cm}
                 $|cs_n - cs|$ $\leq$ c $\cdot$ $|s_n - s|$ $<$ $\epsilon$
+            \end{minipage} }
         
         \item $\lim_{n \rightarrow \infty}$ $s_n t_n$ = st
         
             { \color{magenta} \underline{Proof} }
 
+            \fbox{
+            \begin{minipage}{13cm}
                 Note $s_n t_n$ - st
                 = ($s_n - s$)($t_n - t$) + t($s_n$ - s) + s($t_n$ - t).
 
@@ -184,27 +209,32 @@
                 = $\lim_{n \rightarrow \infty}$
                 $(s_n - s)(t_n - t) + t(s_n - s) + s(t_n - t)$
 
-                \hspace{4.4cm}
+                \hspace{4.45cm}
                 = 0 + t $\cdot$ 0 + s $\cdot$ 0 = 0
+            \end{minipage} }
 
         \item $\lim_{n \rightarrow \infty}$ $\frac{1}{s_n}$ = $\frac{1}{s}$
         where $s_n, s$ $\not =$ 0
 
             { \color{magenta} \underline{Proof} }
 
+            \fbox{
+            \begin{minipage}{13cm}
                 Choose m such that $|s_n - s|$ $<$ $\frac{1}{2} |s|$ if n $\geq$ m
                 so $|s_n|$ $>$ $\frac{1}{2} |s|$ for n $\geq$ m.
 
                 For $\epsilon$ $>$ 0, there is a N $>$ m such that for n $\geq$ N, 
                 $|s_n - s|$ $<$ $\frac{1}{2} |s|^2 \epsilon$.
 
-
                 Thus, for n $\geq$ N, 
                 $|\frac{1}{s_n} - \frac{1}{s}|$
-                = $\frac{s_n - s}{s_n s}$
+                = $|\frac{s_n - s}{s_n s}|$
                 $<$ $\frac{2}{|s|^2} |s_n - s|$
-                $<$ $\epsilon$. \\
+                $<$ $\epsilon$.
+            \end{minipage} }
     \end{enumerate}
+
+    \vspace{0.5cm}
 
 { \color{red} Theorem 10.1.5: Extension to $\mathbb{R}^k$ }
 
@@ -217,6 +247,8 @@
 
             { \color{magenta} \underline{Proof} }
 
+            \fbox{
+            \begin{minipage}{13cm}
                 Suppose \{$x_n$\} converges to x = ($\alpha_1$, ... , $\alpha_k$).
                 
                 Since for any i $\in$ [1,k],
@@ -237,6 +269,7 @@
                 = $\sqrt{\sum_{i=1}^k |\alpha_{n_i} - \alpha_i|^2}$
                 $<$ $\sqrt{k \cdot (\frac{\epsilon}{\sqrt{k}})^2}$
                 = $\epsilon$
+            \end{minipage} }
 
         \item Suppose \{$x_n$\},\{$y_n$\} $\in$ $\mathbb{R}^k$ and
         \{$\beta_n$\} $\in$ $\mathbb{R}$ and $x_n$ $\rightarrow$ x,
@@ -250,6 +283,8 @@
 
             { \color{magenta} \underline{Proof} }
 
+            \fbox{
+            \begin{minipage}{13cm}
                 By part a, then
                 $\lim_{n \rightarrow \infty}$ $x_{n_i} + y_{n_i}$
                 = $x_i + y_i$ so
@@ -263,7 +298,8 @@
                 Also,
                 $\lim_{n \rightarrow \infty}$ $\beta_i x_{n_i}$
                 = $\beta_i x_i$ so
-                \{$\beta_n x_n$\} $\rightarrow$ $\beta x$. \\
+                \{$\beta_n x_n$\} $\rightarrow$ $\beta x$.
+            \end{minipage} }
     \end{enumerate}
 
 \newpage
@@ -296,20 +332,25 @@
 
 { \color{magenta} \underline{Proof} }
 
-    Suppose \{$p_n$\} converges to p.
+    \fbox{
+    \begin{minipage}{15cm}
+        Suppose \{$p_n$\} converges to p.
 
-    Then for $\epsilon$ $>$ 0, there is a N such that for n $\geq$ N,
-    $|p_n - p|$ $<$ $\epsilon$.
+        Then for $\epsilon$ $>$ 0, there is a N such that for n $\geq$ N,
+        $|p_n - p|$ $<$ $\epsilon$.
 
-    Let \{$p_{n_k}$\} be a subsequence of \{$p_n$\}.
+        Let \{$p_{n_k}$\} be a subsequence of \{$p_n$\}.
 
-    Then for $n_k$ $\geq$ N, $|p_{n_k} - p|$ $<$ $\epsilon$.
-    Thus, every \{$p_{n_k}$\} $\rightarrow$ p.
+        Then for $n_k$ $\geq$ N, $|p_{n_k} - p|$ $<$ $\epsilon$.
+        Thus, every \{$p_{n_k}$\} $\rightarrow$ p.
 
-    Suppose every subsequence converges to p.
+        Suppose every subsequence converges to p.
 
-    Since \{$p_n$\} is a subsequence of itself, then
-    \{$p_n$\} converges to p. \\
+        Since \{$p_n$\} is a subsequence of itself, then
+        \{$p_n$\} converges to p. 
+    \end{minipage} }
+
+    \vspace{0.5cm}
 
 { \color{red} Theorem 10.2.3:
 \{$p_n$\} in compact space have \{$p_{n_k}$\} $\rightarrow$ p }
@@ -320,6 +361,8 @@
 
             { \color{magenta} \underline{Proof} }
 
+            \fbox{
+            \begin{minipage}{13cm}
                 Let E be the range of \{$p_n$\}.
 
                 If E is finite, there is a p $\in$ E and sequence
@@ -328,20 +371,28 @@
                 Thus, \{$p_{n_k}$\} $\rightarrow$ p.
 
                 If E is infinite, then by {\color{red} theorem 8.3.10},
-                then there exists a p $\in$ X.
+                then there exists a p $\in$ E'.
 
-                Then choose $n_k$ such that d($p_{n_k}$,p) $<$ $\frac{1}{k}$.
+                Then there are $n_k$ such that d($p_{n_k}$,p) $<$ $\frac{1}{k}$.
                 Thus, \{$p_{n_k}$\} $\rightarrow$ p.
+            \end{minipage} }
 
         \item Every bounded sequence in $\mathbb{R}^k$ contains
         a convergent subsequence.
 
             { \color{magenta} \underline{Proof} }
 
-                Since every bounded set lies in a compact space in
-                $\mathbb{R}^k$, then by part a, every bounded sequence
-                contains a convergent subsequence. \\
+            \fbox{
+            \begin{minipage}{13cm}
+                Let E be a bounded sequence in $\mathbb{R}^k$.
+                Since E $\cup$ E' is bounded and closed, then by
+                {\color{red} theorem 8.3.13}, E $\cup$ E' is compact.
+                
+                Thus by part a, E contains a convergent subsequence.
+            \end{minipage} }
     \end{enumerate}
+
+    \vspace{0.5cm}
 
 { \color{red} Theorem 10.2.4: The set of subsequential limits is closed }
 
@@ -352,24 +403,28 @@
 
 { \color{magenta} \underline{Proof} }
 
-    Let E be the range of the set of all subsequential limits of \{$p_n$\}.
-    
-    If E is empty, then E is closed.
-    If E is finite, then E' is empty so E is closed.
+    \fbox{
+    \begin{minipage}{15cm}
+        Let E be the range of the set of all subsequential limits of \{$p_n$\}.
+        
+        If E is empty, then E is closed.
+        If E is finite, then E' is empty so E is closed.
 
-    Suppose E is infinite. Then, let q $\in$ E'.
+        Suppose E is infinite. Then, let q $\in$ E'.
 
-    Choose $n_1$ so $p_{n_1}$ $\not =$ q. Let $\frac{\epsilon}{2}$ = d($p_{n_1}$,q).
+        Choose $n_1$ so $p_{n_1}$ $\not =$ q. Let $\frac{\epsilon}{2}$ = d($p_{n_1}$,q).
 
-    Since q $\in$ E', there is a x $\in$ E where d(x,q) $<$ $\frac{\epsilon}{2}$.
+        Since q $\in$ E', there is a x $\in$ E where d(x,q) $<$ $\frac{\epsilon}{2}$.
 
-    Since x $\in$ E, then there is a \{$p_{n_k}$\} $\rightarrow$ x
-    so d($p_{n_k}$,x) $<$ $\frac{\epsilon}{2}$.
+        Since x $\in$ E, there is a \{$p_{n_k}$\} $\rightarrow$ x
+        so there is a N such that for n $\geq$ N,
+        d($p_{n_k}$,x) $<$ $\frac{\epsilon}{2}$.
 
-    Thus, d($p_{n_k}$,q) $\leq$ d($p_{n_k}$,x) + d(x,q) $<$ $\epsilon$
-    so q is a subsequential limit of \{$p_n$\}.
-    
-    Thus, q $\in$ E so E is closed. \\
+        Thus, d($p_{n_k}$,q) $\leq$ d($p_{n_k}$,x) + d(x,q) $<$ $\epsilon$
+        so q is a subsequential limit of \{$p_n$\}.
+        
+        Thus, q $\in$ E so E is closed.    
+    \end{minipage} }
 
 \newpage
 
@@ -404,6 +459,8 @@
         
             { \color{magenta} \underline{Proof} }
 
+            \fbox{
+            \begin{minipage}{13cm}
                 Since E $\subset$ $\overline{E}$, then
                 diam(E) $\leq$ diam($\overline{E}$).
 
@@ -419,6 +476,7 @@
 
                 Thus, diam($\overline{E}$) $\leq$ 2$\epsilon$ + diam(E)
                 so diam($\overline{E}$) = diam(E).
+            \end{minipage} }
 
         \item If $K_n$ is a sequence of compact sets of X such that
         $K_{n+1}$ $\subset$ $K_n$ and $\lim_{n \rightarrow \infty}$ diam($K_N$) = 0,
@@ -426,6 +484,8 @@
         
             { \color{magenta} \underline{Proof} }
 
+            \fbox{
+            \begin{minipage}{13cm}
                 Let K = $\cap$ $K_n$.
                 Since $K_n$ is a sequence of compact sets, then
                 by { \color{orange} Corollary 8.3.8 }, K is nonempty.
@@ -433,8 +493,11 @@
                 If K contains more than one point, then diam(K) $>$ 0.
 
                 But since K $\subset$ $K_n$, then diam(K) $\leq$ diam($K_n$)
-                which contradicts that diam($K_n$) $\rightarrow$ 0. \\
+                which contradicts that diam($K_n$) $\rightarrow$ 0.
+            \end{minipage} }
     \end{enumerate}
+
+    \vspace{0.5cm}
 
 { \color{red} Theorem 10.3.3: Cauchy sequences are convergent }
 
@@ -444,39 +507,47 @@
 
             { \color{magenta} \underline{Proof} }
 
-				If $p_n$ $\rightarrow$ p and $\epsilon$ $>$ 0, there is a N such that
-				for all n $\geq$ N, d(p,$p_n$) $<$ $\epsilon$. Thus, for m,n $\geq$ N:
+            \fbox{
+            \begin{minipage}{13cm}
+                If $p_n$ $\rightarrow$ p and $\epsilon$ $>$ 0, there is a N such that
+				for all n $\geq$ N, d(p,$p_n$) $<$ $\frac{\epsilon}{2}$.
+                Thus, for m,n $\geq$ N:
 
 				\hspace{1cm}
-				d($p_n$,$p_m$) $\leq$ d($p_n$,p) + d(p,$p_m$) $<$ 2$\epsilon$.
+				d($p_n$,$p_m$) $\leq$ d($p_n$,p) + d(p,$p_m$) $<$ $\epsilon$.
 
 				Thus, \{$p_n$\} is a Cauchy sequence.
+            \end{minipage} }
 
         \item If \{$p_n$\} is a Cauchy sequence in compact metric space X,
         then \{$p_n$\} converges to some p $\in$ X.
 
             { \color{magenta} \underline{Proof} }
 
-				Let \{$p_n$\} be a Cauchy sequence in compact space X.
+            \fbox{
+            \begin{minipage}{13cm}
+                Let \{$p_n$\} be a Cauchy sequence in compact space X.
 
 				Let	$p_N, p_{N+1}, ... $ $\in$ $E_N$.
 
 				Since \{$p_n$\} is a Cauchy sequence, then
 				$\lim_{N \rightarrow \infty}$ diam($\overline{E_N}$) = 0.
-				Since $\overline{E_N}$ is closed in a compact set, then
+				Since $\overline{E_N}$ is closed in compact X, then
 				by {\color{red} theorem 8.3.5}, $\overline{E_N}$ is compact.
 
 				Since $E_{N+1}$ $\subset$ $E_N$, then $\overline{E_{N+1}}$
 				$\subset$ $\overline{E_N}$ and thus, by {\color{red} theorem 10.3.2b},
 				then there is a unique p $\in$ $\overline{E_N}$ for every N.
 
-				Then for $\epsilon$ $>$ 0, there is a $N_0$ such that for N $\geq$ $N_0$
-				diam($\overline{E_{N_0}}$) $<$ $\epsilon$.
-
 				Since p $\in$ $\overline{E_N}$, then d(p,q) $<$ $\epsilon$ for every
 				q $\in$ $\overline{E_N}$ so every q $\in$ $E_N$.
 
-				Thus, \{$p_n$\} $\rightarrow$ p.
+                Then for $\epsilon$ $>$ 0, there is a $N_0$ such that
+                for N $\geq$ $N_0$, diam($\overline{E_N}$) $<$ $\epsilon$.
+
+				Thus, d($p_n$,p) $<$ $\epsilon$ for n $\geq$ $N_0$ so
+                \{$p_n$\} $\rightarrow$ p.
+            \end{minipage} }
 
 \newpage
 
@@ -484,7 +555,9 @@
         
             { \color{magenta} \underline{Proof} }
 
-				Let \{$x_n$\} be a Cauchy sequence in $\mathbb{R}^k$.
+            \fbox{
+            \begin{minipage}{13cm}
+                Let \{$x_n$\} be a Cauchy sequence in $\mathbb{R}^k$.
 				Let $x_N, x_{N+1}, ... $ $\in$ $E_N$.
 
 				Then for some N, diam($E_N$) $<$ 1.
@@ -494,12 +567,11 @@
 				Thus, the $\overline{\{x_n\}}$ is closed and bounded so
 				by {\color{red} theorem 8.3.13}, $\overline{\{x_n\}}$
 				is compact.
-				Thus, by part b, \{$x_n$\} converges to some p $\in$ $\mathbb{R}^k$. \\
+				Thus, by part b, \{$x_n$\} converges to some p $\in$ $\mathbb{R}^k$.
+            \end{minipage} }
     \end{enumerate}
 
-
-
-
+    \vspace{0.5cm}
 
 { \color{blue} Definition 10.3.4: Complete } 
 
@@ -529,52 +601,55 @@
 		and only if it is bounded.
 	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof} }
 
-	Suppose $s_n$ $\leq$ $s_{n+1}$.
-	Let E be the range of \{$s_n$\}.
-	
-	Suppose \{$s_n$\} is bounded.
-	
-	Let s = sup(E) so $s_n$ $\leq$ s.
-	For every $\epsilon$ $>$ 0, there is a N such that
-	s - $\epsilon$ $<$ $s_N$ $\leq$ s
-	else s-$\epsilon$ would be an upper bound of E
-	which contradicts s = sup(E).
+    \fbox{
+    \begin{minipage}{15cm}
+        Suppose $s_n$ $\leq$ $s_{n+1}$.
+        Let E be the range of \{$s_n$\}.
+        
+        Suppose \{$s_n$\} is bounded.
+        
+        Let s = sup(E) so $s_n$ $\leq$ s.
+        For every $\epsilon$ $>$ 0, there is a N such that
+        s - $\epsilon$ $<$ $s_N$ $\leq$ s
+        else s-$\epsilon$ would be an upper bound of E
+        which contradicts s = sup(E).
 
-	Since \{$s_n$\} increases, then for n $\geq$ N,
-	s - $\epsilon$ $<$ $s_N$ $\leq$ $s_n$ $\leq$ s
-	so \{$s_n$\} $\rightarrow$ s.
+        Since \{$s_n$\} increases, then for n $\geq$ N,
+        s - $\epsilon$ $<$ $s_N$ $\leq$ $s_n$ $\leq$ s
+        so \{$s_n$\} $\rightarrow$ s.
 
-	Suppose \{$s_n$\} converges to s.
+        Suppose \{$s_n$\} converges to s.
 
-	Then for $\epsilon$ $>$ 0, there is a N such that for n $\geq$ N,
-	s - $\epsilon$ $<$ $s_N$ $\leq$ $s_n$ $\leq$ s.
+        Then for $\epsilon$ $>$ 0, there is a N such that for n $\geq$ N,
+        s - $\epsilon$ $<$ $s_N$ $\leq$ $s_n$ $\leq$ s.
 
-	Thus, \{$s_n$\} is bounded from above.
+        Thus, \{$s_n$\} is bounded from above.
 
-	\vspace{0.2cm}
+        \vspace{0.2cm}
 
-	Suppose $s_n$ $\geq$ $s_{n+1}$. Let E be the range of \{$s_n$\}.
+        Suppose $s_n$ $\geq$ $s_{n+1}$. Let E be the range of \{$s_n$\}.
 
-	Suppose \{$s_n$\} is bounded.
+        Suppose \{$s_n$\} is bounded.
 
-	Let s = inf(E) so $s_n$ $\geq$ s.
-	For every $\epsilon$ $>$ 0, there is a N such that
-	s $\leq$ $s_N$ $<$ s + $\epsilon$
-	else s+$\epsilon$ would be a lower bound of E
-	which contradicts s = inf(E).
+        Let s = inf(E) so $s_n$ $\geq$ s.
+        For every $\epsilon$ $>$ 0, there is a N such that
+        s $\leq$ $s_N$ $<$ s + $\epsilon$
+        else s+$\epsilon$ would be a lower bound of E
+        which contradicts s = inf(E).
 
-	Since \{$s_n$\} decreases, then for n $\geq$ N,
-	s $\leq$ $s_n$ $\leq$ $s_N$ $<$ s + $\epsilon$
-	so \{$s_n$\} $\rightarrow$ s.
-	
-	Suppose \{$s_n$\} converges to s.
+        Since \{$s_n$\} decreases, then for n $\geq$ N,
+        s $\leq$ $s_n$ $\leq$ $s_N$ $<$ s + $\epsilon$
+        so \{$s_n$\} $\rightarrow$ s.
+        
+        Suppose \{$s_n$\} converges to s.
 
-	Then for $\epsilon$ $>$ 0, there is a N such that for n $\geq$ N,
-	s $\leq$ $s_n$ $<$ $s_N$ $<$ s + $\epsilon$.
+        Then for $\epsilon$ $>$ 0, there is a N such that for n $\geq$ N,
+        s $\leq$ $s_n$ $<$ $s_N$ $<$ s + $\epsilon$.
 
-	Thus, \{$s_n$\} is bounded from below. \\
+        Thus, \{$s_n$\} is bounded from below.
+    \end{minipage} }
 	
 
 

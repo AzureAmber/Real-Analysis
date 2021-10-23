@@ -124,15 +124,18 @@
 		Every neighborhood is an open set.
 	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof} } 
-	
-	Let q $\in$ N$_r(p)$. Then there is a h $>$ 0 $\in$ $\mathbb{R}$
-	such that d(q,p) = r - h.
+{ \color{magenta} \underline{Proof} }
 
-	Then for any s $\in$ N$_h(q)$,
-	d(s,p) $\leq$  d(s,q) + d(q,p) = h + (r - h) = r.
+	\fbox{
+	\begin{minipage}{15cm}
+		Let q $\in$ N$_r(p)$. Then there is a h $>$ 0 $\in$ $\mathbb{R}$
+		such that d(q,p) = r - h.
 
-	Thus, for any q $\in$ N$_r(p)$, there exists a N$_h(q)$ $\subset$ N$_r(p)$.
+		Then for any s $\in$ N$_h(q)$,
+		d(s,p) $\leq$  d(s,q) + d(q,p) = h + (r - h) = r.
+
+		Thus, for any q $\in$ N$_r(p)$, there exists a N$_h(q)$ $\subset$ N$_r(p)$.
+	\end{minipage} }
 
 \begin{figure}[h]
 	\centering
@@ -148,13 +151,19 @@ $\in$ E in N$_r(p)$ }
 		If p is a limit point of set E, then every N$_r(p)$ contains infinitely many q $\in$ E.
 	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof} } 
-	
-	Suppose there is N$_{r_1}(p)$ which contains finitely many q = \{ q$_1$, ... , q$_n$ \}.
+{ \color{magenta} \underline{Proof} }
 
-	Let r = min$_{m \in [1,n]}$ d(p,q$_m$). Then N$_r(p)$ contains no q $\in$ E such that q $\not =$ p.
+	\fbox{
+	\begin{minipage}{15cm}
+		Suppose there is N$_{r_1}(p)$ which contains finitely many
+		q = \{ q$_1$, ... , q$_n$ \}.
 
-	So, p is not a limit point of E which is a contradiction since p is a limit point of E.
+		Let r = min$_{m \in [1,n]}$ d(p,q$_m$). Then N$_r(p)$ contains
+		no q $\in$ E such that q $\not =$ p.
+
+		So, p is not a limit point of E which is a contradiction since
+		p is a limit point of E.
+	\end{minipage} }
 
 \begin{figure}[h]
 	\centering
@@ -168,13 +177,18 @@ $\in$ E in N$_r(p)$ }
 		Since $\emptyset$ $\in$ A, all finite set must be closed.
 	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof} }
 
-	Let p be a limit point of finite set E. By {\color{red} theorem 7.1.4}, 
-	then any N$_r(p)$ contain infinite q $\in$ E so E is an infinite set
-	which is a contradiction since E is finite.
+	\fbox{
+	\begin{minipage}{15cm}
+		Let p be a limit point of finite set E. By {\color{red} theorem 7.1.4}, 
+		then any N$_r(p)$ contain infinite q $\in$ E so E is an infinite set
+		which is a contradiction since E is finite.
 
-	So p cannot be limit point of E and thus, E has no limit points. \\
+		So p cannot be limit point of E and thus, E has no limit points.
+	\end{minipage} }
+
+	 \vspace{0.5cm}
 
 { \color{red} Theorem 7.1.6: De Morgan's Laws } 
 	
@@ -183,21 +197,25 @@ $\in$ E in N$_r(p)$ }
 		($\cup_{}^{}$ $E_x$)$^\text{c}$ = $\cap_{}^{}$ ($E_x$$^\text{c}$).
 	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof} } 
-	
-	If p $\in$ ($\cup_{}^{}$ $E_x$)$^\text{c}$, then p $\not \in$ ($\cup_{}^{}$ $E_x$).
+{ \color{magenta} \underline{Proof} }
 
-	Thus, p $\not \in$ $E_x$ for any x so p $\in$ E$_x^\text{c}$ for all x.
-	Thus, p $\in$ $\cap_{}^{}$ ($E_x^c$) so
-	($\cup_{}^{}$ $E_x$)$^c$ $\subset$ $\cap_{}^{}$ ($E_x^c$).
+	\fbox{
+	\begin{minipage}{15cm}
+		If p $\in$ ($\cup_{}^{}$ $E_x$)$^\text{c}$, then
+		p $\not \in$ ($\cup_{}^{}$ $E_x$).
 
-	If p $\in$ $\cap_{}^{}$ ($E_x^c$), then p $\in$ $E_x^c$ for all x.
-	
-	Thus, p $\not \in$ $E_x$ for any x so p $\not \in$ $\cup_{}^{}$ $E_x$.
-	Thus, p $\in$ ($\cup_{}^{}$ $E_x$)$^c$ so
-	$\cap_{}^{}$ ($E_x^c$) $\subset$ ($\cup_{}^{}$ $E_x$)$^c$.
+		Thus, p $\not \in$ $E_x$ for any x so p $\in$ E$_x^\text{c}$ for all x.
+		Thus, p $\in$ $\cap_{}^{}$ ($E_x^c$) so
+		($\cup_{}^{}$ $E_x$)$^c$ $\subset$ $\cap_{}^{}$ ($E_x^c$).
 
-	Thus, ($\cup_{}^{}$ $E_x$)$^c$ = $\cap_{}^{}$ ($E_x^c$). \\
+		If p $\in$ $\cap_{}^{}$ ($E_x^c$), then p $\in$ $E_x^c$ for all x.
+		
+		Thus, p $\not \in$ $E_x$ for any x so p $\not \in$ $\cup_{}^{}$ $E_x$.
+		Thus, p $\in$ ($\cup_{}^{}$ $E_x$)$^c$ so
+		$\cap_{}^{}$ ($E_x^c$) $\subset$ ($\cup_{}^{}$ $E_x$)$^c$.
+
+		Thus, ($\cup_{}^{}$ $E_x$)$^c$ = $\cap_{}^{}$ ($E_x^c$).
+	\end{minipage} }
 
 \begin{figure}[h]
 	\centering
@@ -212,29 +230,32 @@ $\in$ E in N$_r(p)$ }
 		A set E is open if and only if E$^\text{c}$ is closed.
 	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof} }
 
-	Suppose E is open. Let x be a limit point of E$^c$.
+	\fbox{
+	\begin{minipage}{15cm}
+		Suppose E is open. Let x be a limit point of E$^c$.
 
-	Then for every r $>$ 0, N$_r(x)$ must contain a p $\in$ E$^c$ such that p $\neq$ x.
+		Then for every r $>$ 0, N$_r(x)$ must contain a p $\in$ E$^c$
+		such that p $\neq$ x.
 
-	Then, N$_r(x)$ $\not \subset$ E so x is not an interior point of E and
-	thus, x $\not \in$ E so x $\in$ E$^c$.
+		Then, N$_r(x)$ $\not \subset$ E so x is not an interior point of E and
+		thus, x $\not \in$ E so x $\in$ E$^c$.
 
-	Since any limit point x of E$^c$ is a x $\in$ E$^c$, then E$^c$ is closed.
+		Since any limit point x of E$^c$ is a x $\in$ E$^c$, then E$^c$ is closed.
 
-	\vspace{0.2cm}
+		\vspace{0.2cm}
 
-	Suppose E$^c$ is closed. Let x $\in$ E.
+		Suppose E$^c$ is closed. Let x $\in$ E.
 
-	Since x $\not \in$ E, x is not a limit point of E.
+		Since x $\not \in$ E, x is not a limit point of E.
+		Then there exists a r $>$ 0 such that any p $\in$ N$_r(x)$ is not in E.
+		Thus, every p $\in$ N$_r(x)$ is p $\in$ E so N$_r(x)$ $\subset$ E and thus,
+		x is an interior point of E.
+		Since any x $\in$ E is an interior point of E, then E is open.
+	\end{minipage} }
 
-	Then there exists a r $>$ 0 such that any p $\in$ N$_r(x)$ is not in E.
-
-	Thus, every p $\in$ N$_r(x)$ is p $\in$ E so N$_r(x)$ $\subset$ E and thus,
-	x is an interior point of E.
-
-	Since any x $\in$ E is an interior point of E, then E is open. \\
+	 \vspace{0.5cm}
 
 { \color{orange} Corollary 7.1.8: Closed set $\rightarrow$ Open complement } 
 
@@ -242,9 +263,14 @@ $\in$ E in N$_r(p)$ }
 		A set F is closed if only only if F$^\text{c}$ is open.
 	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof} }
 
-	From {\color{red} theorem 7.1.7}, let E = F$^\text{c}$. \\
+	\fbox{
+	\begin{minipage}{15cm}
+		From {\color{red} theorem 7.1.7}, let E = F$^\text{c}$.
+	\end{minipage} }
+
+	 \vspace{0.5cm}
 
 { \color{red} Theorem 7.1.9: Union open $\rightarrow$ open and
 Intersection closed $\rightarrow$ closed } 
@@ -255,6 +281,8 @@ Intersection closed $\rightarrow$ closed }
 
 			{ \color{magenta} \underline{Proof} }
 
+			\fbox{
+			\begin{minipage}{13cm}
 				If p $\in$ $\cup$ $G_x$, then p $\in$ $G_x$ for at least one x.
 				Let $\overline{x}$ be such an x.
 
@@ -265,12 +293,15 @@ Intersection closed $\rightarrow$ closed }
 
 				Since any p $\in$ $\cup$ $G_x$ is an interior point, then
 				$\cup$ $G_x$ is open.
+			\end{minipage} }
 
 		\item If $\{F_x\}$ is a finite or infinite collection of closed sets,
 		then $\cap$ $F_x$ is closed.
 
 			{ \color{magenta} \underline{Proof} }
 
+			\fbox{
+			\begin{minipage}{13cm}
 				By {\color{red} theorem 7.1.7}, any $F_x^c$ is open.
 				Since $\{F_x^c\}$ is a finite or infinite collection of
 				open set, then by part (a), $\cup$ $F_x^c$ is open.
@@ -281,12 +312,15 @@ Intersection closed $\rightarrow$ closed }
 				By {\color{red} theorem 7.1.6},
 				($\cup$ $F_x^c$)$^c$ = $\cap$ $(F_x^c)^c$
 				= $\cap$ $F_x$.
-				
+			\end{minipage} }
+
 		\item If $G_1, ... , G_n$ is a finite collection of open sets,
 		then $\cap_{x=1}^n$ $G_x$ is open.
 
 			{ \color{magenta} \underline{Proof} }
 
+			\fbox{
+			\begin{minipage}{13cm}
 				If p $\in$ $\cap_{x=1}^n$ $G_x$, then p $\in$ $G_x$ for
 				all $G_x$ for x = \{1, 2, ... , n\}.
 
@@ -305,12 +339,15 @@ Intersection closed $\rightarrow$ closed }
 				{\color{purple} Infinite + Closed}: $G_i$ = $(-1/i,1/i)$
 				\hfill
 				{\color{purple} Infinite + Open}: $G_i$ = $(-i,i)$
+			\end{minipage} }
 
 		\item If $F_1, ... , F_n$ is a finite collection of closed sets,
 		then $\cup_{x=1}^n$ $F_x$ is closed.
 
 			{ \color{magenta} \underline{Proof} }
 
+			\fbox{
+			\begin{minipage}{13cm}
 				By {\color{red} theorem 7.1.7}, any $F_x^c$ is open.
 				Since $F_1^c, ... , F_n^c$ is a finite collection of
 				open set, then by part (c), $\cap_{x=1}^n$ $F_x^c$ is open.
@@ -327,6 +364,7 @@ Intersection closed $\rightarrow$ closed }
 				{\color{purple} Infinite + Closed}: $F_i$ = $[-1/i,1/i]$
 				\hfill
 				{\color{purple} Infinite + Open}: $F_i$ = $[1/i,\infty)$
+			\end{minipage} }
 	\end{enumerate}
 
 \newpage
@@ -340,17 +378,22 @@ Intersection closed $\rightarrow$ closed }
 
 { \color{magenta} \underline{Proof} }
 
-	If x $\in$ (E')', then for every $N_{r_1}(x)$, there is a
-	y $\not =$ x where y $\in$ E'.
-	
-	Since y $\in$ E', then for every $N_{r_2}(y)$, there is a
-	z $\not =$ y where z $\in$ E.
+	\fbox{
+	\begin{minipage}{15cm}
+		If x $\in$ (E')', then for every $N_{r_1}(x)$, there is a
+		y $\not =$ x where y $\in$ E'.
+		
+		Since y $\in$ E', then for every $N_{r_2}(y)$, there is a
+		z $\not =$ y where z $\in$ E.
 
-	Let r = $r_1$ + $r_2$.
+		Let r = $r_1$ + $r_2$.
 
-	Then for every N$_r(x)$, there exists a z $\not =$ x where
-	z $\in$ E.
-	Thus, x $\in$ E' so (E')' $\subset$ E'. \\
+		Then for every N$_r(x)$, there exists a z $\not =$ x where
+		z $\in$ E.
+		Thus, x $\in$ E' so (E')' $\subset$ E'.	
+	\end{minipage} }
+
+	 \vspace{0.5cm}
 
 { \color{red} Theorem 7.1.11: E$^o$ is open }
 
@@ -360,15 +403,17 @@ Intersection closed $\rightarrow$ closed }
 
 { \color{magenta} \underline{Proof} }
 
-	If p $\in$ E$^o$, there is a r $>$ 0 such that
-	N$_r(p)$ $\subset$ E.
+	\fbox{
+	\begin{minipage}{15cm}
+		If p $\in$ E$^o$, there is a r $>$ 0 such that
+		N$_r(p)$ $\subset$ E.
 
-	Then for 0 $<$ s $<$ r, N$_s(p)$ $\subset$ N$_r(p)$
-	so any q $\in$ N$_s(p)$ is q $\in$ E$^o$.
+		Then for 0 $<$ s $<$ r, N$_s(p)$ $\subset$ N$_r(p)$
+		so any q $\in$ N$_s(p)$ is q $\in$ E$^o$.
 
-	Since any p $\in$ E$^o$ have a N$_s(p)$ $\subset$ E$^o$,
-	then E$^o$ is open.
-
+		Since any p $\in$ E$^o$ have a N$_s(p)$ $\subset$ E$^o$,
+		then E$^o$ is open.
+	\end{minipage} }
 
 \subsection{ Intervals and Balls } 
 
@@ -409,17 +454,22 @@ Intersection closed $\rightarrow$ closed }
 
 { \color{magenta} \underline{Proof} }
 
-	Let x,y $\in$ open ball N$_r(p)$. Let z = tx + (1-t)y for t $\in$ [0,1].
-	
-	Since $|x - p| < r$ and $|y - p| < r$:
+	\fbox{
+	\begin{minipage}{15cm}
+		Let x,y $\in$ open ball N$_r(p)$. Let z = tx + (1-t)y for t $\in$ [0,1].
+		
+		Since $|x - p| < r$ and $|y - p| < r$:
 
-	\hspace{1cm} $|z - p|$ = $|tx + (1-t)y - p|$ = $|tx + (1-t)y - tp + (t-1)p|$
+		\hspace{1cm} $|z - p|$ = $|tx + (1-t)y - p|$ = $|tx + (1-t)y - tp + (t-1)p|$
 
-	\hspace{2.3cm} = $|t(x-p) + (1-t)(y-p)|$ $\leq$ $t|(x-p)|$ + $(1-t)|(y-p)|$
+		\hspace{2.3cm} = $|t(x-p) + (1-t)(y-p)|$ $\leq$ $t|(x-p)|$ + $(1-t)|(y-p)|$
 
-	\hspace{2.3cm} $<$ tr + (1-t)r = r
+		\hspace{2.3cm} $<$ tr + (1-t)r = r
 
-	Thus, z $\in$ N$_r(p)$ so balls are convex. Same proof applies to closed balls. \\
+		Thus, z $\in$ N$_r(p)$ so balls are convex. Same proof applies to closed balls.	
+	\end{minipage} }
+
+	\vspace{0.5cm}
 
 { \color{blue} Definition 7.2.5: Dense } 
 
@@ -433,13 +483,17 @@ Intersection closed $\rightarrow$ closed }
 	\qquad Let X = $\mathbb{R}$.
 	Then, E = $\mathbb{Q}$ is dense in $\mathbb{R}$.
 
-{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof} }
 
-	Fix x $\in$ $\mathbb{R}$ and r $>$ 0.
-	There is a q $\in$ $\mathbb{Q}$ such that x-r $<$ q $<$ x.
-	So for any r $>$ 0 and q $\in$ $\mathbb{Q}$, q $\neq$ x and
-	q $\in$ N$_r(x)$.
-	Thus, every x $\in$ $\mathbb{R}$ is a limit point of $\mathbb{Q}$. 
+	\fbox{
+	\begin{minipage}{15cm}
+		Fix x $\in$ $\mathbb{R}$ and r $>$ 0.
+		There is a q $\in$ $\mathbb{Q}$ such that x-r $<$ q $<$ x.
+		So for any r $>$ 0 and q $\in$ $\mathbb{Q}$, q $\neq$ x and
+		q $\in$ N$_r(x)$.
+		Thus, every x $\in$ $\mathbb{R}$ is a limit point of $\mathbb{Q}$.	
+	\end{minipage} }
+	 
 
 
 

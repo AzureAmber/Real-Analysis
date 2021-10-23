@@ -56,6 +56,8 @@
 		
 			{ \color{magenta} \underline{Proof} }
 
+			\fbox{
+			\begin{minipage}{13cm}
 				If $s^*$ = $+\infty$, then there is a
 				\{$s_{n_k}$\} $\rightarrow$ $+\infty$ so E is not bounded above.
 				
@@ -65,63 +67,191 @@
 				Then by {\color{red} theorem 10.2.4}, $s^*$ $\in$ E.
 
 				If $s^*$ = $-\infty$, then there are no subsequential limits
-				in E since there are no upper bounds.
+				in E.
 				Thus, for every M, there is a N such that for n $\geq$ N,
-				$s_n$ $\rightarrow$ $-\infty$ so $-\infty$ $\in$ E. 
+				$s_n$ $\leq$ M so $-\infty$ $\in$ E.
+			\end{minipage} }
 
 		\item If x $>$ $s^*$, there is a N such that for n $\geq$ N, $s_n$ $<$ x
 		
 			{ \color{magenta} \underline{Proof} }
 
+			\fbox{
+			\begin{minipage}{13cm}
 				Suppose there is a x $>$ $s^*$ such that $s_n$ $\geq$ x
 				for infinitely many n.
 
-				Then, there is a y $\in$ E such that y $\geq$ x $>$ $s^*$
+				Then, there is a y $\in$ E where y $\geq$ x $>$ $s^*$
 				which contradicts $s^*$ = sup(E).
+			\end{minipage} }
 
 		\item $s^*$ is the only number that satisfies (a) and (b)
 		
 			{ \color{magenta} \underline{Proof} }
 
-				Suppose p,q statisfy part a and b where p $<$ q.
-
-				Choose x such that p $<$ x $<$ q.
-
+			\fbox{
+			\begin{minipage}{13cm}
+				Suppose p,q satisfy part a and b where p $<$ q.
+				
+				Choose x where p $<$ x $<$ q.
 				Since p satisfies b, then $s_n$ $<$ x for n $\geq$ N.
-
+				
 				Thus, q cannot satisfy a.
-
+			\end{minipage} }
 	\end{enumerate}
 
+	\vspace{0.2cm}
+
+	\hspace{1cm}
+	The same properties are analogous for $s_*$. \\
+
+\newpage
+
+{ \color{red} Theorem 11.1.4: Inf \& Sup of $s_n$ $\leq$ $t_n$ }
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		If $s_t$ $\leq$ $t_n$ for n $\geq$ fixed N, then
+
+		\hspace{1cm}
+		$\lim_{n \rightarrow \infty}$ inf($s_n$)
+		$\leq$
+		$\lim_{n \rightarrow \infty}$ inf($t_n$)
+
+		\hspace{1cm}
+		$\lim_{n \rightarrow \infty}$ sup($s_n$)
+		$\leq$
+		$\lim_{n \rightarrow \infty}$ sup($t_n$)
+	\end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+	\fbox{
+	\begin{minipage}{15cm}
+		Let $E_1$ be the set of extended reals x such that
+		\{$s_{n_k}$\} $\rightarrow$ x for some \{$s_{n_K}$\}.
+
+		Let $E_2$ be the set of extended reals y such that
+		\{$t_{n_k}$\} $\rightarrow$ y for some \{$s_{n_K}$\}.
+
+		Let $s^*$ = sup($E_1$), $s_*$ = inf($E_1$),
+		$t^*$ = sup($E_2$), and $t_*$ = inf($E_2$).
+
+		Since there is a N such that $s_n$ $\leq$ $t_n$ for n $\geq$ N,
+		then:
+		
+		\hspace{1cm}
+		x $\leftarrow$ \{$s_{N}, s_{N+1}, ... $\}
+		$\leq$ \{$t_{N}, t_{N+1}, ... $\} $\rightarrow$ y
+
+		Thus, for n $\geq$ N, inf($s_n$) $\leq$ inf($t_n$)
+		and sup($s_n$) $\leq$ sup($t_n$).		
+	\end{minipage} }	
 
 
 
 
 
+\subsection{ Special Sequences }
 
+{ \color{red} Theorem 11.2.1: Special Sequences }
 
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+		\item If p $>$ 0, then $\lim_{n \rightarrow \infty}$ $\frac{1}{n^p}$ = 0
+		
+			{ \color{magenta} \underline{Proof} }
 
+				\fbox{
+				\begin{minipage}{13cm}
+					For $\epsilon$ $>$ 0, let N $>$ $\sqrt[p]{\frac{1}{\epsilon}}$.
 
+					Then for n $\geq$ N,
+					$\lim_{n \rightarrow \infty}$ $\frac{1}{n^p}$
+					$\leq$ $\frac{1}{N^p}$
+					$<$ $\frac{1}{\sqrt[p]{\frac{1}{\epsilon}}^p}$ = $\epsilon$
+				\end{minipage} }
 
+		\item If p $>$ 0, then $\lim_{n \rightarrow \infty}$ $\sqrt[n]{p}$ = 1
+		
+			{ \color{magenta} \underline{Proof} }
 
+				\fbox{
+				\begin{minipage}{13cm}
+					If p $>$ 1, then let $x_n$ = $\sqrt[n]{p}$ - 1 $>$ 0.
 
+					\hspace{1cm}
+					p = $(x_n + 1)^n$
+					= $x_n^n + nx_n^{n-1} + ... + nx_n + 1$
+					$\geq$ $nx_n + 1$
 
+					Thus, 0 $<$ $x_n$ $\leq$ $\frac{p-1}{n}$ so
+					\{$x_n$\} $\rightarrow$ 0 and thus,
+					\{$\sqrt[n]{p}$\} $\rightarrow$ 1.
 
+					If p = 1, then $\lim_{n \rightarrow \infty}$ $\sqrt[n]{p}$
+					= $\lim_{n \rightarrow \infty}$ 1 = 1.
 
+					If 0 $<$ p $<$ 1, then $\frac{1}{p}$ $>$ 1.
+					From the proof above for p $>$ 1,
+					\{$\sqrt[n]{\frac{1}{p}}$\} $\rightarrow$ 1.
 
+					Thus, \{$\frac{1}{\sqrt[n]{p}}$\} $\rightarrow$ 1
+					so \{$\sqrt[n]{p}$\} $\rightarrow$ 1.
+				\end{minipage} }
 
+		\item $\lim_{n \rightarrow \infty}$ $\sqrt[n]{n}$ = 1
 
+			{ \color{magenta} \underline{Proof} }
 
+				\fbox{
+				\begin{minipage}{13cm}
+					Let $x_n$ = $\sqrt[n]{n}$ - 1 $\geq$ 0.
 
+					\hspace{1cm}
+					n = ($x_n$ + 1)$^n$ $\geq$ $\frac{n(n-1)}{2} x_n^2$
 
+					Thus, 0 $\leq$ $x_n$ $\leq$ $\sqrt{\frac{2}{n-1}}$
+					so \{$x_n$\} $\rightarrow$ 0 and thus,
+					\{$\sqrt[n]{n}$\} $\rightarrow$ 1.
+				\end{minipage} }
 
+		\item If p $>$ 0 and $\alpha$ $\in$ $\mathbb{R}$, then
+		$\lim_{n \rightarrow \infty}$ $\frac{n^{\alpha}}{(1+p)^n}$ = 0
 
+			{ \color{magenta} \underline{Proof} }
 
+				\fbox{
+				\begin{minipage}{13cm}
+					Let k $\in$ $\mathbb{Z}$ such that k $>$ $\alpha$ and k $>$ 0.
+					For n $>$ 2k:
 
+					\hspace{1cm}
+					(1+p)$^n$ $>$ $\binom{n}{k} p^k$
+					= $\frac{n(n-1)...(n-k+1)}{k!} p^k$
+					$>$ $\frac{n^k p^k}{2^k k!}$
 
+					Thus, 0 $<$ $\frac{n^{\alpha}}{(1+p)^n}$
+					$<$ $\frac{2^k k!}{p^k} n^{\alpha - k}$.
+					
+					Since $\alpha$ - k $<$ 0, then \{$n^{\alpha - k}$\} $\rightarrow$ 0
+					so \{$\frac{n^{\alpha}}{(1+p)^n}$\} $\rightarrow$ 0.
+				\end{minipage} }
 
+		\item If $|x|$ $<$ 1, then $\lim_{n \rightarrow \infty}$ $x^n$ = 0
 
+			{ \color{magenta} \underline{Proof} }
 
+				\fbox{
+				\begin{minipage}{13cm}
+					From part d, let $\alpha$ = 0.
+
+					Thus, $\lim_{n \rightarrow \infty}$ $\frac{1}{(1+p)^n}$ = 0
+					and since p $>$ 0, then $\frac{1}{(1+p)^n}$ = $(\frac{1}{1+p})^n$ $<$ 1.
+
+					Also, $-\lim_{n \rightarrow \infty}$ $\frac{1}{(1+p)^n}$
+					= $\lim_{n \rightarrow \infty}$ $\frac{-1}{(1+p)^n}$ = 0
+					so $\frac{-1}{(1+p)^n}$ = $(\frac{-1}{1+p})^n$ $>$ -1.
+				\end{minipage} }
+	\end{enumerate}
 
 
 

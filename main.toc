@@ -35,3 +35,7 @@
 \contentsline {subsection}{\numberline {10.3}Cauchy Sequences}{35}{subsection.10.3}%
 \contentsline {section}{\numberline {11}Day 11: Limits \& Special Sequences}{37}{section.11}%
 \contentsline {subsection}{\numberline {11.1} Upper and Lower Limits }{37}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2} Special Sequences }{38}{subsection.11.2}%
+\contentsline {section}{\numberline {12}Series \& Comparison Test}{39}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Series}{39}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2} Series of Nonnegative Terms }{40}{subsection.12.2}%

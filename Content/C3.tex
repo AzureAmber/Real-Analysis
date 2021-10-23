@@ -6,101 +6,126 @@
 	\begin{enumerate}[label=(\alph*), leftmargin=1.5cm, itemsep=0.1cm]
 		\item If 0 $<$ t $\leq$ 1, then t$^\text{n}$ $ \leq $ t.
 
-			{ \color{magenta} \underline{Proof} } 
-		
+			{ \color{magenta} \underline{Proof} }
+
+			\fbox{
+			\begin{minipage}{13.5cm}
 				Since t $>$ 0 and t $\leq$ 1, then t$^\text{2}$ $\leq$ t.
 
 				Since t$^\text2{}$ $\leq$ t, then t$^\text{3}$ $\leq$ t$^\text{2}$
 				so t$^\text{3}$ $\leq$ t$^\text{2}$ $\leq$ t.
 
 				Applying the process n times, then t$^\text{n}$ $\leq$ t.
+			\end{minipage} }
 
 		\item If t $\geq$ 1, t$^\text{n}$ $ \geq $ t.
 
-			{ \color{magenta} \underline{Proof} } 
-		
+			{ \color{magenta} \underline{Proof} }
+
+			\fbox{
+			\begin{minipage}{13.5cm}
 				Since 0 $<$ 1 $\leq$ t, then t $\leq$ t$^\text{2}$.
 
 				Since t $\leq$ t$^\text{2}$, then t$^\text{2}$ $\leq$ t$^\text{3}$
 				so t $\leq$ t$^\text{2}$ $\leq$ t$^\text{3}$.
 
 				Applying the process n times, t $\leq$ t$^\text{n}$.
+			\end{minipage} }
 
 		\item If 0 $<$ s $<$ t, then s$^\text{n}$ $<$ t$^\text{n}$.
 
-			{ \color{magenta} \underline{Proof} } 
-		
+			{ \color{magenta} \underline{Proof} }
+
+			\fbox{
+			\begin{minipage}{13.5cm}
 				$\underbrace{\text{s} \cdot \text{s} \cdot ... \cdot \text{s}}_\text{n}$
 				$<$ t $\cdot$ s $\cdot$ ... $\cdot$ s
 				$<$ t $\cdot$ t $\cdot$ ... $\cdot$ s $<$ ... $<$
-				$\underbrace{\text{t} \cdot ... \cdot \text{t}}_\text{n}$ \\
+				$\underbrace{\text{t} \cdot ... \cdot \text{t}}_\text{n}$
+			\end{minipage} }
 	\end{enumerate}
 
+	\vspace{0.5cm}
 
 { \color{red} Theorem 3.1.1: y$^\text{n}$ = x has a unique y }
 
-	\qquad Fix n $\in$ $\mathbb{Z}_+$. For every x $>$ 0, there exists a unique y
-	$\in$ $ \mathbb{R} $ such that y$^\text{n}$ = x.
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		Fix n $\in$ $\mathbb{Z}_+$. For every x $>$ 0, there exists a unique y
+		$\in$ $ \mathbb{R} $ such that y$^\text{n}$ = x.
 
-	\qquad Also, such a y is written as y = $\sqrt[n]{\text{x}}$ = x$^{\frac{1}{\text{n}}}$.
-
-{ \color{magenta} \underline{Proof} } 
-
-	{ \color{lblue} Uniqueness: }
-
-	y is unique since if y$_{1}$ $<$ y$_{2}$, then
-	x = y$_{1}$$^\text{n}$ $<$ y$_{2}$$^\text{n}$ $\neq$ x.
-
-	{ \color{lblue} Existence: }
-
-	Let set A = \{ t $>$ 0 : t$^\text{n}$ $<$ x \}.
-
-	A $\not =$ $\emptyset$ since let t$_{1}$ = $\frac{x}{x+1}$ $<$ 1 so t$_1$ $<$ x
-	and thus, 0 $<$ t$_{1}$$^\text{n}$ $<$ t$_{1}$ $<$ x so t$_{1}$ $\in$ A.
-
-	A is bounded above since if t $ \geq $ x+1, then
-	t $>$ 1 so t$^\text{n}$ $ \geq $ t $ \geq $ x+1 $>$ x so t $\not \in$ A.
-
-	So x+1 is an upper bound of A.
-
-	Thus by the least upper bound property, y = sup(A) exists.
-
-	For y$^\text{n}$ = x, show y$^\text{n}$ $<$ x and y$^\text{n}$ $>$ x cannot hold true.
-
-	***(Not an upper bound of A if $<$ and not a least upper bound of A if $>$)***
-
-	For 0 $<$ $\alpha$ $<$ $\beta$:
-
-	\qquad $\beta ^\text{n}$ - $\alpha^\text{n}$
-	= ($\beta$ - $\alpha$) ($\underbrace{\beta^{n-1} + \beta^{n-2}\alpha^1 + ... + \alpha^{n-1}}
-	_{\beta^{n-1} \hspace{0.7cm} <\beta^{n-1} \hspace{1.3cm} <\beta^{n-1}}$)
-	$<$ ($\beta - \alpha$)n$\beta$$^\text{n-1}$ 
-
-	Suppose y$^\text{n}$ $<$ x. Pick 0 $<$ h $<$ 1 and h $<$ $\frac{x-y^n}{n(y+1)^{n-1}}$.
-
-	\qquad From inequality, let $\beta$ = y+h and $\alpha$ = y
-
-	\qquad \qquad (y+h)$^\text{n}$ - y$^\text{n}$ $<$ hn(y+h)$^\text{n-1}$
-	$<$ hn(y+1)$^\text{n-1}$ $<$ x - y$^\text{n}$
-
-	\begin{adjustbox}{minipage=14.2cm, right, vspace=0.1cm 0cm}
-		Thus, (y+h)$^\text{n}$ $<$ x so y+h $\in$ A and thus, not an upper bound of A
-		which is a contradiction since y = sup(A).
+		Also, such a y is written as y = $\sqrt[n]{\text{x}}$
+		= x$^{\frac{1}{\text{n}}}$.
 	\end{adjustbox}
 
-	Suppose y$^\text{n}$ $>$ x.
-	Pick 0 $<$ k = $\frac{y^n - x}{ny^{n-1}}$ $<$ $\frac{y^n}{ny^{n-1}}$
-	= $\frac{1}{n}y$ $<$ y.
+{ \color{magenta} \underline{Proof} }
 
-	\qquad Consider t $ \geq $  y-k, then:
-	y$^\text{n}$ - t$^\text{n}$ $ \leq $  y$^\text{n}$ - (y-k)$^\text{n}$ $<$
-	kny$^\text{n-1}$ = y$^\text{n}$ - x
+	\fbox{
+	\begin{minipage}{15cm}
+		{ \color{lblue} Uniqueness: }
 
-	\qquad Thus, t$^\text{n}$ $>$ x so t $\not \in$ A.
+		y is unique since if y$_{1}$ $<$ y$_{2}$, then
+		x = y$_{1}$$^\text{n}$ $<$ y$_{2}$$^\text{n}$ $\neq$ x.
 
-	\qquad Thus, y-k is an upper bound of A which is a contradiction since y = sup(A).
+		{ \color{lblue} Existence: }
 
-	Since y$^\text{n}$ $<$ x and y$^\text{n}$ $>$ x, then y$^\text{n}$ = x. 
+		Let set A = \{ t $>$ 0 : t$^\text{n}$ $<$ x \}.
+
+		A $\not =$ $\emptyset$ since let t$_{1}$ = $\frac{x}{x+1}$ $<$ 1 so t$_1$ $<$ x
+		and thus, 0 $<$ t$_{1}$$^\text{n}$ $<$ t$_{1}$ $<$ x so t$_{1}$ $\in$ A.
+
+		A is bounded above since if t $ \geq $ x+1, then
+		t $>$ 1 so t$^\text{n}$ $ \geq $ t $ \geq $ x+1 $>$ x so t $\not \in$ A.
+
+		So x+1 is an upper bound of A.
+
+		Thus by the least upper bound property, y = sup(A) exists.
+
+		For y$^\text{n}$ = x, show y$^\text{n}$ $<$ x and
+		y$^\text{n}$ $>$ x cannot hold true.
+
+		***(Not an upper bound of A if $<$ and not a least upper bound of A if $>$)***
+
+		For 0 $<$ $\alpha$ $<$ $\beta$:
+
+		\hspace{1cm}
+		$\beta ^\text{n}$ - $\alpha^\text{n}$
+		= ($\beta$ - $\alpha$) ($\underbrace{\beta^{n-1}
+		+ \beta^{n-2}\alpha^1 + ... + \alpha^{n-1}}
+		_{\beta^{n-1} \hspace{0.7cm} <\beta^{n-1} \hspace{1.3cm} <\beta^{n-1}}$)
+		$<$ ($\beta - \alpha$)n$\beta$$^\text{n-1}$ 
+
+		Suppose y$^\text{n}$ $<$ x. Pick 0 $<$ h $<$ 1 and
+		h $<$ $\frac{x-y^n}{n(y+1)^{n-1}}$.
+
+		\hspace{1cm}
+		From inequality, let $\beta$ = y+h and $\alpha$ = y
+
+		\hspace{1cm}
+		(y+h)$^\text{n}$ - y$^\text{n}$ $<$ hn(y+h)$^\text{n-1}$
+		$<$ hn(y+1)$^\text{n-1}$ $<$ x - y$^\text{n}$
+
+		\begin{adjustbox}{minipage=14.2cm, right, vspace=0.1cm 0cm}
+			Thus, (y+h)$^\text{n}$ $<$ x so y+h $\in$ A and thus, not an upper bound of A
+			which is a contradiction since y = sup(A).
+		\end{adjustbox}
+
+		Suppose y$^\text{n}$ $>$ x.
+		Pick 0 $<$ k = $\frac{y^n - x}{ny^{n-1}}$ $<$ $\frac{y^n}{ny^{n-1}}$
+		= $\frac{1}{n}y$ $<$ y.
+
+		\hspace{1cm}
+		Consider t $ \geq $  y-k, then:
+		y$^\text{n}$ - t$^\text{n}$ $ \leq $  y$^\text{n}$ - (y-k)$^\text{n}$ $<$
+		kny$^\text{n-1}$ = y$^\text{n}$ - x
+
+		\hspace{1cm}
+		Thus, t$^\text{n}$ $>$ x so t $\not \in$ A.
+
+		\hspace{1cm}
+		Thus, y-k is an upper bound of A which is a contradiction since y = sup(A).
+
+		Since y$^\text{n}$ $<$ x and y$^\text{n}$ $>$ x, then y$^\text{n}$ = x.
+	\end{minipage} } 
 
 \newpage
 
@@ -111,22 +136,28 @@
 		(ab)$^{\frac{1}{n}}$ = a$^{\frac{1}{n}}$b$^{\frac{1}{n}}$.  
 	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof} }
 
-	Let A = a$^{\frac{1}{n}}$ and B = b$^{\frac{1}{n}}$.
+	\fbox{
+	\begin{minipage}{15cm}
+		Let A = a$^{\frac{1}{n}}$ and B = b$^{\frac{1}{n}}$.
 
-	Then by {\color{red} theorem 3.1.1}, since A is a solution to $y_1^n$ = a, then A$^n$ = a.
+		Then by {\color{red} theorem 3.1.1}, since A is a solution to
+		$y_1^n$ = a, then A$^n$ = a.
 
-	Similarly, B is a solution of $y_2^n$ = b so B$^n$ = b. Thus:
+		Similarly, B is a solution of $y_2^n$ = b so B$^n$ = b. Thus:
 
-	\hspace{1cm} ab = $A^n$$B^n$ = $A_1A_2...A_nB_1B_2...B_n$
+		\hspace{1cm} ab = $A^n$$B^n$ = $A_1A_2...A_nB_1B_2...B_n$
 
-	\hspace{1.6cm} = $A_1A_2...B_1A_nB_2...B_n$ = ... = $A_1B_1A_2...A_{n-1}A_nB_3...B_n$
+		\hspace{1.6cm} = $A_1A_2...B_1A_nB_2...B_n$
+		= ... = $A_1B_1A_2...A_{n-1}A_nB_3...B_n$
 
-	\hspace{1.6cm} = ... = $A_1B_1A_2B_2...A_nB_n$ = $(AB)^n$
+		\hspace{1.6cm} = ... = $A_1B_1A_2B_2...A_nB_n$ = $(AB)^n$
 
-	Then again by {\color{red} theorem 3.1.1}, there is a unique
-	(ab)$^{\frac{1}{n}}$ = AB = a$^{\frac{1}{n}}$b$^{\frac{1}{n}}$.
+		Then again by {\color{red} theorem 3.1.1}, there is a unique
+		(ab)$^{\frac{1}{n}}$ = AB = a$^{\frac{1}{n}}$b$^{\frac{1}{n}}$.
+	\end{minipage}
+	}
 
 
 
@@ -148,9 +179,11 @@
 
 \subsection{Extended Reals}
 
-	The extended real number system consist of $\mathbb{R}$ and $\pm$$\infty$ such that:
+	The extended real number system consist of $\mathbb{R}$
+	and $\pm$$\infty$ such that:
 
-	\qquad -$\infty$ $<$ x $<$ $\infty$	\qquad for every x $\in$ $\mathbb{R}$
+	\hspace{1cm}
+	-$\infty$ $<$ x $<$ $\infty$ \hspace{1cm} for every x $\in$ $\mathbb{R}$
 
 	with the properties:
 	\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
@@ -171,8 +204,10 @@
 
 { \color{blue} Definition 3.4.1: Complex } 
 	
-	\qquad A complex number is an ordered pair (a,b) where a,b $\in$ $ \mathbb{R} $.
+	\hspace{1cm}
+	A complex number is an ordered pair (a,b) where a,b $\in$ $ \mathbb{R} $.
 	For x,y $\in$ $\mathbb{C}$
+
 	\begin{itemize}[leftmargin=2cm, itemsep=0.1cm]
 		\item x + y = (a,b) + (c,d) = (a + c , b + d)
 		\item xy = (a,b) (c,d) = (ac - bd , ad + bc)
@@ -183,57 +218,83 @@
 
 { \color{blue} Definition 3.4.2: Imaginary i } 
 	
-	\qquad Let i = (0,1). Then, i$^2$ = -1.
+	\hspace{1cm}
+	Let i = (0,1). Then, i$^2$ = -1.
 
-{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof} }
+
+	\fbox{
+	\begin{minipage}{15cm}
+		i$^\text{2}$ = (0,1)(0,1) = (0-1,0+0) = (-1,0) = -1
+	\end{minipage} }
 	
-	i$^\text{2}$ = (0,1)(0,1) = (0-1,0+0) = (-1,0) = -1 \\
+	 \vspace{0.5cm}
 
 { \color{blue} Definition 3.4.3: Form a + bi } 
 	
 	\qquad (a,b) = a + bi
 
-{ \color{magenta} \underline{Proof} } 
-	
-	(a,b) = (a,0) +(0,b) = (a,0) + (b,0)(0,1) = a + bi \\
+{ \color{magenta} \underline{Proof} }
+
+	\fbox{
+	\begin{minipage}{15cm}
+		(a,b) = (a,0) +(0,b) = (a,0) + (b,0)(0,1) = a + bi
+	\end{minipage} }
 
 \newpage
 
 { \color{blue} Definition 3.4.4: Conjugate }
 	
-	\qquad Let conjugate: $\bar{z}$ = a - bi where Re(z) = a , Im(z) = b \\
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		Let conjugate: $\bar{z}$ = a - bi where Re(z) = a , Im(z) = b.
 
-	\qquad Let z = (a,b) and w = (c,d):
+		Let z = (a,b) and w = (c,d):
+	\end{adjustbox}
+	
 	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
 		\item $\overline{z+w}$ = $\overline{z}$ + $\overline{w}$
 
-			{ \color{magenta} \underline{Proof} } 
-			
+			{ \color{magenta} \underline{Proof} }
+
+			\fbox{
+			\begin{minipage}{13cm}
 				$\overline{z+w}$ = $\overline{(a+c,b+d)}$ = (a+c,-b-d)
 				= (a,-b) + (c,-d) = $\overline{z}$ + $\overline{w}$
+			\end{minipage} }
 
 		\item $\overline{zw}$ = $\overline{z}$ $\overline{w}$
 
-			{ \color{magenta} \underline{Proof} } 
+			{ \color{magenta} \underline{Proof} }
 			
+			\fbox{
+			\begin{minipage}{13cm}
 				$\overline{zw}$ = $\overline{(ac-bd,ad+bc)}$ = (ac-bd,-ad-bc)
 				= (a,-b) (c,-d) = $\overline{z}$ $\overline{w}$
+			\end{minipage} }
 
 		\item z + $\overline{z}$ = 2 Re(z) \qquad \qquad z - $\overline{z}$ = 2i Im(z)
 
-			{ \color{magenta} \underline{Proof} } 
-			
+			{ \color{magenta} \underline{Proof} }
+
+			\fbox{
+			\begin{minipage}{13cm}
 				z + $\overline{z}$ = (a,b) + (a,-b) = (2a,0) = 2 Re(z)
 
 				z - $\overline{z}$ = (a,b) - (a,-b) = (0,2b) = (0,2) b = 2i Im(z)
+			\end{minipage} }
 
 		\item z$\overline{z}$ $\geq$ 0
 
-			{ \color{magenta} \underline{Proof} } 
-			
+			{ \color{magenta} \underline{Proof} }
+
+			\fbox{
+			\begin{minipage}{13cm}
 				z$\overline{z}$ = (a,b)(a,-b) = (a$^2$ + b$^2$ , -ab+ab)
-				= a$^2$ + b$^2$ $\geq$ 0 \\
+				= a$^2$ + b$^2$ $\geq$ 0
+			\end{minipage} }
 	\end{enumerate}
+
+	\vspace{0.5cm}
 
 { \color{blue} Definition 3.4.5: Absolute Value } 
 	
@@ -243,46 +304,65 @@
 	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
 		\item If z $\neq$ 0, then $|$ z $|$ $>$ 0.
 
-			{ \color{magenta} \underline{Proof} } 
-			
+			{ \color{magenta} \underline{Proof} }
+
+			\fbox{
+			\begin{minipage}{13cm}
 				$\sqrt{z\overline{z}}$ = $\sqrt{a^2 + b^2}$ $\geq$ 0
 				where $|$ z $|$ = 0 only if a,b = 0 so only if z = (0,0).
+			\end{minipage} }
 
 		\item $|$ $\overline{z}$ $|$ = $|$ z  $|$
 
-			{ \color{magenta} \underline{Proof} } 
-			
-				$|$ $\overline{z}$ $|$ = $\sqrt{a^2 + (-b)^2}$ = $\sqrt{a^2 + b^2}$ = $|$ z $|$
+			{ \color{magenta} \underline{Proof} }
+
+			\fbox{
+			\begin{minipage}{13cm}
+				$|$ $\overline{z}$ $|$ = $\sqrt{a^2 + (-b)^2}$
+				= $\sqrt{a^2 + b^2}$ = $|$ z $|$
+			\end{minipage} }
 
 		\item $|$ zw $|$ = $|$ z $|$ $|$ w $|$
 
-			{ \color{magenta} \underline{Proof} } 
+			{ \color{magenta} \underline{Proof} }
 			
+			\fbox{
+			\begin{minipage}{13cm}
 				$|$ zw $|$ = $|$ (ac-bd,ad+bc) $|$ = $\sqrt{(ac-bd)^2 + (ad+bc)^2}$
 			
 				= $\sqrt{a^2c^2 + b^2d^2 + a^2d^2 + b^2c^2}$
 				= $\sqrt{(a^2+b^2)(c^2+d^2)}$
 
 				= $\sqrt{a^2+b^2}$ $\sqrt{c^2+d^2}$ = $|$ z $|$ $|$ w $|$
+			\end{minipage} }
 
 		\item $|$ Re(z) $|$ $\leq$ $|$ z $|$
 
-			{ \color{magenta} \underline{Proof} } 
-			
-				$|$ Re(z) $|$ = $|$ a $|$ = $\sqrt{a^2}$ $\leq$ $\sqrt{a^2+b^2}$ = $|$ z $|$
+			{ \color{magenta} \underline{Proof} }
+
+			\fbox{
+			\begin{minipage}{13cm}
+				$|$ Re(z) $|$ = $|$ a $|$ = $\sqrt{a^2}$
+				$\leq$ $\sqrt{a^2+b^2}$ = $|$ z $|$
+			\end{minipage} }
 
 		\item $|$ z+w $|$ $ \leq $  $|$ z $|$ + $|$ w $|$
 
-			{ \color{magenta} \underline{Proof} } 
-			
-				$| z+w |^2$ = (z+w)$\overline{(z+w)}$ = (z+w)($\overline{z} + \overline{w}$)
-				= z$\overline{z}$ + z$\overline{w}$ + w$\overline{z}$ + w$\overline{w}$
+			{ \color{magenta} \underline{Proof} }
+
+			\fbox{
+			\begin{minipage}{13cm}
+				$| z+w |^2$ = (z+w)$\overline{(z+w)}$
+				= (z+w)($\overline{z} + \overline{w}$)
+				= z$\overline{z}$ + z$\overline{w}$
+				+ w$\overline{z}$ + w$\overline{w}$
 			
 				= $|z|^2$ + $|w|^2$ + 2 Re(z$\overline{w}$)
 				$\leq$ $|z|^2$ + $|w|^2$ + 2 $|z\overline{w}|$
 
 				= $|z|^2$ + $|w|^2$ + 2$|z||w|$
 				= ($|z|$ + $|w|$)$^2$
+			\end{minipage} }
 	\end{enumerate}
 
 

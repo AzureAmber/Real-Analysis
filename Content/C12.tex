@@ -1,0 +1,220 @@
+\newpage
+
+\section[Series \& Comparison Test]{Series and Comparison Test}
+
+\subsection{Series}
+
+{ \color{blue} Definition 12.1.1: Series }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        For sequence \{$a_n$\}, define $\sum_{n=p}^q$ $a_n$
+        = $a_p + a_{p+1} + ... + a_q$.
+
+        Then associate \{$a_n$\} with a sequence \{$s_n$\}
+        such that $s_n$ = $\sum_{k=1}^n$ $a_k$.
+
+        Then \{$s_n$\} is a series with partial sums $s_n$.
+
+        If \{$s_n$\} $\rightarrow$ s, then
+        $\sum_{n=1}^{\infty}$ $a_n$ = s
+        is the sum of the convergent series.
+        
+        Note $a_1$ = $s_1$ and $a_n$ = $s_n$ - $s_{n-1}$. \\
+    \end{adjustbox}
+
+{ \color{red} Theorem 12.1.2: Cauchy Criterion Redefined }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        $\sum$ $a_n$ converges if and only if:
+        
+        \hspace{0.5cm}
+        For every $\epsilon$ $>$ 0, there is a N $\in$ $\mathbb{Z}$
+        such that for m $\geq$ n $\geq$ N,
+        $| \sum_{k=n}^m a_k |$ $\leq$ $\epsilon$
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        Suppose $\sum_{k=1}^n a_k$ converges.
+
+        Then by {\color{red} theorem 10.3.3a}, $\sum_{k=1}^n a_k$ is 
+        a Cauchy sequence.
+
+        Then for $\epsilon$ $>$ 0, there is a N such that for
+        m $\geq$ n $\geq$ N:
+
+        \hspace{1cm}
+        d($\sum_{k=1}^n a_k$ , $\sum_{k=1}^m a_k$)
+        = $| \sum_{k=1}^m a_k - \sum_{k=1}^n a_k |$
+        = $| \sum_{k=n}^m a_k |$ $\leq$ $\epsilon$
+
+        Suppose for every $\epsilon$ $>$ 0, there is a N
+        such that for m $\geq$ n $\geq$ N,
+        $| \sum_{k=n}^m a_k |$ $\leq$ $\epsilon$.
+
+        \hspace{1cm}
+        $| \sum_{k=n}^m a_k |$
+        = $| \sum_{k=1}^m a_k - \sum_{k=1}^n a_k |$
+        = d($\sum_{k=1}^n a_k$ , $\sum_{k=1}^m a_k$) $\leq$ $\epsilon$
+
+        Thus, $\sum_{k=1}^n a_k$ is a Cauchy sequence
+        and thus, convergent.
+    \end{minipage} }
+
+    \vspace{0.5cm}
+
+{ \color{red} Theorem 12.1.3:
+Convergent $\sum a_n$ $\Rightarrow$ \{$a_n$\} $\rightarrow$ 0 }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        If $\sum$ $a_n$ converges, then
+        $\lim_{n \rightarrow \infty}$ $a_n$ = 0.
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        Since $\sum$ $a_n$ converges, then by {\color{red} theorem 12.1.2},
+        for $\epsilon$ $>$ 0, there is a N such that for m $\geq$ n $\geq$ N,
+        $| \sum_{k=n}^m a_k |$ $\leq$ $\epsilon$.
+        Then if m = n $\geq$ N, $| \sum_{k=n}^m a_k |$ = $| a_n |$
+        $\leq$ $\epsilon$ so \{$a_n$\} $\rightarrow$ 0.
+    \end{minipage} }
+
+    \vspace{0.5cm}
+
+{ \color{purple} Example 12.1.4:
+\{$a_n$\} $\rightarrow$ 0 $\not \Rightarrow$ Convergent $\sum a_n$ }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        $\sum_{n=1}^{\infty}$ $\frac{1}{n}$ diverges
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        $\sum_{n=1}^{\infty}$ $\frac{1}{n}$
+        = 1 + $\frac{1}{2}$ + ($\frac{1}{3}$ + $\frac{1}{4}$)
+        + ($\frac{1}{5}$ + ... + $\frac{1}{8}$) + ($\frac{1}{9}$ + ...)
+        $\geq$ 1 + $\frac{1}{2}$ + $\frac{1}{2}$ + $\frac{1}{2}$ + ...
+
+        Thus, $s_{2^k}$ = $\sum_{n=1}^{2^k}$ $a_n$
+        $\geq$ 1 + $k \cdot \frac{1}{2}$
+        which is unbounded and thus, not convergent.
+    \end{minipage} }
+    
+    \vspace{0.5cm}
+
+{ \color{red} Theorem 12.1.5:
+Convergent series $\rightleftharpoons$ Bounded sequence }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        A series of nonnegative terms converge if and only if
+        its partial sums form a bounded sequence.
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        Suppose $\sum$ $a_n$ converges where $a_n$ $\geq$ 0.
+
+        Since $a_n$ $\geq$ 0, then \{$s_n$\} is monotonic so
+        by {\color{red} theorem 10.3.6}, \{$s_n$\} is bounded above.
+
+        Suppose \{$s_n$\} is bounded where $a_n$ $\geq$ 0.
+
+        Since \{$s_n$\} is monotonic and bounded, then
+        by {\color{red} theorem 10.3.6}, \{$s_n$\} converges.     
+    \end{minipage} }
+
+\newpage    
+
+{ \color{red} Theorem 12.1.6: Comparison Test }
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item If $|a_n|$ $\leq$ $c_n$ for n $\geq$ $N_0$ and
+        $\sum$ $c_n$ converges, then $\sum$ $a_n$ converges.
+
+            { \color{magenta} \underline{Proof} }
+
+                \fbox{
+                \begin{minipage}{13cm}
+                    For $\epsilon$ $>$ 0, there exists a N $\geq$ $N_0$
+                    such that for m $\geq$ n $\geq$ N,
+                    $\sum_{k=n}^m$ $c_k$ $\leq$ $\epsilon$.
+
+                    \hspace{1cm}
+                    $| \sum_{k=n}^m a_k |$
+                    $\leq$ $\sum_{k=n}^m |a_k|$
+                    $\leq$ $\sum_{k=n}^m c_k$ $\leq$ $\epsilon$
+
+                    Thus, $\sum$ $a_n$ converges.
+                \end{minipage} }
+        
+        \item If $a_n$ $\geq$ $d_n$ $\geq$ 0 for n $\geq$ $N_0$
+        and $\sum$ $d_n$ diverges, then $\sum$ $a_n$ diverges.
+
+            { \color{magenta} \underline{Proof} }
+
+                \fbox{
+                \begin{minipage}{13cm}
+                    Suppose $\sum$ $a_n$ converges.
+
+                    Then from part a, $\sum$ $d_n$ converges which contradicts
+                    that $\sum$ $a_n$ diverges.
+                    
+                    Thus, $\sum$ $a_n$ diverges. 
+                \end{minipage} }
+    \end{enumerate}
+
+
+
+
+
+\subsection{ Series of Nonnegative Terms }
+
+{ \color{red} Theorem 12.2.1: Infinite Geometric Series }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        If x $\in$ [0,1), then:
+
+        \hspace{1cm}
+        $\sum_{n=0}^{\infty}$ $x^n$
+        = {\large $\frac{1}{1-x}$ }
+
+        If x $\geq$ 1, the series diverges.
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        If x $\not =$ 1, then using the geometric series:
+
+        \hspace{1cm}
+        $s_n$ = $\sum_{k=0}^n$ $x^k$ = $\frac{1 - x^{n+1}}{1 - x}$
+
+        Let n $\rightarrow$ $\infty$.
+
+        If x $\in$ [0,1), then by {\color{red} theorem 11.2.1e},
+        $s_n$ = $\frac{1}{1-x}$ $(1 - x^{n+1})$
+        = $\frac{1}{1-x}$ (1 - 0) = $\frac{1}{1-x}$.
+
+        Also, by {\color{red} theorem 11.2.1e}, if x $\geq$ 1,
+        then the series diverges.
+    \end{minipage} }
+
+
+
+
+
+
+
+
+
+

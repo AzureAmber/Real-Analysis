@@ -1,10 +1,6 @@
 \newpage
 \section[Day 9: Perfect \& Connected Sets]{Perfect and Connected Sets}
 
-
-
-
-
 \subsection{ Perfect Sets }
 
 { \color{blue} Definition 9.1.1: Perfect Set } 
@@ -21,36 +17,41 @@
 		Then, P is uncountable.
 	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof} }
 
-	Since P has limit points, then by {\color{red} theorem 7.1.4},
-	P is infinite.
+	\fbox{
+	\begin{minipage}{15cm}
+		Since P has limit points, then by {\color{red} theorem 7.1.4},
+		P is infinite.
 
-	Suppose P is countable. Then let $x_1, x_2, ...$ $\in$ P.
+		Suppose P is countable. Then let $x_1, x_2, ...$ $\in$ P.
 
-	Let $V_i$ be a neighborhood of $x_i$ where y $\in$ $V_i$ for any
-	y $\in$ $\mathbb{R}^k$ such that $|y-x_i|$ $<$ r.
+		Let $V_i$ be a neighborhood of $x_i$ where y $\in$ $V_i$ for any
+		y $\in$ $\mathbb{R}^k$ such that $|y-x_i|$ $<$ r.
 
-	Thus, the $\overline{V_i}$ is the set of all y $\in$ $\mathbb{R}^k$
-	such that $|y-x_i|$ $\leq$ r.
+		Thus, the $\overline{V_i}$ is the set of all y $\in$ $\mathbb{R}^k$
+		such that $|y-x_i|$ $\leq$ r.
 
-	Since every $x_i$ are limit points, then any $V_i$ $\cap_{}^{}$ P
-	is not empty where there is a $V_{i+1}$
+		Since every $x_i$ are limit points, then any $V_i$ $\cap_{}^{}$ P
+		is not empty where there is a $V_{i+1}$
 
-	\begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
-		\item $\overline{V_{i+1}}$ $\subset$ $V_i$
-		\item $x_i$ $\not \in$ $\overline{V_{i+1}}$
-		\item $V_{i+1}$ $\cap_{}^{}$ P is nonempty
-	\end{enumerate}
+		\begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
+			\item $\overline{V_{i+1}}$ $\subset$ $V_i$
+			\item $x_i$ $\not \in$ $\overline{V_{i+1}}$
+			\item $V_{i+1}$ $\cap_{}^{}$ P is nonempty
+		\end{enumerate}
 
-	Let $K_i$ = $\overline{V_i}$ $\cap_{}^{}$ P.
-	Since $\overline{V_i}$ is closed and bounded, then by
-	{\color{red} theorem 8.3.11}, $\overline{V_i}$ is compact.
-	Since $x_i$ $\not \in$ $K_{i+1}$, then no $x_i$ $\in$ P is
-	$x_i$ $\in$ $\cap_{}^{}$ $K_i$.
-	Since $K_n$ $\subset$ P, then $\cap_{}^{}$ $K_i$ is nonempty
-	which contradicts {\color{orange} corollary 8.3.8 } since
-	each $K_i$ is empty and $K_{i+1}$ $\subset$ $K_i$. \\
+		Let $K_i$ = $\overline{V_i}$ $\cap_{}^{}$ P.
+		Since $\overline{V_i}$ is closed and bounded, then by
+		{\color{red} theorem 8.3.11}, $\overline{V_i}$ is compact.
+		Since $x_i$ $\not \in$ $K_{i+1}$, then no $x_i$ $\in$ P is
+		$x_i$ $\in$ $\cap_{}^{}$ $K_i$.
+		Since $K_n$ $\subset$ P, then $\cap_{}^{}$ $K_i$ is nonempty
+		which contradicts {\color{orange} corollary 8.3.8 } since
+		each $K_i$ is empty and $K_{i+1}$ $\subset$ $K_i$.
+	\end{minipage} }
+
+	\vspace{0.5CM}
 
 { \color{orange} Corollary 9.1.3: $\mathbb{R}$ is not countable } 
 
@@ -61,9 +62,14 @@
 
 { \color{magenta} \underline{Proof} }
 
-	Since [a,b] is closed and every p $\in$ [a,b] is a limit point,
-	then nonempty set [a,b] is perfect.
-	Thus, by {\color{red} theorem 9.1.2}, [a,b] is uncountable. \\
+	\fbox{
+	\begin{minipage}{15cm}
+		Since [a,b] is closed and every p $\in$ [a,b] is a limit point,
+		then nonempty set [a,b] is perfect.
+		Thus, by {\color{red} theorem 9.1.2}, [a,b] is uncountable.
+	\end{minipage} }
+
+	 \vspace{0.5cm}
 
 { \color{blue} Definition 9.1.4: Cantor Sets } 
 
@@ -131,77 +137,35 @@
 		\hspace{1cm} If x,y $\in$ E and x $<$ z $<$ y, then z $\in$ E.
 	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof} } 
+{ \color{magenta} \underline{Proof} }
 
-	If there exists x,y $\in$ E and z $\in$ (x,y) such that z $\not \in$ E,
-	then E = $A_z$ $\cup_{}^{}$ $B_z$ where
-	
-	$A_z$ = E $\cap_{}^{}$ ($-\infty,z$)
-	and $B_z$ = E $\cap_{}^{}$ ($z,\infty$).
+	\fbox{
+	\begin{minipage}{15cm}
+		If there exists x,y $\in$ E and z $\in$ (x,y) such that z $\not \in$ E,
+		then E = $A_z$ $\cup_{}^{}$ $B_z$ where
+		
+		$A_z$ = E $\cap_{}^{}$ ($-\infty,z$)
+		and $B_z$ = E $\cap_{}^{}$ ($z,\infty$).
 
-	Since x $\in$ $A_z$ and y $\in$ $B_z$, then A and B are nonempty.
-	Since $A_z$ $\subset$ ($-\infty,z$) and
-	
-	$B_z$ = ($z_,\infty$),
-	then $A_z$ and $B_z$ are separated. Thus, E is not connected.
+		Since x $\in$ $A_z$ and y $\in$ $B_z$, then A and B are nonempty.
+		Since $A_z$ $\subset$ ($-\infty,z$) and
+		
+		$B_z$ = ($z_,\infty$),
+		then $A_z$ and $B_z$ are separated. Thus, E is not connected.
 
-	\vspace{0.2cm}
+		\vspace{0.2cm}
 
-	Suppose E is not connected. Then, there are nonempty separated sets
-	A and B such that A $\cup_{}^{}$ B = E. Pick x $\in$ A, y $\in$ B
-	where x $<$ y. Let z = sup(A $\cap_{}^{}$ [x,y]).
+		Suppose E is not connected. Then, there are nonempty separated sets
+		A and B such that A $\cup_{}^{}$ B = E. Pick x $\in$ A, y $\in$ B
+		where x $<$ y. Let z = sup(A $\cap_{}^{}$ [x,y]).
 
-	Since, z $\in$ $\overline{A}$ so z $\not \in$ B, then x $\leq$ z $<$ y.
-	If z $\not \in$ A, then x $<$ z $<$ y so z $\not \in$ E.
+		Since, z $\in$ $\overline{A}$ so z $\not \in$ B, then x $\leq$ z $<$ y.
+		If z $\not \in$ A, then x $<$ z $<$ y so z $\not \in$ E.
 
-	If z $\in$ A, then z $\not \in$ $\overline{B}$ and thus,
-	there exists a $z_1$ such that z $<$ $z_1$ $<$ y and $z_1$ $\not \in$ B.
-	Then, x $<$ $z_1$ $<$ y so $z_1$ $\not \in$ E.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		If z $\in$ A, then z $\not \in$ $\overline{B}$ and thus,
+		there exists a $z_1$ such that z $<$ $z_1$ $<$ y and $z_1$ $\not \in$ B.
+		Then, x $<$ $z_1$ $<$ y so $z_1$ $\not \in$ E.
+	\end{minipage} }
 
 
 
