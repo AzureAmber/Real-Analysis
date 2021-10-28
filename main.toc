@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {4.2}Cauchy-Schwarz}{12}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Day 5: Existence of $\mathbb {R}$}{14}{section.5}%
 \contentsline {section}{\numberline {6}Day 6: Cardinality}{16}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Cardinality}{16}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.1} Cardinality }{16}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2} Set of Sets }{17}{subsection.6.2}%
 \contentsline {section}{\numberline {7}Day 7: Metric Spaces and Closed/Open}{20}{section.7}%
 \contentsline {subsection}{\numberline {7.1} Metric Spaces }{20}{subsection.7.1}%
@@ -30,12 +30,15 @@
 \contentsline {subsection}{\numberline {9.1} Perfect Sets }{30}{subsection.9.1}%
 \contentsline {subsection}{\numberline {9.2} Connected Sets }{31}{subsection.9.2}%
 \contentsline {section}{\numberline {10}Day 10: Convergence \& Cauchy Sequences}{32}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Convergent Sequences}{32}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Subsequences}{34}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Cauchy Sequences}{35}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.1} Convergent Sequences }{32}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2} Subsequences }{34}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3} Cauchy Sequences }{35}{subsection.10.3}%
 \contentsline {section}{\numberline {11}Day 11: Limits \& Special Sequences}{37}{section.11}%
 \contentsline {subsection}{\numberline {11.1} Upper and Lower Limits }{37}{subsection.11.1}%
 \contentsline {subsection}{\numberline {11.2} Special Sequences }{38}{subsection.11.2}%
 \contentsline {section}{\numberline {12}Series \& Comparison Test}{39}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Series}{39}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.1} Series }{39}{subsection.12.1}%
 \contentsline {subsection}{\numberline {12.2} Series of Nonnegative Terms }{40}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3} The Number e}{41}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4} Root and Ratio Tests }{42}{subsection.12.4}%
+\contentsline {section}{\numberline {13}Day 13: Power Series}{43}{section.13}%

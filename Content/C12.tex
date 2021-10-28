@@ -2,7 +2,7 @@
 
 \section[Series \& Comparison Test]{Series and Comparison Test}
 
-\subsection{Series}
+\subsection{ Series }
 
 { \color{blue} Definition 12.1.1: Series }
 
@@ -90,7 +90,7 @@ Convergent $\sum a_n$ $\Rightarrow$ \{$a_n$\} $\rightarrow$ 0 }
 \{$a_n$\} $\rightarrow$ 0 $\not \Rightarrow$ Convergent $\sum a_n$ }
 
     \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        $\sum_{n=1}^{\infty}$ $\frac{1}{n}$ diverges
+        $\sum_{n=1}^{\infty}$ $\frac{1}{n}$ diverges.
     \end{adjustbox}
 
 { \color{magenta} \underline{Proof} }
@@ -209,11 +209,384 @@ Convergent series $\rightleftharpoons$ Bounded sequence }
         then the series diverges.
     \end{minipage} }
 
+    \vspace{0.5cm}
+
+
+{ \color{red} Theorem 12.2.2: Cauchy's Convergence Criterion }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        Suppose 0 $\leq$ $a_{i+1}$ $\leq$ $a_{i}$.
+
+        Then the series $\sum_{n=1}^{\infty}$ $a_n$ converges
+        if and only if the series
+
+        \hspace{1cm}
+        $\sum_{k=0}^{\infty}$ $2^k a_{2^k}$
+        = $a_1$ + $2a_2$ + $4a_4$ + $8a_8$ + ...
+        converges.
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        Let $s_n$ = $a_1 + a_2 + ... + a_n$ and
+        $t_k$ = $a_1 + 2a_2 + ... + 2^ka_{2^k}$.
+
+        For n $<$ $2^k$:
+
+        \hspace{1cm}
+        $s_n$
+        $\leq$ $a_1 + a_2 + a_3 + a_4 + a_5 + a_6 + a_7 + ... + a_{2^k}$
+
+        \hspace{1.55cm}
+        $\leq$ $a_1 + (a_2 + a_3) + (a_4 + a_5 + a_6 + a_7)
+                    + ... + (a_{2^k} + ... + a_{2^{k+1} - 1})$
+
+        \hspace{1.55cm}
+        $\leq$ $a_1 + 2a_2 + 4a_4 + ... + 2^ka_{2^k}$
+        = $t_k$
+
+        Thus, by the {\color{red} comparison test},
+        if $\sum_{k=0}^{\infty}$ $2^k a_{2^k}$ converges, then
+        $\sum_{n=1}^{\infty}$ $a_n$ converges.
+
+        For n $>$ $2^k$:
+
+        \hspace{1cm}
+        $s_n$
+        $\geq$ $a_1 + a_2 + a_3 + a_4 + a_5 + a_6 + a_7 + a_8 + ... + a_{2^k}$
+
+        \hspace{1.55cm}
+        = $a_1 + a_2 + (a_3 + a_4) + (a_5 + a_6 + a_7 + a_8)
+                    + ... + (a_{2^{k-1} + 1} + ... + a_{2^k})$
+
+        \hspace{1.55cm}
+        $\geq$ $\frac{1}{2}a_1 + a_2 + 2a_4 + ... + 2^{k-1}a_{2^k}$
+        = $\frac{1}{2}t_k$
+
+        Thus, by the {\color{red} comparison test},
+        if $\sum_{n=1}^{\infty}$ $a_n$ converges, then
+        $\sum_{k=0}^{\infty}$ $2^k a_{2^k}$ converges.
+    \end{minipage} }
+
+\newpage
+
+{ \color{red} Theorem 12.2.3: P-series }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        $\sum$ $\frac{1}{n^p}$ converges if p $>$ 1 and diverges if p $\leq$ 1.
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        If p $\leq$ 0, then by {\color{red} theorem 12.1.3},
+        $\sum$ $\frac{1}{n^p}$ diverges.
+
+        If p $>$ 0, then by {\color{red} theorem 12.2.2},
+        $\sum$ $\frac{1}{n^p}$ converges only if
+        $\sum_{k=0}^{\infty}$ $2^k \frac{1}{(2^k)^p}$ converges.
+
+        Since $\sum_{k=0}^{\infty}$ $2^k \frac{1}{(2^k)^p}$
+        = $\sum_{k=0}^{\infty}$ $2^{(1-p)k}$, then by {\color{red} theorem 12.2.1},
+        $\sum_{k=0}^{\infty}$ $2^{k(1-p)}$ converges if
+        $2^{1-p}$ $<$ 1 so if 1-p $<$ 0 so p $>$ 1.
+    \end{minipage} }
+
+    \vspace{0.5cm}
+
+{ \color{red} Theorem 12.2.4: Log P-series }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        $\sum_{n = 2}^{\infty}$ $\frac{1}{n(\log(n))^p}$
+        converges if p $>$ 1 and diverges if p $\leq$ 1.
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        Since $\frac{1}{n(\log(n))^p}$ decreases, then by {\color{red} theorem 12.2.2},
+
+        $\sum_{n=0}^{\infty}$ $\frac{1}{n(\log(n))^p}$ converges if
+        $\sum_{k=1}^{\infty}$ $2^k \frac{1}{2^k \log(2^k)}$ converges.
+        
+        \hspace{1cm}
+        $\sum_{k=1}^{\infty}$ $2^k \frac{1}{2^k \log(2^k)}$
+        = $\sum_{k=1}^{\infty}$ $\frac{1}{ k \log(2)}$
+        = $\frac{1}{\log(2)}$ $\sum_{k=1}^{\infty}$ $\frac{1}{k}$
+
+        Then by {\color{red} theorem 12.2.3},
+        $\sum_{k=1}^{\infty}$ $2^k \frac{1}{2^k \log(2^k)}$ converges if
+        p $>$ 1 and diverges if p $\leq$ 1.
+
+        Thus, $\sum_{n=0}^{\infty}$ $\frac{1}{n(\log(n))^p}$ converges if
+        p $>$ 1 and diverges and p $\leq$ 1.
+    \end{minipage} }
+
+    \vspace{0.5cm}
+
+{ \color{orange} Corollary 12.2.5: Log P-series extended }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        $\sum_{n=3}^{\infty}$ $\frac{1}{n\log(n)(\log(\log(n)))^p}$
+        converges if p $>$ 1 and diverges if p $\leq$ 1.
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        From {\color{red} theorem 12.2.4}, replace n = log(n) and
+        multiplying by $\frac{1}{n}$ $\rightarrow$
+        $\frac{1}{n\log(n)(\log(\log(n)))^p}$.
+
+        Since $\frac{1}{n\log(n)(\log(\log(n)))^p}$ decreases,
+        by {\color{red} theorem 12.2.2}
+        $\sum_{k=1}^{\infty}$ $2^k \frac{1}{2^k \log(2^k)(\log(\log(2^k)))^p}$:
+        
+        \hspace{1cm}
+        $\sum_{k=1}^{\infty}$ $\frac{1}{\log(2^k)(\log(\log(2^k)))^p}$
+        = $\frac{1}{\log(2)} \sum_{k=1}^{\infty}$ $\frac{1}{k (\log(k \log(2)))^p}$
+        $<$ $\frac{1}{\log(2)} \sum_{k=2}^{\infty}$ $\frac{1}{k (\log(k))^p}$
+
+        Since $\sum_{k=2}^{\infty}$ $\frac{1}{k (\log(k))^p}$ converges
+        by {\color{red} theorem 12.2.4},
+        $\sum_{n=3}^{\infty}$ $\frac{1}{n\log(n)(\log(\log(n)))^p}$ converges.
+    \end{minipage} }
 
 
 
 
 
+\subsection{ The Number e}
+
+{ \color{blue} Definition 12.3.1: Summation equivalence to e }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        $s_m$
+        = $\sum_{n=0}^{m}$ $\frac{1}{n!}$
+        = 1 + $\sum_{n=1}^{m}$ $\frac{1}{n!}$
+        $<$ 1 + $\sum_{n=1}^{m}$ $\frac{1}{2^{n-1}}$
+        $<$ 3
+
+        e = $\sum_{n=0}^{\infty}$ $\frac{1}{n!}$
+    \end{adjustbox}
+
+    \vspace{0.5cm}
+
+{ \color{red} Theorem 12.3.2: Limit equivalence to e }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        $\lim_{n \rightarrow \infty}$ $(1 + \frac{1}{n})^n$ = e
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        Let $s_n$ = $\sum_{k=0}^n$ $\frac{1}{k!}$ and
+        $t_n$ = $(1 + \frac{1}{n})^n$.
+        Using the binomial theorem:
+
+        \hspace{1cm}
+        $t_n$ = $\sum_{k=0}^n$ $\binom{n}{k} \frac{1}{n^k}$
+        = $\sum_{k=0}^n$ $\frac{n(n-1)...(n-k+1))}{k!} \frac{1}{n^k}$
+        = $\sum_{k=0}^n$ $\frac{1}{k!}
+                        (1) (1 - \frac{1}{n}) (1 - \frac{2}{n}) (1 - \frac{k-1}{n})$
+        
+        Thus, $t_n$ $\leq$ $s_n$ so
+        $\lim_{n \rightarrow \infty}$ sup($t_n$) $\leq$ e.
+
+        If n $\geq$ m, then
+        $t_n$ $\geq$
+        $\sum_{k=0}^m$ $\frac{1}{k!}
+                        (1) (1 - \frac{1}{n}) (1 - \frac{2}{n}) (1 - \frac{k-1}{n})$.
+        
+        As n $\rightarrow$ $\infty$, then
+        $\lim_{n \rightarrow \infty}$ inf($t_n$)
+        $\geq$ $\sum_{k=0}^m$ $\frac{1}{k!}$
+        = $s_m$.
+        As m $\rightarrow$ $\infty$,
+        $\lim_{n \rightarrow \infty}$ inf($t_n$) $\geq$ e.
+
+    \end{minipage} }
+
+    \vspace{0.5cm}
+
+{ \color{blue} Definition 12.3.3: Rapidity of convergence of e }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        0 $<$ e - $s_n$ $<$ $\frac{1}{n!n}$
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        e - $s_n$
+        = $\sum_{k=n+1}^{\infty}$ $\frac{1}{k!}$
+        $<$ $\frac{1}{(n+1)!}$ $(1 + \frac{1}{n+1} + \frac{1}{(n+1)^2} + ...)$
+        = $\frac{1}{(n+1)!}$ $\frac{1}{1 - \frac{1}{n+1}}$
+        = $\frac{1}{n!n}$
+    \end{minipage} }
+
+\newpage
+
+{ \color{red} Theorem 12.3.4: e is irrational }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        e is irrational
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        Suppose r is rational.
+        Then let e = $\frac{p}{q}$ for p,q $\in$ $\mathbb{Z}_+$.
+
+        Thus, by {\color{blue} definition 12.3.3},
+        0 $<$ e - $s_q$ $<$ $\frac{1}{q!q}$ so
+        0 $<$ q!(e - $s_q$) $<$ $\frac{1}{q}$.
+
+        Since e = $\frac{p}{q}$, then q!e is an integer and
+        q!$s_q$ = q!(1 + 1 + $\frac{1}{2!}$ + ... + $\frac{1}{q!}$)
+        is an integer.
+        
+        Thus, q!(e - $s_q$) is an integer which is between 0 and $\frac{1}{q}$
+        and thus, a contradiction.
+    \end{minipage} }
+
+
+
+
+
+\subsection{ Root and Ratio Tests }
+
+{ \color{red} Theorem 12.4.1: Root Test }
+
+    \hspace{1cm}
+    For $\sum$ $a_n$, let
+    $\alpha$ = $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{|a_n|}$).
+
+    \vspace{0.1cm}
+
+    \begin{enumerate}[label=(\alph*), leftmargin=3cm, itemsep=0.1cm]
+        \item If $\alpha$ $<$ 1, $\sum$ $a_n$ converges
+        
+        \item If $\alpha$ $>$ 1, $\sum$ $a_n$ diverges
+        
+        \item If $\alpha$ = 1, unclear
+    \end{enumerate}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        If $\alpha$ $<$ 1, choose $\beta$ such that $\beta$ $\in$ ($\alpha$,1)
+        and N $\in$ $\mathbb{Z}$ such that $\sqrt[n]{|a_n|}$ $<$ $\beta$ for
+        n $\geq$ N.
+
+        Since $\beta$ $\in$ (0,1), then by {\color{red} theorem 12.2.1},
+        $\sum$ $\beta^n$ converges.
+        Then by the {\color{red} comparison test}, $\sum$ $a_n$ converges.
+
+        \vspace{0.2cm}
+
+        If $\alpha$ $>$ 1, then there is a $a_{n_k}$ such that
+        $\sqrt[n_k]{|a_{n_k}|}$ $\rightarrow$ $\alpha$.
+
+        Thus, $|a_n|$ $>$ 1 for infinitely many n so 
+        by {\color{red} theorem 12.1.3}, $\sum$ $a_n$ doesn't converge.
+
+        \vspace{0.2cm}
+
+        For $\alpha$ = 1, both $\sum$ $\frac{1}{n}$ and $\sum$ $\frac{1}{n^2}$
+        have $\alpha$ = 1, but $\sum$ $\frac{1}{n}$ diverges and
+        $\sum$ $\frac{1}{n^2}$ converges by {\color{red} theorem 12.2.3}.
+    \end{minipage} }
+
+    \vspace{0.5cm}
+
+{ \color{red} Theorem 12.4.2: Ratio Test }
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item $\sum$ $a_n$ converges if $\lim_{n \rightarrow \infty}$
+        sup($|\frac{a_{n+1}}{a_n}|$) $<$ 1
+        
+        \item $\sum$ $a_n$ diverges if $|\frac{a_{n+1}}{a_n}|$ $\geq$ 1
+        for all n $\geq$ $n_0$ for $n_0$ $\in$ $\mathbb{Z}$
+    \end{enumerate}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        If $\lim_{n \rightarrow \infty}$ sup($|\frac{a_{n+1}}{a_n}|$) $<$ 1,
+        there is a $\beta$ $<$ 1 and N such that for n $\geq$ N,
+        $|\frac{a_{n+1}}{a_n}|$ $<$ $\beta$.
+
+        Then $|a_{N+1}|$ $<$ $\beta |a_N|$ so
+        $|a_{N+2}|$ $<$ $\beta$$|a_{N+1}|$ $<$ $\beta^2 |a_N|$.
+        
+        Thus, $|a_{N+p}|$ $<$ $\beta^p$$|a_N|$ so
+        $|a_n|$ $<$ $|a_N| \beta^{-N} \beta^n$.
+
+        Thus, by the {\color{red} comparison test}, $\sum$ $a_n$ converges.
+
+        If $|a_{n+1}|$ $\geq$ $|a_n|$ $>$ 0 for n $\geq$ $n_0$, then by
+        {\color{red} theorem 12.1.3}, $\sum$ $a_n$ diverges.
+    \end{minipage} }
+
+    \vspace{0.5cm}
+
+{ \color{red} Theorem 12.4.3:
+Ratio convergence $\rightarrow$ Root convergence }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        $\lim_{n \rightarrow \infty}$ inf($\frac{c_{n+1}}{c_n}$)
+        $\leq$ $\lim_{n \rightarrow \infty}$ inf($\sqrt[n]{c_n}$)
+
+        $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{c_n}$)
+        $\leq$ $\lim_{n \rightarrow \infty}$ sup($\frac{c_{n+1}}{c_n}$)
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        Let $\alpha$ = $\lim_{n \rightarrow \infty}$ inf($\frac{c_{n+1}}{c_n}$).
+        If $\alpha$ = $-\infty$, then $-\infty$ $\leq$
+        $\lim_{n \rightarrow \infty}$ inf($\sqrt[n]{c_n}$) holds true.
+
+        If $\alpha$ is finite, there is a $\beta$ $\leq$ $\alpha$ and N such that
+        for n $\geq$ N, $\frac{c_{n+1}}{c_n}$ $\geq$ $\beta$
+        so $c_{N+p}$ $\geq$ $\beta^p c_N$.
+
+        Then, $c_{n}$ $\geq$ $c_N \beta^{-N} \beta^n$ so
+        $\sqrt[n]{c_{n}}$ $\geq$ $\sqrt[n]{c_N \beta^{-N}} \beta$.
+        Thus, $\lim_{n \rightarrow \infty}$ inf($\sqrt[n]{c_n}$)
+        $\geq$ $\beta$ = $\alpha$.
+
+        \vspace{0.2cm}
+
+        Let $\alpha$ = $\lim_{n \rightarrow \infty}$ sup($\frac{c_{n+1}}{c_n}$).
+        If $\alpha$ = $\infty$, then
+        $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{c_n}$)
+        $\leq$ $\infty$ holds true.
+
+        If $\alpha$ is finite, there is a $\beta$ $\geq$ $\alpha$ and N such that
+        for n $\geq$ N, $\frac{c_{n+1}}{c_n}$ $\leq$ $\beta$
+        so $c_{N+p}$ $\leq$ $\beta^p c_N$.
+
+        Then, $c_{n}$ $\leq$ $c_N \beta^{-N} \beta^n$ so
+        $\sqrt[n]{c_{n}}$ $\leq$ $\sqrt[n]{c_N \beta^{-N}} \beta$.
+        Thus, $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{c_n}$)
+        $\leq$ $\beta$ = $\alpha$.
+    \end{minipage} }
 
 
 
