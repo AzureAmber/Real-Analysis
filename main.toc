@@ -41,7 +41,7 @@
 \contentsline {subsection}{\numberline {12.2} Series of Nonnegative Terms }{40}{subsection.12.2}%
 \contentsline {subsection}{\numberline {12.3} The Number e}{41}{subsection.12.3}%
 \contentsline {subsection}{\numberline {12.4} Root and Ratio Tests }{42}{subsection.12.4}%
-\contentsline {section}{\numberline {13}Day 13: Power Series \& Series Transformations}{43}{section.13}%
+\contentsline {section}{\numberline {13}Day 13: Power Series}{43}{section.13}%
 \contentsline {subsection}{\numberline {13.1} Power Series }{43}{subsection.13.1}%
 \contentsline {subsection}{\numberline {13.2} Summation By Parts }{43}{subsection.13.2}%
 \contentsline {subsection}{\numberline {13.3} Absolute Convergence }{44}{subsection.13.3}%
