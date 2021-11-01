@@ -36,9 +36,13 @@
 \contentsline {section}{\numberline {11}Day 11: Limits \& Special Sequences}{37}{section.11}%
 \contentsline {subsection}{\numberline {11.1} Upper and Lower Limits }{37}{subsection.11.1}%
 \contentsline {subsection}{\numberline {11.2} Special Sequences }{38}{subsection.11.2}%
-\contentsline {section}{\numberline {12}Series \& Comparison Test}{39}{section.12}%
+\contentsline {section}{\numberline {12}Day 12: Series \& Comparison Test}{39}{section.12}%
 \contentsline {subsection}{\numberline {12.1} Series }{39}{subsection.12.1}%
 \contentsline {subsection}{\numberline {12.2} Series of Nonnegative Terms }{40}{subsection.12.2}%
 \contentsline {subsection}{\numberline {12.3} The Number e}{41}{subsection.12.3}%
 \contentsline {subsection}{\numberline {12.4} Root and Ratio Tests }{42}{subsection.12.4}%
-\contentsline {section}{\numberline {13}Day 13: Power Series}{43}{section.13}%
+\contentsline {section}{\numberline {13}Day 13: Power Series \& Series Transformations}{43}{section.13}%
+\contentsline {subsection}{\numberline {13.1} Power Series }{43}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2} Summation By Parts }{43}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3} Absolute Convergence }{44}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4} Addition \& Multiplication of Series }{44}{subsection.13.4}%
