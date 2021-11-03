@@ -346,33 +346,110 @@
 { \color{red} Theorem 13.4.4: By Cauchy Product, $\sum c_n$ = C implies C = AB }
 
     \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        If $\sum a_n$, $\sum b_n$, $\sum c_n$ converge to A,B,C
-        where $c_n$ = $a_0b_n + ... + a_nb_0$, then
-        
-        C = AB.
+        If $\sum a_n$ = A, $\sum b_n$ = B, $\sum c_n$ = C
+        where $c_n$ = $a_0b_n + ... + a_nb_0$, then C = AB.
     \end{adjustbox}
 
 
 
 
 
+\subsection{ Rearrangements }
 
+{ \color{blue} Definition 13.5.1:  Rearrangements }
 
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        Let $a_n'$ = $a_{k_n}$.
+        Then $\sum a_n'$ is a rearrangement of $\sum a_n$.
+    \end{adjustbox}
 
+    \vspace{0.5cm}
 
+{ \color{red} Theorem 13.5.2: Rearrangements can converge or diverge }
 
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        Let $\sum a_n$ $\in$ $\mathbb{R}$ converge non-absolutely.
+        Suppose $-\infty \leq \alpha \leq \beta \leq \infty$.
 
+        Then there exists a rearrangement $\sum a_n'$ with partial
+        sums $s_n'$ such that:
 
+        \hspace{1cm}
+        $\lim_{n \rightarrow \infty}$ inf($s_n'$) = $\alpha$
+        \hspace{1cm}
+        $\lim_{n \rightarrow \infty}$ sup($s_n'$) = $\beta$
+    \end{adjustbox}
 
+{ \color{magenta} \underline{Proof} }
 
+    \fbox{
+    \begin{minipage}{15cm}
+        Let $p_n$ = $\frac{|a_n| + a_n}{2}$ and
+        $q_n$ = $\frac{|a_n| - a_n}{2}$.
+        Since $\sum |a_n|$ diverge, then $\sum p_n$ and $\sum q_n$ diverges.
 
+        Let $P_1, P_2, P_3, ...$ be the nonnegative terms of $\sum a_n$
+        in order and $Q_1, Q_2, Q_3, ...$ be the absolute values of the
+        negative terms of $\sum a_n$ in order.
+        Thus, $\sum P_n$ and $\sum Q_n$ differ from $\sum p_n$ and $\sum q_n$
+        only by the zero terms and thus, are divergent.
 
+        Choose real-valued sequences \{$\alpha_n$\} $\rightarrow$ $\alpha$,
+        \{$\beta_n$\} $\rightarrow$ $\beta$ such that
+        $\alpha_n < \beta_n$ and $\beta_1 > 0$.
 
+        Let $m_1$,$k_1$ be the smallest integers such that:
 
+        \hspace{1cm}
+        $P_1 + ... + P_{m_1} > \beta_1$
+        \hspace{1cm}
+        $P_1 + ... + P_{m_1} - Q_1 - ... - Q_{k_1} < \alpha_1$
 
+        Let $m_2$,$k_2$ be the smallest integers such that:
 
+        \hspace{1cm}
+        $P_1 + ... + P_{m_1} - Q_1 - ... - Q_{k_1}
+        + P_{m_1 + 1} + ... + P_{m_2} < \beta_2$
 
+        \hspace{1cm}
+        $P_1 + ... + P_{m_1} - Q_1 - ... - Q_{k_1}
+        + P_{m_1 + 1} + ... + P_{m_2}
+        - Q_{k_1 + 1} - ... - Q_{k_2} < \alpha_2$
 
+        Continuing such a process, then
+        $\lim_{n \rightarrow \infty}$ inf($s_n'$) = $\alpha$
+        and
+        $\lim_{n \rightarrow \infty}$ sup($s_n'$) = $\beta$.
+    \end{minipage} }
+
+\newpage
+
+{ \color{red} Theorem 13.5.3: Absolute rearrangements converges uniquely }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        If $\sum a_n$ $\in$ $\mathbb{C}$ converges absolutely,
+        then every rearrangement of $\sum a_n$ converges to the same sum.
+    \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        Let $\sum a_n'$ be a rearrangement with partial sums $s_n'$.
+
+        For $\epsilon$ $>$ 0, there is a N such that for m $\geq$ n $\geq$ N,
+        $\sum_{i=n}^m$ $|a_i|$ $\leq$ $\epsilon$.
+
+        Let p be the maximum index of \{$a_1, a_2, ... , a_N$\} in $a_n'$
+        and $a_n$.
+
+        Since if n $>$ p, then $a_1, a_2, ... , a_N$ will cancel in
+        $s_n - s_n'$ and thus,
+        $|s_n - s_n'|$ $\leq$ $\epsilon$.
+
+        Thus, every \{$s_n'$\} converges to \{$s_n$\}.
+    \end{minipage} }
+    
 
 
 

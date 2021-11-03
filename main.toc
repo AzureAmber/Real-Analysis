@@ -46,3 +46,5 @@
 \contentsline {subsection}{\numberline {13.2} Summation By Parts }{43}{subsection.13.2}%
 \contentsline {subsection}{\numberline {13.3} Absolute Convergence }{44}{subsection.13.3}%
 \contentsline {subsection}{\numberline {13.4} Addition \& Multiplication of Series }{44}{subsection.13.4}%
+\contentsline {subsection}{\numberline {13.5} Rearrangements }{45}{subsection.13.5}%
+\contentsline {section}{\numberline {14}Day 14: Continuity}{47}{section.14}%
