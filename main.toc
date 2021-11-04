@@ -48,3 +48,6 @@
 \contentsline {subsection}{\numberline {13.4} Addition \& Multiplication of Series }{44}{subsection.13.4}%
 \contentsline {subsection}{\numberline {13.5} Rearrangements }{45}{subsection.13.5}%
 \contentsline {section}{\numberline {14}Day 14: Continuity}{47}{section.14}%
+\contentsline {subsection}{\numberline {14.1} Limits of Functions }{47}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2} Continuous Functions }{47}{subsection.14.2}%
+\contentsline {section}{\numberline {15}Day 15: Continuity Properties}{50}{section.15}%
