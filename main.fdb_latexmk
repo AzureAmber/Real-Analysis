@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1636054190 "c:/Users/Tokyo/Desktop/Clones/Fall-Real-Analysis/main.tex" "main.pdf" "main" 1636054194
+["pdflatex"] 1636092000 "c:/Users/Tokyo/Desktop/Clones/Fall-Real-Analysis/main.tex" "main.pdf" "main" 1636092004
   "Bibliography/Bibliography.tex" 1632003183 146 2e9cffa5c06e9a85d9a5cb5c0b301beb ""
   "Content/C1.tex" 1635028209 5196 24b21566587562730d73d6c37694f730 ""
   "Content/C10.tex" 1635408513 23124 4ffdd7452a48f930786afe5db6677a92 ""
@@ -8,7 +8,7 @@
   "Content/C13.tex" 1635961687 13930 9f458eeabdba1ea45b5cb32c45f89029 ""
   "Content/C14.tex" 1636048410 11309 0e839b29dc8b5030b5cbc25265315e01 ""
   "Content/C15.tex" 1636054188 8602 a84d8156f1304eaebcb4da709d7ac681 ""
-  "Content/C16.tex" 1636053844 128 b9a3047ca82148bf51228602b796a8aa ""
+  "Content/C16.tex" 1636091998 7590 b139fc3fbdea7e3d4abf5146d8c5f2e9 ""
   "Content/C2.tex" 1635027647 8612 12272600491de193731737f14279fd02 ""
   "Content/C3.tex" 1635026891 10248 66c221009ba4becd2cfcc195dfcf18ac ""
   "Content/C4.tex" 1635025834 4654 3060f3f5f4bc76ca9fb7372a274e7a4a ""
@@ -169,13 +169,13 @@
   "c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1632988275 4399729 ba2bdf7099c8a2ba97051a2b802eaeb0 ""
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1632988393 2797768 d953ad199b2fe5d3a46b62f882209a11 ""
   "c:/texlive/2021/texmf.cnf" 1632988246 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1636054194 7891 ee31033cf592717ba7df574a8f9bced9 "pdflatex"
-  "main.out" 1636054194 9276 f3e1517169808b6d24eb3c092126e738 "pdflatex"
+  "main.aux" 1636092003 8299 7bf505a4a0ffff2af076d265ba442239 "pdflatex"
+  "main.out" 1636092003 9882 6729299a82abc005912739faf6fcb3cf "pdflatex"
   "main.tex" 1636053844 810 6015fd4d4a37c06bb79a9ad75034d114 ""
-  "main.toc" 1636054194 4762 344411530d982aa48ebfed85137e09a6 "pdflatex"
+  "main.toc" 1636092003 5047 8f91f47d75d37654552a978e26e51047 "pdflatex"
   (generated)
-  "main.pdf"
-  "main.toc"
-  "main.log"
   "main.aux"
+  "main.toc"
+  "main.pdf"
+  "main.log"
   "main.out"
