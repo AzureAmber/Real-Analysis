@@ -8,7 +8,7 @@
 
     \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
         f: E $\rightarrow$ $\mathbb{R}^k$ is bounded if there is a
-        real number M such that f(x) $\leq$ M for all x $\in$ E.
+        M $\in$ $\mathbb{R}$ such that f(x) $\leq$ M for all x $\in$ E.
     \end{adjustbox}
 
     \vspace{0.5cm}
@@ -61,7 +61,7 @@ Continuous functions from compact to $\mathbb{R}^k$ are bounded }
 
     \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
         Suppose f is a continuous real function of a compact metric space X
-        such that M = sup$_{p \in X}$ f(p) and m = inf$_{p \in X}$ f(p).
+        such that M = sup$_{x \in X}$ f(x) and m = inf$_{x \in X}$ f(x).
 
         Then there exists p,q $\in$ X such that f(p) = M and f(q) = m.
     \end{adjustbox}
@@ -71,8 +71,12 @@ Continuous functions from compact to $\mathbb{R}^k$ are bounded }
     \fbox{
     \begin{minipage}{15cm}
         By {\color{red} theorem 15.1.3}, f(X) is closed and bounded.
+        
+        Let M = sup$_{x \in X}$ f(x) and m = inf$_{x \in X}$ f(x).
 
-        Thus, f(X) contains M = sup f(X) and m = inf f(X) for some p,q $\in$ X.
+        Since f(X) is bounded, then M,m $\in$ (f(X))' and
+        since f(X) is closed, then M,m $\in$ f(X).
+        Thus, there exists p,q $\in$ X such that f(p) = M and f(q) = m.
     \end{minipage} }
 
     \vspace{0.5cm}
@@ -97,7 +101,7 @@ Continuous functions from compact to $\mathbb{R}^k$ are bounded }
         Thus by {\color{red} theorem 15.1.2}, f($V^c$) is a compact
         subset of Y so f($V^c$) is closed.
 
-        Since f is 1-1 and onto, f($V^c$) = $f(V)^c$ so f(V) is open.
+        Since f is 1-1 and onto, f($V^c$) = $(f(V))^c$ so f(V) is open.
         Since from any open set V in X, f(V) is open in Y, then by
         {\color{red} theorem 14.2.4}, $f^{-1}$ is continuous.
     \end{minipage} }
@@ -107,9 +111,15 @@ Continuous functions from compact to $\mathbb{R}^k$ are bounded }
 { \color{blue} Definition 15.1.6: Uniformly Continuous }
 
     \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        Let f: X $\rightarrow$ Y. Then f is uniformly continuous on X
-        if for every $\epsilon > 0$, there exists $\delta > 0$ such that
-        $d_Y(f(p),f(q)) < \epsilon$ for all p,q $\in$ X where $d_X(p,q) < \delta$.
+        Let f: X $\rightarrow$ Y. Then f is uniformly continuous on X if:
+        
+        \begin{adjustbox}{minipage=13cm, right, vspace=0.1cm 0cm}
+            For every $\epsilon > 0$, there is a $\delta > 0$
+            such that for all p,q $\in$ X
+            
+            where $d_X(p,q) < \delta$, then
+            $d_Y(f(p),f(q)) < \epsilon$.
+        \end{adjustbox}
     \end{adjustbox}
 
 \newpage

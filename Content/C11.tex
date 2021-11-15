@@ -4,7 +4,7 @@
 
 \subsection{ Upper and Lower Limits } 
 
-{ \color{blue} Definition 11.1.1: No limit } 
+{ \color{blue} Definition 11.1.1: Infinite limits } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
 		Let \{$s_n$\} be a sequence of real numbers such that:
@@ -27,21 +27,29 @@
 { \color{blue} Definition 11.1.2: Upper and Lower Limits } 
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Let \{$s_n$\} be a sequence of real numbers.
-
-		Let E contain all subsequential limits of \{$s_n$\}
+		Let \{$s_n$\} $\subset$ $\mathbb{R}$
+		and E contain all subsequential limits of \{$s_n$\}
 		plus possibly $\pm$$\infty$.
 
 		Then, the upper limit of \{$s_n$\}:
 
 		\hspace{1cm}
-		$s^*$ = sup(E) \hspace{1cm} $\lim_{n \rightarrow \infty}$ sup($s_n$) = $s^*$
+		$s^*$ = sup(E) 
+		\hspace{1cm} 
+		$\lim_{n \rightarrow \infty}$ sup($s_n$) = $s^*$
 
 		Then, the lower limit of \{$s_n$\}:
 
 		\hspace{1cm}
-		$s_*$ = inf(E) \hspace{1.2cm} $\lim_{n \rightarrow \infty}$ inf($s_n$) = $s_*$ \\
+		$s_*$ = inf(E) 
+		\hspace{1.2cm} 
+		$\lim_{n \rightarrow \infty}$ inf($s_n$) = $s_*$
 	\end{adjustbox}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.3]{Images/11.1.2.png}
+\end{figure}
 
 { \color{red} Theorem 11.1.3: Upper and Lower limits are unique }
 
@@ -92,11 +100,10 @@
 			\fbox{
 			\begin{minipage}{13cm}
 				Suppose p,q satisfy part a and b where p $<$ q.
-				
 				Choose x where p $<$ x $<$ q.
 				Since p satisfies b, then $s_n$ $<$ x for n $\geq$ N.
-				
-				Thus, q cannot satisfy a.
+				Thus, x is an upper bound for E so q $\not \in E$ since q $>$ x
+				contradicting that q satisfies part a.
 			\end{minipage} }
 	\end{enumerate}
 
@@ -153,7 +160,7 @@
 
 \subsection{ Special Sequences }
 
-{ \color{red} Theorem 11.2.1: Special Sequences }
+{ \color{red} Theorem 11.2.1: Special sequences }
 
 	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
 		\item If p $>$ 0, then $\lim_{n \rightarrow \infty}$ $\frac{1}{n^p}$ = 0

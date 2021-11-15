@@ -4,7 +4,7 @@
 
 \subsection{ Limits of Functions }
 
-{ \color{blue} Definition 14.1.1: Limits of Functions }
+{ \color{blue} Definition 14.1.1: Limits of functions }
 
     \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
         For metric spaces X,Y, let E $\subset$ X, f maps E into Y,
@@ -14,14 +14,18 @@
         if there is a q $\in$ Y such that:
         
         \begin{adjustbox}{minipage=13cm, right, vspace=0.1cm 0cm}
-            For every $\epsilon$ $>$ 0,
-            there is a $\delta$ $>$ 0 where $d_Y(f(x),q)$ $<$ $\epsilon$
+            For every $\epsilon$ $>$ 0, there is a $\delta$ $>$ 0
+            such that for all x $\in$ E
             
-            for all x $\in$ E where $d_X(x,p) < \delta$
+            where $d_X(x,p) < \delta$, then
+            $d_Y(f(x),q)$ $<$ $\epsilon$
         \end{adjustbox}
     \end{adjustbox}
 
-    \vspace{0.5cm}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.45]{Images/14.1.1.png}
+\end{figure}
 
 { \color{red} Theorem 14.1.2:
 Sequence definition of $\lim_{x \rightarrow p} f(x) = q$ }
@@ -38,13 +42,15 @@ Sequence definition of $\lim_{x \rightarrow p} f(x) = q$ }
     \fbox{
     \begin{minipage}{15cm}
         Suppose $\lim_{x \rightarrow p} f(x) = q$.
+
         For $\epsilon$ $>$ 0, there is a $\delta$ $>$ 0 such that
         $d_Y(f(x),q) < \epsilon$ if x $\in$ E and $d_X(x,p) < \delta$.
 
         Choose \{$p_n$\} $\in$ E such that $p_n \not = p$
         and $\lim_{n \rightarrow \infty} p_n = p$.
 
-        Thus, for n $>$ N, $d_Y(f(p_n),q) < \epsilon$.
+        Then for $\delta > 0$, there is N such that for n $>$ N, then
+        $d_X(p_n,p)< \delta$ so $d_Y(f(p_n),q) < \epsilon$.
 
         \vspace{0.2cm}
 
@@ -97,6 +103,8 @@ Sequence definition of $\lim_{x \rightarrow p} f(x) = q$ }
         \item $\lim_{x \rightarrow p} (\frac{f}{g})(x) = \frac{A}{B}$
     \end{enumerate}
 
+\newpage
+
 
 
 
@@ -113,9 +121,11 @@ Sequence definition of $\lim_{x \rightarrow p} f(x) = q$ }
         
         \begin{adjustbox}{minipage=13cm, right, vspace=0.1cm 0cm}
             For every $\epsilon > 0$, there is a
-            $\delta > 0$ such that $d_Y(f(x),f(p)) < \epsilon$
+            $\delta > 0$ such that
+            for all x $\in$ E
             
-            for all x $\in$ E where $d_X(x,p) < \delta$.
+            where $d_X(x,p) < \delta$, then
+            $d_Y(f(x),f(p)) < \epsilon$
         \end{adjustbox}
 
         f(p) have to be defined to be continuous.
@@ -127,9 +137,12 @@ Sequence definition of $\lim_{x \rightarrow p} f(x) = q$ }
         $d_Y(f(x),f(p)) = 0 < \epsilon$.
     \end{adjustbox}
 
-\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.38]{Images/14.2.1.png}
+\end{figure}
 
-{ \color{red} Theorem 14.2.2: Continuity at limit points }
+{ \color{red} Theorem 14.2.2: Continuity at p $\rightleftharpoons$ lim f(p) = f(p) }
 
     \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
         Suppose E $\subset$ X, p $\in$ E, and
@@ -158,7 +171,7 @@ Sequence definition of $\lim_{x \rightarrow p} f(x) = q$ }
 
     \vspace{0.5cm}
 
-{ \color{red} Theorem 14.2.3: Continuity with Chain Rule }
+{ \color{red} Theorem 14.2.3: Continuity Chain Rule }
 
     \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
         Suppose E $\subset$ X, f: E $\rightarrow$ Y, g: f(E) $\rightarrow$ Z,
@@ -185,16 +198,18 @@ Sequence definition of $\lim_{x \rightarrow p} f(x) = q$ }
         $d_Y(f(x),f(p)) < \delta_1$ for $d_X(x,p) < \delta_2$ 
         where x $\in$ E
 
-        Thus:
-
-        \hspace{1cm}
-        $d_Z(h(x),h(p))$ = $d_Z(g(f(x)),g(f(p)))$ $<$ $\epsilon$
-        for $d_X(x,p)$ $<$ $\delta_2$ where x $\in$ E
+        Thus, $d_Z(h(x),h(p))$ = $d_Z(g(f(x)),g(f(p)))$ $<$ $\epsilon$
+        for $d_X(x,p)$ $<$ $\delta_2$ where x $\in$ E.
 
         Thus, h is continuous at p.
     \end{minipage} }
 
-    \vspace{0.5cm}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.38]{Images/14.2.3.png}
+\end{figure}
+
+\newpage
 
 { \color{red} Theorem 14.2.4:
 Continuous functions map open sets to open sets }
@@ -258,7 +273,7 @@ Continuous functions map closed sets to closed sets }
         then $f^{-1}(C)$ is closed since $f^{-1}(V)$ is open.
     \end{minipage} }
 
-    \newpage
+    \vspace{0.5cm}
 
 { \color{red} Theorem 14.2.6: Continuous functions }
 
@@ -293,31 +308,34 @@ Continuous functions map closed sets to closed sets }
 
     \vspace{0.5cm}
 
-{ \color{red} Theorem 14.2.7: Continuous Functions on $\mathbb{R}^k$ }
+{ \color{red} Theorem 14.2.7: Continuous functions on $\mathbb{R}^k$ }
 
     \begin{enumerate}[label=(\alph*), leftmargin=1.5cm, itemsep=0.1cm]
-        \item Let $f_1,...,f_k$ be real functions on X and
+        \item Let $f_1,...,f_k$: X $\rightarrow$ $\mathbb{R}$ and
         f: X $\rightarrow$ $\mathbb{R}^k$ where
-
-            f(x) = ($f_1(x)$, ... , $f_k(x)$) for x $\in$ X.
+        f(x) = ($f_1(x)$, ... , $f_k(x)$).
 
             Then f is continuous if and only if $f_1,...,f_k$ are continuous.
 
         \item If f and g are continuous mappings of X into $\mathbb{R}^k$,
-        then f+g and f $\cdot$ g are continuous on X.
+        then f + g and f $\cdot$ g are continuous on X.
     \end{enumerate}
 
 { \color{magenta} \underline{Proof} }
 
     \fbox{
     \begin{minipage}{15cm}
-        Since $|f_i(x) - f_i(y)|$ $\leq$ $|f(x) - f(y)|$, then if f
-        is continuous, then each $f_i$ is continuous and vice versa.
+        Since $|f_i(x) - f_i(y)|$
+        $\leq$ $\sqrt{\sum_1^k |f_i(x) - f_i(y)|^2}$
+        = $|f(x) - f(y)|$, then if f is continuous, then
+        each $f_i$ is continuous and vice versa.
 
         \vspace{0.2cm}
 
-        By {\color{red} theorem 14.2.6}, f+g and f $\cdot$ g
-        are continuous since each $f_i$,$g_i$ are continuous by part a.
+        Since f,g are continuous, then by part a, each $f_i$,$g_i$ are continuous.
+        Then by {\color{red} theorem 14.2.6},
+        each $f_i + g_i$ and $f_i g_i$ are continuous so
+        by part a, f + g and f $\cdot$ g are continuous.
 
         \vspace{0.2cm}
 
