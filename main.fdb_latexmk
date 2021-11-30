@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1637399317 "c:/Users/Tokyo/Desktop/Clones/Fall-Real-Analysis/main.tex" "main.pdf" "main" 1637399321
+["pdflatex"] 1638315232 "c:/Users/Tokyo/Desktop/Clones/Fall-Real-Analysis/main.tex" "main.pdf" "main" 1638315237
   "Bibliography/Bibliography.tex" 1636932530 275 be8425b31084124b21d2376443b45eaf ""
   "Content/C1.tex" 1635028209 5196 24b21566587562730d73d6c37694f730 ""
   "Content/C10.tex" 1636929973 23549 3f004e5d8474c83a86b1cfdeafeffca1 ""
@@ -9,7 +9,7 @@
   "Content/C14.tex" 1636961579 11857 2c8dad8d80f6f54f56d00a41fa208e62 ""
   "Content/C15.tex" 1636931402 8947 63a3b7b237391f95c6a2b4f9e274c82e ""
   "Content/C16.tex" 1636091998 7590 b139fc3fbdea7e3d4abf5146d8c5f2e9 ""
-  "Content/C17.tex" 1637399316 14644 8435f6362663bc9b5d95b2c22b2fc226 ""
+  "Content/C17.tex" 1638315230 18175 2e351e26de127885ec8bd184df727071 ""
   "Content/C2.tex" 1635027647 8612 12272600491de193731737f14279fd02 ""
   "Content/C3.tex" 1635026891 10248 66c221009ba4becd2cfcc195dfcf18ac ""
   "Content/C4.tex" 1635025834 4654 3060f3f5f4bc76ca9fb7372a274e7a4a ""
@@ -180,13 +180,13 @@
   "c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1632988275 4399729 ba2bdf7099c8a2ba97051a2b802eaeb0 ""
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1632988393 2797768 d953ad199b2fe5d3a46b62f882209a11 ""
   "c:/texlive/2021/texmf.cnf" 1632988246 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1637399320 9381 089996aae38dd7970f9aaa24ba102aa4 "pdflatex"
-  "main.out" 1637399320 11447 d2a631e9844c586213df037b0db2f28b "pdflatex"
+  "main.aux" 1638315236 9391 0e0f30c172edb8684e36a09b606491fb "pdflatex"
+  "main.out" 1638315236 11462 9e3054738ff331f7ad72843cfc1dae40 "pdflatex"
   "main.tex" 1637341496 839 d1da9b787dd971d9b8fba3ef098d0a80 ""
-  "main.toc" 1637399320 5786 24b60eba06e8fa5654fafca57a62c6e2 "pdflatex"
+  "main.toc" 1638315236 5796 812332ec6a253bb517cf72069fe17787 "pdflatex"
   (generated)
+  "main.pdf"
   "main.toc"
   "main.log"
-  "main.pdf"
-  "main.aux"
   "main.out"
+  "main.aux"

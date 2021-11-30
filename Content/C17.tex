@@ -355,6 +355,8 @@
         By {\color{red} theorem 17.3.1}, f'(x) exists for any x $\in$ [a,b].
     \end{minipage}}
 
+\newpage
+
 
 
 
@@ -385,9 +387,46 @@
         Statement holds true if x $\rightarrow$ b.
     \end{adjustbox}
 
-    \newpage
+{ \color{magenta} \underline{Proof} }
 
+    \fbox{
+    \begin{minipage}{15cm}
+        Consider the case $-\infty \leq A < \infty$.
 
+        Choose q such that $A < q$ and r such that $A < r < q$.
+
+        Thus, there is a c $\in$ (a,b) such that $a < x < c$
+        for $\frac{f'(x)}{g'(x)} < r$.
+
+        If $a < x < y < c$, then by {\color{red} theorem 17.2.3},
+        there is a t $\in$ (x,y) such that:
+
+        \hspace{1cm}
+        $\frac{f(x) - f(y)}{g(x)-g(y)}$
+        = $\frac{f'(t)}{g'(t)}$ $< r$
+
+        If $\lim_{x \rightarrow a}$ f(x) $\rightarrow$ 0 and
+        $\lim_{x \rightarrow a}$ g(x) $\rightarrow$ 0, then
+        as $x \rightarrow a$,
+        $\frac{f(y)}{f(x)} \leq r < q$ for $y \in (a,c)$
+
+        If $\lim_{x \rightarrow a}$ g(x) $\rightarrow$ $\infty$ or
+        $\lim_{x \rightarrow a}$ g(x) $\rightarrow$ $-\infty$, then
+        keeping y fixed, choose $c_1 \in (a,y)$ such that $g(x) > g(y)$
+        and $g(x) > 0$ if $a < x < c_1$. Thus:
+
+        \hspace{1cm}
+        $\frac{g(x)-g(y)}{g(x)}$ $\cdot$ $\frac{f(x) - f(y)}{g(x)-g(y)}$
+        $< \frac{g(x)-g(y)}{g(x)} \cdot r$ for $x \in (a,c_1)$
+
+        \hspace{1cm}
+        $\frac{f(x)}{g(x)} < r - r \frac{g(y)}{g(x)} + \frac{f(y)}{g(x)}$
+        
+        Thus as $x \rightarrow a$, there is a $c_2 \in (a,c_1)$ such that
+        $\frac{f(x)}{g(x)} < r < q$ for $x \in (a,c_2)$.
+
+        Thus, $\lim_{x \rightarrow a}$ $\frac{f(x)}{g(x)}$ $\rightarrow$ A.
+    \end{minipage}}
 
 
 
@@ -406,6 +445,8 @@
         If $f^{(n-1)}$ exist in a neighborhood of x, then $f^{(n-2)}$
         must be differentiable in that neighborhood.
     \end{adjustbox}
+
+\newpage
 
 
 
@@ -426,11 +467,46 @@
         f($\beta$) = P($\beta$) + $\frac{f^n(x)}{n!} (\beta-\alpha)^n$
     \end{adjustbox}
 
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        Let M be the number defined by
+        $f(\beta) = P(\beta) + M(\beta - \alpha)^n$
+        and let
+
+        $g(t) = f(t) - P(t) - M(t- \alpha)^n$ for $t \in [\alpha,\beta]$.
+
+        Thus, $g^{(n)}(t) = f^{(n)}(t) - n!M$.
+
+        Since $P^{(k)}(\alpha) = f^{(k)}(\alpha)$ for k = 0,...,n-1, then:
+
+        \hspace{1cm}
+        $g(\alpha) = g'(\alpha) = ... = g^{(n-1)}(\alpha) = 0$.
+
+        Since the choice of M gives $g(\beta)$ = 0, then by the Mean Value Theorem,
+        $g'(x_1)$ = 0 for some $x_1$ between $\alpha$ and $\beta$.
+
+        Since $g'(\alpha)$ = 0, then similarily, $g''(x_2)$ = 0
+        for some $x_2$ between $\alpha$ and $x_1$.
+
+        Thus, $g^{(n)}(x_n)$ = 0 for some $x_n$ between $\alpha$ and $x_{n-1}$
+        so $x_n$ is between $\alpha$ and $\beta$.
+
+        Thus, there exists an $x_n \in (\alpha,\beta)$ such that:
+
+        \hspace{1cm}
+        0 = $g^{(n)}(x_n)$ = $f^{(n)}(x_n) - n!M$
+
+        \hspace{1cm}
+        $M = \frac{f^{n}(x_n)}{n!}$
+    \end{minipage}}
 
 
 
 
-\section{ Differentiation of Vector-Valued Functions }
+
+\subsection{ Differentiation of Vector-Valued Functions }
 
 { \color{red} Theorem 17.7.1: Mean Value Theorem for $\mathbb{R}^k$ }
 
@@ -439,3 +515,41 @@
         and f is differentiable on (a,b). Then there is a x $\in$ (a,b)
         such that $|f(b) - f(a)|$ $\leq$ (b-a) $|f'(x)|$
     \end{adjustbox}
+
+{ \color{magenta} \underline{Proof} }
+
+    \fbox{
+    \begin{minipage}{15cm}
+        Let z = f(b) - f(a) and define $\phi(t) = z \cdot f(t)$ for t $\in$ [a,b].
+
+        Then $\phi(t)$ is real-valued continuous on [a,b] and differentiable on (a,b).
+
+        Then by the Mean Value Theorem, for some x $\in$ (a,b):
+
+        \hspace{1cm}
+        $\phi(b) - \phi(a)$
+        = (b-a) $\phi'(x)$
+        = (b-a) $z \cdot f'(x)$
+
+        Since $\phi(b) - \phi(a)$
+        = $z \cdot f(b) - z \cdot f(a)$
+        = $z \cdot z$ = $|z|^2$,
+        then by the Schwarz Inequality:
+        
+        \hspace{1cm}
+        $|z|^2$
+        = (b-a) $|z \cdot f'(x)|$
+        $\leq$ (b-a) $|z| |f'(x)|$
+        
+        \hspace{1cm}
+        $|z|$
+        $\leq$ (b-a) $|f'(x)|$
+
+        \hspace{1cm}
+        $|f(b) - f(a)|$
+        $\leq$ (b-a) $|f'(x)|$
+    \end{minipage}}
+
+
+
+

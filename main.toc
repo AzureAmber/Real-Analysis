@@ -61,7 +61,7 @@
 \contentsline {subsection}{\numberline {17.1} Derivative of a function }{56}{subsection.17.1}%
 \contentsline {subsection}{\numberline {17.2} Mean Value Theorems}{57}{subsection.17.2}%
 \contentsline {subsection}{\numberline {17.3} Continuity of Derivatives }{58}{subsection.17.3}%
-\contentsline {subsection}{\numberline {17.4} L'Hospital's Rule }{58}{subsection.17.4}%
+\contentsline {subsection}{\numberline {17.4} L'Hospital's Rule }{59}{subsection.17.4}%
 \contentsline {subsection}{\numberline {17.5} Derivative of Higher Order }{59}{subsection.17.5}%
-\contentsline {subsection}{\numberline {17.6} Taylor's Theorem }{59}{subsection.17.6}%
-\contentsline {section}{\numberline {18} Differentiation of Vector-Valued Functions }{59}{section.18}%
+\contentsline {subsection}{\numberline {17.6} Taylor's Theorem }{60}{subsection.17.6}%
+\contentsline {subsection}{\numberline {17.7} Differentiation of Vector-Valued Functions }{60}{subsection.17.7}%
