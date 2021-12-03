@@ -1055,6 +1055,11 @@ INPUT ./Content/C15.tex
 INPUT Content/C15.tex
 INPUT ./Content/C15.tex
 INPUT Content/C15.tex
+INPUT ./Images/15.1.2.png
+INPUT ./Images/15.1.2.png
+INPUT Images/15.1.2.png
+INPUT ./Images/15.1.2.png
+INPUT ./Images/15.1.2.png
 INPUT ./Content/C16.tex
 INPUT Content/C16.tex
 INPUT ./Content/C16.tex

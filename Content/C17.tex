@@ -12,7 +12,7 @@
         \hspace{1cm}
         $\phi(t)$ = $\frac{f(t) - f(x)}{t - x}$ for t $\not =$ x
         
-        The derivative of f:
+        The derivative of f at x:
 
         \hspace{1cm}
         $f'(x)$ = $\lim_{t \rightarrow x}$ $\phi(t)$
@@ -144,19 +144,19 @@
         Thus:
 
         \hspace{1cm}
-        $\lim_{t \rightarrow x}$ $\frac{h(t) - g(x)}{t - x}$
+        $\lim_{t \rightarrow x}$ $\frac{h(t) - h(x)}{t - x}$
         = $\lim_{t \rightarrow x}$ $\frac{g(f(t)) - g(f(x))}{t - x}$
 
         \hspace{3.8cm}
-        = $\lim_{t \rightarrow x}$ $\frac{(f(t) - f(x))[g'(f(x)) + v(s)]}{t - x}$
+        = $\lim_{t \rightarrow x}$ $\frac{(f(t) - f(x))[g'(f(x)) + v(f(t))]}{t - x}$
 
         \hspace{3.8cm}
         = $\lim_{t \rightarrow x}$ $\frac{(t-x) [f'(t) + u(t)]
-                                                [g'(f(x)) + v(s)]}{t - x}$
+                                                [g'(f(x)) + v(f(t))]}{t - x}$
         
         \hspace{3.8cm}
         = g'(f(x))$\cdot$f'(x) + f'(x)$\cdot$0 + g'(f(x))$\cdot$0 + 0$\cdot$0
-        = g'(f(x)) f'(x)
+        = g'(f(x)) $\cdot$ f'(x)
     \end{minipage} }
 
 
@@ -168,7 +168,7 @@
 { \color{blue} Definition 17.2.1: Local Extrema }
 
     \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        Let real valued f $\in$ X.
+        Let real-valued f $\in$ X.
         
         Then f has a local maximum at p $\in$ X if:
         
@@ -232,8 +232,7 @@
     \fbox{
     \begin{minipage}{15cm}
         Let h(t) = [f(b) - f(a)] $\cdot$ g(t) - [g(b) - g(a)] $\cdot$ f(t)
-        \hspace{1cm}
-        for t $\in$ [a,b]
+        for t $\in$ [a,b].
 
         Since f,g are continuous on [a,b] and differentiable on (a,b),
         then h is continuous on [a,b] and differentiable on (a,b).
@@ -268,7 +267,7 @@
 
     \vspace{0.5cm}
 
-{ \color{red} Theorem 17.2.5: Sign of derivative determines monotonics }
+{ \color{red} Theorem 17.2.5: Sign of derivative determines increasing/decreasing }
 
     \hspace{1cm}
     Suppose f is differentiable on (a,b).
@@ -326,7 +325,7 @@
         Suppose $f'(a) < \lambda < f'(b)$.
         Let g(t) = f(t) - $\lambda$t.
 
-        Since f(t),x are differentiable on [a,b],
+        Since f(t),t are differentiable on [a,b],
         then g(t) is differentiable on [a,b].
 
         Then g'(a) = f'(a) - $\lambda$ $<$ 0 so g($t_1$) $<$ g(a)
@@ -341,7 +340,8 @@
 
     \vspace{0.5cm}
 
-{ \color{orange} Corollary 17.3.2:  }
+{ \color{orange} Corollary 17.3.2:
+Differentiable functions have no simple discontinuities }
 
     \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
         If f is differentiable on [a,b], then f' cannot have simple discontinuities
@@ -398,7 +398,7 @@
         Thus, there is a c $\in$ (a,b) such that $a < x < c$
         for $\frac{f'(x)}{g'(x)} < r$.
 
-        If $a < x < y < c$, then by {\color{red} theorem 17.2.3},
+        For $a < x < y < c$, then by {\color{red} theorem 17.2.3},
         there is a t $\in$ (x,y) such that:
 
         \hspace{1cm}
@@ -408,10 +408,9 @@
         If $\lim_{x \rightarrow a}$ f(x) $\rightarrow$ 0 and
         $\lim_{x \rightarrow a}$ g(x) $\rightarrow$ 0, then
         as $x \rightarrow a$,
-        $\frac{f(y)}{f(x)} \leq r < q$ for $y \in (a,c)$
+        $\frac{f(y)}{f(x)} \leq r < q$ for $y \in (a,c)$.
 
-        If $\lim_{x \rightarrow a}$ g(x) $\rightarrow$ $\infty$ or
-        $\lim_{x \rightarrow a}$ g(x) $\rightarrow$ $-\infty$, then
+        If $\lim_{x \rightarrow a}$ g(x) $\rightarrow$ $\infty$, then
         keeping y fixed, choose $c_1 \in (a,y)$ such that $g(x) > g(y)$
         and $g(x) > 0$ if $a < x < c_1$. Thus:
 
@@ -424,6 +423,8 @@
         
         Thus as $x \rightarrow a$, there is a $c_2 \in (a,c_1)$ such that
         $\frac{f(x)}{g(x)} < r < q$ for $x \in (a,c_2)$.
+
+        Proof is analogous if $\lim_{x \rightarrow a}$ g(x) $\rightarrow$ $-\infty$.
 
         Thus, $\lim_{x \rightarrow a}$ $\frac{f(x)}{g(x)}$ $\rightarrow$ A.
     \end{minipage}}
@@ -443,7 +444,8 @@
         in a neighborhood of x and $f^{(n-1)}$ must be differentiable at x.
         
         If $f^{(n-1)}$ exist in a neighborhood of x, then $f^{(n-2)}$
-        must be differentiable in that neighborhood.
+        must be differentiable in that neighborhood and
+        so on until f is differentiable on that neighborhood.
     \end{adjustbox}
 
 \newpage
@@ -472,22 +474,18 @@
     \fbox{
     \begin{minipage}{15cm}
         Let M be the number defined by
-        $f(\beta) = P(\beta) + M(\beta - \alpha)^n$
-        and let
+        $f(\beta) = P(\beta) + M(\beta - \alpha)^n$.
 
-        $g(t) = f(t) - P(t) - M(t- \alpha)^n$ for $t \in [\alpha,\beta]$.
-
+        Let $g(t) = f(t) - P(t) - M(t- \alpha)^n$ for $t \in [\alpha,\beta]$.
         Thus, $g^{(n)}(t) = f^{(n)}(t) - n!M$.
 
-        Since $P^{(k)}(\alpha) = f^{(k)}(\alpha)$ for k = 0,...,n-1, then:
-
-        \hspace{1cm}
+        Also since $P^{(k)}(\alpha) = f^{(k)}(\alpha)$ for k = [0,n-1], then
         $g(\alpha) = g'(\alpha) = ... = g^{(n-1)}(\alpha) = 0$.
 
         Since the choice of M gives $g(\beta)$ = 0, then by the Mean Value Theorem,
         $g'(x_1)$ = 0 for some $x_1$ between $\alpha$ and $\beta$.
 
-        Since $g'(\alpha)$ = 0, then similarily, $g''(x_2)$ = 0
+        Since $g'(\alpha)$ = 0, then $g''(x_2)$ = 0
         for some $x_2$ between $\alpha$ and $x_1$.
 
         Thus, $g^{(n)}(x_n)$ = 0 for some $x_n$ between $\alpha$ and $x_{n-1}$
@@ -508,7 +506,48 @@
 
 \subsection{ Differentiation of Vector-Valued Functions }
 
-{ \color{red} Theorem 17.7.1: Mean Value Theorem for $\mathbb{R}^k$ }
+{ \color{blue} Definition 17.7.1: Extending derivative to Vector-Valued Functions }
+
+    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+        For vector-valued function f: t $\in$ [a,b] $\rightarrow$ $\mathbb{R}^k$,
+        the derivative of f at x:
+
+        \hspace{1cm}
+        f'(x) = $\lim_{t \rightarrow x} |\frac{f(t)-f(x)}{t-x}|$
+
+        if the limit exist as defined by {\color{blue} definition 14.1.1}.
+
+        \vspace{0.2cm}
+
+        If f = ($f_1, ... , f_k$), then f' = ($f_1', ... , f_k'$)
+        and f is differentiable at x if and only if $f_1, ... , f_k$ are
+        differentiable at x.
+
+        \vspace{0.1cm}
+
+        Thus, by {\color{red} theorem 14.2.7}, these theorems hold true
+        for vector-valued functions:
+
+        \begin{enumerate}[label=-, leftmargin=0.7cm, itemsep=0.1cm]
+            \item {\color{red} 17.1.2}:
+                If f is differentiable at x, then f is continuous at x.
+            
+            \item {\color{red} 17.1.3a$\backslash$b}:
+                If f,g are differentiable at x, then f+g,f$\cdot$g
+                are differentiable at x. 
+        \end{enumerate}
+
+        \vspace{0.1cm}
+
+        However, {\color{red} theorem 17.2.4: Mean Value Theorem}
+        and {\color{red} theorem 17.4.1: L'Hospital's Rule}
+        does not always hold true since {\color{red} theorem 17.1.3c},
+        dividing vectors by vectors, is not defined for vector-valued functions.
+    \end{adjustbox}
+
+    \vspace{0.5cm}
+
+{ \color{red} Theorem 17.7.2: Mean Value Theorem for $\mathbb{R}^k$ }
 
     \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
         Suppose f is a continuous mapping of [a,b] into $\mathbb{R}^k$

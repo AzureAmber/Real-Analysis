@@ -52,16 +52,16 @@
 \contentsline {subsection}{\numberline {14.2} Continuous Functions }{50}{subsection.14.2}%
 \contentsline {section}{\numberline {15}Day 15: Continuity Properties}{52}{section.15}%
 \contentsline {subsection}{\numberline {15.1} Continuity and Compactness }{52}{subsection.15.1}%
-\contentsline {subsection}{\numberline {15.2} Continuity and Connectedness }{53}{subsection.15.2}%
-\contentsline {section}{\numberline {16}Day 16: Discontinuities}{54}{section.16}%
-\contentsline {subsection}{\numberline {16.1} Discontinuities }{54}{subsection.16.1}%
-\contentsline {subsection}{\numberline {16.2} Monotonic Functions }{54}{subsection.16.2}%
-\contentsline {subsection}{\numberline {16.3} Infinite Limits and Limits at Infinity }{55}{subsection.16.3}%
-\contentsline {section}{\numberline {17}Day 17: Differentiation}{56}{section.17}%
-\contentsline {subsection}{\numberline {17.1} Derivative of a function }{56}{subsection.17.1}%
-\contentsline {subsection}{\numberline {17.2} Mean Value Theorems}{57}{subsection.17.2}%
-\contentsline {subsection}{\numberline {17.3} Continuity of Derivatives }{58}{subsection.17.3}%
-\contentsline {subsection}{\numberline {17.4} L'Hospital's Rule }{59}{subsection.17.4}%
-\contentsline {subsection}{\numberline {17.5} Derivative of Higher Order }{59}{subsection.17.5}%
-\contentsline {subsection}{\numberline {17.6} Taylor's Theorem }{60}{subsection.17.6}%
-\contentsline {subsection}{\numberline {17.7} Differentiation of Vector-Valued Functions }{60}{subsection.17.7}%
+\contentsline {subsection}{\numberline {15.2} Continuity and Connectedness }{54}{subsection.15.2}%
+\contentsline {section}{\numberline {16}Day 16: Discontinuities}{55}{section.16}%
+\contentsline {subsection}{\numberline {16.1} Discontinuities }{55}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2} Monotonic Functions }{55}{subsection.16.2}%
+\contentsline {subsection}{\numberline {16.3} Infinite Limits $\backslash $ Limits at Infinity }{56}{subsection.16.3}%
+\contentsline {section}{\numberline {17}Day 17: Differentiation}{57}{section.17}%
+\contentsline {subsection}{\numberline {17.1} Derivative of a function }{57}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2} Mean Value Theorems}{58}{subsection.17.2}%
+\contentsline {subsection}{\numberline {17.3} Continuity of Derivatives }{59}{subsection.17.3}%
+\contentsline {subsection}{\numberline {17.4} L'Hospital's Rule }{60}{subsection.17.4}%
+\contentsline {subsection}{\numberline {17.5} Derivative of Higher Order }{60}{subsection.17.5}%
+\contentsline {subsection}{\numberline {17.6} Taylor's Theorem }{61}{subsection.17.6}%
+\contentsline {subsection}{\numberline {17.7} Differentiation of Vector-Valued Functions }{61}{subsection.17.7}%
