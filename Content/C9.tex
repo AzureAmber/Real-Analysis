@@ -1,173 +1,234 @@
 \newpage
-\section[Day 9: Perfect \& Connected Sets]{Perfect and Connected Sets}
 
-\subsection{ Perfect Sets }
+\section[Day 9: Limits \& Special Sequences]{ Limits and Special Sequences }
 
-{ \color{blue} Definition 9.1.1: Perfect Set } 
+\subsection{ Upper and Lower Limits } 
 
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		E $\subset$ X is perfect if E is closed and if every p $\in$ E
-		is p $\in$ E'. \\
-	\end{adjustbox}
+	\begin{definition}{Infinite limits}{14cm}
+		Let \{$s_n$\} be a sequence of real numbers such that:
 
-{ \color{red} Theorem 9.1.2: Perfect sets are uncountable } 
+		\hspace{1cm}
+		For every real M, there is a N $\in$ $\mathbb{Z}$ such that
+		for n $\geq$ N, $s_n$ $\geq$ M.
 
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Let P be a nonempty perfect set in $\mathbb{R}^k$.
-		Then, P is uncountable.
-	\end{adjustbox}
+		\hspace{2cm}
+		Then, $s_n$ $\rightarrow$ $+\infty$.
 
-{ \color{magenta} \underline{Proof} }
+		\hspace{1cm}
+		For every real M, there is a N $\in$ $\mathbb{Z}$ such that
+		for n $\geq$ N, $s_n$ $\leq$ M.
 
-	\fbox{
-	\begin{minipage}{15cm}
-		Since P has limit points, then by {\color{red} theorem 7.1.4},
-		P is infinite.
+		\hspace{2cm}
+		Then, $s_n$ $\rightarrow$ $-\infty$.		
+	\end{definition}
+	
+	\vspace{0.5cm}
 
-		Suppose P is countable. Then let $x_1, x_2, ...$ $\in$ P.
 
-		Let $V_i$ be a neighborhood of $x_i$ where y $\in$ $V_i$ for any
-		y $\in$ $\mathbb{R}^k$ such that $|y-x_i|$ $<$ r.
 
-		Thus, the $\overline{V_i}$ is the set of all y $\in$ $\mathbb{R}^k$
-		such that $|y-x_i|$ $\leq$ r.
+	\begin{definition}{Upper and Lower Limits}{14cm}
+		Let \{$s_n$\} $\subset$ $\mathbb{R}$
+		and E contain all subsequential limits of \{$s_n$\}
+		plus possibly $\pm$$\infty$.
 
-		Since every $x_i$ are limit points, then any $V_i$ $\cap_{}^{}$ P
-		is not empty where there is a $V_{i+1}$
+		Then, the upper limit of \{$s_n$\}:
 
-		\begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
-			\item $\overline{V_{i+1}}$ $\subset$ $V_i$
-			\item $x_i$ $\not \in$ $\overline{V_{i+1}}$
-			\item $V_{i+1}$ $\cap_{}^{}$ P is nonempty
-		\end{enumerate}
+		\hspace{1cm}
+		$s^*$ = sup(E) 
+		\hspace{1cm} 
+		$\lim_{n \rightarrow \infty}$ sup($s_n$) = $s^*$
 
-		Let $K_i$ = $\overline{V_i}$ $\cap_{}^{}$ P.
-		Since $\overline{V_i}$ is closed and bounded, then by
-		{\color{red} theorem 8.3.11}, $\overline{V_i}$ is compact.
-		Since $x_i$ $\not \in$ $K_{i+1}$, then no $x_i$ $\in$ P is
-		$x_i$ $\in$ $\cap_{}^{}$ $K_i$.
-		Since $K_n$ $\subset$ P, then $\cap_{}^{}$ $K_i$ is empty
-		which contradicts {\color{orange} corollary 8.3.8 } since
-		each $K_i$ is nonempty and $K_{i+1}$ $\subset$ $K_i$.
-	\end{minipage} }
+		Then, the lower limit of \{$s_n$\}:
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.3]{Images/9.1.2.png}
-\end{figure}
+		\hspace{1cm}
+		$s_*$ = inf(E) 
+		\hspace{1.2cm} 
+		$\lim_{n \rightarrow \infty}$ inf($s_n$) = $s_*$
+	\end{definition}
+	
 
-{ \color{orange} Corollary 9.1.3: $\mathbb{R}$ is not countable } 
 
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Every interval [a,b] is uncountable.
-		Thus, $\mathbb{R}$ is uncountable.
-	\end{adjustbox}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.3]{Images/9.1.2.png}
+	\end{figure}
 
-{ \color{magenta} \underline{Proof} }
 
-	\fbox{
-	\begin{minipage}{15cm}
-		Since [a,b] is closed and every p $\in$ [a,b] is a limit point,
-		then nonempty set [a,b] is perfect.
-		Thus, by {\color{red} theorem 9.1.2}, [a,b] is uncountable.
-	\end{minipage} }
 
-\newpage
+	\begin{wtheorem}{Upper and Lower limits are unique}{14cm}
+		Let \{$s_n$\} be a sequence of real numbers.
+		Let E be the set of subsequential limits and
+		$s^*$ be the upper limit of \{$s_n$\}. Then:
+	\end{wtheorem}
 
-{ \color{blue} Definition 9.1.4: Cantor Sets } 
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+		\item $s^*$ $\in$ E
 
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		There exists perfect segments in $\mathbb{R}^1$ which contain no segment.
+			\begin{proof}[13.5cm]
+				If $s^*$ = $+\infty$, then there is a
+				\{$s_{n_k}$\} $\rightarrow$ $+\infty$ so E is not bounded above.
+				
+				If $s^*$ $\in$ $\mathbb{R}$, then E is bounded above so
+				$s^*$ $\in$ E'.
 
-		Let $E_0$ = [0,1].
+				Then by {\color{red} theorem 8.2.4}, $s^*$ $\in$ E.
 
-		For $E_1$, remove ($\frac{1}{3}$,$\frac{2}{3}$).
-		Thus, $E_1$ = [0,$\frac{1}{3}$] $\cup_{}^{}$ [$\frac{2}{3}$,1].
+				If $s^*$ = $-\infty$, then there are no subsequential limits
+				in E.
+				Thus, for every M, there is a N such that for n $\geq$ N,
+				$s_n$ $\leq$ M so $-\infty$ $\in$ E.				
+			\end{proof}
 
-		For $E_2$, remove ($\frac{1}{9}$,$\frac{2}{9}$) and ($\frac{7}{9}$,$\frac{8}{9}$).
-		Thus, $E_2$ = [0,$\frac{1}{9}$] $\cup_{}^{}$ [$\frac{2}{9}$,$\frac{3}{9}$] $\cup_{}^{}$
-		[$\frac{6}{9}$,$\frac{7}{9}$] $\cup_{}^{}$ [$\frac{8}{9}$,1].
-
-		Continuing such a sequence, the set of compact sets $E_n$ are such that:
-
-		\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-			\item $E_{n+1}$ $\subset$ $E_n$
-			\item $E_n$ is the union of $2^n$ intervals each of length $3^{-n}$.
-		\end{enumerate}
-
-		P = $\cap_{}^{}$ $E_n$ is called the Cantor set.
-		P is compact and nonempty.
-
-		Thus, any segment of form $(\frac{3k+1}{3^m},\frac{3k+2}{3^m})$
-		where k,m $\in$ $\mathbb{Z}_+$ has no points in common with P.
-		Since any segment (a,b) contain a segment of such a form since
-		$3^{-m}$ $<$ $\frac{b-a}{6}$, then P contains no segment.
-
-		Let x $\in$ P and segment S contain x. Let $I_n$ be an interval of
-		$E_n$ containing x. Then choose a large enough n so $I_n$ $\subset$ S.
+		\item If x $>$ $s^*$, there is a N such that for n $\geq$ N, $s_n$ $<$ x
 		
-		Let $x_n$ be an endpoint of $I_n$ where $x_n$ $\not =$ x and thus,
-		x is a limit point. Since P is closed and every p $\in$ P is p $\in$ P',
-		then P is perfect.
-	\end{adjustbox}
+			\begin{proof}[13.5cm]
+				Suppose there is a x $>$ $s^*$ such that $s_n$ $\geq$ x
+				for infinitely many n.
 
+				Then, there is a y $\in$ E where y $\geq$ x $>$ $s^*$
+				which contradicts $s^*$ = sup(E).
+			\end{proof}
 
-
-
-
-\subsection{ Connected Sets }
-
-{ \color{blue} Definition 9.2.1: Connected Set } 
-
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		A,B $\subset$ X are separated if both
-		A $\cap_{}^{}$ $\overline{B}$ and
-		$\overline{A}$ $\cap_{}^{}$ B are empty.
-
-		E $\subset$ X is connected if E is not the union of two nonempty
-		separated sets.
-
-		Separated sets are disjoint, but disjoint sets need not be separated. \\
-	\end{adjustbox}
-
-{ \color{red} Theorem 9.2.2: All points between points in connected sets exists } 
-
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		E $\subset$ $\mathbb{R}^1$ is connected if and only if:
-
-		\hspace{1cm} If x,y $\in$ E and x $<$ z $<$ y, then z $\in$ E.
-	\end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-	\fbox{
-	\begin{minipage}{15cm}
-		If there exists x,y $\in$ E and z $\in$ (x,y) such that z $\not \in$ E,
-		then E = $A_z$ $\cup_{}^{}$ $B_z$ where
+		\item $s^*$ is the only number that satisfies (a) and (b)
 		
-		$A_z$ = E $\cap_{}^{}$ ($-\infty,z$)
-		and $B_z$ = E $\cap_{}^{}$ ($z,\infty$).
+			\begin{proof}[13.5cm]
+				Suppose p,q satisfy part a and b where p $<$ q.
+				Choose x where p $<$ x $<$ q.
+				Since p satisfies b, then $s_n$ $<$ x for n $\geq$ N.
+				Thus, x is an upper bound for E so q $\not \in E$ since q $>$ x
+				contradicting that q satisfies part a.
+			\end{proof}
+	\end{enumerate}
 
-		Since x $\in$ $A_z$ and y $\in$ $B_z$, then A and B are nonempty.
-		Since $A_z$ $\subset$ ($-\infty,z$) and
+	\hspace{1cm}
+	The same properties are analogous for $s_*$.
+
+	\newpage
+
+
+
+	\begin{wtheorem}{Inf \& Sup of $s_n$ $\leq$ $t_n$}{14cm}
+		If $s_t$ $\leq$ $t_n$ for n $\geq$ fixed N, then
+
+		\hspace{0.5cm}
+		$\lim_{n \rightarrow \infty}$ inf($s_n$)
+		$\leq$
+		$\lim_{n \rightarrow \infty}$ inf($t_n$)
+
+		\hspace{0.5cm}
+		$\lim_{n \rightarrow \infty}$ sup($s_n$)
+		$\leq$
+		$\lim_{n \rightarrow \infty}$ sup($t_n$)
+	\end{wtheorem}
+
+	\begin{proof}
+		Let $E_1$ be the set of extended reals x such that
+		\{$s_{n_k}$\} $\rightarrow$ x for some \{$s_{n_K}$\}.
+
+		Let $E_2$ be the set of extended reals y such that
+		\{$t_{n_k}$\} $\rightarrow$ y for some \{$s_{n_K}$\}.
+
+		Let $s^*$ = sup($E_1$), $s_*$ = inf($E_1$),
+		$t^*$ = sup($E_2$), and $t_*$ = inf($E_2$).
+
+		Since there is a N such that $s_n$ $\leq$ $t_n$ for n $\geq$ N,
+		then:
 		
-		$B_z$ $\subset$ ($z_,\infty$),
-		then $A_z$ and $B_z$ are separated. Thus, E is not connected.
+		\hspace{1cm}
+		x $\leftarrow$ \{$s_{N}, s_{N+1}, ... $\}
+		$\leq$ \{$t_{N}, t_{N+1}, ... $\} $\rightarrow$ y
 
-		\vspace{0.2cm}
+		Thus, for n $\geq$ N, inf($s_n$) $\leq$ inf($t_n$)
+		and sup($s_n$) $\leq$ sup($t_n$).
+	\end{proof}
 
-		Suppose E is not connected. Then, there are nonempty separated sets
-		A and B such that A $\cup_{}^{}$ B = E. Pick x $\in$ A, y $\in$ B
-		where x $<$ y. Let z = sup(A $\cap_{}^{}$ [x,y]).
+	\vspace{0.5cm}
 
-		Since, z $\in$ $\overline{A}$ so z $\not \in$ B, then x $\leq$ z $<$ y.
-		If z $\not \in$ A, then x $<$ z $<$ y so z $\not \in$ E.
 
-		If z $\in$ A, then z $\not \in$ $\overline{B}$ and thus,
-		there exists a $z_1$ such that z $<$ $z_1$ $<$ y and $z_1$ $\not \in$ B.
-		Then, x $<$ $z_1$ $<$ y so $z_1$ $\not \in$ E.
-	\end{minipage} }
 
+
+
+\subsection{ Special Sequences }
+
+	\begin{ltheorem}{Special sequences}{1.5cm}
+		\item If p $>$ 0, then $\lim_{n \rightarrow \infty}$ $\frac{1}{n^p}$ = 0
+		
+			\begin{proof}[14cm]
+				For $\epsilon$ $>$ 0, let N $>$ $\sqrt[p]{\frac{1}{\epsilon}}$.
+				Then for n $\geq$ N,
+				$\lim_{n \rightarrow \infty}$ $\frac{1}{n^p}$
+				$\leq$ $\frac{1}{N^p}$
+				$<$ $\frac{1}{\sqrt[p]{\frac{1}{\epsilon}}^p}$ = $\epsilon$				
+			\end{proof}
+
+		\item If p $>$ 0, then $\lim_{n \rightarrow \infty}$ $\sqrt[n]{p}$ = 1
+		
+			\begin{proof}[14cm]
+				If p $>$ 1, then let $x_n$ = $\sqrt[n]{p}$ - 1 $>$ 0.
+
+					\hspace{1cm}
+					p = $(x_n + 1)^n$
+					= $x_n^n + nx_n^{n-1} + ... + nx_n + 1$
+					$\geq$ $nx_n + 1$
+
+					Thus, 0 $<$ $x_n$ $\leq$ $\frac{p-1}{n}$ so
+					\{$x_n$\} $\rightarrow$ 0 and thus,
+					\{$\sqrt[n]{p}$\} $\rightarrow$ 1.
+
+					If p = 1, then $\lim_{n \rightarrow \infty}$ $\sqrt[n]{p}$
+					= $\lim_{n \rightarrow \infty}$ 1 = 1.
+
+					If 0 $<$ p $<$ 1, then $\frac{1}{p}$ $>$ 1.
+					From the proof above for p $>$ 1,
+					\{$\sqrt[n]{\frac{1}{p}}$\} $\rightarrow$ 1.
+
+					Thus, \{$\frac{1}{\sqrt[n]{p}}$\} $\rightarrow$ 1
+					so \{$\sqrt[n]{p}$\} $\rightarrow$ 1.
+			\end{proof}
+
+		\item $\lim_{n \rightarrow \infty}$ $\sqrt[n]{n}$ = 1
+
+			\begin{proof}[14cm]
+				Let $x_n$ = $\sqrt[n]{n}$ - 1 $\geq$ 0
+				Then, n = ($x_n$ + 1)$^n$ $\geq$ $\frac{n(n-1)}{2} x_n^2$.
+
+				Thus, 0 $\leq$ $x_n$ $\leq$ $\sqrt{\frac{2}{n-1}}$
+				so \{$x_n$\} $\rightarrow$ 0 and thus,
+				\{$\sqrt[n]{n}$\} $\rightarrow$ 1.				
+			\end{proof}
+
+		\item If p $>$ 0 and $\alpha$ $\in$ $\mathbb{R}$, then
+			$\lim_{n \rightarrow \infty}$ $\frac{n^{\alpha}}{(1+p)^n}$ = 0
+
+			\begin{proof}[14cm]
+				Let k $\in$ $\mathbb{Z}$ such that k $>$ $\alpha$ and k $>$ 0.
+				For n $>$ 2k:
+
+				\hspace{1cm}
+				(1+p)$^n$ $>$ $\binom{n}{k} p^k$
+				= $\frac{n(n-1)...(n-k+1)}{k!} p^k$
+				$>$ $\frac{n^k p^k}{2^k k!}$
+
+				Thus, 0 $<$ $\frac{n^{\alpha}}{(1+p)^n}$
+				$<$ $\frac{2^k k!}{p^k} n^{\alpha - k}$.
+				
+				Since $\alpha$ - k $<$ 0, then \{$n^{\alpha - k}$\} $\rightarrow$ 0
+				so \{$\frac{n^{\alpha}}{(1+p)^n}$\} $\rightarrow$ 0.				
+			\end{proof}
+
+		\item If $|x|$ $<$ 1, then $\lim_{n \rightarrow \infty}$ $x^n$ = 0
+
+			\begin{proof}[14cm]
+				From part d, let $\alpha$ = 0.
+
+				Thus, $\lim_{n \rightarrow \infty}$ $\frac{1}{(1+p)^n}$ = 0
+				and since p $>$ 0, then $\frac{1}{(1+p)^n}$ = $(\frac{1}{1+p})^n$ $<$ 1.
+
+				Also, $-\lim_{n \rightarrow \infty}$ $\frac{1}{(1+p)^n}$
+				= $\lim_{n \rightarrow \infty}$ $\frac{-1}{(1+p)^n}$ = 0
+				so $\frac{-1}{(1+p)^n}$ = $(\frac{-1}{1+p})^n$ $>$ -1.				
+			\end{proof}
+	\end{ltheorem}
 
 
 

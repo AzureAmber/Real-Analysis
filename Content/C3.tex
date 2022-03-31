@@ -1,367 +1,240 @@
 \newpage
-\section[Day 3: Roots and the Complex Field]{Roots \& Complex Field}
-
-\subsection{nth Root}
-
-	\begin{enumerate}[label=(\alph*), leftmargin=1.5cm, itemsep=0.1cm]
-		\item If 0 $<$ t $\leq$ 1, then t$^\text{n}$ $ \leq $ t.
-
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{13.5cm}
-				Since t $>$ 0 and t $\leq$ 1, then t$^\text{2}$ $\leq$ t.
-
-				Since t$^\text2{}$ $\leq$ t, then t$^\text{3}$ $\leq$ t$^\text{2}$
-				so t$^\text{3}$ $\leq$ t$^\text{2}$ $\leq$ t.
-
-				Applying the process n times, then t$^\text{n}$ $\leq$ t.
-			\end{minipage} }
-
-		\item If t $\geq$ 1, t$^\text{n}$ $ \geq $ t.
-
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{13.5cm}
-				Since 0 $<$ 1 $\leq$ t, then t $\leq$ t$^\text{2}$.
-
-				Since t $\leq$ t$^\text{2}$, then t$^\text{2}$ $\leq$ t$^\text{3}$
-				so t $\leq$ t$^\text{2}$ $\leq$ t$^\text{3}$.
-
-				Applying the process n times, t $\leq$ t$^\text{n}$.
-			\end{minipage} }
-
-		\item If 0 $<$ s $<$ t, then s$^\text{n}$ $<$ t$^\text{n}$.
-
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{13.5cm}
-				$\underbrace{\text{s} \cdot \text{s} \cdot ... \cdot \text{s}}_\text{n}$
-				$<$ t $\cdot$ s $\cdot$ ... $\cdot$ s
-				$<$ t $\cdot$ t $\cdot$ ... $\cdot$ s $<$ ... $<$
-				$\underbrace{\text{t} \cdot ... \cdot \text{t}}_\text{n}$
-			\end{minipage} }
-	\end{enumerate}
-
-	\vspace{0.5cm}
-
-{ \color{red} Theorem 3.1.1: y$^\text{n}$ = x has a unique y }
+\section[Day 3: Existence of $\mathbb{R}$]{Construction of $\mathbb{R}$}
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Fix n $\in$ $\mathbb{Z}_+$. For every x $>$ 0, there exists a unique y
-		$\in$ $ \mathbb{R} $ such that y$^\text{n}$ = x.
+		There exists an ordered field $\mathbb{R}$ which has the
+		least upper bound property.
 
-		Also, such a y is written as y = $\sqrt[n]{\text{x}}$
-		= x$^{\frac{1}{\text{n}}}$.
+		Also, $\mathbb{R}$ contains $\mathbb{Q}$ as a subfield. \\
 	\end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-	\fbox{
-	\begin{minipage}{15cm}
-		{ \color{lblue} Uniqueness: }
-
-		y is unique since if y$_{1}$ $<$ y$_{2}$, then
-		x = y$_{1}^\text{n}$ $<$ y$_{2}^\text{n}$ $\neq$ x.
-
-		{ \color{lblue} Existence: }
-
-		Let set A = \{ t $>$ 0 : t$^\text{n}$ $<$ x \}.
-
-		A $\not =$ $\emptyset$ since let t$_{1}$ = $\frac{x}{x+1}$ $<$ 1 so t$_1$ $<$ x
-		and thus, 0 $<$ t$_{1}$$^\text{n}$ $<$ t$_{1}$ $<$ x so t$_{1}$ $\in$ A.
-
-		A is bounded above since if t $ \geq $ x+1, then
-		t $>$ 1 so t$^\text{n}$ $ \geq $ t $ \geq $ x+1 $>$ x so t $\not \in$ A.
-
-		So x+1 is an upper bound of A.
-
-		Thus by the least upper bound property, y = sup(A) exists.
-
-		For y$^\text{n}$ = x, show y$^\text{n}$ $<$ x and
-		y$^\text{n}$ $>$ x cannot hold true.
-
-		***(Not an upper bound of A if $<$ and not a least upper bound of A if $>$)***
-
-		For 0 $<$ $\alpha$ $<$ $\beta$:
-
-		\hspace{1cm}
-		$\beta ^\text{n}$ - $\alpha^\text{n}$
-		= ($\beta$ - $\alpha$) ($\underbrace{\beta^{n-1}
-		+ \beta^{n-2}\alpha^1 + ... + \alpha^{n-1}}
-		_{\beta^{n-1} \hspace{0.7cm} <\beta^{n-1} \hspace{1.3cm} <\beta^{n-1}}$)
-		$<$ ($\beta - \alpha$)n$\beta$$^\text{n-1}$ 
-
-		Suppose y$^\text{n}$ $<$ x. Pick 0 $<$ h $<$ 1 and
-		h $<$ $\frac{x-y^n}{n(y+1)^{n-1}}$.
-
-		\hspace{1cm}
-		From inequality, let $\beta$ = y+h and $\alpha$ = y
-
-		\hspace{1cm}
-		(y+h)$^\text{n}$ - y$^\text{n}$ $<$ hn(y+h)$^\text{n-1}$
-		$<$ hn(y+1)$^\text{n-1}$ $<$ x - y$^\text{n}$
-
-		\begin{adjustbox}{minipage=14.2cm, right, vspace=0.1cm 0cm}
-			Thus, (y+h)$^\text{n}$ $<$ x so y+h $\in$ A and thus, not an upper bound of A
-			which is a contradiction since y = sup(A).
-		\end{adjustbox}
-
-		Suppose y$^\text{n}$ $>$ x.
-		Pick 0 $<$ k = $\frac{y^n - x}{ny^{n-1}}$ $<$ $\frac{y^n}{ny^{n-1}}$
-		= $\frac{1}{n}y$ $<$ y.
-
-		\hspace{1cm}
-		Consider t $ \geq $  y-k, then:
-		y$^\text{n}$ - t$^\text{n}$ $ \leq $  y$^\text{n}$ - (y-k)$^\text{n}$ $<$
-		kny$^\text{n-1}$ = y$^\text{n}$ - x
-
-		\hspace{1cm}
-		Thus, t$^\text{n}$ $>$ x so t $\not \in$ A.
-
-		\hspace{1cm}
-		Thus, y-k is an upper bound of A which is a contradiction since y = sup(A).
-
-		Since y$^\text{n}$ $<$ x and y$^\text{n}$ $>$ x, then y$^\text{n}$ = x.
-	\end{minipage} } 
-
-\newpage
-
-{ \color{orange} Corollary 3.1.2: n-th root of product = product of n-th root} 
+	
+{ \color{blue} Definition 5.1: Cuts }
 
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		If a,b $>$ 0 and n $\in$ $\mathbb{Z}_+$, then
-		(ab)$^{\frac{1}{n}}$ = a$^{\frac{1}{n}}$b$^{\frac{1}{n}}$.  
+		Define a cut as any set $\alpha$ $\subset$ $\mathbb{Q}$ with the properties:
 	\end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-	\fbox{
-	\begin{minipage}{15cm}
-		Let A = a$^{\frac{1}{n}}$ and B = b$^{\frac{1}{n}}$.
-
-		Then by {\color{red} theorem 3.1.1}, since A is a solution to
-		$y_1^n$ = a, then A$^n$ = a.
-
-		Similarly, B is a solution of $y_2^n$ = b so B$^n$ = b. Thus:
-
-		\hspace{1cm} ab = $A^n$$B^n$ = $A_1A_2...A_nB_1B_2...B_n$
-
-		\hspace{1.6cm} = $A_1A_2...B_1A_nB_2...B_n$
-		= ... = $A_1B_1A_2...A_{n-1}A_nB_2...B_n$
-
-		\hspace{1.6cm} = ... = $A_1B_1A_2B_2...A_nB_n$ = $(AB)^n$
-
-		Then again by {\color{red} theorem 3.1.1}, there is a unique
-		(ab)$^{\frac{1}{n}}$ = AB = a$^{\frac{1}{n}}$b$^{\frac{1}{n}}$.
-	\end{minipage}}
-
-
-
-
-	
-\subsection{Decimals}
-
-	Let n$_0$ be the largest integer such that n$_0$ $\leq$ x for
-	x $>$ 0 $\in$ $\mathbb{R}$.
-
-	Then let n$_k$ be the largest integer such that
-	d$_k$ = n$_0$ + $\frac{n_1}{10}$ + ... + $\frac{n_k}{10^k}$ $\leq$ x
-
-	Let E be the set of d$_k$ for k = 0, 1, ... $\infty$. Then, x = sup(E).
-
-
-
-
-
-\subsection{Extended Reals}
-
-	The extended real number system consist of $\mathbb{R}$
-	and $\pm$$\infty$ such that:
-
-	\hspace{1cm}
-	-$\infty$ $<$ x $<$ $\infty$ \hspace{1cm} for every x $\in$ $\mathbb{R}$
-
-	with the properties:
-	\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
-		\item x $\pm$ $\infty$ = $\pm$$\infty$
-	
-		\item x / $\pm$$\infty$ = 0
-
-		\item If x $>$ 0, then x($\pm$$\infty$) = $\pm$$\infty$
-
-		\item If x $<$ 0, then x($\pm$$\infty$) = $\mp$$\infty$
-	\end{itemize}
-
-
-
-
-
-\subsection{Complex Numbers}
-
-{ \color{blue} Definition 3.4.1: Complex } 
-	
-	\hspace{1cm}
-	A complex number is an ordered pair (a,b) where a,b $\in$ $ \mathbb{R} $.
-	For x,y $\in$ $\mathbb{C}$
 
 	\begin{itemize}[leftmargin=2cm, itemsep=0.1cm]
-		\item x + y = (a,b) + (c,d) = (a + c , b + d)
-		\item xy = (a,b) (c,d) = (ac - bd , ad + bc)
-		\item $\frac{1}{\text{x}}$  = (a$^2$ + b$^2$)(a,-b)
+		\item $\alpha$ is not empty and $\alpha$ $\not =$ $\mathbb{Q}$
+		
+		\item If p $\in$ $\alpha$ and q $\in$ $\mathbb{Q}$ $<$ p,
+			then q $\in$ $\alpha$
+		
+			\item If p $\in$ $\alpha$, then p $<$ r $\in$ $\mathbb{Q}$ for
+			some r $\in$ $\alpha$ \\
 	\end{itemize}
 
-	\qquad Thus, the axioms form a field where (0,0) = 0 and (1,0) = 1 and (0,1) = i. \\
+{ \color{blue} Proposition 5.2: Order of $\mathbb{R}$ $\rightarrow$ ordered set $\mathbb{R}$ }
 
-{ \color{blue} Definition 3.4.2: Imaginary i } 
-	
-	\hspace{1cm}
-	Let i = (0,1). Then, i$^2$ = -1.
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		Define $\alpha$ $<$ $\beta$ if $\alpha$ is a proper subset of $\beta$.
 
-{ \color{magenta} \underline{Proof} }
+		\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
+			\item If $\alpha$ $\not \geq$ $\beta$, then $\beta$ is not a subset of $\alpha$.
 
-	\fbox{
-	\begin{minipage}{15cm}
-		i$^\text{2}$ = (0,1)(0,1) = (0-1,0+0) = (-1,0) = -1
-	\end{minipage} }
-	
-	 \vspace{0.5cm}
+				Then there is a p $\in$ $\beta$ such that p $\not \in$ $\alpha$.
 
-{ \color{blue} Definition 3.4.3: Form a + bi } 
-	
-	\qquad (a,b) = a + bi
+				Then for any q $\in$ $\alpha$, q $<$ p and thus, q $\in$ $\beta$.
 
-{ \color{magenta} \underline{Proof} }
+				Thus, $\alpha$ $\subset$ $\beta$ and since $\alpha$ $\neq$ $\beta$,
+				then $\alpha$ $<$ $\beta$.
 
-	\fbox{
-	\begin{minipage}{15cm}
-		(a,b) = (a,0) +(0,b) = (a,0) + (b,0)(0,1) = a + bi
-	\end{minipage} }
+			\item If $\alpha$ $\not <$ $\beta$ and $\alpha$ $\not >$ $\beta$,
+				then either $\alpha$ = $\beta$ or $\alpha$ $\neq$ $\beta$.
+
+				If $\alpha$ $\neq$ $\beta$, there are p,q such that
+				p $\in$ $\alpha$, but p $\not \in$ $\beta$ and q $\in$ $\beta$,
+				but q $\not \in$ $\alpha$.
+
+				But if p $\not \in$ $\beta$, then for any b $\in$ $\beta$, b $<$ p.
+				Thus, q $<$ p.
+
+				Similarly, if q $\not \in$ $\alpha$, then for any a $\in$ $\alpha$,
+				a $<$ q. Thus, p $<$ q.
+
+				Thus, there is a contradiction since p $>$ q and p $<$ q so
+				$\alpha$ = $\beta$.
+
+			\item If $\alpha$ $\not \leq$ $\beta$, then $\alpha$ is not a subset of $\beta$.
+
+				Then there is a p $\in$ $\alpha$ such that p $\not \in$ $\beta$.
+
+				Then for any q $\in$ $\beta$, q $<$ p and thus, q $\in$ $\alpha$.
+
+				Thus, $\beta$ $\subset$ $\alpha$ and since $\alpha$ $\neq$ $\beta$,
+				then $\beta$ $<$ $\alpha$.
+
+			\item If $\alpha$ $<$ $\beta$ and $\beta$ $<$ $\gamma$, then since
+				$\alpha$ is a proper subset of $\beta$ and $\beta$ is a proper subset
+				of $\gamma$, then $\alpha$ is a proper subset of $\gamma$.
+				Thus, $\alpha$ $<$ $\gamma$.
+		\end{itemize}
+
+		Thus, $\mathbb{R}$ is an ordered set with such an order $<$. \\
+	\end{adjustbox}
+
+{ \color{blue} Proposition 5.3: Least Upper Bound of $\mathbb{R}$
+$\rightarrow$ Least Upper Bound Property } 
+
+	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
+		Let A $\subset$ $\mathbb{R}$ and $\beta$ be an upper bound for A.
+		Let $\gamma$ be the union of all $\alpha$ $\in$ A.
+
+		Thus, p $\in$ $\gamma$ if and only if p $\in$ $\alpha$ for some $\alpha$ $\in$ A.
+
+		$\gamma$ defines a cut since:
+
+		\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
+			\item Since A is nonempty, there exists a $\alpha_0$ $\in$ A where $\alpha_0$ is nonempty.
+
+				Since $\alpha_0$ is nonempty, then $\gamma$ is nonempty.
+
+				Since every $\alpha$ $\in$ A is $\alpha$ $<$ $\beta$, then $\gamma$ $<$ $\beta$
+				so $\gamma$ $\subset$ $\beta$ and thus, $\gamma$ $\neq$ $\mathbb{Q}$.
+
+			\item If p $\in$ $\gamma$, then p $\in$ $\alpha_1$ for some $\alpha_1$ $\in$ A.
+				If q $<$ p, then q $\in$ $\alpha_1$ so q $\in$ A.
+
+			\item If p $\in$ $\gamma$, then p $\in$ $\alpha_1$ for some $\alpha_1$ $\in$ A.
+				Thus, there is a r $\in$ $\alpha_1$ such that r $>$ p so r $\in$ $\gamma$.
+				Thus, there is a r $\in$ $\gamma$ where r $>$ p.
+		\end{itemize}
+
+		Since $\gamma$ defines a cut, then $\gamma$ $\in$ $\mathbb{R}$.
+		Since every $\alpha$ $\in$ A $\subset$ $\gamma$, then $\alpha$ $\leq$ $\gamma$
+		so $\gamma$ is an upper bound for A.
+
+		Suppose $\delta$ $<$ $\gamma$. Then there is a s $\in$ $\gamma$
+		such that s $\not \in$ $\delta$.
+		Since s $\in$ $\gamma$, then there is a $\alpha$ $\in$ A such that s $\in$ $\alpha$.
+		Since $\delta$ $<$ $\alpha$, then $\delta$ is not an upper bound of A.
+
+		Thus, $\gamma$ = sup(A).
+	\end{adjustbox}
 
 \newpage
 
-{ \color{blue} Definition 3.4.4: Conjugate }
-	
+{ \color{blue} Proposition 5.4: $\mathbb{R}$ is a field} 
+
 	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Let conjugate: $\bar{z}$ = a - bi where Re(z) = a , Im(z) = b.
+		If $\alpha$, $\beta$ $\in$ $\mathbb{R}$, define $\alpha$ + $\beta$ as the set of all
+		sums r + s where r $\in$ $\alpha$ and s $\in$ $\beta$.
 
-		Let z = (a,b) and w = (c,d):
+		Also, let 0* be the set of all negative rational numbers which is a cut since:
+		
+			\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
+				\item 0* is nonempty and 0* $\not =$ $\mathbb{Q}$
+
+				\item If p $\in$ 0*, then any q $\in$ $\mathbb{Q}$ $<$ p is a negative rational
+					and thus, q $\in$ 0*.
+
+				\item Since $\mathbb{Q}$ is dense in $\mathbb{R}$, then for any p $\in$ 0*,
+					there is a r $\in$ $\mathbb{Q}$ where p $<$ r $<$ 0 so r is a
+					negative rational so r $\in$ 0*.
+			\end{itemize}
+
+		$\alpha$ + $\beta$ $\in$ $\mathbb{R}$ since $\alpha$ + $\beta$ is a cut:
+
+			\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
+				\item $\alpha$ + $\beta$ is non-empty since $\alpha$, $\beta$ are non-empty.
+					Take r' $\not \in$ $\alpha$, s' $\not \in$ $\beta$, then
+					r' + s' $>$ r + s for r $\in$ $\alpha$, s $\in$ $\beta$.
+					Thus, r' + s' $\not \in$ $\alpha$ + $\beta$ so
+					$\alpha$ + $\beta$ $\neq$ $\mathbb{Q}$.
+
+				\item If p $\in$ $\alpha$ + $\beta$, then p = r + s where r $\in$ $\alpha$
+					and s $\in$ $\beta$.
+
+					If q $<$ p, then q - s $<$ p - s = (r + s) - s = r so q - s $\in$ $\alpha$.
+
+					Since q - s $\in$ $\alpha$ and s $\in$ $\beta$, then
+					(q - s) + s = q $\in$ $\alpha$ + $\beta$.
+
+				\item If r $\in$ $\alpha$, then there is a t $\in$ $\alpha$ such that t $>$ r.
+					Let s $\in$ $\beta$.
+
+					Thus, for any p = r + s $\in$ $\alpha$ + $\beta$, there is a
+					q = t + s $\in$ $\alpha$ + $\beta$ such that p = r + s $<$ t + s = q.
+			\end{itemize}
+
+		$\alpha$ + $\beta$ = $\beta$ + $\alpha$
+
+			\qquad If p = r + s $\in$ $\alpha$ + $\beta$ where
+			r $\in$ $\alpha$, s $\in$ $\beta$, then s + r = r + s = p $\in$ $\beta$ + $\alpha$.
+
+		($\alpha$ + $\beta$) + $\gamma$  = $\alpha$ + ($\beta$ + $\gamma$)
+
+			\qquad If r $\in$ $\alpha$, s $\in$ $\beta$, t $\in$ $\gamma$, then
+			r + s + t = (r + s) + t $\in$ ($\alpha$ + $\beta$) + $\gamma$ and
+
+			\qquad r + s + t = r + (s + t) $\in$ $\alpha$ + ($\beta$ + $\gamma$).
+
+		$\alpha$ + 0* = $\alpha$
+
+			\qquad If r $\in$ $\alpha$, s $\in$ 0*, then r + s $<$ r. Thus, r + s $\in$ $\alpha$.
+			Thus, $\alpha$ + 0* $\subset$ $\alpha$.
+
+			\qquad If p $\in$ $\alpha$, there is a r $\in$ $\alpha$ where r $>$ p.
+			Thus, p - r $\in$ 0*.
+
+			\qquad Since p = r + (p - r) $\in$ $\alpha$ + 0*, then $\alpha$ $\subset$ $\alpha$ + 0*.
+			Thus, $\alpha$ + 0* = $\alpha$.
+
+		There is a -$\alpha$ such that $\alpha$ + -$\alpha$ = 0*
+
+			\qquad Fix $\alpha$ $\in$ $\mathbb{R}$. Let set $\beta$ be all p where
+			there is r $>$ 0 such that -p - r $\not \in$ $\alpha$.
+
+			\qquad $\beta$ $\in$ $\mathbb{R}$ since $\beta$ is a cut:
+
+			\begin{itemize}[leftmargin=2cm, itemsep=0.1cm]
+				\item If s $\not \in$ $\alpha$ and p = -s - 1, then -p - 1 $\not \in$ $\alpha$.
+					Thus, p $\in$ $\beta$ so $\beta$ is nonempty.
+					If q $\in$ $\alpha$, then -q $\not \in$ $\beta$ so $\beta$ $\neq$ $\mathbb{R}$.
+
+				\item If p $\in$ $\beta$, let r $>$ 0 so -p - r $\not \in$ $\alpha$.
+					If q $<$ p, then -q - r $>$ -p - r and thus, -q - r $\not \in$ $\alpha$
+					so q $\in$ $\beta$.
+
+				\item If p $\in$ $\beta$, let t = p + (r/2). Then
+					-t - (r/2) = -p - r $\not \in$ $\alpha$ and thus, t $\in$ $\beta$
+					where p $<$ t.
+			\end{itemize}
+			
+			\qquad If r $\in$ $\alpha$, s $\in$ $\beta$, then s $\not \in$ $\alpha$. Thus,
+			r $<$ -s so r + s $<$ 0. Thus, $\alpha$ + $\beta$ $\subset$ 0*.
+
+			\qquad Let v $\in$ 0* and let w = -v/2 so w $>$ 0.
+
+			\qquad Thus, by the Achimedean property, there is an integer n such that
+			nw $\in$
+
+			\qquad $\alpha$, but (n+1)w $\not \in$ $\alpha$.
+			Let p = -(n+2)w so -p - w = (n+1)w $\not \in$ $\alpha$ so p $\in$ $\beta$.
+
+			\qquad Then, v = -2w = nw + -nw - 2w = nw + -(n+2)w = nw + p $\in$ $\alpha$ + $\beta$.
+
+			\qquad Since v $\in$ 0*, then 0* $\subset$ $\alpha$ + $\beta$.
+			Thus, $\alpha$ + $\beta$ = 0*. Then, let -$\alpha$ = $\beta$.
+
+		Thus, if $\alpha$, $\beta$, $\gamma$ $\in$ $\mathbb{R}$ and $\beta$ $<$ $\gamma$, then
+		$\alpha$ + $\beta$ $<$ $\alpha$ + $\gamma$.
+
+		Thus, if $\alpha$ $>$ 0*, then -$\alpha$ = -$\alpha$ + 0* $<$ -$\alpha$ + $\alpha$ = 0*
+		so -$\alpha$ $<$ 0*.
+
+		If $\alpha$, $\beta$ $\in$ $\mathbb{R}_+$, define $\alpha$$\beta$ as the set of all p
+		such that p $\leq$ rs for r $\in$ $\alpha$, s $\in$ $\beta$.
+
+		Define 1* as the set of all q $<$ 1.
+		Then all multiplication axioms holds with similar proofs as addition.
+		Also, note since $\alpha$, $\beta$ $>$ 0*, then $\alpha$$\beta$ $>$ 0*.
+
+		Also, $\alpha$($\beta$ + $\gamma$) = $\alpha$$\beta$ + $\alpha$$\gamma$ holds
+		through cases were $\alpha$, $\beta$, $\gamma$ $>$,$<$ 0*.
 	\end{adjustbox}
+
+
+
+
 	
-	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-		\item $\overline{z+w}$ = $\overline{z}$ + $\overline{w}$
-
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{13cm}
-				$\overline{z+w}$ = $\overline{(a+c,b+d)}$ = (a+c,-b-d)
-				= (a,-b) + (c,-d) = $\overline{z}$ + $\overline{w}$
-			\end{minipage} }
-
-		\item $\overline{zw}$ = $\overline{z}$ $\overline{w}$
-
-			{ \color{magenta} \underline{Proof} }
-			
-			\fbox{
-			\begin{minipage}{13cm}
-				$\overline{zw}$ = $\overline{(ac-bd,ad+bc)}$ = (ac-bd,-ad-bc)
-				= (a,-b) (c,-d) = $\overline{z}$ $\overline{w}$
-			\end{minipage} }
-
-		\item z + $\overline{z}$ = 2 Re(z) \qquad \qquad z - $\overline{z}$ = 2i Im(z)
-
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{13cm}
-				z + $\overline{z}$ = (a,b) + (a,-b) = (2a,0) = 2 Re(z)
-
-				z - $\overline{z}$ = (a,b) - (a,-b) = (0,2b) = (0,2) b = 2i Im(z)
-			\end{minipage} }
-
-		\item z$\overline{z}$ $\geq$ 0
-
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{13cm}
-				z$\overline{z}$ = (a,b)(a,-b) = (a$^2$ + b$^2$ , -ab+ab)
-				= a$^2$ + b$^2$ $\geq$ 0
-			\end{minipage} }
-	\end{enumerate}
-
-	\vspace{0.5cm}
-
-{ \color{blue} Definition 3.4.5: Absolute Value } 
-	
-	\qquad Let absolute value: $|$ z $|$ = $\sqrt{z \overline{z}}$ \\
-
-	\qquad Let z = (a,b) and w = (c,d):
-	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-		\item If z $\neq$ 0, then $|$ z $|$ $>$ 0.
-
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{13cm}
-				$\sqrt{z\overline{z}}$ = $\sqrt{a^2 + b^2}$ $\geq$ 0
-				where $|$ z $|$ = 0 only if a,b = 0 so only if z = (0,0).
-			\end{minipage} }
-
-		\item $|$ $\overline{z}$ $|$ = $|$ z  $|$
-
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{13cm}
-				$|$ $\overline{z}$ $|$ = $\sqrt{a^2 + (-b)^2}$
-				= $\sqrt{a^2 + b^2}$ = $|$ z $|$
-			\end{minipage} }
-
-		\item $|$ zw $|$ = $|$ z $|$ $|$ w $|$
-
-			{ \color{magenta} \underline{Proof} }
-			
-			\fbox{
-			\begin{minipage}{13cm}
-				$|$ zw $|$ = $|$ (ac-bd,ad+bc) $|$ = $\sqrt{(ac-bd)^2 + (ad+bc)^2}$
-			
-				= $\sqrt{a^2c^2 + b^2d^2 + a^2d^2 + b^2c^2}$
-				= $\sqrt{(a^2+b^2)(c^2+d^2)}$
-
-				= $\sqrt{a^2+b^2}$ $\sqrt{c^2+d^2}$ = $|$ z $|$ $|$ w $|$
-			\end{minipage} }
-
-		\item $|$ Re(z) $|$ $\leq$ $|$ z $|$
-
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{13cm}
-				$|$ Re(z) $|$ = $|$ a $|$ = $\sqrt{a^2}$
-				$\leq$ $\sqrt{a^2+b^2}$ = $|$ z $|$
-			\end{minipage} }
-
-		\item $|$ z+w $|$ $ \leq $  $|$ z $|$ + $|$ w $|$
-
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{13cm}
-				$| z+w |^2$ = (z+w)$\overline{(z+w)}$
-				= (z+w)($\overline{z} + \overline{w}$)
-				= z$\overline{z}$ + z$\overline{w}$
-				+ w$\overline{z}$ + w$\overline{w}$
-			
-				= $|z|^2$ + $|w|^2$ + 2 Re(z$\overline{w}$)
-				$\leq$ $|z|^2$ + $|w|^2$ + 2 $|z\overline{w}|$
-
-				= $|z|^2$ + $|w|^2$ + 2$|z||w|$
-				= ($|z|$ + $|w|$)$^2$
-			\end{minipage} }
-	\end{enumerate}
-
-

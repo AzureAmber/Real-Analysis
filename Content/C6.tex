@@ -1,387 +1,487 @@
 \newpage
-\section[Day 6: Cardinality]{Cardinality}
+\section[Day 6: Open Relative and Compactness]{ Closure, Open Relative, \& Compact }
 
-\subsection{ Cardinality }
+\subsection{ Closure }
 
-{ \color{blue} Definition 6.1.1: Onto and 1-1 Mapping } 
+	\begin{definition}{Closure}{14cm}
+		Let E $\subset$ metric space X and E' be the set of all
+        limit points of E in X.
 
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Suppose for every x $\in$ A, there is an associated f(x) $\in$ B.
+        \qquad Then the closure of E:
+            \qquad $\overline{E}$ = E $\cup$ E'
 
-		Then f maps A into B = f: A $\rightarrow$ B.
-
-		\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
-			\item If f(A) = B, then f maps A onto B.
-			
-			\item If for each y $\in$ B, f$^{-1}$(y) consist of at most one x $\in$ A
-				where f$^{-1}$(y$_1$) = x$_1$ $\neq$ x$_2$ = f$^{-1}$(y$_2$) for
-				y$_1$ $\neq$ y$_2$, then f is a 1-1 mapping of A into B.
-		\end{itemize}
-	\end{adjustbox}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.3]{Images/6.1.1.png}
-\end{figure}
-
-{ \color{blue} Definition  6.1.2: 1-1 Correspondence} 
-
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Sets A and B are equivalent {\color{lblue} (have the same cardinality)}
-		if there is a 1-1 onto function f: A $\rightarrow$ B.
-		{\color{lblue} (1-1 correspondence between A and B)}
-		Then:
-
-		\qquad A $\sim$ B
-
-		If f: A $\rightarrow$ B is 1-1 and onto, then
-		there is a f$^{-1}$: B $\rightarrow$ A that is 1-1 and onto. \\
-	\end{adjustbox}
-
-{ \color{blue} Definition 6.1.3: Countability } 
-	\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
-		\item A is {\color{lblue} finite} if A $\sim$ J$_n$ = \{0, 1, ..., n\}
-			for some n $\in$ $\mathbb{N}$
-		\item A is {\color{lblue} infinite} if A is not finite
-		\item A is {\color{lblue} countably infinite} if A $\sim$ J = $\mathbb{Z}_+$
-		\item A is {\color{lblue} uncountable} if A is not finite or countably infinite
-		\item A is {\color{lblue} at most countable} if A is finite or countably infinite \\
-	\end{itemize}
-
-{ \color{purple} Example 6.1.4 } 
-
-	\qquad $\mathbb{Z}$ is countably infinite
-
-{ \color{magenta} \underline{Proof} }
-
-	\fbox{
-	\begin{minipage}{15cm}
-		Let f: $\mathbb{Z}_+$ $\rightarrow$ $\mathbb{Z}$
-
-		\hspace{0.5cm} f(n) = 
-		$
-		\begin{cases}
-			\frac{n}{2} & \text{n is even} \\
-			-\frac{n-1}{2} & \text{n is odd} \\
-		\end{cases}
-		$
-
-		So 1 $\mapsto$ 0 , 2 $\mapsto$ 1, 3 $\mapsto$ -1, 4 $\mapsto$ 2,
-		5 $\mapsto$ -2 , etc.
-		Thus, $\mathbb{Z}$ $\sim$ $\mathbb{Z}_+$.
-	\end{minipage} }
-
-\newpage
-
-{ \color{blue} Definition 6.1.5: Pigeonhole Principle } 
-
-	\qquad If A is finite, A is not equivalent to any proper set of A.
-
-	\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.5]{Images/6.1.5.png}
-\end{figure}
-
-{ \color{red} Theorem 6.1.6: Infinite subsets of countable sets are countable } 
-
-	\qquad An infinite subset E of a countably infinite set A is countably infinite.
-
-{ \color{magenta} \underline{Proof} }
-
-	\fbox{
-	\begin{minipage}{15cm}
-		Let E $\subset$ A be an infinite subset.
-		For every distinct $x_i$ $\in$ A, let \{ $x_1, x_2, ...$ \} $\in$ A.
-
-		Let $n_1$ be smallest integer such that x$_{n_1}$ $\in$ E.
-
-		Then let $n_2$ be the smallest integer where $n_2$ $>$ $n_1$
-		such that x$_{n_2}$ $\in$ E.
-
-		Repeat the process to create sequence
-		f(k) = \{ $x_{n_1}, x_{n_2}, ... , x_{n_k} , ...$ \}.
-
-		Thus, there is a 1-1 correspondence between E and $\mathbb{Z}_+$ so
-		E is countably infinite.
-	\end{minipage} }
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.5]{Images/6.1.6.png}
-\end{figure}
-
-
-
-
-
-\subsection{ Set of Sets } 
-
-{ \color{blue} Definition 6.2.1: Union and Intersection } 
-
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Let sets $\Omega$,B be such that for each x $\in$ $\Omega$,
-		there is an associated E$_x$ $\subset$ B.
-		\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
-			\item E = $\cup_{x=1}^{n}$ E$_x$ only if for every x $\in$ E,
-			x $\in$ E$_x$ for at least one x $\in$ $\Omega$.
-
-			\item P = $\cap_{x=1}^{n}$ E$_x$ only if for every x $\in$ P,
-			x $\in$ E$_x$ for all x $\in$ $\Omega$.
-		\end{itemize}
-		with properties:
-	\end{adjustbox}
+        with the properties:
+	\end{definition}
 
 	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-		\item A $\cup_{}^{}$ B = B $\cup_{}^{}$ A
-			\hspace{4cm} A $\cap_{}^{}$ B = B $\cap_{}^{}$ A
+        \item $\overline{E}$ is closed
+        
+			\begin{proof}[13.5cm]
+				Suppose x $\in$ X, but x $\not \in$ $\overline{E}$.
+				Thus, x $\in$ $\overline{E}^c$.
 
-		\item (A $\cup_{}^{}$ B) $\cup_{}^{}$ C = A $\cup_{}^{}$ (B $\cup_{}^{}$ C)
-			\hspace{1.6cm} (A $\cap_{}^{}$ B) $\cap_{}^{}$ C
-			= A $\cap_{}^{}$ (B $\cap_{}^{}$ C)
+				Thus, there is a N$_r(x)$ $\subset$ $\overline{E}^c$
+				since else there is always a p $\in$ N$_r(x)$ where
+				p $\in$ $\overline{E}$ so x is a limit point of $\overline{E}$
+				so x $\in$ $\overline{E}$.
+				Thus, $\overline{E}^c$ is open so $\overline{E}$ is closed by
+				{\color{red} theorem 5.1.7}.
+			\end{proof}
 
-		\item A $\subset$ A $\cup_{}^{}$ B
-			\hspace{4.8cm} (A $\cap_{}^{}$ B) $\subset$ A
+        \item E = $\overline{E}$ if and only if E is closed
+        
+			\begin{proof}[13.5cm]
+				If E = $\overline{E}$, then by part (a), E is closed.
 
-		\item If A $\subset$ B, then A $\cup_{}^{}$ B = B and A $\cap_{}^{}$ B = A
+				If E is closed, then E' $\subset$ E so
+				E = E $\cup_{}^{}$ E' = $\overline{E}$.				
+			\end{proof}
 
-			{ \color{magenta} \underline{Proof} }
+        \item $\overline{E}$ $\subset$ F for every closed F $\subset$ X
+        such that E $\subset$ F
 
-			\fbox{
-			\begin{minipage}{13cm}
-				If x $\in$ A $\cup_{}^{}$ B, then x $\in$ A or/and x $\in$ B.
-				\begin{itemize}[leftmargin=1cm, itemsep=0.2cm]
-					\item If x $\in$ A, since A $\subset$ B, then x $\in$ B.
-						Then, (A $\cup_{}^{}$ B) $\subset$ B.
-
-					\item If x $\in$ B, then immediately (A $\cup_{}^{}$ B) $\subset$ B.
-				\end{itemize}
-				If x $\in$ B, then x $\in$ A $\cup_{}^{}$ B so B $\subset$ (A $\cup_{}^{}$ B).
-				Thus, A $\cup_{}^{}$ B = B.
-
-				\vspace{0.5cm}
-
-				If x $\in$ A $\cap_{}^{}$ B, then x $\in$ A and x $\in$ B.
-				Thus, (A $\cap_{}^{}$ B) $\subset$ A.
-
-				If x $\in$ A, since A $\subset$ B, then x $\in$ B so x $\in$ A $\cap_{}^{}$ B.
-				Thus, A $\subset$ (A $\cap_{}^{}$ B).
-
-				Thus, A $\cap_{}^{}$ B = A.
-			\end{minipage} }
-
-		\item A $\cap_{}^{}$ (B $\cup_{}^{}$ C)
-		= (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C)
-
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{13cm}
-				If x $\in$ A $\cap_{}^{}$ (B $\cup_{}^{}$ C), then x $\in$ A
-				and (x $\in$ B or/and x $\in$ C).
-				\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
-					\item If x $\in$ B, then x $\in$ (A $\cap_{}^{}$ B) so
-						x $\in$ (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C).
-
-					\item If x $\in$ C, then x $\in$ (A $\cap_{}^{}$ C) so
-						x $\in$ (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C).
-				\end{itemize}
-				Thus, A $\cap_{}^{}$ (B $\cup_{}^{}$ C)
-				$\subset$ (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C).
-				
-				If x $\in$ (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C),
-				then x $\in$ A and (x $\in$ B or/and x $\in$ C).
-
-				Thus, (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C)
-				$\subset$ A $\cap_{}^{}$ (B $\cup_{}^{}$ C).
-
-				Thus, A $\cap_{}^{}$ (B $\cup_{}^{}$ C)
-				= (A $\cap_{}^{}$ B) $\cup_{}^{}$ (A $\cap_{}^{}$ C).
-			\end{minipage} }
-
-		\item A $\cup_{}^{}$ (B $\cap_{}^{}$ C)
-		= (A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C)
-
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{13cm}
-				If x $\in$ A $\cup_{}^{}$ (B $\cap_{}^{}$ C), then
-				x $\in$ A or/and (x $\in$ B and x $\in$ C).
-				\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
-					\item If x $\in$ A, then x $\in$ (A $\cup_{}^{}$ B)
-						and x $\in$ (A $\cup_{}^{}$ C)
-						so A $\cup_{}^{}$ (B $\cap_{}^{}$ C) $\subset$
-						(A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C).
-
-					\item If x $\in$ B,C, then x $\in$ (A $\cup_{}^{}$ B)
-						and x $\in$ (A $\cup_{}^{}$ C)
-						so A $\cup_{}^{}$ (B $\cap_{}^{}$ C) $\subset$
-						(A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C).
-				\end{itemize}
-				If x $\in$ (A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C), then
-				x $\in$ A or/and (x $\in$ B and x $\in$ C).
-
-				Thus, (A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C)
-				$\subset$ A $\cup_{}^{}$ (B $\cap_{}^{}$ C).
-
-				Thus, A $\cup_{}^{}$ (B $\cap_{}^{}$ C)
-				= (A $\cup_{}^{}$ B) $\cap_{}^{}$ (A $\cup_{}^{}$ C).
-			\end{minipage} }
-	\end{enumerate}
+			\begin{proof}[13.5cm]
+				If closed set F, then F' $\subset$ F. Since E $\subset$ F, then
+				E' $\subset$ F' $\subset$ F so $\overline{E}$ $\subset$ F.			
+			\end{proof}
+    \end{enumerate}
 
 	\vspace{0.5cm}
 
-{ \color{red} Theorem 6.2.2: Union of countably infinite sets is countably infinite } 
 
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		If $E_1, E_2, ... $ are countably infinite sets, then S = $\cup_{n=1}^{\infty}$ $E_n$
-		is countably infinite.
-	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof} }
-
-	\fbox{
-	\begin{minipage}{15cm}
-		For each $E_n$, there is a sequence \{ $x_{n1}$, $x_{n2}$, ... \}.
-		Then construct an array as such:
-
-		{\small $ \hspace{1cm}
-		\left(
-		\begin{array}{ccc}
-			x_{11} & x_{12} & ... \\
-			x_{21} & x_{22} & ... \\
-			\vdots & \vdots & \ddots \\
-		\end{array}
-		\right)
-		$}
-			
-		Take elements diagonally, then sequence S$^*$ =
-		\{ $x_{11} \ ; \ x_{21}, x_{12} \ ; \ x_{31}, x_{32}, x_{33} \ ; \ ... $ \}.
-			
-		\begin{adjustbox}{minipage=15cm, right, vspace=0.1cm 0cm}
-			Since S$^*$ $\sim$ S so S is at most countable and S is infinite since
-			$E_1, E_2, ...$ are infinite, then S cannot be finite and thus, countably infinite.
-		\end{adjustbox}
-	\end{minipage} }
-
-{ \color{magenta} \underline{Alternative Proof} }
-
-	\fbox{
-	\begin{minipage}{15cm}
-		For each $E_n$, let set $\widetilde{E_n}$ = $E_n$ - $\cup_{m=1}^{\infty}$
-		$E_m$ where m $\neq$ n. Thus, S = $\cup_{n=1}^{\infty}$ $\widetilde{E_n}$.
-
-		Since each $E_n$ is countably infinite, there exists a 1-1 mapping
-		$\delta_n$: $E_n$ $\rightarrow$ $\mathbb{Z}_+$.
-
-		Thus, for each $\widetilde{E_n}$, there is a 1-1 mapping
-		$\delta_n$: $\widetilde{E_n}$ $\rightarrow$ A $\subset$ $\mathbb{Z}_+$.
-
-		Let $p_1, p_2, ... $ be distinct primes.
-		Since for s $\in$ S, there exists a unique $\widetilde{E_i}$ such that
-		s $\in$ $\widetilde{E_i}$, then let f(s) = $p_1^{\delta_1(s)}
-		p_2^{\delta_2(s)}...$ where $p_k^{\delta_k(s)}$ = 1 if k $\neq$ i.
-
-		Then, by the Fundamental theorem of arithmetic, f maps s to a unique
-		z $\in$ $\mathbb{Z}_+$ and thus, f is a 1-1 function so S is at most countable.
-		Since any $E_n$ $\subset$ S is countably infinite, then S cannot be finite
-		and thus, S is countably infinite.
-	\end{minipage} }
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.32]{Images/6.2.2.png}
-\end{figure}
-
-\newpage
-
-{ \color{red} Theorem 6.2.3: The set of countable n-tuples are countable } 
-
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Let A be a countably infinite set and B$_n$ be the set of all
-		n-tuples ($a_1$,...,$a_n$) where $a_k$ $\in$ A.
-		Then $B_n$ is countably infinite.
-	\end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-	\fbox{
-	\begin{minipage}{15cm}
-		The base case $B_1$ is countably infinite since $B_1$ = A.
-
-		Suppose $B_{n-1}$ is countably infinite. Then for every x $\in$ B:
-
-		\qquad x = (b,a) \qquad \qquad b $\in$ $B_{n-1}$ and a $\in$ A
-
-		Since for every fixed b, (b,a) $\sim$ A and thus, countably infinite.
-
-		Since B is a set of countably infinite sets, then $B_{n}$
-		is countably infinite.
-	\end{minipage} }
+	\begin{wtheorem}{sup(E) $\in$ $\overline{E}$}{14cm}
+		Let non-empty set of real numbers, E, be bounded above.
+        Let y = sup(E).
+		
+		Then, y $\in$ $\overline{E}$.
+        Thus, y $\in$ E if E is closed
+		and y $\not \in$ E if E is open in $\mathbb{R}$.
+	\end{wtheorem}
 	
+	\begin{proof}
+		If y $\in$ E, then y $\in$ $\overline{E}$. Suppose y $\not \in$ E.
+
+		For every h $>$ 0, there exists a x $\in$ E such that y-h $<$ x $<$ y
+		otherwise y-h is an upper bound for E which is a contradiction
+		since y = sup(E).
+
+		Thus, y is a limit point of E so y $\in$ E'.
+
+		If E is closed, then y $\in$ E since y $\in$ E'.	
+		Also, y $\in$ $\overline{E}$.
+		
+		If E is open, then any N$_r(y)$ $\not \subset$ E since 
+		N$_r(y)$ in $\mathbb{R}$ must contain a $\gamma$ $>$ y
+		so y $\not \in$ E$^o$.
+	\end{proof}
+
+	\vspace{0.5cm}
+
+
+
+
+
+\subsection{ Open Relative }
+
+	\begin{definition}{Open Relative}{14cm}
+		Suppose E $\subset$ Y $\subset$ metric space X.
+
+		Then E is open relative to Y if for each p $\in$ E:
+		
+		\hspace{1cm}
+		There is an r $>$ 0 such that for any q $\in$ Y where d(q,p) $<$ r,
+		then q $\in$ E.
+	\end{definition}
+	
+	\newpage
+
+
+
+	\begin{wtheorem}{E is open relative to Y $\subset$ X
+	if E = Y $\cap$ G and G is open in X}{14cm}
+	Suppose E $\subset$ Y $\subset$ X.
+
+	E is open relative to Y if and only if E = Y $\cap$ G
+	for some open G $\subset$ X.
+	\end{wtheorem}
+	
+	\begin{proof}
+		Suppose E is open relative to Y.
+
+		Then for each p $\in$ E, there is a r$_p$ $>$ 0 such that for
+		any q $\in$ Y where d(p,q) $<$ r$_p$, then q $\in$ E.
+		
+		Since Y $\subset$ X, let V$_p$ be the set of all q $\in$ X
+		such that d(p,q) $<$ r$_p$ and define G = $\cup_{p \in E}^{}$ V$_p$.
+		Since V$_p$ is open by {\color{red} theorem 5.1.3}, then by
+		{\color{red} theorem 5.1.9a}, open G $\subset$ X.
+
+		Since p $\in$ V$_p$ for all p $\in$ E, then E $\subset$ G $\cap_{}^{}$ Y.
+		Also, by construction, then V$_p$ $\cap_{}^{}$ Y $\subset$ E so
+		G $\cap_{}^{}$ Y $\subset$ E.
+		Thus, E = Y $\cap_{}^{}$ G.
+
+		If G is open in X and E = G $\cap_{}^{}$ Y, then every p $\in$ E has
+		a V$_p$ $\subset$ G.
+
+		Then, V$_p$ $\cap_{}^{}$ Y $\subset$ G $\cap_{}^{}$ Y = E so
+		E is open relative to Y.
+	\end{proof}
+
+	\vspace{0.3cm}
+
+	
+
+
+
+\subsection{ Compact Sets }
+
+	\begin{definition}{Open Cover}{14cm}
+		An open cover of set E $\subset$ X is a collection of open $G_1, G_2, ...$
+		$\subset$ X
+		
+		such that E $\subset$ $\cup_{}^{}$ $G_i$.
+	\end{definition}
+	
+	\vspace{0.5cm}
+
+
+
+	\begin{definition}{Compact}{14cm}
+		K $\subset$ X is compact if every open cover
+		of K contains a finite subcover.
+
+		\qquad If $G_1, G_2, ...$ is an open cover of K, then
+		K $\subset$ $\cup_{i=1}^{n}$ $G_i$ for some n.
+	\end{definition}
+	
+	\vspace{0.5cm}
+
+
+
+	\begin{wtheorem}{A compact set is compact in every metric space}{14cm}
+		Suppose K $\subset$ Y $\subset$ X.
+
+		Then K is compact relative to X if and only if K is
+		compact relative to Y.
+	\end{wtheorem}
+	
+	\begin{proof}
+		Suppose K is compact relative to X.
+
+		Let $V_1, V_2, ...$ be sets open relative to Y such that
+		K $\subset$ $\cup_{}^{}$ $V_x$.
+		Then by {\color{red} theorem 6.2.2} for each $V_x$, there is a
+		$G_x$ open relative to X where $V_x$ = Y $\cap_{}^{}$ $G_x$.
+
+		Since K is compact relative to X, then there is a n such that
+		K $\subset$ $G_{x_1}$ $\cup_{}^{}$ ... $\cup_{}^{}$ $G_{x_n}$.
+
+		Thus, K = K $\cap$ Y $\subset$ ($\cup_{i=1}^{n}$ $G_{x_i}$) $\cap$ Y
+		= ($\cup_{i=1}^{n}$ $G_{x_i}$ $\cap_{}^{}$ Y) = $\cup_{i=1}^{n}$ $V_{x_i}$.
+		
+		Since there are open $V_{x_1}, ... , V_{x_n}$ where
+		K $\subset$ $\cup_{i=1}^{n}$ $V_{x_i}$ so K is compact relative to Y.
+
+		Suppose K is compact relative to Y.
+
+		Let open $G_1, G_2, ...$ $\subset$ X such that X $\subset$ $\cup$ $G_x$.
+		For each $G_x$, let $V_x$ = Y $\cap_{}^{}$ $G_x$ $\subset$ Y.
+
+		Since K is compact relative to Y, there is a n such that
+		K $\subset$ $\cup_{i=1}^{n}$ $V_{x_i}$.
+
+		Thus, K $\subset$ $\cup_{i=1}^{n}$ $V_{x_i}$
+		= $\cup_{i=1}^{n}$ (Y $\cap_{}^{}$ $G_{x_i}$)
+		$\subset$ $\cup_{i=1}^{n}$ $G_{x_i}$ so K is compact relative to X.
+	\end{proof}
+
+
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.3]{Images/6.3.3.png}
+	\end{figure}
+
+	\newpage
+
+
+
+	\begin{wtheorem}{A compact set is closed}{14cm}
+		Compact subsets of metric spaces are closed
+	\end{wtheorem}
+	
+	\begin{proof}
+		Let compact K $\subset$ X.
+		Suppose p $\in$ X, but p $\not \in$ K so p $\in$ K$^c$.
+
+		If q $\in$ K, let W$_q$ be a neighborhood of q with
+		r $<$ $\frac{1}{2}$d(p,q).
+		Let V$_{p,q}$ be a neighbohood of p with r $<$ $\frac{1}{2}$d(p,q).
+		Since K is compact, then there are finite points $q_1, ... , q_n$
+		such that K $\subset$ W where W = W$_{q_1}$ $\cup$ ... $\cup$ W$_{q_n}$.
+
+		Let V = V$_{p,q_1}$ $\cap$ ... $\cap$ V$_{p,q_n}$, then
+		K $\cap$ V $\subset$ W $\cap$ V = $\emptyset$ so V $\subset$ K$^c$.
+
+		Since there is a neighborhood V for p $\in$ K$^c$ where V $\subset$ K$^c$,
+		then every p $\in$ K$^c$ is an interior point so K$^c$ is open.
+		Then by {\color{red} theorem 5.1.7}, K is closed.	
+	\end{proof}
+
+
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.35]{Images/6.3.4.png}
+	\end{figure}
+
+
+
+	\begin{wtheorem}{If closed E $\subset$ compact set K, E is compact}{14cm}
+		Closed subsets of compact sets are compact
+	\end{wtheorem}
+	
+	\begin{proof}
+		Suppose F $\subset$ K $\subset$ X where F is closed relative to X
+		and K is compact.
+
+		Let $V_1, V_2, ...$ be an open cover for F.
+		Let open set F$^c$ be all k $\in$ K where k $\not \in$ F.
+
+		\qquad K = F $\cup$ F$^c$ $\subset$ $V_1$ $\cup$ $V_2$ $\cup$ ... $\cup$ F$^c$
+
+		Thus, $V_1$ $\cup$ $V_2$ $\cup$ ... $\cup$ F$^c$ is an open cover for K.
+
+		Since K is compact, there is a finite subcover $\Omega$ that covers K
+		and thus, finite subcover $\Omega$ covers F $\cup$ F$^c$.
+		
+		Remove F$^c$ from $\Omega$. Since finite subcover $\Omega$ - F$^c$ covers F,
+		then F is compact.
+	\end{proof}
+
 	 \vspace{0.5cm}
 
-{ \color{blue} Definition 6.2.4: $\mathbb{Q}$ is countable } 
 
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		The set of rational numbers, $\mathbb{Q}$, is countably infinite.
-	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof} }
+	 \begin{corollary}{Closed F $\cap$ compact K = compact}{14cm}
+		If F is closed and K is compact, then F $\cap_{}^{}$ K is compact 
+	 \end{corollary}
+	 
+	 \begin{proof}
+		Since K is compact, then K is closed by {\color{red} theorem 6.3.4}.
 
-	\fbox{
-	\begin{minipage}{15cm}
-		Since elements of $\mathbb{Q}$ are of form $\frac{a}{b}$ which is a
-	2-tuple, then by the {\color{red} theorem 6.2.3},
-	$\mathbb{Q}$ is countably infinite.
-	\end{minipage} }
+		Then, by {\color{red} 5.1.9b}, F $\cap$ K is closed.
 
-{ \color{magenta} \underline{Alternative Proof} }
+		Since F $\cap$ K $\subset$ K, then by {\color{red} theorem 6.3.5},
+		F $\cap$ K is compact. 
+	 \end{proof}
 
-	\fbox{
-	\begin{minipage}{15cm}
-		For every x $\in$ $\mathbb{Q}$, let x = $(-1)^i$ $\frac{p}{q}$ where
-		p,q $\in$ $\mathbb{Z}_+$.
-
-		Let f(x) = $2^i$ $3^p$ $5^q$. Then by the Fundamental theorem of arithmetic,
-		f is a 1-1 mapping of x to E $\subset$ $\mathbb{Z}_+$.
-
-		Thus, $\mathbb{Q}$ is at most countable, but since p,q $\in$ $\mathbb{Z}_+$,
-		then $\mathbb{Q}$ cannot be finite and thus, is countably infinite.
-	\end{minipage} }
-	
-	 \vspace{0.5cm}
-
-{ \color{purple} Example 6.2.5: Sequences of 0 and 1 are uncountable } 
-
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Let A be the set of all sequences whose elements are digits 0 and 1.
-		Then A is uncountable.
-	\end{adjustbox}
-
-{ \color{magenta} \underline{Proof: Cantor's Diagonalization Proof} } 
-
-	\fbox{
-	\begin{minipage}{15cm}
-		Let set E be a countably infinite subset of A which consist of
-		sequences $s_1,s_2,...$.
-
-		Then construct a sequence s as follows:
-
-		\qquad If the n-th digit in $s_n$ is 1, then let the n-th digit of s be 0
-		and vice versa.
-
-		Thus. s differs from every $s_n$ $\in$ E so s $\not \in$ E.
-
-		But, s $\in$ A so E is a proper subset of A.
-
-		Thus, every countably infinite subset of A is a proper subset of A.
-
-		If A is countably infinite, then A is a proper subset of A which
-		is a contradiction.
-	\end{minipage} }
-	
-
+	\newpage
 
 
 	
+	\begin{wtheorem}{Nonempty $\cap_{i=1}^n$ $K_i$ $\rightarrow$
+	nonempty $\cap$ $K_i$}{14cm}
+		For compact sets $K_1, K_2, ...$ $\subset$ X where any intersection
+		of finite $K_i$ is nonempty, then $\cap$ $K_i$ is nonempty		
+	\end{wtheorem}
+	
+	\begin{proof}
+		Fix $K_1$.
+		If there is a k $\in$ $K_1$ where k $\in$ $K_i$ for all i, then
+		k $\in$ $\cap$ $K_i$ so $\cap$ $K_i$ $\not =$ $\emptyset$.
+
+		Suppose for every k $\in$ $K_1$, k $\not \in$ $K_i$ for some i.
+
+		Then for every k $\in$ $K_1$, there is a $K_i$ such that
+		p $\not \in$ $K_i$ so p $\in$ $K_i^c$.
+
+		Thus, $K_2^c, k_3^c, ...$ form an open cover for $K_1$.
+		Since $K_1$ is compact, there is a n where
+		$K_1$ $\subset$ $K_{i_1}^c$ $\cup$ ... $\cup$ $K_{i_n}^c$.
+		But then, $K_1$ $\cap$ $K_{i_1}$ $\cap$ ... $\cap$ $K_{i_n}$
+		= $\emptyset$ which is a contradiction.
+	\end{proof}
+
+	\vspace{0.5cm}
+
+
+
+	\begin{corollary}{Nonempty $K_i$ where $K_{i+1}$ $\subset$ $K_i$
+	$\rightarrow$ nonempty $\cap$ $K_i$}{14cm}
+		If $K_1, K_2, ...$ is a sequence of nonempty compact sets
+		such that $K_{i+1}$ $\subset$ $K_i$, then $\cap$ $K_i$ is nonempty 
+	\end{corollary}
+	
+	\begin{proof}
+		Since each $K_i$ is nonempty and if $i_1 < ... < i_n$, then
+		$K_{i_1}$ $\cap$ ... $\cap$ $K_{i_n}$
+		= $K_{i_n}$ is nonempty, then
+		by {\color{red} theorem 6.3.7}, $\cap$ $K_i$ is nonempty.
+	\end{proof}
+
+	\vspace{0.5cm}
+
+
+
+
+	\begin{wtheorem}{Nonempty intervals $I_n$ where
+	$I_{n+1}$ $\subset$ $I_n$ $\rightarrow$ nonempty $\cap$ $I_n$}{14cm}
+		If $I_1, I_2, ...$ is a sequence of intervals in $\mathbb{R}^1$
+		such that $I_{n+1}$ $\subset$ $I_n$,
+		
+		then $\cap$ $I_n$ is nonempty.
+	\end{wtheorem}
+	
+	\begin{proof}
+		Let $I_n$ = [$a_n$,$b_n$] and thus, each $I_n$ is nonempty.
+		If $n_1 < ... < n_m$, then
+
+		$I_{n_1}$ $\cap$ ... $\cap$ $I_{n_m}$
+		= [$a_{n_m}$,$b_{n_m}$] is nonempty.
+		Thus, by {\color{red} theorem 6.3.7}, $\cap$ $I_n$ is nonempty.	
+	\end{proof}
+
+	\vspace{0.5cm}
+
+
+
+	\begin{wtheorem}{p $\in$ E' exists if
+	infinite E $\subset$ compact K}{14cm}
+		If E is an infinite subset of compact set K, then E has a
+		limit point in K
+	\end{wtheorem}
+	
+	\begin{proof}
+		If no p $\in$ K is a p $\in$ E', then each p would have
+		a neighbohood $V_p$ contains at most p $\in$ E if p $\in$ E.
+		Thus, there is no finite subcover that covers E and thus,
+		there is no finite subcover that covers K since E $\subset$ K
+		which contradicts K is compact.
+	\end{proof}
+
+	\vspace{0.5cm}
+
+
+	 
+	\begin{definition}{K-cells}{14cm}
+		The set of all x = ($x_1, ... , x_k$) $\in$ $\mathbb{R}^k$
+		where $x_i$ $\in$ [$a_i,b_i$] for fixed $a_i,b_i$ $\in$ $\mathbb{R}$ 
+	\end{definition}
+	
+	\vspace{0.5cm}
+
+
+
+	\begin{wtheorem}{K-cells are compact}{14cm}
+		Every k-cell is compact
+	\end{wtheorem}
+	
+	\begin{proof}
+		Let k-cell I consists of all x = ($x_1, ... , x_k$) where
+		$x_i$ $\in$ [$a_i,b_i$] for fixed $a_i,b_i$ $\in$ $\mathbb{R}$.
+
+		Let $\delta$ = $\sqrt{\sum_{i=1}^{k} (b_i - a_i)^2}$.
+		Thus, $|x-y|$ $\leq$ $\delta$ for $x,y$ $\in$ I.
+
+		Suppose there exists an open cover $G_1, G_2, ...$ of I which
+		contain no finite subcover.
+
+		Let $c_i$ = $\frac{a_i+b_i}{2}$.
+		Then each interval splits into [$a_i,c_i$] and [$c_i,b_i$]
+		for i $\in$ [1,k] so there now exists $2^k$ k-cells $Q_i$
+		whose union is I.
+
+		At least one $Q_i$ cannot be covered else I would be covered.
+		Then subdivide $Q_i$ as before and repeating the process
+		so $Q_{i+1}$ $\subset$ $Q_i$ and each are not covered.
+
+		However, there is a point x* $\in$ $Q_{i_j}$ for all j
+		such that $N_r(x^*)$ $\subset$ $G$ so $Q_{i_1}$ is covered
+		which is a contradiction.
+	\end{proof}
+
+	\newpage
+
+
+
+	\begin{wtheorem}{Heine-Borel Theorem}{14cm}
+		If a set E $\subset$ $\mathbb{R}^k$ has one of the three properties,
+		then it has the other two:
+	\end{wtheorem}
+
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+		\item E is closed and bounded
+		\item E is compact
+		\item Every infinite subset of E has a limit point in E
+	\end{enumerate}
+
+	\begin{proof}
+		Suppose E is closed and bounded.
+
+		Then there exists a M $\in$ $\mathbb{R}$ and q $\in$ $\mathbb{R}^k$
+		such that d(p,q) $<$ M for all p $\in$ E.
+		
+		Thus, there is a k-cell
+		K = [$-M+q_1$,$q_1+M$] $\times$ ... $\times$ [$-M+q_k$,$q_k+M$]
+		such that E $\subset$ K.
+		Then by {\color{red} theorem 6.3.12}, K is compact
+		and thus by {\color{red} theorem 6.3.5}, E is compact
+		so (a) $\rightarrow$ (b).
+
+		Then by {\color{red} thereom 6.3.10}, any infinite subset
+		of E has a limit point in E so (b) $\rightarrow$ (c).
+
+		Suppose E is not bounded.
+
+		Then there exists p $\in$ E such that d(p,q) $>$ M for
+		any M $\in$ $\mathbb{R}$ and q $\in$ $\mathbb{R}^k$.
+
+		Let S $\subset$ E be such points p.
+		
+		Then S is infinite else there is a maximal p and thus,
+		p is bounded.
+		Thus, S is infinite and contains no limit points in E
+		since any d($p_1$,$p_2$) $>$ M which contradicts that
+		every infinite subset of E has a limit point in E.
+		Thus, E is bounded.
+
+		Suppose E is not closed.
+
+		Then there exists a p $\in$ E', but p $\not \in$ E.
+		Since p is a limit point, then there is a
+		q $\in$ E such that $\frac{1}{n+1}$ $<$ d(q,p) $<$ $\frac{1}{n}$
+		for n = \{1, 2, ...\}.
+
+		Let S $\subset$ E be such points q.
+
+		Thus, p is the only limit point of S since for r $<$ $\frac{1}{n}$,
+		any N$_r(q_i)$ contains no points of S other than $q_i$ since
+		d($q_i$,$q_j$) $>$ $\frac{1}{n}$ for any $q_1$,$q_2$ $\in$ S.
+		
+		Thus, S is infinite, but the only p $\in$ S' is p $\not \in$ E
+		which contradicts that every infinite subset of E has a
+		limit point in E. Thus, E is closed. So, (c) $\rightarrow$ (a).
+	\end{proof}
+
+	\vspace{0.5cm}
+
+
+
+	\begin{wtheorem}{Weierstrass Theorem}{14cm}
+		Every bounded infinite set E $\subset$ $\mathbb{R}^k$ has
+		a limit point in $\mathbb{R}^k$.
+	\end{wtheorem}
+	
+	\begin{proof}
+		Since E is bounded, then there exists a k-cell K such that
+		E $\subset$ K.
+		Since K is compact, then by {\color{red} theorem 6.3.10},
+		E has a limit point in K and thus, in $\mathbb{R}^k$.	
+	\end{proof}
+
+
+
+

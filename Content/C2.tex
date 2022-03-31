@@ -1,355 +1,491 @@
 \newpage
-\section[Day 2: Fields and Order]{Day 2: Fields}
+
+\section[Day 2: Complex Field \& Euclidean Spaces]
+{ Roots, Complex Field, \& Euclidean Spaces }
+
+\subsection{ nth Root }
+
+	\begin{ltheorem}{nth Root}{1.5cm}
+		\item If 0 $<$ t $\leq$ 1, then t$^\text{n}$ $ \leq $ t.
+		
+			\begin{proof}[14cm]
+				Since t $>$ 0 and t $\leq$ 1, then t$^\text{2}$ $\leq$ t.
+
+				Since t$^\text2{}$ $\leq$ t, then t$^\text{3}$ $\leq$ t$^\text{2}$
+				so t$^\text{3}$ $\leq$ t$^\text{2}$ $\leq$ t.
+
+				Applying the process n times, then t$^\text{n}$ $\leq$ t.
+			\end{proof}
+
+		\item If t $\geq$ 1, t$^\text{n}$ $ \geq $ t.
+
+			\begin{proof}[14cm]
+				Since 0 $<$ 1 $\leq$ t, then t $\leq$ t$^\text{2}$.
+
+				Since t $\leq$ t$^\text{2}$, then t$^\text{2}$ $\leq$ t$^\text{3}$
+				so t $\leq$ t$^\text{2}$ $\leq$ t$^\text{3}$.
+
+				Applying the process n times, t $\leq$ t$^\text{n}$.
+			\end{proof}
+
+		\item If 0 $<$ s $<$ t, then s$^\text{n}$ $<$ t$^\text{n}$.
+
+			\begin{proof}[14cm]
+				$\underbrace{\text{s} \cdot \text{s} \cdot
+								... \cdot \text{s}}_\text{n}$
+				$<$ t $\cdot$ s $\cdot$ ... $\cdot$ s
+				$<$ t $\cdot$ t $\cdot$ ... $\cdot$ s $<$ ... $<$
+				$\underbrace{\text{t} \cdot ... \cdot \text{t}}_\text{n}$
+			\end{proof}
+	\end{ltheorem}
+
+	\vspace{0.5cm}
 
 
 
+	\begin{wtheorem}{y$^\text{n}$ = x has a unique y}{14cm}
+		Fix n $\in$ $\mathbb{Z}_+$. For every x $>$ 0, there exists a unique y
+		$\in$ $ \mathbb{R} $ such that y$^\text{n}$ = x.
 
-
-\subsection{Greatest Lower Bound Property}
-
-{ \color{red} Theorem 2.1.1:
-Least Upper Bound + Lower Bound implies Greatest Lower Bound }
-
-	\begin{adjustbox}{minipage=14cm, right}
-		Let S be a ordered set with the least upper bound property.
-
-		Let non-empty B $\subset$ S be bounded below.
-
-		Let L be the set of all lower bounds of B.
-
-		Then $\alpha$ = sup(L) exists in S.
-	\end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-	\fbox{
-	\begin{minipage}{15cm}
-		L is non-empty since B is bounded from below.
-
-		Thus, by the least upper bound property of S, $\alpha$ = sup(L) exists in S.
-
-		We claim that $\alpha$ = inf(B).
-
-		If $\gamma < \alpha$, then $\gamma$ is not an upper bound for L
-		so y $\not \in$ B since all upper bounds for L are in B.
-		Thus, for every x $\in$ B, $\alpha \leq$ x.
-
-		If $\gamma \geq \alpha$, then $\gamma$ is an upper bound of L
-		so $\gamma \in$ B.
-		Thus, inf(B) = $\alpha$.
-	\end{minipage} }	
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.45]{Images/2.1.png}
-\end{figure}
-
-
-
-
-
-\subsection{Fields}
-
-Addition Axioms
-	\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
-		\item If x,y $\in$ F, then x+y $\in$ F
+		Also, such a y is written as y = $\sqrt[n]{\text{x}}$
+		= x$^{\frac{1}{\text{n}}}$.		
+	\end{wtheorem}
 	
-		\item x+y = y+x for all x,y $\in$ F
-	
-		\item (x+y)+z = x+(y+z) for all x,y,z $\in$ F
-	
-		\item There exists 0 $\in$ F such that 0+x = x for all x $\in$ F
-	
-		\item For every x $\in$ F, there is -x $\in$ F where x+(-x) = 0
-	\end{itemize}
+	\begin{proof}
+		{ \color{lblue} Uniqueness: }
 
-Multiplicative Axioms
-	\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
-		\item If x,y $\in$ F, then xy $\in$ F
-	
-		\item yx = xy for all x,y $\in$ F
-	
-		\item (xy)z = x(yx) for all x,y,z $\in$ F
-	
-		\item There exists 1 $\not =$ 0 $\in$ F such that 1x = x for all x $\in$ F
-	
-		\item If x $\not =$ 0 $\in$ F, there is $\frac{1}{x}$ $\in$ F
-		where x($\frac{1}{x}$) = 1
-	\end{itemize}
+		y is unique since if y$_{1}$ $<$ y$_{2}$, then
+		x = y$_{1}^\text{n}$ $<$ y$_{2}^\text{n}$ $\neq$ x.
 
-Distributive Law
+		{ \color{lblue} Existence: }
 
-	\qquad x(y+z) = xy + xz hold for all x,y,z $\in$ F. \\
+		Let set A = \{ t $>$ 0 : t$^\text{n}$ $<$ x \}.
 
-{ \color{blue} Propositions 2.2.1 }
+		A $\not =$ $\emptyset$ since let t$_{1}$ = $\frac{x}{x+1}$ $<$ 1 so t$_1$ $<$ x
+		and thus, 0 $<$ t$_{1}$$^\text{n}$ $<$ t$_{1}$ $<$ x so t$_{1}$ $\in$ A.
+
+		A is bounded above since if t $ \geq $ x+1, then
+		t $>$ 1 so t$^\text{n}$ $ \geq $ t $ \geq $ x+1 $>$ x so t $\not \in$ A.
+
+		So x+1 is an upper bound of A.
+
+		Thus by the least upper bound property, y = sup(A) exists.
+
+		For y$^\text{n}$ = x, show y$^\text{n}$ $<$ x and
+		y$^\text{n}$ $>$ x cannot hold true.
+
+		***(Not an upper bound of A if $<$ and not a least upper bound of A if $>$)***
+
+		For 0 $<$ $\alpha$ $<$ $\beta$:
+
+		\hspace{1cm}
+		$\beta ^\text{n}$ - $\alpha^\text{n}$
+		= ($\beta$ - $\alpha$) ($\underbrace{\beta^{n-1}
+		+ \beta^{n-2}\alpha^1 + ... + \alpha^{n-1}}
+		_{\beta^{n-1} \hspace{0.7cm} <\beta^{n-1} \hspace{1.3cm} <\beta^{n-1}}$)
+		$<$ ($\beta - \alpha$)n$\beta$$^\text{n-1}$ 
+
+		Suppose y$^\text{n}$ $<$ x. Pick 0 $<$ h $<$ 1 and
+		h $<$ $\frac{x-y^n}{n(y+1)^{n-1}}$.
+
+		\hspace{1cm}
+		From inequality, let $\beta$ = y+h and $\alpha$ = y
+
+		\hspace{1cm}
+		(y+h)$^\text{n}$ - y$^\text{n}$ $<$ hn(y+h)$^\text{n-1}$
+		$<$ hn(y+1)$^\text{n-1}$ $<$ x - y$^\text{n}$
+
+		\begin{adjustbox}{minipage=14.2cm, right, vspace=0.1cm 0cm}
+			Thus, (y+h)$^\text{n}$ $<$ x so y+h $\in$ A and thus, not an upper bound of A
+			which is a contradiction since y = sup(A).
+		\end{adjustbox}
+
+		Suppose y$^\text{n}$ $>$ x.
+		Pick 0 $<$ k = $\frac{y^n - x}{ny^{n-1}}$ $<$ $\frac{y^n}{ny^{n-1}}$
+		= $\frac{1}{n}y$ $<$ y.
+
+		\hspace{1cm}
+		Consider t $ \geq $  y-k, then:
+		y$^\text{n}$ - t$^\text{n}$ $ \leq $  y$^\text{n}$ - (y-k)$^\text{n}$ $<$
+		kny$^\text{n-1}$ = y$^\text{n}$ - x
+
+		\hspace{1cm}
+		Thus, t$^\text{n}$ $>$ x so t $\not \in$ A.
+
+		\hspace{1cm}
+		Thus, y-k is an upper bound of A which is a contradiction since y = sup(A).
+
+		Since y$^\text{n}$ $<$ x and y$^\text{n}$ $>$ x, then y$^\text{n}$ = x.
+	\end{proof}
+
+	\newpage
+
+
+
+	\begin{corollary}{n-th root of product = product of n-th root}{14cm}
+		If a,b $>$ 0 and n $\in$ $\mathbb{Z}_+$, then
+		(ab)$^{\frac{1}{n}}$ = a$^{\frac{1}{n}}$b$^{\frac{1}{n}}$
+	\end{corollary}
+	
+	\begin{proof}
+		Let A = a$^{\frac{1}{n}}$ , B = b$^{\frac{1}{n}}$.
+		By {\color{red} theorem 2.1.2}, since A is a root for
+		$y_1^n$ = a, then A$^n$ = a.
+
+		Similarly, B is a solution of $y_2^n$ = b so B$^n$ = b. Thus:
+
+		\hspace{1cm} ab = $A^n$$B^n$ = $A_1A_2...A_nB_1B_2...B_n$
+
+		\hspace{1.6cm} = $A_1A_2...B_1A_nB_2...B_n$
+		= ... = $A_1B_1A_2...A_{n-1}A_nB_2...B_n$
+
+		\hspace{1.6cm} = ... = $A_1B_1A_2B_2...A_nB_n$ = $(AB)^n$
+
+		Then again by {\color{red} theorem 2.1.2}, there is a unique
+		(ab)$^{\frac{1}{n}}$ = AB = a$^{\frac{1}{n}}$b$^{\frac{1}{n}}$.		
+	\end{proof}
+
+	\vspace{0.5cm}
+
+
+
+
+	
+\subsection{ Decimals }
+
+	\begin{definition}{Decimals}{14cm}
+		Let n$_0$ be the largest integer such that n$_0$ $\leq$ x for
+		x $>$ 0 $\in$ $\mathbb{R}$.
+
+		Then let n$_k$ be the largest integer such that
+		d$_k$ = n$_0$ + $\frac{n_1}{10}$ + ... + $\frac{n_k}{10^k}$ $\leq$ x
+
+		Let E be the set of d$_k$ for k = 0, 1, ... $\infty$. Then, x = sup(E).	
+	\end{definition}
+
+	\vspace{0.5cm}
+
+
+
+
+
+\subsection{ Extended Reals }
+
+	\begin{definition}{Extended Reals}{14cm}
+		The extended real number system consist of $\mathbb{R}$
+		and $\pm$$\infty$ such that:
+
+		\hspace{1cm}
+		-$\infty$ $<$ x $<$ $\infty$ \hspace{1cm} for every x $\in$ $\mathbb{R}$
+
+		with the properties:
+		\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
+			\item x $\pm$ $\infty$ = $\pm$$\infty$
+		
+			\item x / $\pm$$\infty$ = 0
+
+			\item If x $>$ 0, then x($\pm$$\infty$) = $\pm$$\infty$.
+				If x $<$ 0, then x($\pm$$\infty$) = $\mp$$\infty$
+		\end{itemize}	
+	\end{definition}
+
+	\vspace{0.5cm}
+
+
+
+
+
+\subsection{ Complex Numbers }
+
+	\begin{definition}{Complex Number}{14cm}
+		A complex number is an ordered pair (a,b) where a,b $\in$ $ \mathbb{R} $.
+		For x,y $\in$ $\mathbb{C}$
+
+		\begin{itemize}[leftmargin=2cm, itemsep=0.1cm]
+			\item x + y = (a,b) + (c,d) = (a + c , b + d)
+			\item xy = (a,b) (c,d) = (ac - bd , ad + bc)
+			\item $\frac{1}{\text{x}}$  = (a$^2$ + b$^2$)(a,-b)
+		\end{itemize}
+
+		Thus, the axioms form a field where (0,0) = 0 and (1,0) = 1 and (0,1) = i.
+	\end{definition}
+
+	\vspace{0.5cm}
+
+
+
+	\begin{wtheorem}{Imaginary i and Form a + bi}{14cm}
+		Let i = (0,1). Then, i$^2$ = -1.
+
+		Then, (a,b) = a + bi
+	\end{wtheorem}
+
+	\begin{proof}
+		i$^\text{2}$ = (0,1)(0,1) = (0-1,0+0) = (-1,0) = -1
+
+		(a,b) = (a,0) +(0,b) = (a,0) + (b,0)(0,1) = a + bi
+	\end{proof}
+	
+	\newpage
+
+
+
+	\begin{definition}{Conjugate}{14cm}
+		Let conjugate: $\bar{z}$ = a - bi where Re(z) = a , Im(z) = b.
+
+		Let z = (a,b) and w = (c,d):
+	\end{definition}
+
 	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-		\item If x+y = x+z, then y = z
+		\item $\overline{z+w}$ = $\overline{z}$ + $\overline{w}$
+		
+			\begin{proof}[13.5cm]
+				$\overline{z+w}$ = $\overline{(a+c,b+d)}$ = (a+c,-b-d)
+				= (a,-b) + (c,-d) = $\overline{z}$ + $\overline{w}$
+			\end{proof}
 
-			{ \color{magenta} \underline{Proof}  }
+		\item $\overline{zw}$ = $\overline{z}$ $\overline{w}$
+		
+			\begin{proof}[13.5cm]
+				$\overline{zw}$ = $\overline{(ac-bd,ad+bc)}$ = (ac-bd,-ad-bc)
+				= (a,-b) (c,-d) = $\overline{z}$ $\overline{w}$
+			\end{proof}
 
-			\fbox{
-			\begin{minipage}{13cm}
-				y = 0+y = (-x)+x+y = (-x)+x+z = 0+z = z
-			\end{minipage} }
+		\item z + $\overline{z}$ = 2 Re(z)
+			\hspace{1cm} z - $\overline{z}$ = 2i Im(z)
+
+			\begin{proof}[13.5cm]
+				z + $\overline{z}$ = (a,b) + (a,-b) = (2a,0) = 2 Re(z)
+
+				z - $\overline{z}$ = (a,b) - (a,-b) = (0,2b) = (0,2) b = 2i Im(z)
+			\end{proof}
+
+		\item z$\overline{z}$ $\geq$ 0
+
+			\begin{proof}[13.5cm]
+				z$\overline{z}$ = (a,b)(a,-b) = (a$^2$ + b$^2$ , -ab+ab)
+				= a$^2$ + b$^2$ $\geq$ 0
+			\end{proof}
+	\end{enumerate}
+
+	\vspace{0.5cm}
+
+
+
+	\begin{definition}{Absolute Value}{14cm}
+		Let absolute value: $|$ z $|$ = $\sqrt{z \overline{z}}$
+
+		Let z = (a,b) and w = (c,d):
+	\end{definition}
+	
+	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+		\item If z $\neq$ 0, then $|$ z $|$ $>$ 0.
+
+			\begin{proof}[13.5cm]
+				$\sqrt{z\overline{z}}$ = $\sqrt{a^2 + b^2}$ $\geq$ 0
+				where $|$ z $|$ = 0 only if a,b = 0 so only if z = (0,0).
+			\end{proof}
+
+		\item $|$ $\overline{z}$ $|$ = $|$ z  $|$
 			
-\newpage
-	
-		\item If x+y = x, then y = 0
+			\begin{proof}[13.5cm]
+				$|$ $\overline{z}$ $|$ = $\sqrt{a^2 + (-b)^2}$
+				= $\sqrt{a^2 + b^2}$ = $|$ z $|$
+			\end{proof}
 
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{13cm}
-				From (a), let z = 0.
-			\end{minipage} }
-	
-		\item If x+y = 0, then y = -x
-	
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{13cm}
-				From (a), let z = -x.
-			\end{minipage} }
-	
-		\item -(-x) = x
-
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{13cm}
-				From (c), let x = -x and y = x.	
-			\end{minipage} }
-	
-		\item If x $\not =$ 0 and xy = xz, then y = z
-
-			{ \color{magenta} \underline{Proof} } 
+		\item $|$ zw $|$ = $|$ z $|$ $|$ w $|$
 		
-			\fbox{
-			\begin{minipage}{13cm}
-				y = 1y = $\frac{1}{x}$xy = $\frac{1}{x}$xz = 1z = z	
-			\end{minipage} }
-	
-		\item If x $\not =$ 0 and xy = x, then y = 1
+			\begin{proof}[13.5cm]
+				$|$ zw $|$ = $|$ (ac-bd,ad+bc) $|$ = $\sqrt{(ac-bd)^2 + (ad+bc)^2}$
+			
+				= $\sqrt{a^2c^2 + b^2d^2 + a^2d^2 + b^2c^2}$
+				= $\sqrt{(a^2+b^2)(c^2+d^2)}$
 
-			{ \color{magenta} \underline{Proof} } 
+				= $\sqrt{a^2+b^2}$ $\sqrt{c^2+d^2}$ = $|$ z $|$ $|$ w $|$
+			\end{proof}
+
+		\item $|$ Re(z) $|$ $\leq$ $|$ z $|$
+
+			\begin{proof}[13.5cm]
+				$|$ Re(z) $|$ = $|$ a $|$ = $\sqrt{a^2}$
+				$\leq$ $\sqrt{a^2+b^2}$ = $|$ z $|$
+			\end{proof}
+
+		\item $|$ z+w $|$ $ \leq $  $|$ z $|$ + $|$ w $|$
 		
-			\fbox{
-			\begin{minipage}{13cm}
-				From (e), let z = 1.	
-			\end{minipage} }
-	
-		\item If x $\not =$ 0 and xy = 1, then y = $\frac{1}{x}$
+			\begin{proof}[13.5cm]
+				$| z+w |^2$ = (z+w)$\overline{(z+w)}$
+				= (z+w)($\overline{z} + \overline{w}$)
+				= z$\overline{z}$ + z$\overline{w}$
+				+ w$\overline{z}$ + w$\overline{w}$
+			
+				= $|z|^2$ + $|w|^2$ + 2 Re(z$\overline{w}$)
+				$\leq$ $|z|^2$ + $|w|^2$ + 2 $|z\overline{w}|$
 
-			{ \color{magenta} \underline{Proof} } 
-		
-			\fbox{
-			\begin{minipage}{13cm}
-				From (e), let z = $\frac{1}{x}$.	
-			\end{minipage} }
-	
-		\item If x $\not =$ 0, then $\frac{1}{1/x}$ = x
-
-			{ \color{magenta} \underline{Proof} } 
-		
-			\fbox{
-			\begin{minipage}{13cm}
-				From (g), let x = $\frac{1}{x}$ and y = x.	
-			\end{minipage} }
-	
-		\item 0x = 0
-
-			{ \color{magenta} \underline{Proof} } 
-		
-			\fbox{
-			\begin{minipage}{13cm}
-				Since 0x + 0x = (0+0)x = 0x = 0x + 0, then 0x = 0.	
-			\end{minipage} }
-	
-		\item If x,y $\not =$ 0, then xy $\not =$ 0
-
-			{ \color{magenta} \underline{Proof} } 
-		
-			\fbox{
-			\begin{minipage}{13cm}
-				Suppose xy = 0, then 1 = $\frac{1}{y}\frac{1}{x}$xy
-				= $\frac{1}{y}$$\frac{1}{x}$0 = 0. 
-
-				0 = 1 is a contradiction.	
-			\end{minipage} }
-				
-		\item (-x)y = -(xy) = x(-y)
-
-			{ \color{magenta} \underline{Proof} } 
-		
-			\fbox{
-			\begin{minipage}{13cm}
-				xy + (-x)y = (x+(-x))y = 0y = 0.
-				Then by part (c), (-x)y = -(xy).
-
-				xy + x(-y) = x(y+(-y)) = x0 = 0.
-				Then by part (c), x(-y) = -(xy).	
-			\end{minipage} }
-
-		\item (-x)(-y) = xy
-
-			{ \color{magenta} \underline{Proof} } 
-		
-			\fbox{
-			\begin{minipage}{13cm}
-				By part (k), then (-x)(-y) = -[x(-y)] = -[-(xy)].
-
-				By part (d), -[-(xy)] = xy.	
-			\end{minipage} }
+				= $|z|^2$ + $|w|^2$ + 2$|z||w|$
+				= ($|z|$ + $|w|$)$^2$				
+			\end{proof}
 	\end{enumerate}
 
+	\newpage
 
 
 
 
-\subsection{Ordered Fields}
 
-	\hspace{1cm}
-	An ordered field F is a field F which is also an ordered set
-	for all x,y,z $\in$ F.
+\subsection{ Euclidean Spaces }
 
-	\begin{itemize}[leftmargin=2cm, itemsep=0.1cm]
-		\item If y $<$ z, then y+x $<$ z+x
+	\begin{definition}{Euclidean Spaces}{14cm}
+		For each positive integer k, let $\mathbb{R}$$^\text{k}$ be the set of all ordered k-tuples:
+
+		\hspace{0.5cm}
+		x = $(x_1,...,x_k)$
+		\hspace{1cm}
+		for each $x_i$ $\in$ $\mathbb{R}$
+
+		with the properties:
+		\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
+			\item x+y = $(x_1+y_1,...,x_k+y_k)$ $\in$ $\mathbb{R}^{\text{k}}$
+		
+			\item cx = $(cx_1,...,cx_k)$ $\in$ $\mathbb{R}$$^\text{k}$
+		\end{itemize}
+
+		So, $\mathbb{R}$$^\text{n}$ has a vector space structure.
+		Similarly, for $\mathbb{C}^{\text{n}}$.
+	\end{definition}
+
+	\vspace{0.5cm}
+
+
+
+	\begin{definition}{Inner Product for $\mathbb{R}^k$}{14cm}
+		$x \cdot y = x_1y_1 + ... + x_ky_k$ $\in$ $\mathbb{R}$
+	\end{definition}
+
+	\vspace{0.5cm}
+
+
+
+	\begin{definition}{Norm}{14cm}
+		$|x| = \sqrt{x \cdot x}$ = $\sqrt{\sum_{i=1}^k x_i^2}$
+	\end{definition}
+
+	\vspace{0.5cm}
+
+
+
+	\begin{definition}{Extension to $\mathbb{C}^k$}{14cm}
+		For z,w $\in$ $\mathbb{C}^n$
+		
+		\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
+			\item $z \cdot w = z_1\overline{w_1} + ... + z_k\overline{w_k}$
+		
+			\item $z \cdot z = z_1\overline{z_1} + ... + z_k\overline{z_k}
+				= |z_1|^2 + ... + |z_k|^2$ = $|z|^2$
+		\end{itemize}
+	\end{definition}
+
+	\vspace{0.5cm}
+
+
+
+
+
+\subsection{ Cauchy-Schwarz } 
+
+	\begin{wtheorem}{Cauchy-Schwarz}{14cm}
+		If $\alpha_1 , ... , \alpha_n$ $\in$ $\mathbb{C}$ and
+		$b_1 , ... , b_n$ $\in$ $\mathbb{C}$, then:
+
+		\hspace{1cm}
+		$| \sum_{\text{j=1}}^{n} a_j(\overline{b_j})  |^2 \leq
+		\sum_{\text{j=1}}^{n} |a_j|^2 \sum_{\text{j=1}}^{n} |b_j|^2 $
+	\end{wtheorem}
+
+	\begin{proof}
+		Let $A = \sum$ $|a_j|^2$ and $B = \sum$ $|b_j|^2$ and
+		$C = \sum$ $a_j(\overline{b_j})$.
+
+		If $B = 0$, then $b_1$ = ... = $b_n$ = 0. Thus, $0 \leq A(0)$ holds true.
+
+		Suppose $B > 0$. Then:
+
+		\hspace{1cm}
+		$\sum$ $|Ba_j - Cb_j|^2$
+		= $\sum$ $(Ba_j - Cb_j)\overline{(Ba_j - Cb_j)}$
+		= $\sum$ $(Ba_j - Cb_j)(\overline{B} \ \overline{a_j}
+		- \overline{C} \ \overline{b_j})$
+
+		\hspace{1cm}
+		= $\sum$ $(Ba_j-Cb_j)(B\overline{a_j} - \overline{C} \ \overline{b_j})$
+		= $\sum$ $B^2a_j\overline{a_j} - B\overline{C}a_j\overline{b_j}
+		- BC\overline{a_j}b_j + C\overline{C}b_j\overline{b_j}$
+
+		\hspace{1cm}
+		= $B^2 \sum |a_j|^2 - B\overline{C}\sum a_j\overline{b_j}
+		- BC \sum \overline{a_j}b_j+ |C|^2 \sum |b_j|^2$
+
+		\hspace{1cm}
+		= $B^2A - B\overline{C}C - BC\overline{C} + |C|^2B$
+		= $B^2A - 2|C|^2B + |C|^2B$ = $B^2A -|C|^2B$
+
+		\hspace{1cm}
+		= $B(AB - |C|^2)$
+
+		Since $| Ba_j - Cb_j |$ $\geq$ 0, then $B(AB - |C|^2)$ $\geq$ 0.
+
+		Since $B$ $>$ 0, then $AB - |C|^2$ $\geq$ 0 so $AB$ $\geq$ $|C|^2$.
+	\end{proof}
 	
-		\item If x,y $>$ 0, then xy $>$ 0
-	\end{itemize}
+	\vspace{0.5cm}
+	
+	\begin{corollary}{$|z \cdot w|$ $\leq$ $|z| |w|$}{14cm}
+		Since $|z_i|^2 = z_i\overline{z_i}$, then
+		$\sum z_i\overline{z_i} = \sum |z_i|^2$ = $|z|^2$. Thus:
 
-\newpage
+		\hspace{1cm}
+		$|z \cdot w|^2$ = $|\sum z_i\overline{w_i} \ |^2$
+		$\leq$ $\sum |z_i|^2 \sum |w_i|^2$ = $|z|^2$ $|w|^2$
 
-{ \color{blue} Definition 2.3.1: $\mathbb{Q}$ and $\mathbb{R}$ are ordered fields } 
+		Thus, $|z \cdot w|$ $\leq$ $|z| |w|$.
+	\end{corollary}
 
-	\hspace{1cm}
-	$ \mathbb{Q} $,$ \mathbb{R} $ are ordered fields,
-	but $ \mathbb{C} $ is not an ordered field since i$^2$ = -1 $\not >$ 0. \\
+	\newpage
 
-{ \color{blue} Propositions 2.3.2} 
 
-	\hspace{1cm}
-	Let F be an ordered field. For all x,y,z $\in$ F.
 
+	\begin{wtheorem}{Properties of $\mathbb{R}^k$}{14cm}
+		Let $x,y,z$ $\in$ $\mathbb{R}^k$ where $\alpha$ $\in$ $\mathbb{R}$:
+	\end{wtheorem}
+	
 	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-		\item If x $>$ 0, then -x $<$ 0 and vice versa
-	
-			{ \color{magenta} \underline{Proof} }
+		\item $|x|$ $\geq$ 0 where $|x| = 0$ only if x = 0
 
-			\fbox{
-			\begin{minipage}{13cm}
-				-x = -x + 0 $<$ -x + x = 0
-			\end{minipage} }
+			\begin{proof}[13.5cm]
+				$|x| = \sqrt{\sum_{i=1}^{k} x_i^2} \geq 0$ where $|x| = 0$
+				only if $x_1 = ... = x_k = 0$
+			\end{proof}
 
-		\item If x $>$ 0 and y $<$ z, then xy $<$ xz
-	
-			{ \color{magenta} \underline{Proof} } 
+		\item $|\alpha x|$ = $|\alpha| |x|$
 		
-			\fbox{
-			\begin{minipage}{13cm}
-				Since z-y $>$ 0, then 0 $<$ x(z-y) = xz - xy
-			\end{minipage} }
-
-		\item If x $ < $ 0 and y $ < $ z, then xy $ > $ xz
-
-			{ \color{magenta} \underline{Proof} } 
-		
-			\fbox{
-			\begin{minipage}{13cm}
-				Since -x $>$ 0 and z-y $>$ 0, then 0 $<$ -x(z-y) = xy - xz
-			\end{minipage} }
+			\begin{proof}[13.5cm]
+				$|\alpha x|$ = $\sqrt{\sum_{i=1}^k (\alpha x_i)^2}$
+				= $\sqrt{\alpha^2} \sqrt{\sum_{i=1}^k x_i^2}$ = $|\alpha| |x|$
+			\end{proof}
 	
-		\item If x $\neq$ 0, $x^2 > $ 0
-
-			{ \color{magenta} \underline{Proof} } 
+		\item $|x+y|$ $\leq$ $|x| + |y|$
 		
-			\fbox{
-			\begin{minipage}{13cm}
-				If x $>$ 0, then x$^\text{2}$ = x $\cdot$ x $>$ 0
+			\begin{proof}[13.5cm]
+				$|x+y|^2$ = $(x+y) \cdot (x+y)$ = $|x|^2 + 2(x \cdot y) + |y|^2$
 
-				If x $<$ 0, then (-x)$^\text{2}$ = (-x) $\cdot$ (-x)
-				= x $\cdot$ x = x$^\text{2}$ $>$ 0
-			\end{minipage} }
-	
-		\item If 0 $< x < y$, then 0 $< 1/y < 1/x$
+				$\leq$ $|x|^2 + 2|x||y| + |y|^2$ = $(|x|+|y|)^2$
+			\end{proof}
 
-			{ \color{magenta} \underline{Proof} } 
+		\item $|x-y|$ $\leq$ $|x-z| + |y-z|$
 		
-			\fbox{
-			\begin{minipage}{13cm}
-				Since ($\frac{1}{\text{y}}$)y = 1 $>$ 0, then
-				($\frac{1}{\text{y}}$) $>$ 0
-
-				Since x $<$ y, then $\frac{1}{\text{y}}$
-				= ($\frac{1}{\text{y}}$)($\frac{1}{\text{x}}$)x
-				$<$ ($\frac{1}{\text{y}}$)($\frac{1}{\text{x}}$)y
-				= $\frac{1}{\text{x}}$
-			\end{minipage} }
+			\begin{proof}[13.5cm]
+				$|x-y|$ = $|x-z + z-y|$ $\leq$ $|x-z| + |z-y|$ = $|x-z| + |y-z|$
+			\end{proof}
 	\end{enumerate}
 
-	\vspace{0.5cm}
 
-{\color{red} Theorem 2.3.3: $\mathbb{R}$ is an ordered field with $<$ }
-
-	\hspace{1cm}
-	There exists a unique ordered field $\mathbb{R}$ with the
-	least upper bound property.
-
-	\hspace{1cm}
-	Also, $\mathbb{Q}$  $\subset$ $\mathbb{R}$ so $\mathbb{Q}$ is
-	also an ordered field.
-
-	\vspace{0.5cm}
-
-{\color{red} Theorem 2.3.4}
-
-	\hspace{0.9cm}
-	For all x,y $\in$ $ \mathbb{R} $:
-
-	\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
-		\item {\color{lblue} Archimedean Property}:
-			If x $>$ 0, there is n $\in$ $ \mathbb{Z} $ such that nx $>$ y.
-	
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{14cm}
-				Fix x $>$ 0. Suppose there is a y such that the property fails.
-
-				Let A = \{ nx: n = 1, 2, 3, ... \}.
-
-				Then, A is nonempty and bounded from above by y.
-
-				Then by the least upper bound property of $ \mathbb{R} $,
-				$\alpha$ = sup(A) exists in $ \mathbb{R} $ .
-
-				Since x $>$ 0, then -x $<$ 0 so $\alpha - x < \alpha-0 = \alpha$.
-
-				So $\alpha-x$ is not an upper bound of A.
-
-				So there is a mx $\in$ A such that mx $> \alpha-x$.
-
-				Then $\alpha <$ (m+1)x, but (m+1)x $\in$ A
-				contradicting $\alpha$ is an upper bound for A.
-			\end{minipage} }
-
-		\item {\color{lblue} $ \mathbb{Q} $  is dense in $ \mathbb{R} $}:
-			If x $<$ y, there is a p $\in$ $ \mathbb{Q} $ such that x $<$ p $<$ y.
-
-			{ \color{magenta} \underline{Proof} }
-
-			\fbox{
-			\begin{minipage}{14cm}
-				Since x $<$ y, then y-x $>$ 0. Then by the Archimedean Property,
-				there exists a n $\in$ Z such that n(y-x) $>$ 1.
-				Thus, ny $>$ nx+1 $>$ nx
-
-				By the well-ordering principle, there is a smallest
-				m $\in \mathbb{Z_+} $ such that m $>$ nx.
-
-				Then, m $>$ nx $\geq$ m-1 so nx+1 $\geq$ m $>$ nx.
-
-				Since ny $>$ nx+1 $\geq$ m $>$ nx, then y $>$ m/n $>$ x.
-			\end{minipage} }
-\end{itemize}

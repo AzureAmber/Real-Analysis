@@ -1,265 +1,784 @@
 \newpage
 
-\section[Day 11: Limits \& Special Sequences]{Limits and Special Sequences}
-
-\subsection{ Upper and Lower Limits } 
-
-{ \color{blue} Definition 11.1.1: Infinite limits } 
-
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Let \{$s_n$\} be a sequence of real numbers such that:
-
-		\hspace{1cm}
-		For every real M, there is a N $\in$ $\mathbb{Z}$ such that
-		for n $\geq$ N, $s_n$ $\geq$ M.
+\section[Day 11: Continuity]{ Continuity }
 
-		\hspace{2cm}
-		Then, $s_n$ $\rightarrow$ $+\infty$.
+\subsection{ Limits of Functions }
 
-		\hspace{1cm}
-		For every real M, there is a N $\in$ $\mathbb{Z}$ such that
-		for n $\geq$ N, $s_n$ $\leq$ M.
+    \begin{definition}{Limits of functions}{14cm}
+        For metric spaces X,Y, let E $\subset$ X, f maps E into Y,
+        and p $\in$ E'.
+        
+        Then $\lim_{x \rightarrow p} f(x) = q$
+        if there is a q $\in$ Y such that:
+        
+        \begin{adjustbox}{minipage=13cm, right, vspace=0.1cm 0cm}
+            For every $\epsilon$ $>$ 0, there is a $\delta$ $>$ 0
+            such that for all x $\in$ E
+            
+            where $d_X(x,p) < \delta$, then
+            $d_Y(f(x),q)$ $<$ $\epsilon$
+        \end{adjustbox}
+    \end{definition}
 
-		\hspace{2cm}
-		Then, $s_n$ $\rightarrow$ $-\infty$. \\
-	\end{adjustbox}
 
-{ \color{blue} Definition 11.1.2: Upper and Lower Limits } 
 
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Let \{$s_n$\} $\subset$ $\mathbb{R}$
-		and E contain all subsequential limits of \{$s_n$\}
-		plus possibly $\pm$$\infty$.
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.45]{Images/11.1.1.png}
+    \end{figure}
 
-		Then, the upper limit of \{$s_n$\}:
 
-		\hspace{1cm}
-		$s^*$ = sup(E) 
-		\hspace{1cm} 
-		$\lim_{n \rightarrow \infty}$ sup($s_n$) = $s^*$
 
-		Then, the lower limit of \{$s_n$\}:
+    \begin{wtheorem}{Sequence definition of $\lim_{x \rightarrow p} f(x) = q$}{14cm}
+        $\lim_{x \rightarrow p} f(x) = q$ if and only if
+        $\lim_{n \rightarrow \infty} f(p_n) = q$ for every
+        sequence \{$p_n$\} $\in$ E where $p_n \not = p$ and
+        $\lim_{n \rightarrow \infty} p_n = p$.
+    \end{wtheorem}
 
-		\hspace{1cm}
-		$s_*$ = inf(E) 
-		\hspace{1.2cm} 
-		$\lim_{n \rightarrow \infty}$ inf($s_n$) = $s_*$
-	\end{adjustbox}
+    \begin{proof}
+        Suppose $\lim_{x \rightarrow p} f(x) = q$.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.3]{Images/11.1.2.png}
-\end{figure}
+        For $\epsilon$ $>$ 0, there is a $\delta$ $>$ 0 such that
+        $d_Y(f(x),q) < \epsilon$ if x $\in$ E and $d_X(x,p) < \delta$.
 
-{ \color{red} Theorem 11.1.3: Upper and Lower limits are unique }
+        Choose \{$p_n$\} $\in$ E such that $p_n \not = p$
+        and $\lim_{n \rightarrow \infty} p_n = p$.
 
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0.1cm}
-		Let \{$s_n$\} be a sequence of real numbers.
-		Let E be the set of subsequential limits and
-		$s^*$ be the upper limit of \{$s_n$\}. Then:
-	\end{adjustbox}
+        Then for $\delta > 0$, there is N such that for n $>$ N, then
+        $d_X(p_n,p)< \delta$ so $d_Y(f(p_n),q) < \epsilon$.
 
-	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-		\item $s^*$ $\in$ E
-		
-			{ \color{magenta} \underline{Proof} }
+        \vspace{0.2cm}
 
-			\fbox{
-			\begin{minipage}{13cm}
-				If $s^*$ = $+\infty$, then there is a
-				\{$s_{n_k}$\} $\rightarrow$ $+\infty$ so E is not bounded above.
-				
-				If $s^*$ $\in$ $\mathbb{R}$, then E is bounded above so
-				$s^*$ $\in$ E'.
+        Suppose $\lim_{x \rightarrow p} f(x) \not = q$.
+        Then there is a $\epsilon$ $>$ 0 such that for every $\delta$ $>$ 0,
+        there is a x $\in$ E where $d_Y(f(x),q) \geq \epsilon$, but
+        $d_X(x,p) < \delta$.
+        Let $\delta_n = \frac{1}{n}$ and thus, there is a \{$p_n$\}
+        where $p_n \not = p$ and $\lim_{n \rightarrow \infty} p_n = p$,
+        but $\lim_{n \rightarrow \infty} f(p_n) \not = q$.
+    \end{proof}
 
-				Then by {\color{red} theorem 10.2.4}, $s^*$ $\in$ E.
+    \vspace{0.5cm}
 
-				If $s^*$ = $-\infty$, then there are no subsequential limits
-				in E.
-				Thus, for every M, there is a N such that for n $\geq$ N,
-				$s_n$ $\leq$ M so $-\infty$ $\in$ E.
-			\end{minipage} }
 
-		\item If x $>$ $s^*$, there is a N such that for n $\geq$ N, $s_n$ $<$ x
-		
-			{ \color{magenta} \underline{Proof} }
 
-			\fbox{
-			\begin{minipage}{13cm}
-				Suppose there is a x $>$ $s^*$ such that $s_n$ $\geq$ x
-				for infinitely many n.
+    \begin{corollary}{A limit of a function is unique}{14cm}
+        If f has a limit at p, this limit is unique.
+    \end{corollary}
 
-				Then, there is a y $\in$ E where y $\geq$ x $>$ $s^*$
-				which contradicts $s^*$ = sup(E).
-			\end{minipage} }
+    \begin{proof}
+        If $\lim_{x \rightarrow p} f(x) = q$, then by {\color{red} theorem 11.1.2},
+        $\lim_{n \rightarrow \infty} f(p_n) = q$ for every
+        \{$p_n$\} $\in$ E where $p_n \not = p$ and
+        $\lim_{n \rightarrow \infty} p_n = p$.
 
-		\item $s^*$ is the only number that satisfies (a) and (b)
-		
-			{ \color{magenta} \underline{Proof} }
+        Thus, if there exists $\lim_{x \rightarrow p} f(x) = q'$, then there is
+        a \{$p_n$\} $\in$ E where $p_n \not = p$ and
+        $\lim_{n \rightarrow \infty} p_n = p$, but
+        $\lim_{n \rightarrow \infty} f(p_n) = q'$ which is a contradiction.
+    \end{proof}
 
-			\fbox{
-			\begin{minipage}{13cm}
-				Suppose p,q satisfy part a and b where p $<$ q.
-				Choose x where p $<$ x $<$ q.
-				Since p satisfies b, then $s_n$ $<$ x for n $\geq$ N.
-				Thus, x is an upper bound for E so q $\not \in E$ since q $>$ x
-				contradicting that q satisfies part a.
-			\end{minipage} }
-	\end{enumerate}
+    \vspace{0.5cm}
 
-	\vspace{0.2cm}
 
-	\hspace{1cm}
-	The same properties are analogous for $s_*$. \\
 
-\newpage
+    \begin{wtheorem}{Arithemtic operations on functions of limits}{14cm}
+        Let E $\subset$ X, p $\in$ E', and f(x),g(x) $\in$ $\mathbb{C}$ so 
+        $\lim_{x \rightarrow p} f(x) = A$, $\lim_{x \rightarrow p} g(x) = B$.
+    \end{wtheorem}
 
-{ \color{red} Theorem 11.1.4: Inf \& Sup of $s_n$ $\leq$ $t_n$ }
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item $\lim_{x \rightarrow p} (f+g)(x) = A+B$
+        \item $\lim_{x \rightarrow p} (fg)(x) = AB$
+        \item $\lim_{x \rightarrow p} (\frac{f}{g})(x) = \frac{A}{B}$
+    \end{enumerate}
 
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		If $s_t$ $\leq$ $t_n$ for n $\geq$ fixed N, then
+    \newpage
 
-		\hspace{1cm}
-		$\lim_{n \rightarrow \infty}$ inf($s_n$)
-		$\leq$
-		$\lim_{n \rightarrow \infty}$ inf($t_n$)
 
-		\hspace{1cm}
-		$\lim_{n \rightarrow \infty}$ sup($s_n$)
-		$\leq$
-		$\lim_{n \rightarrow \infty}$ sup($t_n$)
-	\end{adjustbox}
 
-{ \color{magenta} \underline{Proof} }
 
-	\fbox{
-	\begin{minipage}{15cm}
-		Let $E_1$ be the set of extended reals x such that
-		\{$s_{n_k}$\} $\rightarrow$ x for some \{$s_{n_K}$\}.
 
-		Let $E_2$ be the set of extended reals y such that
-		\{$t_{n_k}$\} $\rightarrow$ y for some \{$s_{n_K}$\}.
+\subsection{ Continuous Functions }
 
-		Let $s^*$ = sup($E_1$), $s_*$ = inf($E_1$),
-		$t^*$ = sup($E_2$), and $t_*$ = inf($E_2$).
+    \begin{definition}{Continuous functions on a set}{14cm}
+        Suppose X,Y are metric spaces, E $\subset$ X, p $\in$ E, and
+        f maps E into Y.
 
-		Since there is a N such that $s_n$ $\leq$ $t_n$ for n $\geq$ N,
-		then:
-		
-		\hspace{1cm}
-		x $\leftarrow$ \{$s_{N}, s_{N+1}, ... $\}
-		$\leq$ \{$t_{N}, t_{N+1}, ... $\} $\rightarrow$ y
+        f is continuous at p if:
+        
+        \begin{adjustbox}{minipage=13cm, right, vspace=0.1cm 0cm}
+            For every $\epsilon > 0$, there is a
+            $\delta > 0$ such that
+            for all x $\in$ E
+            
+            where $d_X(x,p) < \delta$, then
+            $d_Y(f(x),f(p)) < \epsilon$
+        \end{adjustbox}
 
-		Thus, for n $\geq$ N, inf($s_n$) $\leq$ inf($t_n$)
-		and sup($s_n$) $\leq$ sup($t_n$).		
-	\end{minipage} }	
+        f(p) have to be defined to be continuous.
 
+        If f is continuous at every p $\in$ E, then f is continuous on E.
 
+        f is continuous at isolated points since regardless of $\epsilon$,
+        there is a $\delta > 0$ such that $d_X(x,p) < \delta$ is x = p so
+        $d_Y(f(x),f(p)) = 0 < \epsilon$.
+    \end{definition}
 
 
 
-\subsection{ Special Sequences }
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.38]{Images/11.2.1.png}
+    \end{figure}
 
-{ \color{red} Theorem 11.2.1: Special sequences }
 
-	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-		\item If p $>$ 0, then $\lim_{n \rightarrow \infty}$ $\frac{1}{n^p}$ = 0
-		
-			{ \color{magenta} \underline{Proof} }
 
-				\fbox{
-				\begin{minipage}{13cm}
-					For $\epsilon$ $>$ 0, let N $>$ $\sqrt[p]{\frac{1}{\epsilon}}$.
+    \begin{wtheorem}{Continuity at p $\rightleftharpoons$ lim f(p) = f(p)}{14cm}
+        Suppose E $\subset$ X, p $\in$ E, and
+        f maps E into Y. Let p $\in$ E'.
 
-					Then for n $\geq$ N,
-					$\lim_{n \rightarrow \infty}$ $\frac{1}{n^p}$
-					$\leq$ $\frac{1}{N^p}$
-					$<$ $\frac{1}{\sqrt[p]{\frac{1}{\epsilon}}^p}$ = $\epsilon$
-				\end{minipage} }
+        Then f is continuous at p if and only if
+        $\lim_{x \rightarrow p} f(x) = f(p)$.
+    \end{wtheorem}
 
-		\item If p $>$ 0, then $\lim_{n \rightarrow \infty}$ $\sqrt[n]{p}$ = 1
-		
-			{ \color{magenta} \underline{Proof} }
+    \begin{proof}
+        If f is continuous at p, then for every $\epsilon > 0$, there
+        is a $\delta > 0$ such that $d_Y(f(x),f(p)) < \epsilon$
+        for all x $\in$ E where $d_X(x,p) < \delta$.
+        Thus, $\lim_{x \rightarrow p} f(x) = f(p)$.
 
-				\fbox{
-				\begin{minipage}{13cm}
-					If p $>$ 1, then let $x_n$ = $\sqrt[n]{p}$ - 1 $>$ 0.
+        \vspace{0.2cm}
 
-					\hspace{1cm}
-					p = $(x_n + 1)^n$
-					= $x_n^n + nx_n^{n-1} + ... + nx_n + 1$
-					$\geq$ $nx_n + 1$
+        If $\lim_{x \rightarrow p} f(x) = f(p)$, then for every
+        $\epsilon > 0$, there is a $\delta > 0$ where $d_Y(f(x),f(p)) < \epsilon$
+        for all x $\in$ E where $d_X(x,p) < \delta$.
+        Thus, f is continuous at p.
+    \end{proof}
 
-					Thus, 0 $<$ $x_n$ $\leq$ $\frac{p-1}{n}$ so
-					\{$x_n$\} $\rightarrow$ 0 and thus,
-					\{$\sqrt[n]{p}$\} $\rightarrow$ 1.
+    \vspace{0.5cm}
 
-					If p = 1, then $\lim_{n \rightarrow \infty}$ $\sqrt[n]{p}$
-					= $\lim_{n \rightarrow \infty}$ 1 = 1.
 
-					If 0 $<$ p $<$ 1, then $\frac{1}{p}$ $>$ 1.
-					From the proof above for p $>$ 1,
-					\{$\sqrt[n]{\frac{1}{p}}$\} $\rightarrow$ 1.
 
-					Thus, \{$\frac{1}{\sqrt[n]{p}}$\} $\rightarrow$ 1
-					so \{$\sqrt[n]{p}$\} $\rightarrow$ 1.
-				\end{minipage} }
+    \begin{wtheorem}{Continuity Chain Rule}{14cm}
+        Suppose E $\subset$ X, f: E $\rightarrow$ Y, g: f(E) $\rightarrow$ Z,
+        and h: E $\rightarrow$ Z where h(x) = g(f(x)).
 
-		\item $\lim_{n \rightarrow \infty}$ $\sqrt[n]{n}$ = 1
+        If f is continuous at p and g is continuous at f(p),
+        then h is continuous at p.
+    \end{wtheorem}
 
-			{ \color{magenta} \underline{Proof} }
+    \begin{proof}
+        Since g is continuous at f(p), then for $\epsilon > 0$, there is a
+        $\delta_1$ such that:
 
-				\fbox{
-				\begin{minipage}{13cm}
-					Let $x_n$ = $\sqrt[n]{n}$ - 1 $\geq$ 0.
+        \hspace{1cm}
+        $d_Z(g(y),g(f(p))) < \epsilon$ for $d_Y(y,f(p)) < \delta_1$
+        where y $\in$ f(E)
 
-					\hspace{1cm}
-					n = ($x_n$ + 1)$^n$ $\geq$ $\frac{n(n-1)}{2} x_n^2$
+        Since f is continuous at p, there is a $\delta_2 > 0$ such that:
 
-					Thus, 0 $\leq$ $x_n$ $\leq$ $\sqrt{\frac{2}{n-1}}$
-					so \{$x_n$\} $\rightarrow$ 0 and thus,
-					\{$\sqrt[n]{n}$\} $\rightarrow$ 1.
-				\end{minipage} }
+        \hspace{1cm}
+        $d_Y(f(x),f(p)) < \delta_1$ for $d_X(x,p) < \delta_2$ 
+        where x $\in$ E
 
-		\item If p $>$ 0 and $\alpha$ $\in$ $\mathbb{R}$, then
-		$\lim_{n \rightarrow \infty}$ $\frac{n^{\alpha}}{(1+p)^n}$ = 0
+        Thus, $d_Z(h(x),h(p))$ = $d_Z(g(f(x)),g(f(p)))$ $<$ $\epsilon$
+        for $d_X(x,p)$ $<$ $\delta_2$ where x $\in$ E.
 
-			{ \color{magenta} \underline{Proof} }
+        Thus, h is continuous at p.
+    \end{proof}
 
-				\fbox{
-				\begin{minipage}{13cm}
-					Let k $\in$ $\mathbb{Z}$ such that k $>$ $\alpha$ and k $>$ 0.
-					For n $>$ 2k:
 
-					\hspace{1cm}
-					(1+p)$^n$ $>$ $\binom{n}{k} p^k$
-					= $\frac{n(n-1)...(n-k+1)}{k!} p^k$
-					$>$ $\frac{n^k p^k}{2^k k!}$
 
-					Thus, 0 $<$ $\frac{n^{\alpha}}{(1+p)^n}$
-					$<$ $\frac{2^k k!}{p^k} n^{\alpha - k}$.
-					
-					Since $\alpha$ - k $<$ 0, then \{$n^{\alpha - k}$\} $\rightarrow$ 0
-					so \{$\frac{n^{\alpha}}{(1+p)^n}$\} $\rightarrow$ 0.
-				\end{minipage} }
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.37]{Images/11.2.3.png}
+    \end{figure}
 
-		\item If $|x|$ $<$ 1, then $\lim_{n \rightarrow \infty}$ $x^n$ = 0
+    \newpage
 
-			{ \color{magenta} \underline{Proof} }
 
-				\fbox{
-				\begin{minipage}{13cm}
-					From part d, let $\alpha$ = 0.
 
-					Thus, $\lim_{n \rightarrow \infty}$ $\frac{1}{(1+p)^n}$ = 0
-					and since p $>$ 0, then $\frac{1}{(1+p)^n}$ = $(\frac{1}{1+p})^n$ $<$ 1.
+    \begin{wtheorem}{Continuous functions map open sets to open sets}{14cm}
+        f: X $\rightarrow$ Y is continuous on X if and only if:
 
-					Also, $-\lim_{n \rightarrow \infty}$ $\frac{1}{(1+p)^n}$
-					= $\lim_{n \rightarrow \infty}$ $\frac{-1}{(1+p)^n}$ = 0
-					so $\frac{-1}{(1+p)^n}$ = $(\frac{-1}{1+p})^n$ $>$ -1.
-				\end{minipage} }
-	\end{enumerate}
+        \hspace{1cm}
+        $f^{-1}(V)$ is open in X for every open set V in Y.
+    \end{wtheorem}
 
+    \begin{proof}
+        Suppose f is continuous on X and V is an open set in Y.
 
+        Suppose p $\in$ X and f(p) $\in$ V.
+        Since V is open, there exists $\epsilon > 0$ such that
+        y $\in$ V if $d_Y(y,f(p)) < \epsilon$.
+        Since f is continuous at p, there exists $\delta > 0$ such that
+        $d_Y(f(x),f(p)) < \epsilon$ for $d_X(x,p) < \delta$.
+        Thus, x $\in$ $f^{-1}(V)$ for $d_X(x,p) < \delta$.
 
+        \vspace{0.2cm}
 
+        Suppose $f^{-1}(V)$ is open in X for every open V in Y.
+
+        Fix p $\in$ X and $\epsilon > 0$.
+        Let V be the set of all y $\in$ Y such that $d_Y(y,f(p)) < \epsilon$
+        so V is open and thus, $f^{-1}(V)$ is open.
+        Thus, there exists $\delta > 0$ such that x $\in$ $f^{-1}(V)$
+        for $d_X(x,p) < \delta$.
+        Since x $\in$ $f^{-1}(V)$, then f(x) $\in$ V
+        so $d_Y(f(x),f(p)) < \epsilon$.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{corollary}{Continuous functions map closed sets to closed sets}{14cm}
+        f: X $\rightarrow$ Y is continuous on X if and only if:
+
+        \hspace{1cm}
+        $f^{-1}(C)$ is closed in X for every closed set C in Y.        
+    \end{corollary}
+
+    \begin{proof}
+        By {\color{red} theorem 11.2.4}, f is continuous
+        if and only if $f^{-1}(V)$ is open in X for every open set V in Y.
+        Let C = $V^c$.
+        Since V is open, then C is closed.
+
+        Since $f^{-1}(C)$
+        = $f^{-1}(V^c)$
+        = $(f^{-1}(V))^c$,
+        then $f^{-1}(C)$ is closed since $f^{-1}(V)$ is open.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Continuous functions}{14cm}
+        Let f,g be complex continuous functions on X.
+
+        Then f+g, fg, and $\frac{f}{g}$ where g $\not =$ 0 for all x $\in$ X
+        are continuous on X.
+    \end{wtheorem}
+
+    \begin{proof}
+        If x is an isolated point, f+g, fg, and $\frac{f}{g}$
+        are continuous by definition.
+        If x is a limit point, then by {\color{red} theorems 11.1.4 and 11.2.2},
+        f+g, fg, and $\frac{f}{g}$ are continuous since
+
+        \begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
+            \item $\lim_{x \rightarrow p} (f+g)(x)
+                = \lim_{x \rightarrow p} f(x) + \lim_{x \rightarrow p} g(x)
+                = f(p) + g(p)$
+            \item $\lim_{x \rightarrow p} (fg)(x)
+                = \lim_{x \rightarrow p} f(x) \lim_{x \rightarrow p} g(x)
+                = f(p) g(p)$
+            \item $\lim_{x \rightarrow p} (\frac{f}{g})(x)
+                = \frac{\lim_{x \rightarrow p} f(x)}{\lim_{x \rightarrow p} g(x)}
+                = \frac{f(p)}{g(p)}$
+        \end{itemize}
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{ltheorem}{Continuous functions on $\mathbb{R}^k$}{1.5cm}
+        \item Let $f_1,...,f_k$: X $\rightarrow$ $\mathbb{R}$ and
+            f: X $\rightarrow$ $\mathbb{R}^k$ where
+            f(x) = ($f_1(x)$, ... , $f_k(x)$).
+
+            Then f is continuous if and only if $f_1,...,f_k$ are continuous.
+
+        \item If f and g are continuous mappings of X into $\mathbb{R}^k$,
+            then f + g and f $\cdot$ g are continuous on X.
+    \end{ltheorem}
+
+    \begin{proof}
+        Since $|f_i(x) - f_i(y)|$
+        $\leq$ $\sqrt{\sum_1^k |f_i(x) - f_i(y)|^2}$
+        = $|f(x) - f(y)|$, then if f is continuous, then
+        each $f_i$ is continuous and vice versa.
+
+        \vspace{0.2cm}
+
+        Since f,g are continuous, then by part a, each $f_i$,$g_i$ are continuous.
+        Then by {\color{red} theorem 11.2.6},
+        each $f_i + g_i$ and $f_i g_i$ are continuous so
+        by part a, f + g and f $\cdot$ g are continuous.
+
+        \vspace{0.2cm}
+
+        Thus, every polynomial, rational, and absolute value function is continuous
+        since polynomials are $x_1 \cdot ... \cdot x_k$ where each $x_i$
+        is continuous, rationals are polynomials divided by polynomials,
+        and $||x| - |y|| \leq |x - y|$ implies $|x|$ is continuous.
+    \end{proof}
+
+    \newpage
+
+
+
+
+
+\subsection{ Continuity and Compactness }
+
+    \begin{definition}{Bounded Functions}{14cm}
+        f: E $\rightarrow$ $\mathbb{R}^k$ is bounded if there is a
+        M $\in$ $\mathbb{R}$ such that f(x) $\leq$ M for all x $\in$ E.        
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Continuous functions from compact spaces are compact}{14cm}
+        Suppose f is a continuous mapping of a compact metric space X
+        into a metric space Y. Then f(X) is compact.        
+    \end{wtheorem}
+
+    \begin{proof}
+        Let \{$V_{\alpha}$\} be an open cover of f(X).
+        Since f is continuous, then by {\color{red} theorem 11.2.4},
+        each $f^{-1}(V_{\alpha})$ is open.
+        Since X is compact, there is n where
+        X $\subset$ $f^{-1}(V_{\alpha_1})$ $\cup$ ... $\cup$ $f^{-1}(V_{\alpha_n})$.
+
+        Thus, f(X) $\subset$ $V_{\alpha_1}$ $\cup$ ... $\cup$ $V_{\alpha_n}$
+        so f(X) is compact.
+    \end{proof}
+
+
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.28]{Images/11.3.2.png}
+    \end{figure}
+
+
+
+    \begin{wtheorem}{Continuous functions from compact to
+    $\mathbb{R}^k$ are bounded}{14cm}
+        If f is a continuous mapping of a compact metric space X
+        into $\mathbb{R}^k$, then f(X) is closed and bounded. 
+    \end{wtheorem}
+
+    \begin{proof}
+        By {\color{red} theorem 11.2.2}, f(X) is compact.
+        By {\color{red} theorem 6.3.13}, f(X) is closed and bounded.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Generalized extreme value theorem}{14cm}
+        Suppose f is a continuous real function of a compact metric space X
+        such that M = sup$_{x \in X}$ f(x) and m = inf$_{x \in X}$ f(x).
+
+        Then there exists p,q $\in$ X such that f(p) = M and f(q) = m.        
+    \end{wtheorem}
+
+    \begin{proof}
+        By {\color{red} theorem 11.3.3}, f(X) is closed and bounded.
+        Let M = $\underset{x \in X}{\text{sup}}$ f(x),
+        m = $\underset{x \in X}{\text{inf}}$ f(x).
+
+        Since f(X) is bounded, then M,m $\in$ (f(X))' and
+        since f(X) is closed, then M,m $\in$ f(X).
+        Thus, there exists p,q $\in$ X such that f(p) = M and f(q) = m.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{If f is continuous 1-1, then $f^{-1}$ is continuous}{14cm}
+        Suppose f is a continuous 1-1 mapping of a compact metric space X
+        onto a metric space Y.
+        Then $f^{-1}$ is a continuous mapping of Y onto X.
+    \end{wtheorem}
+
+    \begin{proof}
+        Let V be an open set in X.
+
+        Since $V^c$ is closed and $V^c$ $\subset$ compact set X,
+        then by {\color{red} theorem 6.3.5}, $V^c$ is compact.
+
+        Thus by {\color{red} theorem 11.3.2}, f($V^c$) is a compact
+        subset of Y so f($V^c$) is closed.
+
+        Since f is 1-1 and onto, f($V^c$) = $(f(V))^c$ so f(V) is open.
+        Since from any open set V in X, f(V) is open in Y, then by
+        {\color{red} theorem 11.2.4}, $f^{-1}$ is continuous.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{definition}{Uniformly Continuous}{14cm}
+        Let f: X $\rightarrow$ Y. Then f is uniformly continuous on X if:
+        
+        \begin{adjustbox}{minipage=13cm, right, vspace=0.1cm 0cm}
+            For every $\epsilon > 0$, there is a $\delta > 0$
+            such that for all p,q $\in$ X
+            
+            where $d_X(p,q) < \delta$, then
+            $d_Y(f(p),f(q)) < \epsilon$.
+        \end{adjustbox}
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Continuous functions on compact are uniformly continuous}{14cm}
+        Let f be a continuous mapping of a compact metric space X into
+        metric space Y.
+        Then f is uniformly continuous on X.
+    \end{wtheorem}
+
+    \begin{proof}
+        For $\epsilon > 0$, since f is continuous, then for each
+        p $\in$ X, there is a $\phi(p)$ such that for all q $\in$ X
+        where $d_X(q,p) < \phi(p)$, $d_Y(f(q),f(p)) < \frac{\epsilon}{2}$.
+
+        Let J(p) be the set of all q $\in$ X where
+        $d_X(q,p) < \frac{1}{2}\phi(p)$.
+
+        Since the set of all J(p) is an open cover of X and since X is compact,
+        then there is a n such that X $\subset$ J($p_1$) $\cup$ ... $\cup$ J($p_n$).
+        Let $\delta$ = $\frac{1}{2}$ min( $\phi(p_1), ... , \phi(p_n)$ ) $>$ 0.
+
+        Then for p,q $\in$ X where $d_X(p,q) < \delta$, there is a m where
+        $1 \leq m \leq n$ such that p $\in$ J($p_m$) so
+        $d_X(p,p_m) < \frac{1}{2} \phi(p_m)$. Thus:
+
+        \hspace{1cm}
+        $d_X(q,p_m) \leq d_X(q,p) + d_X(p,p_m) < \delta + \frac{1}{2} \phi(p_m)
+        \leq \phi(p_m)$
+
+        \hspace{1cm}
+        $d_Y(f(p),f(q)) \leq d_Y(f(p),f(p_m)) + d_Y(f(p_m),f(q))
+        < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Continuous functions from noncompact
+    $\not \rightarrow$ uniformly continuous}{14cm}
+        Let E be a noncompact set in $\mathbb{R}^1$.
+
+        \begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
+            \item There exists a continuous function which is not bounded.
+            
+            \item There exists a continuous, bounded function which is
+            has no maximum.
+            
+            \item If E is bounded, there exists a continuous function which
+            is not uniformly continuous.
+        \end{enumerate}
+    \end{wtheorem}
+    
+    \begin{proof}
+        Suppose E is bounded so there is a $x_0$ $\in$ E', but $x_0$ $\not \in$ E.
+
+        Consider f(x) = $\frac{1}{x - x_0}$ which is continuous on E, but unbounded.
+
+        For $\epsilon > 0$ and $\delta > 0$, there is a x $\in$ E such that
+        $|x - x_0| < \delta$.
+        Take t close enough to $x_0$ so $|f(t) - f(x_0)| > \epsilon$,
+        but $|t - x| < \delta$.
+        Thus, f is not uniformly continuous.
+
+        \vspace{0.2cm}
+
+        Consider g(x) = $\frac{1}{1 + (x - x_0)^2}$ which is continuous on E
+        and bounded since g(x) $\in$ (0,1).
+
+        Since sup$_{x \in E}$ g(x) = 1, but g(x) $<$ 1 for all x $\in$ E, then
+        g has no maximum on E.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+
+
+\subsection{ Continuity and Connectedness }
+
+    \begin{wtheorem}{Continuous functions map connected to connected}{14cm}
+        If f is a continuous mapping of X into Y and E is a connected
+        subset of X, then f(E) is connected.
+    \end{wtheorem}
+
+    \begin{proof}
+        Suppose f(E) = A $\cup$ B where A and B are nonempty separated
+        subsets of Y.
+        
+        Let G = E $\cap$ $f^{-1}(A)$ and H = E $\cap$ $f^{-1}(B)$.
+        Then E = G $\cup$ H.
+
+        Since A $\subset$ $\overline{A}$, G $\subset$ $f^{-1}(\overline{A})$.
+        Since f is continuous, then $f^{-1}(\overline{A})$ is closed so
+        $\overline{G}$ $\subset$ $f^{-1}(\overline{A})$.
+        Thus, f($\overline{G}$) $\subset$ $\overline{A}$.
+
+        Since f(H) = B and $\overline{A}$ $\cap$ B is empty,
+        $\overline{G}$ $\cap$ H is empty.
+        Similarily, G $\cap$ $\overline{H}$ is empty so G and H are separated
+        which contradicts that E = G $\cup$ H is connected.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Generalized Intermediate Value Theorem}{14cm}
+        Let f be a continuous real function on [a,b]. If f(a) $<$ c $<$ f(b),
+        then there exists x $\in$ (a,b) such that f(x) = c.
+    \end{wtheorem}
+
+    \begin{proof}
+        Since [a,b] is connected, then by {\color{red} theorem 11.4.1},
+        f([a,b]) is a connected subset of $\mathbb{R}^1$.
+
+        Thus, by {\color{red} theorem 7.2.2}, any c where f(a) $<$ c $<$ f(b)
+        is c $\in$ f(x) for some x $\in$ [a,b].
+    \end{proof}
+
+    \vspace{0.3cm}
+
+
+
+
+
+\subsection{ Discontinuities }
+
+    \begin{definition}{Right and Left Limits}{14cm}
+        \small
+        Let f be defined on (a,b).
+        
+        \vspace{0.2cm}
+
+        Then for any x where x $\in$ [a,b), f(x+) = q if:
+        
+        \hspace{1cm}
+        f($t_n$) $\rightarrow$ q as n $\rightarrow$ $\infty$
+        for all sequences \{$t_n$\} in (x,b) such that $t_n$ $\rightarrow$ x.
+
+        \vspace{0.2cm}
+
+        Then for any x where x $\in$ (a,b], f(x-) = q if:
+        
+        \hspace{1cm}
+        f($t_n$) $\rightarrow$ q as n $\rightarrow$ $\infty$
+        for all sequences \{$t_n$\} in (a,x) such that $t_n$ $\rightarrow$ x.
+
+        \vspace{0.2cm}
+
+        Then $\lim_{t \rightarrow x}$ f(t) exists if and only if
+        f(x-) = f(x+) = $\lim_{t \rightarrow x}$ f(t).
+    \end{definition}
+
+    \vspace{0.3cm}
+
+
+
+    \begin{definition}{Types of discontinuities}{14cm}
+        \small
+        If f is discontinuous at x, but f(x+) and f(x-) exists,
+        then f have a simple discontinuity of the first kind else
+        it is a discontinuity of the second kind.
+
+        Thus, a simple discontinuity is either:
+
+        \begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
+            \item f(x-) $\not = $ f(x+)
+            
+            \item f(x-) = f(x+) $\not =$ f(x) 
+        \end{itemize}
+    \end{definition}
+
+    \vspace{0.3cm}
+
+
+
+
+
+\subsection{ Monotonic Functions }
+
+    \begin{definition}{Monotonic}{14cm}
+        \small
+        f: (a,b) $\rightarrow$ $\mathbb{R}$ is monotonically increasing
+        if f(x) $\leq$ f(y) for $a < x < y < b$.
+
+        f: (a,b) $\rightarrow$ $\mathbb{R}$ is monotonically decreasing
+        if f(x) $\geq$ f(y) for $a < x < y < b$.        
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Right and Left Limits of monotonics on (a,b)}{14cm}
+        Let f be monotonically increasing on (a,b).
+
+        Then f(x+) and f(x-) exists at every x $\in$ (a,b) where:
+
+        \hspace{1cm}
+        sup$_{t \in (a,x)}$ f(t)
+        = f(x-)
+        $\leq$ f(x)
+        $\leq$ f(x+)
+        = inf$_{t \in (x,b)}$ f(t)
+
+        Furthermore, for $a < x < y < b$, f(x+) $\leq$ f(y-).
+
+        Properties analogous for monotonically decreasing functions.
+    \end{wtheorem}
+
+    \begin{proof}
+        \small
+        Since f is monotonically increasing, then for t $\in$ (a,x),
+        f(t) is bounded above by f(x) and thus, by the least upper bounded
+        property, sup$_{t \in (a,x)}$ f(t) exists.
+
+        For $\epsilon > 0$, there exists a $\delta > 0$ such that
+        sup$_{t \in (a,x)}$ f(t) - $\epsilon$
+        $<$ f(x - $\delta$)
+        $\leq$ sup$_{t \in (a,x)}$ f(t)
+        for a $<$ x - $\delta$ $<$ x.
+        Since f(x - $\delta$) $\leq$ f(t) $\leq$ sup$_{t \in (a,x)}$ f(t)
+        for t $\in$ (x-$\delta$,x), then
+        $|f(t) - \text{sup}_{t \in (a,x)} f(t)| < \epsilon$ for
+        t $\in$ (x-$\delta$,x) so f(x-) = sup$_{t \in (a,x)}$ f(t).
+
+        For $\epsilon > 0$, there exists a $\delta > 0$ such that
+        inf$_{t \in (x,b)}$ f(t)
+        $<$ f(x + $\delta$)
+        $\leq$ inf$_{t \in (x,b)}$ f(t) + $\epsilon$
+        for x $<$ x + $\delta$ $<$ b.
+        Since f(x + $\delta$) $\geq$ f(t) $\geq$ inf$_{t \in (x,b)}$ f(t)
+        for t $\in$ (x,x+$\delta$), then
+        $|f(t) - \text{inf}_{t \in (x,b)} f(t)| < \epsilon$ for
+        t $\in$ (x,x+$\delta$) so f(x+) = inf$_{t \in (x,b)}$ f(t).
+
+        Thus,
+        sup$_{t \in (a,x)}$ f(t) = f(x-)
+        $\leq$ f(x)
+        $\leq$ f(x+) = inf$_{t \in (x,b)}$ f(t).
+
+        If $a < x < y < b$, then:
+
+        \hspace{1cm}
+        f(x+) = inf$_{t \in (x,b)}$ f(t)
+        = inf$_{t \in (x,y)}$ f(t)
+        $\leq$ sup$_{t \in (x,y)}$ f(t)
+        = sup$_{t \in (a,y)}$ f(t)
+        = f(y-)
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{corollary}{Monotonics can only have simple discontinuities}{14cm}
+        Monotonic functions have no discontinuities of the second kind
+    \end{corollary}
+
+    \begin{proof}
+        By {\color{red} theorem 11.6.2}, f(x-) and f(x+) exists and thus,
+        f can only have simple discontinuities and not discontinuities
+        of the second kind.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Discontinuities of monotonics is at most countable}{14cm}
+        Let f be monotonic on (a,b).
+
+        Then the set of points of (a,b) where f is discontinuous is
+        at most countable.
+    \end{wtheorem}
+
+    \begin{proof}
+        Suppose f is increasing.
+        Let E be the set of points where f is discontinuous.
+        Then for x $\in$ E, there is a rational r(x) where
+        f(x-) $<$ r(x) $<$ f(x+).
+        
+        Then for $x_1$ $<$ $x_2$, by {\color{red} theorem 11.6.2},
+        f($x_1$+) $\leq$ f($x_2$-). Then:
+
+        \hspace{1cm}
+        f($x_1$-) $<$ r($x_1$) $<$ f($x_1$+)
+        $\leq$ f($x_2$-) $<$ r($x_2$) $<$ f($x_2$+)
+
+        Thus, r($x_1$) $\not =$ r($x_2$) if $x_1$ $\not =$ $x_2$.
+
+        Since there is a 1-1 correspondence between E and a subset
+        of rational numbers which is countable, then E is at most countable.
+
+        If f is decreasing, proof is analogous.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+
+
+\subsection{ Infinite Limits $\backslash$ Limits at Infinity }
+
+    \begin{definition}{Neighborhoods in extended reals}{14cm}
+        For any real c, a neighborhood of $+\infty$ = (c,$+\infty$).
+
+        For any real c, a neighborhood of $-\infty$ = ($-\infty$,c).        
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Infinite Limits}{14cm}
+        Let real function f be defined on E $\subset$ $\mathbb{R}$.
+
+        Then f(t) $\rightarrow$ A as t $\rightarrow$ x where A and x
+        are extended reals if:
+        
+        \begin{adjustbox}{minipage=13cm, right, vspace=0.1cm 0cm}
+            For every neighborhood U of A,
+            there is a neighborhood V of x such that V $\cap$ E $\not =$ $\emptyset$
+            and f(t) $\in$ U for all t $\in$ V $\cap$ E where t $\not =$ x.
+        \end{adjustbox}        
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Arithmetric operations on functions of infinite limits}{14cm}
+        Let f,g be defined on E $\subset$ $\mathbb{R}$ where
+        f(t) $\rightarrow$ A and g(t) $\rightarrow$ B as t $\rightarrow$ x.
+    \end{wtheorem}
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item If f(t) $\rightarrow$ A', then A' = A.
+        
+        \item (f+g)(t) $\rightarrow$ A + B
+        
+        \item (fg)(t) $\rightarrow$ AB
+        
+        \item $\frac{f}{g}$(t) $\rightarrow$ $\frac{A}{B}$
+    \end{enumerate}

@@ -4,8 +4,12 @@
 \usepackage[english]{babel}
     \setlength\parindent{0pt} % set distance between paragraphs to 0
 % -----------------------------------------------------------------------------
+                                % More font sizes
+\usepackage{moresize}
+% -----------------------------------------------------------------------------
                                 % Enhances mathematical formulas
 \usepackage{amsmath}
+\usepackage{mathtools}
 % -----------------------------------------------------------------------------
                                 % Includes math symbols
 \usepackage{amsfonts}
@@ -99,16 +103,18 @@
 \usepackage{colortbl}
     \definecolor{purple}{RGB}{210, 0, 235}
     \definecolor{lblue}{RGB}{10, 180, 250}
+    \definecolor{green}{RGB}{0, 250, 154}
 % -----------------------------------------------------------------------------  
                                 % Adjust paper size
 \usepackage[a4paper, inner=3cm, outer=3cm, top=2.5cm, bottom=2.5cm]{geometry}
     \setlength\headheight{15pt}         % set heigh of header to 15pt
     \renewcommand{\headwidth}{15cm}     % set width of header to 15cm
 % -----------------------------------------------------------------------------
-								% Include textboxes
+								% Include textboxes & boxed minipages
 \usepackage{adjustbox}
     % \begin{adjustbox}{minipage=14cm, right}
     % \end{adjustbox}
+\usepackage{boxedminipage}
 % -----------------------------------------------------------------------------
 								% Include crossed out statements
 \usepackage[thicklines]{cancel}
@@ -120,3 +126,102 @@
 % -----------------------------------------------------------------------------
 								% Include cursive font
 \usepackage{mathrsfs}
+% -----------------------------------------------------------------------------
+                                % Personal environments
+\newcounter{total}[subsection]
+\setcounter{total}{0}
+
+\newenvironment{definition}[2]
+    {   
+        \stepcounter{total}
+        { \color{blue} Definition \thesubsection.\arabic{total}: #1 }
+
+        \begin{adjustbox}{minipage=#2, right, vspace=0.1cm 0cm}
+    }
+    {
+        \end{adjustbox}
+    }
+
+\newenvironment{wtheorem}[2]
+    {   
+        \stepcounter{total}
+        { \color{red} Theorem \thesubsection.\arabic{total}: #1}
+
+        \begin{adjustbox}{minipage=#2, right, vspace=0.1cm 0cm}
+    }
+    {
+        \end{adjustbox}
+    }
+
+\newenvironment{ltheorem}[2]
+    {   
+        \stepcounter{total}
+        { \color{red} Theorem \thesubsection.\arabic{total}: #1}
+
+        \begin{enumerate}[label=(\alph*), leftmargin=#2, itemsep=0.1cm]
+    }
+    {
+        \end{enumerate}
+    }    
+
+\newenvironment{corollary}[2]
+    {   
+        \stepcounter{total}
+        { \color{orange} Corollary \thesubsection.\arabic{total}: #1 }
+
+        \begin{adjustbox}{minipage=#2, right, vspace=0.1cm 0cm}
+    }
+    {
+        \end{adjustbox}
+    }
+
+\newenvironment{example}[1][14cm]
+    {   
+        { \color{purple} Example }
+
+        \begin{adjustbox}{minipage=#1, right, vspace=0.1cm 0cm}
+    }
+    {
+        \end{adjustbox}
+    }
+
+\newenvironment{proof}[1][15.5cm]
+    {   
+        { \color{magenta} \underline{Proof} }
+
+        \begin{adjustbox}{vspace=0.1cm 0cm}
+        \begin{boxedminipage}{#1}
+    }
+    {
+        \end{boxedminipage}
+        \end{adjustbox}
+    }
+
+\newenvironment{tbox}[1][15.5cm]
+    {
+        \begin{adjustbox}{vspace=0.1cm 0cm}
+        \begin{boxedminipage}{#1}
+    }
+    {
+        \end{boxedminipage}
+        \end{adjustbox}
+    }
+
+\newenvironment{intuition}[1][15.5cm]
+    {
+        { \color{green} \textbf{Intuition} }
+
+        \begin{adjustbox}{vspace=0.1cm 0cm}
+        \begin{boxedminipage}{#1}
+    }
+    {
+        \end{boxedminipage}
+        \end{adjustbox}
+    }
+% -----------------------------------------------------------------------------
+
+
+
+
+
+

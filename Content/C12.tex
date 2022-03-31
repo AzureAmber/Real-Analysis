@@ -1,596 +1,556 @@
 \newpage
 
-\section[Day 12: Series \& Comparison Test]{Series and Comparison Test}
+\section[Day 12: Differentiation]{ Differentiation }
 
-\subsection{ Series }
+\subsection{ Derivative of a function }
 
-{ \color{blue} Definition 12.1.1: Series }
+    \begin{definition}{Derivative}{14cm}
+        Let f be defined on any x $\in$ [a,b].
 
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        For sequence \{$a_n$\}, define $\sum_{n=p}^q$ $a_n$
-        = $a_p + a_{p+1} + ... + a_q$.
-
-        Then associate \{$a_n$\} with a sequence \{$s_n$\}
-        such that $s_n$ = $\sum_{k=1}^n$ $a_k$.
-
-        Then \{$s_n$\} is a series with partial sums $s_n$.
-
-        If \{$s_n$\} $\rightarrow$ s, then
-        $\sum_{n=1}^{\infty}$ $a_n$ = s
-        is the sum of the convergent series.
+        \hspace{1cm}
+        $\phi(t)$ = $\frac{f(t) - f(x)}{t - x}$ for t $\not =$ x
         
-        Note $a_1$ = $s_1$ and $a_n$ = $s_n$ - $s_{n-1}$. \\
-    \end{adjustbox}
+        The derivative of f at x:
 
-{ \color{red} Theorem 12.1.2: Cauchy Criterion for series }
+        \hspace{1cm}
+        $f'(x)$ = $\lim_{t \rightarrow x}$ $\phi(t)$
 
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        $\sum$ $a_n$ converges if and only if:
+        if the limit exist as defined by {\color{blue} definition 11.1.1}.
+
+        If f' is defined at x, then f is differentiable at x.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Differentiability $\rightarrow$ Continuity}{14cm}
+        Let f be defined on [a,b].
+        
+        If f is differentiable at x $\in$ [a,b], then f is continuous at x.        
+    \end{wtheorem}
+
+    \begin{proof}
+        As t $\rightarrow$ x:
+
+        \hspace{1cm}
+        f(t) - f(x)
+        = $\frac{f(t)- f(x)}{t-x} \cdot (t-x)$
+        $\rightarrow$ $f'(x) \cdot 0$
+        = 0
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Arithmetic operations on differentiation}{14cm}
+        Suppose f,g are defined on [a,b] and differentiable on
+        x $\in$ [a,b]. Then f+g, fg, and $\frac{f}{g}$ are differentiable at x:        
+    \end{wtheorem}
+
+    \begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
+        \item (f+g)'(x) = f'(x) + g'(x)
+        
+            \begin{proof}[13.5cm]
+                $\lim_{t \rightarrow x}$ $\frac{(f+g)(t) - (f+g)(x)}{t - x}$
+                = $\lim_{t \rightarrow x}$ $\frac{f(t) - f(x) + g(t) - g(x)}{t - x}$
+                
+                \hspace{4cm}
+                = $\lim_{t \rightarrow x}$ $\frac{f(t) - f(x)}{t - x}$
+                + $\lim_{t \rightarrow x}$ $\frac{g(t) - g(x)}{t - x}$
+                = f'(x) + g'(x)
+            \end{proof}
+        
+        \item (fg)'(x) = f'(x)g(x) + f(x)g'(x)
+
+            \begin{proof}[13.5cm]
+                $\lim_{t \rightarrow x}$ $\frac{(fg)(t) - (fg)(x)}{t - x}$
+                = $\lim_{t \rightarrow x}$ $\frac{f(t)g(t) - f(x)g(x)}{t - x}$
+
+                \hspace{3.5cm}
+                = $\lim_{t \rightarrow x}$ $\frac{f(t)g(t)-f(x)g(t)+f(x)g(t)-f(x)g(x)}
+                                                {t - x}$
+                
+                \hspace{3.5cm}
+                = $\lim_{t \rightarrow x}$ $\frac{[f(t)-f(x)]g(t)}{t - x}$
+                + $\lim_{t \rightarrow x}$ $\frac{f(x)[g(t)-g(x)}{t - x}$
+                
+                \hspace{3.5cm}
+                = f'(x)g(x) + f(x)g'(x)
+            \end{proof}
+
+        \item ($\frac{f}{g}$)'(x) = $\frac{f'(x)g(x) - f(x)g'(x)}{g^2(x)}$
+        
+            \begin{proof}[13.5cm]
+                $\lim_{t \rightarrow x}$ $\frac{(\frac{f}{g})(t)
+                                                - (\frac{f}{g})(x)}{t - x}$
+                = $\lim_{t \rightarrow x}$ $\frac{\frac{f(t)}{g(t)}
+                                                - \frac{f(x)}{g(x)}}{t - x}$
+                = $\lim_{t \rightarrow x}$ $\frac{f(t)g(x) - f(x)g(t)}
+                                                    {g(t)g(x)(t-x)}$
+                
+                \hspace{3.3cm}
+                = $\lim_{t \rightarrow x}$ $\frac{f(t)g(x)-f(x)g(x)+f(x)g(x)-f(x)g(t)}
+                                                    {g(t)g(x)(t-x)}$
+                
+                \hspace{3.3cm}
+                = $\lim_{t \rightarrow x}$ $\frac{[f(t)-f(x)]g(x)}{g(t)g(x)(t-x)}$
+                + $\lim_{t \rightarrow x}$ $\frac{f(x)[g(x)-g(t)]}{g(t)g(x)(t-x)}$
+                
+                \hspace{3.3cm}
+                = $\frac{f'(x)g(x)}{g^2(x)}$ + $\frac{f(x)[-g'(x)]}{g^2(x)}$
+                = $\frac{f'(x)g(x) - f(x)g'(x)}{g^2(x)}$
+            \end{proof}
+    \end{enumerate}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Differentiation Chain Rule}{14cm}
+        Suppose f is continuous on [a,b], f'(x) exists at x $\in$ [a,b],
+        g is defined on interval I containing f([a,b]), and
+        g is differentiable at f(x).
+
+        If h(t) = g(f(t)), then h is differentiable at x and
+        h'(x) = g'(f(x)) $\cdot$ f'(x)
+    \end{wtheorem}
+
+    \begin{proof}
+        Since f is differentiable at x and g is differentiable at f(x), then:
+
+        \hspace{1cm}
+        f(t) - f(x) = (t-x) [f'(x) + u(t)]
+        \hspace{2cm}
+        for t $\in$ [a,b] and $\lim_{t \rightarrow x}$ u(t) = 0
+
+        \hspace{1cm}
+        g(s) - g(f(x)) = (s-f(x)) [g'(f(x)) + v(s)]
+        \hspace{0.5cm}
+        for s $\in$ I and $\lim_{s \rightarrow f(x)}$ v(s) = 0
+
+        Thus:
+
+        \hspace{1cm}
+        $\lim_{t \rightarrow x}$ $\frac{h(t) - h(x)}{t - x}$
+        = $\lim_{t \rightarrow x}$ $\frac{g(f(t)) - g(f(x))}{t - x}$
+
+        \hspace{3.8cm}
+        = $\lim_{t \rightarrow x}$ $\frac{(f(t) - f(x))[g'(f(x)) + v(f(t))]}{t - x}$
+
+        \hspace{3.8cm}
+        = $\lim_{t \rightarrow x}$ $\frac{(t-x) [f'(t) + u(t)]
+                                                [g'(f(x)) + v(f(t))]}{t - x}$
+        
+        \hspace{3.8cm}
+        = g'(f(x))$\cdot$f'(x) + f'(x)$\cdot$0 + g'(f(x))$\cdot$0 + 0$\cdot$0
+        = g'(f(x)) $\cdot$ f'(x)
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+
+
+\subsection{ Mean Value Theorems}
+
+    \begin{definition}{Local Extrema}{14cm}
+        Let real-valued f $\in$ X.
+        
+        Then f has a local maximum at p $\in$ X if:
         
         \hspace{0.5cm}
-        For every $\epsilon$ $>$ 0, there is a N $\in$ $\mathbb{Z}$
-        such that for m $\geq$ n $\geq$ N,
-        $| \sum_{k=n}^m a_k |$ $\leq$ $\epsilon$
-    \end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-    \fbox{
-    \begin{minipage}{15cm}
-        Suppose $\sum_{k=1}^n a_k$ converges.
-
-        Then by {\color{red} theorem 10.3.3a}, $\sum_{k=1}^n a_k$ is 
-        a Cauchy sequence.
-
-        Then for $\epsilon$ $>$ 0, there is a N such that for
-        m $\geq$ n $\geq$ N:
-
-        \hspace{1cm}
-        d($\sum_{k=1}^n a_k$ , $\sum_{k=1}^m a_k$)
-        = $| \sum_{k=1}^m a_k - \sum_{k=1}^n a_k |$
-        = $| \sum_{k=n}^m a_k |$ $\leq$ $\epsilon$
-
-        \vspace{0.2cm}
-
-        Suppose for every $\epsilon$ $>$ 0, there is a N
-        such that for m $\geq$ n $\geq$ N,
-        $| \sum_{k=n}^m a_k |$ $\leq$ $\epsilon$.
-
-        \hspace{1cm}
-        $| \sum_{k=n}^m a_k |$
-        = $| \sum_{k=1}^m a_k - \sum_{k=1}^n a_k |$
-        = d($\sum_{k=1}^n a_k$ , $\sum_{k=1}^m a_k$) $\leq$ $\epsilon$
-
-        Thus, $\sum_{k=1}^n a_k$ is a Cauchy sequence
-        and thus, convergent.
-    \end{minipage} }
-
-    \vspace{0.5cm}
-
-{ \color{red} Theorem 12.1.3:
-Convergent $\sum a_n$ $\Rightarrow$ \{$a_n$\} $\rightarrow$ 0 }
-
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        If $\sum$ $a_n$ converges, then
-        $\lim_{n \rightarrow \infty}$ $a_n$ = 0.
-    \end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-    \fbox{
-    \begin{minipage}{15cm}
-        Since $\sum$ $a_n$ converges, then by {\color{red} theorem 12.1.2},
-        for $\epsilon$ $>$ 0, there is a N such that for m $\geq$ n $\geq$ N,
-        $| \sum_{k=n}^m a_k |$ $\leq$ $\epsilon$.
-        Then if m = n $\geq$ N, $| \sum_{k=n}^m a_k |$ = $| a_n |$
-        $\leq$ $\epsilon$ so \{$a_n$\} $\rightarrow$ 0.
-    \end{minipage} }
-
-    \vspace{0.5cm}
-
-{ \color{purple} Example 12.1.4:
-\{$a_n$\} $\rightarrow$ 0 $\not \Rightarrow$ Convergent $\sum a_n$ }
-
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        $\sum_{n=1}^{\infty}$ $\frac{1}{n}$ diverges.
-    \end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-    \fbox{
-    \begin{minipage}{15cm}
-        $\sum_{n=1}^{\infty}$ $\frac{1}{n}$
-        = 1 + $\frac{1}{2}$ + ($\frac{1}{3}$ + $\frac{1}{4}$)
-        + ($\frac{1}{5}$ + ... + $\frac{1}{8}$) + ($\frac{1}{9}$ + ...)
-        $\geq$ 1 + $\frac{1}{2}$ + $\frac{1}{2}$ + $\frac{1}{2}$ + ...
-
-        Thus, $s_{2^k}$ = $\sum_{n=1}^{2^k}$ $a_n$
-        $\geq$ 1 + $k \cdot \frac{1}{2}$
-        which is unbounded and thus, not convergent.
-    \end{minipage} }
-    
-    \vspace{0.5cm}
-
-{ \color{red} Theorem 12.1.5:
-Convergent series $\rightleftharpoons$ Bounded sequence }
-
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        A series of nonnegative terms converge if and only if
-        its partial sums form a bounded sequence.
-    \end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-    \fbox{
-    \begin{minipage}{15cm}
-        Suppose $\sum$ $a_n$ converges where $a_n$ $\geq$ 0.
-
-        Since $a_n$ $\geq$ 0, then \{$s_n$\} is monotonic so
-        by {\color{red} theorem 10.3.6}, \{$s_n$\} is bounded above.
-
-        \vspace{0.2cm}
-
-        Suppose \{$s_n$\} is bounded where $a_n$ $\geq$ 0.
-
-        Since \{$s_n$\} is monotonic and bounded, then
-        by {\color{red} theorem 10.3.6}, \{$s_n$\} converges.     
-    \end{minipage} }
-
-\newpage    
-
-{ \color{red} Theorem 12.1.6: Comparison Test }
-
-    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-        \item If $|a_n|$ $\leq$ $c_n$ for n $\geq$ $N_0$ and
-        $\sum$ $c_n$ converges, then $\sum$ $a_n$ converges.
-
-            { \color{magenta} \underline{Proof} }
-
-                \fbox{
-                \begin{minipage}{13cm}
-                    For $\epsilon$ $>$ 0, there exists a N $\geq$ $N_0$
-                    such that for m $\geq$ n $\geq$ N,
-                    $\sum_{k=n}^m$ $c_k$ $\leq$ $\epsilon$.
-
-                    \hspace{1cm}
-                    $| \sum_{k=n}^m a_k |$
-                    $\leq$ $\sum_{k=n}^m |a_k|$
-                    $\leq$ $\sum_{k=n}^m c_k$ $\leq$ $\epsilon$
-
-                    Thus, $\sum$ $a_n$ converges.
-                \end{minipage} }
+        There is $\delta > 0$ such that for all q $\in$ X where $d_X(q,p) < \delta$,
+        f(q) $\leq$ f(p).
         
-        \item If $a_n$ $\geq$ $d_n$ $\geq$ 0 for n $\geq$ $N_0$
-        and $\sum$ $d_n$ diverges, then $\sum$ $a_n$ diverges.
+        Then f has a local minimum at p $\in$ X if:
 
-            { \color{magenta} \underline{Proof} }
+        \hspace{0.5cm}
+        There is $\delta > 0$ such that for all q $\in$ X where $d_X(q,p) < \delta$,
+        f(q) $\geq$ f(p).
+    \end{definition}
 
-                \fbox{
-                \begin{minipage}{13cm}
-                    Suppose $\sum$ $a_n$ converges.
+    \vspace{0.5cm}
 
-                    Then from part a, $\sum$ $d_n$ converges which contradicts
-                    that $\sum$ $a_n$ diverges.
-                    
-                    Thus, $\sum$ $a_n$ diverges. 
-                \end{minipage} }
+
+
+    \begin{wtheorem}{Derivative at local extrema is 0}{14cm}
+        Let f be defined on [a,b].
+        
+        If f has a local maximum at x $\in$ (a,b) and f'(x) exists, then
+        f'(x) = 0.
+
+        If f has a local minimum at x $\in$ (a,b) and f'(x) exists, then
+        f'(x) = 0.
+    \end{wtheorem}
+
+    \begin{proof}
+        Suppose x is a local maximum.
+        
+        Then there is a $\delta > 0$ such that for all t $\in$ (a,b)
+        where $|t - x| < \delta$, then f(t) $\leq$ f(x).
+
+        Then for $t < x$, $\frac{f(t) - f(x)}{t - x}$ $\geq$ 0.
+        Thus, $\lim_{t \rightarrow x}$ $\frac{f(t) - f(x)}{t - x}$ = f'(x) $\geq$ 0. 
+
+        For $t > x$, $\frac{f(t) - f(x)}{t - x}$ $\leq$ 0.
+        Thus, $\lim_{t \rightarrow x}$ $\frac{f(t) - f(x)}{t - x}$ = f'(x) $\leq$ 0.
+
+        Since f'(x) exists, then f'(x) = 0.
+
+        Proof is analogous for local minimum.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Generalized Mean Value Thereom}{14cm}
+        If f,g are continuous real functions on [a,b] and differentiable on
+        (a,b), then there is a x $\in$ (a,b) such that
+        [f(b) - f(a)] $\cdot$ g'(x) = [g(b) - g(a)] $\cdot$ f'(x).        
+    \end{wtheorem}
+
+    \begin{proof}
+        Let h(t) = [f(b) - f(a)] $\cdot$ g(t) - [g(b) - g(a)] $\cdot$ f(t)
+        for t $\in$ [a,b].
+
+        Since f,g are continuous on [a,b] and differentiable on (a,b),
+        then h is continuous on [a,b] and differentiable on (a,b).
+        Also, h(a) = f(b)g(a) - f(a)g(b) = h(b).
+
+        If h is constant, then h'(x) = 0 and thus, theorem holds true for
+        every x $\in$ (a,b).
+
+        If h(t) $>$ h(a) for some t $\in$ (a,b), let x $\in$ [a,b] where
+        h attains a local maximum.
+        If h(t) $<$ h(a) for some t $\in$ (a,b), let x $\in$ [a,b] where
+        h attains a local minimum.
+        Then by {\color{red} theorem 12.2.2}, h'(x) = 0 and thus, theorem
+        holds true at local extrema.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Mean Value Thereom}{14cm}
+        If f is a real continuous function on [a,b] and differentiable on (a,b),
+        then there is a x $\in$ (a,b) such that f(b) - f(a) = (b-a) f'(x).        
+    \end{wtheorem}
+
+    \begin{proof}
+        From {\color{red} thereom 12.2.3}, let g(x) = x.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Sign of derivative determines increasing/decreasing}{14cm}
+        Suppose f is differentiable on (a,b).
+    \end{wtheorem}
+
+    \begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
+        \item If f'(x) $\geq$ 0 for all x $\in$ (a,b), then f is monotonically
+        increasing.
+
+        \item If f'(x) = 0 for all x $\in$ (a,b), then f is constant.
+        
+        \item If f'(x) $\leq$ 0 for all x $\in$ (a,b), then f is monotonically
+        decreasing
     \end{enumerate}
 
+    \begin{proof}
+        From {\color{red} theorem 12.2.4}, f($x_2$) - f($x_1$) = ($x_2 - x_1$) f'(x)
+        for x $\in$ ($x_1,x_2$) $\subset$ (a,b).
 
+        If f'(x) $\geq$ 0 for all x $\in$ (a,b), then f($x_2$) - f($x_1$) $\geq$ 0.
+        Since f($x_2$) $\geq$ f($x_1$) for $x_2 > x_1$, then f is monotonically
+        increasing.
 
+        If f'(x) = 0 for all x $\in$ (a,b), then f($x_2$) - f($x_1$) = 0.
+        Since f($x_2$) = f($x_1$) for $x_2 > x_1$, then f is constant.
 
-
-\subsection{ Series of Nonnegative Terms }
-
-{ \color{red} Theorem 12.2.1: Infinite Geometric Series }
-
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        If x $\in$ [0,1), then:
-
-        \hspace{1cm}
-        $\sum_{n=0}^{\infty}$ $x^n$
-        = {\large $\frac{1}{1-x}$ }
-
-        If x $\geq$ 1, the series diverges.
-    \end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-    \fbox{
-    \begin{minipage}{15cm}
-        If x $\not =$ 1, then using the geometric series:
-
-        \hspace{1cm}
-        $s_n$ = $\sum_{k=0}^n$ $x^k$ = $\frac{1 - x^{n+1}}{1 - x}$
-
-        Let n $\rightarrow$ $\infty$.
-
-        If x $\in$ [0,1), then by {\color{red} theorem 11.2.1e},
-        $s_n$ = $\frac{1}{1-x}$ $(1 - x^{n+1})$
-        = $\frac{1}{1-x}$ (1 - 0) = $\frac{1}{1-x}$.
-
-        Also, by {\color{red} theorem 11.2.1e}, if x $\geq$ 1,
-        then the series diverges.
-    \end{minipage} }
+        If f'(x) $\leq$ 0 for all x $\in$ (a,b), then f($x_2$) - f($x_1$) $\leq$ 0.
+        Since f($x_2$) $\leq$ f($x_1$) for $x_2 > x_1$, then f is monotonically
+        decreasing.
+    \end{proof}
 
     \vspace{0.5cm}
 
 
-{ \color{red} Theorem 12.2.2: Cauchy's Convergence Criterion }
 
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        Suppose 0 $\leq$ $a_{i+1}$ $\leq$ $a_{i}$.
 
-        Then the series $\sum_{n=1}^{\infty}$ $a_n$ converges
-        if and only if the series
 
-        \hspace{1cm}
-        $\sum_{k=0}^{\infty}$ $2^k a_{2^k}$
-        = $a_1$ + $2a_2$ + $4a_4$ + $8a_8$ + ...
-        converges.
-    \end{adjustbox}
+\subsection{ Continuity of Derivatives }
 
-{ \color{magenta} \underline{Proof} }
+    \begin{wtheorem}{Intermediate values of derivatives exists}{14cm}
+        Suppose f is a real differentiable function on [a,b]
+        and $f'(a) < \lambda < f'(b)$.
 
-    \fbox{
-    \begin{minipage}{15cm}
-        Let $s_n$ = $a_1 + a_2 + ... + a_n$ and
-        $t_k$ = $a_1 + 2a_2 + ... + 2^ka_{2^k}$.
+        Then there is a x $\in$ (a,b) such that f'(x) = $\lambda$.
 
-        For n $<$ $2^k$:
+        Statement holds true if $f'(a) > f'(b)$.        
+    \end{wtheorem}
 
-        \hspace{1cm}
-        $s_n$
-        $\leq$ $a_1 + a_2 + a_3 + a_4 + a_5 + a_6 + a_7 + ... + a_{2^k}$
+    \begin{proof}
+        Suppose $f'(a) < \lambda < f'(b)$.
+        Let g(t) = f(t) - $\lambda$t.
 
-        \hspace{1.55cm}
-        $\leq$ $a_1 + (a_2 + a_3) + (a_4 + a_5 + a_6 + a_7)
-                    + ... + (a_{2^k} + ... + a_{2^{k+1} - 1})$
+        Since f(t),t are differentiable on [a,b],
+        then g(t) is differentiable on [a,b].
 
-        \hspace{1.55cm}
-        $\leq$ $a_1 + 2a_2 + 4a_4 + ... + 2^ka_{2^k}$
-        = $t_k$
+        Then g'(a) = f'(a) - $\lambda$ $<$ 0 so g($t_1$) $<$ g(a)
+        for some $t_1$ $\in$ (a,b).
 
-        Thus, by the {\color{red} comparison test},
-        if $\sum_{k=0}^{\infty}$ $2^k a_{2^k}$ converges, then
-        $\sum_{n=1}^{\infty}$ $a_n$ converges.
+        Also, g'(b) = f'(b) - $\lambda$ $>$ 0 so g($t_2$) $<$ g(b)
+        for some $t_2$ $\in$ (a,b).
 
-        For n $>$ $2^k$:
-
-        \hspace{1cm}
-        $s_n$
-        $\geq$ $a_1 + a_2 + a_3 + a_4 + a_5 + a_6 + a_7 + a_8 + ... + a_{2^k}$
-
-        \hspace{1.55cm}
-        = $a_1 + a_2 + (a_3 + a_4) + (a_5 + a_6 + a_7 + a_8)
-                    + ... + (a_{2^{k-1} + 1} + ... + a_{2^k})$
-
-        \hspace{1.55cm}
-        $\geq$ $\frac{1}{2}a_1 + a_2 + 2a_4 + ... + 2^{k-1}a_{2^k}$
-        = $\frac{1}{2}t_k$
-
-        Thus, by the {\color{red} comparison test},
-        if $\sum_{n=1}^{\infty}$ $a_n$ converges, then
-        $\sum_{k=0}^{\infty}$ $2^k a_{2^k}$ converges.
-    \end{minipage} }
-
-\newpage
-
-{ \color{red} Theorem 12.2.3: P-series }
-
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        $\sum$ $\frac{1}{n^p}$ converges if p $>$ 1 and diverges if p $\leq$ 1.
-    \end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-    \fbox{
-    \begin{minipage}{15cm}
-        If p $\leq$ 0, then by {\color{red} theorem 12.1.3},
-        $\sum$ $\frac{1}{n^p}$ diverges.
-
-        If p $>$ 0, then by {\color{red} theorem 12.2.2},
-        $\sum$ $\frac{1}{n^p}$ converges only if
-        $\sum_{k=0}^{\infty}$ $2^k \frac{1}{(2^k)^p}$ converges.
-
-        Since $\sum_{k=0}^{\infty}$ $2^k \frac{1}{(2^k)^p}$
-        = $\sum_{k=0}^{\infty}$ $2^{(1-p)k}$, then by {\color{red} theorem 12.2.1},
-        $\sum_{k=0}^{\infty}$ $2^{k(1-p)}$ converges if
-        $2^{1-p}$ $<$ 1 so if 1-p $<$ 0 so p $>$ 1.
-    \end{minipage} }
+        Thus, there is a x where g(x) is a local minimum
+        so g'(x) = 0 and thus, f'(x) = $\lambda$.
+    \end{proof}
 
     \vspace{0.5cm}
 
-{ \color{red} Theorem 12.2.4: Log P-series }
 
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        $\sum_{n = 2}^{\infty}$ $\frac{1}{n(\log(n))^p}$
-        converges if p $>$ 1 and diverges if p $\leq$ 1.
-    \end{adjustbox}
 
-{ \color{magenta} \underline{Proof} }
+    \begin{corollary}{Differentiable functions have no simple discontinuities}{14cm}
+        If f is differentiable on [a,b], then f' cannot have simple discontinuities
+        on [a,b].
+    \end{corollary}
 
-    \fbox{
-    \begin{minipage}{15cm}
-        Since $\frac{1}{n(\log(n))^p}$ decreases, then by {\color{red} theorem 12.2.2},
+    \begin{proof}
+        By {\color{red} theorem 12.3.1}, f'(x) exists for any x $\in$ [a,b].
+    \end{proof}
 
-        $\sum_{n=0}^{\infty}$ $\frac{1}{n(\log(n))^p}$ converges if
-        $\sum_{k=1}^{\infty}$ $2^k \frac{1}{2^k \log(2^k)}$ converges.
+    \newpage
+
+
+
+
+
+\subsection{ L'Hospital's Rule }
+
+    \begin{wtheorem}{L'Hospital's Rule}{14cm}
+        Suppose f,g are real and differentiable on (a,b) and g'(x) $\not =$ 0
+        for all x $\in$ (a,b).
         
+        Suppose $\lim_{x \rightarrow a}$ $\frac{f'(x)}{g'(x)} \rightarrow A$.
+        If either:
+        
+        \begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
+            \item                        
+                $\lim_{x \rightarrow a}$ f(x) $\rightarrow$ 0 and
+                $\lim_{x \rightarrow a}$ g(x) $\rightarrow$ 0
+
+            \item
+                $\lim_{x \rightarrow a}$ g(x) $\rightarrow$ $\infty$ or
+                $\lim_{x \rightarrow a}$ g(x) $\rightarrow$ $-\infty$
+        \end{itemize}
+
+        Then, $\lim_{x \rightarrow a}$ $\frac{f(x)}{g(x)}$ $\rightarrow$ A.
+
+        Statement holds true if x $\rightarrow$ b.
+    \end{wtheorem}
+
+    \begin{proof}
+        Consider the case $-\infty \leq A < \infty$.
+
+        Choose q such that $A < q$ and r such that $A < r < q$.
+
+        Thus, there is a c $\in$ (a,b) such that $a < x < c$
+        for $\frac{f'(x)}{g'(x)} < r$.
+
+        For $a < x < y < c$, then by {\color{red} theorem 12.2.3},
+        there is a t $\in$ (x,y) such that:
+
         \hspace{1cm}
-        $\sum_{k=1}^{\infty}$ $2^k \frac{1}{2^k \log(2^k)}$
-        = $\sum_{k=1}^{\infty}$ $\frac{1}{ k \log(2)}$
-        = $\frac{1}{\log(2)}$ $\sum_{k=1}^{\infty}$ $\frac{1}{k}$
+        $\frac{f(x) - f(y)}{g(x)-g(y)}$
+        = $\frac{f'(t)}{g'(t)}$ $< r$
 
-        Then by {\color{red} theorem 12.2.3},
-        $\sum_{k=1}^{\infty}$ $2^k \frac{1}{2^k \log(2^k)}$ converges if
-        p $>$ 1 and diverges if p $\leq$ 1.
+        If $\lim_{x \rightarrow a}$ f(x) $\rightarrow$ 0 and
+        $\lim_{x \rightarrow a}$ g(x) $\rightarrow$ 0, then
+        as $x \rightarrow a$,
+        $\frac{f(y)}{f(x)} \leq r < q$ for $y \in (a,c)$.
 
-        Thus, $\sum_{n=0}^{\infty}$ $\frac{1}{n(\log(n))^p}$ converges if
-        p $>$ 1 and diverges and p $\leq$ 1.
-    \end{minipage} }
+        If $\lim_{x \rightarrow a}$ g(x) $\rightarrow$ $\infty$, then
+        keeping y fixed, choose $c_1 \in (a,y)$ such that $g(x) > g(y)$
+        and $g(x) > 0$ if $a < x < c_1$. Thus:
+
+        \hspace{1cm}
+        $\frac{g(x)-g(y)}{g(x)}$ $\cdot$ $\frac{f(x) - f(y)}{g(x)-g(y)}$
+        $< \frac{g(x)-g(y)}{g(x)} \cdot r$ for $x \in (a,c_1)$
+
+        \hspace{1cm}
+        $\frac{f(x)}{g(x)} < r - r \frac{g(y)}{g(x)} + \frac{f(y)}{g(x)}$
+        
+        Thus as $x \rightarrow a$, there is a $c_2 \in (a,c_1)$ such that
+        $\frac{f(x)}{g(x)} < r < q$ for $x \in (a,c_2)$.
+
+        Proof is analogous if $\lim_{x \rightarrow a}$ g(x) $\rightarrow$ $-\infty$.
+
+        Thus, $\lim_{x \rightarrow a}$ $\frac{f(x)}{g(x)}$ $\rightarrow$ A.
+    \end{proof}
 
     \vspace{0.5cm}
 
-{ \color{orange} Corollary 12.2.5: Log P-series extended }
 
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        $\sum_{n=3}^{\infty}$ $\frac{1}{n\log(n)(\log(\log(n)))^p}$
-        converges if p $>$ 1 and diverges if p $\leq$ 1.
-    \end{adjustbox}
 
-{ \color{magenta} \underline{Proof} }
 
-    \fbox{
-    \begin{minipage}{15cm}
-        From {\color{red} theorem 12.2.4}, replace n = log(n) and
-        multiplying by $\frac{1}{n}$ $\rightarrow$
-        $\frac{1}{n\log(n)(\log(\log(n)))^p}$.
 
-        Since $\frac{1}{n\log(n)(\log(\log(n)))^p}$ decreases,
-        by {\color{red} theorem 12.2.2}
-        $\sum_{k=1}^{\infty}$ $2^k \frac{1}{2^k \log(2^k)(\log(\log(2^k)))^p}$:
+\subsection{ Derivative of Higher Order }
+
+    \begin{definition}{Derivative of Higher Order}{14cm}
+        If f has a derivative f' on an interval and f' is differentiable,
+        then the derivative of f' is f'', the second derivative of f.
+        Then, $f^{(n)}$ is the nth derivative of f.
+
+        For $f^{(n)}(x)$ to exist at x, $f^{(n-1)}(t)$ must exist
+        in a neighborhood of x and $f^{(n-1)}$ must be differentiable at x.
         
+        If $f^{(n-1)}$ exist in a neighborhood of x, then $f^{(n-2)}$
+        must be differentiable in that neighborhood and
+        so on until f is differentiable on that neighborhood.
+    \end{definition}
+
+    \newpage
+
+
+
+
+
+\subsection{ Taylor's Theorem }
+
+    \begin{wtheorem}{Taylor's Theorem}{14cm}
+        Suppose f is a real function on [a,b], n $\in$ $\mathbb{Z}_+$,
+        $f^{(n-1)}$ is continuous on [a,b], $f^n(t)$ exists at every t $\in$ (a,b).
+        
+        Let $\alpha,\beta$ $\in$ [a,b] be distinct and
+        P(t) = $\sum_{k=0}^{n-1}$ $\frac{f^k(\alpha)}{k!} (t-\alpha)^k$.
+
+        Then there exists a x between $\alpha$ and $\beta$ such that
+        f($\beta$) = P($\beta$) + $\frac{f^n(x)}{n!} (\beta-\alpha)^n$        
+    \end{wtheorem}
+
+    \begin{proof}
+        Let M be the number defined by
+        $f(\beta) = P(\beta) + M(\beta - \alpha)^n$.
+
+        Let $g(t) = f(t) - P(t) - M(t- \alpha)^n$ for $t \in [\alpha,\beta]$.
+        Thus, $g^{(n)}(t) = f^{(n)}(t) - n!M$.
+
+        Also since $P^{(k)}(\alpha) = f^{(k)}(\alpha)$ for k = [0,n-1], then
+        $g(\alpha) = g'(\alpha) = ... = g^{(n-1)}(\alpha) = 0$.
+
+        Since the choice of M gives $g(\beta)$ = 0, then by the Mean Value Theorem,
+        $g'(x_1)$ = 0 for some $x_1$ between $\alpha$ and $\beta$.
+
+        Since $g'(\alpha)$ = 0, then $g''(x_2)$ = 0
+        for some $x_2$ between $\alpha$ and $x_1$.
+
+        Thus, $g^{(n)}(x_n)$ = 0 for some $x_n$ between $\alpha$ and $x_{n-1}$
+        so $x_n$ is between $\alpha$ and $\beta$.
+
+        Thus, there exists an $x_n \in (\alpha,\beta)$ such that:
+
         \hspace{1cm}
-        $\sum_{k=1}^{\infty}$ $\frac{1}{\log(2^k)(\log(\log(2^k)))^p}$
-        = $\frac{1}{\log(2)} \sum_{k=1}^{\infty}$ $\frac{1}{k (\log(k \log(2)))^p}$
-        $<$ $\frac{1}{\log(2)} \sum_{k=2}^{\infty}$ $\frac{1}{k (\log(k))^p}$
+        0 = $g^{(n)}(x_n)$ = $f^{(n)}(x_n) - n!M$
 
-        Since $\sum_{k=2}^{\infty}$ $\frac{1}{k (\log(k))^p}$ converges
-        by {\color{red} theorem 12.2.4},
-        $\sum_{n=3}^{\infty}$ $\frac{1}{n\log(n)(\log(\log(n)))^p}$ converges.
-    \end{minipage} }
-
-
-
-
-
-\subsection{ The Number e}
-
-{ \color{blue} Definition 12.3.1: Summation equivalence to e }
-
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        $s_m$
-        = $\sum_{n=0}^{m}$ $\frac{1}{n!}$
-        = 1 + $\sum_{n=1}^{m}$ $\frac{1}{n!}$
-        $<$ 1 + $\sum_{n=1}^{m}$ $\frac{1}{2^{n-1}}$
-        $<$ 3
-
-        e = $\sum_{n=0}^{\infty}$ $\frac{1}{n!}$
-    \end{adjustbox}
+        \hspace{1cm}
+        $M = \frac{f^{n}(x_n)}{n!}$
+    \end{proof}
 
     \vspace{0.5cm}
 
-{ \color{red} Theorem 12.3.2: Limit equivalence to e }
 
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        $\lim_{n \rightarrow \infty}$ $(1 + \frac{1}{n})^n$ = e
-    \end{adjustbox}
 
-{ \color{magenta} \underline{Proof} }
 
-    \fbox{
-    \begin{minipage}{15cm}
-        Let $s_n$ = $\sum_{k=0}^n$ $\frac{1}{k!}$ and
-        $t_n$ = $(1 + \frac{1}{n})^n$.
-        Using the binomial theorem:
+
+\subsection{ Differentiation of Vector-Valued Functions }
+
+    \begin{definition}{Extending derivative to Vector-Valued Functions}{14cm}
+        For vector-valued function f: t $\in$ [a,b] $\rightarrow$ $\mathbb{R}^k$,
+        the derivative of f at x:
 
         \hspace{1cm}
-        $t_n$ = $\sum_{k=0}^n$ $\binom{n}{k} \frac{1}{n^k}$
-        = $\sum_{k=0}^n$ $\frac{n(n-1)...(n-k+1))}{k!} \frac{1}{n^k}$
-        = $\sum_{k=0}^n$ $\frac{1}{k!}
-                        (1) (1 - \frac{1}{n}) (1 - \frac{2}{n}) (1 - \frac{k-1}{n})$
-        
-        Thus, $t_n$ $\leq$ $s_n$ so
-        $\lim_{n \rightarrow \infty}$ sup($t_n$) $\leq$ e.
+        f'(x) = $\lim_{t \rightarrow x} |\frac{f(t)-f(x)}{t-x}|$
 
-        If n $\geq$ m, then
-        $t_n$ $\geq$
-        $\sum_{k=0}^m$ $\frac{1}{k!}
-                        (1) (1 - \frac{1}{n}) (1 - \frac{2}{n}) (1 - \frac{k-1}{n})$.
-        
-        As n $\rightarrow$ $\infty$, then
-        $\lim_{n \rightarrow \infty}$ inf($t_n$)
-        $\geq$ $\sum_{k=0}^m$ $\frac{1}{k!}$
-        = $s_m$.
-        As m $\rightarrow$ $\infty$,
-        $\lim_{n \rightarrow \infty}$ inf($t_n$) $\geq$ e.
-
-    \end{minipage} }
-
-    \vspace{0.5cm}
-
-{ \color{blue} Definition 12.3.3: Rapidity of convergence of e }
-
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        0 $<$ e - $s_n$ $<$ $\frac{1}{n!n}$
-    \end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-    \fbox{
-    \begin{minipage}{15cm}
-        e - $s_n$
-        = $\sum_{k=n+1}^{\infty}$ $\frac{1}{k!}$
-        $<$ $\frac{1}{(n+1)!}$ $(1 + \frac{1}{n+1} + \frac{1}{(n+1)^2} + ...)$
-        = $\frac{1}{(n+1)!}$ $\frac{1}{1 - \frac{1}{n+1}}$
-        = $\frac{1}{n!n}$
-    \end{minipage} }
-
-\newpage
-
-{ \color{red} Theorem 12.3.4: e is irrational }
-
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        e is irrational
-    \end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-    \fbox{
-    \begin{minipage}{15cm}
-        Suppose r is rational.
-        Then let e = $\frac{p}{q}$ for p,q $\in$ $\mathbb{Z}_+$.
-
-        Thus, by {\color{blue} definition 12.3.3},
-        0 $<$ e - $s_q$ $<$ $\frac{1}{q!q}$ so
-        0 $<$ q!(e - $s_q$) $<$ $\frac{1}{q}$.
-
-        Since e = $\frac{p}{q}$, then q!e is an integer and
-        q!$s_q$ = q!(1 + 1 + $\frac{1}{2!}$ + ... + $\frac{1}{q!}$)
-        is an integer.
-        
-        Thus, q!(e - $s_q$) is an integer which is between 0 and $\frac{1}{q}$
-        and thus, a contradiction.
-    \end{minipage} }
-
-
-
-
-
-\subsection{ Root and Ratio Tests }
-
-{ \color{red} Theorem 12.4.1: Root Test }
-
-    \hspace{1cm}
-    For $\sum$ $a_n$, let
-    $\alpha$ = $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{|a_n|}$).
-
-    \vspace{0.1cm}
-
-    \begin{enumerate}[label=(\alph*), leftmargin=3cm, itemsep=0.1cm]
-        \item If $\alpha$ $<$ 1, $\sum$ $a_n$ converges
-        
-        \item If $\alpha$ $>$ 1, $\sum$ $a_n$ diverges
-        
-        \item If $\alpha$ = 1, unclear
-    \end{enumerate}
-
-{ \color{magenta} \underline{Proof} }
-
-    \fbox{
-    \begin{minipage}{15cm}
-        If $\alpha$ $<$ 1, choose $\beta$ such that $\beta$ $\in$ ($\alpha$,1)
-        and N $\in$ $\mathbb{Z}$ such that $\sqrt[n]{|a_n|}$ $<$ $\beta$ for
-        n $\geq$ N.
-
-        Since $\beta$ $\in$ (0,1), then by {\color{red} theorem 12.2.1},
-        $\sum$ $\beta^n$ converges.
-        Then by the {\color{red} comparison test}, $\sum$ $a_n$ converges.
+        if the limit exist as defined by {\color{blue} definition 14.1.1}.
 
         \vspace{0.2cm}
 
-        If $\alpha$ $>$ 1, then there is a $a_{n_k}$ such that
-        $\sqrt[n_k]{|a_{n_k}|}$ $\rightarrow$ $\alpha$.
+        If f = ($f_1, ... , f_k$), then f' = ($f_1', ... , f_k'$)
+        and f is differentiable at x if and only if $f_1, ... , f_k$ are
+        differentiable at x.
 
-        Thus, $|a_n|$ $>$ 1 for infinitely many n so 
-        by {\color{red} theorem 12.1.3}, $\sum$ $a_n$ doesn't converge.
+        \vspace{0.1cm}
 
-        \vspace{0.2cm}
+        Thus, by {\color{red} theorem 11.2.7}, these theorems hold true
+        for vector-valued functions:
 
-        For $\alpha$ = 1, both $\sum$ $\frac{1}{n}$ and $\sum$ $\frac{1}{n^2}$
-        have $\alpha$ = 1, but $\sum$ $\frac{1}{n}$ diverges and
-        $\sum$ $\frac{1}{n^2}$ converges by {\color{red} theorem 12.2.3}.
-    \end{minipage} }
+        \begin{enumerate}[label=-, leftmargin=0.7cm, itemsep=0.1cm]
+            \item {\color{red} 12.1.2}:
+                If f is differentiable at x, then f is continuous at x.
+            
+            \item {\color{red} 12.1.3a}:
+                If f,g are differentiable at x, then f+g,f$\cdot$g
+                are differentiable at x. 
+        \end{enumerate}
 
-    \vspace{0.5cm}
+        \vspace{0.1cm}
 
-{ \color{red} Theorem 12.4.2: Ratio Test }
-
-    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-        \item $\sum$ $a_n$ converges if $\lim_{n \rightarrow \infty}$
-        sup($|\frac{a_{n+1}}{a_n}|$) $<$ 1
-        
-        \item $\sum$ $a_n$ diverges if $|\frac{a_{n+1}}{a_n}|$ $\geq$ 1
-        for all n $\geq$ $n_0$ for $n_0$ $\in$ $\mathbb{Z}$
-    \end{enumerate}
-
-{ \color{magenta} \underline{Proof} }
-
-    \fbox{
-    \begin{minipage}{15cm}
-        If $\lim_{n \rightarrow \infty}$ sup($|\frac{a_{n+1}}{a_n}|$) $<$ 1,
-        there is a $\beta$ $<$ 1 and N such that for n $\geq$ N,
-        $|\frac{a_{n+1}}{a_n}|$ $<$ $\beta$.
-
-        Then $|a_{N+1}|$ $<$ $\beta |a_N|$ so
-        $|a_{N+2}|$ $<$ $\beta$$|a_{N+1}|$ $<$ $\beta^2 |a_N|$.
-        
-        Thus, $|a_{N+p}|$ $<$ $\beta^p$$|a_N|$ so
-        $|a_n|$ $<$ $|a_N| \beta^{-N} \beta^n$.
-
-        Thus, by the {\color{red} comparison test}, $\sum$ $a_n$ converges.
-
-        If $|a_{n+1}|$ $\geq$ $|a_n|$ $>$ 0 for n $\geq$ $n_0$, then by
-        {\color{red} theorem 12.1.3}, $\sum$ $a_n$ diverges.
-    \end{minipage} }
+        However, {\color{red} theorem 12.2.4: Mean Value Theorem}
+        and {\color{red} theorem 12.4.1: L'Hospital's Rule}
+        does not always hold true since {\color{red} theorem 12.1.3b/c},
+        multiplying/dividing vectors by vectors,
+        is not defined for vector-valued functions.
+    \end{definition}
 
     \vspace{0.5cm}
 
-{ \color{red} Theorem 12.4.3:
-Ratio convergence $\rightarrow$ Root convergence }
 
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        $\lim_{n \rightarrow \infty}$ inf($\frac{c_{n+1}}{c_n}$)
-        $\leq$ $\lim_{n \rightarrow \infty}$ inf($\sqrt[n]{c_n}$)
 
-        $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{c_n}$)
-        $\leq$ $\lim_{n \rightarrow \infty}$ sup($\frac{c_{n+1}}{c_n}$)
-    \end{adjustbox}
+    \begin{wtheorem}{Mean Value Theorem for $\mathbb{R}^k$}{14cm}
+        Suppose f is a continuous mapping of [a,b] into $\mathbb{R}^k$
+        and f is differentiable on (a,b). Then there is a x $\in$ (a,b)
+        such that $|f(b) - f(a)|$ $\leq$ (b-a) $|f'(x)|$        
+    \end{wtheorem}
 
-{ \color{magenta} \underline{Proof} }
+    \begin{proof}
+        Let z = f(b) - f(a) and define $\phi(t) = z \cdot f(t)$
+        for t $\in$ [a,b].
 
-    \fbox{
-    \begin{minipage}{15cm}
-        Let $\alpha$ = $\lim_{n \rightarrow \infty}$ inf($\frac{c_{n+1}}{c_n}$).
-        If $\alpha$ = $-\infty$, then $-\infty$ $\leq$
-        $\lim_{n \rightarrow \infty}$ inf($\sqrt[n]{c_n}$) holds true.
+        Then $\phi(t)$ is real-valued continuous on [a,b]
+        and differentiable on (a,b).
 
-        If $\alpha$ is finite, there is a $\beta$ $\leq$ $\alpha$ and N such that
-        for n $\geq$ N, $\frac{c_{n+1}}{c_n}$ $\geq$ $\beta$
-        so $c_{N+p}$ $\geq$ $\beta^p c_N$.
+        Then by the Mean Value Theorem, for some x $\in$ (a,b):
 
-        Then, $c_{n}$ $\geq$ $c_N \beta^{-N} \beta^n$ so
-        $\sqrt[n]{c_{n}}$ $\geq$ $\sqrt[n]{c_N \beta^{-N}} \beta$.
-        Thus, $\lim_{n \rightarrow \infty}$ inf($\sqrt[n]{c_n}$)
-        $\geq$ $\beta$ = $\alpha$.
+        \hspace{0.5cm}
+        $\phi(b) - \phi(a)$
+        = (b-a) $\phi'(x)$
+        = (b-a) $z \cdot f'(x)$
 
-        \vspace{0.2cm}
+        Since $\phi(b) - \phi(a)$
+        = $z \cdot f(b) - z \cdot f(a)$
+        = $z \cdot z$ = $|z|^2$,
+        then by the Schwarz Inequality:
+        
+        \hspace{0.5cm}
+        $|z|^2$
+        = (b-a) $|z \cdot f'(x)|$
+        $\leq$ (b-a) $|z| |f'(x)|$
+        
+        \hspace{0.5cm}
+        $|z|$
+        $\leq$ (b-a) $|f'(x)|$
 
-        Let $\alpha$ = $\lim_{n \rightarrow \infty}$ sup($\frac{c_{n+1}}{c_n}$).
-        If $\alpha$ = $\infty$, then
-        $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{c_n}$)
-        $\leq$ $\infty$ holds true.
-
-        If $\alpha$ is finite, there is a $\beta$ $\geq$ $\alpha$ and N such that
-        for n $\geq$ N, $\frac{c_{n+1}}{c_n}$ $\leq$ $\beta$
-        so $c_{N+p}$ $\leq$ $\beta^p c_N$.
-
-        Then, $c_{n}$ $\leq$ $c_N \beta^{-N} \beta^n$ so
-        $\sqrt[n]{c_{n}}$ $\leq$ $\sqrt[n]{c_N \beta^{-N}} \beta$.
-        Thus, $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{c_n}$)
-        $\leq$ $\beta$ = $\alpha$.
-    \end{minipage} }
+        \hspace{0.5cm}
+        $|f(b) - f(a)|$
+        $\leq$ (b-a) $|f'(x)|$
+    \end{proof}
 
 
 

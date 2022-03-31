@@ -1,680 +1,859 @@
 \newpage
 
-\section[Day 10: Convergence \& Cauchy Sequences]{Convergent and Cauchy Sequences}
+\section[Day 10: Series \& Convergence Tests]{ Series and Convergence Tests }
 
-\subsection{ Convergent Sequences }
+\subsection{ Series }
 
-{ \color{blue} Definition 10.1.1: Convergent Sequence } 
+    \begin{definition}{Series}{14cm}
+        For sequence \{$a_n$\}, define $\sum_{n=p}^q$ $a_n$
+        = $a_p + a_{p+1} + ... + a_q$.
 
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        A sequence \{$x_n$\} in metric space X converge if
-        there is a x $\in$ X such that:
+        Then associate \{$a_n$\} with a sequence \{$s_n$\}
+        such that $s_n$ = $\sum_{k=1}^n$ $a_k$.
+
+        Then \{$s_n$\} is a series with partial sums $s_n$.
+
+        If \{$s_n$\} $\rightarrow$ s, then
+        $\sum_{n=1}^{\infty}$ $a_n$ = s
+        is the sum of the convergent series.
+        
+        Note $a_1$ = $s_1$ and $a_n$ = $s_n$ - $s_{n-1}$.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Cauchy Criterion for series}{14cm}
+        $\sum$ $a_n$ converges if and only if:
+        
+        \hspace{0.5cm}
+        For every $\epsilon$ $>$ 0, there is a N $\in$ $\mathbb{Z}$
+        such that for m $\geq$ n $\geq$ N,
+        $| \sum_{k=n}^m a_k |$ $\leq$ $\epsilon$
+    \end{wtheorem}
+
+    \begin{proof}
+        Suppose $\sum_{k=1}^n a_k$ converges.
+
+        Then by {\color{red} theorem 8.3.3a}, $\sum_{k=1}^n a_k$ is 
+        a Cauchy sequence.
+
+        Then for $\epsilon$ $>$ 0, there is a N such that for
+        m $\geq$ n $\geq$ N:
 
         \hspace{1cm}
-        For every $\epsilon$ $>$ 0, there is a N $\in$ $\mathbb{Z}$ such that
-        for all n $\geq$ N, d($x_n$,x) $<$ $\epsilon$
-        
-        Then, \{$x_n$\} converges to x: \hspace{1cm}
-        $\lim_{n \rightarrow \infty}$ $x_n$ = x
-
-        If \{$x_n$\} does not converge, then it diverges.
-	\end{adjustbox}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.3]{Images/10.1.1.png}
-\end{figure}
-
-{ \color{purple} Example 10.1.2 }
-
-    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.4em]
-        \item Let $x_n$ = $\frac{1}{n}$ in $\mathbb{R}^2$.
-        Then, $\lim_{n \rightarrow \infty}$ $x_n$ = 0
-
-            { \color{magenta} \underline{Proof} }
-
-            \fbox{
-            \begin{minipage}{13cm}
-                For $\epsilon$ $>$ 0, there is a $\frac{1}{N}$ $<$ $\epsilon$.
-                Then:
-
-                \hspace{1cm}
-                d($x_n$,0) = $|x_n - 0|$ = $\frac{1}{n}$
-                $<$ $\frac{1}{N}$ $<$ $\epsilon$
-            \end{minipage} }
-
-        \item Let $x_n$ = $(-1)^n$ + $\frac{1}{n}$ in $\mathbb{R}^2$.
-        Then, \{$x_n$\} diverges.
-
-            { \color{magenta} \underline{Proof} }
-
-            \fbox{
-            \begin{minipage}{13cm}
-                $\lim_{n \rightarrow \infty}$ $x_n$
-                = $\lim_{n \rightarrow \infty}$ $(-1)^n$
-                + $\lim_{n \rightarrow \infty}$ $\frac{1}{n}$
-                = $\lim_{n \rightarrow \infty}$ $(-1)^n$
-
-                Since $(-1)^n$ alternates between -1 and 1, then
-                \{$x_n$\} diverges.
-            \end{minipage} }
-    \end{enumerate}
-
-    \vspace{0.5cm}
-
-{ \color{red} Theorem 10.1.3: A convergent sequence is unique and bounded }
-
-    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.4em]
-        \item \{$p_n$\} converges to p $\in$ X if and only if
-        every N$_r(p)$ contains $p_n$ for all, but finitely many n.
-
-            { \color{magenta} \underline{Proof} }
-
-            \fbox{
-            \begin{minipage}{13cm}
-                Suppose $p_n$ $\rightarrow$ p.
-                Then for N$_{\epsilon}(p)$, any q $\in$ X such that
-                d(q,p) $<$ $\epsilon$ is q $\in$ N$_{\epsilon}(p)$.
-                Since $p_n$ $\rightarrow$ p, there is a N such that for
-                n $\geq$ N, d($p_n$,p) $<$ $\epsilon$.
-
-                Thus, for n $\geq$ N, $p_n$ $\in$ N$_{\epsilon}(p)$.
-
-                Suppose every N$_r(p)$ contains $p_n$ for all, but finitely
-                many n.
-
-                For $\epsilon$ $>$ 0, let N$_{\epsilon}(p)$ be the set of
-                all q $\in$ X such that d(p,q) $<$ $\epsilon$.
-                Thus, there exists a N such that $p_n$ $\in$ N$_{\epsilon}(p)$
-                if n $\geq$ N.
-
-                Thus, d($p_n$,p) $<$ $\epsilon$ so $p_n$ $\rightarrow$ p.
-            \end{minipage} }
-
-        \item If p,p' $\in$ X and \{$p_n$\} converges to p and p', then
-        p = p'.
-
-            { \color{magenta} \underline{Proof} }
-
-            \fbox{
-            \begin{minipage}{13cm}
-                For $\epsilon$ $>$ 0, there exists N,N' such that:
-
-                \hspace{1cm}
-                d($p_n$,p) $<$ $\frac{\epsilon}{2}$ for n $\geq$ N
-                \hspace{1cm}
-                d($p_n$,p') $<$ $\frac{\epsilon}{2}$ for n $\geq$ N'
-
-                Then for n $\geq$ max(N,N'),
-                d(p,p') $\leq$ d(p,$p_n$) + d($p_n$,p') $<$ $\epsilon$.
-
-                Thus, p = p'.
-            \end{minipage} }
-
-\newpage
-
-        \item If \{$p_n$\} converges, then \{$p_n$\} is bounded.
-
-            { \color{magenta} \underline{Proof} }
-
-            \fbox{
-            \begin{minipage}{13cm}
-                If \{$p_n$\} $\rightarrow$ p,
-                there is a N such that for n $>$ N, d($p_n$,p) $<$ 1.
-
-                Let r = max( d($p_1$,p), ... , d($p_N$,p), 1 ).
-                Thus for all n, d($p_n$,p) $\leq$ r.
-            \end{minipage} }
-
-        \item If E $\subset$ X and p $\in$ E', there is a \{$p_n$\}
-        in E such that p = $\lim_{n \rightarrow \infty}$ $p_n$.
-
-            { \color{magenta} \underline{Proof} }
-
-            \fbox{
-            \begin{minipage}{13cm}
-                Since p $\in$ E', then for each n $\in$ $\mathbb{Z}_+$,
-                there is a $p_n$ $\in$ E such that d($p_n$,p) $<$ $\frac{1}{n}$.
-                For $\epsilon$ $>$ 0, there is a $\frac{1}{N}$ $<$ $\epsilon$
-                so for n $\geq$ N,
-                d($p_n$,p) $<$ $\frac{1}{n}$ $\leq$ $\frac{1}{N}$ $<$ $\epsilon$.
-
-                Thus, p = $\lim_{n \rightarrow \infty}$ $p_n$.
-            \end{minipage} }
-    \end{enumerate}
-
-    \vspace{0.5cm}
-
-{ \color{red} Theorem 10.1.4: Arithmetic Operations for sequences } 
-
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        Suppose \{$s_n$\},\{$t_n$\} $\in$ $\mathbb{C}$ where
-        $\lim_{n \rightarrow \infty}$ $s_n$ = s and
-        $\lim_{n \rightarrow \infty}$ $t_n$ = t.
-    \end{adjustbox}
-
-	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-        \item $\lim_{n \rightarrow \infty}$ $s_n + t_n$ = s + t
-        
-            { \color{magenta} \underline{Proof} }
-
-            \fbox{
-            \begin{minipage}{13cm}
-                For $\epsilon$ $>$ 0, there exists $N_1$, $N_2$ such that
-
-                \hspace{1cm}
-                $|s_n - s|$ $<$ $\frac{\epsilon}{2}$ for n $\geq$ $N_1$
-                \hspace{1cm}
-                $|t_n - t|$ $<$ $\frac{\epsilon}{2}$ for n $\geq$ $N_2$
-
-                If N = max($N_1$,$N_2$), then for n $\geq$ N:
-
-                \hspace{1cm}
-                $|s_n+t_n - s+t|$ $\leq$ $|s_n - s|$ + $|t_n - t|$ $<$ $\epsilon$
-            \end{minipage} }
-        
-        \item $\lim_{n \rightarrow \infty}$ $cs_n$ = cs and 
-        $\lim_{n \rightarrow \infty}$ $c + s_n$ = c + s
-
-            { \color{magenta} \underline{Proof} }
-
-            \fbox{
-            \begin{minipage}{13cm}
-                For $\epsilon$ $>$ 0, there exists a N such that
-
-                \hspace{1cm}
-                $|s_n - s|$ $<$ $\frac{\epsilon}{|c|}$ for n $\geq$ N
-
-                \hspace{1cm}
-                $|cs_n - cs|$ $\leq$ $|c|$ $\cdot$ $|s_n - s|$ $<$ $\epsilon$
-            \end{minipage} }
-        
-        \item $\lim_{n \rightarrow \infty}$ $s_n t_n$ = st
-        
-            { \color{magenta} \underline{Proof} }
-
-            \fbox{
-            \begin{minipage}{13cm}
-                Note $s_n t_n$ - st
-                = ($s_n - s$)($t_n - t$) + t($s_n$ - s) + s($t_n$ - t).
-
-                For $\epsilon$ $>$ 0, there exists $N_1$,$N_2$ such that
-
-                \hspace{1cm}
-                $|s_n - s|$ $<$ $\sqrt{\epsilon}$ for n $\geq$ $N_1$
-                \hspace{1cm}
-                $|t_n - t|$ $<$ $\sqrt{\epsilon}$ for n $\geq$ $N_2$
-
-                If N = max($N_1$,$N_2$), then for n $\geq$ N,
-                $|(s_n - s)(t_n - t)|$ $<$ $\epsilon$.
-
-                Thus, $\lim_{n \rightarrow \infty}$ 
-                $(s_n - s)(t_n - t)$ = 0.
-
-                \hspace{1cm}
-                $\lim_{n \rightarrow \infty}$ $(s_n t_n - st)$
-                = $\lim_{n \rightarrow \infty}$
-                $(s_n - s)(t_n - t) + t(s_n - s) + s(t_n - t)$
-
-                \hspace{4.45cm}
-                = 0 + t $\cdot$ 0 + s $\cdot$ 0 = 0
-            \end{minipage} }
-
-        \item $\lim_{n \rightarrow \infty}$ $\frac{1}{s_n}$ = $\frac{1}{s}$
-        where $s_n, s$ $\not =$ 0
-
-            { \color{magenta} \underline{Proof} }
-
-            \fbox{
-            \begin{minipage}{13cm}
-                Choose m such that $|s_n - s|$ $<$ $\frac{1}{2} |s|$ if n $\geq$ m
-                so $|s_n|$ $>$ $\frac{1}{2} |s|$ for n $\geq$ m.
-
-                For $\epsilon$ $>$ 0, there is a N $>$ m such that for n $\geq$ N, 
-                $|s_n - s|$ $<$ $\frac{1}{2} |s|^2 \epsilon$.
-
-                Thus, for n $\geq$ N, 
-                $|\frac{1}{s_n} - \frac{1}{s}|$
-                = $|\frac{s_n - s}{s_n s}|$
-                $<$ $\frac{2}{|s|^2} |s_n - s|$
-                $<$ $\epsilon$.
-            \end{minipage} }
-    \end{enumerate}
-
-\newpage
-
-{ \color{red} Theorem 10.1.5: Extension to $\mathbb{R}^k$ }
-
-    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-        \item Suppose $x_n$ $\in$ $\mathbb{R}^k$ and $x_n$
-        = ($\alpha_{n_1}$, ... , $\alpha_{n_k}$).
-        Then \{$x_n$\} converges to x = ($\alpha_1$, ... , $\alpha_k$)
-        if and only if $\lim_{n \rightarrow \infty}$ $\alpha_{n_i}$ = $\alpha_i$
-        for i $\in$ [1,k].
-
-            { \color{magenta} \underline{Proof} }
-
-            \fbox{
-            \begin{minipage}{13cm}
-                Suppose \{$x_n$\} converges to x = ($\alpha_1$, ... , $\alpha_k$).
-                
-                Since for any i $\in$ [1,k]:
-
-                \hspace{1cm}
-                $|\alpha_{n_i} - \alpha_i|$
-                $\leq$ $\sqrt{|\alpha_{n_1} - \alpha_1|^2
-                                + ... + |\alpha_{n_k} - \alpha_k|^2}$
-                = $|x_n - x|$ $<$ $\epsilon$.
-
-                Then, $\lim_{n \rightarrow \infty}$ $\alpha_{n_i}$ = $\alpha_i$.
-
-                \vspace{0.2cm}
-
-                Suppose $\lim_{n \rightarrow \infty}$ $\alpha_{n_i}$ = $\alpha_i$
-                for i $\in$ [1,k].
-                
-                Then for $\epsilon$ $>$ 0, there is an N such that for n $\geq$ N:
-
-                \hspace{1cm}
-                $|\alpha_{n_i} - \alpha_i|$ $<$ $\frac{\epsilon}{\sqrt{k}}$
-                for i $\in$ [1,k]
-
-                \hspace{1cm}
-                $|x_n - x|$
-                = $\sqrt{\sum_{i=1}^k |\alpha_{n_i} - \alpha_i|^2}$
-                $<$ $\sqrt{k \cdot (\frac{\epsilon}{\sqrt{k}})^2}$
-                = $\epsilon$
-            \end{minipage} }
-
-        \item Suppose \{$x_n$\},\{$y_n$\} $\in$ $\mathbb{R}^k$ and
-        \{$\beta_n$\} $\in$ $\mathbb{R}$ and $x_n$ $\rightarrow$ x,
-        $y_n$ $\rightarrow$ y, $\beta_n$ $\rightarrow$ $\beta$.
-        
-        $\lim_{n \rightarrow \infty}$ $x_n + y_n$ = x+y
-        \hspace{0.5cm}
-        $\lim_{n \rightarrow \infty}$ $x_n \cdot y_n$ = x$\cdot$y
-        \hspace{0.5cm}
-        $\lim_{n \rightarrow \infty}$ $\beta_n x_n$ = $\beta$x
-
-            { \color{magenta} \underline{Proof} }
-
-            \fbox{
-            \begin{minipage}{13cm}
-                By part a, then
-                $\lim_{n \rightarrow \infty}$ $x_{n_i} + y_{n_i}$
-                = $x_i + y_i$ so
-                \{$x_n + y_n$\} $\rightarrow$ x+y.
-
-                Also,
-                $\lim_{n \rightarrow \infty}$ $\sum_{i=1}^k x_{n_i} y_{n_i}$
-                = $\sum_{i=1}^k x_i y_i$ so
-                \{$x_n \cdot y_n$\} $\rightarrow$ x$\cdot$y.
-
-                Also,
-                $\lim_{n \rightarrow \infty}$ $\beta_i x_{n_i}$
-                = $\beta_i x_i$ so
-                \{$\beta_n x_n$\} $\rightarrow$ $\beta x$.
-            \end{minipage} }
-    \end{enumerate}
-
-
-
-
-
-\subsection{ Subsequences }
-
-{ \color{blue} Definition 10.2.1: Subsequence } 
-
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        For sequence \{$p_n$\}, let \{$n_k$\} $\in$ $\mathbb{Z}_+$
-        where $n_k$ $<$ $n_{k+1}$.
-
-        Then \{$p_{n_k}$\} is a subsequence of \{$p_n$\}.
-        
-        If \{$p_{n_k}$\} converges, then its limit is called
-        a subsequential limit. \\
-	\end{adjustbox}
-
-{ \color{red} Theorem 10.2.2:
-\{$p_n$\} $\rightarrow$ p $\rightleftharpoons$ Every \{$p_{n_k}$\} $\rightarrow$ p }
-
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        \{$p_n$\} converges to p if and only if every subsequence
-        converges to p.
-    \end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-    \fbox{
-    \begin{minipage}{15cm}
-        Suppose \{$p_n$\} converges to p.
-
-        Then for $\epsilon$ $>$ 0, there is a N such that for n $\geq$ N,
-        d($p_n$,p) $<$ $\epsilon$.
-
-        Let \{$p_{n_k}$\} $\subset$ \{$p_n$\}.
-        Then for $n_k$ $\geq$ N, $|p_{n_k} - p|$ $<$ $\epsilon$.
-        Thus, \{$p_{n_k}$\} $\rightarrow$ p.
+        d($\sum_{k=1}^n a_k$ , $\sum_{k=1}^m a_k$)
+        = $| \sum_{k=1}^m a_k - \sum_{k=1}^n a_k |$
+        = $| \sum_{k=n}^m a_k |$ $\leq$ $\epsilon$
 
         \vspace{0.2cm}
 
-        Suppose every subsequence converges to p.
+        Suppose for every $\epsilon$ $>$ 0, there is a N
+        such that for m $\geq$ n $\geq$ N,
+        $| \sum_{k=n}^m a_k |$ $\leq$ $\epsilon$.
 
-        Since \{$p_n$\} is a subsequence of itself, then
-        \{$p_n$\} converges to p. 
-    \end{minipage} }
+        \hspace{1cm}
+        $| \sum_{k=n}^m a_k |$
+        = $| \sum_{k=1}^m a_k - \sum_{k=1}^n a_k |$
+        = d($\sum_{k=1}^n a_k$ , $\sum_{k=1}^m a_k$) $\leq$ $\epsilon$
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.32]{Images/10.2.2.png}
-\end{figure}
+        Thus, $\sum_{k=1}^n a_k$ is a Cauchy sequence
+        and thus, convergent.
+    \end{proof}
 
-\newpage
+    \vspace{0.5cm}
 
-{ \color{red} Theorem 10.2.3:
-\{$p_n$\} in compact space have \{$p_{n_k}$\} $\rightarrow$ p }
 
-    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-        \item If \{$p_n$\} is a sequence in a compact metric space X,
-        then some subsequence converges to p $\in$ X.
 
-            { \color{magenta} \underline{Proof} }
+    \begin{wtheorem}{Convergent $\sum a_n$
+    $\Rightarrow$ \{$a_n$\} $\rightarrow$ 0}{14cm}
+        If $\sum$ $a_n$ converges, then
+        $\lim_{n \rightarrow \infty}$ $a_n$ = 0.
+    \end{wtheorem}
+    
+    \begin{proof}
+        Since $\sum$ $a_n$ converges, then by {\color{red} theorem 10.1.2},
+        for $\epsilon$ $>$ 0, there is a N such that for m $\geq$ n $\geq$ N,
+        $| \sum_{k=n}^m a_k |$ $\leq$ $\epsilon$.
+        Then if m = n $\geq$ N, $| \sum_{k=n}^m a_k |$ = $| a_n |$
+        $\leq$ $\epsilon$ so \{$a_n$\} $\rightarrow$ 0.
+    \end{proof}
 
-            \fbox{
-            \begin{minipage}{13cm}
-                Let E be the range of \{$p_n$\}.
+    \vspace{0.5cm}
 
-                If E is finite, there is a p $\in$ E and sequence
-                \{$n_k$\} with $n_k$ $<$ $n_{k+1}$ such that
-                $p_{n_1}$ = $p_{n_2}$ = ... = p.
-                Thus, \{$p_{n_k}$\} $\rightarrow$ p.
 
-                If E is infinite, then by {\color{red} theorem 8.3.10},
-                then there exists a p $\in$ E'.
 
-                Then there are $n_k$ such that d($p_{n_k}$,p) $<$ $\frac{1}{k}$.
-                Thus, \{$p_{n_k}$\} $\rightarrow$ p.
-            \end{minipage} }
+    \begin{example}
+        $\sum_{n=1}^{\infty}$ $\frac{1}{n}$ diverges
+    \end{example}
+    
+    \begin{tbox}
+        $\sum_{n=1}^{\infty}$ $\frac{1}{n}$
+        = 1 + $\frac{1}{2}$ + ($\frac{1}{3}$ + $\frac{1}{4}$)
+        + ($\frac{1}{5}$ + ... + $\frac{1}{8}$) + ($\frac{1}{9}$ + ...)
+        $\geq$ 1 + $\frac{1}{2}$ + $\frac{1}{2}$ + $\frac{1}{2}$ + ...
 
-        \item Every bounded sequence in $\mathbb{R}^k$ contains
-        a convergent subsequence.
+        Thus, $s_{2^k}$ = $\sum_{n=1}^{2^k}$ $a_n$
+        $\geq$ 1 + $k \cdot \frac{1}{2}$
+        which is unbounded and thus, not convergent.
+    \end{tbox}
+    
+    \vspace{0.5cm}
 
-            { \color{magenta} \underline{Proof} }
 
-            \fbox{
-            \begin{minipage}{13cm}
-                Let E be a bounded sequence in $\mathbb{R}^k$.
-                Since E $\cup$ E' is bounded and closed, then by
-                {\color{red} theorem 8.3.13}, E $\cup$ E' is compact.
+
+    \begin{wtheorem}{Convergent series $\rightleftharpoons$ Bounded sequence}{14cm}
+        A series of nonnegative terms converge if and only if
+        its partial sums form a bounded sequence.
+    \end{wtheorem}
+
+    \begin{proof}
+        Suppose $\sum$ $a_n$ converges where $a_n$ $\geq$ 0.
+
+        Since $a_n$ $\geq$ 0, then \{$s_n$\} is monotonic so
+        by {\color{red} theorem 8.3.6}, \{$s_n$\} is bounded above.
+
+        \vspace{0.2cm}
+
+        Suppose \{$s_n$\} is bounded where $a_n$ $\geq$ 0.
+
+        Since \{$s_n$\} is monotonic and bounded, then
+        by {\color{red} theorem 8.3.6}, \{$s_n$\} converges.
+    \end{proof}
+
+    \newpage    
+
+
+
+    \begin{ltheorem}{Comparison Test}{1.5cm}
+        \item If $|a_n|$ $\leq$ $c_n$ for n $\geq$ $N_0$ and
+            $\sum$ $c_n$ converges, then $\sum$ $a_n$ converges.
+
+            \begin{proof}[14cm]
+                For $\epsilon$ $>$ 0, there exists a N $\geq$ $N_0$
+                such that for m $\geq$ n $\geq$ N,
+                $\sum_{k=n}^m$ $c_k$ $\leq$ $\epsilon$.
+
+                \hspace{1cm}
+                $| \sum_{k=n}^m a_k |$
+                $\leq$ $\sum_{k=n}^m |a_k|$
+                $\leq$ $\sum_{k=n}^m c_k$ $\leq$ $\epsilon$
+
+                Thus, $\sum$ $a_n$ converges.
+            \end{proof}
+        
+        \item If $a_n$ $\geq$ $d_n$ $\geq$ 0 for n $\geq$ $N_0$
+            and $\sum$ $d_n$ diverges, then $\sum$ $a_n$ diverges.
+
+            \begin{proof}[14cm]
+                Suppose $\sum$ $a_n$ converges.
+
+                Then from part a, $\sum$ $d_n$ converges which contradicts
+                that $\sum$ $a_n$ diverges.
                 
-                Thus by part a, E contains a convergent subsequence.
-            \end{minipage} }
-    \end{enumerate}
+                Thus, $\sum$ $a_n$ diverges.
+            \end{proof}
+    \end{ltheorem}
 
     \vspace{0.5cm}
 
-{ \color{red} Theorem 10.2.4: The set of subsequential limits is closed }
-
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        The subsequential limits of \{$p_n$\} in metric space X form
-        a closed subset of X.
-    \end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-    \fbox{
-    \begin{minipage}{15cm}
-        Let E be the range of the set of all subsequential limits of \{$p_n$\}.
-        
-        If E is empty, then E is closed.
-        If E is finite, then E' is empty so E is closed.
-
-        Suppose E is infinite. Then, let q $\in$ E'.
-
-        Since q $\in$ E', there is a x $\in$ E where d(x,q) $<$ $\frac{\epsilon}{2}$.
-
-        Since x $\in$ E, there is a \{$p_{n_k}$\} $\rightarrow$ x
-        so there is a N such that for n $\geq$ N,
-        d($p_{n_k}$,x) $<$ $\frac{\epsilon}{2}$.
-
-        Thus, d($p_{n_k}$,q) $\leq$ d($p_{n_k}$,x) + d(x,q) $<$ $\epsilon$
-        so q is a subsequential limit of \{$p_n$\}.
-        
-        Thus, q $\in$ E so E is closed.    
-    \end{minipage} }
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.3]{Images/10.2.4.png}
-\end{figure}
 
 
 
 
+\subsection{ Series of Nonnegative Terms }
 
-\subsection{ Cauchy Sequences }
+    \begin{wtheorem}{Infinite Geometric Series}{14cm}
+        If x $\in$ [0,1), then:
 
-{ \color{blue} Definition 10.3.1: Metric Spaces } 
+        \hspace{1cm}
+        $\sum_{n=0}^{\infty}$ $x^n$
+        = {\large $\frac{1}{1-x}$ }
 
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-        Sequence \{$p_n$\} $\in$ X is a Cauchy sequence if:
+        If x $\geq$ 1, the series diverges.
+    \end{wtheorem}
+    
+    \begin{proof}
+        If x $\not =$ 1, then using the geometric series
+        $s_n$ = $\sum_{k=0}^n$ $x^k$ = $\frac{1 - x^{n+1}}{1 - x}$.
+        Let n $\rightarrow$ $\infty$.
 
-        \hspace{0.5cm}
-        For every $\epsilon$ $>$ 0, there is a N $\in$ $\mathbb{Z}$ such that
-        for all n,m $\geq$ N, d($p_n$,$p_m$) $<$ $\epsilon$
+        If x $\in$ [0,1), then by {\color{red} theorem 9.2.1e},
+        $s_n$ = $\frac{1}{1-x}$ $(1 - x^{n+1})$
+        = $\frac{1}{1-x}$ (1 - 0) = $\frac{1}{1-x}$.
 
-        Let nonempty E $\subset$ X and S $\subset$ $\mathbb{R}$ of 
-        d(p,q) where p,q $\in$ E.
-        
-        Let sup(S) = diam(E).
-        If \{$p_n$\} $\in$ X, and $p_N, p_{N+1}, ... $ $\in$ $E_N$, then
-        \{$p_n$\} is a Cauchy sequence if and only if
-        $\lim_{N \rightarrow \infty}$ diam($E_N$) = 0. \\
-    \end{adjustbox}
-
-\newpage
-
-{ \color{red} Theorem 10.3.2: Cauchy sequences and its closure have the same diam }
-
-    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-        \item If $\overline{E}$ $\subset$ X, then diam($\overline{E}$) = diam(E).
-        
-            { \color{magenta} \underline{Proof} }
-
-            \fbox{
-            \begin{minipage}{13cm}
-                Since E $\subset$ $\overline{E}$, then
-                diam(E) $\leq$ diam($\overline{E}$).
-
-                For $\epsilon$ $>$ 0, let p,q $\in$ E'.
-
-                Thus, there are p',q' $\in$ E such that
-                d(p',p) $<$ $\epsilon$ and d(q',q) $<$ $\epsilon$.
-                Thus:
-
-                d(p,q) $\leq$ d(p,p') + d(p',q') + d(q',q)
-                $<$ 2$\epsilon$ + d(p',q')
-                $\leq$ 2$\epsilon$ + diam(E).
-
-                Thus, diam($\overline{E}$) $\leq$ 2$\epsilon$ + diam(E)
-                so diam($\overline{E}$) = diam(E).
-            \end{minipage} }
-
-        \item If $K_n$ is a sequence of compact sets of X such that
-        $K_{n+1}$ $\subset$ $K_n$ and $\lim_{n \rightarrow \infty}$ diam($K_N$) = 0,
-        then $\cap$ $K_n$ consist of only one point.
-        
-            { \color{magenta} \underline{Proof} }
-
-            \fbox{
-            \begin{minipage}{13cm}
-                Let K = $\cap$ $K_n$.
-                Since $K_n$ is a sequence of compact sets, then
-                by { \color{orange} Corollary 8.3.8 }, K is nonempty.
-
-                If K contains more than one point, then diam(K) $>$ 0.
-
-                But since K $\subset$ $K_n$, then diam(K) $\leq$ diam($K_n$)
-                which contradicts that diam($K_n$) $\rightarrow$ 0.
-            \end{minipage} }
-    \end{enumerate}
+        Also, by {\color{red} theorem 9.2.1e}, if x $\geq$ 1,
+        then the series diverges.        
+    \end{proof}
 
     \vspace{0.5cm}
 
-{ \color{red} Theorem 10.3.3: Convergent sequences are cauchy sequences }
 
-    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-        \item Every convergent sequence is a Cauchy sequence.
 
-            { \color{magenta} \underline{Proof} }
+    \begin{wtheorem}{Cauchy's Convergence Criterion}{14cm}
+        Suppose 0 $\leq$ $a_{i+1}$ $\leq$ $a_{i}$.
 
-            \fbox{
-            \begin{minipage}{13cm}
-                If $p_n$ $\rightarrow$ p and $\epsilon$ $>$ 0, there is a N such that
-				for all n $\geq$ N, d(p,$p_n$) $<$ $\frac{\epsilon}{2}$.
-                Thus, for m,n $\geq$ N:
+        Then the series $\sum_{n=1}^{\infty}$ $a_n$ converges
+        if and only if the series
 
-				\hspace{1cm}
-				d($p_n$,$p_m$) $\leq$ d($p_n$,p) + d(p,$p_m$) $<$ $\epsilon$.
+        \hspace{1cm}
+        $\sum_{k=0}^{\infty}$ $2^k a_{2^k}$
+        = $a_1$ + $2a_2$ + $4a_4$ + $8a_8$ + ...
+        converges.
+    \end{wtheorem}
+    
+    \begin{proof}
+        Let $s_n$ = $a_1 + a_2 + ... + a_n$ and
+        $t_k$ = $a_1 + 2a_2 + ... + 2^ka_{2^k}$.
+        For n $<$ $2^k$:
 
-				Thus, \{$p_n$\} is a Cauchy sequence.
-            \end{minipage} }
+        \hspace{1cm}
+        $s_n$
+        $\leq$ $a_1 + a_2 + a_3 + a_4 + a_5 + a_6 + a_7 + ... + a_{2^k}$
 
-        \item If \{$p_n$\} is a Cauchy sequence in compact metric space X,
-        then \{$p_n$\} converges to some p $\in$ X.
+        \hspace{1.55cm}
+        $\leq$ $a_1 + (a_2 + a_3) + (a_4 + a_5 + a_6 + a_7)
+                    + ... + (a_{2^k} + ... + a_{2^{k+1} - 1})$
 
-            { \color{magenta} \underline{Proof} }
+        \hspace{1.55cm}
+        $\leq$ $a_1 + 2a_2 + 4a_4 + ... + 2^ka_{2^k}$
+        = $t_k$
 
-            \fbox{
-            \begin{minipage}{13cm}
-                Let \{$p_n$\} be a Cauchy sequence in compact space X.
+        By {\color{red} comparison test},
+        if $\sum_{k=0}^{\infty} 2^k a_{2^k}$ converges, then
+        $\sum_{n=1}^{\infty} a_n$ converges.
+        For n $>$ $2^k$:
 
-				Let	$p_N, p_{N+1}, ... $ $\in$ $E_N$.
+        \hspace{1cm}
+        $s_n$
+        $\geq$ $a_1 + a_2 + a_3 + a_4 + a_5 + a_6 + a_7 + a_8 + ... + a_{2^k}$
 
-				Since \{$p_n$\} is a Cauchy sequence, then
-				$\lim_{N \rightarrow \infty}$ diam($\overline{E_N}$) = 0.
-				Since $\overline{E_N}$ is closed in compact X, then
-				by {\color{red} theorem 8.3.5}, $\overline{E_N}$ is compact.
+        \hspace{1.55cm}
+        = $a_1 + a_2 + (a_3 + a_4) + (a_5 + a_6 + a_7 + a_8)
+                    + ... + (a_{2^{k-1} + 1} + ... + a_{2^k})$
 
-				Since $E_{N+1}$ $\subset$ $E_N$, then $\overline{E_{N+1}}$
-				$\subset$ $\overline{E_N}$ and thus, by {\color{red} theorem 10.3.2b},
-				then there is a unique p $\in$ $\overline{E_N}$ for every N.
+        \hspace{1.55cm}
+        $\geq$ $\frac{1}{2}a_1 + a_2 + 2a_4 + ... + 2^{k-1}a_{2^k}$
+        = $\frac{1}{2}t_k$
 
-				Since p $\in$ $\overline{E_N}$, then d(p,q) $<$ $\epsilon$ for every
-				q $\in$ $\overline{E_N}$ so every q $\in$ $E_N$.
+        By {\color{red} comparison test},
+        if $\sum_{n=1}^{\infty}$ $a_n$ converges, then
+        $\sum_{k=0}^{\infty}$ $2^k a_{2^k}$ converges.
+    \end{proof}
 
-                Then for $\epsilon$ $>$ 0, there is a $N_0$ such that
-                for N $\geq$ $N_0$, diam($\overline{E_N}$) $<$ $\epsilon$.
+    \vspace{0.5cm}
 
-				Thus, d($p_n$,p) $<$ $\epsilon$ for n $\geq$ $N_0$ so
-                \{$p_n$\} $\rightarrow$ p.
-            \end{minipage} }
 
-        \item In $\mathbb{R}^k$, every Cauchy sequence converges.
+
+    \begin{wtheorem}{P-series}{14cm}
+        $\sum$ $\frac{1}{n^p}$ converges if p $>$ 1 and diverges if p $\leq$ 1
+    \end{wtheorem}
+
+    \begin{proof}
+        If p $\leq$ 0, then by {\color{red} theorem 10.1.3},
+        $\sum$ $\frac{1}{n^p}$ diverges.
+
+        If p $>$ 0, then by {\color{red} theorem 10.2.2},
+        $\sum$ $\frac{1}{n^p}$ converges only if
+        $\sum_{k=0}^{\infty}$ $2^k \frac{1}{(2^k)^p}$ converges.
+
+        Since $\sum_{k=0}^{\infty}$ $2^k \frac{1}{(2^k)^p}$
+        = $\sum_{k=0}^{\infty}$ $2^{(1-p)k}$, then by {\color{red} theorem 10.2.1},
+        $\sum_{k=0}^{\infty}$ $2^{k(1-p)}$ converges if
+        $2^{1-p}$ $<$ 1 so if 1-p $<$ 0 so p $>$ 1.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Log P-series}{14cm}
+        $\sum_{n = 2}^{\infty}$ $\frac{1}{n(\log(n))^p}$
+        converges if p $>$ 1 and diverges if p $\leq$ 1.        
+    \end{wtheorem}
+    
+    \begin{proof}
+        Since $\frac{1}{n(\log(n))^p}$ decreases, then by
+        {\color{red} theorem 10.2.2},
+
+        $\sum_{n=0}^{\infty}$ $\frac{1}{n(\log(n))^p}$ converges if
+        $\sum_{k=1}^{\infty}$ $2^k \frac{1}{2^k \log(2^k)}$ converges.
         
-            { \color{magenta} \underline{Proof} }
+        \hspace{1cm}
+        $\sum_{k=1}^{\infty}$ $2^k \frac{1}{2^k \log(2^k)}$
+        = $\sum_{k=1}^{\infty}$ $\frac{1}{ k \log(2)}$
+        = $\frac{1}{\log(2)}$ $\sum_{k=1}^{\infty}$ $\frac{1}{k}$
 
-            \fbox{
-            \begin{minipage}{13cm}
-                Let \{$x_n$\} be a Cauchy sequence in $\mathbb{R}^k$.
-				Let $x_N, x_{N+1}, ... $ $\in$ $E_N$.
+        Then by {\color{red} theorem 10.2.3},
+        $\sum_{k=1}^{\infty}$ $2^k \frac{1}{2^k \log(2^k)}$ converges if
+        p $>$ 1 and diverges if p $\leq$ 1.
 
-				Then for some N, diam($E_N$) $<$ 1.
-				Thus, the range of \{$x_n$\} = $E_N$ $\cup$ \{$x_1, ... , x_{N-1}$\}.
-				Thus, \{$x_n$\} is bounded.
+        Thus, $\sum_{n=0}^{\infty}$ $\frac{1}{n(\log(n))^p}$ converges if
+        p $>$ 1 and diverges and p $\leq$ 1.
+    \end{proof}
 
-				Thus, the $\overline{\{x_n\}}$ is closed and bounded so
-				by {\color{red} theorem 8.3.13}, $\overline{\{x_n\}}$
-				is compact.
-				Thus, by part b, \{$x_n$\} converges to some p $\in$ $\mathbb{R}^k$.
-            \end{minipage} }
+    \vspace{0.5cm}
+
+
+
+    \begin{corollary}{Log P-series extended}{14cm}
+        $\sum_{n=3}^{\infty}$ $\frac{1}{n\log(n)(\log(\log(n)))^p}$
+        converges if p $>$ 1 and diverges if p $\leq$ 1
+    \end{corollary}
+    
+    \begin{proof}
+        From {\color{red} theorem 10.2.4}, replace n = log(n) and
+        multiplying by $\frac{1}{n}$ $\rightarrow$
+        $\frac{1}{n\log(n)(\log(\log(n)))^p}$.
+
+        Since $\frac{1}{n\log(n)(\log(\log(n)))^p}$ decreases,
+        by {\color{red} theorem 10.2.2}
+        $\sum_{k=1}^{\infty}$ $2^k \frac{1}{2^k \log(2^k)(\log(\log(2^k)))^p}$:
+        
+        \hspace{1cm}
+        $\sum_{k=1}^{\infty}$ $\frac{1}{\log(2^k)(\log(\log(2^k)))^p}$
+        = $\frac{1}{\log(2)} \sum_{k=1}^{\infty}$ $\frac{1}{k (\log(k \log(2)))^p}$
+        $<$ $\frac{1}{\log(2)} \sum_{k=2}^{\infty}$ $\frac{1}{k (\log(k))^p}$
+
+        Since $\sum_{k=2}^{\infty}$ $\frac{1}{k (\log(k))^p}$ converges
+        by {\color{red} theorem 10.2.4},
+        $\sum_{n=3}^{\infty}$ $\frac{1}{n\log(n)(\log(\log(n)))^p}$ converges.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+
+
+\subsection{ The Number e}
+
+    \begin{definition}{Summation equivalence to e}{14cm}
+        $s_m$
+        = $\sum_{n=0}^{m}$ $\frac{1}{n!}$
+        = 1 + $\sum_{n=1}^{m}$ $\frac{1}{n!}$
+        $<$ 1 + $\sum_{n=1}^{m}$ $\frac{1}{2^{n-1}}$
+        $<$ 3
+
+        e = $\sum_{n=0}^{\infty}$ $\frac{1}{n!}$
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Limit equivalence to e}{14cm}
+        $\lim_{n \rightarrow \infty}$ $(1 + \frac{1}{n})^n$ = e
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $s_n$ = $\sum_{k=0}^n$ $\frac{1}{k!}$ and
+        $t_n$ = $(1 + \frac{1}{n})^n$.
+        Using the binomial theorem:
+
+        \hspace{1cm}
+        $t_n$ = $\sum_{k=0}^n$ $\binom{n}{k} \frac{1}{n^k}$
+        = $\sum_{k=0}^n$ $\frac{n(n-1)...(n-k+1))}{k!} \frac{1}{n^k}$
+        = $\sum_{k=0}^n$ $\frac{1}{k!}
+                        (1) (1 - \frac{1}{n}) (1 - \frac{2}{n}) (1 - \frac{k-1}{n})$
+        
+        Thus, $t_n$ $\leq$ $s_n$ so
+        $\lim_{n \rightarrow \infty}$ sup($t_n$) $\leq$ e.
+
+        If n $\geq$ m, then
+        $t_n$ $\geq$
+        $\sum_{k=0}^m$ $\frac{1}{k!}
+                        (1) (1 - \frac{1}{n}) (1 - \frac{2}{n}) (1 - \frac{k-1}{n})$.
+        
+        As n $\rightarrow$ $\infty$, then
+        $\lim_{n \rightarrow \infty}$ inf($t_n$)
+        $\geq$ $\sum_{k=0}^m$ $\frac{1}{k!}$
+        = $s_m$.
+        As m $\rightarrow$ $\infty$,
+        $\lim_{n \rightarrow \infty}$ inf($t_n$) $\geq$ e.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Rapidity of convergence of e}{14cm}
+        0 $<$ e - $s_n$ $<$ $\frac{1}{n!n}$
+    \end{wtheorem}
+
+    \begin{proof}
+        e - $s_n$
+        = $\sum_{k=n+1}^{\infty}$ $\frac{1}{k!}$
+        $<$ $\frac{1}{(n+1)!}$ $(1 + \frac{1}{n+1} + \frac{1}{(n+1)^2} + ...)$
+        = $\frac{1}{(n+1)!}$ $\frac{1}{1 - \frac{1}{n+1}}$
+        = $\frac{1}{n!n}$
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{e is irrational}{14cm}
+        e is irrational
+    \end{wtheorem}
+
+    \begin{proof}
+        Suppose r is rational.
+        Then let e = $\frac{p}{q}$ for p,q $\in$ $\mathbb{Z}_+$.
+
+        Thus, by {\color{red} theorem 10.3.3},
+        0 $<$ e - $s_q$ $<$ $\frac{1}{q!q}$ so
+        0 $<$ q!(e - $s_q$) $<$ $\frac{1}{q}$.
+
+        Since e = $\frac{p}{q}$, then q!e is an integer and
+        q!$s_q$ = q!(1 + 1 + $\frac{1}{2!}$ + ... + $\frac{1}{q!}$)
+        is an integer.
+        
+        Thus, q!(e - $s_q$) is an integer which is between 0 and $\frac{1}{q}$
+        and thus, a contradiction.
+    \end{proof}
+
+    \vspace{0.3cm}
+
+
+
+
+
+\subsection{ Root and Ratio Tests }
+
+    \begin{wtheorem}{Root Test}{14cm}
+        For $\sum$ $a_n$, let
+        $\alpha$ = $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{|a_n|}$).
+    \end{wtheorem}
+
+    \begin{enumerate}[label=(\alph*), leftmargin=3cm, itemsep=0.1cm]
+        \item If $\alpha$ $<$ 1, $\sum$ $a_n$ converges
+        
+        \item If $\alpha$ $>$ 1, $\sum$ $a_n$ diverges
+        
+        \item If $\alpha$ = 1, unclear
     \end{enumerate}
 
-\newpage
+    \begin{proof}
+        If $\alpha$ $<$ 1, choose $\beta$ such that $\beta$ $\in$ ($\alpha$,1)
+        and N $\in$ $\mathbb{Z}$ such that $\sqrt[n]{|a_n|}$ $<$ $\beta$ for
+        n $\geq$ N.
 
-{ \color{blue} Definition 10.3.4: Complete } 
-
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		A metric space where every Cauchy sequence converges is complete.
-
-		Thus, by {\color{red} theorem 10.3.3}, all compact and Euclidean
-		spaces are complete. \\
-	\end{adjustbox}
-
-{ \color{blue} Definition 10.3.5: Monotonic Sequences } 
-
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		A sequence \{$s_n$\} of real numbers is:
-	\end{adjustbox}
-
-	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-		\item monotonically increasing if $s_n$ $\leq$ $s_{n+1}$
-		
-		\item monotonically decreasing if $s_n$ $\geq$ $s_{n+1}$ \\
-	\end{enumerate}
-
-{ \color{red} Theorem 10.3.6: Monotonic sequences converge if bounded } 
-
-	\begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
-		Suppose \{$s_n$\} is monotonic. Then \{$s_n$\} converges if
-		and only if it is bounded.
-	\end{adjustbox}
-
-{ \color{magenta} \underline{Proof} }
-
-    \fbox{
-    \begin{minipage}{15cm}
-        Suppose $s_n$ $\leq$ $s_{n+1}$.
-        Let E be the range of \{$s_n$\}.
-        
-        Suppose \{$s_n$\} is bounded.
-        
-        Let s = sup(E) so $s_n$ $\leq$ s.
-        For every $\epsilon$ $>$ 0, there is a N such that
-        s - $\epsilon$ $<$ $s_N$ $\leq$ s
-        else s-$\epsilon$ would be an upper bound of E
-        which contradicts s = sup(E).
-
-        Since \{$s_n$\} increases, then for n $\geq$ N,
-        s - $\epsilon$ $<$ $s_N$ $\leq$ $s_n$ $\leq$ s
-        so \{$s_n$\} $\rightarrow$ s.
+        Since $\beta$ $\in$ (0,1), then by {\color{red} theorem 10.2.1},
+        $\sum$ $\beta^n$ converges.
+        Then by the {\color{red} comparison test}, $\sum$ $a_n$ converges.
 
         \vspace{0.2cm}
 
-        Suppose \{$s_n$\} converges to s.
+        If $\alpha$ $>$ 1, then there is a $a_{n_k}$ such that
+        $\sqrt[n_k]{|a_{n_k}|}$ $\rightarrow$ $\alpha$.
 
-        Then for $\epsilon$ $>$ 0, there is a N such that for n $\geq$ N,
-        s - $\epsilon$ $<$ $s_N$ $\leq$ $s_n$ $\leq$ s.
-
-        Thus, \{$s_n$\} is bounded from above.
-
-        \vspace{0.4cm}
-
-        Suppose $s_n$ $\geq$ $s_{n+1}$. Let E be the range of \{$s_n$\}.
-
-        Suppose \{$s_n$\} is bounded.
-
-        Let s = inf(E) so $s_n$ $\geq$ s.
-        For every $\epsilon$ $>$ 0, there is a N such that
-        s $\leq$ $s_N$ $<$ s + $\epsilon$
-        else s+$\epsilon$ would be a lower bound of E
-        which contradicts s = inf(E).
-
-        Since \{$s_n$\} decreases, then for n $\geq$ N,
-        s $\leq$ $s_n$ $\leq$ $s_N$ $<$ s + $\epsilon$
-        so \{$s_n$\} $\rightarrow$ s.
+        Thus, $|a_n|$ $>$ 1 for infinitely many n so 
+        by {\color{red} theorem 10.1.3}, $\sum$ $a_n$ doesn't converge.
 
         \vspace{0.2cm}
 
-        Suppose \{$s_n$\} converges to s.
+        $\sum$ $\frac{1}{n}$, $\sum$ $\frac{1}{n^2}$
+        have $\alpha$ = 1, but $\sum$ $\frac{1}{n}$ diverges and
+        $\sum$ $\frac{1}{n^2}$ converges by {\color{red} theorem 10.2.3}.
+    \end{proof}
 
-        Then for $\epsilon$ $>$ 0, there is a N such that for n $\geq$ N,
-        s $\leq$ $s_n$ $\leq$ $s_N$ $<$ s + $\epsilon$.
-
-        Thus, \{$s_n$\} is bounded from below.
-    \end{minipage} }
-	
+    \vspace{0.5cm}
 
 
 
+    \begin{ltheorem}{Ratio Test}{1.5cm}
+        \item $\sum$ $a_n$ converges if $\lim_{n \rightarrow \infty}$
+            sup($|\frac{a_{n+1}}{a_n}|$) $<$ 1
+        
+        \item $\sum$ $a_n$ diverges if $|\frac{a_{n+1}}{a_n}|$ $\geq$ 1
+            for all n $\geq$ $n_0$ for $n_0$ $\in$ $\mathbb{Z}$
+    \end{ltheorem}
 
+    \begin{proof}
+        If $\lim_{n \rightarrow \infty}$ sup($|\frac{a_{n+1}}{a_n}|$) $<$ 1,
+        there is a $\beta$ $<$ 1 and N such that for n $\geq$ N,
+        $|\frac{a_{n+1}}{a_n}|$ $<$ $\beta$.
+
+        Then $|a_{N+1}|$ $<$ $\beta |a_N|$ so
+        $|a_{N+2}|$ $<$ $\beta$$|a_{N+1}|$ $<$ $\beta^2 |a_N|$.
+        
+        Thus, $|a_{N+p}|$ $<$ $\beta^p$$|a_N|$ so
+        $|a_n|$ $<$ $|a_N| \beta^{-N} \beta^n$.
+
+        Thus, by the {\color{red} comparison test}, $\sum$ $a_n$ converges.
+
+        If $|a_{n+1}|$ $\geq$ $|a_n|$ $>$ 0 for n $\geq$ $n_0$, then by
+        {\color{red} theorem 10.1.3}, $\sum$ $a_n$ diverges.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Ratio convergence $\rightarrow$ Root convergence}{14cm}
+        $\lim_{n \rightarrow \infty}$ inf($\frac{c_{n+1}}{c_n}$)
+        $\leq$ $\lim_{n \rightarrow \infty}$ inf($\sqrt[n]{c_n}$)
+
+        $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{c_n}$)
+        $\leq$ $\lim_{n \rightarrow \infty}$ sup($\frac{c_{n+1}}{c_n}$)        
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $\alpha$ = $\lim_{n \rightarrow \infty}$ inf($\frac{c_{n+1}}{c_n}$).
+        If $\alpha$ = $-\infty$, then $-\infty$ $\leq$
+        $\lim_{n \rightarrow \infty}$ inf($\sqrt[n]{c_n}$) holds true.
+
+        If $\alpha$ is finite, there is a $\beta$ $\leq$ $\alpha$ and N such that
+        for n $\geq$ N, $\frac{c_{n+1}}{c_n}$ $\geq$ $\beta$
+        so $c_{N+p}$ $\geq$ $\beta^p c_N$.
+
+        Then, $c_{n}$ $\geq$ $c_N \beta^{-N} \beta^n$ so
+        $\sqrt[n]{c_{n}}$ $\geq$ $\sqrt[n]{c_N \beta^{-N}} \beta$.
+        Thus, $\lim_{n \rightarrow \infty}$ inf($\sqrt[n]{c_n}$)
+        $\geq$ $\beta$ = $\alpha$.
+
+        \vspace{0.2cm}
+
+        Let $\alpha$ = $\lim_{n \rightarrow \infty}$ sup($\frac{c_{n+1}}{c_n}$).
+        If $\alpha$ = $\infty$, then
+        $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{c_n}$)
+        $\leq$ $\infty$ holds true.
+
+        If $\alpha$ is finite, there is a $\beta$ $\geq$ $\alpha$ and N such that
+        for n $\geq$ N, $\frac{c_{n+1}}{c_n}$ $\leq$ $\beta$
+        so $c_{N+p}$ $\leq$ $\beta^p c_N$.
+
+        Then, $c_{n}$ $\leq$ $c_N \beta^{-N} \beta^n$ so
+        $\sqrt[n]{c_{n}}$ $\leq$ $\sqrt[n]{c_N \beta^{-N}} \beta$.
+        Thus, $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{c_n}$)
+        $\leq$ $\beta$ = $\alpha$.
+    \end{proof}
+
+    \newpage
+
+
+
+
+
+\subsection{ Power Series }
+
+    \begin{definition}{Power series}{14cm}
+        For a sequence \{$c_n$\} $\in$ $\mathbb{C}$, the series
+        $\sum_{n=0}^{\infty}$ $c_n z^n$
+        is a power series.
+
+        $c_n$ are the coefficients and z $\in$ $\mathbb{C}$.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Radius of Convergence}{14cm}
+        For power series $\sum$ $c_n z^n$, let
+        $\alpha$ = $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{|c_n|}$)
+        and R = $\frac{1}{\alpha}$.
+
+        Then $\sum$ $c_n z^n$ converges if $|z|$ $<$ R and
+        diverges if $|z|$ $>$ R.
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $a_n$ = $c_n z^n$. Using the {\color{red} root test},
+
+        \hspace{1cm}
+        $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{|a_n|}$)
+        = $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{|c_n z^n|}$)
+
+        \hspace{4.7cm}
+        = $|z|$ $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{|c_n|}$)
+        = $\frac{|z|}{R}$
+
+        Thus, $\sum$ $c_n z^n$ converges if $\frac{|z|}{R}$ $<$ 1
+        and diverges if $\frac{|z|}{R}$ $>$ 1
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+
+
+\subsection{ Summation By Parts }
+
+    \begin{wtheorem}{Summation by parts}{14cm}
+        For sequences \{$a_n$\}, \{$b_n$\}, let $A_n$ = $\sum_{k=0}^n$ $a_k$.
+        Then for 0 $\leq$ p $\leq$ q:
+
+        \hspace{1cm}
+        $\sum_{n = p}^q$ $a_n b_n$
+        = ($\sum_{n = p}^{q-1}$ $A_n (b_n - b_{n+1})$)
+        + $A_q b_q$ - $A_{p-1} b_p$
+    \end{wtheorem}
+
+    \begin{proof}
+        $\sum_{n = p}^q$ $a_n b_n$
+        = $\sum_{n = p}^q$ $(A_n - A_{n-1}) b_n$
+
+        \hspace{2cm}
+        = $\sum_{n = p}^q$ $A_n b_n$ - $\sum_{n = p}^q$ $A_{n-1} b_n$
+        = $\sum_{n = p}^q$ $A_n b_n$ - $\sum_{n = p-1}^{q-1}$ $A_{n} b_{n+1}$
+
+        \hspace{2cm}
+        = $\sum_{n = p}^{q-1}$ $A_n b_n$ - $\sum_{n = p}^{q-1}$ $A_{n} b_{n+1}$
+        + $A_q b_q$ - $A_{p-1} b_p$
+
+        \hspace{2cm}
+        = ($\sum_{n = p}^{q-1}$ $A_n (b_n - b_{n+1})$)
+        + $A_q b_q$ - $A_{p-1} b_p$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Conditions for convergent $\sum$ $a_n b_n$}{14cm}
+        Suppose for \{$a_n$\}, \{$b_n$\}:
+
+        \begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
+            \item partial sums $A_n$ of $\sum$ $a_n$ form a bounded sequence
+            
+            \item $b_i$ $\geq$ $b_{i+1}$
+            
+            \item $\lim_{n \rightarrow \infty}$ $b_n$ = 0
+        \end{itemize}
+
+        Then $\sum$ $a_n b_n$ converges.
+    \end{wtheorem}
+
+    \begin{proof}
+        Since \{$A_n$\} is bounded, $|A_n|$ $\leq$ M for all n.
+
+        Since \{$b_n$\} is monotonically decreasing and
+        $\lim_{n \rightarrow \infty}$ $b_n$ = 0, then
+        for $\epsilon$ $>$ 0, there is a N such that
+        $b_N$ $\leq$ $\frac{\epsilon}{2M}$.
+        Then for N $\leq$ p $\leq$ q:
+
+        \hspace{1cm}
+        $| \sum_{n=p}^q a_n b_n |$
+        = ($| \sum_{n = p}^{q-1}$ $A_n (b_n - b_{n+1})$)
+        + $A_q b_q$ - $A_{p-1} b_p |$
+
+        \hspace{3.3cm}
+        $\leq$ M $| \sum_{n = p}^{q-1} (b_n - b_{n+1}) + b_q + b_p |$
+        = 2M$b_p$
+        $\leq$ 2M$b_N$
+        $\leq$ $\epsilon$
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{corollary}{Convergent series of Alternating Sequences}{14cm}
+        Suppose for \{$c_n$\}:
+
+        \begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
+            \item $|c_i|$ $\geq$ $|c_{i+1}|$
+            
+            \item $c_{2i-1}$ $\geq$ 0 and $c_{2i}$ $\leq$ 0
+            
+            \item $\lim_{n \rightarrow \infty}$ $c_n$ = 0
+        \end{itemize}
+
+        Then $\sum$ $c_n$ converges.
+    \end{corollary}
+
+    \begin{proof}
+        From {\color{red} theorem 10.6.2}, let
+        $a_n$ = $(-1)^{n+1}$ and $b_n$ = $|c_n|$.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{corollary}{Convergent power series at radius of convergence}{14cm}
+        Suppose for \{$c_n$\}:
+
+        \begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
+            \item Radius of convergence of $\sum$ $c_n z^n$ is 1
+            
+            \item $c_i$ $\geq$ $c_{i+1}$
+            
+            \item $\lim_{n \rightarrow \infty}$ $c_n$ = 0
+        \end{itemize}
+
+        Then $\sum$ $c_n z^n$ converges at every point where $|z|$ = 1
+        except possibly z = 1.
+    \end{corollary}
+
+    \begin{proof}
+        From {\color{red} theorem 10.6.2}, let
+        $a_n$ = $z^n$ and $b_n$ = $c_n$.
+
+        $A_n$ of $\sum$ $a_n$ form a bounded sequence since
+        $| A_n |$
+        = $| \sum_0^n z^n |$
+        = $| \frac{1 - z^{n+1}}{1 - z} |$
+        $\leq$ $\frac{2}{|1 - z|}$.        
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+
+
+\subsection{ Absolute Convergence }
+
+    \begin{definition}{Absolute convergence}{14cm}
+        $\sum$ $a_n$ converges absolutely if $\sum$ $|a_n|$ converges.
+
+        If $\sum$ $a_n$ converges, but $\sum$ $|a_n|$ diverges,
+        then $\sum$ $a_n$ converges non-absolutely.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Absolute convergence $\rightarrow$ convergence}{14cm}
+        If $\sum$ $a_n$ converges absolutely, then $\sum$ $a_n$ converges
+    \end{wtheorem}
+
+    \begin{proof}
+        Since $\sum$ $a_n$ converges absolutely, then for every
+        $\epsilon$ $>$ 0, there is an integer N such that for m $\geq$ n $\geq$ N,
+        $|\sum_{k=n}^m |a_k||$ = $\sum_{k=n}^m |a_k|$ $\leq$ $\epsilon$.
+
+        Thus, 
+        $|\sum_{k=n}^m a_k|$
+        $\leq$ $\sum_{k=n}^m |a_k|$
+        $\leq$ $\epsilon$
+        so $\sum$ $a_n$ converges.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+
+
+\subsection[Addition \& Multiplication]{ Addition \& Multiplication of Series }
+
+    \begin{wtheorem}{Addition and Scalar Multiplication}{14cm}
+        If $\sum a_n$ = A and $\sum b_n$ = B, then
+        $\sum (a_n + b_n)$ = A + B and $\sum ca_n$ = cA.
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $A_n$ = $\sum_{k=0}^n a_k$ and $B_n$ = $\sum_{k=0}^n b_k$.
+
+        Then $A_n + B_n$ = $\sum_{k=0}^n a_k + b_k$
+        so $\lim_{n \rightarrow \infty}$ $A_n + B_n$
+        = A + B.
+
+        Then $\lim_{n \rightarrow \infty}$ $cA_n$
+        = $\underbrace{A + ... + A}_c$ = cA
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{definition}{Cauchy Product}{14cm}
+        For $\sum a_n$ and $\sum b_n$, let
+        $c_n$ = $\sum_{k=0}^n a_k b_{n-k}$
+        and the product as $\sum c_n$.
+
+        \vspace{0.2cm}
+
+        $\sum_{n=0}^{\infty} a_n z^n$ $\sum_{n=0}^{\infty} b_n z^n$
+        = $(a_0 + a_1z + a_2z^2 + ... + a_nz^n)$
+        $(b_0 + b_1z + b_2z^2 + ... + b_nz^n)$
+
+        \hspace{3.9cm}
+        = $a_0b_0 + (a_0b_1 + a_1b_0)z + (a_0b_2 + a_1b_1 + a_2b_0)z^2 + ... $
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Conditions $\sum$ $c_n$ = AB}{14cm}
+        Suppose
+
+        \begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
+            \item $\sum_{n=0}^{\infty}$ $a_n$ converges absolutely
+            
+            \item $\sum_{n=0}^{\infty}$ $a_n$ = A
+            
+            \item $\sum_{n=0}^{\infty}$ $b_n$ = B
+            
+            \item $c_n$ = $\sum_{k=0}^{\infty}$ $a_k b_{n-k}$ 
+        \end{itemize}
+
+        Then $\sum_{n=0}^{\infty}$ $c_n$ = AB.
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $A_n$ = $\sum_{k=0}^{n}$ $a_k$, $B_n$ = $\sum_{k=0}^{n}$ $b_k$,
+        $C_n$ = $\sum_{k=0}^{n}$ $c_k$, and $\beta_n$ = $B_n$ - B.
+
+        \hspace{1cm}
+        $C_n$
+        = $a_0b_0 + (a_0b_1 + a_1b_0) + ... + (a_0b_n + ... + a_nb_0)$
+        
+        \hspace{1.6cm}
+        = $a_0B_n + a_1B_{n-1} + ... + a_nB_0$
+
+        \hspace{1.6cm}
+        = $a_0(B + \beta_n) + a_1(B + \beta_{n-1}) + ... + a_n(B + \beta_{0})$
+
+        \hspace{1.6cm}
+        = $A_nB + a_0\beta_n + a_1\beta_{n-1} + ... + a_n\beta_0$
+
+        Let $\gamma_n$ = $a_0\beta_n + a_1\beta_{n-1} + ... + a_n\beta_0$
+        so $C_n$ = $A_nB + \gamma_n$.
+
+        Since $a_n$ converges absolutely, then
+        $\sum_{n=0}^{\infty}$ $|a_n|$ = $\alpha$.
+
+        Since $\sum_{n=0}^{\infty}$ $b_n$ = B, then $\beta_n$ $\rightarrow$ 0.
+        
+        Then for $\epsilon$ $>$ 0, there is a N such that
+        $|\beta_n|$ $\leq$ $\frac{\epsilon}{\alpha}$ for n $\geq$ N.
+
+        \hspace{1cm}
+        $|\gamma_n|$
+        $\leq$ $|\beta_0a_n + ... + \beta_Na_{n-N}|$
+        + $|\beta_{N+1}a_{n-N-1} + ... + \beta_na_{0}|$
+
+        \hspace{1.75cm}
+        $\leq$ $|\beta_0a_n + ... + \beta_Na_{n-N}|$
+        + $|a_{n-N-1} + ... + a_{0}|$$\frac{\epsilon}{\alpha}$
+
+        \hspace{1.75cm}
+        $\leq$ $|\beta_0a_n + ... + \beta_Na_{n-N}|$
+        + $\alpha \frac{\epsilon}{\alpha}$
+
+        Thus, with a fixed N, since $a_n$ $\rightarrow$ 0, then
+        $\lim_{n \rightarrow \infty}$ $|\gamma_n|$ $\leq$ $\epsilon$
+        so $\lim_{n \rightarrow \infty}$ $\gamma_n$ = 0.
+
+        Thus, $\lim_{n \rightarrow \infty}$ $C_n$
+        = $\lim_{n \rightarrow \infty}$ $A_nB + \gamma_n$ = AB.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{By Cauchy Product, $\sum c_n$ = C implies C = AB}{14cm}
+        If $\sum a_n$ = A, $\sum b_n$ = B, $\sum c_n$ = C
+        where $c_n$ = $a_0b_n + ... + a_nb_0$, then C = AB.
+    \end{wtheorem}
