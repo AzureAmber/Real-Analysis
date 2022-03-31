@@ -1,0 +1,1260 @@
+\newpage
+
+\section[Day 5: Sequences \textbackslash \ Series of Functions]
+{ Sequences and Series of Functions }
+
+\subsection[ Convergence ]{ Pointwise Convergence of Functions }
+
+    \begin{definition}{Sequences and Series of Functions}{14cm}
+        Suppose \{$f_n$\} is a sequence of functions defined on set E.
+
+        If \{$f_n(x)$\} converges for any x $\in$ E, then:
+
+        \hspace{0.5cm}
+        f(x) = $\lim_{n \rightarrow \infty}$ $f_n(x)$ for x $\in$ E
+
+        So for x $\in$ E and $\epsilon > 0$, there is a $N_x$ such that
+        for n $\geq$ $N_x$:
+
+        \hspace{0.5cm}
+        $|f_n(x) - f(x)| < \epsilon$
+
+        \vspace{0.3cm}
+
+        If $\sum f_n(x)$ converges for every x $\in$ E, then:
+
+        \hspace{0.5cm}
+        f(x) = $\sum_{n=1}^{\infty}$ $f_n(x)$ for x $\in$ E        
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+
+
+\subsection[ Uniform Convergence ]{ Uniform Convergence of Functions }
+
+    \begin{definition}{Uniform Convergence}{14cm}
+        \{$f_n$\} converges uniformly on E to a function f if for all x $\in$ E:
+        
+        \hspace{0.5cm}
+        For $\epsilon > 0$, there is a N $\in$ $\mathbb{Z}$ where for n $\geq$ N, then
+        $|f_n(x) - f(x)|$ $\leq$ $\epsilon$
+
+        \vspace{0.3cm}
+
+        $\sum f_n(X)$ converges uniformly if \{$s_n$\} converges uniformly on E
+        
+        where $\sum_{i=1}^n$ $f_i(x)$ = $s_n(x)$:
+
+        \hspace{0.5cm}
+        For $\epsilon > 0$, there is a N $\in$ $\mathbb{Z}$ where for
+        m $\geq$ n $\geq$ N, then
+        $|\sum_{i=n}^m$ $f_i(x)|$
+        $\leq$ $\epsilon$        
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Cauchy Criterion for sequence of functions}{14cm}
+        \{$f_n$\} converges uniformly on E if and only if:
+        
+        \hspace{0.5cm}
+        For $\epsilon > 0$, there is a N $\in$ $\mathbb{Z}$ where for n,m $\geq$ N
+        and every x $\in$ E, then:
+        
+        \hspace{1cm}
+        $|f_n(x) - f_m(x)|$ $\leq$ $\epsilon$        
+    \end{wtheorem}
+
+
+    \begin{intuition}
+        Convergent sequences are Cauchy
+        and Cauchy sequences in $\mathbb{R}$ are convergent.
+    \end{intuition}
+
+    \vspace{0.1cm}
+
+    \begin{proof}
+        If \{$f_n$\} converges uniformly on E, then for $\epsilon > 0$, there is a N
+        where for n,m $\geq$ N:
+
+        \hspace{0.5cm}
+        $|f_n(x) - f(x)|$ $\leq$ $\frac{\epsilon}{2}$
+        \hspace{1cm}
+        $|f_m(x) - f(x)|$ $\leq$ $\frac{\epsilon}{2}$
+
+        \hspace{0.5cm}
+        $|f_n(x) - f_m(x)|$
+        $\leq$ $|f_n(x) - f(x)|$ + $|f_m(x) - f(x)|$
+        $\leq$ $\frac{\epsilon}{2}$ + $\frac{\epsilon}{2}$
+        = $\epsilon$
+
+        \rule[0.1cm]{15cm}{0.01cm}
+
+        If for $\epsilon > 0$, there is a N $\in$ $\mathbb{Z}$ where for n,m $\geq$ N
+        and every x $\in$ E so
+
+        $|f_n(x) - f_m(x)|$ $\leq$ $\epsilon$, then \{$f_n$\} is a Cauchy sequence
+        in $\mathbb{R}^k$ and thus, converges.
+
+        Then there is a f(x) where f(x) = $\lim_{m \rightarrow \infty} f_m(x)$. Thus:
+
+        \hspace{0.5cm}
+        $|f_n(x) - f(x)|$
+        $\leq$ $|f_n(x) - \lim_{m \rightarrow \infty} f_m(x)|$
+        $\leq$ $\epsilon$
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Connection between Convergence and Uniform Convergence}{14cm}
+        Suppose for x $\in$ E, $\lim_{n \rightarrow \infty}$ $f_n(x)$ = f(x).
+        Let $M_n$ = $\underset{x \in E}{\text{sup}}$($|f_n(x) - f(x)|$).
+
+        Then \{$f_n$\} converges uniformly to f on E if and only if
+        $\lim_{n \rightarrow \infty}$ $M_n$ = 0.        
+    \end{wtheorem}
+
+    \begin{intuition}
+        Pointwise convergence implies for any particular $x_0$ and $\epsilon > 0$
+        so $|f_n(x_0) - f(x_0)| < \epsilon$.
+
+        Uniform convergence implies for every x and $\epsilon > 0$
+        so $|f_n(x) - f(x)| < \epsilon$.
+
+        \vspace{0.2cm}
+
+        Thus, uniform convergence implies pointwise convergence, but pointwise
+        convergence might not imply uniform convergence since for n $\geq$ $N_1$,
+        $|f_n(x_0) - f(x_0)| < \epsilon$, but there might always exist
+        $x_1 \not = x_0$ where $|f_n(x_1) - f(x_1)| \not < \epsilon$
+        until $N_2$ $>$ $N_1$.
+
+        If $\underset{x \in E}{\text{sup}}$($|f_n(x) - f(x)|$) $\rightarrow$ 0,
+        then $x_1$ cannot exist and thus, pointwise implies uniform.
+    \end{intuition}
+    
+    \vspace{0.1cm}
+
+    \begin{proof}
+        If \{$f_n$\} converges uniformly to f on E, then
+        for $\epsilon > 0$, there is a N where for n $\geq$ N:
+
+        \hspace{0.5cm}
+        $|f_n(x) - f(x)| \leq \epsilon$
+        \hspace{1cm}
+        for all x $\in$ E
+
+        Thus, $M_n$ = $\underset{x \in E}{\text{sup}}$($|f_n(x) - f(x)|$)
+        $\leq$ $\epsilon$ so $\lim_{n \rightarrow \infty}$ $M_n$ $\leq$ $\epsilon$.
+
+        \rule[0.1cm]{15cm}{0.01cm}
+
+        If $\lim_{n \rightarrow \infty}$ $M_n$ = 0, then for $\epsilon > 0$,
+        there is a N where for n $\geq$ N so
+        $\lim_{n \rightarrow \infty}$ $M_n$ $\leq$ $\epsilon$.
+
+        Since $\lim_{n \rightarrow \infty}$ $f_n(x)$ = f(x) for x $\in$ E,
+        there is a $N_x$ for each x where for n $\geq$ $N_x$:
+
+        \hspace{0.5cm}
+        $|f_n(x) - f(x)|$
+        $\leq$ $\epsilon$
+
+        Since there is a N such that for n $\geq$ N so $M_n$
+        = $\underset{x \in E}{\text{sup}}$($|f_n(x) - f(x)|$) $\leq$ $\epsilon$,
+        then there is $\underset{x \in E}{\text{sup}}$(\{$N_x$\}) = N
+        such that for all x $\in$ E where n $\geq$ N:
+
+        \hspace{0.5cm}
+        $|f_n(x) - f(x)|$
+        $\leq$ $\underset{x \in E}{\text{sup}}$($|f_n(x) - f(x)|$)
+        = $M_n$ $\leq$ $\epsilon$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Condition for Uniform Convergence for Series}{14cm}
+        For \{$f_n$\} defined on E, suppose $|f_n(x)|$ $\leq$ $M_n$ for any x $\in$ E.
+
+        If $\sum M_n$ converges, then $\sum f_n$ converges uniformly on E.        
+    \end{wtheorem}
+    
+    \begin{proof}
+        If $\sum M_n$ converges, then for $\epsilon > 0$, there is a N where
+        for m $\geq$ n $\geq$ N:
+
+        \hspace{0.5cm}
+        $|\sum_{i=n}^m f_i(x)|$
+        $\leq$ $\sum_{i=n}^m |f_i(x)|$
+        $\leq$ $\sum_{i=n}^m M_n$
+        $\leq$ $\epsilon$    
+    \end{proof}
+
+    \newpage
+
+
+
+
+
+\subsection[ Continuity ]{ Uniform Convergence and Continuity }
+
+    \begin{wtheorem}{$\lim_{t \rightarrow x} \lim_{n \rightarrow \infty} f_n(t)$
+    = $\lim_{n \rightarrow \infty} \lim_{t \rightarrow x} f_n(t)$}{14cm}
+        Suppose \{$f_n$\} converges uniformly to f on a set E.
+        
+        Let x $\in$ E' where $\lim_{t \rightarrow x}$ $f_n(t)$ = $A_n$.
+
+        Then \{$A_n$\} converges where
+        $\lim_{t \rightarrow x}$ $f(t)$ = $\lim_{n \rightarrow \infty}$ $A_n$.
+    \end{wtheorem}
+
+    \begin{intuition}
+        Since \{$f_n$\} converges uniformly so for any t, then
+        $\lim_{n \rightarrow \infty}$ $f_n(t)$ = $f(t)$.
+
+        For t near x, then
+        $\lim_{n \rightarrow \infty}$ $\lim_{t \rightarrow x}$ $f_n(t)$
+        = $\lim_{t \rightarrow x}$ $f(t)$.
+
+        \vspace{0.2cm}
+
+        Note uniform convergence is essential since $f_n \rightarrow f$
+        and $f_n(t) \rightarrow f(t)$ for any t including t near x.
+        Since pointwise convergence possibly $f_n(t) \not \rightarrow f(t)$
+        for some t near x,
+        then continuity possibly might not hold.
+    \end{intuition}
+
+    \vspace{0.1cm}
+
+    \begin{proof}
+        Since \{$f_n$\} converges uniformly, then for $\epsilon > 0$,
+        there is a N where for m,n $\geq$ N and every t $\in$ E, then
+        $|f_n(t) - f_m(t)|$ $\leq$ $\epsilon$.
+        Then for t $\rightarrow$ x:
+
+        \hspace{0.5cm}
+        $|A_n - A_m|$
+        = $|\lim_{t \rightarrow x} f_n(t) - \lim_{t \rightarrow x} f_m(t)|$
+        $\leq$ $\epsilon$
+
+        Thus, \{$A_n$\} is a Cauchy Sequence in $\mathbb{R}^k$ so \{$A_n$\}
+        converges to A = $\lim_{n \rightarrow \infty}$ $A_n$.
+
+        Since \{$A_n$\} converges to A, then for $\epsilon > 0$, there is a
+        $N_1$ where for n $\geq$ $N_1$:
+
+        \hspace{0.5cm}
+        $|A - A_n|$ $\leq$ $\frac{\epsilon}{3}$
+
+        Since \{$f_n$\} converges uniformly to f, then for $\epsilon > 0$,
+        there is a $N_2$ where for n $\geq$ $N_2$:
+
+        \hspace{0.5cm}
+        $|f(t) - f_n(t)|$ $\leq$ $\frac{\epsilon}{3}$.
+
+        Since there is a r such that for t $\in$ $N_r(x)$, then:
+
+        \hspace{0.5cm}
+        $|f_n(t) - \lim_{t \rightarrow x} f_n(t)|$
+        = $|f_n(t) - A_n|$
+        $\leq$ $\frac{\epsilon}{3}$
+
+        Thus, for t $\rightarrow$ x, 
+        $|f(t) - A|$
+        $\leq$ $|f(t) - f_n(t)|$ + $|f_n(t) - A_n|$ + $|A_n - A|$
+        $\leq$ $\epsilon$.
+
+        Thus, $\lim_{t \rightarrow x} f(t)$ = A = $\lim_{n \rightarrow \infty} A_n$.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Uniform Convergence perserve Continuity}{14cm}
+        If \{$f_n$\} converges uniformly to f on E where each $f_n$
+        is continuous on E, then f is continuous on E.        
+    \end{wtheorem}
+
+    \begin{intuition}
+        If each $f_n$ is continuous:
+
+        \hspace{0.5cm}
+        $\lim_{t \rightarrow x} f(t)$
+        = $\lim_{n \rightarrow \infty} \lim_{t \rightarrow x} f_n(t)$
+        = $\lim_{n \rightarrow \infty} f_n(x)$
+        = $f(x)$
+    \end{intuition}
+
+    \vspace{0.1cm}
+    
+    \begin{proof}
+        Since \{$f_n$\} converges uniformly to f, then by {\color{red} theorem 14.3.1},
+        for any x $\in$ E':
+
+        \hspace{0.5cm}
+        $\lim_{t \rightarrow x} \lim_{n \rightarrow \infty} f_n(t)$
+        = $\lim_{n \rightarrow \infty} \lim_{t \rightarrow x} f_n(t)$
+
+        Since each $f_n$ is continuous, then:
+
+        \hspace{0.5cm}
+        $\lim_{t \rightarrow x} \lim_{n \rightarrow \infty} f_n(t)$
+        = $\lim_{t \rightarrow x} f(t)$
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty} \lim_{t \rightarrow x} f_n(t)$
+        = $\lim_{n \rightarrow \infty} f_n(x)$ = $f(x)$
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Decreasing, continuous sequence over compact
+    converges uniformly}{14cm}
+        Suppose K is compact and
+
+        \begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
+            \item \{$f_n$\} is a sequence of continuous functions on K
+            
+            \item \{$f_n$\} converges pointwise to a continuous f on K
+            
+            \item $f_n(x)$ $\geq$ $f_{n+1}(x)$ for all x $\in$ K
+        \end{enumerate}
+
+        Then $f_n$ converges uniformly to f on K.    
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $g_n$ = $f_n - f$ so $g_n$ is continuous where $g_n \geq g_{n+1}$.
+
+        Thus, $\lim_{n \rightarrow \infty} g_n(x)$ = 0 pointwise.
+        For $\epsilon > 0$, let $K_n$ = \{x $\in$ K : $g_n(x)$ $\geq$ $\epsilon$\}.
+
+        Since $g_n$ is continuous and the set of $g_n(x) \geq \epsilon$ is closed,
+        then $K_n$ is closed. Since closed $K_n$ $\subset$ compact K, then $K_n$
+        is compact.
+
+        Since $g_n \geq g_{n+1}$, then $K_{n+1}$ $\subset$ $K_n$.
+        For any x $\in$ K, $\lim_{n \rightarrow \infty} g_n(x)$ = 0 so
+        there is a $N_x$ such that x $\not \in$ $K_n$ if n $>$ $N_x$.
+        Thus, any x $\not \in$ $\cap_{n=1}^{\infty} K_n$ so
+        $\cap_{n=1}^{\infty} K_n$ = $\emptyset$.
+        
+        Since $\cap_{n=1}^{\infty} K_n$ = $\emptyset$, then $K_n$ is empty for some N.
+
+        Thus, 0 $\leq$ $g_n(x)$ $<$ $\epsilon$ for all x $\in$ K where n $\geq$ N.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Supremum Norm}{14cm}
+        $\mathscr{C}(X)$ is the set of all
+        complex, continuous, bounded functions in metric X.
+        
+        \hspace{0.5cm}
+        If X is compact, then bounded is not needed
+
+        Then for each $f \in \mathscr{C}(X)$, associate a supremum norm:
+
+        \hspace{0.5cm}
+        $|| f ||$ = $\underset{x \in X}{\text{sup}} |f(x)| < \infty$
+
+        \begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
+            \item $|| f(x) ||$ = 0 if and only if $f(x)$ = 0 for every x $\in$ X
+            
+            \item Since $|f+g|$ $\leq$ $|f|$ + $|g|$ $\leq$ $||f||$ + $||g||$,
+            then $||f+g||$ $\leq$ $||f||$ + $||g||$
+        \end{enumerate}
+
+        Then for $f,g$ $\in$ $\mathscr{C}(X)$, let distance $||f-g||$
+        and thus, $\mathscr{C}(X)$ is a metric space.
+
+        \vspace{0.3cm}
+
+        By {\color{red} theorem 14.2.3},
+        \{$f_n$\} $\rightarrow$ f on $\mathscr{C}(X)$ if
+        and only if \{$f_n$\} $\rightarrow$ f uniformly on X.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{$\mathscr{C}(X)$ is a complete metric space}{14cm}
+        $\mathscr{C}(X)$ is a complete metric space        
+    \end{wtheorem}
+
+    \begin{intuition}
+        A Cauchy sequence \{$f_n$\} is uniformly convergent to f.
+
+        Since $\mathscr{C}(X)$ contain continuous functions, then f is continuous.
+        
+        Since functions in $\mathscr{C}(X)$ are bounded, then f is bounded.
+    \end{intuition}
+
+    \vspace{0.1cm}
+
+    \begin{proof}
+        Let \{$f_n$\} be a Cauchy sequence in $\mathscr{C}(X)$.
+
+        Since \{$f_n$\} $\in$ $\mathscr{C}(X)$, then each
+        $f_n$ is continuous and bounded.
+
+        Then for $\epsilon > 0$, there is a N such that for n,m $\geq$ N, then:
+
+        \hspace{0.5cm}
+        $|f_n - f_m|$
+        $\leq$ $||f_n - f_m||$
+        $\leq$ $\epsilon$
+
+        Then by {\color{red} theorem 14.2.2}, \{$f_n$\} converges uniformly to f.
+
+        Since each $f_n$ is continuous and \{$f_n$\} converges uniformly to f,
+        then by {\color{red} theorem 14.3.2}, f is continuous on $\mathscr{C}(X)$.
+
+        Since \{$f_n$\} converges uniformly to f, there is a N where for n $\geq$ N: 
+
+        \hspace{0.5cm}
+        $|f - f_n(x)|$ $\leq$ $\epsilon$
+        
+        Since each $f_n$ is bounded, then f is bounded.
+        Since f is continuous and bounded, then f $\in$ $\mathscr{C}(X)$.
+        Thus, every Cauchy sequence \{$f_n$\} converges to f $\in$ $\mathscr{C}(X)$.
+    \end{proof}
+
+    \newpage
+
+
+
+
+
+\subsection[ Integration ]{ Uniform Convergence and Integration }
+
+    \begin{wtheorem}{Uniform Convergence perserves Integrability}{14cm}
+        If \{$f_n$\} $\in$ $\mathscr{R}(\alpha)$ converges uniformly to f on [a,b],
+        then f $\in$ $\mathscr{R}(\alpha)$ on [a,b] where:
+
+        \hspace{0.5cm}
+        $\int_a^b$ $f$ d$\alpha$
+        = $\lim_{n \rightarrow \infty} \int_a^b$ $f_n$ d$\alpha$        
+    \end{wtheorem}
+
+    \begin{intuition}
+        Since $f_n$ is integrable, then $\int_a^b$ $f_n$ d$\alpha$ exist
+        and since \{$f_n$\} uniformly converges, then for $\epsilon > 0$,
+        $|f - f_n| < \epsilon$.
+        Thus, for a large enough n,
+        $\int_a^b$ $f_n$ d$\alpha$ = $\int_a^b$ $f$ d$\alpha$.
+    \end{intuition}
+
+    \vspace{0.1cm}
+
+    \begin{proof}
+        Since \{$f_n$\} converges uniformly to f, then for $\epsilon > 0$:
+
+        \hspace{0.5cm}
+        $|f - f_n| < \epsilon$
+        \hspace{1cm}
+        $\rightarrow$
+        \hspace{1cm}
+        $f_n - \epsilon$ $<$ $f$ $<$ $f_n + \epsilon$
+
+        Then:
+
+        \hspace{0.5cm}
+        $\int_{a}^{b}$ $f_n - \epsilon$ d$\alpha$
+        $<$ $\underline{\int}_{a}^{b}$ $f$ d$\alpha$
+        $\leq$ $\overline{\int}_{a}^{b}$ $f$ d$\alpha$
+        $<$ $\int_{a}^{b}$ $f_n + \epsilon$ d$\alpha$
+
+        Thus,
+
+        \hspace{0.5cm}
+        $\overline{\int}_{a}^{b}$ $f$ d$\alpha$
+            - $\underline{\int}_{a}^{b}$ $f$ d$\alpha$
+        $<$ $\int_{a}^{b}$ $f_n + \epsilon$ d$\alpha$
+            - $\int_{a}^{b}$ $f_n - \epsilon$ d$\alpha$
+        = $2\epsilon[\alpha(b) - \alpha(a)]$
+
+        So, $\int_a^b$ $f$ d$\alpha$ exists and since
+        $f_n$ $\in$ $\mathscr{R}(\alpha)$ where 
+        $\int_{a}^{b} f_n - \epsilon$ d$\alpha$
+        $<$ $\int_{a}^{b} f_n d\alpha$
+        $<$ $\int_{a}^{b} f_n + \epsilon$ d$\alpha$:
+
+        \hspace{0.5cm}
+        $\int_{a}^{b}$ $f$ d$\alpha$
+        = $\lim_{n \rightarrow \infty}$ $\int_{a}^{b}$ $f_n$ d$\alpha$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+    \begin{wtheorem}{Uniform Convergence perserves Integrability for series}{14cm}
+        If $f_n$ $\in$ $\mathscr{R}(\alpha)$ on [a,b] and
+        f(x) = $\sum_{n=1}^{\infty}$ $f_n(x)$ converges uniformly, then:
+
+        \hspace{0.5cm}
+        $\int_a^b$ $f$ $d\alpha$ = $\sum_{n=1}^{\infty}$ $\int_a^b$ $f_n$ $d\alpha$
+    \end{wtheorem}
+
+    \begin{proof}
+        Since $f_n$ $\in$ $\mathscr{R}(\alpha)$, then
+        f(x) $\in$ $\mathscr{R}(\alpha)$. Since f(x) converges uniformly, then
+        by {\color{red} thereom 14.4.1}, then
+        $\int_a^b$ $f$ $d\alpha$
+        = $\lim_{N \rightarrow \infty}$ $\sum_{n=1}^{N}$ $\int_a^b$ $f_n$ $d\alpha$
+        = $\sum_{n=1}^{\infty}$ $\int_a^b$ $f_n$ $d\alpha$.
+    \end{proof}
+
+    \newpage
+
+
+
+
+
+\subsection[ Differentiation ]{ Uniform Convergence and Differentiation }
+
+    \begin{wtheorem}{Uniform Convergence of Derivatives perserve Differentiability}{14cm}
+        Suppose \{$f_n$\} are differentiable on [a,b] such that
+        \{$f_n(x_0)$\} converges for some $x_0$ $\in$ [a,b]. If
+        \{$f_n'$\} converges uniformly on [a,b], then \{$f_n$\}
+        converges uniformly to f on [a,b] where:
+
+        \hspace{0.5cm}
+        f'(x) = $\lim_{n \rightarrow \infty}$ $f_n'(x)$
+        \hspace{1cm}
+        for x $\in$ [a,b]
+    \end{wtheorem}
+
+    \begin{intuition}
+        Since \{$f_n'$\} converges uniformly, for t near x,
+        then by the Mean Value Theorem:
+
+        \hspace{0.5cm}
+        $\frac{f_n(t) - f_n(x)}{t - x}$
+        = $\frac{(t-x)f_n'(x)}{t - x}$
+        = $f_n'(x)$
+
+        Since \{$f_n'$\} converges uniformly, by the Mean Value Theorem,
+        there is a t $\in$ [$x_1,x_2$]:
+
+        \hspace{0.5cm}
+        $|[f_n(x_2) - f_m(x_2)] - [f_n(x_1) - f_m(x_1)]|$
+        = $(x_2 - x_1)|f_n'(t) - f_m'(t)|$ $<$ $\epsilon$
+
+        Thus, \{$f_n - f_m$\} converges uniformly
+        so if \{$f_n$\} converges for some $x_0$:
+
+        \hspace{0.5cm}
+        $[f_n(x) - f_m(x)]$
+        = $|[f_n(x) - f_m(x)] - [f_n(x_0) - f_m(x_0)] + [f_n(x_0) - f_m(x_0)]|$
+        $\leq$ $\epsilon$
+
+        Thus, \{$f_n$\} converges uniformly which preserves continuity
+        so for t near x as n $\rightarrow$ $\infty$:
+
+        \hspace{0.5cm}
+        $f'(x)$ = $\frac{f(t) - f(x)}{t-x}$
+        = $\frac{f_n(t) - f_n(x)}{t - x}$
+        = $\frac{(t-x)f_n'(x)}{t - x}$
+        = $f_n'(x)$
+
+        \vspace{0.2cm}
+
+        Note uniform convergence of \{$f_n'$\} gives
+        $\frac{f_n(t) - f_n(x)}{t - x}$ = $\frac{(t-x)f_n'(x)}{t - x}$.
+        Then uniform convergence of \{$f_n'$\} with convergent $f_n(x_0)$
+        leads to uniform convergence of \{$f_n$\} which gives
+        $\frac{f(t) - f(x)}{t-x}$ = $\frac{f_n(t) - f_n(x)}{t - x}$.
+    \end{intuition}
+
+    \vspace{0.1cm}
+
+    \begin{proof}
+        Since $f_n(x_0)$ converges for some $x_0$ $\in$ [a,b], then for
+        $\epsilon > 0$, there is a $N_1$ such that for $n_1,m_1$ $\geq$ $N_1$:
+
+        \hspace{0.5cm}
+        $|f_{n_1}(x_0) - f_{m_1}(x_0)| < \frac{\epsilon}{2}$
+
+        Since $f_n'$ converges uniformly, then there is a $N_2$ such that for
+        $n_2,m_2$ $\geq$ $N_2$:
+
+        \hspace{0.5cm}
+        $|f_{n_2}'(t) - f_{m_2}'(t)| < \frac{\epsilon}{2(b-a)}$
+
+        Let N = max($N_1,N_2$). Then for n,m $\geq$ N:
+
+        \hspace{0.5cm}
+        $|f_n(x_0) - f_m(x_0)| < \frac{\epsilon}{2}$
+        \hspace{2cm}
+        $|f_n'(t) - f_m'(t)| < \frac{\epsilon}{2(b-a)}$
+
+        Since $f_n$ is differentiable, then $f_n - f_m$ is differentiable.
+        Then by the Mean Value Theorem, there is a x $\in$ (a,b) such that:
+
+        \hspace{0.5cm}
+        $|[f_n(x) - f_m(x)] - [f_n(t) - f_m(t)]|$
+        $\leq$ $|x-t| |f_{n}'(t) - f_{m}'(t)|$
+        $<$ $|x-t| \frac{\epsilon}{2(b-a)}$
+        $<$ $\frac{\epsilon}{2}$
+
+        Thus, for n,m $\geq$ N:
+
+        \hspace{0.5cm}
+        $|f_n(x) - f_m(x)|$
+        $\leq$ $|[f_n(x) - f_m(x)] - [f_n(x_0) - f_m(x_0)]|$
+                + $|f_n(x_0) - f_m(x_0)|$
+        $<$ $\epsilon$
+
+        Thus, \{$f_n$\} converges uniformly to f(x)
+        = $\lim_{n \rightarrow \infty}$ $f_n(x)$ where:
+
+        \hspace{0.5cm}
+        $\phi_n(t)$ = $\frac{f_n(t) - f_n(x)}{t-x}$
+        \hspace{2cm}
+        $\phi(t)$ = $\frac{f(t) - f(x)}{t-x}$
+
+        Since $\lim_{t \rightarrow x} |\phi_n(t) - \phi_m(t)|$ $<$
+        $\frac{\epsilon}{2(b-a)}$, then:
+        
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty} \phi_n(t)$
+        = $\frac{f(t) - f(x)}{t-x}$ = $\phi(t)$
+
+        Since \{$\phi_n(t)$\} converges uniformly to $\phi(t)$, then
+        by {\color{red} theorem 14.3.1}:
+
+        \hspace{0.5cm}
+        $\lim_{t \rightarrow x}$ $\phi(t)$
+        = $\lim_{n \rightarrow \infty}$ $\lim_{t \rightarrow x}$ $\phi_n(t)$
+        = $\lim_{n \rightarrow \infty}$ $f_n'(x)$
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Continuous functions can be non-differentiable}{14cm}
+        There exists a real continuous function on $\mathbb{R}$ which is
+        nowhere differentiable.
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $\phi(x)$ = $|x|$ for x $\in$ [-1,1].
+        Then to extend to all real x, let $\phi(x+2)$ = $\phi(x)$.
+
+        Then $\phi$ is continuous on $\mathbb{R}$ where for s,t $\in$ $\mathbb{R}$,
+        $|\phi(s) - \phi(t)|$ $\leq$ $|s-t|$.
+
+        Let f(x) = $\sum_{n=0}^{\infty}$ $(\frac{3}{4})^n \phi(4^n x)$.
+
+
+        Since f(x) $\leq$ $\sum_{n=0}^{\infty}$ $(\frac{3}{4})^n$, then f(x)
+        converges uniformly and since $\phi(x)$ is continuous, then f(x)
+        is continuous.
+        Then for a fixed x and positive integer m, choose
+        $\delta_m$ = $\pm \frac{1}{2} 4^{-m}$ such that
+        no integer lies in ($4^mx, 4^m(x+\delta_m)$).
+        Let $\gamma_n$ = $\frac{\phi(4^n(x+\delta_n)) - \phi(4^nx)}{\delta_m}$.
+        
+        For n $>$ m, $4^n\delta_m$ is even so $\gamma_n$ = 0.
+        For n $\in$ [0,m], $|\gamma_n|$ $\leq$ $\frac{|4^n\delta_n|}{\delta_m}$
+        = $4^m$ $<$ $4^n$.
+
+        Since $|\gamma_m|$ = $4^m$, then:
+
+        \hspace{0.5cm}
+        $|\frac{f(x+\delta_m) - f(x)}{\delta_m}|$
+        = $|\sum_{n=0}^m (\frac{3}{4})^n \gamma_n|$
+            + $|\sum_{n=m+1}^{\infty} (\frac{3}{4})^n \gamma_n|$
+        $\geq$ $3^m - \sum_{n=0}^{m-1} 3^n$
+        = $\frac{1}{2}(3^m + 1)$
+        
+        As m $\rightarrow$ $\infty$, then $\delta_m$ $\rightarrow$ 0, but
+        $|\frac{f(x+\delta_m) - f(x)}{\delta_m}|$ $\rightarrow$ $\infty$
+        so f is not differentiable at any x.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+
+
+\subsection[ Equicontinuous ]{ Equicontinuous Families of Functions }
+
+    \begin{definition}{Boundedness}{14cm}
+        Let \{$f_n$\} be defined on set E.
+
+        \{$f_n$\} is pointwise bounded on E if for x $\in$ E and every n,
+        there is a $\phi$ where:
+
+        \hspace{0.5cm}
+        $|f_n(x)|$ $<$ $\phi(x)$
+
+        \{$f_n$\} is uniformly bounded on E if for every n and x $\in$ E,
+        there is a M where:
+
+        \hspace{0.5cm}
+        $|f_n(x)|$ $<$ $M$
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Equicontinuous}{14cm}
+        A family of complex functions, $\mathscr{F}$, defined on set E $\subset$ X
+        is equicontinuous if for every $\epsilon > 0$, there is a $\delta > 0$
+        such that for all x,y $\in$ E and f $\in$ $\mathscr{F}$ where
+        $d(x,y) < \delta$, then $|f(x) - f(y)| < \epsilon$.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Pointwise bounded \{$f_n$\} over countable sets have
+    convergent \{$f_{n_k}$\}}{14cm}
+        If \{$f_n$\} are pointwise bounded, complex functions on countable set E,
+        then \{$f_n$\} has subsequence \{$f_{n_k}$\} such that
+        \{$f_{n_k}(x)$\} converges for every x $\in$ E.
+    \end{wtheorem}
+
+    \begin{intuition}
+        Any \{$f_{n_k}$\} $\subset$ \{$f_n$\} is pointwise bounded
+        so there is a convergent subsequence for a particular x.
+        Let \{$f_{n_{k_1}}$\} be a convergent subsequence for $x_1$.
+        Then find a subsequence \{$f_{n_{k_2}}$\} $\subset$ \{$f_{n_{k_1}}$\}
+        which converges for $x_2$. Continue the process until every x.
+    \end{intuition}
+
+    \vspace{0.1cm}
+
+    \begin{proof}
+        For each $x_i$ $\in$ E, let \{$x_i$\}.
+        For $x_1$, \{$f_n(x_1)$\} is piecewise bounded so there exists a
+        subsequence \{$f_{1,k}(x_1)$\} which converges as k $\rightarrow$ $\infty$.
+        
+        Since \{$f_{1,k}$\} is piecewise bounded since \{$f_{1,k}$\}
+        $\subset$ \{$f_n$\}, then there is a subsequence
+        \{$f_{2,k}$\} $\subset$ \{$f_{1,k}$\} such that \{$f_{2,k}(x_2)$\}
+        converges as k $\rightarrow$ $\infty$.
+        Then continuing the pattern:
+
+        \hspace{0.5cm}
+        $S_1$:
+        \hspace{1cm}
+        $f_{1,1}$
+        \hspace{1cm}
+        $f_{1,2}$
+        \hspace{1cm}
+        $f_{1,3}$
+        \hspace{1cm}
+        ...
+
+        \hspace{0.5cm}
+        $S_2$:
+        \hspace{1cm}
+        $f_{2,1}$
+        \hspace{1cm}
+        $f_{2,2}$
+        \hspace{1cm}
+        $f_{2,3}$
+        \hspace{1cm}
+        ...
+
+        \hspace{0.5cm}
+        $S_3$:
+        \hspace{1cm}
+        $f_{3,1}$
+        \hspace{1cm}
+        $f_{3,2}$
+        \hspace{1cm}
+        $f_{3,3}$
+        \hspace{1cm}
+        ...
+
+        \hspace{0.5cm}
+        ...
+    
+        Thus, \{$f_{n,n}(x_i)$\} converges as n $\rightarrow$ $\infty$ for
+        every $x_i$ $\in$ E.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Uniform convergent \{$f_n$\} where $f_n$ $\in$ $\mathscr{C}(K)$
+    is equicontinuous}{14cm}
+        If K is a compact metric space where $f_n$ $\in$ $\mathscr{C}(K)$ and
+        \{$f_n$\} converges uniformly on K, then \{$f_n$\} is equicontinuous on K.
+    \end{wtheorem}
+
+    \begin{intuition}
+        Since \{$f_n$\} converges uniformly, then there is a N where for n $>$ N,
+        then $|f_n - f_N| < \epsilon$.
+
+        Since \{$f_n$\} is continuous over compact K, then
+        \{$f_n$\} is uniformly continuous. So for d(x,y) $<$ $\delta$, then:
+
+        \hspace{0.5cm}
+        $|f_n(x) - f_n(y)|$
+        $\leq$ $|f_n(x) - f_N(x)| + |f_N(x) - f_N(y)| + |f_N(y) - f_n(y)|$
+        $<$ $3\epsilon$
+    \end{intuition}
+
+    \vspace{0.1cm}
+
+    \begin{proof}
+        Since \{$f_n$\} converges uniformly, then for $\epsilon > 0$, there is a
+        N such that for n $>$ N:
+
+        \hspace{0.5cm}
+        $||f_n - f_N||$ $<$ $\frac{\epsilon}{3}$
+
+        Since $f_i$ for i $\in$ [1,N] is continuous over compact K, then
+        $f_i$ is uniformly continuous so there is a $\delta > 0$ such that for
+        all x,y where d(x,y) $<$ $\delta$, then
+        $|f_i(x) - f_i(y)| < \frac{\epsilon}{3}$.
+
+        Then for n $>$ N and d(x,y) $<$ $\delta$:
+
+        \hspace{0.5cm}
+        $|f_n(x) - f_n(y)|$
+        $\leq$ $|f_n(x) - f_N(x)|$ + $|f_N(x) - f_N(y)|$ + $|f_N(y) - f_n(y)|$
+        $<$ $\epsilon$
+
+        Thus, for $\epsilon > 0$, there is a $\delta > 0$ such that for all $f_n$
+        and x,y $\in$ K where d(x,y) $<$ $\delta$,
+        $|f_n(x) - f_n(y)|$ $<$ $\epsilon$.
+        So, \{$f_n$\} is equicontinuous.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Pointwise bounded and equicontinuous \{$f_n$\} over compact K
+    is uniformly bounded and have uniformly convergent \{$f_{n_k}$\}}{14cm}
+        If K is compact where \{$f_n$\} $\in$ $\mathscr{C}(K)$ is pointwise bounded
+        and equicontinuous:
+
+        \begin{enumerate}[label=(\alph*), leftmargin=1.5cm, itemsep=0.1cm]
+            \item \{$f_n$\} is uniformly bounded on K
+            
+            \item \{$f_n$\} contains a uniformly convergent subsequence
+        \end{enumerate}
+    \end{wtheorem}
+
+    \begin{intuition}
+        Since \{$f_n$\} is equicontinuous, for d(x,y) $<$ $\delta$, then
+        $|f_n(x) - f_n(y)| < \epsilon$.
+
+        Since \{$f_n$\} is pointwise bounded on compact K, there are finite
+        $x_0,..,x_n$ such that d(x,$x_i$) $<$ $\delta$
+        so $|f_n(x)| \leq |f_n(x) - f_n(x_i)| + |f_n(x_i)| < \epsilon + M$.
+
+        For a countable dense subset of K, the countability gives a
+        convergent subsequence \{$g_n$\} and the dense gives
+        d(x,$x_i$) $<$ $\delta$ for finite $x_1,...,x_m$ so:
+        
+        \hspace{0.5cm}
+        $|g_n(x) - g_m(y)|$
+        $\leq$ $|g_n(x) - g_n(x_i)| + |g_n(x_i) - g_m(x_i)| + |g_m(x_i) - g_m(x)|$
+        $<$ $\epsilon$.
+    \end{intuition}
+
+    \vspace{0.1cm}
+
+    \begin{proof}
+        Since $f_n$ is equicontinuous, then for $\epsilon > 0$, there is a
+        $\delta > 0$ such that for x,y $\in$ K where d(x,y) $<$ $\delta$, then
+        $|f_n(x) - f_n(y)| < \epsilon$.
+
+        Since K is compact, there are finite $p_1,...,p_r$ $\in$ K so for
+        any x $\in$ K, there is at least one $p_i$ so d(x,$p_i$) $<$ $\delta$.
+        Since \{$f_i$\} is pointwise bounded, there is a $M_i$ so
+        $|f_n(p_i)| < M_i$. Let M = max($M_1,...,M_r$).
+        So, $|f_n(x)|$ $<$ $|f_n(x) - f_n(p_i)| + |f_n(p_i)|$
+        $<$ $\epsilon + M_i$ $<$ $\epsilon + M$.
+
+        Thus, \{$f_n$\} is uniformly bounded on K.
+
+        \vspace{0.3cm}
+
+        Let countable dense E $\subset$ K.
+        By {\color{red} theorem 14.6.3}, \{$f_n$\} has a convergent subsequence
+        \{$f_{n_i}(x)$\} for every x $\in$ E.
+        Let $V(x,\delta)$ = \{y $\in$ K : d(x,y) $<$ $\delta$\}
+        so $|f_n(x) - f_n(y)| < \frac{\epsilon}{3}$.
+
+        Since E is dense in compact K, there are finitely many $x_1,...,x_m$ $\in$
+        E such that:
+        
+        \hspace{0.5cm}
+        K $\subset$ V($x_1,\delta$) $\cup$ ... $\cup$ V($x_m,\delta$).
+
+        Since \{$f_{n_i}(x)$\} converges for every x $\in$ E,
+        there is a N where for $n_i,n_j$ $\geq$ N, s $\in$ [1,m]:
+
+        \hspace{0.5cm}
+        $|f_{n_i}(x_s) - f_{n_j}(x_s)|$ $<$ $\frac{\epsilon}{3}$
+
+        Thus, for any x $\in$ K, there is a $x_s$ $\in$ E such that:
+
+        \hspace{0.5cm}
+        $|f_{n_i}(x) - f_{n_j}(x)|$
+        $\leq$ $|f_{n_i}(x) - f_{n_i}(x_s)|$ + $|f_{n_i}(x_s) - f_{n_j}(x_s)|$
+                + $|f_{n_j}(x_s) - f_{n_j}(x)|$
+        $<$ $\epsilon$
+
+        Thus, \{$f_n$\} contains a subsequence that uniformly converges.
+    \end{proof}
+
+    \newpage
+
+
+
+
+
+\subsection[ Stone-Weierstrass ]{ Stone-Weierstrass Theorem }
+
+    \begin{wtheorem}{There are polynomials that converge uniformly to
+    continuous f}{14cm}
+        For complex continuous f on [a,b], there is a sequence of polynomials
+        \{$P_n$\} that converges uniformly to f(x).
+    \end{wtheorem}
+
+    \begin{proof}
+        Let [a,b] = [0,1] where f(0) = f(1) = 0 and f(x) = 0 if x $\not \in$ [0,1].
+
+        Thus, f is uniformly continuous over $\mathbb{R}$.
+
+        Let $Q_n(x)$ = $c_n(1-x^2)^n$ where $c_n$ is chosen so
+        $\int_{-1}^1$ $Q_n(x)$ dx = 1.
+        Since:
+
+        \hspace{0.5cm}
+        $\int_{-1}^1$ $(1-x^2)^n$ dx
+        = $2 \int_0^1$ $(1-x^2)^n$ dx
+        $\geq$ $2 \int_0^{\frac{1}{\sqrt{n}}}$ $(1-x^2)^n$ dx
+        $\geq$ $2 \int_0^{\frac{1}{\sqrt{n}}}$ $1-nx^2$ dx
+
+        \hspace{3.6cm}
+        = $\frac{4}{3\sqrt{n}}$
+        $>$ $\frac{1}{\sqrt{n}}$
+
+        so $c_n$ $<$ $\sqrt{n}$.
+        Thus for $\delta > 0$, $Q_n(x)$ $\leq$ $\sqrt{n}(1-\delta^2)^n$
+        so $Q_n$ $\rightarrow$ 0 on $|x| \in [\delta,1]$.
+
+        Let $P_n(x)$ = $\int_{-1}^1$ f(x+t)$Q_n(t)$ dt for x $\in$ [0,1].
+        Since $P_n(x)$ = $\int_{-x}^{1-x}$ f(x+t)$Q_n(t)$ dt
+        = $\int_0^1$ f(t)$Q_n(t-x)$ dt which is a polynomial so \{$P_n$\}
+        is a sequence of polynomials.
+
+        Since f is uniformly continuous, for $\epsilon > 0$, there is a $\delta > 0$
+        such that for $|y-x| < \delta$, then $|f(y) - f(x)| < \frac{\epsilon}{2}$.
+        Let M = sup($|f(x)|$). Then:
+
+        \hspace{0.5cm}
+        $|P_n(x) - f(x)|$
+        $\leq$ $\int_{-1}^1$ $|f(x+t)-f(x)| Q_n(t)$ dt
+
+        \hspace{3.2cm}
+        $\leq$ $2M \int_{-1}^{-\delta} Q_n(t)$ dt
+                + $\frac{\epsilon}{2} \int_{-\delta}^{\delta} Q_n(t)$ dt
+                + $2M \int_{\delta}^{1} Q_n(t)$ dt
+
+        \hspace{3.2cm}
+        $\leq$ $4M\sqrt{n}(1-\delta^2)^n + \frac{\epsilon}{2}$
+        $<$ $\epsilon$
+        \hspace{1cm}
+        for a large enough n
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{corollary}{There are polynomials that converges uniformly to $|x|$}{14cm}
+        For [-a,a], there is a sequence of real polynomials $P_n$
+        such that $P_n(0)$ = 0 and $P_n(x)$ converges uniformly to $|x|$. 
+    \end{corollary}
+
+    \begin{proof}
+        By {\color{red} Theorem 14.7.1}, there is a \{$P_n^*$\}
+        of real polynomials that converges uniformly to $|x|$.
+        Since $P_n^*(0)$ $\rightarrow$ $|0|$ = 0, let
+        $P_n(x)$ = $P_n^*(x)$ - $P_n^*(0)$.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Algebra, Uniformly Closed, and Uniform Closure}{14cm}
+        A family of complex functions on E, $\mathscr{A}$, is an algebra
+        if for f,g $\in$ $\mathscr{A}$, then:
+
+        \begin{enumerate}[label=(\alph*), leftmargin=1.5cm, itemsep=0.1cm]
+            \item f+g $\in$ $\mathscr{A}$
+            
+            \item fg $\in$ $\mathscr{A}$
+            
+            \item cf $\in$ $\mathscr{A}$ for complex constant c 
+        \end{enumerate}
+
+        \vspace{0.3cm}
+
+        $\mathscr{A}$ is uniformly closed if:
+        
+        \hspace{0.5cm}
+        For any $f_n$ $\in$ $\mathscr{A}$
+        where $f_n$ uniformly converges to f, then $f$ $\in$ $\mathscr{A}$
+        
+        \vspace{0.3cm}
+
+        Let the uniform closure, $\mathscr{B}$, be the set of all
+        uniformly convergent f from $\mathscr{A}$.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Bounded algebra implies Uniformly closed uniform closure}{14cm}
+        For algebra $\mathscr{A}$ of bounded functions, $\mathscr{B}$
+        is a uniformly closed algebra.
+    \end{wtheorem}
+
+    \begin{proof}
+        If f,g $\in$ $\mathscr{B}$, there are uniformly convergent \{$f_n$\},
+        \{$g_n$\} where $f_n$ $\rightarrow$ f, $g_n$ $\rightarrow$ g
+        and $f_n,g_n$ $\in$ $\mathscr{A}$.
+        Since $f_n,g_n$ are bounded and $\mathscr{A}$ is an algebra, then
+        uniformly convergent:
+
+        \hspace{0.5cm}
+        $f_n + g_n$ $\rightarrow$ f+g
+        \hspace{0.5cm}
+        $f_ng_n$ $\rightarrow$ fg
+        \hspace{0.5cm}
+        $cf_n$ $\rightarrow$ cf
+
+        Thus, $f+g, fg, cf$ $\in$ $\mathscr{B}$ so $\mathscr{B}$
+        is a uniformly closed algebra.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{definition}{Separate Points}{14cm}
+        For family of functions, $\mathscr{A}$, separate points on E:
+
+        \hspace{0.5cm}
+        If for every pair of distinct $x_1,x_2$ $\in$ E, there
+        is a f $\in$ $\mathscr{A}$ where f($x_1$) $\not =$ f($x_2$).
+
+        \vspace{0.3cm}
+
+        $\mathscr{A}$ vanishes at no point of E:
+
+        \hspace{0.5cm}
+        If for each x $\in$ E, there is a g $\in$ $\mathscr{A}$
+        such that g(x) $\not =$ 0
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+
+    \begin{wtheorem}{Non-vashing, separate algebra contain all values}{14cm}
+        Suppose algebra $\mathscr{A}$ separates points and vanishes
+        at no points on E. If $x_1,x_2$ are distinct points, then for
+        constants $c_1,c_2$, there is a f $\in$ $\mathscr{A}$ where:
+
+        \hspace{0.5cm}
+        f($x_1$) = $c_1$ and f($x_2$) = $c_2$.
+    \end{wtheorem}
+
+    \begin{proof}
+        Since $\mathscr{A}$ separates points and vanishes at no points on E, then
+        there are g,h,k $\in$ $\mathscr{A}$:
+
+        \hspace{0.5cm}
+        $g(x_1)$ $\not =$ $g(x_2)$
+        \hspace{1cm}
+        $h(x_1)$ $\not =$ 0
+        \hspace{1cm}
+        $k(x_2)$ $\not =$ 0
+
+        Let u = $k(g - g(x_1))$ and v = $h(g - g(x_2))$ so u,v $\in$ $\mathscr{A}$
+        where $u(x_1)$ = $v(x_2)$ = 0 and $u(x_2),v(x_1)$ $\not =$ 0.
+        Then, f = $\frac{c_1v}{v(x_1)} + \frac{c_2u}{u(x_2)}$ have
+        $f(x_1)$ = $c_1$ and $f(x_2)$ = $c_2$.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Stone-Weierstrass Theorem}{14cm}
+        If algebra of real continuous functions on compact K, $\mathscr{A}$,
+        separates points and vanishes at no points on K, then $\mathscr{B}$
+        consist of all real continuous functions.    
+    \end{wtheorem}
+
+    \begin{proof}
+        Claim: If f $\in$ $\mathscr{B}$, then $|f|$ $\in$ $\mathscr{B}$.
+
+        Let a = sup($|f(x)|$). By {\color{orange} Corollary 14.7.2},
+        for $\epsilon > 0$, there are $c_1,...,c_n$ such that:
+
+        \hspace{0.5cm}
+        $|\sum_{i=1}^n c_iy^i - |y|| < \epsilon$
+        \hspace{1cm}
+        for y $\in$ [-a,a]
+
+        Since $\mathscr{B}$ is an algebra, then g = $\sum_{i=1}^n c_if^i$ $\in$
+        $\mathscr{B}$. Thus:
+        
+        \hspace{0.5cm}
+        $|g(x) - |f(x)|| < \epsilon$
+        \hspace{1cm}
+        for x $\in$ K
+
+        Since $\beta$ is uniformly closed, then $|f(x)|$ $\in$ $\mathscr{B}$.
+
+        \rule[0.1cm]{15.3cm}{0.01cm}
+
+        Claim: If f,g $\in$ $\mathscr{B}$, then
+        min(f,g), max(f,g) $\in$ $\mathscr{B}$.
+
+        Since:
+
+        \hspace{0.5cm}
+        max(f,g) = $\frac{f+g}{2} + \frac{|f-g|}{2}$
+        \hspace{1cm}
+        min(f,g) = $\frac{f+g}{2} - \frac{|f-g|}{2}$
+
+        then max(f,g), min(f,g) $\in$ $\mathscr{B}$.
+
+        \rule[0.1cm]{15.3cm}{0.01cm}
+
+        Claim: For real, continuous f on K and $\epsilon > 0$, there
+        exist $g_x$ $\in$ $\mathscr{B}$ where $g_x(x)$ = f(x)
+        and $g_x(t)$ $>$ $f(t) - \epsilon$ for t $\in$ K.
+
+        Since $\mathscr{A}$ $\subset$ $\mathscr{B}$ where $\mathscr{A}$
+        separates points and vanishes at no points on E, then $\mathscr{B}$
+        is the same. Then by {\color{red} theorem 14.7.6}, for y $\in$ K,
+        there is a $h_y$ $\in$ $\mathscr{B}$ where:
+
+        \hspace{0.5cm}
+        $h_y(x)$ = f(x)
+        \hspace{1cm}
+        $h_y(y)$ = f(y)
+
+        Since $h_y$ is continuous, there is an open set $J_y$ such that
+        $h_y(t)$ $>$ $f(t) - \epsilon$ for t $\in$ $J_y$.
+
+        Since K is compact, there are finite $y_1,...,y_n$ such that
+        K $\subset$ $J_{y_1} \cup ... \cup J_{y_n}$.
+
+        Let $g_x$ = max($h_{y_1},...,h_{y_n}$) so $g_x$ $\in$ $\mathscr{B}$
+        where $g_x(t)$ $>$ $f(t) - \epsilon$ for t $\in$ K.
+
+        \rule[0.1cm]{15.3cm}{0.01cm}
+
+        Claim: For real, continuous f on K and  $\epsilon > 0$, there is
+        a h $\in$ $\mathscr{B}$ where $|h(x) - f(x)| < \epsilon$.
+
+        Since $g_x$ is continuous, there is an open set $V_x$ where
+        $g_x(t)$ $<$ $f(t) + \epsilon$ for t $\in$ $V_x$.
+
+        Since K is compact, there are finite $x_1,...,x_m$ such that
+        K $\subset$ $V_{x_1} \cup ... \cup V_{x_m}$.
+
+        Let h = min($g_{x_1},...,g_{x_m}$) so h $\in$ $\mathscr{B}$
+        where h(t) $>$ $f(t) - \epsilon$.
+        But, h(t) $<$ $f(t) + \epsilon$ so
+        $|h(x) - f(x)| < \epsilon$.
+        Since $\mathscr{B}$ is uniformly closed, then the theorem holds true.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{definition}{Self-Adjoint}{14cm}
+        $\mathscr{A}$ is self-adjoint if
+        for every f $\in$ $\mathscr{A}$, then $\overline{f}$ $\in$ $\mathscr{A}$
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Stone-Weierstrass for complex functions}{14cm}
+        If self-adjoint algebra of complex continuous functions on compact K,
+        $\mathscr{A}$, separates points and vanishes at no points on K, then
+        $\mathscr{B}$ consist of all complex continuous functions on K.
+        In other words, $\mathscr{A}$ is dense in $\mathscr{C}(K)$.
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $\mathscr{A}_{R}$ be the set of all real functions on K in $\mathscr{A}$.
+
+        If f $\in$ $\mathscr{A}$ and f = $u+iv$ for real u,v then
+        2u = $f + \overline{f}$ $\in$ $\mathscr{A}_R$.
+
+        If $x_1 \not = x_2$, there exists f $\in$ $\mathscr{A}$ such that
+        f($x_1$) = 1 and f($x_2$) = 0 so u($x_1$) $\not =$ u($x_2$)
+        so $\mathscr{A}_R$ separates points.
+
+        If x $\in$ K, then g(x) $\not =$ 0 for some g $\in$ $\mathscr{A}$
+        and there is a complex $\lambda$ such that $\lambda g(x) > 0$.
+        If  f = $\lambda g$, then u(x) $>$ 0 so $\mathscr{A}_R$
+        vanishes at no point of K.
+
+        Then by {\color{red} theorem 14.7.7}, every real continuous function
+        on K lies in $\mathscr{B}_{\mathscr{A}_R}$ and since
+        $\mathscr{B}_{\mathscr{A}_R}$ $\subset$ $\mathscr{B}$, then
+        every real continuous function lies in $\mathscr{B}$.
+        If f is complex continuous where f = u+iv, then f $\in$ $\mathscr{B}$
+        since u,v $\in$ $\mathscr{B}$.
+    \end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+

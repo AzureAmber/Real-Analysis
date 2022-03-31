@@ -1,0 +1,1558 @@
+\newpage
+
+\section[Day 6: Special Functions]{ Special Functions }
+
+\subsection{ Power Series }
+
+    \begin{definition}{Analytic Functions}{14cm}
+        Power series, f(x) = $\sum_{n=0}^{\infty}$ $c_n(x-a)^n$
+
+        If f(x) converges for $|x-a| < R$
+        for some R, then f is expanded in a power series about x = a.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Convergent Power Series are differentiable}{14cm}
+        If f(x) = $\sum_{n=0}^{\infty}$ $c_nx^n$ converges for $|x| < R$, then
+        f(x) converges uniformly on [$-R+\epsilon,R-\epsilon$] for any
+        $\epsilon > 0$.
+
+        Then, f is continuous and differentiable in ($-R,R$) where:
+
+        \hspace{0.5cm}
+        f'(x) = $\sum_{n=1}^{\infty}$ $nc_nx^{n-1}$
+    \end{wtheorem}
+
+    \begin{proof}
+        For $\epsilon > 0$ and $|x|$ $\leq$ $R - \epsilon$:
+
+        \hspace{0.5cm}
+        $|c_nx^n|$ $\leq$ $|c_n(R-\epsilon)^n|$
+
+        Since $\sum c_n(R-\epsilon)^n$ converges absolutely in
+        [$-R+\epsilon,R-\epsilon$], then f(x) uniformly converges on
+        [$-R+\epsilon,R-\epsilon$].
+        
+        Since $\lim_{n \rightarrow \infty}$ $\sqrt[n]{n}$ = 1, then:
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{n|c_n|}$)
+        = $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{|c_n|}$)
+        
+        so f(x) and f'(x) have the same interval of convergence
+        so f'(x) uniformly converges on [$-R+\epsilon,R-\epsilon$].
+        Since f'(x) exists, then f
+        is differentiable and thus, continuous. 
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{corollary}{Power Series have infinite derivatives}{14cm}
+        On ($-R,R$), f has derivatives of all orders:
+
+        \hspace{0.5cm}
+        $f^{(k)}(x)$ = $\sum_{n=k}^{\infty}$ $n(n-1)...(n-k+1)c_nx^{n-k}$
+
+        \hspace{0.5cm}
+        $f^{(k)}(0)$ = $k!c_k$
+    \end{corollary}
+
+    \begin{proof}
+        By {\color{red} theorem 15.1.2}, apply derivative k times.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Continuity of Power Series at endpoints}{14cm}
+        Suppose $\sum c_n$ converges where f(x) = $\sum_{n=0}^{\infty}$ $c_n x^n$
+        for x $\in$ (-1,1).
+        
+        Then $\lim_{x \rightarrow 1}$ f(x) = $\sum_{n=0}^{\infty}$ $c_n$.
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $s_n$ = $c_0 + ... + c_n$.
+
+        \hspace{0.5cm}
+        $\sum_{n=0}^m$ $c_nx^n$
+        = $\sum_{n=0}^m$ $(s_n - s_{n-1})x^n$
+        = $\sum_{n=0}^m$ $s_nx^n$ - $\sum_{n=0}^m$ $s_{n-1}x^n$
+
+        \hspace{2.6cm}
+        = $\sum_{n=0}^m$ $s_nx^n$ - $\sum_{n=0}^{m-1}$ $s_nx^{n+1}$
+        = $(1-x)\sum_{n=0}^{m-1}$ $s_nx^n$ + $s_mx^m$
+
+        Since $|x| < 1$, then as m $\rightarrow$ $\infty$, then $s_mx^m$
+        $\rightarrow$ 0. Let s = $\lim_{n \rightarrow \infty}$ $s_n$.
+
+        Thus, for $\epsilon > 0$, there is a N such that for n $>$ N, then
+        $|s - s_n| < \frac{\epsilon}{2}$.
+
+        Since $(1-x) \sum_{n=0}^{\infty}$ $x^n$ = $(1-x)\frac{1}{1-x}$ = 1, then:
+
+        \hspace{0.5cm}
+        $|f(x) - s|$
+        = $|(1-x) \sum_{n=0}^{\infty} (s_n-s)x^n|$
+        $\leq$ $(1-x) \sum_{n=0}^N |s_n - s| |x|^n$ + $\frac{\epsilon}{2}$
+
+        Then choose $\delta > 0$ such that
+        $(1-x) \sum_{n=0}^N |s_n - s|$ $<$ $\frac{\epsilon}{2}$
+        for x $>$ $1-\delta$. Thus:
+
+        \hspace{0.5cm}
+        $|\lim_{x \rightarrow 1} f(x) - s|$ $<$ $\epsilon$
+    \end{proof}
+
+    \newpage
+
+    
+
+    \begin{corollary}{Cauchy Product}{14cm}
+        If $\sum a_n$ $\rightarrow$ A, $\sum b_n$ $\rightarrow$ B,
+        and $\sum c_n$ $\rightarrow$ C where $c_n$ = $\sum_{k=0}^n$ $a_kb_{n-k}$,
+        then:
+        
+        \hspace{0.5cm}
+        C = AB
+    \end{corollary}
+
+    \begin{proof}
+        For x $\in$ (0,1), let:
+        
+        \hspace{0.5cm}
+        f(x) = $\sum_{n=0}^{\infty} a_n x^n$
+        \hspace{1cm}
+        g(x) = $\sum_{n=0}^{\infty} b_n x^n$
+        \hspace{1cm}
+        h(x) = $\sum_{n=0}^{\infty} c_n x^n$
+
+        Then f,g,h absolutely converges.
+        Note fg = h.
+        
+        By {\color{red} theorem 15.1.4}, then
+        AB = $\lim_{x \rightarrow 1}$ f(x)g(x) = $\lim_{x \rightarrow 1}$ h(x) = C.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{$\sum_{i=1}^{\infty}$ $\sum_{j=1}^{\infty}$ $a_{i,j}$
+    = $\sum_{j=1}^{\infty}$ $\sum_{1=1}^{\infty}$ $a_{i,j}$}{14cm}
+        Suppose $\sum_{j=1}^{\infty}$ $|a_{ij}|$ = $b_i$ where $\sum b_i$
+        converges, then:
+
+        \hspace{0.5cm}
+        $\sum_{i=1}^{\infty}$ $\sum_{j=1}^{\infty}$ $a_{i,j}$
+        = $\sum_{j=1}^{\infty}$ $\sum_{i=1}^{\infty}$ $a_{i,j}$
+    \end{wtheorem}
+
+    \begin{proof}
+        Let countable set E contain points $x_n$ where $x_n$ $\rightarrow$ $x_0$.
+        Let:
+        
+        \hspace{0.5cm}
+        $f_i(x_n)$ = $\sum_{j=1}^{n} a_{i,j}$
+        \hspace{1cm}
+        $f_i(x_0)$ = $\sum_{j=1}^{\infty} a_{i,j}$
+        \hspace{1cm}
+        $g(x)$ = $\sum_{i=1}^{\infty} f_i(x)$
+
+        Thus, each $f_i$ is continuous at $x_0$.
+        Since $|f_i(x)|$ $\leq$ $b_i$, then g(x) converges uniformly
+        so g is continuous at $x_0$. Thus:
+
+        \hspace{0.5cm}
+        $\sum_{i=1}^{\infty}$ $\sum_{j=1}^{\infty}$ $a_{i,j}$
+        = $\sum_{i=1}^{\infty}$ $f_i(x_0)$ = $g(x_0)$
+        = $\lim_{n \rightarrow \infty}$ $g(x_n)$
+        = $\lim_{n \rightarrow \infty}$ $\sum_{i=1}^{\infty}$ $f_i(x_n)$
+
+        \hspace{0.5cm}
+        = $\lim_{n \rightarrow \infty}$ $\sum_{i=1}^{\infty}$
+            $\sum_{j=1}^{n}$ $a_{i,j}$
+        = $\lim_{n \rightarrow \infty}$ $\sum_{j=1}^{n}$
+            $\sum_{i=1}^{\infty}$ $a_{i,j}$
+        = $\sum_{j=1}^{\infty}$ $\sum_{i=1}^{\infty}$ $a_{i,j}$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Extension to Taylor's Theorem}{14cm}
+        If f(x) = $\sum_{n=0}^{\infty}$ $c_nx^n$ converges for $|x|$ $<$ R
+        where a $\in$ (-R,R), then f is expanded in a power series about x = a
+        which converges in $|x-a|$ $<$ R - $|a|$ where:
+
+        \hspace{0.5cm}
+        f(x) = $\sum_{n=0}^{\infty}$ $\frac{f^{(n)}(a)}{n!}(x-a)^n$
+    \end{wtheorem}
+
+    \begin{proof}
+        f(x)
+        = $\sum_{n=0}^{\infty}$ $c_n[(x-a)+a]^n$
+        = $\sum_{n=0}^{\infty}$ $c_n \sum_{m=0}^n \binom{n}{m} a^{n-m} (x-a)^m$
+
+        \hspace{0.7cm}
+        = $\sum_{m=0}^{\infty}$
+            $[\sum_{n=m}^{\infty} \binom{n}{m} c_n a^{n-m}] (x-a)^m$ 
+
+        Then by {\color{orange} corollary 15.1.3},
+        $\sum_{n=m}^{\infty} \binom{n}{m} c_n a^{n-m}$
+        = $\frac{f^{(m)}(a)}{m!}$
+        so f(x) = $\sum_{n=0}^{\infty}$ $\frac{f^{(n)}(a)}{n!}(x-a)^n$.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Equivalent Power Series have the same coefficients}{14cm}
+        If $\sum a_n x^n, \sum b_nx^n$ converge in S = (-R,R), let E be the
+        set of all x $\in$ S where $\sum a_n x^n = \sum b_nx^n$.
+        If E has a limit point in S, then $a_n$ = $b_n$ for all n.
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $c_n = a_n - b_n$ and f(x) = $\sum_{n=0}^{\infty} c_n x^n$.
+        Then f(x) = 0 on E.
+
+        Let A = E' and B = S $\backslash$ E'.
+        Thus, B is open.
+        If $x_0$ $\in$ A, then:
+
+        \hspace{0.5cm}
+        f(x) = $\sum_{n=0}^{\infty}$ $d_n(x - x_0)^n$
+        \hspace{1cm}
+        $|x-x_0|$ $<$ R - $|x_0|$
+        
+        Suppose $d_n \not = 0$ for some n. Let k be the smallest integer where
+        $d_k \not = 0$. Then:
+        
+        \hspace{0.5cm}
+        f(x) = $(x- x_0)^k g(x)$
+        \hspace{1cm}
+        $|x-x_0|$ $<$ R - $|x_0|$
+        and g(x) = $\sum_{m=0}^{\infty}$ $d_{k+m}(x-x_0)^m$
+
+        Since g is continuous at $x_0$ and g($x_0$) = $d_k$ $\not =$ 0,
+        there is a $\delta > 0$ such that g(x) $\not =$ 0 for $|x - x_0| < \delta$.
+
+        Thus, f(x) $\not =$ 0 if $|x-x_0|$ $<$ $\delta$ which contradicts
+        that $x_0$ is a limit point of E.
+        Thus, $d_n$ = 0 for all n so f(x) = 0 for all x so A is open.
+        Thus, A and B are disjoint and thus, are separated.
+        Since S = A $\cup$ B and S is connected, then either A or B is empty.
+        Since A cannot be empty, then B is empty so A = S.
+        Since f is continuous in S, then A $\subset$ S so E = S so $c_n$ = 0
+        for all n.
+    \end{proof}
+
+    \newpage
+
+
+
+
+
+\subsection{ Exponential and Logarithmic Functions }
+
+    \begin{definition}{Exponential Function}{14cm}
+        Define E(x) = $\sum_{n=0}^{\infty} \frac{x^n}{n!}$
+        for x $\in$ $\mathbb{C}$.
+        
+        By the ratio test:
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ sup($|\frac{a_{n+1}}{a_n}|$)
+        = $\lim_{n \rightarrow \infty}$ sup($|\frac{\frac{z^{n+1}}{(n+1)!}}
+                                                    {\frac{z^n}{n!}}|$)
+        = $\lim_{n \rightarrow \infty}$ sup($|\frac{z}{n+1}|$)
+        = 0 $<$ 1
+
+        Thus, E(x) converges.
+        Then by {\color{orange} corollary 15.1.5}:
+
+        \hspace{0.5cm}
+        E(x)E(y)
+        = $\sum_{n=0}^{\infty} \frac{x^n}{n!}$ $\sum_{m=0}^{\infty} \frac{y^m}{m!}$
+        = $\sum_{n=0}^{\infty} \sum_{k=0}^n$ $\frac{x^k y^{n-k}}{k!(n-k)!}$
+
+        \hspace{2.7cm}
+        = $\sum_{n=0}^{\infty}$ $\frac{1}{n!} \sum_{k=0}^n \binom{n}{k} x^k y^{n-k}$
+        = $\sum_{n=0}^{\infty}$ $\frac{(x+y)^n}{n!}$
+        = E(x+y)
+
+        \vspace{0.1cm}
+
+        As a result, E(x)E(-x) = E(0) = 1.
+        As a consequence:
+
+        \begin{enumerate}[label=(\alph*), leftmargin=1.5cm, itemsep=0.1cm]
+            \item E(x) $\not =$ 0 for all x
+            
+            \item If x $>$ 0, then E(x) $>$ 0 and thus,
+                E(x) $>$ 0 for all x $\in$ $\mathbb{R}$
+            
+            \item $\lim_{x \rightarrow \infty}$ E(x) $\rightarrow$ $\infty$
+                so $\lim_{x \rightarrow -\infty}$ E(x) $\rightarrow$ 0
+                for x $\in$ $\mathbb{R}$
+
+            \item For 0 $<$ x $<$ y, E(x) $<$ E(y) so
+                E(-y) = $\frac{1}{E(y)}$ $<$ $\frac{1}{E(x)}$ = E(-x)
+                so E(x) is strictly increasing on $\mathbb{R}$
+
+            \item E'(x) = $\lim_{h \rightarrow 0}$ $\frac{E(x+h) - E(x)}{h}$
+                = $\lim_{h \rightarrow 0}$ $\frac{E(x)E(h) - E(x)}{h}$
+
+                \hspace{0.9cm}
+                = E(x) $\lim_{h \rightarrow 0}$ $\frac{E(h) - 1}{h}$
+                = E(x) ($\lim_{h \rightarrow 0}$ $\frac{E(h)}{h}$
+                        - $\lim_{h \rightarrow 0}$ $\frac{1}{h}$)
+
+                \hspace{0.9cm}
+                = E(x) ($\lim_{h \rightarrow 0} \frac{1}{h} + 1$
+                        - $\lim_{h \rightarrow 0} \frac{1}{h}$)
+                = E(x)
+
+            \item For n $>$ 0 $\in$ $\mathbb{Z}$:
+            
+                \hspace{0.5cm}
+                E(n) = $\underbrace{E(1)...E(1)}_n$ = $e^n$
+
+                For p = $\frac{n}{m}$ $>$ 0 $\in$ $\mathbb{Q}$:
+
+                \hspace{0.5cm}
+                [E(p)]$^{m}$ = E(mp) = E(n) = $e^n$
+                so E(p) = $e^{n/m}$ = $e^p$
+                
+                Since E(-p) = $\frac{1}{E(p)}$ = $e^{-p}$, then
+                E(p) = $e^p$ hold for all p $\in$ $\mathbb{Q}$.
+
+                For x $\in$ $\mathbb{R}$, let $e^x$ =
+                $\underset{x > p}{\text{sup}}$($e^p$) for p $\in$ $\mathbb{Q}$.
+                Since E(x) is continuous and monotonically increasing,
+                for every $\epsilon > 0$, there is a $\delta > 0$ where
+                $|x - p| < \delta$, then
+                $|$$\underset{x > p}{\text{sup}}$($e^p$) - $e^p$$|$
+                $<$ $\epsilon$. Thus:
+
+                \hspace{0.5cm}
+                $e^x$ = $\underset{x > p}{\text{sup}}$($e^p$)
+                = $\lim_{p \rightarrow x}$ E(p) = E(x).
+        \end{enumerate}
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{ltheorem}{Properties of $e^x$}{1.5cm}
+        \item $e^x$ is continuous and differentiable for all x $\in$ $\mathbb{R}$
+        
+        
+        \item $(e^x)'$ = $e^x$
+        
+
+        \item $e^x$ is strictly increasing where $e^x > 0$
+        
+
+        \item $e^{x+y}$ = $e^x e^y$
+        
+
+        \item $\lim_{x \rightarrow \infty}$ $e^x$ = $\infty$
+                and $\lim_{x \rightarrow -\infty}$ $e^x$ = 0
+
+
+        \item $\lim_{x \rightarrow \infty}$ $x^n e^{-x}$ = 0 for every n $>$ 0
+    \end{ltheorem}
+
+    \begin{proof}
+        Part (a) is proved by convergent power series
+        while parts (c) to (e) is proved by properties of E(x) above.
+        Since $e^x$ $>$ $\frac{x^{n+1}}{(n+1)!}$ for x $>$ 0 and
+        every n $\in$ $\mathbb{Z}_+$, then:
+
+        \hspace{0.5cm}
+        0 $\leq$ $\lim_{x \rightarrow \infty}$ $x^n e^{-x}$
+        $<$ $\lim_{x \rightarrow \infty}$ $\frac{(n+1)!}{x}$ = 0
+
+        Thus, $\lim_{x \rightarrow \infty}$ $x^n e^{-x}$ = 0 for
+        every n $\in$ $\mathbb{Z}_+$.
+        Since $x^n e^{-x}$ is continuous and n $\in$ $\mathbb{Z}_+$
+        is dense in $\mathbb{R}_+$, then
+        $\lim_{x \rightarrow \infty}$ $x^n e^{-x}$ = 0 for every n $>$ 0.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{definition}{Logarithmic Function}{14cm}
+        Since y = E(x) is strictly increasing on $\mathbb{R}$, then E(x) is injective
+        and thus, there exist an inverse function L(y) which is also strictly
+        increasing. Since E(x) is differentiable, then L(y) is also
+        differentiable. Then:
+
+        \hspace{0.5cm}
+        E(L(y)) = y
+        \hspace{1cm}
+        where y $>$ 0
+
+        \hspace{0.5cm}
+        L(E(x)) = x
+        \hspace{1cm}
+        where x $\in$ $\mathbb{R}$
+
+        Then:
+
+        \hspace{0.5cm}
+        L'(E(x))E'(x) = L'(y)E(x) = L'(y)y = 1
+        \hspace{1cm}
+        $\Rightarrow$
+        \hspace{1cm}
+        L'(y) = $\frac{1}{y}$
+
+        Since for x = 0 have y = E(0) = 1, then L(1) = 0.
+        Thus:
+
+        \hspace{0.5cm}
+        L(y) = $\int_1^y$ L'(t) dt
+        = $\int_1^y$ $\frac{1}{t}$ dt
+
+        As a consequence:
+
+        \begin{enumerate}[label=(\alph*), leftmargin=1.5cm, itemsep=0.1cm]
+            \item Let $y_1$ = E($x_1$) and $y_2$ = E($x_2$), then:
+            
+                \hspace{0.5cm}
+                L($y_1y_2$)
+                = L(E($x_1$)E($x_2$))
+                = L(E($x_1+x_2$))
+                = $x_1+x_2$
+                = L($y_1$)+L($y_2$)
+
+            \item Let log(y) = L(y). Then:
+            
+                \hspace{0.5cm}
+                Since $\lim_{x \rightarrow \infty}$ E(x) = $\infty$,
+                then $\lim_{y \rightarrow \infty}$ L(y) = $\infty$.
+
+                \hspace{0.5cm}
+                Since $\lim_{x \rightarrow -\infty}$ E(x) = 0,
+                then $\lim_{y \rightarrow 0}$ L(y) = $-\infty$.
+
+            \item For n $\in$ $\mathbb{Z}$:
+            
+                \hspace{0.3cm}
+                If n $\geq$ 0,
+                E(nL(y)) = E($\underbrace{\text{L(y) + ... + L(y)}}_{n}$)
+                = E(L($y^n$)) = $y^n$
+
+                \hspace{0.3cm}
+                If n $<$ 0,
+                E(nL(y)) = E(-($\underbrace{\text{L(y) + ... + L(y)}}_{-n}$))
+                = [E(L($y^{-n}$))]$^{-1}$ = $y^n$
+
+                For p = $\frac{a}{b}$ $\in$ $\mathbb{Q}$ where b $>$ 0,
+                let $t^b$ = y:
+
+                \hspace{0.5cm}
+                E(pL(y))
+                = $\sum_{n=0}^{\infty}$ $\frac{(\frac{a}{b}L(y))^n}{n!}$
+                = $\sum_{n=0}^{\infty}$ $\frac{(\frac{q}{b}L(t^b))^n}{n!}$
+                = $\sum_{n=0}^{\infty}$ $\frac{(\frac{a}{b}bL(t))^n}{n!}$
+
+                \hspace{2.3cm}
+                = $\sum_{n=0}^{\infty}$ $\frac{(aL(t))^n}{n!}$
+                = $\sum_{n=0}^{\infty}$ $\frac{(L(t^a))^n}{n!}$
+                = $t^a$
+                = $y^{\frac{a}{b}}$ = $y^p$
+
+                For c $\in$ $\mathbb{R}$, let $y^c$
+                = $\underset{c > p}{\text{sup}}$(E(pL(y)).
+                Since E(x),L(y) are continuous and monotonically increasing,
+                then for every $\epsilon > 0$, there is a $\delta > 0$
+                where $|c-p| < \delta$, then
+                $|\underset{c>p}{\text{sup}}(E(pL(y)) - E(pL(y))| < \epsilon$.
+                Thus:
+
+                \hspace{0.5cm}
+                $y^c$ = $\underset{c > p}{\text{sup}}$(E(pL(y))
+                = $\lim_{p \rightarrow c}$ E(pL(y))
+                = E(cL(y))
+
+            \item For y $\in$ $\mathbb{C}$ and c $\not =$ 0 $\in$ $\mathbb{R}$:
+            
+                \hspace{0.5cm}
+                $(y^c)'$ = E'(cL(y))cL'(y)
+                = E(cL(y))c$\frac{1}{y}$
+                = $y^c$c$\frac{1}{y}$
+                = $c y^{c-1}$
+
+                Thus:
+
+                \hspace{0.5cm}
+                If c $\not =$ -1, then $\int$ $y^c$ dy
+                = $\int$ $\frac{1}{c+1} (y^{c+1})'$ dy
+                = $\frac{1}{c+1}y^{c+1}$
+
+                \hspace{0.5cm}
+                If c = -1, then $\int$ $y^{-1}$ dy
+                = $\int$ L'(y) dy
+                = L(y) = log(y)
+
+            \item $\lim_{y \rightarrow \infty}$ $y^{-c} \log(y)$ = 0
+                for every c $>$ 0
+            
+                For $\epsilon \in (0,c)$ and $y > 1$:
+
+                \hspace{0.5cm}
+                $y^{-c} \log(y)$
+                = $y^{-c}$ $\int_1^y$ $t^{-1}$ dt
+                $<$ $y^{-c}$ $\int_1^y$ $t^{\epsilon - 1}$ dt
+                = $y^{-c} \frac{y^{\epsilon} - 1}{\epsilon}$
+                $<$ $\frac{1}{y^{c - \epsilon}\epsilon}$
+
+                \hspace{0.5cm}
+                0 $\leq$ $\lim_{y \rightarrow \infty}$ $y^{-c} \log(y)$
+                $<$ $\lim_{y \rightarrow \infty}$
+                $\frac{1}{y^{c - \epsilon}\epsilon}$
+                = 0
+        \end{enumerate}
+    \end{definition}
+
+    \newpage
+
+
+
+
+
+\subsection{ Trigonometric Function }
+
+    \begin{definition}{Trigonometric Function}{14cm}
+        Define for x $\in$ $\mathbb{C}$:
+        
+        \hspace{0.5cm}
+        C(x) = $\frac{1}{2}$[E(ix) + E(-ix)]
+        \hspace{1cm}
+        S(x) = $\frac{1}{2i}$[E(ix) - E(-ix)]
+
+        Since E($\overline{x}$) = $\sum_{n=0}^{\infty} \frac{\overline{x}^n}{n!}$
+        = $\sum_{n=0}^{\infty} \frac{\overline{x^n}}{n!}$
+        = $\overline{\sum_{n=0}^{\infty} \frac{x^n}{n!}}$
+        = $\overline{\text{E(x)}}$, then for x $\in$ $\mathbb{R}$:
+
+        \hspace{0.5cm}
+        C(x),S(x) $\in$ $\mathbb{R}$
+
+        Also, E(ix) = C(x) + iS(x). Then:
+
+        \begin{enumerate}[label=(\alph*), leftmargin=1.5cm, itemsep=0.1cm]
+            \item $|\text{E(ix)}|^2$ = E(ix)$\overline{\text{E(ix)}}$
+                = E(ix)E(-ix) = E(0) = 1 so $|\text{E(ix)}|$ = 1
+
+            \item C(0) = $\frac{1}{2}$[E(0) + E(0)] = 1
+            
+                S(0) = $\frac{1}{2i}$[E(0) - E(0)] = 0
+
+            \item C'(x) = $\frac{1}{2}$[E'(ix)i + E'(-ix)(-i)]
+                = $\frac{1}{2}$[E(ix)i - E(-ix)i] = -S(x)
+
+                S'(x) = $\frac{1}{2i}$[E'(ix)i - E'(-ix)(-i)]
+                = $\frac{1}{2i}$[E(ix)i + E(-ix)i] = C(x)
+
+            \item There exists positive numbers such that C(x) = 0.
+            
+                If the claim is false, since C is continuous and C(0) = 1,
+                then S'(x) = C(x) $>$ 0. Then S(x) is strictly increasing and
+                since S(0) = 0, then S(x) $>$ 0 for x $>$ 0.
+                Then for 0 $<$ x $<$ y:
+
+                \hspace{0.5cm}
+                S(x)(y-x) $<$ $\int_x^y$ S(t) dt
+                = $\int_x^y$ -C'(t) dt
+                = C(x) - C(y)
+
+                \hspace{2.3cm}
+                $\leq$ $|\text{C(x) - C(y)}|$
+                $\leq$ $|\text{C(x)}|$ + $|\text{C(y)}|$ = 2
+
+                But if S(x) $>$ 0, then S(x)(y-x) $\not <$ 2 for a large enough
+                y for any S(x).
+                Thus by contradiction, there are positive numbers where C(x) = 0.
+                
+                \vspace{0.2cm}
+
+                Since the set of zeros of a continuous function is closed,
+                there exists a smallest positive number $x_0$ such that C($x_0$) = 0.
+                Let $\pi$ = 2$x_0$.
+
+                Then, C($\frac{\pi}{2}$) = C($x_0$) = 0
+                and since $|\text{E(ix)}|$
+                = $|\text{C(x) + iS(x)}|$ = 1,
+                then S($\frac{\pi}{2}$) = $\pm 1$.
+                Since C(x) is continuous where C(0) = 1 and C($\frac{\pi}{2}$) = 0,
+                then S'(x) = C(x) $>$ 0 for x $\in$ (0,$\frac{\pi}{2}$)
+                where S(0) = 0 so S($\frac{\pi}{2}$) = 1.
+                Thus, E($\frac{\pi}{2}i$) = C($\frac{\pi}{2}$) + iS($\frac{\pi}{2}$)
+                = 0 + i1 = i. Then:
+
+                \hspace{0.5cm}
+                -1 = $i^2$ = E($\frac{\pi}{2}i$)E($\frac{\pi}{2}i$)
+                = E($\frac{\pi}{2}i$+$\frac{\pi}{2}i$) = E($\pi i$)
+
+                \hspace{0.5cm}
+                1 = $(-1)^2$ = E($\pi i$)E($\pi i$)
+                = E($\pi i$+$\pi i$) = E($2\pi i$)
+
+                \hspace{0.5cm}
+                E(z) = E(z)1 = E(z)E($2\pi i$) = E(z+$2\pi i$)
+        \end{enumerate}
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{ltheorem}{Properties of C(x) and S(x)}{1.5cm}
+        \item E is periodic with period $2\pi i$
+        
+            \begin{proof}[14cm]
+                Since E(z) = E(z+$2\pi i$), E has period $2\pi i$.
+            \end{proof}
+        
+        \item C(x) and S(x) are periodic with period $2\pi$
+        
+            \begin{proof}[14cm]
+                Since C(x) = $\frac{1}{2}$[E(ix)+E(-ix)] and
+                S(x) = $\frac{1}{2i}$[E(ix)-E(-ix)] where E(x)
+                have period $2\pi i$ so C(x) and S(x) have period $2\pi$.
+            \end{proof}
+        
+        \item If t $\in$ (0,$2\pi$), then E(it) $\not =$ 1
+        
+            \begin{proof}[14cm]
+                If t $\in$ (0,$\frac{\pi}{2}$) where E(it) = x + iy,
+                then x,y $\in$ (0,1).
+
+                Note E(4it) = [E(it)]$^4$ = $(x+iy)^4$
+                = $x^4 - 6x^2y^2 + y^4 + 4ixy(x^2 - y^2)$.
+
+                If E(4it) is real, then $x^2 - y^2$ = 0.
+                Thus, since $|\text{E(ix)}|$ = 1, then $x^2 + y^2$ = 1
+                so $x^2$ = $y^2$ = $\frac{1}{2}$ and thus,
+                E(4it) = -1 $\not =$ 1.
+            \end{proof}
+
+            \newpage
+        
+        \item For z $\in$ $\mathbb{C}$ where $|z|$ = 1,
+            there is a unique t $\in$ [0,$2\pi$) such that E(it) = z
+
+            \begin{proof}[14cm]
+                By part (c), for 0 $\leq$ $t_1$ $<$ $t_2$ $<$ $2\pi$:
+                
+                \hspace{0.5cm}
+                E(i$t_2$)[E(i$t_1$)]$^{-1}$
+                = E(i$t_2$)[E(-i$t_1$)] = E(i$t_2$-i$t_1$) $\not =$ 1
+
+                Thus, t $\in$ [0,$2\pi$) must be unique.
+                Let fixed z = x + iy where $|z|$ = 1.
+
+                For x,y $\geq$ 0, since C(x) decreases from 1 to 0
+                on [0,$\frac{\pi}{2}$], then C(t) = x for some
+                t $\in$ [0,$\frac{\pi}{2}$].
+                Since $|E(it)|$ = $C(t)^2 + S(t)^2$ = 1
+                and $x^2 + y^2$ = 1, then S(t) = y so E(it) = x + yi = z.
+
+                \vspace{0.2cm}
+
+                If x $<$ 0, y $\geq$ 0, fix -iz instead of z and thus,
+                E(it) = -iz for some t $\in$ [0,$\frac{\pi}{2}$].
+                
+                Since E($\frac{\pi}{2}i$) = i, then
+                z = -iz(i) = E(it)E($\frac{\pi}{2}i$) = E(i(t+$\frac{\pi}{2}$)).
+
+                \vspace{0.2cm}
+
+                If x,y $<$ 0, fix -z instead of z and thus, E(it) = -z
+                for some t $\in$ [0,$\frac{\pi}{2}$].
+
+                Since E($\pi i$) = -1, then
+                z = -z(-1) = E(it)E($\pi i$) = E(i(t+$\pi$)).
+
+                \vspace{0.2cm}
+
+                If x $\geq$ 0, y $<$ 0, fix iz instead of z and thus,
+                E(it) = iz for some t $\in$ [0,$\frac{\pi}{2}$].
+
+                Then z = iz(-1)(i) = E(it)E($\pi i$)E($\frac{\pi}{2}i$)
+                = E(i(t+$\frac{3\pi}{2}$)).
+            \end{proof}
+    \end{ltheorem}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Unit Curve}{14cm}
+        Let $\gamma(t)$ = E(it) for t $\in$ [0,$2\pi$].
+
+        By {\color{red} theorem 15.3.2(d)} and E(z) = E(z+$2\pi i$), then
+        $\gamma(t)$ is a simple closed curve whose range is the unit circle.
+        Since $\gamma'(t)$ = iE'(it) = iE(it), the length of $\gamma$:
+
+        \hspace{0.5cm}
+        $\Lambda(\gamma)$ = $\int_0^{2\pi}$ $|\gamma'(t)|$ dt = $2\pi$
+
+        Thus, $\pi$ = $2x_0$ defined earlier have the same geometric significance
+        as $\pi$. Then consider the triangle with vertices at:
+
+        \hspace{0.5cm}
+        $z_1$ = 0
+        \hspace{1cm}
+        $z_2$ = C($t_0$)
+        \hspace{1cm}
+        $z_3$ = $\gamma(t_0)$ = (C($t_0$),S($t_0$))
+
+        Thus, C(t) = cos(t) and S(t) = sin(t).
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+
+
+\subsection{ Algebraic Completeness of the Complex Field }
+
+    \begin{wtheorem}{Every complex polynomial has a complex root}{14cm}
+        For $a_0,...,a_n$ $\not =$ 0 $\in$ $\mathbb{C}$ where n $\geq$ 1,
+        let P(z) = $\sum_{k=0}^n$ $a_k z^k$.
+
+        Then P(z) = 0 for some z $\in$ $\mathbb{C}$.
+    \end{wtheorem}
+
+    \begin{proof}
+        Assume $a_n$ = 1.
+        Let $\mu$ = inf($|P(z)|$). If $|z|$ = R, then:
+
+        \hspace{0.5cm}
+        $|P(z)|$
+        $\geq$ $R^n(1 - |a_{n-1}|R^{-1} - ... - |a_0|R^{-n})$
+
+        Thus, $\lim_{R \rightarrow \infty}$ $|P(z)|$ = $\infty$
+        so there is a $R_0$ such that $|R(z)|$ $>$ $\mu$ if $|z|$ $>$ $R_0$.
+
+        Since $|P|$ is continuous, then for a closed $N_{R_0}(0)$, by the
+        Extreme Value Theorem:
+
+        \hspace{0.5cm}
+        $|P(z_0)|$ = $\mu$
+        \hspace{1cm}
+        for some $z_0$
+
+        Suppose $\mu$ $\not =$ 0.
+        Let polynomial Q(z) = $\frac{P(z+z_0)}{P(z_0)}$
+        where Q(0) = 1, Q(z) $\geq$ 1 for all z.
+
+        Then there is a smallest integer k $\leq$ n so $b_k \not = 0$ so
+        Q(z) = $1 + b_kz^k + ... + b_nz^n$.
+
+        By {\color{red} theorem 15.3.2(d)}, there is a $\theta$ $\in$ $\mathbb{R}$
+        such that $e^{ik\theta}b_k$ = $-|b_k|$.
+
+        If r $>$ 0  and $r^k|b_k| < 1$, then
+        $|1 + b_kr^ke^{ik\theta}|$ = $1-r^k|b_k|$. Thus:
+
+        \hspace{0.5cm}
+        $|Q(re^{i\theta})|$
+        = $|1 + b_kr^ke^{i\theta k} + b_{k+1}r^{k+1}e^{i\theta {k+1}}
+            + ... + b_nr^ne^{i\theta n}|$
+
+        \hspace{2.2cm}
+        $\leq$ $|1 + b_kr^ke^{i\theta k}| + |b_{k+1}r^{k+1}e^{i\theta {k+1}}|
+                    + ... + |b_nr^ne^{i\theta n}|$
+
+        \hspace{2.2cm}
+        = $1 - r^k|b_k| + r^{k+1}|b_{k+1}| + ... + r^n|b_n|$
+        = $1 - r^k(|b_k| - r|b_{k+1}| - ... - r^{n-k}|b_n|)$
+
+        Thus, for a sufficiently small r, $|Q(re^{i\theta})|$ $<$ 1
+        which contradicts Q(z) $\geq$ 1 for all z.
+
+        Thus, $\mu$ = 0 so there is a $z_0$ such that $|P(z_0)|$ = $\mu$ = 0
+        so P($z_0$) = 0.
+    \end{proof}
+
+    \newpage
+
+
+
+
+
+\subsection{ Fourier Series }
+
+    \begin{definition}{Trigonometric Polynomial}{14cm}
+        A trigonometric polynomial is a finite sum where for x $\in$ $\mathbb{R}$:
+        
+        \hspace{0.5cm}
+        f(x) = $a_0$ + $\sum_{n=1}^N$ $[a_n \cos(nx) + b_n \sin(nx)]$
+        = $\sum_{n=-N}^N$ $c_n e^{inx}$
+
+        A trigonometric series is then:
+
+        \hspace{0.5cm}
+        f(x) = $\sum_{n=-\infty}^{\infty}$ $c_n e^{inx}$
+
+        Thus:
+
+        \begin{enumerate}[label=(\alph*), leftmargin=1.5cm, itemsep=0.1cm]
+            \item f(x) has period of $2\pi$
+            
+            \item Since $(\frac{1}{in}e^{inx})'$ = $e^{inx}$ where
+                $\frac{1}{in}e^{inx}$ have period of $2\pi$, then
+                for n $\in$ $\mathbb{Z}$:
+
+                \hspace{0.5cm}
+                $\frac{1}{2\pi}$ $\int_{-\pi}^{\pi}$ $e^{inx}$ dx
+                = $\frac{1}{2\pi}$ $\int_{-\pi}^{\pi}$ $(\frac{1}{in}e^{inx})'$ dx
+                = $\begin{cases}
+                    1 & n = 0 \\
+                    0 & n = \pm 1, \pm 2, ...
+                    \end{cases}$
+
+            \item For m $\in$ \{-N,-N+1,...,N\}, then:
+            
+                \hspace{0.5cm}
+                $\frac{1}{2\pi}$ $\int_{-\pi}^{\pi}$ f(x)$e^{-imx}$ dx
+                = $\frac{1}{2\pi}$ $\int_{-\pi}^{\pi}$
+                    [$\sum_{n=-N}^N$ $c_n e^{inx}e^{-imx}$] dx
+                
+                \hspace{4.2cm}
+                = $\sum_{n=-N}^N$ [$\frac{1}{2\pi}$ $\int_{-\pi}^{\pi}$
+                    $c_n e^{inx}e^{-imx}$ dx]
+                = $c_m$
+
+            \item If f(x) is real, then:
+                
+                \hspace{0.5cm}
+                $\overline{c_m}$
+                = $\overline{\frac{1}{2\pi} \int_{-\pi}^{\pi} f(x)e^{-imx} dx}$
+                = $\frac{1}{2\pi} \int_{-\pi}^{\pi} f(x)e^{imx} dx$
+                = $c_{-m}$
+
+                Thus, f(x) is real if and only if $c_{-n}$ = $\overline{c_n}$
+                for n = \{0,1,...,N\}.
+        \end{enumerate}
+
+        If f(x) is integrable on [$-\pi,\pi$], then $c_m$ are called the
+        Fourier coefficients and f(x) is a Fourier series of f.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Orthogonal System of Functions}{14cm}
+        Let \{$\phi_n$\} be a sequence of complex functions on [a,b] such that:
+
+        \hspace{0.5cm}
+        $\int_a^b$ $\phi_n(x) \overline{\phi_m(x)}$ dx = 0
+        \hspace{1cm}
+        for m $\not =$ n
+
+        Then, \{$\phi_n$\} is an orthogonal system of functions on [a,b].
+        Additionally, if:
+        
+        \hspace{0.5cm}
+        $\int_a^b$ $\phi_n(x) \overline{\phi_n(x)}$ dx
+        = $\int_a^b$ $|\phi_n(x)|^2$ dx = 1
+        
+        for all n, then \{$\phi_n$\} is orthonormal.
+
+        \vspace{0.2cm}
+
+        If \{$\phi_n$\} is orthonormal on [a,b] and
+        $c_n$ = $\int_a^b$ f(t)$\overline{\phi_n(t)}$ dt for n = \{1,2,...\},
+        then $c_n$ is the n-th Fourier coefficient of f relative to \{$\phi_n$\}.
+        Then:
+
+        \hspace{0.5cm}
+        f(x) $\sim$ $\sum_{n=1}^{\infty}$ $c_n\phi_n(x)$
+    \end{definition}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Fourier Series of f is the best approximation to f}{14cm}
+        For orthonormal \{$\phi_n$\} on [a,b], let n-th partial sum of the
+        Fourier series of f, $\sum_{m=1}^n$ $c_m \phi_m(x)$ = $s_n(x)$. 
+        Suppose f $\in$ $\mathscr{R}$ and
+        $t_n(x)$ = $\sum_{m=1}^n$ $\gamma_m \phi_m(x)$. Then:
+
+        \hspace{0.5cm}
+        $\int_a^b$ $|f - s_n|^2$ dx $\leq$ $\int_a^b$ $|f - t_n|^2$ dx
+
+        where
+        
+        \hspace{0.5cm}
+        $\int_a^b$ $|f - s_n|^2$ dx = $\int_a^b$ $|f - t_n|^2$ dx
+
+        if and only if $\gamma_m$ = $c_m$ for every m = \{1,...,n\}.
+
+        Also, $\int |s_n(x)|^2$ dx $\leq$ $\int |f(x)|^2$ dx.
+    \end{wtheorem}
+
+    \begin{proof}
+        $\int f(x) \overline{t_n(x)}$ dx
+        = $\int f(x) \sum [\overline{\gamma_m} \overline{\phi_m(x)}]$ dx
+        = $\sum [\int f(x) \overline{\gamma_m} \overline{\phi_m(x)}$ dx]
+        = $\sum c_m \overline{\gamma_m}$
+
+        Since \{$\phi_n$\} is orthonormal, then:
+
+        \hspace{0.5cm}
+        $\int |t_n(x)|^2$ dx 
+        = $\int t_n(x) \overline{t_n(x)}$ dx
+        = $\int [\sum_m \gamma_m\phi_m(x)]
+                [\sum_k \overline{\gamma_k}\overline{\phi_k(x)}]$ dx
+        
+        \hspace{2.9cm}
+        = $\sum_m \sum_k [\int \gamma_m\phi_m(x)
+                \overline{\gamma_k}\overline{\phi_k(x)}$ dx]
+        = $\sum |\gamma_m|^2$
+
+        Thus:
+
+        \hspace{0.1cm}
+        $\int |f(x) - t_n(x)|^2$ dx
+        = $\int |f(x)|^2$ dx - $\int f(x) \overline{t_n(x)}$ dx
+            - $\int \overline{f(x)} t_n(x)$ dx + $\int |t_n(x)|^2$ dx
+        
+        \hspace{3.7cm}
+        = $\int |f(x)|^2$ dx - $\sum c_m \overline{\gamma_m}$
+        - $\sum \overline{c_m} \gamma_m$ + $\sum |\gamma_m|^2$
+
+        \hspace{3.7cm}
+        = $\int |f(x)|^2$ dx - $\sum |c_m|^2$ + $\sum |\gamma_m - c_m|^2$
+
+        Thus, $\int |f(x) - t_n(x)|^2$ dx
+        is minimized if and only if $\gamma_m$ = $c_m$ for every m = \{1,...,n\}.
+
+        Let $\gamma_m$ = $c_m$ and since $\int |f(x) - s_n(x)|^2$ dx $\geq$ 0, then:
+
+        \hspace{0.5cm}
+        $\int |f(x) - s_n(x)|^2$ dx = $\int |f(x)|^2$ dx - $\sum |c_m|^2$
+
+        \hspace{0.5cm}
+        $\int |s_n(x)|^2$ dx
+        = $\sum |c_m|^2$
+        $\leq$ $\int |f(x)|^2$ dx
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Bessel Inequality}{14cm}
+        For \{$\phi_n$\} is orthonormal on [a,b] and
+        f(x) $\sim$ $\sum_{n=1}^{\infty} c_n\phi_n(x)$,
+        if f $\in$ $\mathscr{R}$, then:
+
+        \hspace{0.5cm}
+        $\sum_{n=1}^{\infty} |c_n|^2$ $\leq$ $\int_a^b |f(x)|^2$ dx
+        \hspace{1cm}
+        and
+        \hspace{1cm}
+        $\lim_{n \rightarrow \infty}$ $c_n$ = 0
+    \end{wtheorem}
+
+    \begin{proof}
+        Since \{$\phi_n$\} is orthonormal on [a,b] and
+        f(x) $\sim$ $\sum_{n=1}^{\infty} c_n\phi_n(x)$, then by
+        {\color{red} theorem 15.5.3}, for any integer n $>$ 1:
+
+        \hspace{0.5cm}
+        $\sum_{m=1}^n |c_m|^2$ $\leq$ $\int_a^b |f(x)|^2$ dx
+
+        Thus, as n $\rightarrow \infty$, then
+        $\sum_{m=1}^{\infty} |c_m|^2$ $\leq$ $\int_a^b |f(x)|^2$ dx.
+
+        Since $\sum_{m=1}^{\infty} |c_m|^2$ is monotonically increasing
+        and bounded above, then $\sum_{m=1}^{\infty} |c_m|^2$ converges
+        and thus, $\lim_{n \rightarrow \infty}$ $c_n$ = 0.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{definition}{Trigonometric Series}{14cm}
+        Consider functions f $\in$ $\mathscr{R}$ on [$-\pi,\pi$] with period $2\pi$.
+        Let $\phi_n(x)$ = $e^{inx}$ which is orthogonal and orthonormal
+        when $\phi_n(x)$ = $\frac{1}{\sqrt{2\pi}} e^{inx}$.
+        
+        Thus, the N-th partial sum of the Fourier series of f is:
+
+        \hspace{0.5cm}
+        $s_N(f;x)$
+        = $\sum_{n=-N}^N c_ne^{inx}$
+
+        where $c_n$ = $\frac{1}{2\pi} \int_{-\pi}^{\pi} f(t)e^{-int}$ dt.
+        Then by {\color{red} theorem 15.5.3}:
+
+        \hspace{0.5cm}
+        $\frac{1}{2\pi} \int_{-\pi}^{\pi} |s_N(f;x)|^2$ dx
+        = $\sum_{n=-N}^N |c_n|^2$
+        = $\frac{1}{2\pi} \int_{-\pi}^{\pi} |f(x)|^2$ dx
+
+        \vspace{0.2cm}
+
+        From the Dirichlet kernel,
+        $D_N(x)$ = $\sum_{n=-N}^N e^{inx}$:
+        
+        \hspace{0.5cm}
+        $(e^{ix} - 1)D_N(x)$
+        = $\sum_{n=-N}^N [e^{i(n+1)x} - e^{inx}]$
+        = $e^{i(N+1)x} - e^{-iNx}$
+
+        \hspace{0.5cm}
+        $D_N(x)$
+        = $\frac{e^{-\frac{1}{2}ix}(e^{i(N+1)x} - e^{-iNx})}
+                {e^{-\frac{1}{2}ix}(e^{ix} - 1)}$
+        = $\frac{e^{i(N+\frac{1}{2})x} - e^{-i(N+\frac{1}{2})x}}
+                {e^{\frac{1}{2}ix} - e^{-\frac{1}{2}ix}}$
+        
+        \hspace{1.8cm}
+        = $\frac{2i\sin((N+\frac{1}{2})x)}{2i\sin(\frac{1}{2}x)}$
+        = $\frac{\sin((N+\frac{1}{2})x)}{\sin(\frac{1}{2}x)}$
+
+        Since $e^{inx}$ is periodic for $2\pi$ for each n $\in$ [-N,N], then
+        $D_N(x)$ is periodic for $2\pi$.
+
+        Thus, since f is also periodic for $2\pi$, then:
+
+        \hspace{0.5cm}
+        $s_N(f;x)$
+        = $\sum_{n=-N}^N c_ne^{inx}$
+        = $\sum_{n=-N}^N [\frac{1}{2\pi} \int_{-\pi}^{\pi} f(t)e^{-int} dt] e^{inx}$
+
+        \hspace{2.1cm}
+        = $\frac{1}{2\pi} \int_{-\pi}^{\pi} f(t) [\sum_{n=-N}^N e^{in(x-t)}] dt$
+        = $\frac{1}{2\pi} \int_{-\pi}^{\pi} f(t) D_N(x-t) dt$
+
+        \hspace{2.1cm}
+        = $\frac{1}{2\pi} \int_{-\pi}^{\pi} f(x-t) D_N(t) dt$
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}
+    {If f is continuous at some x, then Fourier Series of f converges to f}{14cm}
+        If for some x, there are $\delta > 0$ and M such that
+        $|f(x+t) - f(x)|$ $\leq$ $M|t|$
+        for all t $\in$ ($-\delta,\delta$), then:
+
+        \hspace{0.5cm}
+        $\lim_{N \rightarrow \infty}$ $s_N(f;x)$ = f(x)
+    \end{wtheorem}
+
+    \begin{proof}
+        Let g(t) = $\frac{f(x-t) - f(x)}{\sin(\frac{1}{2}t)}$ for
+        t $\in$ [$-\pi,\pi$] where g(0) = 0.
+        Then by {\color{blue} definition 15.5.1(b)}:
+
+        \hspace{0.5cm}
+        $\frac{1}{2\pi} \int_{-\pi}^{\pi}$ $D_N(x)$ dx
+        = $\frac{1}{2\pi} \int_{-\pi}^{\pi}$ $[\sum_{n=-N}^N e^{inx}]$ dx
+        = 1
+
+        Thus:
+
+        \hspace{0.5cm}
+        $s_N(f;x) - f(x)$
+        = $\frac{1}{2\pi} \int_{-\pi}^{\pi}$ $f(x-t) D_N(t)$ dt - f(x)
+
+        \hspace{3.2cm}
+        = $\frac{1}{2\pi} \int_{-\pi}^{\pi}$ $f(x-t) D_N(t)$ dt
+            - f(x)$\frac{1}{2\pi} \int_{-\pi}^{\pi}$ $D_N(t)$ dt
+
+        \hspace{3.2cm}
+        = $\frac{1}{2\pi} \int_{-\pi}^{\pi}$ $[f(x-t)-f(x)] D_N(t)$ dt
+
+        \hspace{3.2cm}
+        = $\frac{1}{2\pi} \int_{-\pi}^{\pi}$ $g(t) \sin((N+\frac{1}{2})t)$ dt
+
+        \hspace{3.2cm}
+        = $\frac{1}{2\pi} \int_{-\pi}^{\pi}$
+            $g(t) [\sin(Nt)\cos(\frac{1}{2}t) + \sin(\frac{1}{2}t)\cos(Nt)]$ dt
+
+        \hspace{3.2cm}
+        = $\frac{1}{2\pi} \int_{-\pi}^{\pi}$ $[g(t)\cos(\frac{1}{2}t)]\sin(Nt)$ dt
+        + $\frac{1}{2\pi} \int_{-\pi}^{\pi}$ $[g(t)\sin(\frac{1}{2}t)]\cos(Nt)$ dt
+
+        Since g(t) and $\cos(\frac{1}{2}t),\sin(\frac{1}{2}t)$ are bounded on
+        [$-\pi,\pi$], then $g(t)\cos(\frac{1}{2}t)$ and $g(t)\sin(\frac{1}{2}t)$
+        are bounded on [$-\pi,\pi$].
+        As N $\rightarrow$ $\infty$, then
+        $\frac{1}{2\pi} \int_{-\pi}^{\pi}$
+        $[g(t)\cos(\frac{1}{2}t)]\sin(Nt)$ dt = 0
+        and
+        $\frac{1}{2\pi} \int_{-\pi}^{\pi}$
+        $[g(t)\sin(\frac{1}{2}t)]\cos(Nt)$ dt = 0
+        so $\lim_{N \rightarrow \infty}$ $s_N(f;x)$ = f(x).
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{corollary}{Localization Theorem}{14cm}
+        If f(x) = 0 for all x in some segment J, then for every x $\in$ J:
+
+        \hspace{0.5cm}
+        $\lim_{N \rightarrow \infty}$ $s_N(f;x)$ = 0
+    \end{corollary}
+
+    \begin{proof}
+        Let J = (a,b). Then for x $\in$ J, choose $\delta$ such that
+        ($x-\delta,x+\delta$) $\subset$ J.
+        
+        Thus for any t $\in$ ($-\delta,\delta$), then
+        $|f(x+t) - f(x)|$
+        = $|0-0|$ = 0.
+
+        Then by {\color{red} theorem 15.5.6}, for every x $\in$ J,
+        $\lim_{N \rightarrow \infty}$ $s_N(f;x)$ = f(x) = 0.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{corollary}
+    {Equivalent functions on (a,b) have similar Fourier Series on (a,b)}{14cm}
+        If f(t) = g(t) for all t in some neighborhood of x, then:
+
+        \hspace{0.5cm}
+        $\lim_{N \rightarrow \infty}$ [$s_N(f;x)$ - $s_N(g;x)$] = 0
+    \end{corollary}
+
+    \begin{proof}
+        Since f(t) - g(t) = 0 for all t $\in$ ($x-\delta,x+\delta$),
+        then by {\color{orange} corollary 15.5.7}, then:
+
+        \hspace{0.5cm}
+        $\lim_{N \rightarrow \infty}$ $s_N(f-g;x)$ = 0
+
+        The Fourier series for f-g:
+
+        \hspace{0.5cm}
+        $s_N(f-g;x)$ = $\sum_{n=-N}^N c_ne^{inx}$
+        \hspace{1cm}
+        where $c_n$ = $\frac{1}{2\pi} \int_{-\pi}^{\pi} (f-g)(t)e^{-int}$ dt
+
+        The Fourier series for f and g:
+
+        \hspace{0.5cm}
+        $s_N(f;x)$ = $\sum_{n=-N}^N a_ne^{inx}$
+        \hspace{1cm}
+        where $a_n$ = $\frac{1}{2\pi} \int_{-\pi}^{\pi} f(t)e^{-int}$ dt
+
+        \hspace{0.5cm}
+        $s_N(g;x)$ = $\sum_{n=-N}^N b_ne^{inx}$
+        \hspace{1cm}
+        where $b_n$ = $\frac{1}{2\pi} \int_{-\pi}^{\pi} g(t)e^{-int}$ dt
+
+        Then $s_N(f-g;x)$ = $s_N(f;x)$ - $s_N(g;x)$ and thus:
+
+        \hspace{0.5cm}
+        $\lim_{N \rightarrow \infty}$ [$s_N(f;x)$ - $s_N(g;x)$]
+        = $\lim_{N \rightarrow \infty}$ $s_N(f-g;x)$ = 0
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{There are Fourier Series that converge uniformly
+    to continuous f}{14cm}
+        If f is continuous with period $2\pi$, then for $\epsilon > 0$,
+        there is a trigonometric polynomial P such that
+        for all x $\in$ $\mathbb{R}$:
+
+        \hspace{0.5cm}
+        $|P(x) - f(x)|$ $<$ $\epsilon$
+    \end{wtheorem}
+
+    \begin{proof}
+        Since f(x) has a period of $2\pi$, then for a fixed x $\in$ $\mathbb{R}$,
+        f(x) on $\mathbb{R}$ can be defined on compact [x,x+$2\pi$]
+        which is the complex unit circle T by a mapping of $x \rightarrow e^{ix}$.
+
+        The set of trigonometric polynomials,
+        P(x) = $\sum_{n=-N}^N c_ne^{inx}$ for constants $c_n$ $\in$ $\mathbb{C}$
+        and integer N $\geq$ 0, is an algebra $\mathscr{A}$ since for
+        $P_1(x)$ = $\sum_{n=-N_1}^{N_1} a_ne^{inx}$
+        and $P_2(x)$ = $\sum_{n=-N_2}^{N_2} b_ne^{inx}$,
+        let N = max($N_1,N_2$) and $a_n,b_n$ = 0 if n $\geq$ $N_1,N_2$
+        respectively:
+
+        \hspace{0.5cm}
+        $P_1(x) + P_2(x)$
+        = $\sum_{n=-N}^{N} (a_n+b_n)e^{inx}$
+        so $P_1(x) + P_2(x)$ $\in$ $\mathscr{A}$
+
+        \hspace{0.5cm}
+        $P_1(x) P_2(x)$
+        = $\sum_{n=-2N}^{n=2N} d_ne^{inx}$ 
+        where $d_n$ = $\sum_{k=-N}^N a_k b_{n-k}$
+        so $P_1(x) P_2(x)$ $\in$ $\mathscr{A}$
+
+        \hspace{0.5cm}
+        $cP_1(x)$
+        = $\sum_{n=-N_1}^{N_1} (ca_n)e^{inx}$
+        where $ca_n$ $\in$ $\mathbb{C}$
+        so $cP_1(x)$ $\in$ $\mathscr{A}$
+
+        Also, $\mathscr{A}$ is self-adjoint since:
+
+        \hspace{0.5cm}
+        $\overline{P_1(x)}$
+        = $\sum_{n=-N_1}^{N_1} \overline{a_n}e^{-inx}$
+        = $\sum_{n=-N_1}^{N_1} \overline{a_{-n}}e^{inx}$
+        where $\overline{a_{-n}}$ $\in$ $\mathbb{C}$
+        so $\overline{P_1(x)}$ $\in$ $\mathscr{A}$
+
+        Also, $\mathscr{A}$ separates points on T since any two points on T
+        are distinct and $\mathscr{A}$ vanishes at no point of T since (0,0)
+        does not exist on the complex unit circle.
+        For $\pi > \epsilon > 0$, since the mapping x $\rightarrow$ $e^{ix}$
+        is 1-1 from [x+$\epsilon$,x+$2\pi - \epsilon$], then
+        $\mathscr{A}$ separates points and vanishes at no point on
+        [x+$\epsilon$,x+$2\pi - \epsilon$].
+
+        Thus, by {\color{red} theorem 14.7.9}, then $\mathscr{B}$,
+        the set of all uniformly convergent P(x) from $\mathscr{A}$,
+        consist of all complex continuous f on [x+$\epsilon$,x+$2\pi - \epsilon$].
+
+        So there is a P(x) such that P(x) converges uniformly to f
+        so for all t $\in$ [x,x+$2\pi$], then $|P(t) - f(t)| < \epsilon$.
+        Since f has a period of $2\pi$, then for all $x \in \mathbb{R}$,
+        then $|P(t) - f(t)| < \epsilon$.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{definition}{$L^p$ Space}{14cm}
+        For p $\geq$ 1, let $L^p$
+        = \{ f: [a,b] $\rightarrow$ $\mathbb{C}$ {\color{lblue} $|$}
+        $||f||_p$ = $[\int_a^b |f(x)|^p dx]^{\frac{1}{p}}$ $<$ $\infty$ \}.
+    \end{definition}
+
+    \vspace{0.2cm}
+
+    \hspace{0.9cm}
+    For complex f,g $\in$ $\mathscr{R}$:
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item {\color{lblue} Holder's Inequality}:        
+            If $\frac{1}{p} + \frac{1}{q}$ = 1 where p,g $\geq$ 1, then
+            $||fg||_1$ $\leq$ $||f||_p ||g||_q$        
+    
+            \begin{proof}[13.5cm]
+                {\color{red} Claim}: If a,b $\geq$ 0,
+                then ab $\leq$ $\frac{a^p}{p} + \frac{b^q}{q}$
+                and equality only if $a^p = b^q$.
+                
+                Take y = f(x) = $x^{p-1}$ for x $\in$ [0,a]
+                and x = f$^{-1}$(y) = $\sqrt[p-1]{y}$ for y $\in$ [0,b].
+
+                The total area is
+                $\int_0^a x^{p-1} dx$ + $\int_0^b y^{\frac{1}{p-1}} dy$
+                = $\frac{a^p}{p} + \frac{p-1}{p}b^{\frac{p}{p-1}}$
+                = $\frac{a^p}{p} + \frac{b^q}{q}$.
+
+                Graphing each function on their respective axes,
+                it is shown that regardless if $a^{p-1} > b$
+                or $a^{p-1} < b$, the total area is greater than ab
+                and equality holds only if $a^{p-1}$ = b
+                so $b^q$ = $a^{(p-1)q}$ = $a^{(p-1)\frac{p}{p-1}}$ = $a^p$.
+
+                \rule[0.1cm]{13.3cm}{0.01cm}
+
+                \hspace{0.5cm}
+                $\frac{1}{||f||_p ||g||_q} ||fg||_1$
+                = $\frac{1}{||f||_p ||g||_q} \int$ $|f g|$ dx
+                = $\frac{1}{||f||_p ||g||_q} \int$ $|f||g|$ dx
+
+                \hspace{3.1cm}
+                = $\int$ $\frac{|f|}{||f||_p} \frac{|g|}{||g||_q}$ dx
+                $\leq$ $\int$ $\frac{|f|^p}{||f||_p^p p}
+                                + \frac{|g|^q}{||g||_q^q q}$ dx
+
+                \hspace{3.1cm}
+                = $\frac{1}{||f||_p^p p} \int$ $|f|^p$ dx
+                    + $\frac{1}{||g||_q^q q} \int$ $|g|^q$ dx
+                
+                \hspace{3.1cm}
+                = $\frac{1}{||f||_p^p p} ||f||_p^p$
+                    + $\frac{1}{||g||_q^q q} ||g||_q^q$
+                = $\frac{1}{p} + \frac{1}{q}$ = 1
+
+                Since a = $\frac{|f|}{||f||_p}$
+                and b = $\frac{|g|}{||g||_q}$, then equality holds only if
+                $\frac{|f|^p}{||f||_p^p}$ = $\frac{|g|^q}{||g||_q^q}$.
+            \end{proof}
+
+        \item {\color{lblue} Minkowski's Inequality}:
+            $||f+g||_p$ $\leq$ $||f||_p + ||g||_p$
+
+            \begin{proof}[13.5cm]
+                Since f,g $\in$ $\mathscr{R}$, then $|f+g|^p$ $\in$ $\mathscr{R}$.
+                By Holder's Inequality:
+
+                \hspace{0.5cm}
+                $||f+g||_p^p$
+                = $\int_a^b |f(x)+g(x)|^p dx$
+                = $\int_a^b |f(x)+g(x)| |f(x)+g(x)|^{p-1} dx$
+
+                \hspace{0.5cm}
+                $\leq$ $\int_a^b (|f(x)|+|g(x)|) |f(x)+g(x)|^{p-1} dx$
+
+                \hspace{0.5cm}
+                $\leq$ $\int_a^b |f(x)| |f(x)+g(x)|^{p-1} dx
+                        + \int_a^b |g(x)| |f(x)+g(x)|^{p-1} dx$
+
+                \hspace{0.5cm}
+                $\leq$ $([\int_a^b |f(x)|^p dx]^{\frac{1}{p}}
+                        + [\int_a^b |g(x)|^p dx]^{\frac{1}{p}})
+                    (\int_a^b |f(x)+g(x)|^{p-1(\frac{p}{p-1})} dx)^{1-\frac{1}{p}}$
+
+                \hspace{0.5cm}
+                = $(||f||_p + ||g||_p) ||f+g||_p^{p-1}$
+            \end{proof}
+    \end{enumerate}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}
+    {For integrable f, there are continuous g where f-g $\in$ $L^2$}{14cm}
+        Let f $\in$ $\mathscr{R}$ on [a,b]. Then for $\epsilon > 0$, there is a
+        continuous g where:
+        
+        \hspace{0.5cm}
+        g(a) = f(a)
+        \hspace{1cm}
+        g(b) = f(b)
+        \hspace{1cm}
+        $||f(x)-g(x)||_2 < \epsilon$
+    \end{wtheorem}
+
+    \begin{proof}
+        Since f $\in$ $\mathscr{R}$, then $|f(x)| < M$. For $\epsilon> 0$,
+        there is a partition P =\{$x_0,...,x_n$\} of [a,b]:
+
+        \hspace{0.5cm}
+        U(P,f) - L(P,f)
+        = $\sum_{i=1}^n (M_i - m_i)\Delta x_i$
+        $<$ $\frac{\epsilon^2}{2M}$
+
+        Let g(t) = $\frac{x_i-t}{\Delta x_i} f(x_{i-1})
+                    + \frac{t-x_{i-1}}{\Delta x_i} f(x_i)$
+        for t $\in$ [$x_{i-1},x_i$] which is continuous on [a,b] since:
+
+        \hspace{0.5cm}
+        g($x_i+$) = f($x_i$) = g($x_i-$)
+        \hspace{1cm}
+        $\Rightarrow$
+        \hspace{1cm}
+        g($x_i$) = f($x_i$)
+        so g(a) = f(a) , g(b) = f(b)
+
+        Thus, for t $\in$ [$x_{i-1},x_i$]:
+
+        \hspace{0.5cm}
+        $|f(t) - g(t)|$
+        = $|f(t) - \frac{x_i-t}{\Delta x_i} f(x_{i-1})
+            - \frac{t-x_{i-1}}{\Delta x_i} f(x_i)|$
+
+        \hspace{0.5cm}
+        = $|\frac{x_i-t}{\Delta x_i} [f(t) - f(x_{i-1})]
+            + \frac{t-x_{i-1}}{\Delta x_i} [f(t) - f(x_i)]|$
+
+        \hspace{0.5cm}
+        $\leq$ $|\frac{x_i-t}{\Delta x_i}| |f(t) - f(x_{i-1})|
+                + |\frac{t-x_{i-1}}{\Delta x_i}| |f(t) - f(x_i)|$
+        = $M_i - m_i$
+
+        Since g is continuous, then g $\in$ $\mathscr{R}$ and thus, $|f(x)-g(x)|^2$
+        $\in$ $\mathscr{R}$. Thus:
+
+        \hspace{0.5cm}
+        $||f(x)-g(x)||_2$
+        = $[\int_a^b |f(x)-g(x)|^2 dx]^{\frac{1}{2}}$
+        = $\lim_{n \rightarrow \infty}$
+            $[\sum_{i=1}^n \int_{x_{i-1}}^{x_i} |f(t)-g(t)|^2 dt]^{\frac{1}{2}}$
+
+        \hspace{0.5cm}
+        $\leq$ $\lim_{n \rightarrow \infty}$
+            $[\sum_{i=1}^n \int_{x_{i-1}}^{x_i} (M_i - m_i)^2 dt]^{\frac{1}{2}}$
+        $\leq$ $\lim_{n \rightarrow \infty}$
+            $[\sum_{i=1}^n 2M \int_{x_{i-1}}^{x_i} (M_i - m_i) dt]^{\frac{1}{2}}$
+
+        \hspace{0.5cm}
+        = $\lim_{n \rightarrow \infty}$
+            $[2M \sum_{i=1}^n (M_i - m_i) \Delta x_i]^{\frac{1}{2}}$
+        $<$ $\lim_{n \rightarrow \infty}$
+            $[2M \frac{\epsilon^2}{2M}]^{\frac{1}{2}}$
+        = $\epsilon$
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Parseval's Theorem}{14cm}
+        For f,g $\in$ $\mathscr{R}$ with period of $2\pi$ where:
+
+        \hspace{0.5cm}
+        f(x) $\sim$ $\sum_{n=-\infty}^{\infty} c_n e^{inx}$
+        \hspace{1cm}
+        g(x) $\sim$ $\sum_{n=-\infty}^{\infty} \gamma_n e^{inx}$
+        
+        then:
+
+        \hspace{0.5cm}
+        $\lim_{N \rightarrow \infty}$
+        $\frac{1}{2\pi} \int_{-\pi}^{\pi}$
+        $|f(x) - s_N(f;x)|^2$ dx = 0
+
+        \vspace{0.1cm}
+
+        \hspace{0.5cm}
+        $\frac{1}{2\pi} \int_{-\pi}^{\pi}$
+        $f(x) \overline{g(x)}$ dx
+        = $\sum_{n=-\infty}^{\infty} c_n \overline{\gamma_n}$
+
+        \vspace{0.1cm}
+
+        \hspace{0.5cm}
+        $\frac{1}{2\pi} \int_{-\pi}^{\pi}$
+        $|f(x)|^2$ dx
+        = $\sum_{n=-\infty}^{\infty} |c_n|^2$
+    \end{wtheorem}
+
+    \begin{proof} 
+        Since f $\in$ $\mathscr{R}$ on [$x,x+2\pi$] for a fixed
+        x $\in$ $\mathbb{R}$,
+        where f($x$) = f($x+2\pi$), then by {\color{red} theorem 15.5.11},
+        for $\epsilon > 0$, there is a continuous h such that:
+
+        \hspace{0.5cm}
+        $||f(x) - h(x)||_2 < \epsilon$
+
+        Also, h(x) = f(x) and h(x+$2\pi$) = f(x+$2\pi$) for any x $\in$
+        $\mathscr{R}$, and since f($x$) = f($x+2\pi$),
+        then h has a period of $2\pi$.
+        Then by {\color{red} theorem 15.5.9}, there is a trigonometric polynomial
+        P(x) such that for all x $\in$ $\mathbb{R}$:
+
+        \hspace{0.5cm}
+        $|h(x) - P(x)|$ $<$ $\epsilon$
+        \hspace{0.6cm}
+        $\Rightarrow$
+        \hspace{0.6cm}
+        $||h(x) - P(x)||_2$
+        = $[\int_{x}^{x+2\pi} |h(x) - P(x)|^2 dx]^{\frac{1}{2}}$
+        $<$ $\sqrt{2\pi}\epsilon$
+
+        Then by {\color{red} theorem 15.5.3}:
+
+        \hspace{0.5cm}
+        $||h(x) - s_N(h;x)||_2$
+        $\leq$ $||h(x) - P(x)||_2$
+        $<$ $\sqrt{2\pi}\epsilon$
+
+        \hspace{0.5cm}
+        $||s_N(h;x) - s_N(f;x)||_2$
+        = $||s_N(h-f;x)||_2$
+        $\leq$ $||h(x) - f(x)||_2$ $<$ $\epsilon$
+
+        Thus:
+        
+        \hspace{0.5cm}
+        $||f(x) - s_N(f;x)||_2$
+        $\leq$ $||f(x)-h(x)||_2 + ||h(x)-s_N(h;x)||_2 + ||s_N(h;x)-s_N(f;x)||_2$
+        
+        \hspace{3.9cm}
+        $<$ $(2+\sqrt{2\pi})\epsilon$
+
+        \rule[0.1cm]{15.3cm}{0.01cm}
+
+        Note
+        $\frac{1}{2\pi} \int_{-\pi}^{\pi} s_N(f;x)\overline{g(x)} dx$
+        = $\sum_{n=-N}^N [c_n \frac{1}{2\pi}
+            \int_{-\pi}^{\pi} e^{inx}\overline{g(x)} dx]$
+        = $\sum_{n=-N}^N c_n \overline{\gamma_n}$.
+
+        By Holder's Inequality:
+
+        \hspace{0.5cm}
+        $|\int_{-\pi}^{\pi} f(x)\overline{g(x)} dx
+            - \int_{-\pi}^{\pi} s_N(f;x)\overline{g(x)} dx|$
+
+        \hspace{0.5cm}
+        $\leq$ $\int_{-\pi}^{\pi} |f(x) - s_N(f;x)||g(x)| dx$
+
+        \hspace{0.5cm}
+        $\leq$ $[\int_{-\pi}^{\pi} |f(x) - s_N(f;x)|^2 dx]^{\frac{1}{2}}
+                [\int_{-\pi}^{\pi} |g(x)|^2 dx]^{\frac{1}{2}}$
+
+        \hspace{0.5cm}
+        = $||f(x) -s_N(f;x)||_2 ||g(x)||_2$
+
+        Since g $\in$ $\mathscr{R}$, then $|g|^2$ $\in$ $\mathscr{R}$
+        and thus, $||g(x)||_2$ is bounded.
+
+        Since $\lim_{N \rightarrow \infty}$ $||f(x) - s_N(f;x)||_2$ = 0, then:
+
+        \hspace{0.2cm}
+        $\frac{1}{2\pi} \int_{-\pi}^{\pi} f(x)\overline{g(x)} dx$
+        = $\frac{1}{2\pi} \int_{-\pi}^{\pi} s_N(f;x)\overline{g(x)} dx$
+        = $\lim_{N \rightarrow \infty} \sum_{n=-N}^N c_n \overline{\gamma_n}$
+        = $\sum_{n=-\infty}^{\infty} c_n \overline{\gamma_n}$
+
+        \rule[0.1cm]{15.3cm}{0.01cm}
+
+        $\frac{1}{2\pi} \int_{-\pi}^{\pi} |f(x)|^2 dx$
+        = $\frac{1}{2\pi} \int_{-\pi}^{\pi} f(x)\overline{f(x)} dx$
+        = $\sum_{n=-\infty}^{\infty} c_n \overline{c_n}$
+        = $\sum_{n=-\infty}^{\infty} |c_n|^2$
+    \end{proof}    
+
+
+
+
+
+
+
+
+
+
