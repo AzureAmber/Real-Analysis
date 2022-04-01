@@ -1,5 +1,5 @@
-# Fall-Real-Analysis
-Northwestern University 2021 Fall
+# Real-Analysis
+Northwestern University 2021
 
 Content Covered: <br />
     <ul>
