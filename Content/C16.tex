@@ -1,6 +1,6 @@
 \newpage
 
-\section[Day 7: Multivariable Functions]{ Multivariable Functions }
+\section[Day 16: Multivariable Functions]{ Multivariable Functions }
 
 \subsection{ Linear Transformations }
 
@@ -1388,6 +1388,139 @@
 
         Thus, f $\in$ $\mathscr{C}'(E)$.
     \end{proof}
+
+    \newpage
+
+
+
+
+
+\subsection{ The Contraction Principle }
+
+    \begin{definition}{Contraction}{14cm}
+        For metric space X with metric d, then $\phi$: X $\rightarrow$ X
+        is a {\color{lblue} contraction} if there is c $\in$ (0,1) such that
+        for all x,y $\in$ X:
+
+        \hspace{0.5cm}
+        d($\phi$(x),$\phi$(y)) $\leq$ c d(x,y)
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Banach's Fixed Point Theorem}{14cm}
+        If X is a complete metric space and $\phi$ is a contraction
+        of X into X, then there is a unique x $\in$ X
+        such that $\phi$(x) = x
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $\phi$(x) = x and $\phi$(y) = y. Since $\phi$ is a contraction,
+        then d(x,y) = d($\phi$(x),$\phi$(y)) $\leq$ c d(x,y)
+        would hold true only if d(x,y) = 0 so x = y.
+        Thus, such a $\phi$(x) = x is unique.
+
+        For a fixed $x_0$ $\in$ X, let \{$x_n$\} have
+        $x_{n+1}$ = $\phi(x_n)$. Thus, for some c $\in$ (0,1):
+
+        \hspace{0.5cm}
+        d($x_{n+1}$,$x_n$)
+        = d($\phi(x_n)$,$\phi(x_{n-1})$)
+        $\leq$ c d($x_n,x_{n-1}$)
+
+        \hspace{2.6cm}
+        = c d($\phi(x_{n-1}),\phi(x_{n-2})$)
+        = ...
+        = $c^n$ d($x_1,x_0$)
+
+        Thus, for $\epsilon > 0$, choose N such that
+        $d(x_1,x_0)\frac{c^N}{(1-c)} < \epsilon$.
+        Then for m $>$ n $\geq$ N:
+
+        \hspace{0.5cm}
+        d($x_{m}$,$x_n$)
+        $\leq$ $\sum_{i=n}^{m-1}$ d($x_{i+1}$,$x_i$)
+        $\leq$ $\sum_{i=n}^{m-1}$ $c^i$ d($x_1,x_0$)
+
+        \hspace{2.25cm}
+        $\leq$ d($x_1,x_0$) $\frac{c^n}{1-c}$
+        $\leq$ d($x_1,x_0$) $\frac{c^N}{1-c}$
+        $<$ $\epsilon$
+
+        Thus, \{$x_n$\} is a Cauchy Sequence and since X is complete,
+        then \{$x_n$\} converges to a x $\in$ X.
+        Note a contraction is uniformly continuous so:
+
+        \hspace{0.5cm}
+        $\phi(x)$
+        = $\lim_{n \rightarrow \infty} \phi(x_n)$
+        = $\lim_{n \rightarrow \infty} x_{n+1}$
+        = x
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+\subsection{ Inverse Function Theorem }
+
+    \begin{wtheorem}{Inverse Function Theorem}{14cm}
+        Suppose f: E $\subset$ $\mathbb{R}^n$ $\rightarrow$ $\mathbb{R}^n$
+        is $\mathscr{C}'(E)$ where f(a) = b and
+        f'(a) is invertible for some a $\in$ E.
+
+        \begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
+            \item There exists open U,V $\subset$ $\mathbb{R}^n$ such that
+                f: a $\in$ U $\rightarrow$ b $\in$ V is 1-1 and onto
+
+            \item If g: V $\rightarrow$ U is the inverse of f so g(f(x)) = x,
+                then g $\in$ $\mathscr{C}'(V)$
+        \end{enumerate}
+    \end{wtheorem}
+
+    \begin{proof}
+        
+    \end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

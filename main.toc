@@ -48,7 +48,7 @@
 \contentsline {subsection}{\numberline {11.4} Continuity and Connectedness }{52}{subsection.11.4}%
 \contentsline {subsection}{\numberline {11.5} Discontinuities }{53}{subsection.11.5}%
 \contentsline {subsection}{\numberline {11.6} Monotonic Functions }{53}{subsection.11.6}%
-\contentsline {subsection}{\numberline {11.7} Infinite Limits $\backslash $ Limits at Infinity }{54}{subsection.11.7}%
+\contentsline {subsection}{\numberline {11.7} Infinite Limits / Limits at Infinity }{54}{subsection.11.7}%
 \contentsline {section}{\numberline {12}Day 12: Differentiation}{55}{section.12}%
 \contentsline {subsection}{\numberline {12.1} Derivative of a function }{55}{subsection.12.1}%
 \contentsline {subsection}{\numberline {12.2} Mean Value Theorems}{56}{subsection.12.2}%
@@ -65,7 +65,7 @@
 \contentsline {subsection}{\numberline {13.5} Fundamental Theorem of Calculus }{68}{subsection.13.5}%
 \contentsline {subsection}{\numberline {13.6} Vector-Valued Functions }{70}{subsection.13.6}%
 \contentsline {subsection}{\numberline {13.7} Line Integrals }{71}{subsection.13.7}%
-\contentsline {section}{\numberline {14}Day 5: Sequences \textbackslash \ Series of Functions}{72}{section.14}%
+\contentsline {section}{\numberline {14}Day 14: Sequences \textbackslash \ Series of Functions}{72}{section.14}%
 \contentsline {subsection}{\numberline {14.1} Convergence }{72}{subsection.14.1}%
 \contentsline {subsection}{\numberline {14.2} Uniform Convergence }{72}{subsection.14.2}%
 \contentsline {subsection}{\numberline {14.3} Continuity }{74}{subsection.14.3}%
@@ -73,12 +73,14 @@
 \contentsline {subsection}{\numberline {14.5} Differentiation }{77}{subsection.14.5}%
 \contentsline {subsection}{\numberline {14.6} Equicontinuous }{78}{subsection.14.6}%
 \contentsline {subsection}{\numberline {14.7} Stone-Weierstrass }{80}{subsection.14.7}%
-\contentsline {section}{\numberline {15}Day 6: Special Functions}{83}{section.15}%
+\contentsline {section}{\numberline {15}Day 15: Special Functions}{83}{section.15}%
 \contentsline {subsection}{\numberline {15.1} Power Series }{83}{subsection.15.1}%
 \contentsline {subsection}{\numberline {15.2} Exponential and Logarithmic Functions }{85}{subsection.15.2}%
 \contentsline {subsection}{\numberline {15.3} Trigonometric Function }{87}{subsection.15.3}%
 \contentsline {subsection}{\numberline {15.4} Algebraic Completeness of the Complex Field }{88}{subsection.15.4}%
 \contentsline {subsection}{\numberline {15.5} Fourier Series }{89}{subsection.15.5}%
-\contentsline {section}{\numberline {16}Day 7: Multivariable Functions}{95}{section.16}%
+\contentsline {section}{\numberline {16}Day 16: Multivariable Functions}{95}{section.16}%
 \contentsline {subsection}{\numberline {16.1} Linear Transformations }{95}{subsection.16.1}%
 \contentsline {subsection}{\numberline {16.2} Differentiation }{101}{subsection.16.2}%
+\contentsline {subsection}{\numberline {16.3} The Contraction Principle }{106}{subsection.16.3}%
+\contentsline {subsection}{\numberline {16.4} Inverse Function Theorem }{106}{subsection.16.4}%
