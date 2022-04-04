@@ -1464,24 +1464,135 @@
 
 
 
+    \begin{example}
+        For y' = y where y(0) = 1, show y(x) = $e^x$ for x near 0.
+    \end{example}
+
+    \begin{tbox}
+        Take the metric space of continuous functions, C[a,b],
+        with the sup metric as defined in {\color{blue} definition 14.3.4}
+        where 0 $\in$ [a,b].
+        By {\color{red} theorem 14.3.5}, C[a,b] is complete.
+        
+        Then for each f $\in$ C[a.b], let Tf(x) = 1 + $\int_0^x$ f(t) dt
+        for x $\in$ [a,b].
+        
+        \hspace{0.5cm}
+        $|Tf(x) - Tg(x)|$
+        = $|\int_0^x f(t)-g(t) dt|$
+        $\leq$ $\int_{\text{min}(0,x)}^{\text{max}(0,x)} | f(t)-g(t) | dt$
+
+        \hspace{3.55cm}
+        $\leq$ $|x-0|$ d(f,g)
+        $\leq$ (b-a) d(f,g)
+
+        Thus, d(Tf(x),Tg(x)) $\leq$ (b-a) d(f,g) so for b-a $<$ 1, then T
+        is a contraction.
+        By {\color{red} theorem 16.3.2},
+        there is a unique y where y(x) = 1 + $\int_0^x$ y(t) dt.
+        To determine y, use the process defined in {\color{red} theorem 16.3.2}'s
+        proof referred as the Picard iteration. Using any continuous f(x),
+        let's take f(x) = 1. Then:
+
+        \hspace{0.5cm}
+        T(1)
+        = 1 + $\int_0^x$ 1 dt
+        = 1 + x
+
+        \hspace{0.5cm}
+        T(T(1))
+        = 1 + $\int_0^x$ 1+t dt
+        = 1 + x + $\frac{1}{2}x^2$
+
+        \hspace{0.5cm}
+        T(T(T(1)))
+        = 1 + $\int_0^x$ 1+t+$\frac{1}{2}t^2$ dt
+        = 1 + x + $\frac{1}{2}x^2$ + $\frac{1}{6}x^3$
+
+        Thus, by {\color{blue} definition 15.2.1}, y(x)
+        = $\lim_{n \rightarrow \infty}$ T$^n(1)$
+        = $\sum_{k=0}^{\infty}$ $\frac{x^k}{k!}$ = $e^x$.
+    \end{tbox}
+
+    \newpage
+
+
+
 \subsection{ Inverse Function Theorem }
 
     \begin{wtheorem}{Inverse Function Theorem}{14cm}
         Suppose f: E $\subset$ $\mathbb{R}^n$ $\rightarrow$ $\mathbb{R}^n$
         is $\mathscr{C}'(E)$ where f(a) = b and
-        f'(a) is invertible for some a $\in$ E.
+        Df(a) is invertible for some a $\in$ E.
 
-        \begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
-            \item There exists open U,V $\subset$ $\mathbb{R}^n$ such that
-                f: a $\in$ U $\rightarrow$ b $\in$ V is 1-1 and onto
-
-            \item If g: V $\rightarrow$ U is the inverse of f so g(f(x)) = x,
-                then g $\in$ $\mathscr{C}'(V)$
-        \end{enumerate}
+        Then there exists open U,V $\subset$ $\mathbb{R}^n$ such that
+        f: a $\in$ U $\rightarrow$ b $\in$ V is invertible.
     \end{wtheorem}
 
     \begin{proof}
+        Since Df(a) is invertible, then choose $\lambda$
+        such that $2\lambda ||[Df(a)]^{-1}||$ = 1.
+        Since f $\in$ $\mathscr{C}'(E)$, there is a $N_r(a)$ $\subset$ E
+        such that for all x $\in$ $N_r(a)$,
+        then $||Df(x) - Df(a)||$ $<$ $\lambda$.
+
+        Let $\phi(x)$ = x + $[Df(a)]^{-1}$(y-f(x)) for x $\in$ E and
+        y $\in$ $\mathbb{R}^n$.
+        Thus, $\phi(x)$ = x if and only if y = f(x).
+        Since f is differentiable, then $\phi$ is differentiable where:
         
+        \hspace{0.5cm}
+        $\phi'(x)$
+        = $I_{n \times n}$ - $[Df(a)]^{-1}$Df(x)
+        = $[Df(a)]^{-1}$(Df(a) - Df(x))
+
+        \hspace{0.5cm}
+        $||\phi'(x)||$
+        = $||[Df(a)]^{-1}$(Df(a)-Df(x))$||$
+        $\leq$ $||[Df(a)]^{-1}||$ $||$Df(a)-Df(x)$||$
+        $<$ $\frac{1}{2\lambda} \lambda$
+        = $\frac{1}{2}$
+
+        Thus, by {\color{red} theorem 16.2.9}, then for all
+        $x_1,x_2$ $\in$ $N_r(a)$:
+
+        \hspace{0.5cm}
+        $|\phi(x_2) - \phi(x_1)|$
+        $\leq$ $\frac{1}{2}|x_2 - x_1|$
+
+        so $\phi$ is a contraction and since $N_r(a)$ $\subset$ $\mathbb{R}^n$
+        is complete, then by {\color{red} theorem 16.3.2},
+        there is a unique x $\in$ $N_r(a)$ where
+        $\phi(x)$ = x so y = f(x) for some unique x.
+
+        Let U = $N_r(a)$ and V = f($N_r(a)$) so f is 1-1 in U and onto V
+        so f is invertible on U.
+        
+        To show V is open, let $y_0$ $\in$ V where $y_0$ = f($x_0$) for
+        some $x_0$ $\in$ U.
+        
+        Since f is invertible on U, then for y where $|y - y_0| < \lambda r$:
+
+        \hspace{0.5cm}
+        $|\phi(x_0) - x_0|$
+        = $|[Df(x_0)]^{-1}(y-f(x_0))|$
+        $\leq$ $||[Df(x_0)]^{-1}||$ $|y-y_0|$
+        $<$ $\frac{1}{2\lambda} \lambda r$
+        = $\frac{r}{2}$
+
+        Thus, for x $\in$ $N_r(x_0)$:
+
+        \hspace{0.5cm}
+        $|\phi(x) - x_0|$
+        $\leq$ $|\phi(x) - \phi(x_0)|$ + $|\phi(x_0) - x_0|$
+        $<$ $\frac{1}{2}|x-x_0|$ + $\frac{r}{2}$
+        $<$ $\frac{1}{2}r + \frac{r}{2}$
+        = r
+
+        so $\phi(x)$ $\in$ $N_r(x_0)$.
+        Thus, as shown above, there is a unique x $\in$ $N_r(x_0)$
+        where $\phi(x)$ = x so y = f(x) $\in$ V
+        where also y $\in$ $N_{\lambda r}(y_0)$.
     \end{proof}
 
 

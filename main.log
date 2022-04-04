@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.30)  1 APR 2022 00:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.30)  4 APR 2022 03:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Tokyo/Desktop/Clones/Fall-Real-Analysis/main.tex
-(c:/Users/Tokyo/Desktop/Clones/Fall-Real-Analysis/main.tex
+**c:/Users/Tokyo/Desktop/Clones/Real-Analysis/main.tex
+(c:/Users/Tokyo/Desktop/Clones/Real-Analysis/main.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-08-27> (c:/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
@@ -2157,25 +2157,35 @@ Overfull \hbox (14.22636pt too wide) in paragraph at lines 1461--1461
 [] 
  []
 
-) (./Bibliography/Bibliography.tex [106]) 
+
+Overfull \hbox (14.22636pt too wide) in paragraph at lines 1515--1515
+[] 
+ []
+
+[106]
+Overfull \hbox (14.22636pt too wide) in paragraph at lines 1596--1596
+[] 
+ []
+
+) (./Bibliography/Bibliography.tex [107]) 
 AED: lastpage setting LastPage
-[107] (./main.aux)
+[108] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 344A19D9F445A7016987AE6F677085D7;15160.
  ) 
 Here is how much of TeX's memory you used:
- 13899 strings out of 478599
- 208900 string characters out of 5858101
+ 13898 strings out of 478599
+ 208877 string characters out of 5858101
  579990 words of memory out of 5000000
  31047 multiletter control sequences out of 15000+600000
  419271 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,20n,69p,400b,542s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,20n,69p,395b,542s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (107 pages, 1242560 bytes).
+Output written on main.pdf (108 pages, 1247249 bytes).
 PDF statistics:
- 1342 PDF objects out of 1440 (max. 8388607)
+ 1343 PDF objects out of 1440 (max. 8388607)
  1125 compressed objects within 12 object streams
- 391 named destinations out of 1000 (max. 500000)
+ 390 named destinations out of 1000 (max. 500000)
  811 words of extra memory for PDF output out of 10000 (max. 10000000)
 
