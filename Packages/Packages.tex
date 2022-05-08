@@ -32,7 +32,7 @@
 \usepackage{fancyhdr}
     \pagestyle{fancy}
     \fancyhf{}
-    \lhead{\small \leftmark}       % adds chapter name to left header
+    \lhead{\small \nouppercase{\leftmark}}       % adds chapter name to left header
     \rhead{\small \rightmark}      % adds section name to right header
     \cfoot{Page $\thepage$ out of $\pageref*{LastPage}$}    % adds page numbers
 
@@ -117,8 +117,13 @@
 \usepackage{boxedminipage}
 % -----------------------------------------------------------------------------
 								% Include crossed out statements
-\usepackage[thicklines]{cancel}
-\renewcommand\CancelColor{\color{red}}
+\usepackage{cancel}
+\newcommand\ccancel[2][black]{
+    \let\OldcancelColor\CancelColor
+    \renewcommand\CancelColor{\color{#1}}
+    \cancel{#2}
+    \renewcommand\CancelColor{\OldcancelColor}
+}
     % \cancel{text} = strikethrough from bot to top
     % \bcancel{text} = strikethrough from top to bot
     % \xcancel{text} = strikethrough form X

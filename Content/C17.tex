@@ -1,0 +1,2104 @@
+\newpage
+
+\section[Day 17: Lebesgue Measure]{ Lebesgue Measure }
+
+\subsection{ Regulated Integral }
+
+    \begin{definition}{Basic Properties of the Integral}{14cm}
+        Let $\mathcal{V}$ be a vector space of real-valued functions
+        on closed interval I.
+
+        \hspace{0.5cm}
+        If f,g $\in$ $\mathcal{V}$ and c $\in$ $\mathbb{R}$,
+        then $f+g$,$cf$ $\in$ $\mathcal{V}$
+
+        For each f $\in$ $\mathcal{V}$,
+        the integral of f on [a,b] $\subset$ I, $\int_a^b f(x) dx$
+        should satisfy:
+
+        \begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
+            \item {\color{lblue} Linearity}:
+                For f,g $\in$ $\mathcal{V}$ and $c_1,c_2$ $\in$ $\mathbb{R}$:
+            
+                \hspace{0.5cm}
+                $\int_a^b c_1f(x) + c_2g(x) dx$
+                = $c_1 \int_a^b f(x) dx$ + $c_2 \int_a^b g(x) dx$
+
+            \item {\color{lblue} Monotonicity}:
+                For f,g $\in$ $\mathcal{V}$ where g(x) $\leq$ f(x):
+            
+                \hspace{0.5cm}
+                $\int_a^b g(x) dx$ $\leq$ $\int_a^b f(x) dx$
+
+            \item {\color{lblue} Additivity}:
+                For f $\in$ $\mathcal{V}$ and c $\in$ [a,b]:
+            
+                \hspace{0.5cm}
+                $\int_a^b f(x) dx$
+                = $\int_a^c f(x) dx$ + $\int_c^b f(x) dx$
+
+            \item {\color{lblue} Constant}:
+                For f(x) = C:
+            
+                \hspace{0.5cm}
+                $\int_a^b C dx$ = $C(b-a)$
+
+            \item {\color{lblue} Finite Sets}:
+                For f,g $\in$ $\mathcal{V}$ where f(x) = g(x)
+                for all, but finitely many x:
+            
+                \hspace{0.5cm}
+                $\int_a^b f(x) dx$ = $\int_a^b g(x) dx$
+        \end{enumerate}
+
+        It should be noted that all integrals need not satisfy properties
+        3, 4, and 5. However, all integrals consider henceforth will satisfy them.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Absolute Value}{14cm}
+        If f,$|f|$ $\in$ $\mathcal{V}$, then if a $\leq$ b:
+
+        \hspace{0.5cm}
+        $|\int_a^b f(x) dx|$
+        $\leq$ $\int_a^b |f(x)| dx$
+    \end{wtheorem}
+
+    \begin{proof}
+        Since f(x) $\leq$ $|f(x)|$, then by {\color{blue} definition 17.1.1b},
+        $\int_a^b f(x) dx$ $\leq$ $\int_a^b |f(x)| dx$.
+
+        Also, since -f(x) $\leq$ $|f(x)|$, then
+        $\int_a^b -f(x) dx$ $\leq$ $\int_a^b |f(x)| dx$.
+        
+        Since $|\int_a^b f(x) dx|$ is either equal to
+        $\int_a^b f(x) dx$ or $-\int_a^b f(x) dx$, then:
+        
+        \hspace{0.5cm}
+        $|\int_a^b f(x) dx|$ $\leq$ $\int_a^b |f(x)| dx$.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Step Function}{14cm}
+        Function f: [a,b] $\rightarrow$ $\mathbb{R}$
+        is a {\color{lblue} step function} if there is
+        a partition \{$x_0,...,x_n$\}:
+
+        \hspace{0.5cm}
+        a = $x_0$ $<$ $x_1$ $<$ ... $<$ $x_{n-1}$ $<$ $x_n$ = b
+
+        such that f(x) = $c_i$ on $(x_{i-1},x_i)$ for constant $c_i$ 
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Integral of a Step Function}{14cm}
+        If step function f with partition \{$x_0,...,x_n$\} of [a,b]
+        is f(x) = $c_i$ for x $\in$ $(x_{i-1},x_i)$:
+
+        \hspace{0.5cm}
+        $\int_a^b f(x) dx$
+        = $\sum_{i=1}^n$ $c_i(x_i - x_{i-1})$
+    \end{wtheorem}
+
+    \begin{proof}
+        By {\color{blue} definition 17.1.1b},
+        $\int_a^b f(x) dx$
+        = $\sum_{i=1}^n \int_{x_{i-1}}^{x_i} f(x) dx$
+
+        Since f(x) = $c_i$, but finitely many x on $[x_{i-1},x_i]$ (i.e. endpoints):
+
+        \hspace{0.5cm}
+        $\sum_{i=1}^n \int_{x_{i-1}}^{x_i} f(x) dx$
+        = $\sum_{i=1}^n \int_{x_{i-1}}^{x_i} c_i dx$
+        = $\sum_{i=1}^n c_i(x_i - x_{i-1})$
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Step Functions form a Vector Space}{14cm}
+        The collection of all step functions on [a,b] form a vector space
+    \end{wtheorem}
+
+    \begin{proof}
+        Let f,g be step functions with values $c_i$ and $d_j$ on partitions
+        \{$x_0,...,x_n$\} and \{$y_0,...,y_m$\} respectively.
+        Let $k_1,k_2$ $\in$ $\mathbb{R}$.
+        Let partition Z = \{$x_0,...,x_n$\} $\cup$ \{$y_0,...,y_m$\}.
+
+        Then each $[z_{k-1},z_k]$ $\subset$ $[x_{i-1},x_i]$
+        and $[z_{k-1},z_k]$ $\subset$ $[y_{j-1},y_j]$ for some i and j.
+
+        Then $k_1f + k_2g$
+        have value $k_1c_i + k_2d_j$ on $(z_{k-1},z_k)$
+        so $k_1f + k_2g$ is a step function.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Integral of Step Functions are independent of Partition}{14cm}
+        Let step function f have value $c_i$ on partition \{$x_0,...,x_n$\}
+        and value $d_j$ on partition \{$y_0,...,y_m$\}. Then:
+
+        \hspace{0.5cm}
+        $\sum_{i=1}^n c_i(x_i - x_{i-1})$
+        = $\sum_{j=m}^n d_j(y_j - y_{j-1})$
+    \end{wtheorem}
+
+    \begin{proof}
+        Let partition Z = \{$x_0,...,x_n$\} $\cup$ \{$y_0,...,y_m$\}.
+
+        Then each $[z_{k-1},z_k]$ $\subset$ $[x_{i-1},x_i]$
+        and $[z_{k-1},z_k]$ $\subset$ $[y_{j-1},y_j]$ for some i and j.
+
+        Let \{$z_t^*$\} be the set of $z_k$
+        where $[z_{t-1}^*,z_t^*]$
+        = $[z_{k-1},z_k] \cup ... \cup [z_{k+t^*-1},z_{k+t^*}]$
+        = $[x_{i-1},x_i]$.
+
+        \hspace{0.5cm}
+        $\sum_i c_i(x_i - x_{i-1})$
+        = $\sum_t c_i(z_t^* - z_{t-1}^*)$
+    
+        \hspace{0.5cm}
+        = $\sum_k v_k(z_k - z_{k-1})$
+        \hspace{1cm}
+        where $v_k$ = $c_i$ where $[z_{k-1},z_k]$ $\subset$ $[x_{i-1},x_i]$
+
+        Let \{$z_t^{**}$\} be the set of $z_k$
+        where $[z_{t-1}^{**},z_t^{**}]$
+        = $[z_{k-1},z_k] \cup ... \cup [z_{k+t^{**}-1},z_{k+t^{**}}]$
+        = $[y_{j-1},y_j]$.
+
+        \hspace{0.5cm}
+        $\sum_j d_j(y_j - y_{j-1})$
+        = $\sum_t d_i(z_t^{**} - z_{t-1}^{**})$
+    
+        \hspace{0.5cm}
+        = $\sum_k v_k(z_k - z_{k-1})$
+        \hspace{1cm}
+        where $v_k$ = $d_j$ where $[z_{k-1},z_k]$ $\subset$ $[y_{j-1},y_j]$
+
+        Thus,
+        $\sum_i c_i(x_i - x_{i-1})$
+        = $\sum_k v_k(z_k - z_{k-1})$
+        = $\sum_j d_j(y_j - y_{j-1})$.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Regulated Function}{14cm}
+        Function f: [a,b] $\rightarrow$ $\mathbb{R}$
+        is {\color{lblue} regulated} if:
+        
+        \hspace{0.5cm}
+        There is a sequence of step functions \{$f_n$\}
+        that converge uniformly to f
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Regulated Integral}{14cm}
+        Suppose step functions \{$f_n$\} on [a,b] converge uniformly to f.
+        Then \{$\int_a^b f_n(x) dx$\} converges.
+        If step functions \{$g_n$\} also converge uniformly to f:
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $\int_a^b f_n(x) dx$
+        = $\lim_{n \rightarrow \infty}$ $\int_a^b g_n(x) dx$
+
+        Then, the regulated integral of f on [a,b] can be defined:
+
+        \hspace{0.5cm}
+        $\int_a^b f(x) dx$
+        = $\lim_{n \rightarrow \infty}$ $\int_a^b f_n(x) dx$
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $z_n$ = $\int_a^b f_n(x) dx$.
+        
+        Since \{$f_n$\} converges uniformly to f, there is a N where
+        for m,n $\geq$ N and all x $\in$ [a,b]:
+
+        \hspace{0.5cm}
+        $|f_m(x) - f_n(x)|$ $<$ $\frac{\epsilon}{b-a}$
+
+        Thus:
+
+        \hspace{0.5cm}
+        $|z_m - z_n|$
+        = $|\int_a^b f_m(x) dx - \int_a^b f_n(x) dx|$
+        $\leq$ $\int_a^b |f_m(x) - f_n(x)| dx$
+        $<$ $\int_a^b \frac{\epsilon}{b-a} dx$
+        = $\epsilon$
+
+        Since \{$z_n$\} is Cauchy on $\mathbb{R}$, then 
+        \{$z_n$\} converges.
+
+        If \{$g_n$\} converges uniformly to f, then
+        there is a M where for n $\geq$ M and all x $\in$ [a,b]:
+
+        \hspace{0.5cm}
+        $|f_n(x) - f|$ $<$ $\frac{\epsilon}{2(b-a)}$
+        \hspace{1cm}
+        $|g_n(x) - f|$ $<$ $\frac{\epsilon}{2(b-a)}$
+
+        \hspace{0.5cm}
+        $|f_n(x) - g_n(x)|$
+        $\leq$ $|f_n(x) - f|$ + $|f - g_n(x)|$
+        $<$ $\frac{\epsilon}{2(b-a)}$ + $\frac{\epsilon}{2(b-a)}$
+        = $\frac{\epsilon}{b-a}$
+
+        Thus
+        
+        \hspace{0.5cm}
+        $|\int_a^b f(x) dx - \int_a^b f_n(x) dx|$
+        $\leq$ $\int_a^b |f(x) - f_n(x)| dx$
+        $<$ $\int_a^b \frac{\epsilon}{b-a} dx$
+        = $\epsilon$
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Continuous functions are regulated}{14cm}
+        Every continuous function f: [a,b] $\rightarrow$ $\mathbb{R}$
+        is a regulated function
+    \end{wtheorem}
+
+    \begin{proof}
+        Since f is continuous on compact [a,b], then f is uniformly continuous
+        on [a,b].
+
+        Thus for any $\epsilon_n$ = $\frac{1}{2^n}$, there is a $\delta_n$
+        where for $|x-y|$ $<$ $\delta_n$, then $|f(x) - f(y)|$ $<$ $\epsilon_n$.
+
+        For a fixed n, choose a partition \{$x_0,...,x_m$\}
+        such that each $\Delta x_i$ = $\frac{b-a}{m}$ $<$ $\delta_n$.
+
+        Let step function $f_n(x)$ = $f(x_i)$ for x $\in$ $[x_{i-1},x_i)$
+        for i = \{1,...,m\}.
+        For x $\in$ [a,b], there is an i such that
+        x $\in$ $[x_{i-1},x_i)$ so
+        $|f(x) - f_n(x)|$
+        = $|f(x) - f(x_i)|$
+        $<$ $\epsilon_n$.
+
+        Thus, \{$f_n$\} converges uniformly to f, then f is regulated.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Lower and Upper Riemann Limit Redefined}{14cm}
+        Let f be a bounded on [a,b]. Let:
+
+        \hspace{0.5cm}
+        $\mathcal{U}(f)$
+        = \{ u(x) $|$ f(x) $\leq$ u(x) for all x , u(x) is a step function \}.
+        
+        \hspace{0.5cm}
+        $\mathcal{L}(f)$
+        = \{ v(x) $|$ f(x) $\geq$ v(x) for all x , v(x) is a step function \}.
+        
+        Then,
+        $\underset{v \in \mathcal{L}(f)}{\text{sup}}$($\int_a^b v(x) dx$)
+        $\leq$ $\underset{u \in \mathcal{U}(f)}{\text{inf}}$($\int_a^b u(x) dx$).
+    \end{wtheorem}
+
+    \begin{proof}
+        Since v(x) $\leq$ f(x) $\leq$ u(x), then
+        $\int_a^b v(x) dx$ $\leq$ $\int_a^b u(x) dx$.
+        
+        Since $\int_a^b v(x) dx$ $\leq$ $\int_a^b u(x) dx$ holds for
+        any u(x) $\geq$ v(x), then:
+
+        \hspace{0.5cm}
+        $\int_a^b v(x) dx$
+        $\leq$ $\text{inf}$($\int_a^b u(x) dx$)
+
+        Also, since $\int_a^b v(x) dx$
+        $\leq$ $\text{inf}$($\int_a^b u(x) dx$)
+        holds for any v(x) $\leq$ u(x), then:
+
+        \hspace{0.5cm}
+        $\text{sup}$($\int_a^b v(x) dx$)
+        $\leq$ $\text{inf}$($\int_a^b u(x) dx$)
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Riemann Integral Redefined}{14cm}
+        Let f be a bounded on [a,b]. Let:
+
+        \hspace{0.5cm}
+        $\mathcal{U}(f)$
+        = \{ u(x) $|$ f(x) $\leq$ u(x) for all x , u(x) is a step function \}.
+        
+        \hspace{0.5cm}
+        $\mathcal{L}(f)$
+        = \{ v(x) $|$ f(x) $\geq$ v(x) for all x , v(x) is a step function \}.
+
+        Then f is Riemann integrable if:
+
+        \hspace{0.5cm}
+        $\underset{v \in \mathcal{L}(f)}{\text{sup}}$($\int_a^b v(x) dx$)
+        = $\underset{u \in \mathcal{U}(f)}{\text{inf}}$($\int_a^b u(x) dx$)
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Riemann-Integrability $\epsilon$ Definition Redefined}{14cm}
+        A bounded f on [a,b] is Riemann integrable if and only if:
+
+        \hspace{0.5cm}
+        For $\epsilon > 0$, there are step functions $v(x),u(x)$
+        where v(x) $\leq$ f(x) $\leq$ u(x):
+
+        \hspace{1cm}
+        $\int_a^b u(x) dx$ - $\int_a^b v(x) dx$ $<$ $\epsilon$
+    \end{wtheorem}
+
+    \begin{proof}
+        If f is Riemann integrable, then for $\epsilon > 0$,
+        there are step functions u(x),v(x):
+
+        \hspace{0.5cm}
+        $|\int_a^b f(x) dx - \int_a^b u(x) dx|$ $<$ $\frac{\epsilon}{2}$
+        \hspace{1cm}
+        $|\int_a^b f(x) dx - \int_a^b v(x) dx|$ $<$ $\frac{\epsilon}{2}$
+
+        Thus:
+
+        \hspace{0.5cm}
+        $|\int_a^b u(x) dx - \int_a^b v(x) dx|$
+        $\leq$ $|\int_a^b u(x) dx - \int_a^b f(x) dx|$
+                + $|\int_a^b f(x) dx - \int_a^b v(x) dx|$
+        $<$ $\epsilon$
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        If for $\epsilon > 0$, there are step functions $v(x),u(x)$
+        where v(x) $\leq$ f(x) $\leq$ u(x):
+
+        \hspace{0.5cm}
+        $\int_a^b u(x) dx$ - $\int_a^b v(x) dx$ $<$ $\epsilon$
+
+        Since
+        $\text{sup}$($\int_a^b v(x) dx$)
+        $\geq$ $\int_a^b u(x) dx$
+        and
+        $\text{inf}$($\int_a^b u(x) dx$)
+        $\leq$ $\int_a^b v(x) dx$, then:
+
+        \hspace{0.5cm}
+        $\text{inf}$($\int_a^b u(x) dx$) - $\text{sup}$($\int_a^b v(x) dx$)
+        $\leq$ $\int_a^b u(x) dx$ - $\int_a^b v(x) dx$ $<$ $\epsilon$
+
+        Thus, $\text{sup}$($\int_a^b v(x) dx$)
+        = $\text{inf}$($\int_a^b u(x) dx$)
+        so f is Riemann integrable.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Regulated functions are Riemann Integrable}{14cm}
+        Every regulated function is Riemann integrable where
+        the regulated integral is equal to the Riemann integral
+    \end{wtheorem}
+
+    \begin{proof}
+        Since f is regulated, then for $\epsilon_n$ = $\frac{1}{2^n}$, there is
+        a step function $f_n$ such that for all x $\in$ [a,b] so
+        $|f(x) - f_n(x)|$ $<$ $\epsilon_n$.
+        Thus, $\int_a^b f(x) dx$
+        = $\lim_{n \rightarrow \infty}$ $\int_a^b f_n(x) dx$.
+
+        Let step functions $u_n(x)$ = $f_n(x) + \frac{1}{2^n}$
+        and $v_n(x)$ = $f_n(x) - \frac{1}{2^n}$
+        so $v_n(x)$ $<$ f(x) $<$ $u_n(x)$ for all x $\in$ [a,b].
+        Then:
+
+        \hspace{0.5cm}
+        $|\int_a^b u_n(x) dx - \int_a^b v_n(x) dx|$
+        $\leq$ $\int_a^b |u_n(x) - v_n(x)| dx$
+        = $\int_a^b \frac{1}{2^{n-1}} dx$
+        = $\frac{b-a}{2^{n-1}}$
+
+        Thus, by {\color{red} theorem 17.1.12}, f is Riemann integrable. Since:
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $\int_a^b u_n(x) dx$
+        = $\lim_{n \rightarrow \infty}$ $\int_a^b f_n(x) dx$
+            + $\lim_{n \rightarrow \infty}$ $\int_a^b \frac{1}{2^n} dx$
+        = $\lim_{n \rightarrow \infty}$ $\int_a^b f_n(x) dx$
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $\int_a^b v_n(x) dx$
+        = $\lim_{n \rightarrow \infty}$ $\int_a^b f_n(x) dx$
+            - $\lim_{n \rightarrow \infty}$ $\int_a^b \frac{1}{2^n} dx$
+        = $\lim_{n \rightarrow \infty}$ $\int_a^b f_n(x) dx$
+
+        Thus, the Riemann integral of f is
+        $\lim_{n \rightarrow \infty}$ $\int_a^b f_n(x) dx$
+        so the regulated integral is equal to the Riemann integral.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Riemann Intergrable functions form a vector space}{14cm}
+        The set $\mathcal{R}$ of bounded Riemann integrable functions on [a,b] is
+        a vector space that contains the vector space of regulated
+        functions 
+    \end{wtheorem}
+
+    \begin{proof}
+        By {\color{red} theorem 17.1.13}, every regulated function
+        is Riemann integrable so $\mathcal{R}$
+        contain the set of regulated functions.
+        Let f,g $\in$ $\mathcal{R}$ and $c_1,c_2$ $\in$ $\mathbb{R}$.
+        
+        Then for $\epsilon > 0$, there are step functions $v_f,u_f$ where
+        $v_f$ $\leq$ f $\leq$ $u_f$ such that:
+
+        \hspace{0.5cm}
+        $\int_a^b u_f(x) dx - \int_a^b v_f(x) dx$ $<$ $\frac{\epsilon}{2c_1}$
+
+        Also, there are step functions $v_g,u_g$ where
+        $v_g$ $\leq$ g $\leq$ $u_g$ such that:
+
+        \hspace{0.5cm}
+        $\int_a^b u_g(x) dx - \int_a^b v_g(x) dx$ $<$ $\frac{\epsilon}{2c_2}$
+
+        Since $c_1v_f + c_2v_g$
+        $\leq$ $c_1f + c_2g$
+        $\leq$ $c_1u_f + c_2u_g$
+        where $c_1v_f + c_2v_g$,$c_1u_f + c_2u_g$ are step functions such that:
+
+        \hspace{0.5cm}
+        $\int_a^b (c_1u_f(x) + c_2u_g(x)) dx
+            - \int_a^b (c_1v_f(x) + c_2v_g(x)) dx$
+
+        \hspace{0.5cm}
+        = $\int_a^b c_1(u_f(x) - v_f(x)) dx
+            + \int_a^b c_2(u_g(x)) - v_g(x)) dx$
+        $<$ $c_1\frac{\epsilon}{2c_1} + c_2\frac{\epsilon}{2c_2}$
+        = $\epsilon$
+
+        then $c_1f + c_2g$ is Riemann integrable so
+        $c_1f + c_2g$ $\in$ $\mathcal{R}$.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+
+
+\subsection{ Outer Measure }
+
+    \begin{definition}{Basic Properties of the Length / Measure of a Set}{14cm}
+        For bounded A,B $\subset$ $\mathbb{R}$, there is an associated
+        non-negative real number $\mu(A)$:
+    \end{definition}
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item {\color{lblue} Length}:
+            If A = (a,b) or A = [a,b], then:
+
+            \hspace{0.5cm}
+            $\mu(A)$ = len(A) = b-a
+
+        \item {\color{lblue} Translation Invariance}:
+            If c $\in$ $\mathbb{R}$, then:
+            
+            \hspace{0.5cm}
+            $\mu(A+c)$ = $\mu(A)$
+
+        \item {\color{lblue} Countable Additivity}:
+            If \{$A_n$\}$_{n=1}^{\infty}$ is countable, then:
+
+            \hspace{0.5cm}
+            $\mu(\cup_{n=1}^{\infty} A_n)$
+            $\leq$ $\sum_{n=1}^{\infty} \mu(A_n)$
+
+            If each $A_n$ are pairwise disjoint, then:
+
+            \hspace{0.5cm}
+            $\mu(\cup_{n=1}^{\infty} A_n)$
+            = $\sum_{n=1}^{\infty} \mu(A_n)$
+
+        \item {\color{lblue} Monotonicity}:
+            If A $\subset$ B, then:
+
+            \hspace{0.5cm}
+            $\mu(A)$ $\leq$ $\mu(B)$
+    \end{enumerate}
+
+    \newpage
+
+
+
+    \begin{definition}{Null Set}{14cm}
+        X $\subset$ $\mathbb{R}$ is a {\color{lblue} null set}
+        if for $\epsilon > 0$:
+
+        \hspace{0.5cm}
+        There is a collection of open set \{$U_n$\}$_{n=1}^{\infty}$
+        where X $\subset$ $\cup_{n=1}^n U_n$:
+
+        \hspace{1cm}
+        $\sum_{n=1}^{\infty} \text{len}(U_n)$ $<$ $\epsilon$
+
+        If X is a null set, then $X^c$ has full measure.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Outer Measure}{14cm}
+        Let A $\subset$ $\mathbb{R}$.
+        Let open intervals \{$I_n$\}$_{n=1}^{\infty}$ be such that
+        A $\subset$ $U_{n=1}^{\infty} I_n$.
+
+        Then the {\color{lblue} outer measure} $\mu^*(A)$:
+
+        \hspace{0.5cm}
+        $\mu^*(A)$
+        = inf($\sum_{n=1}^{\infty}$ len($I_n$))
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Null set A $\rightleftharpoons$ $\mu^*(A)$ = 0}{14cm}
+        Let A $\subset$ $\mathbb{R}$.
+        Then, A is a null set if and only if $\mu^*(A)$ = 0.
+    \end{wtheorem}
+
+    \begin{proof}
+        If A is a null set, then for $\epsilon > 0$, there
+        are open intervals \{$I_n$\}$_{n=1}^{\infty}$
+        where A $\subset$ $\cup_{n=1}^{\infty} I_n$:
+
+        \hspace{0.5cm}
+        $\sum_{n=1}^n$ len($I_n$) $<$ $\epsilon$
+
+        Then, $\mu^*(A)$
+        = inf($\sum_{n=1}^n$ len($I_n$))
+        $\leq$ $\sum_{n=1}^n$ len($I_n$)
+        = $\epsilon$ so $\mu^*(A)$ $<$ 0.
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        If $\mu^*(A)$ = 0, then
+        for open intervals \{$I_n$\}$_{n=1}^{\infty}$
+        where A $\subset$ $\cup_{n=1}^{\infty} I_n$:
+
+        \hspace{0.5cm}
+        0
+        = $\mu^*(A)$
+        = inf($\sum_{n=1}^n$ len($I_n$))
+        
+        Thus, for $\epsilon > 0$, there is a \{$I_n$\}$_{n=1}^{\infty}$ such that
+        $\sum_{n=1}^n$ len($I_n$) $<$ $\epsilon$ so A is a null set.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Outer Measure: Length Property}{14cm}
+        $\mu^*([a,b])$ = $\mu^*((a,b))$ = b - a
+    \end{wtheorem}
+
+    \begin{tbox}
+        Let $I_n$ = $(a-\frac{\epsilon}{2} , b+\frac{\epsilon}{2})$. Then:
+
+        \hspace{0.5cm}
+        $\mu^*([a,b])$
+        $\leq$ len($I_n$)
+        = $b - a + \epsilon$
+        \hspace{1cm}
+        $\rightarrow$
+        \hspace{1cm}
+        $\mu^*([a,b])$
+        $\leq$ $b - a$
+
+        Since [a,b] is compact, then for any \{$I_i$\}$_{i=1}^{\infty}$
+        where [a,b] $\subset$ $\cup_{i=1}^{\infty} I_i$, there is a M
+        such that [a,b] $\subset$ $\cup_{i=1}^M I_i$.
+        Let n be the number of elements in [a,b].
+
+        If n = 1, then a = b so 0 = $\mu^*([a,b])$ $\geq$ b-a = b-b = 0
+        holds true.
+
+        If n $>$ 1, then there is at least two intervals $I_{n_1},I_{n_2}$
+        that intersect since if c $\in$ (a,b), then only (a,c),(c,b) will
+        not contain c.
+        Let $V_{n-1}$ = $I_{n-1} \cup I_{n-2}$.
+        Then, let $V_i$ = $I_i$ for the $I_i$ where i $\not =$ $n_1,n_2$
+        and i $<$ max($n_1,n_2$) and $V_i$ = $I_{i-1}$ for the $I_i$
+        where i $\not =$ $n_1,n_2$ and i $>$ max($n_1,n_2$). Thus:
+
+        \hspace{0.5cm}
+        $\sum_{i=1}^M$ len($I_i$)
+        $>$ $\sum_{i=1}^{M_1}$ len($V_i$)
+        $\geq$ b - a
+        \hspace{1cm}
+        $\rightarrow$
+        \hspace{1cm}
+        $\mu^*([a,b])$
+        $\geq$ $b - a$
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        Since (a,b) $\subset$ (a,b), then
+        $\mu^*((a,b))$ $\leq$ len((a,b)) = b - a.
+
+        Since \{$I_i$\}$_{i=1}^{\infty}$ where (a,b)
+        $\subset$ $\cup_{i=1}^{\infty} I_i$ have
+        $[a+\epsilon,b-\epsilon]$ $\subset$ $\cup_{i=1}^{\infty} I_i$, then
+        by process above:
+
+        \hspace{0.5cm}
+        $\sum_{i=1}^{\infty}$ len($I_i$)
+        $\geq$ $b - a - 2\epsilon$
+        \hspace{1cm}
+        $\rightarrow$
+        \hspace{1cm}
+        $\mu^*((a,b))$
+        $\geq$ $b - a$
+    \end{tbox}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Outer Measure: Monotonicity Property}{14cm}
+        If A,B $\subset$ $\mathbb{R}$ where A $\subset$ B, then
+        $\mu^*(A)$ $\leq$ $\mu^*(B)$
+    \end{wtheorem}
+
+    \begin{proof}
+        Since A $\subset$ B, then every open intervals \{$I_i$\}$_{i=1}^{\infty}$
+        where B $\subset$ $\cup_{i=1}^{\infty} I_i$
+        is A $\subset$ $\cup_{i=1}^{\infty} I_i$. Thus:
+
+        \hspace{0.5cm}
+        $\mu^*(A)$
+        = inf$_A$($\sum_{i=1}^{\infty}$ len($I_i$))
+        $\leq$ inf$_B$($\sum_{i=1}^{\infty}$ len($I_i$))
+        = $\mu^*(B)$
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Outer Measure: Countable Subadditivity Property}{14cm}
+        For \{$A_n$\}$_{n=1}^{\infty}$ where each $A_n$ $\subset$ $\mathbb{R}$:
+
+        \hspace{0.5cm}
+        $\mu^*(\cup_{n=1}^{\infty} A_n)$
+        $\leq$ $\sum_{n=1}^{\infty} \mu^*(A_n)$
+    \end{wtheorem}
+
+    \begin{proof}
+        For each $A_n$, there are open intervals \{$I_i^n$\}$_{i=1}^{\infty}$
+        where $A_n$ $\subset$ $\cup_{i=1}^{\infty} I_i^n$ such that
+        for $\epsilon > 0$:
+
+        \hspace{0.5cm}
+        $\sum_{i=1}^{\infty}$ len($I_i^n$)
+        $\leq$ $\mu^*(A_n)$ + $\frac{\epsilon}{2^n}$
+
+        Since \{\{$I_i^n$\}$_{i=1}^{\infty}$\}$_{n=1}^{\infty}$
+        have $\cup_{n=1}^{\infty} A_n$
+        $\subset$ $\cup_{n=1}^{\infty} \cup_{i=1}^{\infty} I_i^n$, then:
+
+        \hspace{0.5cm}
+        $\mu^*(\cup_{n=1}^{\infty} A_n)$
+        $\leq$ $\sum_{n=1}^{\infty} \sum_{i=1}^{\infty}$ len($I_i^n$)
+        $\leq$ $\sum_{n=1}^{\infty}$ [$\mu^*(A_n)$ + $\frac{\epsilon}{2^n}$]
+        = $\sum_{n=1}^{\infty}$ $\mu^*(A_n)$ + $\frac{\epsilon}{2}$
+
+        Thus, $\mu^*(\cup_{n=1}^{\infty} A_n)$
+        $\leq$ $\sum_{n=1}^{\infty} \mu^*(A_n)$.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{corollary}{Countable A $\rightleftharpoons$ $\mu^*(A)$ = 0}{14cm}
+        If A is countable, then $\mu^*(A)$ = 0.
+
+        Thus, intervals are uncountable.
+    \end{corollary}
+
+    \begin{proof}
+        Since A is countable, let A = \{$x_1,x_2,...$\}.
+        
+        Since $\mu^*(\{x_n\})$ = 0, then:
+        
+        \hspace{0.5cm}
+        $\mu^*(A)$
+        = $\mu^*(\{x_1,x_2,...\})$
+        $\leq$ $\sum_{n=1}^{\infty} \mu^*(\{x_n\})$
+        = 0
+
+        Thus, $\mu^*(A)$ = 0.
+
+        Since $\mu^*([a,b])$ = b - a $\not =$ 0, then A is uncountable. 
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Outer Measure: Translation Invariance Property}{14cm}
+        If A $\subset$ $\mathbb{R}$ and c $\in$ $\mathbb{R}$, then
+        $\mu^*(A+c)$ = $\mu^*(A)$
+    \end{wtheorem}
+
+    \begin{proof}
+        There are open intervals \{$I_i$\}$_{i=1}^{\infty}$
+        where A+c $\subset$ $\cup_{i=1}^{\infty} I_i$ such that:
+
+        \hspace{0.5cm}
+        $|\sum_{i=1}^{\infty}$ len($I_i$) - $\mu^*(A+c)|$
+        $\leq$ $\frac{\epsilon}{2}$
+
+        Let open intervals \{$I_i^*$\}$_{i=1}^{\infty}$
+        be $I_i^*$ = $I_i-c$ so A $\subset$ $\cup_{i=1}^{\infty} I_i^*$ where:
+
+        \hspace{0.5cm}
+        $|\sum_{i=1}^{\infty}$ len($I_i^*$) - $\mu^*(A)|$
+        $\leq$ $\frac{\epsilon}{2}$
+
+        Since len($I_i^*$) = len($I_i-c$) = len($I_i$), then:
+
+        \hspace{0.5cm}
+        $|\mu^*(A+c) - \mu^*(A)|$
+
+        \hspace{0.5cm}
+        $\leq$ $|\mu^*(A+c)$ - $\sum_{i=1}^{\infty}$ len($I_i$)$|$
+                + $|\sum_{i=1}^{\infty}$ len($I_i$)
+                    - $\sum_{i=1}^{\infty}$ len($I_i^*$)$|$
+                
+                \hspace{1cm}
+                + $|\sum_{i=1}^{\infty}$ len($I_i^*$) - $\mu^*(A)|$
+
+        \hspace{0.5cm}
+        $\leq$ $\frac{\epsilon}{2} + \frac{\epsilon}{2}$
+        = $\epsilon$
+
+        Thus, $\mu^*(A+c)$ = $\mu^*(A)$.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Outer Measure: Regularity Property}{14cm}
+        If A $\subset$ $\mathbb{R}$ and $\mu^*(A)$ is finite,
+        then for any $\epsilon > 0$, there is an open set V
+        where A $\subset$ V such that
+        $\mu^*(V)$ $<$ $\mu^*(A)$ + $\epsilon$. Thus:
+
+        \hspace{0.5cm}
+        $\mu^*(A)$ = inf($\mu^*(U)$ $|$ U is open , A $\subset$ U)
+    \end{wtheorem}
+
+    \begin{proof}
+        There are open intervals \{$I_i$\}$_{i=1}^{\infty}$
+        where A $\subset$ $\cup_{i=1}^{\infty} I_i$ such that
+        for $\epsilon > 0$:
+
+        \hspace{0.5cm}
+        $\sum_{i=1}^{\infty}$ len($I_i$)
+        $<$ $\mu^*(A)$ + $\epsilon$
+
+        Let V = $\cup_{i=1}^{\infty} I_i$. Then:
+
+        \hspace{0.5cm}
+        $\mu^*(V)$
+        = $\mu^*(\cup_{i=1}^{\infty} I_i)$
+        $\leq$ $\sum_{i=1}^{\infty}$ len($I_i$)
+        $<$ $\mu^*(A)$ + $\epsilon$
+
+        Thus,
+        inf($\mu^*(U)$ $|$ U is open , A $\subset$ U)
+        $\leq$ $\mu^*(A)$ + $\epsilon$ so:
+        
+        \hspace{0.5cm}
+        inf($\mu^*(U)$ $|$ U is open , A $\subset$ U)
+        $\leq$ $\mu^*(A)$.
+
+        Since A $\subset$ $\cup_{i=1}^{\infty} I_i$ = V, then
+        $\mu^*(A)$ $\leq$ $\mu^*(V)$
+        = inf($\mu^*(U)$ $|$ U is open , A $\subset$ U).
+
+        Thus, $\mu^*(A)$ = inf($\mu^*(U)$ $|$ U is open , A $\subset$ U).
+    \end{proof}
+
+    \newpage
+
+
+
+
+
+\subsection{ Lebesgue Measure }
+
+    \begin{definition}{Sigma Algebra and Borel Sets}{14cm}
+        Let $\mathcal{A}$ be a collection of subsets of X.
+
+        Then, $\mathcal{A}$ is a {\color{lblue} $\sigma$-algebra}
+        of subsets of X if for A $\in$ $\mathcal{A}$:
+
+        \begin{enumerate}[label=(\alph*), itemsep=1.5cm, itemsep=0.1cm]
+            \item X $\in$ $\mathcal{A}$
+            
+            \item $A^c$ $\in$ $\mathcal{A}$ in respect to X
+            
+            \item $\cup_{n=1}^{\infty} A_n$ $\in$ $\mathcal{A}$
+        \end{enumerate}
+
+        Some examples of $\sigma$-algebra of subsets of X are:
+
+        \hspace{0.5cm}
+        $\mathcal{A}$ = \{X,$\emptyset$\}
+        \hspace{1cm}
+        $\mathcal{A}$ = P(X) (i.e. all subsets of X ($2^{\mathbb{R}}$))
+
+        \vspace{0.3cm}
+
+        If C is a collection of subsets of $\mathbb{R}$
+        and $\mathcal{A}$ is the smallest $\sigma$-algebra of subsets
+        of $\mathbb{R}$ that contains C, then $\mathcal{A}$
+        is a $\sigma$-algebra generated by C.
+
+        Let $\mathcal{B}$ be $\sigma$-algebra of subsets of $\mathbb{R}$
+        generated by the collection of all open intervals.
+        Then, $\mathcal{B}$ is a {\color{lblue} Borel $\sigma$-algebra}
+        and any B $\in$ $\mathcal{B}$ is a Borel set.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Lebesgue Measurable}{14cm}
+        Let the $\sigma$-algebra of subsets of $\mathbb{R}$ generated by
+        the collection of all open intervals and null sets be $\mathcal{M}$.
+        Then, sets in $\mathcal{M}$ are {\color{lblue} Lebesgue measurable}.
+
+        If I is a closed interval, then $\mathcal{M}(I)$
+        is a $\sigma$-algebra of subsets of I.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Lebesgue Measure}{14cm}
+        There is a unique $\mu$, the {\color{lblue} Lebesgue measure},
+        from A,B $\in$ $\mathcal{M}(I)$ to $\mathbb{R}_+$: 
+    \end{wtheorem}
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item {\color{lblue} Length}:
+            If A = (a,b), then:
+
+            \hspace{0.5cm}
+            $\mu(A)$ = len(A) = b-a
+
+        \item {\color{lblue} Translation Invariance}:
+            If c $\in$ $\mathbb{R}$ and A+c $\subset$ I, then
+            A+c $\in$ $\mathcal{M}(I)$ where:
+            
+            \hspace{0.5cm}
+            $\mu(A+c)$ = $\mu(A)$
+
+        \item {\color{lblue} Countable Additivity}:
+            If \{$A_n$\}$_{n=1}^{\infty}$ is countable, then:
+
+            \hspace{0.5cm}
+            $\mu(\cup_{n=1}^{\infty} A_n)$
+            $\leq$ $\sum_{n=1}^{\infty} \mu(A_n)$
+
+            If each $A_n$ are pairwise disjoint, then:
+
+            \hspace{0.5cm}
+            $\mu(\cup_{n=1}^{\infty} A_n)$
+            = $\sum_{n=1}^{\infty} \mu(A_n)$
+
+        \item {\color{lblue} Monotonicity}:
+            If A $\subset$ B, then:
+
+            \hspace{0.5cm}
+            $\mu(A)$ $\leq$ $\mu(B)$
+
+        \item {\color{lblue} Null Sets}:
+            If A $\subset$ I is a null set, then A $\in$ $\mathcal{M}(I)$ where:
+
+            \hspace{0.5cm}
+            $\mu(A)$ = 0
+
+            Also, if A $\in$ $\mathcal{M}(I)$ where $\mu(A)$ = 0,
+            then A is a null set.
+
+        \item {\color{lblue} Regularity}
+        
+            \hspace{0.5cm}
+            $\mu(A)$ = inf($\mu(U)$ $|$ U is open , A $\subset$ U)
+    \end{enumerate}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{The Lebesgue measure of set differences}{14cm}
+        If A,B $\in$ $\mathcal{M}(I)$, then
+        A$\backslash$B $\in$ $\mathcal{M}(I)$ where:
+
+        \hspace{0.5cm}
+        $\mu(A \cup B)$
+        = $\mu(A \backslash B)$ + $\mu(B)$
+
+        Thus, if I = [0,1], then $\mu(I)$ = 1 so $\mu(A^c)$ = 1 - $\mu(A)$.
+    \end{wtheorem}
+
+    \begin{proof}
+        Since A$\backslash$B = A $\cap$ $B^c$ where
+        A,$B^c$ $\in$ $\mathcal{M}(I)$, then
+        A$\backslash$B $\in$ $\mathcal{M}(I)$.
+
+        Since A$\backslash$B and B are disjoint where
+        $A \backslash B \cup B$ = $A \cup B$, then:
+
+        \hspace{0.5cm}
+        $\mu(A \cup B)$
+        = $\mu(A \backslash B \cup B)$
+        = $\mu(A \backslash B)$ + $\mu(B)$
+
+        \hspace{0.5cm}
+        $\mu(I \backslash A)$ + $\mu(A)$
+        = $\mu(A^c)$ + $\mu(A)$
+        = $\mu(A^c \cup A)$
+        = $\mu(I)$
+        = 1
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Alternative Definition for Lebesgue Measurable}{14cm}
+        A $\subset$ I is Lebesgue Measurable if for all X $\subset$ I:
+
+        \hspace{0.5cm}
+        $\mu^*(A \cap X)$ + $\mu^*(A^c \cap X)$ = $\mu^*(X)$
+    \end{wtheorem}
+
+    \begin{proof}
+        Since X = $(A \cap X)$ $\cup$ $(A^c \cap X)$, then
+        by {\color{red} theorem 17.2.7}, then:
+
+        \hspace{0.5cm}
+        $\mu^*(X)$ $\leq$ $\mu^*(A \cap X) + \mu^*(A^c \cap X)$
+
+        
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Lebesgue Measure's Regularity $\epsilon$ Definition}{14cm}
+        If A $\in$ $\mathcal{M}(I)$, then for $\epsilon > 0$:
+
+        \hspace{0.5cm}
+        There is a closed C $\subset$ A such that:
+
+        \hspace{1cm}
+        $\mu(C)$ $>$ $\mu(A) - \epsilon$
+
+        \hspace{0.5cm}
+        There is a countable union of pairwise disjoint open
+        intervals U = $\cup$ $U_n$
+        
+        \hspace{0.5cm}
+        where A $\subset$ U such that:
+
+        \hspace{1cm}
+        $\mu(U)$ $<$ $\mu(A) + \epsilon$
+    \end{wtheorem}
+
+    \begin{proof}
+        Since A $\in$ $\mathcal{M}(I)$, then $A^c$ $\in$ $\mathcal{M}(I)$.
+        Thus for $\epsilon > 0$, there is an open set V such that
+        $A^c$ $\subset$ V where $\mu(V)$ $<$ $\mu(A^c)$ + $\epsilon$.
+        Let C = $V^c$ so C is closed and C $\subset$ A. Then:
+
+        \hspace{0.5cm}
+        $\mu(C)$
+        = $\mu(V^c)$
+        = 1 - $\mu(V)$
+        $>$ 1 - $\mu(A^c)$ - $\epsilon$
+        = $\mu(A)$ - $\epsilon$
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        Since A $\in$ $\mathcal{M}(I)$, then for $\epsilon > 0$,
+        there is a open set U such that A $\subset$ U where:
+
+        \hspace{0.5cm}
+        $\mu(U)$ $<$ $\mu(A)$ + $\epsilon$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Monotonic Measurable Sets}{14cm}
+        If $A_n$ $\subset$ $A_{n+1}$ are Lebesgue measurable subsets of I, then:
+
+        \hspace{0.5cm}
+        $\mu(\cup_{n=1}^{\infty} A_n)$
+        = $\lim_{n \rightarrow \infty} \mu(A_n)$
+
+        If $B_{n+1}$ $\subset$ $B_n$ are Lebesgue measurable subsets of I, then:
+
+        \hspace{0.5cm}
+        $\mu(\cap_{n=1}^{\infty} B_n)$
+        = $\lim_{n \rightarrow \infty} \mu(B_n)$
+    \end{wtheorem}
+
+    \begin{proof}
+        Since $A_n$ is Lebesgue measurable, then $\cup$ $A_n$ is
+        Lebesgue measurable.
+
+        Let $F_n$ = $A_n \backslash A_{n-1}$, then
+        $\cup_{n=1}^{\infty}$ $A_n$ = $\cup_{n=1}^{\infty}$ $F_n$
+        where each $F_n$ is pairwsie disjoint.
+
+        \hspace{0.5cm}
+        $\mu(\cup_{n=1}^{\infty} A_n)$
+        = $\mu(\cup_{n=1}^{\infty} F_n)$
+        = $\lim_{n \rightarrow \infty} \sum_{i=1}^n \mu(F_i)$
+        = $\lim_{n \rightarrow \infty} \mu(A_n)$
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        Since $B_n$ is Lebesgue measurable, then $\cap$ $B_n$ is
+        Lebesgue measurable.
+
+        Let $E_n$ = $B_n^c$. Since $(\cap B_n)^c$ = $\cup E_n$
+        where each $E_n \subset E_{n+1}$, then:
+
+        \hspace{0.5cm}
+        $\mu(\cap_{n=1}^{\infty} B_n)$
+        = 1 - $\mu(\cup_{n=1}^{\infty} E_n)$
+        = $\lim_{n \rightarrow \infty} (1 - \mu(E_n))$
+        = $\lim_{n \rightarrow \infty} \mu(B_n)$
+    \end{proof}
+
+    \newpage
+
+
+
+
+
+\subsection{ Lebesgue Integral }
+
+    \begin{definition}{Indicator Function}{14cm}
+        For A $\subset$ [0,1], the indicator function:
+
+        \hspace{0.5cm}
+        $\mathfrak{X}_A(x)$ =
+        $\begin{cases}
+            1 & x \in A \\
+            0 & \text{otherwise}
+        \end{cases}$
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Measurable Partition}{14cm}
+        A finite {\color{lblue} measurable partition} of [0,1] is a
+        collection \{$A_i$\}$_{i=1}^n$ of measurable subsets
+        which are pairwise disjoint where $\cup A_i$ = [0,1].
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Simple Function}{14cm}
+        f: [0,1] $\rightarrow$ $\mathbb{R}$ is {\color{lblue} simple}
+        if there exists a finite measurable partition, \{$A_i$\}$_{i=1}^n$
+        and $r_i$ $\in$ $\mathbb{R}$ such that
+        f(x) = $\sum_{i=1}^n$ $r_i \mathfrak{X}_{A_i}$.
+
+        Then the {\color{lblue} Lebesgue integral} of a simple function:
+
+        \hspace{0.5cm}
+        $\int$ f $d\mu$ = $\sum_{i=1}^n$ $r_i \mu(A_i)$
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Properties of Simple Functions}{14cm}
+        The set of simple functions is a vector space where:
+    \end{wtheorem}
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item {\color{lblue} Linearity}:
+            If f,g are simple functions and $c_1,c_2$ $\in$ $\mathbb{R}$:
+
+            \hspace{0.5cm}
+            $\int$ $c_1f + c_2g$ $d\mu$
+            = $c_1 \int$ f $d\mu$ + $c_2 \int$ g $d\mu$
+
+        \item {\color{lblue} Monotonicity}:
+            If f,g are simple where f(x) $\leq$ g(x):
+            
+            \hspace{0.5cm}
+            $\int$ f $d\mu$ $\leq$ $\int$ g $d\mu$
+
+        \item {\color{lblue} Absolute Value}:
+            If f is simple, then $|f|$ is simple:
+
+            \hspace{0.5cm}
+            $|\int$ f $d\mu|$ $\leq$ $\int$ $|f|$ $d\mu$
+    \end{enumerate}
+
+    \begin{proof}
+        Since f is simple, then there is a measurable partition
+        $\cup_{i=1}^n A_i$ = [0,1] where $A_i$ is disjoint
+        so f(x) = $\sum_{i=1}^n$ $r_i \mathfrak{X}_{A_i}$.
+        Then, $c_1f$ is simple since
+        $c_1f(x)$ = $\sum_{i=1}^n$ $c_1r_i \mathfrak{X}_{A_i}$.
+
+        Since g is simple, then there is a measurable partition
+        $\cup_{j=1}^m B_j$ = [0,1] where $B_j$ is disjoint
+        so g(x) = $\sum_{j=1}^m$ $s_i \mathfrak{X}_{B_j}$.
+
+        Then for $c_1f + c_2g$, take the measurable partition
+        $\cup_{i=1}^n \cup_{j=1}^m C_{i,j}$ where $C_{ij}$ = $A_i$ $\cap$ $B_j$.
+
+        \hspace{0.5cm}
+        $c_1f(x) + c_2g(x)$
+        = $\sum_{i=1}^n c_1r_i \mathfrak{X}_{A_i}$
+            + $\sum_{j=1}^m c_2s_j \mathfrak{X}_{B_j}$
+
+        \hspace{3.4cm}
+        = $\sum_{i=1}^n c_1r_i \sum_{j=1}^m \mathfrak{X}_{C_{ij}}$
+            + $\sum_{j=1}^m c_2s_j \sum_{i=1}^n \mathfrak{X}_{C_{ij}}$
+
+        \hspace{3.4cm}
+        = $\sum_{i=1}^n \sum_{j=1}^m$ $(c_1r_i + c_2s_j)\mathfrak{X}_{C_{ij}}$
+
+        Thus, the simple functions form a vector space.
+
+        \hspace{0.5cm}
+        $\int$ $c_1f+c_2g$ $d\mu$
+        = $\sum_{i=1}^n \sum_{j=1}^m$ $(c_1r_i + c_2s_j)\mu(C_{ij})$
+
+        \hspace{3.3cm}
+        = $\sum_{i=1}^n c_1r_i \sum_{j=1}^m \mu(C_{ij})$
+            + $\sum_{j=1}^m c_2s_j \sum_{i=1}^n \mu(C_{ij})$
+
+        \hspace{3.3cm}
+        = $\sum_{i=1}^n c_1r_i \mu(A_i)$
+            + $\sum_{j=1}^m c_2s_j \mu(B_j)$
+        = $c_1 \int$ f $d\mu$ + $c_2 \int$ g $d\mu$
+
+        \hspace{0.5cm}
+        $\int$ g $d\mu$ - $\int$ f $d\mu$
+        = $\int$ (f-g) $d\mu$
+        $\geq$ 0
+
+        \hspace{0.5cm}
+        $|\int$ f $d\mu|$
+        = $|\sum_{i=1}^n r_i \mu(A_i)|$
+        $\leq$ $\sum_{i=1}^n |r_i| \mu(A_i)$
+        = $\int$ $|f|$ $d\mu$
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Measurable Functions}{14cm}
+        If f: X $\subset$ $\mathbb{R}$ $\rightarrow$ $[-\infty,\infty]$, then
+        the following are equivalent:
+
+        \hspace{0.5cm}
+        - For any a $\in$ $\mathbb{R}$, $f^{-1}([-\infty,a])$
+        is Lebesgue measurable
+
+        \hspace{0.5cm}
+        - For any a $\in$ $\mathbb{R}$, $f^{-1}([-\infty,a))$
+        is Lebesgue measurable
+
+        \hspace{0.5cm}
+        - For any a $\in$ $\mathbb{R}$, $f^{-1}([a,\infty])$
+        is Lebesgue measurable
+
+        \hspace{0.5cm}
+        - For any a $\in$ $\mathbb{R}$, $f^{-1}((a,\infty])$
+        is Lebesgue measurable
+
+        Then f is {\color{lblue} Lebesgue measurable}.
+    \end{wtheorem}
+
+    \begin{proof}
+        Suppose for any a $\in$ $\mathbb{R}$, $f^{-1}([-\infty,a])$
+        is Lebesgue measurable.
+
+        $f^{-1}([-\infty,a))$
+        = $\cup_{n=1}^{\infty} f^{-1}([-\infty,a-\frac{1}{2^n}])$
+        is measurable since it's countable measurables. 
+
+        $f^{-1}([a,\infty])$
+        = $f^{-1}([-\infty,a)^c)$
+        = $(f^{-1}([-\infty,a)))^c$
+        is measurable since it's the complement of a measurable.
+
+        $f^{-1}((a,\infty])$
+        = $\cup_{n=1}^{\infty} f^{-1}([a+\frac{1}{2^n},\infty])$
+        is measurable since it's countable measurables.
+
+        $f^{-1}([-\infty,a])$
+        = $f^{-1}((a,\infty]^c)$
+        = $(f^{-1}((a,\infty]))^c$
+        is measurable since it's the complement of a measurable.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Measurable Functions and Null Sets}{14cm}
+        Let f,g: [a,b] $\rightarrow$ $\mathbb{R}$.
+    \end{wtheorem}
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item  If there is a null set A $\subset$ [a,b] where f(x) = 0 if
+            x $\not \in$ A, then f is measurable
+
+        \item If f = g except on null set A, then f is measurable if and only if
+            g is measurable
+    \end{enumerate}
+
+    \begin{proof}
+        Since f(x) = 0 if x $\not \in$ A, then
+        $f^{-1}([-\infty,0))$ $\cup$ $f^{-1}((0,\infty])$ $\subset$ A.
+
+        If a $<$ 0, then $f^{-1}([-\infty,a])$ $\subset$ $f^{-1}([-\infty,0))$
+        $\subset$ A so $f^{-1}([-\infty,a])$ is a null set and thus,
+        measurable.
+        For a $\geq$ 0, then $f^{-1}([-\infty,a])$
+        = $(f^{-1}((a,\infty]))^c$ $\subset$ $(f^{-1}((0,\infty)))^c$
+        so $f^{-1}([-\infty,a])$ is a complement of a null set and thus,
+        measurable.
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        Suppose f is measurable. Let a $\in$ $\mathbb{R}$.
+
+        \hspace{0.5cm}
+        $g^{-1}([a,\infty])$
+        = $(g^{-1}([a,\infty]) \cap A)$ $\cup$ $(g^{-1}([a,\infty]) \cap A^c)$
+
+        Since f = g on $A^c$, then
+        $(g^{-1}([a,\infty]) \cap A^c)$
+        = $(f^{-1}([a,\infty]) \cap A^c)$ which is measurable.
+        Since $(g^{-1}([a,\infty]) \cap A)$ $\subset$ A, then
+        $(g^{-1}([a,\infty]) \cap A)$ is a null set and thus, measurable.
+
+        Proof is analogous for g.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Measurable Functions and Sequences}{14cm}
+        Let \{$f_n$\}$_{n=1}^{\infty}$ be a sequence of measurable functions.
+        Then:
+
+        \hspace{0.5cm}
+        $g_1(x)$ = sup($f_n(x)$)
+        \hspace{2.5cm}
+        $g_2(x)$ = inf($f_n(x)$)
+
+        \hspace{0.5cm}
+        $g_3(x)$ = $\lim_{n \rightarrow \infty}$ sup($f_n(x)$)
+        \hspace{1cm}
+        $g_4(x)$ = $\lim_{n \rightarrow \infty}$ inf($f_n(x)$)
+
+        are measurable.
+    \end{wtheorem}
+
+    \begin{proof}
+        For a $\in$ $\mathbb{R}$, \{x $|$ $g_1(x) > a$ \}
+        = $\cup_{i=1}^n$ \{x $|$ $f_n(x) > a$\}
+        which are measurable sets so countable implies measurable
+        and thus, $g_1$ is measurable.
+
+        For a $\in$ $\mathbb{R}$, \{x $|$ $g_2(x) < a$ \}
+        = $\cup_{i=1}^n$ \{x $|$ $f_n(x) < a$\}
+        which are measurable sets so countable implies measurable
+        and thus, $g_2$ is measurable.
+
+        Since $g_3(x)$ = $\lim_{n \rightarrow \infty}$ sup($f_n(x)$)
+        = inf(sup($f_n(x)$)) where sup($f_n(x)$) are measurable
+        so $g_3$ is measurable.
+
+        Since $g_4(x)$ = $\lim_{n \rightarrow \infty}$ inf($f_n(x)$)
+        = sup(inf($f_n(x)$)) where inf($f_n(x)$) are measurable
+        so $g_4$ is measurable.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Lebesgue measurable functions form a Vector Space}{14cm}
+        The set of Lebesgue measurable functions from [0,1] to $\mathbb{R}$
+        is a vector space with a vector subspace of bounded Lebesgue measurable
+        functions. Thus, if f,g are measurable, then fg is measurable.
+    \end{wtheorem}
+
+    \begin{proof}
+        Let f,g be Lebesgue measurable functions.
+
+        For a $\in$ $\mathbb{R}$, let set $U_a$ = \{ f(x) + g(x) $>$ a \}.
+
+        Since $\mathbb{Q}$ = \{$r_m$\} is countable and dense, there is a
+        $r_m$ such that:
+
+        \hspace{0.5cm}
+        f(x) $>$ $r_m$ $>$ a - g(x)
+
+        Let $V_m$ = \{x $|$ f(x) $>$ $r_m$\} $\cap$ \{x $|$ g(x) $>$ $a-r_m$\}
+        
+        If x $\in$ $U_a$, then x $\in$ $V_m$ for some m since
+        there is a $r_m$ where f(x) $>$ $r_m$ $>$ a - g(x). 
+        If x $\in$ $V_m$, then f(x) + g(x) $>$ a so x $\in$ $U_a$.
+        Thus, $U_a$ = $\cup_{m=1}^{\infty} V_m$
+        which is countable and thus, measurable since f,g are measurable.
+        Thus, f+g is measurable.
+
+        Note for c $\in$ $\mathbb{R}$, \{x $|$ cf(x) $>$ a\}
+        is measurable since \{x $|$ f(x) $>$ v\} for any v $\in$ $\mathbb{R}$
+        is measurable including $\frac{a}{c}$.
+        Thus, the measurable functions form a vector space.
+
+        If f,g are bounded and measurable, then $c_1f+c_2g$ is bounded which
+        is measurable as proved above so bounded measurable functions is
+        a vector subspace of measurable functions.
+    \end{proof}
+
+    \newpage
+
+
+
+
+
+\subsection{ Lebesgue Integral of Bounded Functions }
+
+    \begin{wtheorem}{Lebesgue Integral of a Bounded Function}{14cm}
+        If f: [0,1] $\rightarrow$ $\mathbb{R}$ is bounded, then
+        the following are equivalent:
+
+        \hspace{0.5cm}
+        - f is Lebesgue measurable
+
+        \hspace{0.5cm}
+        - There are simple functions \{$f_n$\} which converge uniformly to f
+
+        \hspace{0.5cm}
+        - If simple functions u(x),v(x) where v(x) $\leq$ f(x) $\leq$ u(x), then:
+
+        \hspace{1cm}
+        sup($\int$ v $d\mu$) = inf($\int$ u $d\mu$)
+
+        Then, $\int$ f $d\mu$ = sup($\int$ v $d\mu$) = inf($\int$ u $d\mu$)
+    \end{wtheorem}
+
+    \begin{proof}
+        Suppose f is Lebesgue measurable.
+
+        Since f is bounded, there are m,M such that m $\leq$ f(x) $\leq$ M
+        for all x $\in$ [0,1]. For $\epsilon_n > 0$, take a large enough n
+        such that $\frac{M-m}{n}$ $\leq$ $\epsilon_n$.
+        For \{$c_0,...,c_n$\}, let $c_k$ = $m + k\epsilon_n$.
+        Let $f_n(x)$ = $\sum_{i=1}^n c_{i-1}\mathfrak{X}_{f^{-1}([c_{i-1},c_i))}$
+        which is simple.
+
+        Then for any x $\in$ [0,1], there is a $[c_{i-1},c_i)$
+        where x $\in$ $[c_{i-1},c_i)$ so
+        $|f(x) - f_n(x)|$ $\leq$ $\epsilon_n$.
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        Suppose simple functions \{$f_n$\} converge uniformly to f.
+
+        Let $\delta_n$ = sup($|f(x) - f_n(x)|$) so
+        $\lim_{n \rightarrow \infty}$ $\delta_n$ = 0.
+        Let simple functions $v_n(x)$ = $f_n(x) - \delta_n$
+        and $u_n(x)$ = $f_n(x) + \delta_n$
+        so $v_n(x)$ $\leq$ f(x) $\leq$ $u_n(x)$.
+
+        \hspace{0.5cm}
+        inf($\int$ u $d\mu$)
+        $\leq$ $\lim_{n \rightarrow \infty}$ inf($\int$ $u_n(x)$ $d\mu$)
+        = $\lim_{n \rightarrow \infty}$ inf($\int$ $f_n(x) + \delta_n$ $d\mu$)
+
+        \hspace{0.5cm}
+        = $\lim_{n \rightarrow \infty}$ inf($\int$ $f_n(x)$ $d\mu$)
+        $\leq$ $\lim_{n \rightarrow \infty}$ sup($\int$ $f_n(x)$ $d\mu$)
+
+        \hspace{0.5cm}
+        = $\lim_{n \rightarrow \infty}$ sup($\int$ $f_n(x) - \delta_n$ $d\mu$)
+        = $\lim_{n \rightarrow \infty}$ sup($\int$ $v_n(x)$ $d\mu$)
+        $\leq$ sup($\int$ v $d\mu$)
+
+        Since sup($\int$ v $d\mu$) $\leq$ inf($\int$ u $d\mu$),
+        then sup($\int$ v $d\mu$) = inf($\int$ u $d\mu$).
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        For n, there are simple functions $v_n(x),u(x)$
+        where $v_n(x)$ $\leq$ f(x) $\leq$ $u_n(x)$ such that:
+        
+        \hspace{0.5cm}
+        $\int$ $u_n(x)$ $d\mu$ - $\int$ $v_n(x)$ $d\mu$ $<$ $\frac{1}{2^n}$
+
+        Since $u_n(x)$ and $v_n(x)$ are simple and thus, measurable,
+        then $g_1(x)$ = sup($v_n(x)$) and $g_2(x)$ = inf($u_n(x)$)
+        are measurable.
+        Let B = \{x $|$ $g_1(x) < g_2(x)$\}. Suppose $\mu(B)$ $>$ 0.
+
+        If $B_m$ = \{x $|$ $g_1(x)$ $<$ $g_2(x) - \frac{1}{m}$\},
+        then B = $\int_{m=1}^{\infty} B_m$
+        so $\mu(B_m) > 0$ for some m.
+        
+        Thus, for x $\in$ $B_m$:
+
+        \hspace{0.5cm}
+        $v_n(x)$
+        $\leq$ $g_1(x)$
+        $<$ $g_2(x) - \frac{1}{m}$
+        $\leq$ $u_n(x) - \frac{1}{m}$
+
+        \hspace{0.5cm}
+        $\int$ $u_n$ $d\mu$ - $\int$ $v_n$ $d\mu$
+        = $\int$ $u_n - v_n$ $d\mu$
+        $\geq$ $\int$ $\frac{1}{m} \mathfrak{X}_{B_m}$ $d\mu$
+        = $\frac{1}{m} \mu(B_m)$
+
+        which contradicts
+        $\int$ $u_n(x)$ $d\mu$ - $\int$ $v_n(x)$ $d\mu$ $<$ $\frac{1}{2^n}$
+        and thus, $\mu(B)$ = 0
+        so $g_1(x)$ = $g_2(x)$ except on a null set.
+        Since $g_1(x)$ $\leq$ f(x) $\leq$ $g_2(x)$, then
+        f(x) - $g_1(x)$ = 0 except on a null set and thus,
+        by {\color{red} theorem 17.4.6}, f(x) - $g_1(x)$ is measurable
+        so f(x) is measurable.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Uniform Convergence of Simple Functions are
+    Lebesgue Integrable}{14cm}
+        If simple functions \{$f_n$\} converge uniformly to bounded measurable f:
+
+        \hspace{0.5cm}
+        $\int$ f $d\mu$ = $\lim_{n \rightarrow \infty}$ $\int$ $f_n$ $d\mu$
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $\delta_n$ = sup($|f(x) - f_n(x)|$).
+        Since \{$f_n$\} converge uniformly f, then
+        $\lim_{n \rightarrow \infty}$ $\delta_n$ = 0:
+
+        \hspace{0.5cm}
+        $f_n(x) - \delta_n$ $\leq$ f(x) $\leq$ $f_n(x) + \delta_n$
+
+        Thus, by {\color{red} theorem 17.5.1}:
+
+        \hspace{0.5cm}
+        $\int$ f $d\mu$
+        = inf($\int$ u $d\mu$)
+        $\leq$ $\lim_{n \rightarrow \infty}$ inf($\int$ $f_n(x) + \delta_n$ $d\mu$)
+
+        \hspace{0.5cm}
+        $\leq$ $\lim_{n \rightarrow \infty}$ inf($\int$ $f_n(x)$ $d\mu$)
+        $\leq$ $\lim_{n \rightarrow \infty}$ sup($\int$ $f_n(x)$ $d\mu$)
+
+        \hspace{0.5cm}
+        $\leq$ $\lim_{n \rightarrow \infty}$ sup($\int$ $f_n(x) - \delta_n$ $d\mu$)
+        $\leq$ sup($\int$ v $d\mu$)
+        = $\int$ f $d\mu$
+
+        Since
+        $\lim_{n \rightarrow \infty}$ inf($\int$ $f_n(x)$ $d\mu$)
+        $\leq$ $\lim_{n \rightarrow \infty}$ $\int$ $f_n(x)$ $d\mu$
+        $\leq$ $\lim_{n \rightarrow \infty}$ sup($\int$ $f_n(x)$ $d\mu$),
+        then:
+
+        \hspace{0.5cm}
+        $\int$ f $d\mu$
+        = $\lim_{n \rightarrow \infty}$ $\int$ $f_n(x)$ $d\mu$
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Properties of Bounded Measurable Functions}{14cm}
+        If f,g are bounded Lebesgue measurable functions. Then:
+    \end{wtheorem}
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item {\color{lblue} Linearity}:
+            If $c_1,c_2$ $\in$ $\mathbb{R}$:
+
+            \hspace{0.5cm}
+            $\int$ $c_1f + c_2g$ $d\mu$
+            = $c_1 \int$ f $d\mu$ + $c_2 \int$ g $d\mu$
+
+        \item {\color{lblue} Monotonicity}:
+            If f(x) $\leq$ g(x):
+
+            \hspace{0.5cm}
+            $\int$ f $d\mu$ $\leq$ $\int$ g $d\mu$
+
+        \item {\color{lblue} Absolute Value}:
+            $|f|$ is measurable where:
+
+            \hspace{0.5cm}
+            $|\int$ f $d\mu|$
+            $\leq$ $\int$ $|f|$ $d\mu$
+
+        \item {\color{lblue} Null Sets}:
+            If f(x) = g(x) except on a set of measure zero:
+
+            \hspace{0.5cm}
+            $\int$ f $d\mu$ = $\int$ g $d\mu$
+    \end{enumerate}
+
+    \begin{proof}
+        Since f and g are measurable, then there are simple functions
+        \{$f_n$\},\{$g_n$\} where converge uniformly to f and g respectively.
+        Thus, \{$c_1f_n+c_2g_n$\} converge to $c_1f+c_2g$ uniformly.
+
+        \hspace{0.5cm}
+        $\int$ $c_1f + c_2g$ $d\mu$
+        = $\lim_{n \rightarrow \infty}$ $\int$ $c_1f_n + c_2g_n$ $d\mu$
+
+        \hspace{3.3cm}
+        = $c_1 \lim_{n \rightarrow \infty} \int$ $f_n$ $d\mu$
+            + $c_2 \lim_{n \rightarrow \infty} \int$ $g_n$ $d\mu$
+        = $c_1 \int$ f $d\mu$ + $c_2 \int$ g $d\mu$
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        If f(x) $\leq$ g(x), then since f,g are measurable, then
+        are simple functions $v_f,u_g$ where
+        $v_f$ $\leq$ f $\leq$ g $\leq$ $u_g$ such that:
+
+        \hspace{0.5cm}
+        $\int$ f $d\mu$
+        = sup($\int$ $v_f$ $d\mu$)
+        $\leq$ inf($\int$ $u_g$ $d\mu$)
+        = $\int$ g $d\mu$
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        Since $|[a,\infty)|$ = $(-\infty,-a] \cup [a,\infty)$, then
+        $|f|^{-1}([a,\infty))$ = $f^{-1}((-\infty,-a]) \cup f^{-1}([a,\infty))$
+        which are measurable since f is measurable, then $|f|$ is measurable.
+        Also, there are simple functions
+        \{$f_n$\} that converge uniformly to f.
+        Then by {\color{red} theorem 17.4.4}:
+
+        \hspace{0.5cm}
+        $|\int f d\mu|$
+        = $\lim_{n \rightarrow \infty}$ $|\int f_n d\mu|$
+        $\leq$ $\lim_{n \rightarrow \infty}$ $\int |f_n| d\mu$
+        = $\int |f| d\mu$
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        Let h(x) = f(x) - g(x) = 0 except on a null set E and is bounded
+        so $|h(x)|$ $\leq$ $M \mathfrak{X}_E$.
+
+        \hspace{0.5cm}
+        $|\int f d\mu - \int g d\mu|$
+        = $|\int h d\mu|$
+        $\leq$ $\int |h| d\mu$
+        $\leq$ $\int M \mathfrak{X}_E d\mu$
+        = $M \mu(E)$ = 0
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Bounded Lebesgue integral over a Measurable set}{14cm}
+        If E $\subset$ [0,1] is a measurable set and f is a bounded measurable
+        function, the {\color{lblue} Lebesgue integral of f over E}:
+
+        \hspace{0.5cm}
+        $\int_E$ f $d\mu$ = $\int$ $f \mathfrak{X}_E$ $d\mu$
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Additivity Property}{14cm}
+        If \{$E_n$\}$_{n=1}^N$ are pairwise disjoint measurable sets
+        with E = $\cup E_n$ and f is a bounded measurable function:
+
+        \hspace{0.5cm}
+        $\int_E$ f $d\mu$ = $\sum_{n=1}^N$ $\int_{E_n}$ f $d\mu$
+    \end{wtheorem}
+
+    \begin{proof}
+        Since $\mathfrak{X}_E$ = $\sum_{n=1}^N \mathfrak{X}_{E_n}$,
+        then $f\mathfrak{X}_E$ = $\sum_{n=1}^N f\mathfrak{X}_{E_n}$.
+
+        \hspace{0.5cm}
+        $\int_E$ f $d\mu$
+        = $\int$ $f \mathfrak{X}_E$ $d\mu$
+        = $\int$ $\sum_{n=1}^N f\mathfrak{X}_{E_n}$ $d\mu$
+        = $\sum_{n=1}^N \int$ $f\mathfrak{X}_{E_n}$ $d\mu$
+        = $\sum_{n=1}^N$ $\int_{E_n}$ f $d\mu$
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Riemann Integrability implies Lebesgue Integrability}{14cm}
+        Every bounded Riemann integrable f: [0,1] $\rightarrow$ $\mathbb{R}$
+        is measurable and thus, Lebesgue integrable.
+        The Riemann integral is equal to the Lebesgue integral.
+    \end{wtheorem}
+
+    \begin{proof}
+        Since the set of step functions $\mathcal{L}(f)$ less than f is a subset of
+        the set of simple functions $\mathcal{L}_{\mu}(f)$ less than f and
+        the set of step functions $\mathcal{U}(f)$ greater than f is a subset of
+        the set of simple functions $\mathcal{U}_{\mu}(f)$ greater than f, then:
+
+        \hspace{0.5cm}
+        $\underset{v \in \mathcal{L}(f)}{\text{sup}}(\int_0^1 v(t) dt)$
+        $\leq$ $\underset{v \in \mathcal{L}_{\mu}(f)}{\text{sup}}(\int_0^1 v d\mu)$
+        $\leq$ $\underset{u \in \mathcal{U}_{\mu}(f)}{\text{inf}}(\int_0^1 u d\mu)$
+        $\leq$ $\underset{u \in \mathcal{U}(f)}{\text{inf}}(\int_0^1 u(t) dt)$
+
+        Thus, if f is Riemann integrable,
+        then
+        $\underset{v \in \mathcal{L}(f)}{\text{sup}}(\int_0^1 v(t) dt)$
+        = $\underset{u \in \mathcal{U}(f)}{\text{inf}}(\int_0^1 u(t) dt)$
+        so $\underset{v \in \mathcal{L}_{\mu}(f)}{\text{sup}}(\int_0^1 v d\mu)$
+        = $\underset{u \in \mathcal{U}_{\mu}(f)}{\text{inf}}(\int_0^1 u d\mu)$
+        and thus, f is Lebesgue measurable
+        and the Riemann integral is equal to the Lebesgue integral
+        since:
+
+        \hspace{0.5cm}
+        $\underset{v \in \mathcal{L}(f)}{\text{sup}}(\int_0^1 v(t) dt)$
+        = $\underset{v \in \mathcal{L}_{\mu}(f)}{\text{sup}}(\int_0^1 v d\mu)$
+        = $\underset{u \in \mathcal{U}_{\mu}(f)}{\text{inf}}(\int_0^1 u d\mu)$
+        = $\underset{u \in \mathcal{U}(f)}{\text{inf}}(\int_0^1 u(t) dt)$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    
+
+\subsection{ Bounded Convergence Theorem }
+
+    \begin{wtheorem}{Bounded Convergence Theorem}{14cm}
+        Suppose \{$f_n$\} on [0,1] converge pointwise to f where each
+        $|f_n(x)|$ $\leq$ M.
+        
+        Then, f is a bounded measurable function where:
+        
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $\int$ $f_n$ $d\mu$ = $\int$ f $d\mu$
+    \end{wtheorem}
+
+    \begin{proof}
+        Since $\lim_{n \rightarrow \infty}$ $f_n$ = f pointwise, then
+        for any x $\in$ [0,1], then is a $N_x$ where for n $\geq$ $N_x$:
+
+        \hspace{0.5cm}
+        $|f(x) - f_n(x)|$ $<$ $\epsilon$
+
+        \hspace{0.5cm}
+        $|f(x)|$ $\leq$ $|f(x) - f_n(x)| + |f_n(x)|$ $<$ $\epsilon + M$
+        \hspace{1cm}
+        $\Rightarrow$
+        \hspace{1cm}
+        $|f(x)|$ $\leq$ M
+
+        Thus, f is bounded.
+        Since $\lim_{n \rightarrow \infty}$ $f_n$ = f, then by
+        {\color{red} theorem 17.4.7}, f is measurable.
+
+        Let set $E_n$ = \{ x $\in$ [0,1] $|$
+                            $|f_n(x) - f(x)|$ $<$ $\frac{\epsilon}{2}$ \}.
+        Since $\lim_{n \rightarrow \infty}$ $f_n$ = f pointwise, then
+        $\cup_{n=1}^{\infty}$ $E_n$ = [0,1].
+        Since $E_n$ $\subset$ $E_{n+1}$, then
+        $\lim_{n \rightarrow} \mu(E_n)$ = $\mu([0,1])$ = 1.
+
+        Then, there is a N where $\mu(E_N)$ $>$ $1 - \frac{\epsilon}{4M}$
+        so $\mu(E_N^c)$ $<$ $\frac{\epsilon}{4M}$. Thus:
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $|\int f_n d\mu - \int f d\mu|$
+        = $\lim_{n \rightarrow \infty}$ $|\int f_n - f d\mu|$
+        $\leq$ $\lim_{n \rightarrow \infty}$ $\int |f_n - f| d\mu$
+
+        \hspace{5.25cm}
+        = $\int_{E_N} |f_n - f| d\mu$ + $\int_{E_N^c} |f_n - f| d\mu$
+
+        \hspace{5.25cm}
+        $<$ $\frac{\epsilon}{2} \mu(E_N)$ + $2M \mu(E_N^c)$
+        $<$ $\frac{\epsilon}{2}$ + $2M \frac{\epsilon}{4M}$
+        = $\epsilon$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Almost Everywhere}{14cm}
+        If a property holds for all x except for a null set,
+        then it holds {\color{lblue} almost everywhere}
+    \end{definition}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Bounded Convergence Theorem for Almost Everywhere}{14cm}
+        Suppose bounded \{$f_n$\} on [0,1] are measurable
+        and f is bounded such that $\lim_{n \rightarrow \infty}$ $f_n$ = f
+        for almost all x.
+        If $|f_n(x)|$ $\leq$ M almost everywhere, then f is measurable where:
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $\int$ $f_n$ $d\mu$ = $\int$ f $d\mu$
+    \end{wtheorem}
+
+    \begin{proof}
+        Let A = \{ x $|$ $\lim_{n \rightarrow \infty}$ $f_n(x)$ $\not =$ f(x) \}
+        so $\mu(A)$ = 0.
+        Let $D_n$ = \{ x $|$ $|f_n(x)|$ $>$ M \} so $\mu(D_n)$ = 0.
+        Let E = A $\cup_{n=1}^{\infty} D_n$. Thus:
+
+        \hspace{0.5cm}
+        $\mu(E)$ $\leq$ $\mu(A) + \sum_{i=1}^{\infty} \mu(D_n)$ = 0
+        \hspace{1cm}
+        $\Rightarrow$
+        \hspace{1cm}
+        $\mu(E)$ = 0
+
+        Let $g_n(x)$ = $f_n(x) \mathfrak{X}_{E^c}(x)$
+        which is measurable since $f_n(x)$,$\mathfrak{X}_{E^c}(x)$
+        are measurable. Then, $|g_n(x)|$ $\leq$ M.
+        Let g(x) = $f(x) \mathfrak{X}_{E^c}(x)$
+        so $\lim_{n \rightarrow \infty}$ $g_n(x)$ = g(x)
+        and g(x) $\leq$ M.
+
+        Since $\lim_{n \rightarrow \infty}$ $g_n(x)$ = g(x),
+        then by {\color{red} theorem 17.4.7},  g(x) is measurable.
+
+        Since g(x) = f(x) almost everywhere, then
+        by {\color{red} theorem 17.4.6b}, f(x) is measurable.
+
+        \hspace{0.5cm}
+        $\int g d\mu$ = $\int f d\mu$
+        \hspace{1cm}
+        $\int g_n d\mu$ = $\int f_n d\mu$
+
+        By {\color{red} theorem 17.6.1},
+        $\lim_{n \rightarrow \infty}$ $\int$ $g_n$ $d\mu$ = $\int$ g $d\mu$.
+        Thus:
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $\int$ $f_n$ $d\mu$
+        = $\lim_{n \rightarrow \infty}$ $\int$ $g_n$ $d\mu$
+        = $\int$ g $d\mu$
+        = $\int$ f $d\mu$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    
+\subsection{ Integral of Unbounded Functions }
+
+    \begin{definition}{Integrable Function}{14cm}
+        If f: [0,1] $\rightarrow$ [0,$\infty$] is Lebesgue measurable,
+        let $f_n(x)$ = min(f(x),n).
+
+        Then $f_n$ is a bounded measurable function and let:
+
+        \hspace{0.5cm}
+        $\int$ f $d\mu$ = $\lim_{n \rightarrow \infty}$ $f_n(x)$ $d\mu$
+
+        If $\int$ f $d\mu$ $<$ $\infty$, then f is {\color{lblue} integrable}.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Unbounded sets of Integrable functions have measure 0}{14cm}
+        If f is a non-negative integrable function and
+        A = \{ x $|$ f(x) = $\infty$ \}, then:
+        
+        \hspace{0.5cm}
+        $\mu(A)$ = 0 
+    \end{wtheorem}
+
+    \begin{proof}
+        If x $\in$ A, then $f_n(x)$ = n $\geq$ $n \mathfrak{X}_A(x)$.
+        Thus, $\int f_n d\mu$ $\geq$ $\int n \mathfrak{X}_A d\mu$ = $n\mu(A)$.
+
+        If $\mu(A)$ $>$ 0, then:
+
+        \hspace{0.5cm}
+        $\int f d\mu$
+        = $\lim_{n \rightarrow \infty}$ $\int f_n d\mu$
+        $\geq$ $\lim_{n \rightarrow \infty}$ $\int n \mathfrak{X}_A d\mu$
+        = $\lim_{n \rightarrow \infty}$ $n\mu(A)$
+        = $\infty$
+
+        Thus, if f is integrable, then $\mu(A)$ = 0.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Integrable functions for Almost Everywhere}{14cm}
+        Suppose f,g are non-negative measurable functions with g(x) $\leq$ f(x)
+        for almost all x. If x is integrable, then g is integrable where:
+
+        \hspace{0.5cm}
+        $\int$ g $d\mu$
+        $\leq$ $\int$ f $d\mu$
+
+        If g = 0 almost everywhere, then $\int$ g $d\mu$ = 0.
+    \end{wtheorem}
+
+    \begin{proof}
+        If $f_n(x)$ = min(f(x),n) and $g_n(x)$ = min(g(x),n),
+        then $f_n,g_n$ are bounded measurable functions
+        where $g_n(x)$ $\leq$ $f_n(x)$ almost everywhere.
+        If f is integrable, then:
+
+        \hspace{0.5cm}
+        $\int g_n d\mu$
+        $\leq$ $\int f_n d\mu$
+        $\leq$ $\int f d\mu$
+
+        Since \{$g_n$\} is increasing and bounded above by $\int f d\mu$,
+        then $\int g d\mu$ is finite and thus, exist.
+        If 0 $\leq$ g(x) $\leq$ 0 almost everywhere,
+        for almost all x so $\int g d\mu$ = $\int 0 d\mu$ = 0.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{corollary}{If integrable f $\geq$ 0, then
+    $\int$ f $d\mu$ 0 $\rightleftharpoons$ f(x) = 0 almost everywhere}{14cm}
+        If f: [0,1] $\rightarrow$ [0,$\infty$] is a non-negative integrable
+        function and $\int f d\mu$ = 0, then f(x) = 0 almost everywhere
+    \end{corollary}
+
+    \begin{proof}
+        Let $E_n$ = \{ x $|$ f(x) $\geq$ $\frac{1}{n}$ \}.
+        Then, f(x) $\geq$ $\frac{1}{n} \mathfrak{X}_{E_n}(x)$ where:
+
+        \hspace{0.5cm}
+        $\frac{1}{n} \mu(E_n)$
+        = $\int \frac{1}{n} \mathfrak{X}_{E_n} d\mu$
+        $\leq$ $\int f d\mu$
+        = 0
+
+        Thus, $\mu(E_n)$ = 0.
+        Let E = \{ x $|$ f(x) $>$ 0 \}
+        so E = $\cup_{n=1}^{\infty} E_n$ where $E_n$ $\subset$ $E_{n+1}$ so:
+
+        \hspace{0.5cm}
+        $\mu(E)$
+        = $\mu(\cup_{n=1}^{\infty} E_n)$
+        = $\lim_{n \rightarrow \infty} \mu(E_n)$
+        = 0.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Absolute Continuity}{14cm}
+        If f is a non-negative integrable function, then for $\epsilon > 0$,
+        there is a $\delta > 0$ where for every measurable A $\subset$ [0,1]
+        with $\mu(A)$ $<$ $\delta$, then $\int_A$ f $d\mu$ $<$ $\epsilon$
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $E_n$ = \{ x $|$ f(x) $\geq$ n \}
+        so $f_n(x)$
+        = $\begin{cases}
+            f(x) & x \in E_n^c \\
+            n & x \in E_n
+        \end{cases}$.
+        Thus:
+        
+        \hspace{0.5cm}
+        f(x) - $f_n(x)$
+        = $\begin{cases}
+            0 & x \in E_n^c \\
+            f(x) - n & x \in E_n
+        \end{cases}$
+
+        \hspace{0.5cm}
+        $\int f d\mu$ - $\int f_n d\mu$
+        = $\int f-f_n d\mu$
+        = $\int_{E_n} f(x)-n d\mu$
+
+        Since f is integrable, then
+        $\lim_{n \rightarrow \infty}$ $\int f d\mu$ - $\int f_n d\mu$ = 0. Thus:
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $\int_{E_n} f(x)-n d\mu$ = 0
+
+        Thus, there is a N where
+        $\int_{E_n} f(x)-n d\mu$ $<$ $\frac{\epsilon}{2}$.
+        Then for $\delta$ $<$ $\frac{\epsilon}{2N}$, if $\mu(A)$ $<$ $\delta$:
+
+        \hspace{0.5cm}
+        $\int_A f d\mu$
+        = $\int_{A \cap E_N} f d\mu$ + $\int_{A \cap E_N^c} f d\mu$
+
+        \hspace{1.9cm}
+        $\leq$ $\int_{A \cap E_N} (f-N) d\mu$
+                + $\int_{A \cap E_N} N d\mu$
+                + $\int_{A \cap E_N^c} N d\mu$
+
+        \hspace{1.9cm}
+        $\leq$ $\int_{A \cap E_N} (f-N) d\mu$
+                + $\int_A N d\mu$
+        $<$ $\frac{\epsilon}{2}$ + $N\mu(A)$
+        $<$ $\frac{\epsilon}{2}$ + $N\delta$
+        $<$ $\frac{\epsilon}{2}$ + $N\frac{\epsilon}{2N}$
+        $<$ $\epsilon$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{corollary}{Uniform Continuity of the Integral}{14cm}
+        If f: [0,1] $\rightarrow$ [0,$\infty$] is a non-negative integrable
+        function where F(x) = $\int_{[0,x]}$ f $d\mu$, then F(x) is continuous
+    \end{corollary}
+
+    \begin{proof}
+        By {\color{red} theorem 17.7.5}, for $\epsilon > 0$,
+        there is a $\delta > 0$ where for $\mu([x,y])$ $<$ $\delta$, then:
+
+        \hspace{0.5cm}
+        $\int_{[x,y]}$ f $d\mu$ $<$ $\epsilon$
+
+        \hspace{0.5cm}
+        $|F(y) - F(x)|$
+        = $|\int_{[0,y]} f d\mu - \int_{[0,x]} f d\mu|$
+        = $|\int_{[x,y]} f d\mu|$
+        $<$ $\epsilon$
+
+        Thus, F(x) is uniformly continuous.
+    \end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

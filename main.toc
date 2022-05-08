@@ -84,3 +84,12 @@
 \contentsline {subsection}{\numberline {16.2} Differentiation }{101}{subsection.16.2}%
 \contentsline {subsection}{\numberline {16.3} The Contraction Principle }{106}{subsection.16.3}%
 \contentsline {subsection}{\numberline {16.4} Inverse Function Theorem }{107}{subsection.16.4}%
+\contentsline {subsection}{\numberline {16.5} Implicit Function Theorem }{108}{subsection.16.5}%
+\contentsline {section}{\numberline {17}Day 17: Lebesgue Measure}{110}{section.17}%
+\contentsline {subsection}{\numberline {17.1} Regulated Integral }{110}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2} Outer Measure }{113}{subsection.17.2}%
+\contentsline {subsection}{\numberline {17.3} Lebesgue Measure }{116}{subsection.17.3}%
+\contentsline {subsection}{\numberline {17.4} Lebesgue Integral }{118}{subsection.17.4}%
+\contentsline {subsection}{\numberline {17.5} Lebesgue Integral of Bounded Functions }{121}{subsection.17.5}%
+\contentsline {subsection}{\numberline {17.6} Bounded Convergence Theorem }{123}{subsection.17.6}%
+\contentsline {subsection}{\numberline {17.7} Integral of Unbounded Functions }{124}{subsection.17.7}%
