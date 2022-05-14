@@ -1155,6 +1155,10 @@ INPUT c:/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
+INPUT ./Content/C18.tex
+INPUT Content/C18.tex
+INPUT ./Content/C18.tex
+INPUT Content/C18.tex
 INPUT ./Bibliography/Bibliography.tex
 INPUT ./Bibliography/Bibliography.tex
 INPUT ./Bibliography/Bibliography.tex

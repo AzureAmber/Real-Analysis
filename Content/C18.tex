@@ -1,0 +1,832 @@
+\newpage
+
+\section[Day 18: Convergence Theorems]{ Lebesgue Convergence Theorems }
+
+\subsection{ Bounded Convergence Theorem }
+
+    \begin{wtheorem}{Bounded Convergence Theorem}{14cm}
+        Suppose measurable \{$f_n$\} on [0,1] converge pointwise to f where
+        $|f_n(x)|$ $\leq$ M.
+        Then, f is a bounded measurable function where:
+        
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $\int$ $f_n$ $d\mu$ = $\int$ f $d\mu$
+    \end{wtheorem}
+
+    \begin{proof}
+        Since $\lim_{n \rightarrow \infty}$ $f_n$ = f pointwise, then
+        for any x $\in$ [0,1], then is a $N_x$ where for n $\geq$ $N_x$:
+
+        \hspace{0.5cm}
+        $|f(x) - f_n(x)|$ $<$ $\epsilon$
+
+        \hspace{0.5cm}
+        $|f(x)|$ $\leq$ $|f(x) - f_n(x)| + |f_n(x)|$ $<$ $\epsilon + M$
+        \hspace{1cm}
+        $\Rightarrow$
+        \hspace{1cm}
+        $|f(x)|$ $\leq$ M
+
+        Thus, f is bounded.
+        Since $\lim_{n \rightarrow \infty}$ $f_n$ = f, then by
+        {\color{red} theorem 17.4.7}, f is measurable.
+
+        Let set $E_n$ = \{ x $\in$ [0,1] $|$
+                            $|f_n(x) - f(x)|$ $<$ $\frac{\epsilon}{2}$ \}.
+        Since $\lim_{n \rightarrow \infty}$ $f_n$ = f pointwise, then
+        $\cup_{n=1}^{\infty}$ $E_n$ = [0,1].
+        Since $E_n$ $\subset$ $E_{n+1}$, then
+        $\lim_{n \rightarrow \infty} \mu(E_n)$ = $\mu([0,1])$ = 1.
+
+        Then, there is a N where $\mu(E_N)$ $>$ $1 - \frac{\epsilon}{4M}$
+        so $\mu(E_N^c)$ $<$ $\frac{\epsilon}{4M}$. Thus:
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $|\int f_n d\mu - \int f d\mu|$
+        = $\lim_{n \rightarrow \infty}$ $|\int f_n - f d\mu|$
+        $\leq$ $\lim_{n \rightarrow \infty}$ $\int |f_n - f| d\mu$
+
+        \hspace{5.25cm}
+        = $\int_{E_N} |f_n - f| d\mu$ + $\int_{E_N^c} |f_n - f| d\mu$
+
+        \hspace{5.25cm}
+        $<$ $\frac{\epsilon}{2} \mu(E_N)$ + $2M \mu(E_N^c)$
+        $<$ $\frac{\epsilon}{2}$ + $2M \frac{\epsilon}{4M}$
+        = $\epsilon$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Almost Everywhere}{14cm}
+        If a property holds for all x except for a null set,
+        then it holds {\color{lblue} almost everywhere}
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Bounded Convergence Theorem for Almost Everywhere}{14cm}
+        Suppose bounded \{$f_n$\} on [0,1] are measurable
+        and f is bounded such that $\lim_{n \rightarrow \infty}$ $f_n$ = f
+        for almost all x.
+        If $|f_n(x)|$ $\leq$ M almost everywhere, then f is measurable where:
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $\int$ $f_n$ $d\mu$ = $\int$ f $d\mu$
+    \end{wtheorem}
+
+    \begin{proof}
+        Let A = \{ x $|$ $\lim_{n \rightarrow \infty}$ $f_n(x)$ $\not =$ f(x) \}
+        so $\mu(A)$ = 0.
+        Let $D_n$ = \{ x $|$ $|f_n(x)|$ $>$ M \} so $\mu(D_n)$ = 0.
+        Let E = A $\cup_{n=1}^{\infty} D_n$. Thus:
+
+        \hspace{0.5cm}
+        $\mu(E)$ $\leq$ $\mu(A) + \sum_{i=1}^{\infty} \mu(D_n)$ = 0
+        \hspace{1cm}
+        $\Rightarrow$
+        \hspace{1cm}
+        $\mu(E)$ = 0
+
+        Let $g_n(x)$ = $f_n(x) \mathfrak{X}_{E^c}(x)$
+        which is measurable since $f_n(x)$,$\mathfrak{X}_{E^c}(x)$
+        are measurable. Then, $|g_n(x)|$ $\leq$ M.
+        Let g(x) = $f(x) \mathfrak{X}_{E^c}(x)$
+        so $\lim_{n \rightarrow \infty}$ $g_n(x)$ = g(x)
+        and g(x) $\leq$ M.
+
+        Since $\lim_{n \rightarrow \infty}$ $g_n(x)$ = g(x),
+        then by {\color{red} theorem 17.4.7},  g(x) is measurable.
+
+        Since g(x) = f(x) almost everywhere, then
+        by {\color{red} theorem 17.4.6b}, f(x) is measurable.
+
+        \hspace{0.5cm}
+        $\int g d\mu$ = $\int f d\mu$
+        \hspace{1cm}
+        $\int g_n d\mu$ = $\int f_n d\mu$
+
+        By {\color{red} theorem 18.1.1},
+        $\lim_{n \rightarrow \infty}$ $\int$ $g_n$ $d\mu$ = $\int$ g $d\mu$.
+        Thus:
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $\int$ $f_n$ $d\mu$
+        = $\lim_{n \rightarrow \infty}$ $\int$ $g_n$ $d\mu$
+        = $\int$ g $d\mu$
+        = $\int$ f $d\mu$
+    \end{proof}
+
+    \newpage
+
+
+
+    
+\subsection{ Integral of Unbounded Functions }
+
+    \begin{definition}{Integrable Function}{14cm}
+        If f: [0,1] $\rightarrow$ [0,$\infty$] is Lebesgue measurable,
+        let $f_n(x)$ = min(f(x),n).
+
+        Then $f_n$ is a bounded measurable function and let:
+
+        \hspace{0.5cm}
+        $\int$ f $d\mu$ = $\lim_{n \rightarrow \infty}$ $f_n(x)$ $d\mu$
+
+        If $\int$ f $d\mu$ $<$ $\infty$, then f is {\color{lblue} integrable}.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Unbounded sets of Integrable functions have measure 0}{14cm}
+        If f is a non-negative integrable function and
+        A = \{ x $|$ f(x) = $\infty$ \}, then:
+        
+        \hspace{0.5cm}
+        $\mu(A)$ = 0 
+    \end{wtheorem}
+
+    \begin{proof}
+        If x $\in$ A, then $f_n(x)$ = n $\geq$ $n \mathfrak{X}_A(x)$.
+        Thus, $\int f_n d\mu$ $\geq$ $\int n \mathfrak{X}_A d\mu$ = $n\mu(A)$.
+
+        If $\mu(A)$ $>$ 0, then:
+
+        \hspace{0.5cm}
+        $\int f d\mu$
+        = $\lim_{n \rightarrow \infty}$ $\int f_n d\mu$
+        $\geq$ $\lim_{n \rightarrow \infty}$ $\int n \mathfrak{X}_A d\mu$
+        = $\lim_{n \rightarrow \infty}$ $n\mu(A)$
+        = $\infty$
+
+        Thus, if f is integrable, then $\mu(A)$ = 0.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Integrable functions for Almost Everywhere}{14cm}
+        Suppose f,g are non-negative measurable functions with g(x) $\leq$ f(x)
+        for almost all x. If f is integrable, then g is integrable where:
+
+        \hspace{0.5cm}
+        $\int$ g $d\mu$
+        $\leq$ $\int$ f $d\mu$
+
+        If g = 0 almost everywhere, then $\int$ g $d\mu$ = 0.
+    \end{wtheorem}
+
+    \begin{proof}
+        If $f_n(x)$ = min(f(x),n) and $g_n(x)$ = min(g(x),n),
+        then $f_n,g_n$ are bounded measurable functions
+        where $g_n(x)$ $\leq$ $f_n(x)$ almost everywhere.
+        If f is integrable, then:
+
+        \hspace{0.5cm}
+        $\int g_n d\mu$
+        $\leq$ $\int f_n d\mu$
+        $\leq$ $\int f d\mu$
+
+        Since \{$g_n$\} is increasing and bounded above by $\int f d\mu$,
+        then $\int g d\mu$ is finite and thus, exist.
+        If 0 $\leq$ g(x) $\leq$ 0 almost everywhere,
+        for almost all x so $\int g d\mu$ = $\int 0 d\mu$ = 0.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{corollary}{If integrable f $\geq$ 0, then
+    $\int$ f $d\mu$ 0 $\rightleftharpoons$ f(x) = 0 almost everywhere}{14cm}
+        If f: [0,1] $\rightarrow$ [0,$\infty$] is a non-negative integrable
+        function and $\int f d\mu$ = 0, then f(x) = 0 almost everywhere
+    \end{corollary}
+
+    \begin{proof}
+        Let $E_n$ = \{ x $|$ f(x) $\geq$ $\frac{1}{n}$ \}.
+        Then, f(x) $\geq$ $\frac{1}{n} \mathfrak{X}_{E_n}(x)$ where:
+
+        \hspace{0.5cm}
+        $\frac{1}{n} \mu(E_n)$
+        = $\int \frac{1}{n} \mathfrak{X}_{E_n} d\mu$
+        $\leq$ $\int f d\mu$
+        = 0
+
+        Thus, $\mu(E_n)$ = 0.
+        Let E = \{ x $|$ f(x) $>$ 0 \}
+        so E = $\cup_{n=1}^{\infty} E_n$ where $E_n$ $\subset$ $E_{n+1}$ so:
+
+        \hspace{0.5cm}
+        $\mu(E)$
+        = $\mu(\cup_{n=1}^{\infty} E_n)$
+        = $\lim_{n \rightarrow \infty} \mu(E_n)$
+        = 0.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Absolute Continuity}{14cm}
+        If f is a non-negative integrable function, then for $\epsilon > 0$,
+        there is a $\delta > 0$ where for every measurable A $\subset$ [0,1]
+        with $\mu(A)$ $<$ $\delta$, then $\int_A$ f $d\mu$ $<$ $\epsilon$
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $E_n$ = \{ x $|$ f(x) $\geq$ n \}
+        so $f_n(x)$
+        = $\begin{cases}
+            f(x) & x \in E_n^c \\
+            n & x \in E_n
+        \end{cases}$.
+        Thus:
+        
+        \hspace{0.5cm}
+        f(x) - $f_n(x)$
+        = $\begin{cases}
+            0 & x \in E_n^c \\
+            f(x) - n & x \in E_n
+        \end{cases}$
+
+        \hspace{0.5cm}
+        $\int f d\mu$ - $\int f_n d\mu$
+        = $\int f-f_n d\mu$
+        = $\int_{E_n} f(x)-n d\mu$
+
+        Since f is integrable, then
+        $\lim_{n \rightarrow \infty}$ $\int f d\mu$ - $\int f_n d\mu$ = 0. Thus:
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $\int_{E_n} f(x)-n d\mu$ = 0
+
+        Thus, there is a N where
+        $\int_{E_n} f(x)-n d\mu$ $<$ $\frac{\epsilon}{2}$.
+        Then for $\delta$ $<$ $\frac{\epsilon}{2N}$, if $\mu(A)$ $<$ $\delta$:
+
+        \hspace{0.5cm}
+        $\int_A f d\mu$
+        = $\int_{A \cap E_N} f d\mu$ + $\int_{A \cap E_N^c} f d\mu$
+        $\leq$ $\int_{A \cap E_N} (f-N) d\mu$
+                + $\int_{A \cap E_N} N d\mu$
+                + $\int_{A \cap E_N^c} N d\mu$
+
+        \hspace{1.9cm}
+        $\leq$ $\int_{A \cap E_N} (f-N) d\mu$
+                + $\int_A N d\mu$
+        $<$ $\frac{\epsilon}{2}$ + $N\mu(A)$
+        $<$ $\frac{\epsilon}{2}$ + $N\delta$
+        $<$ $\frac{\epsilon}{2}$ + $N\frac{\epsilon}{2N}$
+        $<$ $\epsilon$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{corollary}{Uniform Continuity of the Integral}{14cm}
+        If f: [0,1] $\rightarrow$ [0,$\infty$] is an integrable
+        function where F(x) = $\int_{[0,x]}$ f $d\mu$, then F(x) is continuous
+    \end{corollary}
+
+    \begin{proof}
+        By {\color{red} theorem 17.7.5}, for $\epsilon > 0$,
+        there is a $\delta > 0$ where for $\mu([x,y])$ $<$ $\delta$, then
+        $\int_{[x,y]}$ f $d\mu$ $<$ $\epsilon$.
+
+        \hspace{0.5cm}
+        $|F(y) - F(x)|$
+        = $|\int_{[0,y]} f d\mu - \int_{[0,x]} f d\mu|$
+        = $|\int_{[x,y]} f d\mu|$
+        $<$ $\epsilon$
+
+        Thus, F(x) is uniformly continuous.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+
+
+\subsection{ Dominated Convergence Theorems }
+
+    \begin{wtheorem}{Dominated Convergence Theorem}{14cm}
+        Suppose non-negative measurable \{$f_n$\} on [0,1]
+        converge pointwise to f for almost all x.
+        If there is a non-negative integrable g where
+        $f_n(x)$ $\leq$ g(x) for almost all x, then f is integrable where:
+
+        \hspace{0.5cm}
+        $\int$ f $d\mu$ = $\lim_{n \rightarrow \infty}$ $\int$ $f_n$ $d\mu$
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $h_n$ = $f_n \mathfrak{X}_E$ and h = $f \mathfrak{X}_E$
+        where E = \{ x $|$ $\lim_{n \rightarrow \infty}$ $f_n(x)$ = f(x) \}
+        so $\lim_{n \rightarrow \infty}$ $h_n(x)$ = h(x) for all x.
+        Since $h_n(x)$ = $f_n \mathfrak{X}_E$ $\leq$ g(x) for almost all
+        x and g is integrable, then h(x) $\leq$ g(x) for almost all x
+        so by {\color{red} theorem 18.2.3}, h is integrable.
+
+        For $\epsilon > 0$, let $E_n$ =
+        \{ x $|$ $|h_m(x) - h(x)|$ $<$ $\frac{\epsilon}{2}$ for all m $\geq$ n \}.
+        By {\color{red} theorem 18.2.5}, there is a $\delta > 0$
+        where for each measurable A $\subset$ [0,1] with $\mu(A)$ $<$ $\delta$,
+        then $\int_A$ g $d\mu$ $<$ $\frac{\epsilon}{4}$.
+
+        Since $\lim_{n \rightarrow \infty}$ $h_n(x)$ = h(x) for all x $\in$ [0,1],
+        then any x $\in$ $E_n$ in some n so $\cup_{n=1}^{\infty}$ $E_n$ = [0,1].
+        Since $E_n$ $\subset$ $E_{n+1}$, then
+        $\lim_{n \rightarrow \infty}$ $\mu(E_n)$ = $\mu([0,1])$ = 1.
+        Thus, there is a n where $\mu(E_n)$ $>$ $1-\delta$
+        so $\mu(E_n^c)$ $<$ $\delta$.
+        Note $|h_n(x) - h(x)|$ $\leq$ $|h_n(x)| + |h(x)|$ $\leq$ $2g(x)$
+        for almost all x. Thus, for any m $>$ n:
+
+        \hspace{0.5cm}
+        $|\int h_m d\mu - \int h d\mu|$
+        $\leq$ $\int |h_m - h| d\mu$
+        = $\int_{E_n} |h_m - h| d\mu$ + $\int_{E_n^c} |h_m - h| d\mu$
+        
+        \hspace{3.8cm}
+        $<$ $\frac{\epsilon}{2} \mu(E_n)$ + $2 \int_{E_n^c} g d\mu$
+        $<$ $\frac{\epsilon}{2}$ + $2 \frac{\epsilon}{4}$
+        = $\epsilon$
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $\int$ $f_n$ $d\mu$
+        = $\lim_{n \rightarrow \infty}$ $\int$ $h_n$ $d\mu$
+        = $\int$ h $d\mu$
+        = $\int$ f $d\mu$
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Fatou's Lemma}{14cm}
+        If non-negative measurable \{$g_n$\} on [0,1]
+        converge pointwise to g(x) for almost all x, then:
+
+        \hspace{0.5cm}
+        $\int$ g $d\mu$
+        $\leq$ $\lim_{n \rightarrow \infty}$ inf($\int$ $g_n$ $d\mu$)
+
+        Thus, if $\lim_{n \rightarrow \infty}$ inf($\int$ $g_n$ $d\mu$)
+        $<$ $\infty$, then g is integrable.
+    \end{wtheorem}
+
+    \begin{proof}
+        Since $g_n$ is measurable and $\lim_{n \rightarrow \infty}$ $g_n$ = g
+        for almost all x, then g is measurable.
+
+        Let bounded, measurable h be h(x) $\leq$ g(x) for all x.
+        Let $h_n(x)$ = min(h(x),$g_n(x)$) so $h_n$ is bounded and measurable
+        where $\lim_{n \rightarrow \infty}$ $h_n$ = h.
+        Then by {\color{red} theorem 18.1.1}:
+
+        \hspace{0.5cm}
+        $\int$ h $d\mu$
+        = $\lim_{n \rightarrow \infty}$ $\int$ $h_n$ $d\mu$
+        $\leq$ $\lim_{n \rightarrow \infty}$ inf($\int$ $g_n$ $d\mu$)
+
+        Since the inequality holds for any bounded, measurable h
+        where h(x) $\leq$ g(x), then let h(x) = $g_m(x)$ = min($g_n(x)$,m).
+        Thus, for any m:
+
+        \hspace{0.5cm}
+        $\int$ $g_m$ $d\mu$
+        $\leq$ $\lim_{n \rightarrow \infty}$ inf($\int$ $g_n$ $d\mu$)
+
+        \hspace{0.5cm}
+        $\int$ g $d\mu$
+        = $\lim_{m \rightarrow \infty}$ $\int$ $g_m$ $d\mu$
+        $\leq$ $\lim_{n \rightarrow \infty}$ inf($\int$ $g_n$ $d\mu$)
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Monotone Convergence Theorem}{14cm}
+        If non-negative measurable \{$g_n$\} on [0,1]
+        converge pointwise to g(x) for almost all x where
+        $g_n(x)$ $\leq$ $g_{n+1}(x)$, then:
+
+        \hspace{0.5cm}
+        $\int$ g $d\mu$ = $\lim_{n \rightarrow \infty}$ $\int$ $g_n$ $d\mu$
+
+        Thus, g is integrable if and only if
+        $\lim_{n \rightarrow \infty}$ $\int$ $g_n$ $d\mu$ $<$ $\infty$.
+    \end{wtheorem}
+
+    \begin{proof}
+        Since $g_n$ is measurable and $\lim_{n \rightarrow \infty}$ $g_n$ = g
+        for almost all x, then g is measurable.
+
+        If f is integrable, then by {\color{red} theorem 18.3.1}, then:
+        
+        \hspace{0.5cm}
+        $\int$ g $d\mu$ = $\lim_{n \rightarrow \infty}$ $\int$ $g_n$ $d\mu$.
+
+        If $\lim_{n \rightarrow \infty}$ $\int$ f $d\mu$ = $\infty$,
+        then by {\color{red} theorem 18.3.2}:
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ inf($\int$ $g_n$ $d\mu$) = $\infty$
+        \hspace{0.5cm}
+        $\Rightarrow$
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $\int$ $g_n$ $d\mu$ = $\infty$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{corollary}{Integral of Infinite Series}{14cm}
+        For non-negative measurable $u_n(x)$ and non-negative f,
+        let $\sum_{n=1}^{\infty}$ $u_n(x)$ = f(x) for almost all x. Then:
+
+        \hspace{0.5cm}
+        $\int$ f $d\mu$ = $\sum_{n=1}^{\infty}$ $\int$ $u_n$ $d\mu$
+    \end{corollary}
+
+    \begin{proof}
+        Let $f_N(x)$ = $\sum_{n=1}^N$ $u_n(x)$ so
+        $\lim_{N \rightarrow \infty}$ $f_N(x)$
+        = $\sum_{n=1}^{\infty}$ $u_n(x)$ = f(x) for almost all x.
+        Since $u_n(x)$ is non-negative, then $f_N(x)$ $\leq$ $f_{N+1}(x)$.
+        Then by {\color{red} theorem 18.3.3}:
+
+        \hspace{0.5cm}
+        $\int$ f $d\mu$
+        = $\lim_{N \rightarrow \infty}$ $\int$ $f_N$ $d\mu$
+        = $\lim_{N \rightarrow \infty}$ $\int$ $\sum_{n=1}^N$ $u_n(x)$ $d\mu$
+
+        \hspace{1.8cm}
+        = $\lim_{N \rightarrow \infty}$ $\sum_{n=1}^N$ $\int$ $u_n(x)$ $d\mu$
+        = $\sum_{n=1}^{\infty}$ $\int$ $u_n$ $d\mu$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{corollary}{Lebesgue Integral: Countable Additivity}{14cm}
+        Suppose \{$E_n$\} are pairwise disjoint measurable subsets of I
+        and f is a non-negative integrable function.
+        If E = $\cup_{n=1}^{\infty}$, then:
+
+        \hspace{0.5cm}
+        $\int_E$ f $d\mu$
+        = $\sum_{n=1}^{\infty}$ $\int_{E_n}$ f $d\mu$
+    \end{corollary}
+
+    \begin{proof}
+        Let $u_n(x)$ = $f \mathfrak{X}_{E_n}$.
+        Since $\mathfrak{X}_E$ = $\sum_{n=1}^{\infty} \mathfrak{X}_{E_n}$, then
+        $f \mathfrak{X}_E$
+        = $f \sum_{n=1}^{\infty} \mathfrak{X}_{E_n}$
+        = $\sum_{n=1}^{\infty} u_n(x)$.
+
+        Thus, by {\color{orange} corollary 18.3.4}:
+
+        \hspace{0.5cm}
+        $\int_E$ f $d\mu$
+        = $\int$ $f \mathfrak{X}_E$ $d\mu$
+        = $\sum_{n=1}^{\infty}$ $\int$ $u_n$ $d\mu$
+        = $\sum_{n=1}^{\infty}$ $\int$ $f \mathfrak{X}_{E_n}$ $d\mu$
+        = $\sum_{n=1}^{\infty}$ $\int_{E_n}$ f $d\mu$
+    \end{proof}
+
+    \newpage
+
+
+
+
+
+\subsection{ General Lebesgue Integral }
+
+    \begin{definition}{Measurable Function Redefined}{14cm}
+        For measurable function f: [0,1] $\rightarrow$ $[-\infty,\infty]$, let:
+        
+        \hspace{0.5cm}
+        $f^+(x)$ = max(f(x),0)
+        \hspace{1cm}
+        $f^-(x)$ = -min(f(x),0)
+
+        Thus, $f^+(x)$ and $f^-(x)$ are non-negative measurable functions where:
+        
+        \hspace{0.5cm}
+        f(x) = $f^+(x)$ - $f^-(x)$
+
+        Then f is Lebesgue integrable if $f^+(x)$ and $f^-(x)$ are integrable.
+        Thus:
+
+        \hspace{0.5cm}
+        $\int$ f $d\mu$
+        = $\int$ $f^+(x)$ $d\mu$ - $\int$ $f^-(x)$ $d\mu$
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{For f = g almost everywhere,
+    then $\int$ f $d\mu$ = $\int$ g $d\mu$}{14cm}
+        Suppose f,g are measurable functions on [0,1]
+        where f = g almost everywhere. Then if f is integrable, then
+        g is integrable where $\int$ f $d\mu$ = $\int$ g $d\mu$.
+    \end{wtheorem}
+
+    \begin{proof}
+        If f and g are measurable functions where f = g almost everywhere,
+        then $f^+$ = $g^+$ and $f^-$ = $g^-$ almost everywhere.
+        Then if f is integrable, then $f^+$ and $f^-$ are integrable
+        so by {\color{red} theorem 18.2.3}, $g^+$ and $g^-$ are integrable
+        where:
+        
+        \hspace{0.5cm}
+        $\int$ $f^+$ $d\mu$ = $\int$ $g^+$ $d\mu$
+        \hspace{1cm}
+        $\int$ $f^-$ $d\mu$ = $\int$ $g^-$ $d\mu$
+
+        \hspace{0.5cm}
+        $\int$ f $d\mu$
+        = $\int$ $f^+(x)$ $d\mu$ - $\int$ $f^-(x)$ $d\mu$
+        = $\int$ $g^+(x)$ $d\mu$ - $\int$ $g^-(x)$ $d\mu$
+        = $\int$ g $d\mu$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Integrable f $\rightleftharpoons$ Integrable $|f|$}{14cm}
+        Measurable f: [0,1] $\rightarrow$ $[-\infty,\infty]$
+        is integrable if and only if $|f|$ is integrable
+    \end{wtheorem}
+
+    \begin{proof}
+        If f is integrable, then $f^+,f^-$
+        are integrable. Since $|f|$ = $f^+ + f^-$, then f is integrable.
+
+        If $|f|$ is integrable, then since $f^+,f^-$ $\leq$ $|f|$,
+        by {\color{red} theorem 18.2.3}, $f^+,f^-$ are integrable
+        so f is integrable.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Lebesgue Convergence Theorem}{14cm}
+        Let measurable \{$f_n$\} on [0,1] converge pointwise to f
+        for almost all x. If there is a integrable g where
+        $|f_n(x)|$ $\leq$ g(x) for almost all x, then f is integrable where:
+
+        \hspace{0.5cm}
+        $\int$ f $d\mu$ = $\lim_{n \rightarrow \infty}$ $\int$ $f_n$ $d\mu$
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $f_n^+(x)$ = max($f_n(x),0$) and $f_n^-(x)$ = -min($f_n(x),0$).
+        Thus, $\lim_{n \rightarrow \infty}$ $f_n^+(x)$ = $f^+(x)$
+        and $\lim_{n \rightarrow \infty}$ $f_n^-(x)$ = $f^-(x)$
+        for almost all x.
+        Since $|f_n(x)|$ $\leq$ g(x), then
+        $f_n^+(x),f_n^-(x)$ $\leq$ g(x) for almost all x.
+        Then by {\color{red} theorem 18.3.1}, $f^+,f^-$ are integrable where:
+
+        \hspace{0.5cm}
+        $\int$ $f^+$ $d\mu$
+        = $\lim_{n \rightarrow \infty}$ $\int$ $f_n^+$ $d\mu$
+        \hspace{1cm}
+        $\int$ $f^-$ $d\mu$
+        = $\lim_{n \rightarrow \infty}$ $\int$ $f_n^-$ $d\mu$
+
+        Thus, f = $f^+ - f^-$ is integrable where:
+
+        \hspace{0.5cm}
+        $\int$ f $d\mu$
+        = $\int$ $f^+ - f^-$ $d\mu$
+        = $\lim_{n \rightarrow \infty}$ $\int$ $f_n^+ - f_n^-$ $d\mu$
+        = $\lim_{n \rightarrow \infty}$ $\int$ $f_n$ $d\mu$
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Integrable f can be approximated by a step function}{14cm}
+        For integrable f: [0.1] $\rightarrow$ $[-\infty,\infty]$
+        and $\epsilon > 0$, there is a step function g
+        and measurable A $\subset$ [0,1] such that:
+        
+        \hspace{0.5cm}
+        $\mu(A)$ $<$ $\epsilon$
+        \hspace{1cm}
+        $|f(x) - g(x)|$ $<$ $\epsilon$
+        for all x $\not \in$ A
+
+        If $|f(x)|$ $\leq$ M for all x, then
+        there is a step function g where $|g(x)|$ $\leq$ M.
+    \end{wtheorem}
+
+    \begin{proof}
+        Suppose f(x) = $\mathfrak{X}_{E}$ for some measurable set E.
+
+        Let E $\subset$ $\cup_{i=1}^{\infty} U_i$ for open intervals
+        \{$U_i$\} such that:
+
+        \hspace{0.5cm}
+        $\mu(E)$
+        $\leq$ $\mu(\cup_{i=1}^{\infty} U_i)$
+        $\leq$ $\sum_{i=1}^{\infty} \mu(U_i)$
+        $\leq$ $\mu(E) + \frac{\epsilon}{2}$
+        \hspace{0.5cm}
+        $\Rightarrow$
+        \hspace{0.5cm}
+        $\mu((\cup_{i=1}^{\infty} U_i) \cap E^c)$ $<$ $\frac{\epsilon}{2}$
+
+        Then choose an N such that for $V_N$ = $\cup_{i=1}^N U_i$,
+        then $\mu(\cup_{i=1}^N U_i)$ $\leq$ $\sum_{i=N}^{\infty} \mu(U_i)$
+        $<$ $\frac{\epsilon}{2}$.
+        Let g(x) = $\mathfrak{X}_{V_N}$ so g is a step function since $V_N$
+        is finite.
+        Let A = \{ x $|$ f(x) $\not =$ g(x) \}.
+
+        \hspace{0.5cm}
+        A $\subset$ $(V_N \cap E^c) \cup (E \cap V_N^c)$
+        $\subset$ $((\cup_{i=1}^{\infty} U_i) \cap E^c)
+                    \cup (\cup_{i=N}^{\infty} U_i)$
+
+        \hspace{0.5cm}
+        $\mu(A)$ $\leq$ $\mu((\cup_{i=1}^{\infty} U_i) \cap E^c)
+                        + \mu(\cup_{i=N}^{\infty} U_i)$
+        $<$ $\frac{\epsilon}{2} + \frac{\epsilon}{2}$
+        = $\epsilon$
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        Suppose simple function f(x) = $\sum_{i=1}^n r_i \mathfrak{X}_{E_i}$.
+
+        Proof is analogous to proof above except change $\frac{\epsilon}{2}$
+        into $\frac{\epsilon}{2n}$.
+        For j = \{1,...,n\}, let step function
+        $g_j(x)$ = $\mathfrak{X}_{V_{N_j}}$
+        where $V_{N_j}$ = $\cup_{i=1}^{N_j} U_{ji}$ where $E_i$ $\subset$
+        $\cup_{i=1}^{\infty} U_{ji}$ open intervals.
+        Thus for $A_j$ = \{ x $|$ f(x) $\not =$ $r_j g_j(x)$\},
+        then $\mu(A_j) < \frac{\epsilon}{n}$
+        so $\mu(\cup_{j=1}^n A_j)$
+        $\leq$ $\sum_{j=1}^n \mu(A_j)$
+        $<$ $\epsilon$.
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        Suppose f(x) is a bounded measurable function.
+
+        Then by {\color{red} theorem 17.5.1}, there is a simple function
+        h(x) where $|f(x) - h(x)|$ $<$ $\frac{\epsilon}{2}$ for all x.
+        As shown above, there is a step function g(x)
+        such that $|h(x) - g(x)|$ $<$ $\frac{\epsilon}{2}$
+        for all x $\not \in$ A for some measurable A $\subset$ [0,1]
+        where $\mu(A)$ $<$ $\epsilon$. Thus, for all x $\not \in$ A:
+
+        \hspace{0.5cm}
+        $|f(x) - g(x)|$
+        $\leq$ $|f(x) - h(x)| + |h(x) - g(x)|$
+        $<$ $\frac{\epsilon}{2} + \frac{\epsilon}{2}$
+        = $\epsilon$
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        Suppose f is a non-negative integrable function.
+
+        Let $A_n$ = \{ x $|$ f(x) $>$ n \}. Then:
+
+        \hspace{0.5cm}
+        n$\mu(A_n)$ = $\int n \mathfrak{X}_{A_n} d\mu$
+        $\leq$ $\int f d\mu$
+        $<$ $\infty$
+        \hspace{0.2cm}
+        $\Rightarrow$
+        \hspace{0.2cm}
+        $\lim_{n \rightarrow \infty}$ $\mu(A_n)$
+        = $\lim_{n \rightarrow \infty}$ $\frac{1}{n} \int f d\mu$
+        = 0
+
+        Thus, there is a N where $\mu(A_N)$ $<$ $\frac{\epsilon}{2}$.
+        Let $f_N$ = min(f,N) so f is a bounded measurable function.
+        As shown above, there is a step function g where
+        $|f_N(x) - g(x)|$ $<$ $\frac{\epsilon}{2}$
+        for all x $\not \in$ B for some measurable B
+        where $\mu(B)$ $<$ $\frac{\epsilon}{2}$.
+        Let A = $A_N \cup B$ so $\mu(A)$ $\leq$ $\mu(A_N) + \mu(B)$
+        $<$ $\epsilon$.
+        Note if x $\not \in$ A, then x $\not \in$ B so f(x) = $f_N(x)$.
+        Thus, for all x $\not \in$ A:
+
+        \hspace{0.5cm}
+        $|f(x) - g(x)|$
+        $\leq$ $|f(x) - f_N(x)| + |f_N(x) - g(x)|$
+        $<$ $\frac{\epsilon}{2}$
+        $<$ $\epsilon$
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        Suppose f is a integrable function.
+
+        Since f = $f^+ - f^-$ where $f^+,f^-$ are non-negative integrable
+        functions, then as shown above, there are step functions
+        $g^+,g^-$ where $\mu(A^+),\mu(A^-)$ $<$ $\frac{\epsilon}{2}$
+        and $|f^+(x) - g^+(x)|,|f^-(x) - g^-(x)|$ $<$ $\frac{\epsilon}{2}$
+        for all x $\not \in$ $A^+,A^-$ respectively.
+        
+        Let A = $A^+ \cup A^-$ and g(x) = $g^+ + g^-$.
+        Thus, for any x $\not \in$ A:
+
+        \hspace{0.5cm}
+        $|f(x) - g(x)|$
+        $\leq$ $|f^+(x) - g^+(x)| + |f^-(x) - g^-(x)|$
+        $<$ $\frac{\epsilon}{2} + \frac{\epsilon}{2}$
+        = $\epsilon$
+
+        \rule[0.1cm]{15.2cm}{0.01cm}
+
+        If $|f(x)|$ $\leq$ M, take g from before and let
+        $g_1(x)$ =
+        $\begin{cases}
+            M & g(x) > M \\
+            g(x) & g(x) \in [-M,M] \\
+            -M & g(x) < -M
+        \end{cases}$.
+
+        Thus, step function $g_1$ is $|g_1|$ $\leq$ M
+        where $g_1(x)$ = g(x) for $|g(x)|$ $\leq$ M. For x $\not \in A$:
+
+        \hspace{0.2cm}
+        If g(x) $>$ M:
+        \hspace{0.5cm}
+        f(x) $\leq$ M = $g_1(x)$ $<$ g(x)
+        \hspace{0.2cm}
+        $\Rightarrow$
+        \hspace{0.2cm}
+        $|f(x) - g_1(x)| < |f(x) - g(x)| < \epsilon$
+
+        \hspace{0.25cm}
+        If g(x) $<$ -M:
+        \hspace{0.4cm}
+        f(x) $\geq$ -M = $g_1(x)$ $>$ g(x)
+        \hspace{0.2cm}
+        $\Rightarrow$
+        \hspace{0.2cm}
+        $|f(x) - g_1(x)| < |f(x) - g(x)| < \epsilon$
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Properties of the Lebesgue Integral}{14cm}
+        If f,g are Lebesgue integrable functions. Then:
+    \end{wtheorem}
+
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
+        \item {\color{lblue} Linearity}:
+            If $c_1,c_2$ $\in$ $\mathbb{R}$:
+
+            \hspace{0.5cm}
+            $\int$ $c_1f + c_2g$ $d\mu$
+            = $c_1 \int$ f $d\mu$ + $c_2 \int$ g $d\mu$
+
+        \item {\color{lblue} Monotonicity}:
+            If f(x) $\leq$ g(x):
+
+            \hspace{0.5cm}
+            $\int$ f $d\mu$ $\leq$ $\int$ g $d\mu$
+
+        \item {\color{lblue} Absolute Value}:
+            $|f|$ is integrable where:
+
+            \hspace{0.5cm}
+            $|\int$ f $d\mu|$
+            $\leq$ $\int$ $|f|$ $d\mu$
+
+        \item {\color{lblue} Null Sets}:
+            If f(x) = g(x) except on a set of measure zero,
+            then if f is integrable, then g is integrable where:
+
+            \hspace{0.5cm}
+            $\int$ f $d\mu$ = $\int$ g $d\mu$
+    \end{enumerate}
