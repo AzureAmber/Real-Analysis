@@ -96,3 +96,6 @@
 \contentsline {subsection}{\numberline {18.2} Integral of Unbounded Functions }{125}{subsection.18.2}%
 \contentsline {subsection}{\numberline {18.3} Dominated Convergence Theorems }{126}{subsection.18.3}%
 \contentsline {subsection}{\numberline {18.4} General Lebesgue Integral }{128}{subsection.18.4}%
+\contentsline {section}{\numberline {19}Day 19: $L^p$ Spaces}{131}{section.19}%
+\contentsline {subsection}{\numberline {19.1} $L^2$: Square Integrable Functions }{131}{subsection.19.1}%
+\contentsline {subsection}{\numberline {19.2} Convergence in $L^2$ }{133}{subsection.19.2}%
