@@ -515,14 +515,450 @@
         = g(x) = f(x)
     \end{proof}
 
+    \newpage
 
 
 
 
 
+\subsection{ Hilbert Space }
+
+    \begin{definition}{Absolute Convergence}{14cm}
+        If \{$u_m$\} is a sequence in Hilbert space $\mathcal{H}$, then
+        $\sum_{m=1}^{\infty}$ $u_m$ {\color{lblue} converges absolutely}
+        if $\sum_{m=1}^{\infty}$ $||u_m||$ converges
+    \end{definition}
+
+    \vspace{0.5cm}
 
 
 
+    \begin{wtheorem}{Absolute convergence implies convergence}{14cm}
+        If $\sum_{m=1}^{\infty}$ $u_m$ in $\mathcal{H}$ converges absolutely, then
+        it converges
+    \end{wtheorem}
+
+    \begin{proof}
+        Since $\sum_{m=1}^{\infty}$ $u_m$ converges absolutely,
+        then there is a N such that for n $>$ m $\geq$ N:
+
+        \hspace{0.5cm}
+        $\sum_{i=m}^n$ $||u_i||$
+        $\leq$ $\sum_{i=m}^{\infty}$ $||u_i||$
+        $<$ $\epsilon$
+
+        Let $s_n$ = $\sum_{i=1}^n$ $u_i$. Then:
+
+        \hspace{0.5cm}
+        $||s_n - s_m||$
+        $\leq$ $\sum_{i=m}^n$ $||u_i||$
+        $<$ $\epsilon$
+
+        Thus, $s_n$ is Cauchy so \{$s_n$\} = $\sum_{i=1}^n$ $u_i$ converges.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Pythagorean Theorem}{14cm}
+        x,y $\in$ $\mathcal{H}$ are {\color{lblue} perpendicular}, x $\perp$ y,
+        if $\langle x , y \rangle$ = 0
+
+        If $x_1,...,x_n$ $\in$ $\mathcal{H}$ are mutually perpendicular, then:
+
+        \hspace{0.5cm}
+        $|| \sum_{i=1}^n x_i ||^2$
+        = $\sum_{i=1}^n$ $||x_i||^2$
+    \end{wtheorem}
+
+    \begin{proof}
+        Since $\langle x_i , x_j \rangle$ = 0 for any i $\not =$ j, then:
+
+        \hspace{0.5cm}
+        $|| \sum_{i=1}^n x_i ||^2$
+        = $\langle \sum_{i=1}^n x_i , \sum_{i=1}^n x_i \rangle$
+        = $\sum_{i=1}^n$ $\langle x_i , x_i \rangle$
+            + $2 \sum_{i \not = j}$ $\langle x_i , x_j \rangle$
+        = $\sum_{i=1}^n$ $||x_i||^2$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Bounded Linear Functional}{14cm}
+        A {\color{lblue} bounded linear functional}
+        L: $\mathcal{H}$ $\rightarrow$ $\mathbb{R}$
+        where for all v,w $\in$ $\mathcal{H}$ and $c_1,c_2$ $\in$ $\mathbb{R}$:
+
+        \hspace{0.5cm}
+        $L(c_1v+c_2w)$ = $c_1L(v) + c_2L(w)$
+        \hspace{1cm}
+        $|L(v)|$ $\leq$ $M||v||$
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Cauchy-Schwarz Inequality for $\mathcal{H}$}{14cm}
+        For Hilbert space $(H, \langle \ \rangle)$ where v,w $\in$ $\mathcal{H}$:
+
+        \hspace{0.5cm}
+        $|\langle v , w \rangle|$
+        $\leq$ $||v||$ $||w||$
+
+        with equality if and only if w and w are multiples of a vector
+    \end{wtheorem}
+
+    \begin{proof}
+        For fixed x $\in$ $\mathcal{H}$, define
+        L: $\mathcal{H}$ $\rightarrow$ $\mathbb{R}$
+        by L(v) = $\langle v , x \rangle$.
+        h
+        Then L is linear by {\color{red} theorem 19.1.9}
+        and bounded by {\color{orange} corollary 19.1.6}
+        since $|L(v)|$ $\leq$ $||v||$ $||x||$
+        where $|L(v)|$ = $||v||$ $||x||$ if v = cx almost everywhere for some c.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{inf($L^{-1}(1)$) is unique
+    and perpendicular to $L^{-1}(0)$}{14cm}
+        For bounded linear functional L: $\mathcal{H}$ $\rightarrow$ $\mathbb{R}$
+        not identically 0, let $\mathcal{V}$ = $L^{-1}(1)$.
+        Then there is a unique x $\in$ $\mathcal{V}$ such that:
+
+        \hspace{0.5cm}
+        $||x||$ = $\underset{v \in \mathcal{V}}{\text{inf}} (||v||)$
+
+        Also, x is perpendicular to every v $\in$ $L^{-1}(0)$.
+    \end{wtheorem}
+
+    \begin{proof}
+        For $x_n$ $\in$ $\mathcal{V}$, let $\lim_{n \rightarrow \infty}$ $x_n$ = x.
+
+        \hspace{0.5cm}
+        $|L(x) - L(x_n)|$
+        = $|L(x - x_n)|$
+        $\leq$ $M || x-x_n ||$
+
+        \hspace{0.5cm}
+        $|L(x) - 1|$
+        $\leq$ $\lim_{n \rightarrow \infty}$ $M || x-x_n ||$
+        = 0
+
+        Thus, L(x) = 1 so x $\in$ $\mathcal{V}$
+        and thus, $\mathcal{V}$ is closed.
+
+        Let d = $\underset{v \in \mathcal{V}}{\text{inf}} (||v||)$
+        and \{$x_n$\} $\in$ $\mathcal{V}$ such that
+        $\lim_{n \rightarrow \infty}$ $||x_n||$ = d.
+
+        Since $\frac{x_n + x_m}{2}$ $\in$ $\mathcal{V}$, then
+        $|| \frac{x_n + x_m}{2} ||$ $\geq$ d.
+
+        Since $||x_n - x_m||^2 + ||x_n + x_m||^2$
+        = $2||x_n||^2 + 2||x_m||^2$, then:
+
+        \hspace{0.5cm}
+        $||x_n - x_m||^2$
+        = $2||x_n||^2 + 2||x_m||^2 - ||x_n + x_m||^2$
+        $\leq$ $2||x_n||^2 + 2||x_m||^2 - 4d^2$
+
+        Thus, as n,m $\rightarrow$ $\infty$, then
+        $2||x_n||^2 + 2||x_m||^2 - 4d^2$ $\rightarrow$ 0
+        so $||x_n - x_m||$ $\rightarrow$ 0.
+        Thus, \{$x_n$\} is Cauchy and thus, converges.
+        Let $\lim_{n \rightarrow \infty}$ $x_n$ = x.
+
+        \hspace{0.5cm}
+        $||x||$
+        $\leq$ $\lim_{n \rightarrow \infty} || x-x_n ||$
+                + $\lim_{n \rightarrow \infty} || x_n ||$
+        = 0+d = d
+
+        Since $\mathcal{V}$ is closed, then x $\in$ $\mathcal{V}$
+        so $||x||$ $\geq$ d and since $||x||$ $\leq$ d, then $||x||$ = d.
+        
+        Suppose there is a y $\in$ $\mathcal{V}$ where $||y||$ = d.
+        Then $\frac{x+y}{2}$ $\in$ $\mathcal{V}$ so
+        $|| \frac{x+y}{2} ||$ $\geq$ d.
+        
+        \hspace{0.5cm}
+        $||x-y||^2$ = $2||x||^2 + 2||y||^2 - ||x+y||^2$
+        $\leq$ $4d^2 - 4d^2$ = 0
+
+        Thus, x = y.
+        Suppose v $\in$ $L^{-1}(0)$.
+        For any t $\in$ $\mathbb{R}$, then x+tv $\in$ $L^{-1}(1)$ where:
+        
+        \hspace{0.5cm}
+        $||x+tv||^2$ $\geq$ $||x||^2$
+
+        \hspace{0.5cm}
+        $||x||^2 + 2t \langle x , v \rangle + t^2 ||v||^2$ $\geq$ $||x||^2$
+
+        \hspace{0.5cm}
+        $2t \langle x , v \rangle + t^2 ||v||^2$ $\geq$ 0
+
+        Suppose $\langle x , v \rangle$ $>$ 0. Choose t $<$ 0
+        such that $2 \langle x , v \rangle + t ||v||^2$ $>$ 0.
+        Thus, $2t \langle x , v \rangle + t^2 ||v||^2$ $<$ 0
+        Suppose $\langle x , v \rangle$ $<$ 0. Choose t $>$ 0
+        such that $2 \langle x , v \rangle + t ||v||^2$ $<$ 0.
+        Thus, $2t \langle x , v \rangle + t^2 ||v||^2$ $<$ 0.
+        Thus by contradiction, $\langle x , v \rangle$ = 0.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{The bounded linear functionals of $\mathcal{H}$ are unique}{14cm}
+        For bounded linear functional L: $\mathcal{H}$ $\rightarrow$ $\mathbb{R}$,
+        there is a unique x $\in$ $\mathcal{H}$ such that:
+
+        \hspace{0.5cm}
+        L(v) = $\langle v , x \rangle$
+    \end{wtheorem}
+
+    \begin{proof}
+        If L(v) = 0 for all v, then x = 0 satisfy the condition.
+        Suppose L(v) $\not =$ 0, then by {\color{red} theorem 19.3.6},
+        there is a unique $x_0$ $\in$ $L^{-1}(1)$ with the smallest norm.
+
+        Suppose v $\in$ $L^{-1}(1)$.
+        Then, L($v - x_0$) = L(v) - L($x_0$) = 1-1 = 0
+        so by {\color{red} theorem 19.3.6},
+        then $\langle v - x_0, x_0 \rangle$ = 0.
+        Thus, x = $\frac{x_0}{||x_0||^2}$ is perpendicular to $v-x_0$.
+
+        \hspace{0.5cm}
+        $\langle v , x \rangle$
+        = $\langle v-x_0 , \frac{x_0}{||x_0||^2} \rangle$
+            + $\langle x_0 , \frac{x_0}{||x_0||^2} \rangle$
+        = 0+1 = 1 = L(v)
+
+        Also, by {\color{red} theorem 19.3.6}, for v $\in$ $L^{-1}(0)$,
+        then L(v) = 0 = $\langle v , x \rangle$.
+
+        Then for w $\in$ $L^{-1}(c)$ $\not =$ 0, let v = $\frac{w}{c}$
+        so L(v) = $\frac{1}{c} L(w)$ = $\frac{1}{c} c$ = 1.
+
+        \hspace{0.5cm}
+        L(w) = L(cv) = cL(v) = c$\langle v , x \rangle$
+        = $\langle cv , x \rangle$ = $\langle w , x \rangle$
+
+        Suppose y $\in$ $\mathcal{H}$ satisfy L(v) = $\langle v , y \rangle$
+        for all v $\in$ $\mathcal{H}$.
+        Then for every v $\in$ $\mathcal{H}$:
+
+        \hspace{0.5cm}
+        $\langle v , x \rangle$
+        = L(v) = $\langle v , y \rangle$
+        \hspace{1cm}
+        $\Rightarrow$
+        \hspace{1cm}
+        $\langle v , x-y \rangle$ = 0
+
+        Take v = x-y so $||x-y||^2$ = $\langle x-y , x-y \rangle$ = 0
+        so x = y.
+    \end{proof}
+
+    \newpage
+
+
+
+
+
+\subsection{ Fourier Series }
+
+    \begin{definition}{Orthonormal Family}{14cm}
+        \{$u_n$\} $\in$ $\mathcal{H}$ are {\color{lblue} orthonormal}
+        if $||u_n||$ = 1 and $\langle u_n , u_m \rangle$ = 0 for n $\not =$ m
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Minimal Distance of w $\in$ $\mathcal{H}$
+    to orthonormal basis}{14cm}
+        If $u_0,...,n_N$ $\in$ $\mathcal{H}$ are orthonormal
+        and w $\in$ $\mathcal{H}$, then the $c_n$ to minimize
+
+        \hspace{0.5cm}
+        $|| w - \sum_{n=0}^N c_nu_n ||$
+
+        are $c_n$ = $\langle w , u_n \rangle$
+    \end{wtheorem}
+
+    \begin{proof}
+        Let v = $\sum_{n=0}^N c_nu_n$ and u = $\sum_{n=0}^N a_nu_n$
+        where $a_n$ = $\langle w , u_n \rangle$. Since:
+
+        \hspace{0.5cm}
+        $\langle v , v \rangle$
+        = $\sum_{n=0}^N$ $|c_n|^2$
+        \hspace{1cm}
+        $\langle u , u \rangle$
+        = $\sum_{n=0}^N$ $|a_n|^2$
+
+        \hspace{0.5cm}
+        $\langle w , v \rangle$
+        = $\sum_{n=0}^N$ $c_n \langle w , u_n \rangle$
+        = $\sum_{n=0}^N$ $a_nc_n$
+
+        then:
+
+        \hspace{0.5cm}
+        $||w-v||^2$
+        = $\langle w-v , w-v \rangle$
+        = $||w||^2 - 2 \langle w , v \rangle + ||v||^2$
+
+        \hspace{2.3cm}
+        = $||w||^2 - 2 \sum_{n=0}^N a_nc_n + \sum_{n=0}^N |c_n|^2$
+        
+        \hspace{2.3cm}
+        = $||w||^2 - \sum_{n=0}^N |a_n|^2 + \sum_{n=0}^N (a_n-c_n)^2$
+        = $||w||^2 - ||u||^2 + \sum_{n=0}^N |a_n-c_n|^2$
+
+        Thus, for any $c_n$,
+        $||w-v||^2$
+        $\geq$ $||w||^2 - ||u||^2$
+        where equality holds if $c_n$ = $a_n$.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{definition}{Complete Orthonormal Family and Fourier Series}{14cm}
+        Orthonormal \{$u_n$\} $\in$ $\mathcal{H}$ is {\color{lblue} complete}
+        if for every w $\in$ $\mathcal{H}$:
+
+        \hspace{0.5cm}
+        w = $\sum_{n=0}^{\infty}$ $c_n u_n$
+
+        The n-th Fourier coefficient of w with respect to \{$u_n$\}
+        is $\langle w , u_n \rangle$.
+
+        Then, $\sum_{n=0}^{\infty}$ $\langle w , u_n \rangle u_n$
+        is called the {\color{lblue} Fourier series of w}.
+    \end{definition}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Bessel's Inequality}{14cm}
+        For orthonormal \{$u_i$\} $\in$ $\mathcal{H}$
+        where w $\in$ $\mathcal{H}$:
+
+        \hspace{0.5cm}
+        $\sum_{i=0}^{\infty}$ $|\langle w , u_i \rangle|^2$
+        $\leq$ $||w||^2$
+
+        converges
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $s_n$ = $\sum_{i=0}^{n}$ $\langle w , u_i \rangle u_i$.
+        Since $||s_n||^2$ = $\sum_{i=0}^{n}$ $|\langle w , u_i \rangle|^2$, then:
+
+        \hspace{0.5cm}
+        $\langle w-s_n , s_n \rangle$
+        = $\langle w , s_n \rangle$ - $\langle s_n , s_n \rangle$
+        = $\sum_{i=0}^{n}$ $|\langle w , u_i \rangle|^2$ - $||s_n||^2$
+        = 0
+
+        Thus, $w-s_n$ and $s_n$ are perpendicular so
+        $||w||^2$ = $||s_n||^2$ + $||w-s_n||^2$. Thus:
+
+        \hspace{0.5cm}
+        $\sum_{i=0}^{n}$ $|\langle w , u_i \rangle|^2$
+        = $||s_n||^2$ $\leq$ $||w||^2$
+
+        Since $||s_n||^2$ is increasing and bounded by $||w||^2$, then:
+
+        \hspace{0.5cm}
+        $\sum_{i=0}^{\infty}$ $|\langle w , u_i \rangle|^2$
+        = $\lim_{n \rightarrow \infty}$ $||s_n||^2$ $\leq$ $||w||^2$
+    \end{proof}
+
+    \vspace{0.5cm}
+
+
+
+    \begin{wtheorem}{Fourier Series Converge}{14cm}
+        For orthonormal \{$u_n$\} $\in$ $\mathcal{H}$ where w $\in$ $\mathcal{H}$,
+        then $\sum_{i=0}^{\infty}$ $\langle w , u_i \rangle u_i$ converges.
+
+        If \{$u_n$\} is complete, then
+        $\sum_{i=0}^{\infty}$ $c_i u_i$ converges to w
+        must have $c_i$ = $\langle w , u_i \rangle$.
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $s_n$ = $\sum_{i=0}^{n}$ $\langle w , u_i \rangle u_i$.
+        For n $>$ m, then $s_n - s_m$
+        = $\sum_{i=m+1}^{n}$ $\langle w , u_i \rangle u_i$
+        where $||s_n - s_m||^2$
+        = $\sum_{i=m+1}^{n}$ $|\langle w , u_i \rangle|^2$
+        which converges so \{$s_n$\} is Cauchy and thus, converges.
+
+        If \{$u_n$\} is complete, then there are $c_i$ such that
+        $S_n$ = $\sum_{i=0}^n$ $c_i u_i$ $\rightarrow$ w.
+
+        Since bounded linear L(x) = $\langle x , u_i \rangle$
+        has $|L(x)|$ $\leq$ $M||x||$, then L(x) is continuous.
+
+        \hspace{0.5cm}
+        $\langle w , u_i \rangle$
+        = $\langle \lim_{n \rightarrow \infty} S_n , u_i \rangle$
+        = $\lim_{n \rightarrow \infty} \langle S_n , u_i \rangle$
+        = $c_i$
+
+        \hspace{0.5cm}
+        $\lim_{n \rightarrow \infty}$ $\sum_{i=0}^{n}$ $\langle w , u_i \rangle u_i$
+        = $\lim_{n \rightarrow \infty}$ $\sum_{i=0}^n$ $c_i u_i$ $\rightarrow$ w.
+    \end{proof}
+
+    \newpage
+
+
+
+    \begin{wtheorem}{Parseval's Theorem}{14cm}
+        For orthonormal \{$u_n$\} $\in$ $\mathcal{H}$ where w $\in$ $\mathcal{H}$,
+        then:
+        
+        \hspace{0.5cm}
+        $\sum_{i=0}^{\infty}$ $|\langle w , u_i \rangle|^2$ = $||w||^2$
+        if and only if $\sum_{i=0}^{\infty}$ $\langle w , u_i \rangle u_i$ = w
+    \end{wtheorem}
+
+    \begin{proof}
+        Let $s_n$ = $\sum_{i=0}^{n}$ $\langle w , u_i \rangle u_i$.
+        Note $||w||^2$ = $||s_n||^2$ + $||w-s_n||^2$.
+
+        If $\lim_{n \rightarrow \infty}$ $||s_n||^2$
+        = $\sum_{i=0}^{\infty}$ $|\langle w , u_i \rangle|^2$ = $||w||^2$,
+        then $\lim_{n \rightarrow \infty}$ $||w-s_n||^2$ = 0 so
+        
+        $\lim_{n \rightarrow \infty}$ $||w-s_n||$ = 0.
+        Thus, $\sum_{i=0}^{\infty}$ $\langle w , u_i \rangle u_i$ = w.
+
+        If $\sum_{i=0}^{\infty}$ $\langle w , u_i \rangle u_i$ = w,
+        then $\lim_{n \rightarrow \infty}$ $||w-s_n||$ = 0
+        so $\lim_{n \rightarrow \infty}$ $||w-s_n||^2$ = 0.
+        Thus, $\sum_{i=0}^{\infty}$ $|\langle w , u_i \rangle|^2$
+        = $\lim_{n \rightarrow \infty}$ $||s_n||^2$ = $||w||^2$.
+    \end{proof}
 
 
 
