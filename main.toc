@@ -40,7 +40,7 @@
 \contentsline {subsection}{\numberline {10.5} Power Series }{46}{subsection.10.5}%
 \contentsline {subsection}{\numberline {10.6} Summation By Parts }{46}{subsection.10.6}%
 \contentsline {subsection}{\numberline {10.7} Absolute Convergence }{47}{subsection.10.7}%
-\contentsline {subsection}{\numberline {10.8}Addition \& Multiplication}{47}{subsection.10.8}%
+\contentsline {subsection}{\numberline {10.8} Addition \& Multiplication }{47}{subsection.10.8}%
 \contentsline {section}{\numberline {11}Day 11: Continuity}{49}{section.11}%
 \contentsline {subsection}{\numberline {11.1} Limits of Functions }{49}{subsection.11.1}%
 \contentsline {subsection}{\numberline {11.2} Continuous Functions }{50}{subsection.11.2}%
