@@ -4,14 +4,14 @@
 
 \subsection{ Series }
 
-    \begin{definition}{Series}{14cm}
+    \begin{definition}{Series}{16cm}
         For sequence \{$a_n$\}, define $\sum_{n=p}^q$ $a_n$
         = $a_p + a_{p+1} + ... + a_q$.
 
         Then associate \{$a_n$\} with a sequence \{$s_n$\}
         such that $s_n$ = $\sum_{k=1}^n$ $a_k$.
 
-        Then \{$s_n$\} is a series with partial sums $s_n$.
+        Then \{$s_n$\} is a {\color{lblue} series} with partial sums $s_n$.
 
         If \{$s_n$\} $\rightarrow$ s, then
         $\sum_{n=1}^{\infty}$ $a_n$ = s
@@ -24,7 +24,7 @@
 
 
 
-    \begin{wtheorem}{Cauchy Criterion for series}{14cm}
+    \begin{wtheorem}{Cauchy Criterion for series}{16cm}
         $\sum$ $a_n$ converges if and only if:
         
         \hspace{0.5cm}
@@ -67,9 +67,9 @@
 
 
     \begin{wtheorem}{Convergent $\sum a_n$
-    $\Rightarrow$ \{$a_n$\} $\rightarrow$ 0}{14cm}
+    $\Rightarrow$ \{$a_n$\} $\rightarrow$ 0}{16cm}
         If $\sum$ $a_n$ converges, then
-        $\lim_{n \rightarrow \infty}$ $a_n$ = 0.
+        $\lim_{n \rightarrow \infty}$ $a_n$ = 0
     \end{wtheorem}
     
     \begin{proof}
@@ -103,7 +103,7 @@
 
 
 
-    \begin{wtheorem}{Convergent series $\rightleftharpoons$ Bounded sequence}{14cm}
+    \begin{wtheorem}{Convergent series $\rightleftharpoons$ Bounded sequence}{16cm}
         A series of nonnegative terms converge if and only if
         its partial sums form a bounded sequence.
     \end{wtheorem}
@@ -130,7 +130,7 @@
         \item If $|a_n|$ $\leq$ $c_n$ for n $\geq$ $N_0$ and
             $\sum$ $c_n$ converges, then $\sum$ $a_n$ converges.
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 For $\epsilon$ $>$ 0, there exists a N $\geq$ $N_0$
                 such that for m $\geq$ n $\geq$ N,
                 $\sum_{k=n}^m$ $c_k$ $\leq$ $\epsilon$.
@@ -146,7 +146,7 @@
         \item If $a_n$ $\geq$ $d_n$ $\geq$ 0 for n $\geq$ $N_0$
             and $\sum$ $d_n$ diverges, then $\sum$ $a_n$ diverges.
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 Suppose $\sum$ $a_n$ converges.
 
                 Then from part a, $\sum$ $d_n$ converges which contradicts
@@ -162,9 +162,9 @@
 
 
 
-\subsection{ Series of Nonnegative Terms }
+\subsection[ Non-negative Series ]{ Series of Nonnegative Terms }
 
-    \begin{wtheorem}{Infinite Geometric Series}{14cm}
+    \begin{wtheorem}{Infinite Geometric Series}{16cm}
         If x $\in$ [0,1), then:
 
         \hspace{1cm}
@@ -191,13 +191,12 @@
 
 
 
-    \begin{wtheorem}{Cauchy's Convergence Criterion}{14cm}
+    \begin{wtheorem}{Cauchy's Convergence Criterion}{16cm}
         Suppose 0 $\leq$ $a_{i+1}$ $\leq$ $a_{i}$.
-
         Then the series $\sum_{n=1}^{\infty}$ $a_n$ converges
         if and only if the series
 
-        \hspace{1cm}
+        \hspace{0.5cm}
         $\sum_{k=0}^{\infty}$ $2^k a_{2^k}$
         = $a_1$ + $2a_2$ + $4a_4$ + $8a_8$ + ...
         converges.
@@ -246,7 +245,7 @@
 
 
 
-    \begin{wtheorem}{P-series}{14cm}
+    \begin{wtheorem}{P-series}{16cm}
         $\sum$ $\frac{1}{n^p}$ converges if p $>$ 1 and diverges if p $\leq$ 1
     \end{wtheorem}
 
@@ -268,9 +267,9 @@
 
 
 
-    \begin{wtheorem}{Log P-series}{14cm}
+    \begin{wtheorem}{Log P-series}{16cm}
         $\sum_{n = 2}^{\infty}$ $\frac{1}{n(\log(n))^p}$
-        converges if p $>$ 1 and diverges if p $\leq$ 1.        
+        converges if p $>$ 1 and diverges if p $\leq$ 1    
     \end{wtheorem}
     
     \begin{proof}
@@ -297,7 +296,7 @@
 
 
 
-    \begin{corollary}{Log P-series extended}{14cm}
+    \begin{corollary}{Log P-series extended}{16cm}
         $\sum_{n=3}^{\infty}$ $\frac{1}{n\log(n)(\log(\log(n)))^p}$
         converges if p $>$ 1 and diverges if p $\leq$ 1
     \end{corollary}
@@ -329,7 +328,7 @@
 
 \subsection{ The Number e}
 
-    \begin{definition}{Summation equivalence to e}{14cm}
+    \begin{definition}{Summation equivalence to e}{16cm}
         $s_m$
         = $\sum_{n=0}^{m}$ $\frac{1}{n!}$
         = 1 + $\sum_{n=1}^{m}$ $\frac{1}{n!}$
@@ -343,7 +342,7 @@
 
 
 
-    \begin{wtheorem}{Limit equivalence to e}{14cm}
+    \begin{wtheorem}{Limit equivalence to e}{16cm}
         $\lim_{n \rightarrow \infty}$ $(1 + \frac{1}{n})^n$ = e
     \end{wtheorem}
 
@@ -378,7 +377,7 @@
 
 
 
-    \begin{wtheorem}{Rapidity of convergence of e}{14cm}
+    \begin{wtheorem}{Rapidity of convergence of e}{16cm}
         0 $<$ e - $s_n$ $<$ $\frac{1}{n!n}$
     \end{wtheorem}
 
@@ -394,7 +393,7 @@
 
 
 
-    \begin{wtheorem}{e is irrational}{14cm}
+    \begin{wtheorem}{e is irrational}{16cm}
         e is irrational
     \end{wtheorem}
 
@@ -422,12 +421,12 @@
 
 \subsection{ Root and Ratio Tests }
 
-    \begin{wtheorem}{Root Test}{14cm}
+    \begin{wtheorem}{Root Test}{16cm}
         For $\sum$ $a_n$, let
         $\alpha$ = $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{|a_n|}$).
     \end{wtheorem}
 
-    \begin{enumerate}[label=(\alph*), leftmargin=3cm, itemsep=0.1cm]
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
         \item If $\alpha$ $<$ 1, $\sum$ $a_n$ converges
         
         \item If $\alpha$ $>$ 1, $\sum$ $a_n$ diverges
@@ -492,7 +491,7 @@
 
 
 
-    \begin{wtheorem}{Ratio convergence $\rightarrow$ Root convergence}{14cm}
+    \begin{wtheorem}{Ratio convergence $\rightarrow$ Root convergence}{16cm}
         $\lim_{n \rightarrow \infty}$ inf($\frac{c_{n+1}}{c_n}$)
         $\leq$ $\lim_{n \rightarrow \infty}$ inf($\sqrt[n]{c_n}$)
 
@@ -539,10 +538,10 @@
 
 \subsection{ Power Series }
 
-    \begin{definition}{Power series}{14cm}
+    \begin{definition}{Power Series}{16cm}
         For a sequence \{$c_n$\} $\in$ $\mathbb{C}$, the series
         $\sum_{n=0}^{\infty}$ $c_n z^n$
-        is a power series.
+        is a {\color{lblue} power series}.
 
         $c_n$ are the coefficients and z $\in$ $\mathbb{C}$.
     \end{definition}
@@ -551,7 +550,7 @@
 
 
 
-    \begin{wtheorem}{Radius of Convergence}{14cm}
+    \begin{wtheorem}{Radius of Convergence}{16cm}
         For power series $\sum$ $c_n z^n$, let
         $\alpha$ = $\lim_{n \rightarrow \infty}$ sup($\sqrt[n]{|c_n|}$)
         and R = $\frac{1}{\alpha}$.
@@ -583,11 +582,11 @@
 
 \subsection{ Summation By Parts }
 
-    \begin{wtheorem}{Summation by parts}{14cm}
+    \begin{wtheorem}{Summation by Parts}{16cm}
         For sequences \{$a_n$\}, \{$b_n$\}, let $A_n$ = $\sum_{k=0}^n$ $a_k$.
         Then for 0 $\leq$ p $\leq$ q:
 
-        \hspace{1cm}
+        \hspace{0.5cm}
         $\sum_{n = p}^q$ $a_n b_n$
         = ($\sum_{n = p}^{q-1}$ $A_n (b_n - b_{n+1})$)
         + $A_q b_q$ - $A_{p-1} b_p$
@@ -614,7 +613,7 @@
 
 
 
-    \begin{wtheorem}{Conditions for convergent $\sum$ $a_n b_n$}{14cm}
+    \begin{wtheorem}{Conditions for convergent $\sum$ $a_n b_n$}{16cm}
         Suppose for \{$a_n$\}, \{$b_n$\}:
 
         \begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
@@ -653,7 +652,7 @@
 
 
 
-    \begin{corollary}{Convergent series of Alternating Sequences}{14cm}
+    \begin{corollary}{Convergent series of Alternating Sequences}{16cm}
         Suppose for \{$c_n$\}:
 
         \begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
@@ -676,7 +675,7 @@
 
 
 
-    \begin{corollary}{Convergent power series at radius of convergence}{14cm}
+    \begin{corollary}{Convergent power series at radius of convergence}{16cm}
         Suppose for \{$c_n$\}:
 
         \begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
@@ -710,8 +709,9 @@
 
 \subsection{ Absolute Convergence }
 
-    \begin{definition}{Absolute convergence}{14cm}
-        $\sum$ $a_n$ converges absolutely if $\sum$ $|a_n|$ converges.
+    \begin{definition}{Absolute Convergence}{16cm}
+        $\sum$ $a_n$ {\color{lblue} converges absolutely}
+        if $\sum$ $|a_n|$ converges.
 
         If $\sum$ $a_n$ converges, but $\sum$ $|a_n|$ diverges,
         then $\sum$ $a_n$ converges non-absolutely.
@@ -721,7 +721,7 @@
 
 
 
-    \begin{wtheorem}{Absolute convergence $\rightarrow$ convergence}{14cm}
+    \begin{wtheorem}{Absolute Convergence $\rightarrow$ Convergence}{16cm}
         If $\sum$ $a_n$ converges absolutely, then $\sum$ $a_n$ converges
     \end{wtheorem}
 
@@ -745,7 +745,7 @@
 
 \subsection[ Addition \& Multiplication ]{ Addition \& Multiplication of Series }
 
-    \begin{wtheorem}{Addition and Scalar Multiplication}{14cm}
+    \begin{wtheorem}{Addition and Scalar Multiplication}{16cm}
         If $\sum a_n$ = A and $\sum b_n$ = B, then
         $\sum (a_n + b_n)$ = A + B and $\sum ca_n$ = cA.
     \end{wtheorem}
@@ -765,18 +765,17 @@
 
 
 
-    \begin{definition}{Cauchy Product}{14cm}
+    \begin{definition}{Cauchy Product}{16cm}
         For $\sum a_n$ and $\sum b_n$, let
         $c_n$ = $\sum_{k=0}^n a_k b_{n-k}$
         and the product as $\sum c_n$.
 
-        \vspace{0.2cm}
-
+        \hspace{0.5cm}
         $\sum_{n=0}^{\infty} a_n z^n$ $\sum_{n=0}^{\infty} b_n z^n$
         = $(a_0 + a_1z + a_2z^2 + ... + a_nz^n)$
         $(b_0 + b_1z + b_2z^2 + ... + b_nz^n)$
 
-        \hspace{3.9cm}
+        \hspace{4.6cm}
         = $a_0b_0 + (a_0b_1 + a_1b_0)z + (a_0b_2 + a_1b_1 + a_2b_0)z^2 + ... $
     \end{definition}
 
@@ -784,7 +783,7 @@
 
 
 
-    \begin{wtheorem}{Conditions $\sum$ $c_n$ = AB}{14cm}
+    \begin{wtheorem}{Conditions $\sum$ $c_n$ = AB}{16cm}
         Suppose
 
         \begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
@@ -853,7 +852,16 @@
 
 
 
-    \begin{wtheorem}{By Cauchy Product, $\sum c_n$ = C implies C = AB}{14cm}
+    \begin{wtheorem}{By Cauchy Product, $\sum c_n$ = C implies C = AB}{16cm}
         If $\sum a_n$ = A, $\sum b_n$ = B, $\sum c_n$ = C
         where $c_n$ = $a_0b_n + ... + a_nb_0$, then C = AB.
     \end{wtheorem}
+
+    \begin{proof}
+        The proof will be provided in Day 15.1: Power Series.
+    \end{proof}
+
+
+
+
+    

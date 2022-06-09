@@ -4,41 +4,41 @@
 
 \subsection{ Upper and Lower Limits } 
 
-	\begin{definition}{Infinite limits}{14cm}
+	\begin{definition}{Infinite limits}{16cm}
 		Let \{$s_n$\} be a sequence of real numbers such that:
 
-		\hspace{1cm}
+		\hspace{0.5cm}
 		For every real M, there is a N $\in$ $\mathbb{Z}$ such that
-		for n $\geq$ N, $s_n$ $\geq$ M.
-
-		\hspace{2cm}
-		Then, $s_n$ $\rightarrow$ $+\infty$.
+		for n $\geq$ N, $s_n$ $\geq$ M. Then:
 
 		\hspace{1cm}
-		For every real M, there is a N $\in$ $\mathbb{Z}$ such that
-		for n $\geq$ N, $s_n$ $\leq$ M.
+		$s_n$ $\rightarrow$ $+\infty$
 
-		\hspace{2cm}
-		Then, $s_n$ $\rightarrow$ $-\infty$.		
+		\hspace{0.5cm}
+		For every real M, there is a N $\in$ $\mathbb{Z}$ such that
+		for n $\geq$ N, $s_n$ $\leq$ M. Then:
+
+		\hspace{1cm}
+		$s_n$ $\rightarrow$ $-\infty$		
 	\end{definition}
 	
 	\vspace{0.5cm}
 
 
 
-	\begin{definition}{Upper and Lower Limits}{14cm}
+	\begin{definition}{Upper and Lower Limits}{16cm}
 		Let \{$s_n$\} $\subset$ $\mathbb{R}$
 		and E contain all subsequential limits of \{$s_n$\}
 		plus possibly $\pm$$\infty$.
 
-		Then, the upper limit of \{$s_n$\}:
+		Then, the {\color{lblue} upper limit} of \{$s_n$\}:
 
 		\hspace{1cm}
 		$s^*$ = sup(E) 
 		\hspace{1cm} 
 		$\lim_{n \rightarrow \infty}$ sup($s_n$) = $s^*$
 
-		Then, the lower limit of \{$s_n$\}:
+		Then, the {\color{lblue} lower limit} of \{$s_n$\}:
 
 		\hspace{1cm}
 		$s_*$ = inf(E) 
@@ -55,7 +55,7 @@
 
 
 
-	\begin{wtheorem}{Upper and Lower limits are unique}{14cm}
+	\begin{wtheorem}{Upper and Lower limits are unique}{16cm}
 		Let \{$s_n$\} be a sequence of real numbers.
 		Let E be the set of subsequential limits and
 		$s^*$ be the upper limit of \{$s_n$\}. Then:
@@ -64,7 +64,7 @@
 	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
 		\item $s^*$ $\in$ E
 
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				If $s^*$ = $+\infty$, then there is a
 				\{$s_{n_k}$\} $\rightarrow$ $+\infty$ so E is not bounded above.
 				
@@ -81,7 +81,7 @@
 
 		\item If x $>$ $s^*$, there is a N such that for n $\geq$ N, $s_n$ $<$ x
 		
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				Suppose there is a x $>$ $s^*$ such that $s_n$ $\geq$ x
 				for infinitely many n.
 
@@ -91,7 +91,7 @@
 
 		\item $s^*$ is the only number that satisfies (a) and (b)
 		
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				Suppose p,q satisfy part a and b where p $<$ q.
 				Choose x where p $<$ x $<$ q.
 				Since p satisfies b, then $s_n$ $<$ x for n $\geq$ N.
@@ -107,7 +107,7 @@
 
 
 
-	\begin{wtheorem}{Inf \& Sup of $s_n$ $\leq$ $t_n$}{14cm}
+	\begin{wtheorem}{Inf \& Sup of $s_n$ $\leq$ $t_n$}{16cm}
 		If $s_t$ $\leq$ $t_n$ for n $\geq$ fixed N, then
 
 		\hspace{0.5cm}
@@ -153,7 +153,7 @@
 	\begin{ltheorem}{Special sequences}{1.5cm}
 		\item If p $>$ 0, then $\lim_{n \rightarrow \infty}$ $\frac{1}{n^p}$ = 0
 		
-			\begin{proof}[14cm]
+			\begin{proof}[15.5cm]
 				For $\epsilon$ $>$ 0, let N $>$ $\sqrt[p]{\frac{1}{\epsilon}}$.
 				Then for n $\geq$ N,
 				$\lim_{n \rightarrow \infty}$ $\frac{1}{n^p}$
@@ -163,7 +163,7 @@
 
 		\item If p $>$ 0, then $\lim_{n \rightarrow \infty}$ $\sqrt[n]{p}$ = 1
 		
-			\begin{proof}[14cm]
+			\begin{proof}[15.5cm]
 				If p $>$ 1, then let $x_n$ = $\sqrt[n]{p}$ - 1 $>$ 0.
 
 					\hspace{1cm}
@@ -188,7 +188,7 @@
 
 		\item $\lim_{n \rightarrow \infty}$ $\sqrt[n]{n}$ = 1
 
-			\begin{proof}[14cm]
+			\begin{proof}[15.5cm]
 				Let $x_n$ = $\sqrt[n]{n}$ - 1 $\geq$ 0
 				Then, n = ($x_n$ + 1)$^n$ $\geq$ $\frac{n(n-1)}{2} x_n^2$.
 
@@ -200,7 +200,7 @@
 		\item If p $>$ 0 and $\alpha$ $\in$ $\mathbb{R}$, then
 			$\lim_{n \rightarrow \infty}$ $\frac{n^{\alpha}}{(1+p)^n}$ = 0
 
-			\begin{proof}[14cm]
+			\begin{proof}[15.5cm]
 				Let k $\in$ $\mathbb{Z}$ such that k $>$ $\alpha$ and k $>$ 0.
 				For n $>$ 2k:
 
@@ -218,7 +218,7 @@
 
 		\item If $|x|$ $<$ 1, then $\lim_{n \rightarrow \infty}$ $x^n$ = 0
 
-			\begin{proof}[14cm]
+			\begin{proof}[15.5cm]
 				From part d, let $\alpha$ = 0.
 
 				Thus, $\lim_{n \rightarrow \infty}$ $\frac{1}{(1+p)^n}$ = 0
@@ -232,3 +232,5 @@
 
 
 
+
+	

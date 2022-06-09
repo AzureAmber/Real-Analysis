@@ -103,12 +103,13 @@
 \usepackage{colortbl}
     \definecolor{purple}{RGB}{210, 0, 235}
     \definecolor{lblue}{RGB}{10, 180, 250}
-    \definecolor{green}{RGB}{0, 250, 154}
+    \definecolor{green}{RGB}{0, 250, 155}
+    \definecolor{lgreen}{RGB}{80, 225, 210}
 % -----------------------------------------------------------------------------  
                                 % Adjust paper size
-\usepackage[a4paper, inner=3cm, outer=3cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage[a4paper, inner=2cm, outer=2cm, top=2cm, bottom=2cm]{geometry}
     \setlength\headheight{15pt}         % set heigh of header to 15pt
-    \renewcommand{\headwidth}{15cm}     % set width of header to 15cm
+    \renewcommand{\headwidth}{17cm}     % set width of header to 15cm
 % -----------------------------------------------------------------------------
 								% Include textboxes & boxed minipages
 \usepackage{adjustbox}
@@ -180,7 +181,7 @@
         \end{adjustbox}
     }
 
-\newenvironment{example}[1][14cm]
+\newenvironment{example}[1][16cm]
     {   
         { \color{purple} Example }
 
@@ -190,7 +191,7 @@
         \end{adjustbox}
     }
 
-\newenvironment{proof}[1][15.5cm]
+\newenvironment{proof}[1][17cm]
     {   
         { \color{magenta} \underline{Proof} }
 
@@ -202,7 +203,7 @@
         \end{adjustbox}
     }
 
-\newenvironment{tbox}[1][15.5cm]
+\newenvironment{tbox}[1][17cm]
     {
         \begin{adjustbox}{vspace=0.1cm 0cm}
         \begin{boxedminipage}{#1}
@@ -212,7 +213,7 @@
         \end{adjustbox}
     }
 
-\newenvironment{intuition}[1][15.5cm]
+\newenvironment{intuition}[1][17cm]
     {
         { \color{green} \textbf{Intuition} }
 

@@ -4,7 +4,7 @@
 
 \subsection{ Linear Transformations }
 
-    \begin{definition}{Vector Spaces}{14cm}
+    \begin{definition}{Vector Spaces}{16cm}
         \begin{enumerate}[label=(\alph*), leftmargin=0.5cm, itemsep=0.1cm]
             \item {\color{lblue} Vector Space}
             
@@ -95,7 +95,7 @@
 
 
 
-    \begin{wtheorem}{dim(X) $\leq$ (\# vectors that span X)}{14cm}
+    \begin{wtheorem}{dim(X) $\leq$ (\# vectors that span X)}{16cm}
         If vector space X is spanned by r vectors, then dim(X) $\leq$ r.
     \end{wtheorem}
 
@@ -134,7 +134,7 @@
 
 
 
-    \begin{corollary}{dim(X) = (\# vectors in a basis)}{14cm}
+    \begin{corollary}{dim(X) = (\# vectors in a basis)}{16cm}
         If $x_1,...,x_n$ is a basis for X, then dim(X) = n.
         
         Thus, dim($\mathbb{R}^n$) = n.
@@ -159,7 +159,7 @@
 
 
 
-    \begin{wtheorem}{Properties of Basis}{14cm}
+    \begin{wtheorem}{Properties of Basis}{16cm}
         For vector space X where dim(X) = n:
 
         \begin{enumerate}[label=(\alph*), itemsep=0.1cm]
@@ -237,9 +237,10 @@
 
 
 
-    \begin{definition}{Linear Transformation}{14cm}
+    \begin{definition}{Linear Transformation}{16cm}
         A mapping A of vector space X into vector space Y is
-        a linear transformation if for all $x_1,x_2$ $\in$ X and scalar c:
+        a {\color{lblue} linear transformation} if for all $x_1,x_2$ $\in$ X
+        and scalar c:
 
         \hspace{0.5cm}
         A($x_1+x_2$) = A$x_1$ + A$x_2$
@@ -300,7 +301,7 @@
 
 
 
-    \begin{wtheorem}{Linear Operators imply 1-1 $\rightleftharpoons$ onto}{14cm}
+    \begin{wtheorem}{Linear Operators imply 1-1 $\rightleftharpoons$ onto}{16cm}
         Linear operator A preserves independence if and only if A is 1-1.
 
         Thus, linear operator A is 1-1 if and only if A(X) = X.
@@ -334,11 +335,11 @@
         so A(X) = X if and only if $y_1,...,y_n$ are independent.
     \end{proof}
 
-    \newpage
+    \vspace{0.5cm}
 
 
 
-    \begin{definition}{Operations of Linear Transformatons}{14cm}
+    \begin{definition}{Operations of Linear Transformatons}{16cm}
         Let L(X,Y) be the set of all linear transformation
         of X into Y.
 
@@ -380,7 +381,7 @@
         \end{enumerate}
     \end{definition}
 
-    \vspace{0.5cm}
+    \newpage
 
 
 
@@ -388,7 +389,7 @@
         \item If A $\in$ L($\mathbb{R}^n,\mathbb{R}^m$), then $||A||$ $<$ $\infty$.
             Thus, A is uniformly continuous.
             
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 For $|x| \leq 1$:
 
                 \hspace{0.5cm}
@@ -417,7 +418,7 @@
             \hspace{1cm}
             $||cA||$ = $|c| \ ||A||$
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 For $|x| \leq 1$,
                 $|(A+B)x|$
                 $\leq$ $|Ax+Bx|$
@@ -442,7 +443,7 @@
             \hspace{0.5cm}
             $||BA||$ $\leq$ $||B|| \ ||A||$
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 For $|x| \leq 1$, 
                 $|BAx|$
                 = $|B(Ax)|$
@@ -454,7 +455,7 @@
             \end{proof}
     \end{ltheorem}
 
-    \newpage
+    \vspace{0.5cm}
 
 
 
@@ -462,7 +463,7 @@
         \item If A $\in$ $\Omega$ and B $\in$ $L(\mathbb{R}^n,\mathbb{R}^n)$
             where $||B-A|| \ ||A^{-1}||$ $<$ 1, then B $\in$ $\Omega$
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 $\frac{1}{||A^{-1}||} |x|$
                 = $\frac{1}{||A^{-1}||} |A^{-1}Ax|$
                 $\leq$ $\frac{1}{||A^{-1}||} ||A^{-1}|| \ |Ax|$
@@ -485,7 +486,7 @@
         \item $\Omega$ $\subset$ L($\mathbb{R}^n,\mathbb{R}^n$) is open
             and the mapping T: A $\rightarrow$ $A^{-1}$ is continuous on $\Omega$
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 Since $||B-A||$ $<$ $\frac{1}{||A^{-1}||}$ for any B $\in$ $\Omega$,
                 then for every B $\in$ $\Omega$, there exist an open subset
                 of L($\mathbb{R}^n,\mathbb{R}^n$) that contains B
@@ -522,7 +523,7 @@
 
 
 
-    \begin{definition}{Matrices}{14cm}
+    \begin{definition}{Matrices}{16cm}
         Let $x_1,...,x_n$ be a basis for X and $y_1,...,y_m$ be a basis for Y.
 
         Then every A $\in$ L(X,Y) determines a set of numbers
@@ -533,7 +534,7 @@
         \hspace{1cm}
         for j = \{1,...,n\}
 
-        Thus, A can be represented by an m by n matrix:
+        Thus, A can be represented by an m by n {\color{lblue} matrix}:
 
         \hspace{0.5cm}
         [A] = 
@@ -583,17 +584,11 @@
         \hspace{0.5cm}
         Ax
         = A($\sum_{j=1}^n$ $c_jx_j$)
-
-        \hspace{1.15cm}
         = $\sum_{j=1}^n$ $c_j$A$x_j$
 
         \hspace{1.15cm}
         = $\sum_{j=1}^n$ $c_j$ $\sum_{i=1}^m$ $a_{ij} y_i$
-
-        \hspace{1.15cm}
         = $\sum_{j=1}^n$ $\sum_{i=1}^m$ $a_{ij} c_j y_i$
-
-        \hspace{1.15cm}
         = $\sum_{i=1}^m$ [$\sum_{j=1}^n a_{ij} c_j$] $y_i$
 
         So $[\sum_{j=1}^n a_{1j} c_j],...,[\sum_{j=1}^n a_{mj} c_j]$
@@ -641,17 +636,11 @@
         (BA)$x_j$
         = B(A$x_j$)
         = B($\sum_{i=1}^m$ $a_{ij}y_i$)
-
-        \hspace{1.95cm}
         = $\sum_{i=1}^m$ $a_{ij}$B$y_i$
 
         \hspace{1.95cm}
         = $\sum_{i=1}^m$ $a_{ij}$ $\sum_{k=1}^p$ $b_{ki} z_k$
-
-        \hspace{1.95cm}
         = $\sum_{i=1}^m$ $\sum_{k=1}^p$ $b_{ki} a_{ij} z_k$
-
-        \hspace{1.95cm}
         = $\sum_{k=1}^p$ [$\sum_{i=1}^m$ $b_{ki} a_{ij}$] $z_k$
 
         Thus, $c_{kj}$ = $\sum_{i=1}^m$ $b_{ki} a_{ij}$
@@ -694,11 +683,7 @@
             & \sum_{i=1}^m {\color{green}b_{pi}} {\color{orange}a_{in}} \\
         \end{bmatrix}
         $
-    \end{definition}
 
-    \newpage
-
-    \begin{adjustbox}{minipage=14cm, right, vspace=0.1cm 0cm}
         For A $\in$ L($\mathbb{R}^n,\mathbb{R}^m$), since
         Ax = $\sum_{i=1}^m$ [$\sum_{j=1}^n a_{ij} c_j$] $e_i$
         where x = $\sum_{j=1}^n c_j e_j$,
@@ -707,29 +692,27 @@
         \hspace{0.5cm}
         $|Ax|^2$
         = $\sum_{i=1}^m$ [$\sum_{j=1}^n a_{ij} c_j$]$^2$
-
-        \hspace{1.6cm}
         $\leq$ $\sum_{i=1}^m$ [($\sum_{j=1}^n a_{ij}^2$) ($\sum_{j=1}^n c_j^2$)]
 
         \hspace{1.6cm}
         = [$\sum_{i=1}^m$ $\sum_{j=1}^n a_{ij}^2$] ($\sum_{j=1}^n c_j^2$)
-
-        \hspace{1.6cm}
         = [$\sum_{i=1}^m$ $\sum_{j=1}^n a_{ij}^2$] $|x|^2$
 
         \vspace{0.1cm}
 
-        Thus, for $|x|$ $\leq$ 1, then
+        Thus, for $|x|$ $\leq$ 1, then:
+
+        \hspace{0.5cm}
         $||A||$
         $\leq$ $\sqrt{\sum_{i=1}^m \sum_{j=1}^n a_{ij}^2}$.
-    \end{adjustbox}
+    \end{definition}
 
-    \vspace{0.5cm}
+    \newpage
 
 
 
-    \begin{wtheorem}
-    {A linear transformation of continuous functions is continuous}{14cm}
+    \begin{wtheorem}{A linear transformation of continuous functions
+    is continuous}{16cm}
         If each $a_{ij}$ is a continuous function on S and for each p $\in$ S,
         then $A_p$ $\in$ L($\mathbb{R}^n,\mathbb{R}^m$) with entries $a_{ij}(p)$,
         then the mapping T: S $\rightarrow$ L($\mathbb{R}^n,\mathbb{R}^m$)
@@ -757,7 +740,7 @@
 
 \subsection{ Differentiation }
 
-    \begin{definition}{Derivative Extended to Higher Dimensions}{14cm}
+    \begin{definition}{Derivative Extended to Higher Dimensions}{16cm}
         First, let's redefine the derivative such that it can be extended to
         higher dimensions.
         For f: (a,b) $\subset$ $\mathbb{R}$ $\rightarrow$ $\mathbb{R}^m$,
@@ -786,8 +769,8 @@
         \hspace{1cm}
         where $\lim_{h \rightarrow 0}$ $\frac{|r_A(h)|}{|h|}$ = 0
 
-        then f is differentiable at x.
-        Then differential of f at x, f'(x) = A.
+        then f is {\color{lblue} differentiable} at x.
+        Then {\color{lblue} differential} of f at x, f'(x) = A.
 
         If f is differentiable at every x $\in$ E, then f is differentiable on E.
     \end{definition}
@@ -796,7 +779,7 @@
 
 
 
-    \begin{wtheorem}{The derivative of a function is unique}{14cm}
+    \begin{wtheorem}{The derivative of a function is unique}{16cm}
         Let f: x $\in$ open E $\subset$ $\mathbb{R}^n$ $\rightarrow$ $\mathbb{R}^m$.
         Let A $\in$ L($\mathbb{R}^n,\mathbb{R}^m$) such that
         for any h $\in$ E:
@@ -841,11 +824,11 @@
         $0+0$ = 0. Thus, $A_1$ = $A_2$.
     \end{proof}
 
-    \newpage
+    \vspace{0.5cm}
 
 
 
-    \begin{wtheorem}{Derivative of a Linear Transformation}{14cm}
+    \begin{wtheorem}{Derivative of a Linear Transformation}{16cm}
         If A $\in$ L($\mathbb{R}^n,\mathbb{R}^m$) and x $\in$ $\mathbb{R}^n$, then:
 
         \hspace{0.5cm}
@@ -866,11 +849,11 @@
         = $\lim_{h \rightarrow 0}$ 0 = 0. Thus, A'(x) = f'(x) = A.
     \end{proof}
 
-    \vspace{0.5cm}
+    \newpage
 
 
 
-    \begin{wtheorem}{Chain Rule in Higher Dimensions}{14cm}
+    \begin{wtheorem}{Chain Rule in Higher Dimensions}{16cm}
         Let f: open E $\subset$ $\mathbb{R}^n$ $\rightarrow$ $\mathbb{R}^m$
         be differentiable at $x_0$ $\in$ E and
         g: f(E) $\subset$ open H $\subset$ $\mathbb{R}^m$ $\rightarrow$
@@ -941,9 +924,10 @@
 
 
 
-    \begin{definition}
-    {Partial Derivatives: Derivatives along the standard basis}{14cm}
+    \begin{definition}{Partial Derivatives: Derivatives along
+    the standard basis}{16cm}
         Let f: open E $\subset$ $\mathbb{R}^n$ $\rightarrow$ $\mathbb{R}^m$.
+
         The components of f are the $f_1,...,f_m$ $\in$ $\mathbb{R}$ such that
         for x $\in$ E, then f(x) = $\sum_{i=1}^m$ $f_i(x) e_i$.
 
@@ -971,7 +955,7 @@
         where $\lim_{t \rightarrow 0}$ $\frac{|r_{D_jf_i}(te_j)|}{|t|}$ = 0
     \end{definition}
 
-    \newpage
+    \vspace{0.5cm}
 
 
 
@@ -1019,11 +1003,11 @@
         = $\sum_{i=1}^m$ $(D_jf_i)(x)e_i$
     \end{proof}
 
-    \vspace{0.5cm}
+    \newpage
 
 
 
-    \begin{definition}{Matrix of the Differential of f}{14cm}
+    \begin{definition}{Matrix of the Differential of f}{16cm}
         By {\color{red} theorem 16.2.6},
         f'(x)$e_j$ = $\sum_{i=1}^m$ $(D_jf_i)(x)e_i$
         where $(D_jf_i)(x)$ is the derivative of the
@@ -1088,11 +1072,11 @@
         = $\sum_{i=1}^m$ [$\sum_{j=1}^n$ $x_j (D_jf_i)(x)$] $e_i$
     \end{definition}
 
-    \newpage
+    \vspace{0.5cm}
 
 
 
-    \begin{definition}{Gradient and Directional Derivative}{14cm}
+    \begin{definition}{Gradient and Directional Derivative}{16cm}
         Let $\gamma$: (a,b) $\subset$ $\mathbb{R}$
                     $\rightarrow$ open E $\subset$ $\mathbb{R}^n$
         and f: E $\subset$ $\mathbb{R}^n$
@@ -1185,12 +1169,12 @@
         between x and y.
     \end{definition}
 
-    \vspace{0.5cm}
+    \newpage
 
 
 
-    \begin{wtheorem}
-    {A bounded derivative over a convex space have bounded range}{14cm}
+    \begin{wtheorem}{A bounded derivative over a convex space
+    have bounded range}{16cm}
         For differentiable f: convex open E $\subset$ $\mathbb{R}^n$
         $\rightarrow$ $\mathbb{R}^m$, there is a M $\in$ $\mathbb{R}$ such that
         $||f'(x)||$ $\leq$ M for every x $\in$ E. Then for all a,b $\in$ E:
@@ -1227,7 +1211,7 @@
 
 
 
-    \begin{corollary}{If the derivative is 0, the function is constant}{14cm}
+    \begin{corollary}{If the derivative is 0, the function is constant}{16cm}
         For differentiable f: convex open E $\subset$ $\mathbb{R}^n$
         $\rightarrow$ $\mathbb{R}^m$, f'(x) = 0 for all x $\in$ E.
         
@@ -1244,13 +1228,13 @@
         Thus, f(b) = f(a) for all a,b $\in$ E so f is constant.
     \end{proof}
 
-    \newpage
+    \vspace{0.5cm}
 
 
 
-    \begin{definition}{Continuously Differentiable}{14cm}
+    \begin{definition}{Continuously Differentiable}{16cm}
         A differentiable f: open E $\subset$ $\mathbb{R}^n$
-        $\rightarrow$ $\mathbb{R}^m$ is continuously differentiable
+        $\rightarrow$ $\mathbb{R}^m$ is {\color{lblue} continuously differentiable}
         in E if:
         
         \hspace{0.5cm}
@@ -1265,12 +1249,12 @@
         If f is continuous differentiable, then f $\in$ $\mathscr{C}'(E)$.
     \end{definition}
 
-    \vspace{0.5cm}
+    \newpage
 
 
 
-    \begin{wtheorem}
-    {Continuously differentiable imply continuous partial derivatives}{14cm}
+    \begin{wtheorem}{Continuously differentiable imply continuous
+    partial derivatives}{16cm}
         Let f: open E $\subset$ $\mathbb{R}^n$ $\rightarrow$ $\mathbb{R}^m$.
         Then f $\in$ $\mathscr{C}'(E)$ if and only if
         each partial derivative $D_jf_i$ exist and are continuous on E.
@@ -1397,7 +1381,7 @@
 
 \subsection{ The Contraction Principle }
 
-    \begin{definition}{Contraction}{14cm}
+    \begin{definition}{Contraction}{16cm}
         For metric space X with metric d, then $\phi$: X $\rightarrow$ X
         is a {\color{lblue} contraction} if there is c $\in$ (0,1) such that
         for all x,y $\in$ X:
@@ -1410,7 +1394,7 @@
 
 
 
-    \begin{wtheorem}{Banach's Fixed Point Theorem}{14cm}
+    \begin{wtheorem}{Banach's Fixed Point Theorem}{16cm}
         If X is a complete metric space and $\phi$ is a contraction
         of X into X, then there is a unique x $\in$ X
         such that $\phi$(x) = x
@@ -1522,7 +1506,7 @@
 
 \subsection{ Inverse Function Theorem }
 
-    \begin{wtheorem}{Inverse Function Theorem}{14cm}
+    \begin{wtheorem}{Inverse Function Theorem}{16cm}
         Let f $\in$ $\mathscr{C}'(E)$: open E $\subset$ $\mathbb{R}^n$
         $\rightarrow$ $\mathbb{R}^n$ where Df(a) is invertible
         for some (a,b).
@@ -1655,7 +1639,7 @@
 
 
     \begin{corollary}{f with continuous, invertible Df(x) at all x is
-    an open mapping}{14cm}
+    an open mapping}{16cm}
         If f $\in$ $\mathscr{C}'(E)$: open E $\subset$ $\mathbb{R}^n$
         $\rightarrow$ $\mathbb{R}^n$ where Df(x) is invertible for every x
         $\in$ E, then open f(W) $\subset$ $\mathbb{R}^n$ for
@@ -1714,7 +1698,7 @@
     
 \subsection{ Implicit Function Theorem }
 
-    \begin{definition}{Matrix Components}{14cm}
+    \begin{definition}{Matrix Components}{16cm}
         For x = $(x_1,...,x_n)$ $\in$ $\mathbb{R}^n$ and
         y = $(y_1,...,y_m)$ $\in$ $\mathbb{R}^m$:
 
@@ -1798,7 +1782,7 @@
 
 
 
-    \begin{wtheorem}{Every k has a unique h such that A(h,k) = 0}{14cm}
+    \begin{wtheorem}{Every k has a unique h such that A(h,k) = 0}{16cm}
         If A $\in$ L($\mathbb{R}^{n+m},\mathbb{R}^n$)
         and $A_x$ is invertible, then for every k $\in$ $\mathbb{R}^m$,
         there is a unique h $\in$ $\mathbb{R}^n$ such that A(h,k) = 0. Then:
@@ -1826,7 +1810,7 @@
 
 
 
-    \begin{wtheorem}{Implicit Function Theorem}{14cm}
+    \begin{wtheorem}{Implicit Function Theorem}{16cm}
         Let f $\in$ $\mathscr{C}'(E)$: open E $\subset$ $\mathbb{R}^{n+m}$
         $\rightarrow$ $\mathbb{R}^n$ such that f(a,b) = 0
         for some (a,b) $\in$ E.

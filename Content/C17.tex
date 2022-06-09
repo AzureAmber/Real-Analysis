@@ -4,7 +4,7 @@
 
 \subsection{ Regulated Integral }
 
-    \begin{definition}{Basic Properties of the Integral}{14cm}
+    \begin{definition}{Basic Properties of the Integral}{16cm}
         Let $\mathcal{V}$ be a vector space of real-valued functions
         on closed interval I.
 
@@ -17,33 +17,33 @@
         should satisfy:
 
         \begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
-            \item {\color{lblue} Linearity}:
+            \item {\color{lgreen} Linearity}:
                 For f,g $\in$ $\mathcal{V}$ and $c_1,c_2$ $\in$ $\mathbb{R}$:
             
                 \hspace{0.5cm}
                 $\int_a^b c_1f(x) + c_2g(x) dx$
                 = $c_1 \int_a^b f(x) dx$ + $c_2 \int_a^b g(x) dx$
 
-            \item {\color{lblue} Monotonicity}:
+            \item {\color{lgreen} Monotonicity}:
                 For f,g $\in$ $\mathcal{V}$ where g(x) $\leq$ f(x):
             
                 \hspace{0.5cm}
                 $\int_a^b g(x) dx$ $\leq$ $\int_a^b f(x) dx$
 
-            \item {\color{lblue} Additivity}:
+            \item {\color{lgreen} Additivity}:
                 For f $\in$ $\mathcal{V}$ and c $\in$ [a,b]:
             
                 \hspace{0.5cm}
                 $\int_a^b f(x) dx$
                 = $\int_a^c f(x) dx$ + $\int_c^b f(x) dx$
 
-            \item {\color{lblue} Constant}:
+            \item {\color{lgreen} Constant}:
                 For f(x) = C:
             
                 \hspace{0.5cm}
                 $\int_a^b C dx$ = $C(b-a)$
 
-            \item {\color{lblue} Finite Sets}:
+            \item {\color{lgreen} Finite Sets}:
                 For f,g $\in$ $\mathcal{V}$ where f(x) = g(x)
                 for all, but finitely many x:
             
@@ -59,7 +59,7 @@
 
 
 
-    \begin{wtheorem}{Absolute Value}{14cm}
+    \begin{wtheorem}{Absolute Value}{16cm}
         If f,$|f|$ $\in$ $\mathcal{V}$, then if a $\leq$ b:
 
         \hspace{0.5cm}
@@ -85,7 +85,7 @@
 
 
 
-    \begin{definition}{Step Function}{14cm}
+    \begin{definition}{Step Function}{16cm}
         Function f: [a,b] $\rightarrow$ $\mathbb{R}$
         is a {\color{lblue} step function} if there is
         a partition \{$x_0,...,x_n$\}:
@@ -100,7 +100,7 @@
 
 
 
-    \begin{wtheorem}{Integral of a Step Function}{14cm}
+    \begin{wtheorem}{Integral of a Step Function}{16cm}
         If step function f with partition \{$x_0,...,x_n$\} of [a,b]
         is f(x) = $c_i$ for x $\in$ $(x_{i-1},x_i)$:
 
@@ -126,7 +126,7 @@
 
 
 
-    \begin{wtheorem}{Step Functions form a Vector Space}{14cm}
+    \begin{wtheorem}{Step Functions form a Vector Space}{16cm}
         The collection of all step functions on [a,b] form a vector space
     \end{wtheorem}
 
@@ -148,7 +148,7 @@
 
 
 
-    \begin{wtheorem}{Integral of Step Functions are independent of Partition}{14cm}
+    \begin{wtheorem}{Integral of Step Functions are independent of Partition}{16cm}
         Let step function f have value $c_i$ on partition \{$x_0,...,x_n$\}
         and value $d_j$ on partition \{$y_0,...,y_m$\}. Then:
 
@@ -201,7 +201,7 @@
 
 
 
-    \begin{definition}{Regulated Function}{14cm}
+    \begin{definition}{Regulated Function}{16cm}
         Function f: [a,b] $\rightarrow$ $\mathbb{R}$
         is {\color{lblue} regulated} if:
         
@@ -214,7 +214,7 @@
 
 
 
-    \begin{wtheorem}{Regulated Integral}{14cm}
+    \begin{wtheorem}{Regulated Integral}{16cm}
         Suppose step functions \{$f_n$\} on [a,b] converge uniformly to f.
         Then \{$\int_a^b f_n(x) dx$\} converges.
         If step functions \{$g_n$\} also converge uniformly to f:
@@ -278,7 +278,7 @@
 
 
 
-    \begin{wtheorem}{Continuous functions are regulated}{14cm}
+    \begin{wtheorem}{Continuous functions are regulated}{16cm}
         Every continuous function f: [a,b] $\rightarrow$ $\mathbb{R}$
         is a regulated function
     \end{wtheorem}
@@ -308,7 +308,7 @@
 
 
 
-    \begin{wtheorem}{Lower and Upper Riemann Limit Redefined}{14cm}
+    \begin{wtheorem}{Lower and Upper Riemann Limit Redefined}{16cm}
         Let f be a bounded on [a,b]. Let:
 
         \hspace{0.5cm}
@@ -348,7 +348,7 @@
 
 
 
-    \begin{definition}{Riemann Integral Redefined}{14cm}
+    \begin{definition}{Riemann Integral Redefined}{16cm}
         Let f be a bounded on [a,b]. Let:
 
         \hspace{0.5cm}
@@ -370,7 +370,7 @@
 
 
 
-    \begin{wtheorem}{Riemann-Integrability $\epsilon$ Definition Redefined}{14cm}
+    \begin{wtheorem}{Riemann-Integrability $\epsilon$ Definition Redefined}{16cm}
         A bounded f on [a,b] is Riemann integrable if and only if:
 
         \hspace{0.5cm}
@@ -426,7 +426,7 @@
 
 
 
-    \begin{wtheorem}{Regulated functions are Riemann Integrable}{14cm}
+    \begin{wtheorem}{Regulated functions are Riemann Integrable}{16cm}
         Every regulated function is Riemann integrable where
         the regulated integral is equal to the Riemann integral
     \end{wtheorem}
@@ -472,7 +472,7 @@
 
 
 
-    \begin{wtheorem}{Riemann Intergrable functions form a vector space}{14cm}
+    \begin{wtheorem}{Riemann Intergrable functions form a vector space}{16cm}
         The set $\mathcal{R}$ of bounded Riemann integrable functions on [a,b] is
         a vector space that contains the vector space of regulated
         functions 
@@ -523,25 +523,25 @@
 
 \subsection{ Outer Measure }
 
-    \begin{definition}{Basic Properties of the Length / Measure of a Set}{14cm}
+    \begin{definition}{Basic Properties of the Length / Measure of a Set}{16cm}
         For bounded A,B $\subset$ $\mathbb{R}$, there is an associated
         non-negative real number $\mu(A)$:
     \end{definition}
 
     \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-        \item {\color{lblue} Length}:
+        \item {\color{lgreen} Length}:
             If A = (a,b) or A = [a,b], then:
 
             \hspace{0.5cm}
             $\mu(A)$ = len(A) = b-a
 
-        \item {\color{lblue} Translation Invariance}:
+        \item {\color{lgreen} Translation Invariance}:
             If c $\in$ $\mathbb{R}$, then:
             
             \hspace{0.5cm}
             $\mu(A+c)$ = $\mu(A)$
 
-        \item {\color{lblue} Countable Additivity}:
+        \item {\color{lgreen} Countable Additivity}:
             If \{$A_n$\}$_{n=1}^{\infty}$ is countable, then:
 
             \hspace{0.5cm}
@@ -554,7 +554,7 @@
             $\mu(\cup_{n=1}^{\infty} A_n)$
             = $\sum_{n=1}^{\infty} \mu(A_n)$
 
-        \item {\color{lblue} Monotonicity}:
+        \item {\color{lgreen} Monotonicity}:
             If A $\subset$ B, then:
 
             \hspace{0.5cm}
@@ -565,7 +565,7 @@
 
 
 
-    \begin{definition}{Null Set}{14cm}
+    \begin{definition}{Null Set}{16cm}
         X $\subset$ $\mathbb{R}$ is a {\color{lblue} null set}
         if for $\epsilon > 0$:
 
@@ -583,7 +583,7 @@
 
 
 
-    \begin{definition}{Outer Measure}{14cm}
+    \begin{definition}{Outer Measure}{16cm}
         Let A $\subset$ $\mathbb{R}$.
         Let open intervals \{$I_n$\}$_{n=1}^{\infty}$ be such that
         A $\subset$ $U_{n=1}^{\infty} I_n$.
@@ -599,7 +599,7 @@
 
 
 
-    \begin{wtheorem}{Null set A $\rightleftharpoons$ $\mu^*(A)$ = 0}{14cm}
+    \begin{wtheorem}{Null set A $\rightleftharpoons$ $\mu^*(A)$ = 0}{16cm}
         Let A $\subset$ $\mathbb{R}$.
         Then, A is a null set if and only if $\mu^*(A)$ = 0.
     \end{wtheorem}
@@ -636,7 +636,7 @@
 
 
 
-    \begin{wtheorem}{Outer Measure: Length Property}{14cm}
+    \begin{wtheorem}{Outer Measure: Length Property}{16cm}
         $\mu^*([a,b])$ = $\mu^*((a,b))$ = b - a
     \end{wtheorem}
 
@@ -703,7 +703,7 @@
 
 
 
-    \begin{wtheorem}{Outer Measure: Monotonicity Property}{14cm}
+    \begin{wtheorem}{Outer Measure: Monotonicity Property}{16cm}
         If A,B $\subset$ $\mathbb{R}$ where A $\subset$ B, then
         $\mu^*(A)$ $\leq$ $\mu^*(B)$
     \end{wtheorem}
@@ -724,7 +724,7 @@
 
 
 
-    \begin{wtheorem}{Outer Measure: Countable Subadditivity Property}{14cm}
+    \begin{wtheorem}{Outer Measure: Countable Subadditivity Property}{16cm}
         For \{$A_n$\}$_{n=1}^{\infty}$ where each $A_n$ $\subset$ $\mathbb{R}$:
 
         \hspace{0.5cm}
@@ -759,7 +759,7 @@
 
 
 
-    \begin{corollary}{Countable A $\rightleftharpoons$ $\mu^*(A)$ = 0}{14cm}
+    \begin{corollary}{Countable A $\rightleftharpoons$ $\mu^*(A)$ = 0}{16cm}
         If A is countable, then $\mu^*(A)$ = 0.
 
         Thus, intervals are uncountable.
@@ -785,7 +785,7 @@
 
 
 
-    \begin{wtheorem}{Outer Measure: Translation Invariance Property}{14cm}
+    \begin{wtheorem}{Outer Measure: Translation Invariance Property}{16cm}
         If A $\subset$ $\mathbb{R}$ and c $\in$ $\mathbb{R}$, then
         $\mu^*(A+c)$ = $\mu^*(A)$
     \end{wtheorem}
@@ -829,7 +829,7 @@
 
 
 
-    \begin{wtheorem}{Outer Measure: Regularity Property}{14cm}
+    \begin{wtheorem}{Outer Measure: Regularity Property}{16cm}
         If A $\subset$ $\mathbb{R}$ and $\mu^*(A)$ is finite,
         then for any $\epsilon > 0$, there is an open set V
         where A $\subset$ V such that
@@ -879,7 +879,7 @@
 
 \subsection{ Lebesgue Measure }
 
-    \begin{definition}{Sigma Algebra and Borel Sets}{14cm}
+    \begin{definition}{Sigma Algebra and Borel Sets}{16cm}
         Let $\mathcal{A}$ be a collection of subsets of X.
 
         Then, $\mathcal{A}$ is a {\color{lblue} $\sigma$-algebra}
@@ -917,7 +917,7 @@
 
 
 
-    \begin{definition}{Lebesgue Measurable}{14cm}
+    \begin{definition}{Lebesgue Measurable}{16cm}
         Let the $\sigma$-algebra of subsets of $\mathbb{R}$ generated by
         the collection of all open intervals and null sets be $\mathcal{M}$.
         Then, sets in $\mathcal{M}$ are {\color{lblue} Lebesgue measurable}.
@@ -930,7 +930,7 @@
 
 
 
-    \begin{wtheorem}{Lebesgue Measure}{14cm}
+    \begin{wtheorem}{Lebesgue Measure}{16cm}
         There is a unique $\mu$, the {\color{lblue} Lebesgue measure},
         from A,B $\in$ $\mathcal{M}(I)$ to $\mathbb{R}_+$: 
     \end{wtheorem}
@@ -942,14 +942,14 @@
             \hspace{0.5cm}
             $\mu(A)$ = len(A) = b-a
 
-        \item {\color{lblue} Translation Invariance}:
+        \item {\color{lgreen} Translation Invariance}:
             If c $\in$ $\mathbb{R}$ and A+c $\subset$ I, then
             A+c $\in$ $\mathcal{M}(I)$ where:
             
             \hspace{0.5cm}
             $\mu(A+c)$ = $\mu(A)$
 
-        \item {\color{lblue} Countable Additivity}:
+        \item {\color{lgreen} Countable Additivity}:
             If \{$A_n$\}$_{n=1}^{\infty}$ is countable, then:
 
             \hspace{0.5cm}
@@ -962,13 +962,13 @@
             $\mu(\cup_{n=1}^{\infty} A_n)$
             = $\sum_{n=1}^{\infty} \mu(A_n)$
 
-        \item {\color{lblue} Monotonicity}:
+        \item {\color{lgreen} Monotonicity}:
             If A $\subset$ B, then:
 
             \hspace{0.5cm}
             $\mu(A)$ $\leq$ $\mu(B)$
 
-        \item {\color{lblue} Null Sets}:
+        \item {\color{lgreen} Null Sets}:
             If A $\subset$ I is a null set, then A $\in$ $\mathcal{M}(I)$ where:
 
             \hspace{0.5cm}
@@ -977,7 +977,7 @@
             Also, if A $\in$ $\mathcal{M}(I)$ where $\mu(A)$ = 0,
             then A is a null set.
 
-        \item {\color{lblue} Regularity}
+        \item {\color{lgreen} Regularity}
         
             \hspace{0.5cm}
             $\mu(A)$ = inf($\mu(U)$ $|$ U is open , A $\subset$ U)
@@ -987,7 +987,7 @@
 
 
 
-    \begin{wtheorem}{The Lebesgue measure of set differences}{14cm}
+    \begin{wtheorem}{The Lebesgue measure of set differences}{16cm}
         If A,B $\in$ $\mathcal{M}(I)$, then
         A$\backslash$B $\in$ $\mathcal{M}(I)$ where:
 
@@ -1023,7 +1023,7 @@
 
 
 
-    \begin{wtheorem}{Alternative Definition for Lebesgue Measurable}{14cm}
+    \begin{wtheorem}{Alternative Definition for Lebesgue Measurable}{16cm}
         A $\subset$ I is Lebesgue Measurable if for all X $\subset$ I:
 
         \hspace{0.5cm}
@@ -1044,7 +1044,7 @@
 
 
 
-    \begin{wtheorem}{Lebesgue Measure's Regularity $\epsilon$ Definition}{14cm}
+    \begin{wtheorem}{Lebesgue Measure's Regularity $\epsilon$ Definition}{16cm}
         If A $\in$ $\mathcal{M}(I)$, then for $\epsilon > 0$:
 
         \hspace{0.5cm}
@@ -1090,7 +1090,7 @@
 
 
 
-    \begin{wtheorem}{Monotonic Measurable Sets}{14cm}
+    \begin{wtheorem}{Monotonic Measurable Sets}{16cm}
         If $A_n$ $\subset$ $A_{n+1}$ are Lebesgue measurable subsets of I, then:
 
         \hspace{0.5cm}
@@ -1141,7 +1141,7 @@
 
 \subsection{ Lebesgue Integral }
 
-    \begin{definition}{Indicator Function}{14cm}
+    \begin{definition}{Indicator Function}{16cm}
         For A $\subset$ [0,1], the indicator function:
 
         \hspace{0.5cm}
@@ -1156,7 +1156,7 @@
 
 
 
-    \begin{definition}{Measurable Partition}{14cm}
+    \begin{definition}{Measurable Partition}{16cm}
         A finite {\color{lblue} measurable partition} of [0,1] is a
         collection \{$A_i$\}$_{i=1}^n$ of measurable subsets
         which are pairwise disjoint where $\cup A_i$ = [0,1].
@@ -1166,7 +1166,7 @@
 
 
 
-    \begin{definition}{Simple Function}{14cm}
+    \begin{definition}{Simple Function}{16cm}
         f: [0,1] $\rightarrow$ $\mathbb{R}$ is {\color{lblue} simple}
         if there exists a finite measurable partition, \{$A_i$\}$_{i=1}^n$
         and $r_i$ $\in$ $\mathbb{R}$ such that
@@ -1182,25 +1182,25 @@
 
 
 
-    \begin{wtheorem}{Properties of Simple Functions}{14cm}
+    \begin{wtheorem}{Properties of Simple Functions}{16cm}
         The set of simple functions is a vector space where:
     \end{wtheorem}
 
     \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-        \item {\color{lblue} Linearity}:
+        \item {\color{lgreen} Linearity}:
             If f,g are simple functions and $c_1,c_2$ $\in$ $\mathbb{R}$:
 
             \hspace{0.5cm}
             $\int$ $c_1f + c_2g$ $d\mu$
             = $c_1 \int$ f $d\mu$ + $c_2 \int$ g $d\mu$
 
-        \item {\color{lblue} Monotonicity}:
+        \item {\color{lgreen} Monotonicity}:
             If f,g are simple where f(x) $\leq$ g(x):
             
             \hspace{0.5cm}
             $\int$ f $d\mu$ $\leq$ $\int$ g $d\mu$
 
-        \item {\color{lblue} Absolute Value}:
+        \item {\color{lgreen} Absolute Value}:
             If f is simple, then $|f|$ is simple:
 
             \hspace{0.5cm}
@@ -1264,7 +1264,7 @@
 
 
 
-    \begin{wtheorem}{Measurable Functions}{14cm}
+    \begin{wtheorem}{Measurable Functions}{16cm}
         If f: X $\subset$ $\mathbb{R}$ $\rightarrow$ $[-\infty,\infty]$, then
         the following are equivalent:
 
@@ -1314,7 +1314,7 @@
 
 
 
-    \begin{wtheorem}{Measurable Functions and Null Sets}{14cm}
+    \begin{wtheorem}{Measurable Functions and Null Sets}{16cm}
         Let f,g: [a,b] $\rightarrow$ $\mathbb{R}$.
     \end{wtheorem}
 
@@ -1359,7 +1359,7 @@
 
 
 
-    \begin{wtheorem}{Measurable Functions and Sequences}{14cm}
+    \begin{wtheorem}{Measurable Functions and Sequences}{16cm}
         Let \{$f_n$\}$_{n=1}^{\infty}$ be a sequence of measurable functions.
         Then:
 
@@ -1400,22 +1400,17 @@
 
 
 
-    \begin{wtheorem}{Lebesgue measurable functions form a Vector Space}{14cm}
+    \begin{wtheorem}{Lebesgue measurable functions form a Vector Space}{16cm}
         The set of Lebesgue measurable functions from [0,1] to $\mathbb{R}$
-        is a vector space with a vector subspace of bounded Lebesgue measurable
-        functions. Thus, if f,g are measurable, then fg is measurable.
+        is a vector space
     \end{wtheorem}
 
     \begin{proof}
         Let f,g be Lebesgue measurable functions.
-
         For a $\in$ $\mathbb{R}$, let set $U_a$ = \{ f(x) + g(x) $>$ a \}.
 
         Since $\mathbb{Q}$ = \{$r_m$\} is countable and dense, there is a
-        $r_m$ such that:
-
-        \hspace{0.5cm}
-        f(x) $>$ $r_m$ $>$ a - g(x)
+        $r_m$ such that f(x) $>$ $r_m$ $>$ a - g(x).
 
         Let $V_m$ = \{x $|$ f(x) $>$ $r_m$\} $\cap$ \{x $|$ g(x) $>$ $a-r_m$\}
         
@@ -1436,7 +1431,7 @@
         a vector subspace of measurable functions.
     \end{proof}
 
-    \newpage
+    \vspace{0.5cm}
 
 
 
@@ -1444,7 +1439,7 @@
 
 \subsection{ Lebesgue Integral of Bounded Functions }
 
-    \begin{wtheorem}{Lebesgue Integral of a Bounded Function}{14cm}
+    \begin{wtheorem}{Lebesgue Integral of a Bounded Function}{16cm}
         If f: [0,1] $\rightarrow$ $\mathbb{R}$ is bounded, then
         the following are equivalent:
 
@@ -1477,7 +1472,7 @@
         where x $\in$ $[c_{i-1},c_i)$ so
         $|f(x) - f_n(x)|$ $\leq$ $\epsilon_n$.
 
-        \rule[0.1cm]{15.2cm}{0.01cm}
+        \rule[0.1cm]{16.7cm}{0.01cm}
 
         Suppose simple functions \{$f_n$\} converge uniformly to f.
 
@@ -1504,7 +1499,7 @@
         Since sup($\int$ v $d\mu$) $\leq$ inf($\int$ u $d\mu$),
         then sup($\int$ v $d\mu$) = inf($\int$ u $d\mu$).
 
-        \rule[0.1cm]{15.2cm}{0.01cm}
+        \rule[0.1cm]{16.7cm}{0.01cm}
 
         For n, there are simple functions $v_n(x),u(x)$
         where $v_n(x)$ $\leq$ f(x) $\leq$ $u_n(x)$ such that:
@@ -1519,9 +1514,7 @@
 
         If $B_m$ = \{x $|$ $g_1(x)$ $<$ $g_2(x) - \frac{1}{m}$\},
         then B = $\int_{m=1}^{\infty} B_m$
-        so $\mu(B_m) > 0$ for some m.
-        
-        Thus, for x $\in$ $B_m$:
+        so $\mu(B_m) > 0$ for some m. For x $\in$ $B_m$:
 
         \hspace{0.5cm}
         $v_n(x)$
@@ -1545,12 +1538,12 @@
         so f(x) is measurable.
     \end{proof}
 
-    \vspace{0.5cm}
+    \newpage
 
 
 
     \begin{wtheorem}{Uniform Convergence of Simple Functions are
-    Lebesgue Integrable}{14cm}
+    Lebesgue Integrable}{16cm}
         If simple functions \{$f_n$\} converge uniformly to bounded measurable f:
 
         \hspace{0.5cm}
@@ -1592,36 +1585,36 @@
         = $\lim_{n \rightarrow \infty}$ $\int$ $f_n(x)$ $d\mu$
     \end{proof}
 
-    \newpage
+    \vspace{0.5cm}
 
 
 
-    \begin{wtheorem}{Properties of Bounded Measurable Functions}{14cm}
+    \begin{wtheorem}{Properties of Bounded Measurable Functions}{16cm}
         If f,g are bounded Lebesgue measurable functions. Then:
     \end{wtheorem}
 
     \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-        \item {\color{lblue} Linearity}:
+        \item {\color{lgreen} Linearity}:
             If $c_1,c_2$ $\in$ $\mathbb{R}$:
 
             \hspace{0.5cm}
             $\int$ $c_1f + c_2g$ $d\mu$
             = $c_1 \int$ f $d\mu$ + $c_2 \int$ g $d\mu$
 
-        \item {\color{lblue} Monotonicity}:
+        \item {\color{lgreen} Monotonicity}:
             If f(x) $\leq$ g(x):
 
             \hspace{0.5cm}
             $\int$ f $d\mu$ $\leq$ $\int$ g $d\mu$
 
-        \item {\color{lblue} Absolute Value}:
+        \item {\color{lgreen} Absolute Value}:
             $|f|$ is measurable where:
 
             \hspace{0.5cm}
             $|\int$ f $d\mu|$
             $\leq$ $\int$ $|f|$ $d\mu$
 
-        \item {\color{lblue} Null Sets}:
+        \item {\color{lgreen} Null Sets}:
             If f(x) = g(x) except on a set of measure zero:
 
             \hspace{0.5cm}
@@ -1686,7 +1679,7 @@
 
 
 
-    \begin{definition}{Bounded Lebesgue integral over a Measurable set}{14cm}
+    \begin{definition}{Bounded Lebesgue integral over a Measurable set}{16cm}
         If E $\subset$ [0,1] is a measurable set and f is a bounded measurable
         function, the {\color{lblue} Lebesgue integral of f over E}:
 
@@ -1694,11 +1687,11 @@
         $\int_E$ f $d\mu$ = $\int$ $f \mathfrak{X}_E$ $d\mu$
     \end{definition}
 
-    \vspace{0.5cm}
+    \newpage
 
 
 
-    \begin{wtheorem}{Additivity Property}{14cm}
+    \begin{wtheorem}{Additivity Property}{16cm}
         If \{$E_n$\}$_{n=1}^N$ are pairwise disjoint measurable sets
         with E = $\cup E_n$ and f is a bounded measurable function:
 
@@ -1718,11 +1711,11 @@
         = $\sum_{n=1}^N$ $\int_{E_n}$ f $d\mu$
     \end{proof}
 
-    \newpage
+    \vspace{0.5cm}
 
 
 
-    \begin{wtheorem}{Riemann Integrability implies Lebesgue Integrability}{14cm}
+    \begin{wtheorem}{Riemann Integrability implies Lebesgue Integrability}{16cm}
         Every bounded Riemann integrable f: [0,1] $\rightarrow$ $\mathbb{R}$
         is measurable and thus, Lebesgue integrable.
         The Riemann integral is equal to the Lebesgue integral.

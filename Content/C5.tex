@@ -4,8 +4,8 @@
 
 \subsection{ Metric Spaces }
 
-	\begin{definition}{Metric Spaces}{14cm}
-		A set X is a metric space if for ant p,q $\in$ X,
+	\begin{definition}{Metric Spaces}{16cm}
+		A set X is a {\color{lblue} metric space} if for any p,q $\in$ X,
 		there is an associated d(p,q) $\in$ $\mathbb{R}$ such that:
 
 		\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
@@ -13,10 +13,10 @@
 			
 			\item d(p,q) = 0 if and only if p = q
 			
-			\item {\color{lblue} Symmetry}:
+			\item {\color{lgreen} Symmetry}:
 				d(p,q) = d(q,p)
 			
-			\item {\color{lblue} Triangle Inequality}:
+			\item {\color{lgreen} Triangle Inequality}:
 				d(p,q) $\leq$ d(p,r) + d(r,q)
 				\hspace{1cm}
 				for any r $\in$ X.
@@ -30,7 +30,7 @@
 
 
 
-	\begin{definition}{Types of Points and Sets}{14cm}
+	\begin{definition}{Types of Points and Sets}{16cm}
 		For metric space X and set E $\subset$ X:
 	\end{definition}
 	
@@ -172,9 +172,9 @@
 
 
 	\begin{wtheorem}{If a set has a limit point, there are infinite q
-	$\in$ E in N$_r(p)$}{14cm}
+	$\in$ E in N$_r(p)$}{16cm}
 		If p is a limit point of set E, then every N$_r(p)$
-		contains infinitely many q $\in$ E.
+		contains infinitely many q $\in$ E
 	\end{wtheorem}
 	
 	\begin{proof}
@@ -197,9 +197,9 @@
 
 
 
-	\begin{corollary}{Limit points do not exist in finite sets}{14cm}
+	\begin{corollary}{Limit points do not exist in finite sets}{16cm}
 		A finite set E has no limit points.
-		Since $\emptyset$ $\in$ E, all finite set must be closed.		
+		Since E' = $\emptyset$ $\in$ E, all finite set must be closed.		
 	\end{corollary}
 	
 	\begin{proof}
@@ -216,7 +216,7 @@
 
 
 
-	\begin{wtheorem}{De Morgan's Laws}{14cm}
+	\begin{wtheorem}{De Morgan's Laws}{16cm}
 		Let $E_1, E_2 , ... $ be a collection of sets. Then,
 		($\cup_{}^{}$ $E_x$)$^\text{c}$ = $\cap_{}^{}$ ($E_x$$^\text{c}$).		 
 	\end{wtheorem}
@@ -249,7 +249,7 @@
 
 
 
-	\begin{wtheorem}{Open set $\rightarrow$ Closed complement}{14cm}
+	\begin{wtheorem}{Open set $\rightarrow$ Closed complement}{16cm}
 		A set E is open if and only if E$^\text{c}$ is closed
 	\end{wtheorem}
 	
@@ -279,8 +279,8 @@
 
 
 
-	\begin{corollary}{Closed set $\rightarrow$ Open complement}{14cm}
-		A set F is closed if only only if F$^\text{c}$ is open.
+	\begin{corollary}{Closed set $\rightarrow$ Open complement}{16cm}
+		A set F is closed if only only if F$^\text{c}$ is open
 	\end{corollary}
 	
 	\begin{proof}
@@ -296,7 +296,7 @@
 		\item If $\{G_x\}$ is a finite or infinite collection of open sets,
 		then $\cup$ $G_x$ is open.
 
-			\begin{proof}[14cm]
+			\begin{proof}[15.5cm]
 				If p $\in$ $\cup$ $G_x$, then p $\in$ $G_x$ for at least one x.
 				Let $\overline{x}$ be such an x.
 
@@ -312,7 +312,7 @@
 		\item If $\{F_x\}$ is a finite or infinite collection of closed sets,
 		then $\cap$ $F_x$ is closed.
 
-			\begin{proof}[14cm]
+			\begin{proof}[15.5cm]
 				By {\color{red} theorem 5.1.7}, any $F_x^c$ is open.
 				Since $\{F_x^c\}$ is a finite or infinite collection of
 				open set, then by part (a), $\cup$ $F_x^c$ is open.
@@ -328,7 +328,7 @@
 		\item If $G_1, ... , G_n$ is a finite collection of open sets,
 		then $\cap_{x=1}^n$ $G_x$ is open.
 
-			\begin{proof}[14cm]
+			\begin{proof}[15.5cm]
 				If p $\in$ $\cap_{x=1}^n$ $G_x$, then p $\in$ $G_x$ for
 				all $G_x$ for x = \{1, 2, ... , n\}.
 
@@ -352,7 +352,7 @@
 		\item If $F_1, ... , F_n$ is a finite collection of closed sets,
 		then $\cup_{x=1}^n$ $F_x$ is closed.
 
-			\begin{proof}[14cm]
+			\begin{proof}[15.5cm]
 				By {\color{red} theorem 5.1.7}, any $F_x^c$ is open.
 				Since $F_1^c, ... , F_n^c$ is a finite collection of
 				open set, then by part (c), $\cap_{x=1}^n$ $F_x^c$ is open.
@@ -376,7 +376,7 @@
 
 
 
-	\begin{wtheorem}{E' is closed}{14cm}
+	\begin{wtheorem}{E' is closed}{16cm}
 		Let  E $\subset$ X. Then, (E')' $\subset$ E'.
 		Thus, E' is closed.
 	\end{wtheorem}
@@ -399,7 +399,7 @@
 
 
 
-	\begin{wtheorem}{E$^o$ is open}{14cm}
+	\begin{wtheorem}{E$^o$ is open}{16cm}
 		Let  E $\subset$ X. Then, E$^o$ is open. 
 	\end{wtheorem}
 	
@@ -422,7 +422,7 @@
 
 \subsection{ Intervals and Balls } 
 
-	\begin{definition}{Segments and Intervals}{14cm}
+	\begin{definition}{Segments and Intervals}{16cm}
 		In $\mathbb{R}$, a {\color{lblue} segement} is an open interval
 		(a,b) = \{ x $\in$ $\mathbb{R}$ : a $<$ x $<$ b \}
 
@@ -434,7 +434,7 @@
 
 
 
-	\begin{definition}{Open Balls}{14cm}
+	\begin{definition}{Open Balls}{16cm}
 		In $\mathbb{R}^k$, an {\color{lblue} open ball} of radius
 		r $>$ 0 centered at p is:
 
@@ -448,7 +448,7 @@
 
 
 
-	\begin{definition}{Convex}{14cm}
+	\begin{definition}{Convex}{16cm}
 		E $\subset$ $\mathbb{R}^k$ is {\color{lblue} convex} if for all
 		x,y $\in$ E and t $\in$ [0,1], tx + (1-t)y $\in$ E.
 	\end{definition}
@@ -484,8 +484,8 @@
 
 
 
-	\begin{definition}{Dense}{14cm}
-		E $\subset$ X is dense if every x $\in$ X is either in E or
+	\begin{definition}{Dense}{16cm}
+		E $\subset$ X is {\color{lblue} dense} if every x $\in$ X is either in E or
 		a limit point of E.
 	\end{definition}
 	

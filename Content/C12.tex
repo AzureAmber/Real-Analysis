@@ -2,15 +2,15 @@
 
 \section[Day 12: Differentiation]{ Differentiation }
 
-\subsection{ Derivative of a function }
+\subsection{ Derivative of a Function }
 
-    \begin{definition}{Derivative}{14cm}
+    \begin{definition}{Derivative}{16cm}
         Let f be defined on any x $\in$ [a,b].
 
         \hspace{1cm}
         $\phi(t)$ = $\frac{f(t) - f(x)}{t - x}$ for t $\not =$ x
         
-        The derivative of f at x:
+        The {\color{lblue} derivative} of f at x:
 
         \hspace{1cm}
         $f'(x)$ = $\lim_{t \rightarrow x}$ $\phi(t)$
@@ -24,7 +24,7 @@
 
 
 
-    \begin{wtheorem}{Differentiability $\rightarrow$ Continuity}{14cm}
+    \begin{wtheorem}{Differentiability $\rightarrow$ Continuity}{16cm}
         Let f be defined on [a,b].
         
         If f is differentiable at x $\in$ [a,b], then f is continuous at x.        
@@ -44,15 +44,17 @@
 
 
 
-    \begin{wtheorem}{Arithmetic operations on differentiation}{14cm}
+    \begin{wtheorem}{Arithmetic operations on differentiation}{16cm}
         Suppose f,g are defined on [a,b] and differentiable on
-        x $\in$ [a,b]. Then f+g, fg, and $\frac{f}{g}$ are differentiable at x:        
+        x $\in$ [a,b].
+        
+        Then f+g, fg, and $\frac{f}{g}$ are differentiable at x:        
     \end{wtheorem}
 
-    \begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
         \item (f+g)'(x) = f'(x) + g'(x)
         
-            \begin{proof}[13.5cm]
+            \begin{proof}[15cm]
                 $\lim_{t \rightarrow x}$ $\frac{(f+g)(t) - (f+g)(x)}{t - x}$
                 = $\lim_{t \rightarrow x}$ $\frac{f(t) - f(x) + g(t) - g(x)}{t - x}$
                 
@@ -64,7 +66,7 @@
         
         \item (fg)'(x) = f'(x)g(x) + f(x)g'(x)
 
-            \begin{proof}[13.5cm]
+            \begin{proof}[15cm]
                 $\lim_{t \rightarrow x}$ $\frac{(fg)(t) - (fg)(x)}{t - x}$
                 = $\lim_{t \rightarrow x}$ $\frac{f(t)g(t) - f(x)g(x)}{t - x}$
 
@@ -82,7 +84,7 @@
 
         \item ($\frac{f}{g}$)'(x) = $\frac{f'(x)g(x) - f(x)g'(x)}{g^2(x)}$
         
-            \begin{proof}[13.5cm]
+            \begin{proof}[15cm]
                 $\lim_{t \rightarrow x}$ $\frac{(\frac{f}{g})(t)
                                                 - (\frac{f}{g})(x)}{t - x}$
                 = $\lim_{t \rightarrow x}$ $\frac{\frac{f(t)}{g(t)}
@@ -154,18 +156,18 @@
 
 
 
-\subsection{ Mean Value Theorems}
+\subsection{ Mean Value Theorems }
 
-    \begin{definition}{Local Extrema}{14cm}
+    \begin{definition}{Local Extrema}{16cm}
         Let real-valued f $\in$ X.
         
-        Then f has a local maximum at p $\in$ X if:
+        Then f has a {\color{lblue} local maximum} at p $\in$ X if:
         
         \hspace{0.5cm}
         There is $\delta > 0$ such that for all q $\in$ X where $d_X(q,p) < \delta$,
         f(q) $\leq$ f(p).
         
-        Then f has a local minimum at p $\in$ X if:
+        Then f has a {\color{lblue} local minimum} at p $\in$ X if:
 
         \hspace{0.5cm}
         There is $\delta > 0$ such that for all q $\in$ X where $d_X(q,p) < \delta$,
@@ -176,7 +178,7 @@
 
 
 
-    \begin{wtheorem}{Derivative at local extrema is 0}{14cm}
+    \begin{wtheorem}{Derivative at local extrema is 0}{16cm}
         Let f be defined on [a,b].
         
         If f has a local maximum at x $\in$ (a,b) and f'(x) exists, then
@@ -207,9 +209,11 @@
 
 
 
-    \begin{wtheorem}{Generalized Mean Value Thereom}{14cm}
+    \begin{wtheorem}{Generalized Mean Value Thereom}{16cm}
         If f,g are continuous real functions on [a,b] and differentiable on
-        (a,b), then there is a x $\in$ (a,b) such that
+        (a,b), then there is a
+        
+        x $\in$ (a,b) such that
         [f(b) - f(a)] $\cdot$ g'(x) = [g(b) - g(a)] $\cdot$ f'(x).        
     \end{wtheorem}
 
@@ -236,7 +240,7 @@
 
 
 
-    \begin{wtheorem}{Mean Value Thereom}{14cm}
+    \begin{wtheorem}{Mean Value Thereom}{16cm}
         If f is a real continuous function on [a,b] and differentiable on (a,b),
         then there is a x $\in$ (a,b) such that f(b) - f(a) = (b-a) f'(x).        
     \end{wtheorem}
@@ -249,11 +253,11 @@
 
 
 
-    \begin{wtheorem}{Sign of derivative determines increasing/decreasing}{14cm}
+    \begin{wtheorem}{Sign of derivative determines increasing/decreasing}{16cm}
         Suppose f is differentiable on (a,b).
     \end{wtheorem}
 
-    \begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
+    \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
         \item If f'(x) $\geq$ 0 for all x $\in$ (a,b), then f is monotonically
         increasing.
 
@@ -287,7 +291,7 @@
 
 \subsection{ Continuity of Derivatives }
 
-    \begin{wtheorem}{Intermediate values of derivatives exists}{14cm}
+    \begin{wtheorem}{Intermediate values of Derivatives exists}{16cm}
         Suppose f is a real differentiable function on [a,b]
         and $f'(a) < \lambda < f'(b)$.
 
@@ -317,7 +321,7 @@
 
 
 
-    \begin{corollary}{Differentiable functions have no simple discontinuities}{14cm}
+    \begin{corollary}{Differentiable functions have no simple discontinuities}{16cm}
         If f is differentiable on [a,b], then f' cannot have simple discontinuities
         on [a,b].
     \end{corollary}
@@ -334,7 +338,7 @@
 
 \subsection{ L'Hospital's Rule }
 
-    \begin{wtheorem}{L'Hospital's Rule}{14cm}
+    \begin{wtheorem}{L'Hospital's Rule}{16cm}
         Suppose f,g are real and differentiable on (a,b) and g'(x) $\not =$ 0
         for all x $\in$ (a,b).
         
@@ -403,10 +407,10 @@
 
 \subsection{ Derivative of Higher Order }
 
-    \begin{definition}{Derivative of Higher Order}{14cm}
+    \begin{definition}{Derivative of Higher Order}{16cm}
         If f has a derivative f' on an interval and f' is differentiable,
         then the derivative of f' is f'', the second derivative of f.
-        Then, $f^{(n)}$ is the nth derivative of f.
+        Then, $f^{(n)}$ is the {\color{lblue} nth derivative} of f.
 
         For $f^{(n)}(x)$ to exist at x, $f^{(n-1)}(t)$ must exist
         in a neighborhood of x and $f^{(n-1)}$ must be differentiable at x.
@@ -424,10 +428,9 @@
 
 \subsection{ Taylor's Theorem }
 
-    \begin{wtheorem}{Taylor's Theorem}{14cm}
+    \begin{wtheorem}{Taylor's Theorem}{16cm}
         Suppose f is a real function on [a,b], n $\in$ $\mathbb{Z}_+$,
         $f^{(n-1)}$ is continuous on [a,b], $f^n(t)$ exists at every t $\in$ (a,b).
-        
         Let $\alpha,\beta$ $\in$ [a,b] be distinct and
         P(t) = $\sum_{k=0}^{n-1}$ $\frac{f^k(\alpha)}{k!} (t-\alpha)^k$.
 
@@ -471,11 +474,11 @@
 
 \subsection{ Differentiation of Vector-Valued Functions }
 
-    \begin{definition}{Extending derivative to Vector-Valued Functions}{14cm}
+    \begin{definition}{Extending derivative to Vector-Valued Functions}{16cm}
         For vector-valued function f: t $\in$ [a,b] $\rightarrow$ $\mathbb{R}^k$,
         the derivative of f at x:
 
-        \hspace{1cm}
+        \hspace{0.5cm}
         f'(x) = $\lim_{t \rightarrow x} |\frac{f(t)-f(x)}{t-x}|$
 
         if the limit exist as defined by {\color{blue} definition 14.1.1}.
@@ -513,7 +516,7 @@
 
 
 
-    \begin{wtheorem}{Mean Value Theorem for $\mathbb{R}^k$}{14cm}
+    \begin{wtheorem}{Mean Value Theorem for $\mathbb{R}^k$}{16cm}
         Suppose f is a continuous mapping of [a,b] into $\mathbb{R}^k$
         and f is differentiable on (a,b). Then there is a x $\in$ (a,b)
         such that $|f(b) - f(a)|$ $\leq$ (b-a) $|f'(x)|$        

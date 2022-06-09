@@ -6,31 +6,29 @@
 \subsection{ nth Root }
 
 	\begin{ltheorem}{nth Root}{1.5cm}
-		\item If 0 $<$ t $\leq$ 1, then t$^\text{n}$ $ \leq $ t.
+		\item If 0 $<$ t $\leq$ 1, then t$^\text{n}$ $ \leq $ t
 		
-			\begin{proof}[14cm]
+			\begin{proof}[15.5cm]
 				Since t $>$ 0 and t $\leq$ 1, then t$^\text{2}$ $\leq$ t.
-
 				Since t$^\text2{}$ $\leq$ t, then t$^\text{3}$ $\leq$ t$^\text{2}$
 				so t$^\text{3}$ $\leq$ t$^\text{2}$ $\leq$ t.
 
 				Applying the process n times, then t$^\text{n}$ $\leq$ t.
 			\end{proof}
 
-		\item If t $\geq$ 1, t$^\text{n}$ $ \geq $ t.
+		\item If t $\geq$ 1, then t$^\text{n}$ $ \geq $ t
 
-			\begin{proof}[14cm]
+			\begin{proof}[15.5cm]
 				Since 0 $<$ 1 $\leq$ t, then t $\leq$ t$^\text{2}$.
-
 				Since t $\leq$ t$^\text{2}$, then t$^\text{2}$ $\leq$ t$^\text{3}$
 				so t $\leq$ t$^\text{2}$ $\leq$ t$^\text{3}$.
 
 				Applying the process n times, t $\leq$ t$^\text{n}$.
 			\end{proof}
 
-		\item If 0 $<$ s $<$ t, then s$^\text{n}$ $<$ t$^\text{n}$.
+		\item If 0 $<$ s $<$ t, then s$^\text{n}$ $<$ t$^\text{n}$
 
-			\begin{proof}[14cm]
+			\begin{proof}[15.5cm]
 				$\underbrace{\text{s} \cdot \text{s} \cdot
 								... \cdot \text{s}}_\text{n}$
 				$<$ t $\cdot$ s $\cdot$ ... $\cdot$ s
@@ -43,7 +41,7 @@
 
 
 
-	\begin{wtheorem}{y$^\text{n}$ = x has a unique y}{14cm}
+	\begin{wtheorem}{y$^\text{n}$ = x has a unique y}{16cm}
 		Fix n $\in$ $\mathbb{Z}_+$. For every x $>$ 0, there exists a unique y
 		$\in$ $ \mathbb{R} $ such that y$^\text{n}$ = x.
 
@@ -52,12 +50,12 @@
 	\end{wtheorem}
 	
 	\begin{proof}
-		{ \color{lblue} Uniqueness: }
+		{ \color{lgreen} Uniqueness: }
 
 		y is unique since if y$_{1}$ $<$ y$_{2}$, then
 		x = y$_{1}^\text{n}$ $<$ y$_{2}^\text{n}$ $\neq$ x.
 
-		{ \color{lblue} Existence: }
+		{ \color{lgreen} Existence: }
 
 		Let set A = \{ t $>$ 0 : t$^\text{n}$ $<$ x \}.
 
@@ -88,14 +86,14 @@
 		Suppose y$^\text{n}$ $<$ x. Pick 0 $<$ h $<$ 1 and
 		h $<$ $\frac{x-y^n}{n(y+1)^{n-1}}$.
 
-		\hspace{1cm}
-		From inequality, let $\beta$ = y+h and $\alpha$ = y
+		\hspace{0.5cm}
+		From inequality, let $\beta$ = y+h and $\alpha$ = y.
 
 		\hspace{1cm}
 		(y+h)$^\text{n}$ - y$^\text{n}$ $<$ hn(y+h)$^\text{n-1}$
 		$<$ hn(y+1)$^\text{n-1}$ $<$ x - y$^\text{n}$
 
-		\begin{adjustbox}{minipage=14.2cm, right, vspace=0.1cm 0cm}
+		\begin{adjustbox}{minipage=16cm, right, vspace=0.1cm 0cm}
 			Thus, (y+h)$^\text{n}$ $<$ x so y+h $\in$ A and thus, not an upper bound of A
 			which is a contradiction since y = sup(A).
 		\end{adjustbox}
@@ -104,16 +102,14 @@
 		Pick 0 $<$ k = $\frac{y^n - x}{ny^{n-1}}$ $<$ $\frac{y^n}{ny^{n-1}}$
 		= $\frac{1}{n}y$ $<$ y.
 
-		\hspace{1cm}
+		\hspace{0.5cm}
 		Consider t $ \geq $  y-k, then:
 		y$^\text{n}$ - t$^\text{n}$ $ \leq $  y$^\text{n}$ - (y-k)$^\text{n}$ $<$
 		kny$^\text{n-1}$ = y$^\text{n}$ - x
 
-		\hspace{1cm}
+		\hspace{0.5cm}
 		Thus, t$^\text{n}$ $>$ x so t $\not \in$ A.
-
-		\hspace{1cm}
-		Thus, y-k is an upper bound of A which is a contradiction since y = sup(A).
+		Then, y-k is an upper bound of A which contradicts y = sup(A).
 
 		Since y$^\text{n}$ $<$ x and y$^\text{n}$ $>$ x, then y$^\text{n}$ = x.
 	\end{proof}
@@ -122,7 +118,7 @@
 
 
 
-	\begin{corollary}{n-th root of product = product of n-th root}{14cm}
+	\begin{corollary}{n-th root of product = product of n-th root}{16cm}
 		If a,b $>$ 0 and n $\in$ $\mathbb{Z}_+$, then
 		(ab)$^{\frac{1}{n}}$ = a$^{\frac{1}{n}}$b$^{\frac{1}{n}}$
 	\end{corollary}
@@ -153,14 +149,15 @@
 	
 \subsection{ Decimals }
 
-	\begin{definition}{Decimals}{14cm}
+	\begin{definition}{Decimals}{16cm}
 		Let n$_0$ be the largest integer such that n$_0$ $\leq$ x for
 		x $>$ 0 $\in$ $\mathbb{R}$.
 
 		Then let n$_k$ be the largest integer such that
 		d$_k$ = n$_0$ + $\frac{n_1}{10}$ + ... + $\frac{n_k}{10^k}$ $\leq$ x
 
-		Let E be the set of d$_k$ for k = 0, 1, ... $\infty$. Then, x = sup(E).	
+		Let E be the set of d$_k$ for k = 0, 1, ... $\infty$.
+		Then, {\color{lblue} decimal} x = sup(E).	
 	\end{definition}
 
 	\vspace{0.5cm}
@@ -171,11 +168,11 @@
 
 \subsection{ Extended Reals }
 
-	\begin{definition}{Extended Reals}{14cm}
-		The extended real number system consist of $\mathbb{R}$
+	\begin{definition}{Extended Reals}{16cm}
+		The {\color{lblue} extended real number system} consist of $\mathbb{R}$
 		and $\pm$$\infty$ such that:
 
-		\hspace{1cm}
+		\hspace{0.5cm}
 		-$\infty$ $<$ x $<$ $\infty$ \hspace{1cm} for every x $\in$ $\mathbb{R}$
 
 		with the properties:
@@ -197,11 +194,11 @@
 
 \subsection{ Complex Numbers }
 
-	\begin{definition}{Complex Number}{14cm}
+	\begin{definition}{Complex Number}{16cm}
 		A complex number is an ordered pair (a,b) where a,b $\in$ $ \mathbb{R} $.
 		For x,y $\in$ $\mathbb{C}$
 
-		\begin{itemize}[leftmargin=2cm, itemsep=0.1cm]
+		\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
 			\item x + y = (a,b) + (c,d) = (a + c , b + d)
 			\item xy = (a,b) (c,d) = (ac - bd , ad + bc)
 			\item $\frac{1}{\text{x}}$  = (a$^2$ + b$^2$)(a,-b)
@@ -214,10 +211,13 @@
 
 
 
-	\begin{wtheorem}{Imaginary i and Form a + bi}{14cm}
-		Let i = (0,1). Then, i$^2$ = -1.
-
-		Then, (a,b) = a + bi
+	\begin{wtheorem}{Imaginary i and Form a + bi}{16cm}
+		Let i = (0,1). Then:
+		
+		\hspace{0.5cm}
+		i$^2$ = -1
+		\hspace{1cm}
+		(a,b) = a + bi
 	\end{wtheorem}
 
 	\begin{proof}
@@ -230,7 +230,7 @@
 
 
 
-	\begin{definition}{Conjugate}{14cm}
+	\begin{definition}{Conjugate}{16cm}
 		Let conjugate: $\bar{z}$ = a - bi where Re(z) = a , Im(z) = b.
 
 		Let z = (a,b) and w = (c,d):
@@ -239,14 +239,14 @@
 	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
 		\item $\overline{z+w}$ = $\overline{z}$ + $\overline{w}$
 		
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				$\overline{z+w}$ = $\overline{(a+c,b+d)}$ = (a+c,-b-d)
 				= (a,-b) + (c,-d) = $\overline{z}$ + $\overline{w}$
 			\end{proof}
 
 		\item $\overline{zw}$ = $\overline{z}$ $\overline{w}$
 		
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				$\overline{zw}$ = $\overline{(ac-bd,ad+bc)}$ = (ac-bd,-ad-bc)
 				= (a,-b) (c,-d) = $\overline{z}$ $\overline{w}$
 			\end{proof}
@@ -254,7 +254,7 @@
 		\item z + $\overline{z}$ = 2 Re(z)
 			\hspace{1cm} z - $\overline{z}$ = 2i Im(z)
 
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				z + $\overline{z}$ = (a,b) + (a,-b) = (2a,0) = 2 Re(z)
 
 				z - $\overline{z}$ = (a,b) - (a,-b) = (0,2b) = (0,2) b = 2i Im(z)
@@ -262,7 +262,7 @@
 
 		\item z$\overline{z}$ $\geq$ 0
 
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				z$\overline{z}$ = (a,b)(a,-b) = (a$^2$ + b$^2$ , -ab+ab)
 				= a$^2$ + b$^2$ $\geq$ 0
 			\end{proof}
@@ -272,7 +272,7 @@
 
 
 
-	\begin{definition}{Absolute Value}{14cm}
+	\begin{definition}{Absolute Value}{16cm}
 		Let absolute value: $|$ z $|$ = $\sqrt{z \overline{z}}$
 
 		Let z = (a,b) and w = (c,d):
@@ -281,21 +281,21 @@
 	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
 		\item If z $\neq$ 0, then $|$ z $|$ $>$ 0.
 
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				$\sqrt{z\overline{z}}$ = $\sqrt{a^2 + b^2}$ $\geq$ 0
 				where $|$ z $|$ = 0 only if a,b = 0 so only if z = (0,0).
 			\end{proof}
 
 		\item $|$ $\overline{z}$ $|$ = $|$ z  $|$
 			
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				$|$ $\overline{z}$ $|$ = $\sqrt{a^2 + (-b)^2}$
 				= $\sqrt{a^2 + b^2}$ = $|$ z $|$
 			\end{proof}
 
 		\item $|$ zw $|$ = $|$ z $|$ $|$ w $|$
 		
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				$|$ zw $|$ = $|$ (ac-bd,ad+bc) $|$ = $\sqrt{(ac-bd)^2 + (ad+bc)^2}$
 			
 				= $\sqrt{a^2c^2 + b^2d^2 + a^2d^2 + b^2c^2}$
@@ -306,14 +306,14 @@
 
 		\item $|$ Re(z) $|$ $\leq$ $|$ z $|$
 
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				$|$ Re(z) $|$ = $|$ a $|$ = $\sqrt{a^2}$
 				$\leq$ $\sqrt{a^2+b^2}$ = $|$ z $|$
 			\end{proof}
 
 		\item $|$ z+w $|$ $ \leq $  $|$ z $|$ + $|$ w $|$
 		
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				$| z+w |^2$ = (z+w)$\overline{(z+w)}$
 				= (z+w)($\overline{z} + \overline{w}$)
 				= z$\overline{z}$ + z$\overline{w}$
@@ -335,7 +335,7 @@
 
 \subsection{ Euclidean Spaces }
 
-	\begin{definition}{Euclidean Spaces}{14cm}
+	\begin{definition}{Euclidean Spaces}{16cm}
 		For each positive integer k, let $\mathbb{R}$$^\text{k}$ be the set of all ordered k-tuples:
 
 		\hspace{0.5cm}
@@ -358,7 +358,7 @@
 
 
 
-	\begin{definition}{Inner Product for $\mathbb{R}^k$}{14cm}
+	\begin{definition}{Inner Product for $\mathbb{R}^k$ (Dot Product)}{16cm}
 		$x \cdot y = x_1y_1 + ... + x_ky_k$ $\in$ $\mathbb{R}$
 	\end{definition}
 
@@ -366,7 +366,7 @@
 
 
 
-	\begin{definition}{Norm}{14cm}
+	\begin{definition}{Norm}{16cm}
 		$|x| = \sqrt{x \cdot x}$ = $\sqrt{\sum_{i=1}^k x_i^2}$
 	\end{definition}
 
@@ -374,8 +374,8 @@
 
 
 
-	\begin{definition}{Extension to $\mathbb{C}^k$}{14cm}
-		For z,w $\in$ $\mathbb{C}^n$
+	\begin{definition}{Extension to $\mathbb{C}^k$}{16cm}
+		For z,w $\in$ $\mathbb{C}^n$:
 		
 		\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
 			\item $z \cdot w = z_1\overline{w_1} + ... + z_k\overline{w_k}$
@@ -393,11 +393,11 @@
 
 \subsection{ Cauchy-Schwarz } 
 
-	\begin{wtheorem}{Cauchy-Schwarz}{14cm}
+	\begin{wtheorem}{Cauchy-Schwarz}{16cm}
 		If $\alpha_1 , ... , \alpha_n$ $\in$ $\mathbb{C}$ and
 		$b_1 , ... , b_n$ $\in$ $\mathbb{C}$, then:
 
-		\hspace{1cm}
+		\hspace{0.5cm}
 		$| \sum_{\text{j=1}}^{n} a_j(\overline{b_j})  |^2 \leq
 		\sum_{\text{j=1}}^{n} |a_j|^2 \sum_{\text{j=1}}^{n} |b_j|^2 $
 	\end{wtheorem}
@@ -439,7 +439,16 @@
 	
 	\vspace{0.5cm}
 	
-	\begin{corollary}{$|z \cdot w|$ $\leq$ $|z| |w|$}{14cm}
+
+
+	\begin{corollary}{$|z \cdot w|$ $\leq$ $|z| |w|$}{16cm}
+		For z,w $\in$ $\mathbb{C}$:
+
+		\hspace{0.5cm}
+		$|z \cdot w|$ $\leq$ $|z| |w|$
+	\end{corollary}
+
+	\begin{proof}
 		Since $|z_i|^2 = z_i\overline{z_i}$, then
 		$\sum z_i\overline{z_i} = \sum |z_i|^2$ = $|z|^2$. Thus:
 
@@ -447,35 +456,36 @@
 		$|z \cdot w|^2$ = $|\sum z_i\overline{w_i} \ |^2$
 		$\leq$ $\sum |z_i|^2 \sum |w_i|^2$ = $|z|^2$ $|w|^2$
 
-		Thus, $|z \cdot w|$ $\leq$ $|z| |w|$.
-	\end{corollary}
+		\hspace{0.5cm}
+		$|z \cdot w|$ $\leq$ $|z| |w|$
+	\end{proof}
 
 	\newpage
 
 
 
-	\begin{wtheorem}{Properties of $\mathbb{R}^k$}{14cm}
+	\begin{wtheorem}{Properties of $\mathbb{R}^k$}{16cm}
 		Let $x,y,z$ $\in$ $\mathbb{R}^k$ where $\alpha$ $\in$ $\mathbb{R}$:
 	\end{wtheorem}
 	
 	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
 		\item $|x|$ $\geq$ 0 where $|x| = 0$ only if x = 0
 
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				$|x| = \sqrt{\sum_{i=1}^{k} x_i^2} \geq 0$ where $|x| = 0$
 				only if $x_1 = ... = x_k = 0$
 			\end{proof}
 
 		\item $|\alpha x|$ = $|\alpha| |x|$
 		
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				$|\alpha x|$ = $\sqrt{\sum_{i=1}^k (\alpha x_i)^2}$
 				= $\sqrt{\alpha^2} \sqrt{\sum_{i=1}^k x_i^2}$ = $|\alpha| |x|$
 			\end{proof}
 	
 		\item $|x+y|$ $\leq$ $|x| + |y|$
 		
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				$|x+y|^2$ = $(x+y) \cdot (x+y)$ = $|x|^2 + 2(x \cdot y) + |y|^2$
 
 				$\leq$ $|x|^2 + 2|x||y| + |y|^2$ = $(|x|+|y|)^2$
@@ -483,9 +493,12 @@
 
 		\item $|x-y|$ $\leq$ $|x-z| + |y-z|$
 		
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				$|x-y|$ = $|x-z + z-y|$ $\leq$ $|x-z| + |z-y|$ = $|x-z| + |y-z|$
 			\end{proof}
 	\end{enumerate}
 
 
+
+
+	

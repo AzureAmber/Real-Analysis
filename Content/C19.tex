@@ -1,10 +1,10 @@
 \newpage
 
-\section[Day 19: $L^p$ Spaces]{ $L^p$ Spaces }
+\section[Day 19: $L^2$ Space]{ $L^2$ Space }
 
 \subsection{ $L^2$: Square Integrable Functions }
 
-    \begin{definition}{Square Integrable}{14cm}
+    \begin{definition}{Square Integrable}{16cm}
         Measurable function f: [a,b] $\rightarrow$ [$-\infty,\infty$]
         is {\color{lblue} square integrable} if $f^2$ is integrable.
 
@@ -18,7 +18,7 @@
 
 
 
-    \begin{wtheorem}{$L^p$ norm: Scalar Multiplication Property}{14cm}
+    \begin{wtheorem}{$L^p$ norm: Scalar Multiplication Property}{16cm}
         For any c $\in$ $\mathbb{R}$ and f $\in$ $L^2[a,b]$:
 
         \hspace{0.5cm}
@@ -43,7 +43,7 @@
 
 
 
-    \begin{wtheorem}{If f,g $\in$ $L^2[a,b]$, then fg is integrable}{14cm}
+    \begin{wtheorem}{If f,g $\in$ $L^2[a,b]$, then fg is integrable}{16cm}
         If f,g $\in$ $L^2[a,b]$, then fg is integrable where:
 
         \hspace{0.5cm}
@@ -78,7 +78,7 @@
 
 
 
-    \begin{wtheorem}{$L^2[a,b]$ is a vector space}{14cm}
+    \begin{wtheorem}{$L^2[a,b]$ is a vector space}{16cm}
         $L^2[a,b]$ is a vector space
     \end{wtheorem}
 
@@ -95,7 +95,7 @@
 
 
 
-    \begin{wtheorem}{Holder's Inequality in $L^2$}{14cm}
+    \begin{wtheorem}{Holder's Inequality in $L^2$}{16cm}
         If f,g $\in$ $L^2[a,b]$, then:
 
         \hspace{0.5cm}
@@ -134,7 +134,7 @@
 
 
 
-    \begin{corollary}{Cauchy-Schwarz Inequality in $L^2$}{14cm}
+    \begin{corollary}{Cauchy-Schwarz Inequality in $L^2$}{16cm}
         If f,g $\in$ $L^2[a,b]$, then:
         
         \hspace{0.5cm}
@@ -167,7 +167,7 @@
 
 
 
-    \begin{wtheorem}{Minkowski's Inequality in $L^2$}{14cm}
+    \begin{wtheorem}{Minkowski's Inequality in $L^2$}{16cm}
         If f,g $\in$ $L^2[a,b]$, then:
 
         \hspace{0.5cm}
@@ -203,19 +203,19 @@
 
 
 
-    \begin{wtheorem}{Properties of the Inner Product on $L^2$}{14cm}
+    \begin{wtheorem}{Properties of the Inner Product on $L^2$}{16cm}
         For $f_1,f_2,g$ $\in$ $L^2[a,b]$ and $c_1,c_2$ $\in$ $\mathbb{R}$:
     \end{wtheorem}
 
     \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-        \item {\color{lblue} Commutativity}:
+        \item {\color{lgreen} Commutativity}:
             $\langle f_1,f_2 \rangle$ = $\langle f_2,f_1 \rangle$
 
-        \item {\color{lblue} Bilinearity}:
+        \item {\color{lgreen} Bilinearity}:
             $\langle c_1f_1 + c_2f_2 , g \rangle$
             = $c_1 \langle f_1,g \rangle + c_2 \langle f_2,g \rangle$
 
-        \item {\color{lblue} Positive Definiteness}:
+        \item {\color{lgreen} Positive Definiteness}:
             $\langle f_1,f_1 \rangle$ = $||f_1||^2$ $\geq$ 0
 
             $\langle f_1,f_1 \rangle$ = 0 if and only if $f_1$ = 0 almost everywhere
@@ -227,14 +227,14 @@
         = $\int f_2f_1 d\mu$
         = $\langle f_2,f_1 \rangle$
 
-        \rule[0.1cm]{15.2cm}{0.01cm}
+        \rule[0.1cm]{16.7cm}{0.01cm}
 
         $\langle c_1f_1 + c_2f_2 , g \rangle$
         = $\int (c_1f_1 + c_2f_2)g d\mu$
         = $c_1\int f_1g d\mu + c_2\int f_2g d\mu$
         = $c_1 \langle f_1,g \rangle + c_2 \langle f_2,g \rangle$
 
-        \rule[0.1cm]{15.2cm}{0.01cm}
+        \rule[0.1cm]{16.7cm}{0.01cm}
 
         $\langle f_1,f_1 \rangle$
         = $\int f_1^2 d\mu$
@@ -252,7 +252,7 @@
 
 \subsection{ Convergence in $L^2$ }
 
-    \begin{definition}{Convergence in $L^2$}{14cm}
+    \begin{definition}{Convergence in $L^2$}{16cm}
         \{$f_n$\} $\in$ $L^2[a,b]$ converges to f $\in$ $L^2[a,b]$ if:
 
         \hspace{0.5cm}
@@ -263,7 +263,7 @@
 
 
 
-    \begin{wtheorem}{Approximating f $\in$ $L^2[a,b]$ with bounded $f_n$}{14cm}
+    \begin{wtheorem}{Approximating f $\in$ $L^2[a,b]$ with bounded $f_n$}{16cm}
         For f $\in$ $L^2[a,b]$, let:
 
         \hspace{0.5cm}
@@ -324,7 +324,7 @@
 
 
     \begin{wtheorem}{Approximating f $\in$ $L^2[a,b]$ with step or continuous
-    functions}{14cm}
+    functions}{16cm}
         For $\epsilon > 0$ and f $\in$ $L^2[a,b]$, there is a step function
         g such that $||f-g||$ $<$ $\epsilon$.
 
@@ -378,7 +378,7 @@
 
 
 
-    \begin{definition}{Hilbert Space}{14cm}
+    \begin{definition}{Hilbert Space}{16cm}
         A {\color{lblue} Hilbert Space}
         is a vector space with an inner product whose associated norm
         is complete
@@ -389,7 +389,7 @@
 
 
 
-    \begin{wtheorem}{$L^2[a,b]$ is complete}{14cm}
+    \begin{wtheorem}{$L^2[a,b]$ is complete}{16cm}
         $L^2[a,b]$ is a Hilbert Space
     \end{wtheorem}
 
@@ -487,7 +487,7 @@
 
 
     \begin{corollary}{Convergent \{$f_n(x)$\} in $L^2[a,b]$
-    implies convergent \{$f_{n_i}(x)$\} }{14cm}
+    implies convergent \{$f_{n_i}(x)$\} }{16cm}
         If \{$f_n$\} converges to f in $L^2[a,b]$, then
         there is a subsequence \{$f_{n_i}$\} such that:
 
@@ -521,9 +521,9 @@
 
 
 
-\subsection{ Hilbert Space }
+\subsection{ Hilbert Space: $\mathcal{H}$ }
 
-    \begin{definition}{Absolute Convergence}{14cm}
+    \begin{definition}{Absolute Convergence}{16cm}
         If \{$u_m$\} is a sequence in Hilbert space $\mathcal{H}$, then
         $\sum_{m=1}^{\infty}$ $u_m$ {\color{lblue} converges absolutely}
         if $\sum_{m=1}^{\infty}$ $||u_m||$ converges
@@ -533,7 +533,7 @@
 
 
 
-    \begin{wtheorem}{Absolute convergence implies convergence}{14cm}
+    \begin{wtheorem}{Absolute convergence implies convergence}{16cm}
         If $\sum_{m=1}^{\infty}$ $u_m$ in $\mathcal{H}$ converges absolutely, then
         it converges
     \end{wtheorem}
@@ -561,7 +561,7 @@
 
 
 
-    \begin{wtheorem}{Pythagorean Theorem}{14cm}
+    \begin{wtheorem}{Pythagorean Theorem}{16cm}
         x,y $\in$ $\mathcal{H}$ are {\color{lblue} perpendicular}, x $\perp$ y,
         if $\langle x , y \rangle$ = 0
 
@@ -587,7 +587,7 @@
 
 
 
-    \begin{definition}{Bounded Linear Functional}{14cm}
+    \begin{definition}{Bounded Linear Functional}{16cm}
         A {\color{lblue} bounded linear functional}
         L: $\mathcal{H}$ $\rightarrow$ $\mathbb{R}$
         where for all v,w $\in$ $\mathcal{H}$ and $c_1,c_2$ $\in$ $\mathbb{R}$:
@@ -602,7 +602,7 @@
 
 
 
-    \begin{wtheorem}{Cauchy-Schwarz Inequality for $\mathcal{H}$}{14cm}
+    \begin{wtheorem}{Cauchy-Schwarz Inequality for $\mathcal{H}$}{16cm}
         For Hilbert space $(H, \langle \ \rangle)$ where v,w $\in$ $\mathcal{H}$:
 
         \hspace{0.5cm}
@@ -628,7 +628,7 @@
 
 
     \begin{wtheorem}{inf($L^{-1}(1)$) is unique
-    and perpendicular to $L^{-1}(0)$}{14cm}
+    and perpendicular to $L^{-1}(0)$}{16cm}
         For bounded linear functional L: $\mathcal{H}$ $\rightarrow$ $\mathbb{R}$
         not identically 0, let $\mathcal{V}$ = $L^{-1}(1)$.
         Then there is a unique x $\in$ $\mathcal{V}$ such that:
@@ -719,7 +719,8 @@
 
 
 
-    \begin{wtheorem}{The bounded linear functionals of $\mathcal{H}$ are unique}{14cm}
+    \begin{wtheorem}{The bounded linear functionals of $\mathcal{H}$
+    are unique}{16cm}
         For bounded linear functional L: $\mathcal{H}$ $\rightarrow$ $\mathbb{R}$,
         there is a unique x $\in$ $\mathcal{H}$ such that:
 
@@ -778,7 +779,7 @@
 
 \subsection{ Fourier Series }
 
-    \begin{definition}{Orthonormal Family}{14cm}
+    \begin{definition}{Orthonormal Family}{16cm}
         \{$u_n$\} $\in$ $\mathcal{H}$ are {\color{lblue} orthonormal}
         if $||u_n||$ = 1 and $\langle u_n , u_m \rangle$ = 0 for n $\not =$ m
     \end{definition}
@@ -788,7 +789,7 @@
 
 
     \begin{wtheorem}{Minimal Distance of w $\in$ $\mathcal{H}$
-    to orthonormal basis}{14cm}
+    to orthonormal basis}{16cm}
         If $u_0,...,n_N$ $\in$ $\mathcal{H}$ are orthonormal
         and w $\in$ $\mathcal{H}$, then the $c_n$ to minimize
 
@@ -838,7 +839,7 @@
 
 
 
-    \begin{definition}{Complete Orthonormal Family and Fourier Series}{14cm}
+    \begin{definition}{Complete Orthonormal Family and Fourier Series}{16cm}
         Orthonormal \{$u_n$\} $\in$ $\mathcal{H}$ is {\color{lblue} complete}
         if for every w $\in$ $\mathcal{H}$:
 
@@ -856,7 +857,7 @@
 
 
 
-    \begin{wtheorem}{Bessel's Inequality}{14cm}
+    \begin{wtheorem}{Bessel's Inequality}{16cm}
         For orthonormal \{$u_i$\} $\in$ $\mathcal{H}$
         where w $\in$ $\mathcal{H}$:
 
@@ -895,7 +896,7 @@
 
 
 
-    \begin{wtheorem}{Fourier Series Converge}{14cm}
+    \begin{wtheorem}{Fourier Series Converge}{16cm}
         For orthonormal \{$u_n$\} $\in$ $\mathcal{H}$ where w $\in$ $\mathcal{H}$,
         then $\sum_{i=0}^{\infty}$ $\langle w , u_i \rangle u_i$ converges.
 
@@ -933,7 +934,7 @@
 
 
 
-    \begin{wtheorem}{Parseval's Theorem}{14cm}
+    \begin{wtheorem}{Parseval's Theorem}{16cm}
         For orthonormal \{$u_n$\} $\in$ $\mathcal{H}$ where w $\in$ $\mathcal{H}$,
         then:
         
@@ -964,7 +965,35 @@
 
 
 
-    \begin{definition}{Classical Fourier Series}{14cm}
+    \begin{definition}{Classical Fourier Series}{16cm}
+        Since \{ $\frac{1}{\sqrt{2\pi}} \cos(nx)
+                    , \frac{1}{\sqrt{2\pi}} \sin(nx)$ \}$_{n=-\infty}^{\infty}$
+        is a complete orthonormal family in $L^2[-\pi,\pi]$, then
+        the Fourier series of f:
+
+        \hspace{0.5cm}
+        $\sum_{n=-\infty}^{\infty}$
+            $[\langle f , \frac{1}{\sqrt{2\pi}}\cos(nx) \rangle
+                \frac{1}{\sqrt{2\pi}}\cos(nx)
+                + \langle f , \frac{1}{\sqrt{2\pi}}\sin(nx) \rangle
+                    \frac{1}{\sqrt{2\pi}}\sin(nx)]$
+
+        \hspace{0.5cm}
+        = $\sum_{n=-\infty}^{\infty}$
+            $\frac{1}{2\pi} \langle f , \cos(nx) \rangle \cos(nx)$
+            + $\sum_{n=-\infty}^{\infty}$
+                $\frac{1}{2\pi} \langle f , \sin(nx) \rangle \sin(nx)$
+
+        \hspace{0.5cm}
+        = $\frac{1}{2\pi} \langle f , 1 \rangle 1$
+            + $\sum_{n=1}^{\infty}$
+                $\frac{1}{\pi} \langle f , \cos(nx) \rangle \cos(nx)$
+            + $\frac{1}{2\pi} \langle f ,  0 \rangle 0$
+            + $\sum_{n=1}^{\infty}$
+                $\frac{1}{\pi} \langle f , \sin(nx) \rangle \sin(nx)$
+
+        \vspace{0.3cm}
+
         For f $\in$ $L^2[-\pi,\pi]$, then the Fourier series of f:
 
         \hspace{0.5cm}

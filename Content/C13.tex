@@ -3,7 +3,7 @@
 
 \subsection{ Riemann-Stieltjes Integral }
 
-    \begin{definition}{Riemann Integral}{14cm}
+    \begin{definition}{Riemann Integral}{16cm}
         For [a,b], let a = $x_0 \leq x_1 \leq ... \leq x_n$ = b
         and $\Delta x_i$ = $x_i - x_{i-1}$.
 
@@ -25,8 +25,10 @@
 
         \vspace{0.2cm}
 
-        If $\underline{\int}_a^b f(x) dx$ = $\overline{\int}_a^b f(x) dx$, then
-        f is Riemann-integrable (f $\in$ $\mathscr{R}$) and $\int_a^b f(x) dx$.
+        If $\underline{\int}_a^b f(x) dx$
+        = $\overline{\int}_a^b f(x) dx$ = $\int_a^b f(x) dx$, then
+        f is {\color{lblue} Riemann-integrable}
+        (i.e. f $\in$ $\mathscr{R}$).
         
         \vspace{0.2cm}
 
@@ -44,7 +46,7 @@
 
 
 
-    \begin{definition}{Riemann-Stieltjes Integral}{14cm}
+    \begin{definition}{Riemann-Stieltjes Integral}{16cm}
         Let $\alpha$ be monotonically increasing on [a,b].
         
         Then for each partition P, let
@@ -68,8 +70,8 @@
 
     
 
-    \begin{definition}{Refinement}{14cm}
-        Partition Q is a refinement of P if P $\subset$ Q.
+    \begin{definition}{Refinement}{16cm}
+        Partition Q is a {\color{lblue} refinement} of P if P $\subset$ Q.
 
         For partitions $P_1, P_2$, then Q = $P_1 \cup P_2$ is the common refinement.
     \end{definition}
@@ -78,10 +80,11 @@
 
 
 
-    \begin{wtheorem}{Refinements monotonically increase L(P,f) \& decrease U(P,f)}{14cm}
+    \begin{wtheorem}{Refinements monotonically increase L(P,f)
+    \& decrease U(P,f)}{16cm}
         If Q is a refinement of P, then:
 
-        \hspace{1cm}
+        \hspace{0.5cm}
         L(P,f,$\alpha$) $\leq$ L(Q,f,$\alpha$)
         $\leq$ U(Q,f,$\alpha$) $\leq$ U(P,f,$\alpha$)
     \end{wtheorem}
@@ -167,7 +170,7 @@
 
 
     
-    \begin{wtheorem}{Lower Riemann Integral $\leq$ Upper Riemann Integral}{14cm}
+    \begin{wtheorem}{Lower Riemann Integral $\leq$ Upper Riemann Integral}{16cm}
         $\underline{\int}_a^b f d \alpha$ $\leq$ $\overline{\int}_a^b f d \alpha$        
     \end{wtheorem}
     
@@ -194,9 +197,11 @@
 
 
 
-    \begin{wtheorem}{Riemann-Integrability $\epsilon$ Definition}{14cm}
+    \begin{wtheorem}{Riemann-Integrability $\epsilon$ Definition}{16cm}
         f $\in$ $\mathscr{R}(\alpha)$ if and only if for every $\epsilon > 0$,
-        there exists a partition P such that
+        there exists a partition P such that:
+
+        \hspace{0.5cm}
         U($P,f,\alpha$) - L($P,f,\alpha$) $<$ $\epsilon$        
     \end{wtheorem}
 
@@ -246,7 +251,7 @@
         U($Q,f,\alpha$) - L($Q,f,\alpha$) $<$ $\epsilon$ for 
         every refinement of P, Q
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 By {\color{red} theorem 13.1.6}, for $\epsilon > 0$, there is a P
                 such that:
                 
@@ -268,7 +273,7 @@
             \hspace{1cm}
             $\sum_{i=1}^n$ $|f(s_i) - f(t_i)| \Delta \alpha_i$ $<$ $\epsilon$
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 By {\color{red} theorem 13.1.6}, for $\epsilon > 0$,
                 there is a P such that:
 
@@ -299,7 +304,7 @@
             $| \sum_{i=1}^n f(t_i) \Delta \alpha_i - \int_a^b f d \alpha |$
             $<$ $\epsilon$
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 Since
                 sup L($P,f,\alpha$) = $\underline{\int}_a^b f d \alpha$
                 = $\int_a^b f d \alpha$
@@ -333,7 +338,7 @@
 
 \subsection{ Riemann-Integrable Functions }
 
-    \begin{wtheorem}{Continuous functions are Riemann-Integrable}{14cm}
+    \begin{wtheorem}{Continuous functions are Riemann-Integrable}{16cm}
         If f is continuous on [a,b], then f $\in$ $\mathscr{R}(\alpha)$
     \end{wtheorem}
 
@@ -359,7 +364,7 @@
 
 
 
-    \begin{wtheorem}{Monotonic functions are Riemann-Integrable}{14cm}
+    \begin{wtheorem}{Monotonic functions are Riemann-Integrable}{16cm}
         If f is monotonic on [a,b] and $\alpha$ is continuous on [a,b], then
         f $\in$ $\mathscr{R}(\alpha)$        
     \end{wtheorem}
@@ -394,7 +399,7 @@
 
 
     \begin{wtheorem}{Bounded functions with finite discontinuities
-    are Riemann-Integrable}{14cm}
+    are Riemann-Integrable}{16cm}
         If f is bounded on [a,b] with finitely many discontinuities
         and $\alpha$ is continuous at every discontinuity, then
         f $\in$ $\mathscr{R}(\alpha)$        
@@ -445,7 +450,7 @@
 
 
     \begin{wtheorem}
-    {Composite of continuous-integrable functions are Riemann-Integrable}{14cm}
+    {Composite of continuous-integrable functions are Riemann-Integrable}{16cm}
         If f $\in$ $\mathscr{R}(\alpha)$ on [a,b] where f $\in$ [m,M] and
         $\phi$ is continuous on [m,M] such that h(x) = $\phi$(f(x)), then
         h $\in$ $\mathscr{R}(\alpha)$        
@@ -512,14 +517,14 @@
         \item If $f_1,f_2$ $\in$ $\mathscr{R}(\alpha)$ on [a,b] and constant c,
         then $f_1 + f_2,cf_1$ $\in$ $\mathscr{R}(\alpha)$ and
 
-        \hspace{0.5cm}
-        $\int_a^b$ $f_1 + f_2$ $d\alpha$
-        = $\int_a^b$ $f_1$ $d\alpha$ + $\int_a^b$ $f_2$ $d\alpha$
+            \hspace{0.5cm}
+            $\int_a^b$ $f_1 + f_2$ $d\alpha$
+            = $\int_a^b$ $f_1$ $d\alpha$ + $\int_a^b$ $f_2$ $d\alpha$
 
-        \hspace{0.5cm}
-        $\int_a^b$ $cf_1$ $d\alpha$ = $c \int_a^b$ $f_1$ $d\alpha$
+            \hspace{0.5cm}
+            $\int_a^b$ $cf_1$ $d\alpha$ = $c \int_a^b$ $f_1$ $d\alpha$
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 Since $f_1,f_2$ $\in$ $\mathscr{R}(\alpha)$, then there are
                 partitions $P_1,P_2$ such that for $\epsilon > 0$:
 
@@ -574,7 +579,7 @@
     \item If $f_1,f_2$ $\in$ $\mathscr{R}(\alpha)$ and $f_1(x) \leq f_2(x)$
     on [a,b], then $\int_a^b$ $f_1$ $d\alpha$ $\leq$ $\int_a^b$ $f_2$ $d\alpha$
 
-        \begin{proof}[14cm]
+        \begin{proof}[15.5cm]
             Since $f_1,f_2$ $\in$ $\mathscr{R}(\alpha)$, then by part a,
             0 $\leq$ $\int_a^b f_2-f_2 d\alpha$
             = $\int_a^b f_2 d\alpha$ - $\int_a^b f_1 d\alpha$.
@@ -585,11 +590,11 @@
     \item If $f$ $\in$ $\mathscr{R}(\alpha)$ on [a,b] and c $\in$ (a,b),
     then f $\in$ $\mathscr{R}(\alpha)$ on [a,c],[c,b] and
         
-    \hspace{0.5cm}
-    $\int_a^c$ $f$ $d\alpha$ + $\int_c^b$ $f$ $d\alpha$
-    = $\int_a^b$ $f$ $d\alpha$
+        \hspace{0.5cm}
+        $\int_a^c$ $f$ $d\alpha$ + $\int_c^b$ $f$ $d\alpha$
+        = $\int_a^b$ $f$ $d\alpha$
 
-        \begin{proof}[14cm]
+        \begin{proof}[15.5cm]
             Since $f \in \mathscr{R}(\alpha)$ on [a,b], there is a
             partition P of [a,b] such that for $\epsilon > 0$:
 
@@ -660,15 +665,15 @@
     constant c, then $f$ $\in$ $\mathscr{R}(\alpha_1+\alpha_2)$,
     $f$ $\in$ $\mathscr{R}(c\alpha_1)$ and
 
-    \hspace{0.5cm}
-    $\int_a^b$ $f$ $d(\alpha_1 + \alpha_2)$
-    = $\int_a^b$ $f$ $d\alpha_1$ + $\int_a^b$ $f$ $d\alpha_2$
+        \hspace{0.5cm}
+        $\int_a^b$ $f$ $d(\alpha_1 + \alpha_2)$
+        = $\int_a^b$ $f$ $d\alpha_1$ + $\int_a^b$ $f$ $d\alpha_2$
 
-    \hspace{0.5cm}
-    $\int_a^b$ $f$ $d(c\alpha_1)$
-    = $c \int_a^b$ $f$ $d\alpha_1$
+        \hspace{0.5cm}
+        $\int_a^b$ $f$ $d(c\alpha_1)$
+        = $c \int_a^b$ $f$ $d\alpha_1$
 
-        \begin{proof}[14cm]
+        \begin{proof}[15.5cm]
             Since $f \in \mathscr{R}(\alpha_1),\mathscr{R}(\alpha_2)$,
             then there are partitions $P_1,P_2$ where for $\epsilon > 0$:
 
@@ -737,13 +742,11 @@
         \item If f,g $\in$ $\mathscr{R}(\alpha)$ on [a,b], then
         fg $\in$ $\mathscr{R}(\alpha)$
     
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 Since f,g $\in$ $\mathscr{R}(\alpha)$, then
                 f+g,f-g $\in$ $\mathscr{R}(\alpha)$.
-
                 By {\color{red} theorem 13.2.4}, let
                 $\phi(t)$ = $t^2$ which is continuous so
-
                 $\phi(f+g)$ = $(f+g)^2$,$\phi(f-g)$ = $(f-g)^2$ $\in$
                 $\mathscr{R}(\alpha)$.
 
@@ -754,7 +757,7 @@
         $|f|$ $\in$ $\mathscr{R}(\alpha)$ where
         $|\int_a^b f d\alpha|$ $\leq$ $\int_a^b |f| d\alpha$
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 By {\color{red} theorem 13.2.4}, let
                 $\phi(t)$ = $|t|$ which is continuous so $|f|$ $\in$
                 $\mathscr{R}(\alpha)$.
@@ -777,7 +780,7 @@
 
 \subsection{ Change of Variable }
 
-    \begin{definition}{Unit Step Function}{14cm}
+    \begin{definition}{Unit Step Function}{16cm}
         I(x) =
         $
         \begin{cases}
@@ -791,7 +794,7 @@
 
 
 
-    \begin{wtheorem}{Integrating f over I centered at s}{14cm}
+    \begin{wtheorem}{Integrating f over I centered at s}{16cm}
         If f is bounded on [a,b] and continuous at s $\in$ (a,b) where
         $\alpha(x)$ = I(x-s), then:
 
@@ -843,9 +846,9 @@
 
 
 
-    \begin{wtheorem}{Integrating f over a step function}{14cm}
-        If $c_n \geq 0$ where $\sum c_n$ converges, \{$s_n$\} is a
-        sequence of distinct points in (a,b), and
+    \begin{wtheorem}{Integrating f over a step function}{16cm}
+        If $\sum c_n$ converges where $c_n \geq 0$,
+        distinct points \{$s_n$\} $\in$ (a,b), and
         $\alpha(x)$ = $\sum c_n I(x-s_n)$. Then for continuous f on [a,b]:
 
         \hspace{0.5cm}
@@ -908,7 +911,8 @@
 
 
 
-    \begin{wtheorem}{$\int_a^b$ $f$ d$\alpha$ = $\int_a^b$ $f(x) \alpha'(x)$ dx}{14cm}
+    \begin{wtheorem}{$\int_a^b$ $f$ d$\alpha$
+    = $\int_a^b$ $f(x) \alpha'(x)$ dx}{16cm}
         If $\alpha'$ $\in$ $\mathscr{R}$ on [a,b] and
         f is real, bounded on [a,b], then f $\in$ $\mathscr{R}(\alpha)$
         if and only if f$\alpha'$ $\in$ $\mathscr{R}$. Then:
@@ -999,7 +1003,7 @@
 
 
     \begin{wtheorem}{Integral Change of Variable:
-    $\int_a^b$ $f(x)$ dx = $\int_A^B$ $f(\phi(y)) \phi'(y)$ dy}{14cm}
+    $\int_a^b$ $f(x)$ dx = $\int_A^B$ $f(\phi(y)) \phi'(y)$ dy}{16cm}
         Let strictly increasing continuous $\phi$:
         [A,B] $\rightarrow$ [a,b] and $f \in \mathscr{R}(\alpha)$ on [a,b].
 
@@ -1074,7 +1078,7 @@
 
 \subsection{ Fundamental Theorem of Calculus }
 
-    \begin{wtheorem}{If F(x) = $\int f(x) dx$, then F'(x) = f(x)}{14cm}
+    \begin{wtheorem}{If F(x) = $\int f(x) dx$, then F'(x) = f(x)}{16cm}
         Let $f \in \mathscr{R}$ on [a,b]. For x $\in$ [a,b], let
         F(x) = $\int_a^x$ f(t) dt.
 
@@ -1142,7 +1146,7 @@
 
 
     \begin{wtheorem}{Fundamental Theorem of Calculus:
-    $\int_a^b$ f(x) dx = F(b) - F(a)}{14cm}
+    $\int_a^b$ f(x) dx = F(b) - F(a)}{16cm}
         If $f \in \mathscr{R}$ on [a,b] and there is a differentiable F
         on [a,b] such that F' = f, then
 
@@ -1203,7 +1207,7 @@
 
 
 
-    \begin{wtheorem}{Integration by Parts}{14cm}
+    \begin{wtheorem}{Integration by Parts}{16cm}
         Suppose F,G are differentiable on [a,b] and
         F' = f, G' = g $\in$ $\mathscr{R}$. Then:
 
@@ -1251,7 +1255,7 @@
 
 \subsection[ Vector-Valued Functions ]{ Integration of Vector-Valued Functions }
 
-    \begin{definition}{Integration of Vector-Valued Functions}{14cm}
+    \begin{definition}{Integration of Vector-Valued Functions}{16cm}
         Let real $f_1,...,f_k$ be defined on [a,b] where f = ($f_1,...,f_k$).
 
         Then, let $f \in \mathscr{R}(\alpha)$ if each $f_i \in \mathscr{R}(\alpha)$
@@ -1323,7 +1327,7 @@
 
 
 
-    \begin{wtheorem}{$|\int f d\alpha|$ $\leq$ $\int |f| d\alpha$}{14cm}
+    \begin{wtheorem}{$|\int f d\alpha|$ $\leq$ $\int |f| d\alpha$}{16cm}
         If f: [a,b] $\rightarrow$ $\mathbb{R}^k$ where $f \in \mathscr{R}(\alpha)$,
         then $|f| \in \mathscr{R}(\alpha)$ where:
 
@@ -1373,7 +1377,7 @@
 
 \subsection{ Line Integrals }
 
-    \begin{definition}{Rectifiable Curves}{14cm}
+    \begin{definition}{Rectifiable Curves}{16cm}
         A curve in $\mathbb{R}^k$ is a continuous
         $\gamma$: [a,b] $\rightarrow$ $\mathbb{R}^k$.
 
@@ -1396,14 +1400,15 @@
         \hspace{0.5cm}
         $\Lambda(\gamma)$ = sup($\Lambda(P,\gamma)$)
 
-        If $\Lambda(\gamma) < \infty$, then $\gamma$ is rectifiable.        
+        If $\Lambda(\gamma) < \infty$, then
+        $\gamma$ is {\color{lblue} rectifiable}.        
     \end{definition}
 
     \vspace{0.5cm}
 
 
 
-    \begin{wtheorem}{Line Integral of $\gamma$ = $\int_a^b$ $|\gamma'(x)|$ dx}{14cm}
+    \begin{wtheorem}{Line Integral of $\gamma$ = $\int_a^b$ $|\gamma'(x)|$ dx}{16cm}
         If $\gamma'$ is continuous on [a,b], then $\gamma$ is rectifiable where
 
         \hspace{0.5cm}
@@ -1486,14 +1491,4 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+    

@@ -4,16 +4,19 @@
 
 \subsection{ Convergent Sequences }
 
-    \begin{definition}{Convergent Sequence}{14cm}
-        A sequence \{$x_n$\} in metric space X converge if
+    \begin{definition}{Convergent Sequence}{16cm}
+        A sequence \{$x_n$\} in metric space X {\color{lblue} converges} if
         there is a x $\in$ X such that:
 
         \hspace{1cm}
         For every $\epsilon$ $>$ 0, there is a N $\in$ $\mathbb{Z}$ such that
         for all n $\geq$ N, d($x_n$,x) $<$ $\epsilon$
         
-        Then, \{$x_n$\} converges to x: \hspace{1cm}
+        Then, \{$x_n$\} converges to x:
+        \hspace{1cm}
         $\lim_{n \rightarrow \infty}$ $x_n$ = x
+        \hspace{1cm}
+        \{$x_n$\} $\rightarrow$ x
 
         If \{$x_n$\} does not converge, then it diverges.
     \end{definition}
@@ -27,15 +30,15 @@
 
 
 
-    \begin{example}[15cm]
-        \begin{enumerate}[label=(\alph*), itemsep=0.4em]
+    \begin{example}[16cm]
+        \begin{enumerate}[label=(\alph*), leftmargin=0.5cm, itemsep=0.1cm]
             \item Let $x_n$ = $\frac{1}{n}$ in $\mathbb{R}^2$.
                 Then, $\lim_{n \rightarrow \infty}$ $x_n$ = 0
 
                 { \color{magenta} \underline{Proof} }
     
                 \fbox{
-                \begin{minipage}{14.2cm}
+                \begin{minipage}{15cm}
                     For $\epsilon$ $>$ 0, there is a $\frac{1}{N}$ $<$ $\epsilon$.
                     Then:
     
@@ -50,7 +53,7 @@
                 { \color{magenta} \underline{Proof} }
     
                 \fbox{
-                \begin{minipage}{14.2cm}
+                \begin{minipage}{15cm}
                     $\lim_{n \rightarrow \infty}$ $x_n$
                     = $\lim_{n \rightarrow \infty}$ $(-1)^n$
                     + $\lim_{n \rightarrow \infty}$ $\frac{1}{n}$
@@ -68,15 +71,14 @@
 
     \begin{ltheorem}{A convergent sequence is unique and bounded}{1.5cm}
         \item \{$p_n$\} converges to p $\in$ X if and only if
-            every N$_r(p)$ contains $p_n$ for all, but finitely many n.
+            every N$_r(p)$ contains all, but finitely many $p_n$
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 Suppose $p_n$ $\rightarrow$ p.
                 Then for N$_{\epsilon}(p)$, any q $\in$ X such that
                 d(q,p) $<$ $\epsilon$ is q $\in$ N$_{\epsilon}(p)$.
                 Since $p_n$ $\rightarrow$ p, there is a N such that for
                 n $\geq$ N, d($p_n$,p) $<$ $\epsilon$.
-
                 Thus, for n $\geq$ N, $p_n$ $\in$ N$_{\epsilon}(p)$.
 
                 Suppose every N$_r(p)$ contains $p_n$ for all, but finitely
@@ -86,13 +88,12 @@
                 all q $\in$ X such that d(p,q) $<$ $\epsilon$.
                 Thus, there exists a N such that $p_n$ $\in$ N$_{\epsilon}(p)$
                 if n $\geq$ N.
-
                 Thus, d($p_n$,p) $<$ $\epsilon$ so $p_n$ $\rightarrow$ p.
             \end{proof}
 
-        \item If p,p' $\in$ X and \{$p_n$\} converges to p and p', then p = p'.
+        \item If p,p' $\in$ X and \{$p_n$\} converges to p and p', then p = p'
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 For $\epsilon$ $>$ 0, there exists N,N' such that:
 
                 \hspace{1cm}
@@ -108,9 +109,9 @@
 
             \newpage
 
-        \item If \{$p_n$\} converges, then \{$p_n$\} is bounded.
+        \item If \{$p_n$\} converges, then \{$p_n$\} is bounded
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 If \{$p_n$\} $\rightarrow$ p,
                 there is a N such that for n $>$ N, d($p_n$,p) $<$ 1.
 
@@ -119,9 +120,9 @@
             \end{proof}
 
         \item If E $\subset$ X and p $\in$ E', there is a \{$p_n$\}
-            in E such that p = $\lim_{n \rightarrow \infty}$ $p_n$.
+            in E such that p = $\lim_{n \rightarrow \infty}$ $p_n$
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 Since p $\in$ E', then for each n $\in$ $\mathbb{Z}_+$,
                 there is a $p_n$ $\in$ E such that d($p_n$,p) $<$ $\frac{1}{n}$.
                 For $\epsilon$ $>$ 0, there is a $\frac{1}{N}$ $<$ $\epsilon$
@@ -136,7 +137,7 @@
 
 
 
-    \begin{wtheorem}{Arithmetic Operations for sequences}{14cm}
+    \begin{wtheorem}{Arithmetic Operations for sequences}{16cm}
         Suppose \{$s_n$\},\{$t_n$\} $\in$ $\mathbb{C}$ where
         $\lim_{n \rightarrow \infty}$ $s_n$ = s and
         $\lim_{n \rightarrow \infty}$ $t_n$ = t.
@@ -145,7 +146,7 @@
 	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
         \item $\lim_{n \rightarrow \infty}$ $s_n + t_n$ = s + t
         
-            \begin{proof}[13.5cm]
+            \begin{proof}[15cm]
                 For $\epsilon$ $>$ 0, there exists $N_1$, $N_2$ such that
 
                 \hspace{0.5cm}
@@ -162,7 +163,7 @@
         \item $\lim_{n \rightarrow \infty}$ $cs_n$ = cs and 
             $\lim_{n \rightarrow \infty}$ $c + s_n$ = c + s
 
-            \begin{proof}[13.5cm]
+            \begin{proof}[15cm]
                 For $\epsilon$ $>$ 0, there exists a N such that
 
                 \hspace{0.5cm}
@@ -176,7 +177,7 @@
         
         \item $\lim_{n \rightarrow \infty}$ $s_n t_n$ = st
         
-            \begin{proof}[13.5cm]
+            \begin{proof}[15cm]
                 Note $s_n t_n$ - st
                 = ($s_n - s$)($t_n - t$) + t($s_n$ - s) + s($t_n$ - t).
 
@@ -205,7 +206,7 @@
         \item $\lim_{n \rightarrow \infty}$ $\frac{1}{s_n}$ = $\frac{1}{s}$
             where $s_n, s$ $\not =$ 0
 
-            \begin{proof}[13.5cm]
+            \begin{proof}[15cm]
                 Choose m such that $|s_n - s|$ $<$ $\frac{1}{2} |s|$ if n $\geq$ m
                 so $|s_n|$ $>$ $\frac{1}{2} |s|$ for n $\geq$ m.
 
@@ -231,7 +232,7 @@
             if and only if $\lim_{n \rightarrow \infty}$ $\alpha_{n_i}$ = $\alpha_i$
             for i $\in$ [1,k].
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 Suppose \{$x_n$\} converges to x = ($\alpha_1$, ... , $\alpha_k$).
                 
                 Since for any i $\in$ [1,k]:
@@ -272,7 +273,7 @@
             \hspace{0.5cm}
             $\lim_{n \rightarrow \infty}$ $\beta_n x_n$ = $\beta$x
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 By part a, then
                 $\lim_{n \rightarrow \infty}$ $x_{n_i} + y_{n_i}$
                 = $x_i + y_i$ so
@@ -298,14 +299,14 @@
 
 \subsection{ Subsequences }
 
-    \begin{definition}{Subsequence}{14cm}
+    \begin{definition}{Subsequence}{16cm}
         For sequence \{$p_n$\}, let \{$n_k$\} $\in$ $\mathbb{Z}_+$
         where $n_k$ $<$ $n_{k+1}$.
 
-        Then \{$p_{n_k}$\} is a subsequence of \{$p_n$\}.
+        Then \{$p_{n_k}$\} is a {\color{lblue} subsequence} of \{$p_n$\}.
         
         If \{$p_{n_k}$\} converges, then its limit is called
-        a subsequential limit.
+        a {\color{lblue} subsequential limit}.
     \end{definition}
     
     \vspace{0.5cm}
@@ -313,7 +314,7 @@
 
 
     \begin{wtheorem}{\{$p_n$\} $\rightarrow$ p $\rightleftharpoons$
-    Every \{$p_{n_k}$\} $\rightarrow$ p}{14cm}
+    Every \{$p_{n_k}$\} $\rightarrow$ p}{16cm}
         \{$p_n$\} converges to p if and only if every subsequence
         converges to p
     \end{wtheorem}
@@ -352,7 +353,7 @@
         \item If \{$p_n$\} is a sequence in a compact metric space X,
             then some subsequence converges to p $\in$ X.
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 Let E be the range of \{$p_n$\}.
 
                 If E is finite, there is a p $\in$ E and sequence
@@ -368,9 +369,9 @@
             \end{proof}
 
         \item Every bounded sequence in $\mathbb{R}^k$ contains
-            a convergent subsequence.
+            a convergent subsequence
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 Let E be a bounded sequence in $\mathbb{R}^k$.
                 Since E $\cup$ E' is bounded and closed, then by
                 {\color{red} theorem 6.3.13}, E $\cup$ E' is compact.
@@ -383,7 +384,7 @@
 
 
 
-    \begin{wtheorem}{The set of subsequential limits is closed}{14cm}
+    \begin{wtheorem}{The set of subsequential limits is closed}{16cm}
         The subsequential limits of \{$p_n$\} in metric space X form
         a closed subset of X
     \end{wtheorem}
@@ -421,8 +422,8 @@
 
 \subsection{ Cauchy Sequences }
 
-    \begin{definition}{Metric Spaces}{14cm}
-        Sequence \{$p_n$\} $\in$ X is a Cauchy sequence if:
+    \begin{definition}{Metric Spaces}{16cm}
+        Sequence \{$p_n$\} $\in$ X is a {\color{lblue} Cauchy sequence} if:
 
         \hspace{0.5cm}
         For every $\epsilon$ $>$ 0, there is a N $\in$ $\mathbb{Z}$ such that
@@ -430,8 +431,8 @@
 
         Let nonempty E $\subset$ X and S $\subset$ $\mathbb{R}$ of 
         d(p,q) where p,q $\in$ E.
-        
         Let sup(S) = diam(E).
+
         If \{$p_n$\} $\in$ X, and $p_N, p_{N+1}, ... $ $\in$ $E_N$, then
         \{$p_n$\} is a Cauchy sequence if and only if
         $\lim_{N \rightarrow \infty}$ diam($E_N$) = 0.
@@ -444,7 +445,7 @@
     \begin{ltheorem}{Cauchy sequences and its closure have the same diam}{1.5cm}
         \item If $\overline{E}$ $\subset$ X, then diam($\overline{E}$) = diam(E).
         
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 Since E $\subset$ $\overline{E}$, then
                 diam(E) $\leq$ diam($\overline{E}$).
 
@@ -462,12 +463,11 @@
                 so diam($\overline{E}$) = diam(E).                
             \end{proof}
 
-        \item If $K_n$ is a sequence of compact sets of X such that
-            $K_{n+1}$ $\subset$ $K_n$ and
-            $\lim_{n \rightarrow \infty}$ diam($K_N$) = 0,
+        \item For compact sets $K_n$ $\subset$ K where $K_{n+1}$ $\subset$ $K_n$
+            and $\lim_{n \rightarrow \infty}$ diam($K_N$) = 0,
             then $\cap$ $K_n$ consist of only one point.
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 Let K = $\cap$ $K_n$.
                 Since $K_n$ is a sequence of compact sets, then
                 by {\color{orange} corollary 6.3.8}, K is nonempty.
@@ -483,9 +483,9 @@
 
 
     \begin{ltheorem}{Convergent sequences are cauchy sequences}{1.5cm}
-        \item Every convergent sequence is a Cauchy sequence.
+        \item Every convergent sequence is a Cauchy sequence
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 If $p_n$ $\rightarrow$ p and $\epsilon$ $>$ 0, there is a
                 N such that for all n $\geq$ N, d(p,$p_n$) $<$ $\frac{\epsilon}{2}$.
                 Thus, for m,n $\geq$ N:
@@ -497,9 +497,9 @@
             \end{proof}
 
         \item If \{$p_n$\} is a Cauchy sequence in compact metric space X,
-            then \{$p_n$\} converges to some p $\in$ X.
+            then \{$p_n$\} converges to some p $\in$ X
 
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 Let \{$p_n$\} be a Cauchy sequence in compact space X.
 
 				Let	$p_N, p_{N+1}, ... $ $\in$ $E_N$.
@@ -524,9 +524,9 @@
                 \{$p_n$\} $\rightarrow$ p.
             \end{proof}
 
-        \item In $\mathbb{R}^k$, every Cauchy sequence converges.
+        \item In $\mathbb{R}^k$, every Cauchy sequence converges
         
-            \begin{proof}[14cm]
+            \begin{proof}[15.5cm]
                 Let \{$x_n$\} be a Cauchy sequence in $\mathbb{R}^k$.
 				Let $x_N, x_{N+1}, ... $ $\in$ $E_N$.
 
@@ -546,8 +546,9 @@
 
 
     
-    \begin{definition}{Complete}{14cm}
-        A metric space where every Cauchy sequence converges is complete.
+    \begin{definition}{Complete}{16cm}
+        A metric space where every Cauchy sequence converges
+        is {\color{lblue} complete}.
 
 		Thus, by {\color{red} theorem 8.3.3}, all compact and Euclidean
 		spaces are complete.
@@ -557,21 +558,21 @@
 
 
 
-    \begin{definition}{Monotonic Sequences}{14cm}
+    \begin{definition}{Monotonic Sequences}{16cm}
         A sequence \{$s_n$\} of real numbers is:
     \end{definition}
 
 	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
-		\item monotonically increasing if $s_n$ $\leq$ $s_{n+1}$
+		\item {\color{lblue} monotonically increasing} if $s_n$ $\leq$ $s_{n+1}$
 		
-		\item monotonically decreasing if $s_n$ $\geq$ $s_{n+1}$ \\
+		\item {\color{lblue} monotonically decreasing} if $s_n$ $\geq$ $s_{n+1}$
 	\end{enumerate}
 
     \vspace{0.5cm}
 
 
 
-    \begin{wtheorem}{Monotonic sequences converge if bounded}{14cm}
+    \begin{wtheorem}{Monotonic sequences converge if bounded}{16cm}
         Suppose \{$s_n$\} is monotonic. Then \{$s_n$\} converges if
 		and only if it is bounded
     \end{wtheorem}

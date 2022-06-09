@@ -3,7 +3,7 @@
 
 \subsection{ Closure }
 
-	\begin{definition}{Closure}{14cm}
+	\begin{definition}{Closure}{16cm}
 		Let E $\subset$ metric space X and E' be the set of all
         limit points of E in X.
 
@@ -16,7 +16,7 @@
 	\begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
         \item $\overline{E}$ is closed
         
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				Suppose x $\in$ X, but x $\not \in$ $\overline{E}$.
 				Thus, x $\in$ $\overline{E}^c$.
 
@@ -30,7 +30,7 @@
 
         \item E = $\overline{E}$ if and only if E is closed
         
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				If E = $\overline{E}$, then by part (a), E is closed.
 
 				If E is closed, then E' $\subset$ E so
@@ -40,7 +40,7 @@
         \item $\overline{E}$ $\subset$ F for every closed F $\subset$ X
         such that E $\subset$ F
 
-			\begin{proof}[13.5cm]
+			\begin{proof}[15cm]
 				If closed set F, then F' $\subset$ F. Since E $\subset$ F, then
 				E' $\subset$ F' $\subset$ F so $\overline{E}$ $\subset$ F.			
 			\end{proof}
@@ -50,7 +50,7 @@
 
 
 
-	\begin{wtheorem}{sup(E) $\in$ $\overline{E}$}{14cm}
+	\begin{wtheorem}{sup(E) $\in$ $\overline{E}$}{16cm}
 		Let non-empty set of real numbers, E, be bounded above.
         Let y = sup(E).
 		
@@ -84,7 +84,7 @@
 
 \subsection{ Open Relative }
 
-	\begin{definition}{Open Relative}{14cm}
+	\begin{definition}{Open Relative}{16cm}
 		Suppose E $\subset$ Y $\subset$ metric space X.
 
 		Then E is open relative to Y if for each p $\in$ E:
@@ -137,10 +137,9 @@
 
 \subsection{ Compact Sets }
 
-	\begin{definition}{Open Cover}{14cm}
-		An open cover of set E $\subset$ X is a collection of open $G_1, G_2, ...$
-		$\subset$ X
-		
+	\begin{definition}{Open Cover}{16cm}
+		An {\color{lblue} open cover} of set E $\subset$ X is a collection of
+		open $G_1, G_2, ...$ $\subset$ X
 		such that E $\subset$ $\cup_{}^{}$ $G_i$.
 	\end{definition}
 	
@@ -148,8 +147,8 @@
 
 
 
-	\begin{definition}{Compact}{14cm}
-		K $\subset$ X is compact if every open cover
+	\begin{definition}{Compact}{16cm}
+		K $\subset$ X is {\color{lblue} compact} if every open cover
 		of K contains a finite subcover.
 
 		\qquad If $G_1, G_2, ...$ is an open cover of K, then
@@ -160,7 +159,7 @@
 
 
 
-	\begin{wtheorem}{A compact set is compact in every metric space}{14cm}
+	\begin{wtheorem}{A compact set is compact in every metric space}{16cm}
 		Suppose K $\subset$ Y $\subset$ X.
 
 		Then K is compact relative to X if and only if K is
@@ -208,7 +207,7 @@
 
 
 
-	\begin{wtheorem}{A compact set is closed}{14cm}
+	\begin{wtheorem}{A compact set is closed}{16cm}
 		Compact subsets of metric spaces are closed
 	\end{wtheorem}
 	
@@ -239,7 +238,7 @@
 
 
 
-	\begin{wtheorem}{If closed E $\subset$ compact set K, E is compact}{14cm}
+	\begin{wtheorem}{If closed E $\subset$ compact set K, E is compact}{16cm}
 		Closed subsets of compact sets are compact
 	\end{wtheorem}
 	
@@ -265,7 +264,7 @@
 
 
 
-	 \begin{corollary}{Closed F $\cap$ compact K = compact}{14cm}
+	 \begin{corollary}{Closed F $\cap$ compact K = compact}{16cm}
 		If F is closed and K is compact, then F $\cap_{}^{}$ K is compact 
 	 \end{corollary}
 	 
@@ -283,9 +282,11 @@
 
 	
 	\begin{wtheorem}{Nonempty $\cap_{i=1}^n$ $K_i$ $\rightarrow$
-	nonempty $\cap$ $K_i$}{14cm}
-		For compact sets $K_1, K_2, ...$ $\subset$ X where any intersection
-		of finite $K_i$ is nonempty, then $\cap$ $K_i$ is nonempty		
+	nonempty $\cap$ $K_i$}{16cm}
+		For compact sets $K_1, K_2, ...$ $\subset$ X where any finite intersection
+		of $K_i$ is nonempty, then
+		
+		$\cap$ $K_i$ is nonempty		
 	\end{wtheorem}
 	
 	\begin{proof}
@@ -310,9 +311,9 @@
 
 
 	\begin{corollary}{Nonempty $K_i$ where $K_{i+1}$ $\subset$ $K_i$
-	$\rightarrow$ nonempty $\cap$ $K_i$}{14cm}
-		If $K_1, K_2, ...$ is a sequence of nonempty compact sets
-		such that $K_{i+1}$ $\subset$ $K_i$, then $\cap$ $K_i$ is nonempty 
+	$\rightarrow$ nonempty $\cap$ $K_i$}{16cm}
+		For nonempty compact sets $K_1, K_2, ...$ where $K_{i+1}$ $\subset$ $K_i$,
+		then $\cap$ $K_i$ is nonempty 
 	\end{corollary}
 	
 	\begin{proof}
@@ -328,10 +329,9 @@
 
 
 	\begin{wtheorem}{Nonempty intervals $I_n$ where
-	$I_{n+1}$ $\subset$ $I_n$ $\rightarrow$ nonempty $\cap$ $I_n$}{14cm}
-		If $I_1, I_2, ...$ is a sequence of intervals in $\mathbb{R}^1$
-		such that $I_{n+1}$ $\subset$ $I_n$,
-		
+	$I_{n+1}$ $\subset$ $I_n$ $\rightarrow$ nonempty $\cap$ $I_n$}{16cm}
+		For intervals $I_1, I_2, ...$ $\in$ $\mathbb{R}^1$
+		where $I_{n+1}$ $\subset$ $I_n$,
 		then $\cap$ $I_n$ is nonempty.
 	\end{wtheorem}
 	
@@ -349,7 +349,7 @@
 
 
 	\begin{wtheorem}{p $\in$ E' exists if
-	infinite E $\subset$ compact K}{14cm}
+	infinite E $\subset$ compact K}{16cm}
 		If E is an infinite subset of compact set K, then E has a
 		limit point in K
 	\end{wtheorem}
@@ -366,7 +366,7 @@
 
 
 	 
-	\begin{definition}{K-cells}{14cm}
+	\begin{definition}{K-cells}{16cm}
 		The set of all x = ($x_1, ... , x_k$) $\in$ $\mathbb{R}^k$
 		where $x_i$ $\in$ [$a_i,b_i$] for fixed $a_i,b_i$ $\in$ $\mathbb{R}$ 
 	\end{definition}
@@ -375,7 +375,7 @@
 
 
 
-	\begin{wtheorem}{K-cells are compact}{14cm}
+	\begin{wtheorem}{K-cells are compact}{16cm}
 		Every k-cell is compact
 	\end{wtheorem}
 	
@@ -407,7 +407,7 @@
 
 
 
-	\begin{wtheorem}{Heine-Borel Theorem}{14cm}
+	\begin{wtheorem}{Heine-Borel Theorem}{16cm}
 		If a set E $\subset$ $\mathbb{R}^k$ has one of the three properties,
 		then it has the other two:
 	\end{wtheorem}
@@ -470,7 +470,7 @@
 
 
 
-	\begin{wtheorem}{Weierstrass Theorem}{14cm}
+	\begin{wtheorem}{Weierstrass Theorem}{16cm}
 		Every bounded infinite set E $\subset$ $\mathbb{R}^k$ has
 		a limit point in $\mathbb{R}^k$.
 	\end{wtheorem}

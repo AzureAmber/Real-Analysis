@@ -5,7 +5,7 @@
 
 \subsection[ Convergence ]{ Pointwise Convergence of Functions }
 
-    \begin{definition}{Sequences and Series of Functions}{14cm}
+    \begin{definition}{Sequences and Series of Functions}{16cm}
         Suppose \{$f_n$\} is a sequence of functions defined on set E.
 
         If \{$f_n(x)$\} converges for any x $\in$ E, then:
@@ -35,17 +35,17 @@
 
 \subsection[ Uniform Convergence ]{ Uniform Convergence of Functions }
 
-    \begin{definition}{Uniform Convergence}{14cm}
-        \{$f_n$\} converges uniformly on E to a function f if for all x $\in$ E:
+    \begin{definition}{Uniform Convergence}{16cm}
+        \{$f_n$\} {\color{lblue} converges uniformly} on E to a function f
+        if for all x $\in$ E:
         
         \hspace{0.5cm}
-        For $\epsilon > 0$, there is a N $\in$ $\mathbb{Z}$ where for n $\geq$ N, then
-        $|f_n(x) - f(x)|$ $\leq$ $\epsilon$
+        For $\epsilon > 0$, there is a N $\in$ $\mathbb{Z}$ where for n $\geq$ N,
+        then $|f_n(x) - f(x)|$ $\leq$ $\epsilon$
 
         \vspace{0.3cm}
 
         $\sum f_n(X)$ converges uniformly if \{$s_n$\} converges uniformly on E
-        
         where $\sum_{i=1}^n$ $f_i(x)$ = $s_n(x)$:
 
         \hspace{0.5cm}
@@ -59,7 +59,7 @@
 
 
 
-    \begin{wtheorem}{Cauchy Criterion for sequence of functions}{14cm}
+    \begin{wtheorem}{Cauchy Criterion for sequence of functions}{16cm}
         \{$f_n$\} converges uniformly on E if and only if:
         
         \hspace{0.5cm}
@@ -113,7 +113,7 @@
 
 
 
-    \begin{wtheorem}{Connection between Convergence and Uniform Convergence}{14cm}
+    \begin{wtheorem}{Connection between Convergence and Uniform Convergence}{16cm}
         Suppose for x $\in$ E, $\lim_{n \rightarrow \infty}$ $f_n(x)$ = f(x).
         Let $M_n$ = $\underset{x \in E}{\text{sup}}$($|f_n(x) - f(x)|$).
 
@@ -182,7 +182,7 @@
 
 
 
-    \begin{wtheorem}{Condition for Uniform Convergence for Series}{14cm}
+    \begin{wtheorem}{Condition for Uniform Convergence for Series}{16cm}
         For \{$f_n$\} defined on E, suppose $|f_n(x)|$ $\leq$ $M_n$ for any x $\in$ E.
 
         If $\sum M_n$ converges, then $\sum f_n$ converges uniformly on E.        
@@ -208,9 +208,8 @@
 \subsection[ Continuity ]{ Uniform Convergence and Continuity }
 
     \begin{wtheorem}{$\lim_{t \rightarrow x} \lim_{n \rightarrow \infty} f_n(t)$
-    = $\lim_{n \rightarrow \infty} \lim_{t \rightarrow x} f_n(t)$}{14cm}
+    = $\lim_{n \rightarrow \infty} \lim_{t \rightarrow x} f_n(t)$}{16cm}
         Suppose \{$f_n$\} converges uniformly to f on a set E.
-        
         Let x $\in$ E' where $\lim_{t \rightarrow x}$ $f_n(t)$ = $A_n$.
 
         Then \{$A_n$\} converges where
@@ -281,9 +280,9 @@
 
 
 
-    \begin{wtheorem}{Uniform Convergence perserve Continuity}{14cm}
-        If \{$f_n$\} converges uniformly to f on E where each $f_n$
-        is continuous on E, then f is continuous on E.        
+    \begin{wtheorem}{Uniform Convergence perserve Continuity}{16cm}
+        If continuous \{$f_n$\} converges uniformly to f on E,
+        then f is continuous on E
     \end{wtheorem}
 
     \begin{intuition}
@@ -322,10 +321,10 @@
 
 
     \begin{wtheorem}{Decreasing, continuous sequence over compact
-    converges uniformly}{14cm}
+    converges uniformly}{16cm}
         Suppose K is compact and
 
-        \begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
+        \begin{enumerate}[label=(\alph*), leftmargin=1.5cm, itemsep=0.1cm]
             \item \{$f_n$\} is a sequence of continuous functions on K
             
             \item \{$f_n$\} converges pointwise to a continuous f on K
@@ -361,17 +360,20 @@
 
 
 
-    \begin{definition}{Supremum Norm}{14cm}
+    \begin{definition}{Supremum Norm}{16cm}
         $\mathscr{C}(X)$ is the set of all
         complex, continuous, bounded functions in metric X.
         
         \hspace{0.5cm}
         If X is compact, then bounded is not needed
 
-        Then for each $f \in \mathscr{C}(X)$, associate a supremum norm:
+        Then for each $f \in \mathscr{C}(X)$, associate
+        a {\color{lblue} supremum norm}:
 
         \hspace{0.5cm}
         $|| f ||$ = $\underset{x \in X}{\text{sup}} |f(x)| < \infty$
+
+        where
 
         \begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
             \item $|| f(x) ||$ = 0 if and only if $f(x)$ = 0 for every x $\in$ X
@@ -394,7 +396,7 @@
 
 
 
-    \begin{wtheorem}{$\mathscr{C}(X)$ is a complete metric space}{14cm}
+    \begin{wtheorem}{$\mathscr{C}(X)$ is a complete metric space}{16cm}
         $\mathscr{C}(X)$ is a complete metric space        
     \end{wtheorem}
 
@@ -444,7 +446,7 @@
 
 \subsection[ Integration ]{ Uniform Convergence and Integration }
 
-    \begin{wtheorem}{Uniform Convergence perserves Integrability}{14cm}
+    \begin{wtheorem}{Uniform Convergence perserves Integrability}{16cm}
         If \{$f_n$\} $\in$ $\mathscr{R}(\alpha)$ converges uniformly to f on [a,b],
         then f $\in$ $\mathscr{R}(\alpha)$ on [a,b] where:
 
@@ -504,7 +506,7 @@
     \vspace{0.5cm}
 
 
-    \begin{wtheorem}{Uniform Convergence perserves Integrability for series}{14cm}
+    \begin{wtheorem}{Uniform Convergence perserves Integrability for series}{16cm}
         If $f_n$ $\in$ $\mathscr{R}(\alpha)$ on [a,b] and
         f(x) = $\sum_{n=1}^{\infty}$ $f_n(x)$ converges uniformly, then:
 
@@ -529,7 +531,8 @@
 
 \subsection[ Differentiation ]{ Uniform Convergence and Differentiation }
 
-    \begin{wtheorem}{Uniform Convergence of Derivatives perserve Differentiability}{14cm}
+    \begin{wtheorem}{Uniform Convergence of Derivatives
+    perserves Differentiability}{16cm}
         Suppose \{$f_n$\} are differentiable on [a,b] such that
         \{$f_n(x_0)$\} converges for some $x_0$ $\in$ [a,b]. If
         \{$f_n'$\} converges uniformly on [a,b], then \{$f_n$\}
@@ -650,9 +653,9 @@
 
 
 
-    \begin{wtheorem}{Continuous functions can be non-differentiable}{14cm}
+    \begin{wtheorem}{Continuous functions can be non-differentiable}{16cm}
         There exists a real continuous function on $\mathbb{R}$ which is
-        nowhere differentiable.
+        nowhere differentiable
     \end{wtheorem}
 
     \begin{proof}
@@ -699,17 +702,17 @@
 
 \subsection[ Equicontinuous ]{ Equicontinuous Families of Functions }
 
-    \begin{definition}{Boundedness}{14cm}
+    \begin{definition}{Boundedness}{16cm}
         Let \{$f_n$\} be defined on set E.
 
-        \{$f_n$\} is pointwise bounded on E if for x $\in$ E and every n,
-        there is a $\phi$ where:
+        \{$f_n$\} is {\color{lblue} pointwise bounded} on E if for x $\in$ E
+        and every n, there is a $\phi$ where:
 
         \hspace{0.5cm}
         $|f_n(x)|$ $<$ $\phi(x)$
 
-        \{$f_n$\} is uniformly bounded on E if for every n and x $\in$ E,
-        there is a M where:
+        \{$f_n$\} is {\color{lblue} uniformly bounded} on E if for every n
+        and x $\in$ E, there is a M where:
 
         \hspace{0.5cm}
         $|f_n(x)|$ $<$ $M$
@@ -719,11 +722,16 @@
 
 
 
-    \begin{definition}{Equicontinuous}{14cm}
-        A family of complex functions, $\mathscr{F}$, defined on set E $\subset$ X
-        is equicontinuous if for every $\epsilon > 0$, there is a $\delta > 0$
-        such that for all x,y $\in$ E and f $\in$ $\mathscr{F}$ where
-        $d(x,y) < \delta$, then $|f(x) - f(y)| < \epsilon$.
+    \begin{definition}{Equicontinuous}{16cm}
+        A family of complex functions, $\mathscr{F}$: E $\subset$ X
+        is {\color{lblue} equicontinuous} if for all f $\in$ $\mathscr{F}$:
+        
+        \hspace{0.5cm}
+        For every $\epsilon > 0$, there is a $\delta > 0$ such that for all
+        x,y $\in$ E where $d(x,y) < \delta$, then:
+        
+        \hspace{1cm}
+        $|f(x) - f(y)| < \epsilon$
     \end{definition}
 
     \vspace{0.5cm}
@@ -731,7 +739,7 @@
 
 
     \begin{wtheorem}{Pointwise bounded \{$f_n$\} over countable sets have
-    convergent \{$f_{n_k}$\}}{14cm}
+    convergent \{$f_{n_k}$\}}{16cm}
         If \{$f_n$\} are pointwise bounded, complex functions on countable set E,
         then \{$f_n$\} has subsequence \{$f_{n_k}$\} such that
         \{$f_{n_k}(x)$\} converges for every x $\in$ E.
@@ -803,7 +811,7 @@
 
 
     \begin{wtheorem}{Uniform convergent \{$f_n$\} where $f_n$ $\in$ $\mathscr{C}(K)$
-    is equicontinuous}{14cm}
+    is equicontinuous}{16cm}
         If K is a compact metric space where $f_n$ $\in$ $\mathscr{C}(K)$ and
         \{$f_n$\} converges uniformly on K, then \{$f_n$\} is equicontinuous on K.
     \end{wtheorem}
@@ -853,7 +861,7 @@
 
 
     \begin{wtheorem}{Pointwise bounded and equicontinuous \{$f_n$\} over compact K
-    is uniformly bounded and have uniformly convergent \{$f_{n_k}$\}}{14cm}
+    is uniformly bounded and have uniformly convergent \{$f_{n_k}$\}}{16cm}
         If K is compact where \{$f_n$\} $\in$ $\mathscr{C}(K)$ is pointwise bounded
         and equicontinuous:
 
@@ -938,7 +946,7 @@
 \subsection[ Stone-Weierstrass ]{ Stone-Weierstrass Theorem }
 
     \begin{wtheorem}{There are polynomials that converge uniformly to
-    continuous f}{14cm}
+    continuous f}{16cm}
         For complex continuous f on [a,b], there is a sequence of polynomials
         \{$P_n$\} that converges uniformly to f(x).
     \end{wtheorem}
@@ -995,7 +1003,7 @@
 
 
 
-    \begin{corollary}{There are polynomials that converges uniformly to $|x|$}{14cm}
+    \begin{corollary}{There are polynomials that converges uniformly to $|x|$}{16cm}
         For [-a,a], there is a sequence of real polynomials $P_n$
         such that $P_n(0)$ = 0 and $P_n(x)$ converges uniformly to $|x|$. 
     \end{corollary}
@@ -1011,9 +1019,9 @@
 
 
 
-    \begin{definition}{Algebra, Uniformly Closed, and Uniform Closure}{14cm}
-        A family of complex functions on E, $\mathscr{A}$, is an algebra
-        if for f,g $\in$ $\mathscr{A}$, then:
+    \begin{definition}{Algebra, Uniformly Closed, and Uniform Closure}{16cm}
+        A family of complex functions on E, $\mathscr{A}$, is
+        an {\color{lblue} algebra} if for f,g $\in$ $\mathscr{A}$, then:
 
         \begin{enumerate}[label=(\alph*), leftmargin=1.5cm, itemsep=0.1cm]
             \item f+g $\in$ $\mathscr{A}$
@@ -1025,7 +1033,7 @@
 
         \vspace{0.3cm}
 
-        $\mathscr{A}$ is uniformly closed if:
+        $\mathscr{A}$ is {\color{lblue} uniformly closed} if:
         
         \hspace{0.5cm}
         For any $f_n$ $\in$ $\mathscr{A}$
@@ -1033,7 +1041,7 @@
         
         \vspace{0.3cm}
 
-        Let the uniform closure, $\mathscr{B}$, be the set of all
+        Let the {\color{lblue} uniform closure}, $\mathscr{B}$, be the set of all
         uniformly convergent f from $\mathscr{A}$.
     \end{definition}
 
@@ -1041,7 +1049,7 @@
 
 
 
-    \begin{wtheorem}{Bounded algebra implies Uniformly closed uniform closure}{14cm}
+    \begin{wtheorem}{Bounded algebra implies Uniformly closed uniform closure}{16cm}
         For algebra $\mathscr{A}$ of bounded functions, $\mathscr{B}$
         is a uniformly closed algebra.
     \end{wtheorem}
@@ -1068,8 +1076,8 @@
 
 
 
-    \begin{definition}{Separate Points}{14cm}
-        For family of functions, $\mathscr{A}$, separate points on E:
+    \begin{definition}{Separate Points}{16cm}
+        For family of functions, $\mathscr{A}$, {\color{lblue} separate points} on E:
 
         \hspace{0.5cm}
         If for every pair of distinct $x_1,x_2$ $\in$ E, there
@@ -1077,7 +1085,7 @@
 
         \vspace{0.3cm}
 
-        $\mathscr{A}$ vanishes at no point of E:
+        $\mathscr{A}$ {\color{lblue} vanishes at no point} of E:
 
         \hspace{0.5cm}
         If for each x $\in$ E, there is a g $\in$ $\mathscr{A}$
@@ -1089,7 +1097,7 @@
 
 
 
-    \begin{wtheorem}{Non-vashing, separate algebra contain all values}{14cm}
+    \begin{wtheorem}{Non-vashing, separate algebra contain all values}{16cm}
         Suppose algebra $\mathscr{A}$ separates points and vanishes
         at no points on E. If $x_1,x_2$ are distinct points, then for
         constants $c_1,c_2$, there is a f $\in$ $\mathscr{A}$ where:
@@ -1119,7 +1127,7 @@
 
 
 
-    \begin{wtheorem}{Stone-Weierstrass Theorem}{14cm}
+    \begin{wtheorem}{Stone-Weierstrass Theorem}{16cm}
         If algebra of real continuous functions on compact K, $\mathscr{A}$,
         separates points and vanishes at no points on K, then $\mathscr{B}$
         consist of all real continuous functions.    
@@ -1207,8 +1215,8 @@
 
 
 
-    \begin{definition}{Self-Adjoint}{14cm}
-        $\mathscr{A}$ is self-adjoint if
+    \begin{definition}{Self-Adjoint}{16cm}
+        $\mathscr{A}$ is {\color{lblue} self-adjoint} if
         for every f $\in$ $\mathscr{A}$, then $\overline{f}$ $\in$ $\mathscr{A}$
     \end{definition}
 
@@ -1216,7 +1224,7 @@
 
 
 
-    \begin{wtheorem}{Stone-Weierstrass for complex functions}{14cm}
+    \begin{wtheorem}{Stone-Weierstrass for complex functions}{16cm}
         If self-adjoint algebra of complex continuous functions on compact K,
         $\mathscr{A}$, separates points and vanishes at no points on K, then
         $\mathscr{B}$ consist of all complex continuous functions on K.

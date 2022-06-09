@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.30)  5 JUN 2022 19:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.30)  9 JUN 2022 06:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -473,15 +473,15 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
-* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=426.79135pt
-* \textheight=702.78308pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=13.08827pt
-* \topmargin=-38.1381pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
 * \headheight=15.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -532,228 +532,15 @@ LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <14.4> not available
 \openout4 = `main.toc'.
 
  (./Content/C1.tex [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
-
- []
-
-[6]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 142--142
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 209--209
-[] 
- []
-
-<Images/1.2.2.png, id=553, 527.72156pt x 167.87718pt>
+<Images/1.2.2.png, id=548, 527.72156pt x 167.87718pt>
 File: Images/1.2.2.png Graphic file (type png)
 <use Images/1.2.2.png>
-Package pdftex.def Info: Images/1.2.2.png  used on input line 213.
-(pdftex.def)             Requested size: 237.4725pt x 75.54402pt.
-[7 <./Images/1.2.2.png>]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 272--272
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 278--278
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 284--284
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 290--290
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 296--296
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 302--302
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 308--308
-[] 
- []
-
-[8]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 316--316
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 322--322
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 331--331
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 341--341
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 348--348
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 382--382
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 388--388
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 394--394
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 402--402
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 413--413
-[] 
- []
-
-[9]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 431--431
-[] 
- []
-
+Package pdftex.def Info: Images/1.2.2.png  used on input line 212.
+(pdftex.def)             Requested size: 263.86014pt x 83.93839pt.
+ [6 <./Images/1.2.2.png>] [7] [8]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 443.
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 455--455
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 469--469
-[] 
- []
-
-) (./Content/C2.tex [10]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 18--18
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 29--29
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 39--39
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 119--119
-[] 
- []
-
-[11]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 146--146
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 227--227
-[] 
- []
-
-[12]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 245--245
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 252--252
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 261--261
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 268--268
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 287--287
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 294--294
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 305--305
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 312--312
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 327--327
-[] 
- []
-
-[13]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 438--438
-[] 
- []
-
-[14]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 467--467
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 474--474
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 482--482
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 488--488
-[] 
- []
-
-) (./Content/C3.tex [15]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 441.
+) (./Content/C2.tex [9] [10] [11] [12] [13]) (./Content/C3.tex [14]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2.
@@ -777,1671 +564,169 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-[16]) (./Content/C4.tex [17]
-<Images/4.1.1.png, id=646, 734.745pt x 277.035pt>
+[15]) (./Content/C4.tex [16]
+<Images/4.1.1.png, id=641, 734.745pt x 277.035pt>
 File: Images/4.1.1.png Graphic file (type png)
 <use Images/4.1.1.png>
 Package pdftex.def Info: Images/4.1.1.png  used on input line 25.
 (pdftex.def)             Requested size: 198.38379pt x 74.80045pt.
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 81--81
-[] 
- []
-
-<Images/4.1.4.png, id=647, 283.0575pt x 283.0575pt>
+<Images/4.1.4.png, id=642, 283.0575pt x 283.0575pt>
 File: Images/4.1.4.png Graphic file (type png)
 <use Images/4.1.4.png>
 Package pdftex.def Info: Images/4.1.4.png  used on input line 95.
 (pdftex.def)             Requested size: 113.22098pt x 113.22098pt.
-[18 <./Images/4.1.1.png> <./Images/4.1.4.png>]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 120--120
-[] 
- []
-
-<Images/4.1.5.png, id=654, 651.18282pt x 79.04532pt>
+ [17 <./Images/4.1.1.png> <./Images/4.1.4.png>]
+<Images/4.1.5.png, id=649, 651.18282pt x 79.04532pt>
 File: Images/4.1.5.png Graphic file (type png)
 <use Images/4.1.5.png>
 Package pdftex.def Info: Images/4.1.5.png  used on input line 126.
 (pdftex.def)             Requested size: 325.5906pt x 39.52255pt.
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 181--181
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 207--207
-[] 
- []
-
-[19 <./Images/4.1.5.png>]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 236--236
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 268--268
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 293--293
-[] 
- []
-
-<Images/4.2.2.png, id=666, 597.73312pt x 258.9675pt>
+ [18 <./Images/4.1.5.png>]
+<Images/4.2.2.png, id=660, 597.73312pt x 258.9675pt>
 File: Images/4.2.2.png Graphic file (type png)
 <use Images/4.2.2.png>
 Package pdftex.def Info: Images/4.2.2.png  used on input line 299.
 (pdftex.def)             Requested size: 191.2785pt x 82.87128pt.
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 321--321
-[] 
- []
-
-[20 <./Images/4.2.2.png>]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 335--335
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 350--350
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 382--382
-[] 
- []
-
-) (./Content/C5.tex [21]
-<Images/5.1.2a.png, id=677, 264.99pt x 264.99pt>
+ [19 <./Images/4.2.2.png>]) (./Content/C5.tex [20]
+<Images/5.1.2a.png, id=673, 264.99pt x 264.99pt>
 File: Images/5.1.2a.png Graphic file (type png)
 <use Images/5.1.2a.png>
 Package pdftex.def Info: Images/5.1.2a.png  used on input line 46.
 (pdftex.def)             Requested size: 119.24438pt x 119.24438pt.
-<Images/5.1.2b.png, id=678, 453.94594pt x 453.94594pt>
+<Images/5.1.2b.png, id=674, 453.94594pt x 453.94594pt>
 File: Images/5.1.2b.png Graphic file (type png)
 <use Images/5.1.2b.png>
 Package pdftex.def Info: Images/5.1.2b.png  used on input line 77.
 (pdftex.def)             Requested size: 136.18483pt x 136.18483pt.
- [22 <./Images/5.1.2a.png> <./Images/5.1.2b.png>]
-<Images/5.1.2c.png, id=687, 453.94594pt x 453.94594pt>
+ [21 <./Images/5.1.2a.png> <./Images/5.1.2b.png>]
+<Images/5.1.2c.png, id=683, 453.94594pt x 453.94594pt>
 File: Images/5.1.2c.png Graphic file (type png)
 <use Images/5.1.2c.png>
 Package pdftex.def Info: Images/5.1.2c.png  used on input line 103.
 (pdftex.def)             Requested size: 127.10399pt x 127.10399pt.
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 161--161
-[] 
- []
-
-<Images/5.1.3.png, id=688, 294.34969pt x 294.34969pt>
+<Images/5.1.3.png, id=684, 294.34969pt x 294.34969pt>
 File: Images/5.1.3.png Graphic file (type png)
 <use Images/5.1.3.png>
 Package pdftex.def Info: Images/5.1.3.png  used on input line 167.
 (pdftex.def)             Requested size: 100.07756pt x 100.07756pt.
-[23 <./Images/5.1.2c.png> <./Images/5.1.3.png>]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 189--189
-[] 
- []
-
-<Images/5.1.4.png, id=695, 363.60844pt x 363.60844pt>
+ [22 <./Images/5.1.2c.png> <./Images/5.1.3.png>]
+<Images/5.1.4.png, id=691, 363.60844pt x 363.60844pt>
 File: Images/5.1.4.png Graphic file (type png)
 <use Images/5.1.4.png>
 Package pdftex.def Info: Images/5.1.4.png  used on input line 195.
 (pdftex.def)             Requested size: 112.71744pt x 112.71744pt.
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 213--213
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 239--239
-[] 
- []
-
-<Images/5.1.6.png, id=696, 403.5075pt x 398.99063pt>
+<Images/5.1.6.png, id=692, 403.5075pt x 398.99063pt>
 File: Images/5.1.6.png Graphic file (type png)
 <use Images/5.1.6.png>
 Package pdftex.def Info: Images/5.1.6.png  used on input line 245.
 (pdftex.def)             Requested size: 141.22974pt x 139.6488pt.
-[24 <./Images/5.1.4.png> <./Images/5.1.6.png>]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 276--276
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 288--288
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 310--310
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 326--326
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 350--350
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 372--372
-[] 
- []
-
-[25]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 396--396
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 415--415
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 481--481
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 506--506
-[] 
- []
-
-) (./Content/C6.tex [26]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 29--29
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 38--38
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 46--46
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 77--77
-[] 
- []
-
-[27]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 130--130
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 198--198
-[] 
- []
-
-<Images/6.3.3.png, id=723, 422.32782pt x 422.32782pt>
+ [23 <./Images/5.1.4.png> <./Images/5.1.6.png>] [24]) (./Content/C6.tex [25] [26]
+<Images/6.3.3.png, id=719, 422.32782pt x 422.32782pt>
 File: Images/6.3.3.png Graphic file (type png)
 <use Images/6.3.3.png>
-Package pdftex.def Info: Images/6.3.3.png  used on input line 204.
+Package pdftex.def Info: Images/6.3.3.png  used on input line 203.
 (pdftex.def)             Requested size: 126.69931pt x 126.69931pt.
-[28 <./Images/6.3.3.png>]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 231--231
-[] 
- []
-
-<Images/6.3.4.png, id=729, 384.6872pt x 384.6872pt>
+ [27 <./Images/6.3.3.png>]
+<Images/6.3.4.png, id=725, 384.6872pt x 384.6872pt>
 File: Images/6.3.4.png Graphic file (type png)
 <use Images/6.3.4.png>
-Package pdftex.def Info: Images/6.3.4.png  used on input line 237.
+Package pdftex.def Info: Images/6.3.4.png  used on input line 236.
 (pdftex.def)             Requested size: 134.64253pt x 134.64253pt.
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 262--262
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 279--279
-[] 
- []
-
-[29 <./Images/6.3.4.png>]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 306--306
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 323--323
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 345--345
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 363--363
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 404--404
-[] 
- []
-
-[30]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 467--467
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 483--483
-[] 
- []
-
-) (./Content/C7.tex [31]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 50--50
-[] 
- []
-
-<Images/7.1.2.png, id=747, 460.72125pt x 460.72125pt>
+ [28 <./Images/6.3.4.png>] [29]) (./Content/C7.tex [30]
+<Images/7.1.2.png, id=742, 460.72125pt x 460.72125pt>
 File: Images/7.1.2.png Graphic file (type png)
 <use Images/7.1.2.png>
 Package pdftex.def Info: Images/7.1.2.png  used on input line 56.
 (pdftex.def)             Requested size: 138.21744pt x 138.21744pt.
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 70--70
-[] 
- []
-
-[32 <./Images/7.1.2.png>]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 166--166
-[] 
- []
-
-) (./Content/C8.tex [33]
-<Images/8.1.1.png, id=762, 429.10312pt x 429.10312pt>
+ [31 <./Images/7.1.2.png>]) (./Content/C8.tex [32]
+<Images/8.1.1.png, id=758, 429.10312pt x 429.10312pt>
 File: Images/8.1.1.png Graphic file (type png)
 <use Images/8.1.1.png>
-Package pdftex.def Info: Images/8.1.1.png  used on input line 25.
+Package pdftex.def Info: Images/8.1.1.png  used on input line 28.
 (pdftex.def)             Requested size: 128.73192pt x 128.73192pt.
-
-Overfull \hbox (21.24564pt too wide) in paragraph at lines 45--46
-[][] 
- []
-
-
-Overfull \hbox (21.24564pt too wide) in paragraph at lines 61--62
-[][] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 91--91
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 107--107
-[] 
- []
-
-[34 <./Images/8.1.1.png>]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 119--119
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 132--132
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 160--160
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 175--175
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 203--203
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 220--220
-[] 
- []
-
-[35]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 263--263
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 290--290
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 337--337
-[] 
- []
-
-<Images/8.2.2.png, id=783, 429.85594pt x 429.85594pt>
+ [33 <./Images/8.1.1.png>] [34]
+<Images/8.2.2.png, id=779, 429.85594pt x 429.85594pt>
 File: Images/8.2.2.png Graphic file (type png)
 <use Images/8.2.2.png>
-Package pdftex.def Info: Images/8.2.2.png  used on input line 343.
+Package pdftex.def Info: Images/8.2.2.png  used on input line 344.
 (pdftex.def)             Requested size: 128.95776pt x 128.95776pt.
-[36 <./Images/8.2.2.png>]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 368--368
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 379--379
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 409--409
-[] 
- []
-
-<Images/8.2.4.png, id=792, 465.23813pt x 465.23813pt>
+ [35 <./Images/8.2.2.png>]
+<Images/8.2.4.png, id=788, 465.23813pt x 465.23813pt>
 File: Images/8.2.4.png Graphic file (type png)
 <use Images/8.2.4.png>
-Package pdftex.def Info: Images/8.2.4.png  used on input line 415.
+Package pdftex.def Info: Images/8.2.4.png  used on input line 416.
 (pdftex.def)             Requested size: 139.57251pt x 139.57251pt.
-[37 <./Images/8.2.4.png>]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 463--463
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 478--478
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 497--497
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 525--525
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 542--542
-[] 
- []
-
-[38]
-Underfull \hbox (badness 10000) in paragraph at lines 567--568
-
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 628--628
-[] 
- []
-
-) (./Content/C9.tex [39]
-<Images/9.1.2.png, id=816, 425.33907pt x 425.33907pt>
+ [36 <./Images/8.2.4.png>] [37]) (./Content/C9.tex [38]
+<Images/9.1.2.png, id=812, 425.33907pt x 425.33907pt>
 File: Images/9.1.2.png Graphic file (type png)
 <use Images/9.1.2.png>
 Package pdftex.def Info: Images/9.1.2.png  used on input line 53.
 (pdftex.def)             Requested size: 127.60269pt x 127.60269pt.
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 80--80
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 90--90
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 100--100
-[] 
- []
-
-[40 <./Images/9.1.2.png>]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 143--143
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 162--162
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 187--187
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 198--198
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 217--217
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 230--230
-[] 
- []
-
-[41]) (./Content/C10.tex
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 63--63
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 81--81
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 100--100
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 123--123
-[] 
- []
-
-[42]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 144--144
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 156--156
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 188--188
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 243--243
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 265--265
-[] 
- []
-
-[43]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 294--294
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 322--322
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 375--375
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 391--391
-[] 
- []
-
-[44]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 415--415
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 460--460
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 489--489
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 532--532
-[] 
- []
-
-[45]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 576--576
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 611--611
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 650--650
-[] 
- []
-
-[46]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 673--673
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 703--703
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 738--738
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 762--762
-[] 
- []
-
-[47]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 850--850
-[] 
- []
-
-) (./Content/C11.tex [48]
-<Images/11.1.1.png, id=870, 618.81187pt x 295.85532pt>
+ [39 <./Images/9.1.2.png>]) (./Content/C10.tex [40] [41] [42] [43] [44] [45] [46]) (./Content/C11.tex [47]
+<Images/11.1.1.png, id=866, 618.81187pt x 295.85532pt>
 File: Images/11.1.1.png Graphic file (type png)
 <use Images/11.1.1.png>
 Package pdftex.def Info: Images/11.1.1.png  used on input line 27.
 (pdftex.def)             Requested size: 278.46277pt x 133.13365pt.
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 60--60
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 80--80
-[] 
- []
-
-[49 <./Images/11.1.1.png>]
-<Images/11.2.1.png, id=881, 618.81187pt x 295.85532pt>
+ [48 <./Images/11.1.1.png>]
+<Images/11.2.1.png, id=875, 618.81187pt x 295.85532pt>
 File: Images/11.2.1.png Graphic file (type png)
 <use Images/11.2.1.png>
 Package pdftex.def Info: Images/11.2.1.png  used on input line 133.
 (pdftex.def)             Requested size: 235.15096pt x 112.42618pt.
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 158--158
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 190--190
-[] 
- []
-
-<Images/11.2.3.png, id=882, 931.22906pt x 291.33844pt>
+<Images/11.2.3.png, id=876, 931.22906pt x 291.33844pt>
 File: Images/11.2.3.png Graphic file (type png)
 <use Images/11.2.3.png>
 Package pdftex.def Info: Images/11.2.3.png  used on input line 196.
 (pdftex.def)             Requested size: 344.54936pt x 107.79353pt.
-[50 <./Images/11.2.1.png> <./Images/11.2.3.png>]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 231--231
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 254--254
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 284--284
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 320--320
-[] 
- []
-
-[51]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 353--353
-[] 
- []
-
-<Images/11.3.2.png, id=895, 695.59875pt x 509.65407pt>
+ [49 <./Images/11.2.1.png> <./Images/11.2.3.png>] [50]
+<Images/11.3.2.png, id=891, 695.59875pt x 509.65407pt>
 File: Images/11.3.2.png Graphic file (type png)
 <use Images/11.3.2.png>
 Package pdftex.def Info: Images/11.3.2.png  used on input line 359.
 (pdftex.def)             Requested size: 194.76633pt x 142.70216pt.
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 373--373
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 394--394
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 418--418
-[] 
- []
-
-[52 <./Images/11.3.2.png>]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 469--469
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 508--508
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 539--539
-[] 
- []
-
-[53]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 556--556
-[] 
- []
-
+ [51 <./Images/11.3.2.png>] [52]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 576.
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 688--688
-[] 
- []
-
-[54]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 702--702
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 734--734
-[] 
- []
-
-) (./Content/C12.tex [55]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 41--41
-[] 
- []
-
-[56]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 149--149
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 204--204
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 233--233
-[] 
- []
-
-[57]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 246--246
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 280--280
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 314--314
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 327--327
-[] 
- []
-
-[58]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 396--396
-[] 
- []
-
-[59]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 464--464
-[] 
- []
-
-
-Underfull \hbox (badness 1762) in paragraph at lines 505--510
-[]\OT1/cmr/m/n/12 However, []the-o-rem 12.2.4: Mean Value The-o-rem[] and []the-o-rem 12.4.1:
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 553--553
-[] 
- []
-
-) (./Content/C13.tex [60]
-<Images/13.1.1.png, id=950, 402.75468pt x 402.75468pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 577.
+ [53]) (./Content/C12.tex [54] [55] [56] [57] [58]) (./Content/C13.tex [59]
+<Images/13.1.1.png, id=946, 402.75468pt x 402.75468pt>
 File: Images/13.1.1.png Graphic file (type png)
 <use Images/13.1.1.png>
-Package pdftex.def Info: Images/13.1.1.png  used on input line 42.
+Package pdftex.def Info: Images/13.1.1.png  used on input line 44.
 (pdftex.def)             Requested size: 140.96625pt x 140.96625pt.
- [61 <./Images/13.1.1.png>]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 159--159
-[] 
- []
-
-<Images/13.1.4.png, id=959, 344.03531pt x 309.40594pt>
+ [60 <./Images/13.1.1.png>]
+<Images/13.1.4.png, id=954, 344.03531pt x 309.40594pt>
 File: Images/13.1.4.png Graphic file (type png)
 <use Images/13.1.4.png>
-Package pdftex.def Info: Images/13.1.4.png  used on input line 165.
+Package pdftex.def Info: Images/13.1.4.png  used on input line 168.
 (pdftex.def)             Requested size: 154.81445pt x 139.23138pt.
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 191--191
-[] 
- []
-
-[62 <./Images/13.1.4.png>]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 238--238
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 261--261
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 292--292
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 325--325
-[] 
- []
-
-[63]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 356--356
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 390--390
-[] 
- []
-
-
-Overfull \hbox (6.50972pt too wide) in paragraph at lines 397--397
-[]\OT1/cmr/m/n/12 Theorem 13.2.3: Bounded func-tions with fi-nite dis-con-ti-nu-ities are Riemann-Integrable[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 434--434
-[] 
- []
-
-<Images/13.2.3.png, id=972, 371.88937pt x 358.33875pt>
+ [61 <./Images/13.1.4.png>] [62]
+<Images/13.2.3.png, id=968, 371.88937pt x 358.33875pt>
 File: Images/13.2.3.png Graphic file (type png)
 <use Images/13.2.3.png>
-Package pdftex.def Info: Images/13.2.3.png  used on input line 440.
+Package pdftex.def Info: Images/13.2.3.png  used on input line 445.
 (pdftex.def)             Requested size: 130.16322pt x 125.42044pt.
-[64 <./Images/13.2.3.png>]
-Overfull \hbox (9.61246pt too wide) in paragraph at lines 448--448
-[]\OT1/cmr/m/n/12 Theorem 13.2.4: Com-pos-ite of continuous-integrable func-tions are Riemann-Integrable[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 501--501
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 572--572
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 581--581
-[] 
- []
-
-[65]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 657--657
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 729--729
-[] 
- []
-
-[66]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 751--751
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 769--769
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 808--808
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 833--833
-[] 
- []
-
-<Images/13.4.2.png, id=990, 691.08188pt x 456.20438pt>
+ [63 <./Images/13.2.3.png>] [64] [65]
+<Images/13.4.2.png, id=986, 691.08188pt x 456.20438pt>
 File: Images/13.4.2.png Graphic file (type png)
 <use Images/13.4.2.png>
-Package pdftex.def Info: Images/13.4.2.png  used on input line 839.
+Package pdftex.def Info: Images/13.4.2.png  used on input line 842.
 (pdftex.def)             Requested size: 207.32616pt x 136.86237pt.
-[67 <./Images/13.4.2.png>]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 867--867
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 905--905
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 933--933
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 995--995
-[] 
- []
-
-[68]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1024--1024
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1067--1067
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1095--1095
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1138--1138
-[] 
- []
-
-[69]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1166--1166
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1200--1200
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1222--1222
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1245--1245
-[] 
- []
-
-[70]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1366--1366
-[] 
- []
-
-[71]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1484--1484
-[] 
- []
-
-) (./Content/C14.tex [72]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 77--77
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 110--110
-[] 
- []
-
-[73]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 141--141
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 179--179
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 200--200
-[] 
- []
-
-[74]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 235--235
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 278--278
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 297--297
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 318--318
-[] 
- []
-
-[75]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 358--358
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 407--407
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 437--437
-[] 
- []
-
-[76]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 462--462
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 502--502
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 522--522
-[] 
- []
-
-[77]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 584--584
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 647--647
-[] 
- []
-
-[78]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 692--692
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 746--746
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 799--799
-[] 
- []
-
-[79]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 822--822
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 849--849
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 883--883
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 930--930
-[] 
- []
-
-[80]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 992--992
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1008--1008
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1065--1065
-[] 
- []
-
-[81]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1116--1116
-[] 
- []
-
-
-Overfull \hbox (1.10951pt too wide) in paragraph at lines 1149--1150
+ [66 <./Images/13.4.2.png>] [67] [68] [69] [70]) (./Content/C14.tex [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81]) (./Content/C15.tex [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92]
+Overfull \hbox (1.10951pt too wide) in paragraph at lines 1298--1299
 [][] 
  []
 
-
-Overfull \hbox (1.10951pt too wide) in paragraph at lines 1163--1164
-[][] 
- []
-
-
-Overfull \hbox (1.10951pt too wide) in paragraph at lines 1188--1189
-[][] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1204--1204
-[] 
- []
-
-[82]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1247--1247
-[] 
- []
-
-) (./Content/C15.tex [83]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 49--49
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 67--67
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 111--111
-[] 
- []
-
-[84]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 141--141
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 184--184
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 212--212
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 257--257
-[] 
- []
-
-[85]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 392--392
-[] 
- []
-
-[86] [87]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 630--630
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 638--638
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 653--653
-[] 
- []
-
-[88]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 699--699
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 794--794
-[] 
- []
-
-[89] [90]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 961--961
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 994--994
-[] 
- []
-
-[91]
-Underfull \hbox (badness 1092) in paragraph at lines 1106--1116
-[]\OT1/cmr/m/n/12 Since g(t) and $[]([]\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )$ are bounded on [$\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 ^^Y; ^^Y$\OT1/cmr/m/n/12 ], then $\OML/cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) []([]\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )$ and
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1116--1116
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1139--1139
-[] 
- []
-
-[92]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1184--1184
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1255--1255
-[] 
- []
-
-[93]
-Overfull \hbox (1.10953pt too wide) in paragraph at lines 1296--1297
-[][] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 1320--1320
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 1348--1348
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1426--1426
-[] 
- []
-
-[94]
-Overfull \hbox (1.10951pt too wide) in paragraph at lines 1507--1508
-[][] 
- []
-
-
-Overfull \hbox (1.10951pt too wide) in paragraph at lines 1542--1543
-[][] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1548--1548
-[] 
- []
-
-) (./Content/C16.tex [95]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 131--131
-[] 
- []
-
-[96]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 156--156
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 190--190
-[] 
- []
-
-
-Overfull \hbox (1.10951pt too wide) in paragraph at lines 207--208
-[][] 
- []
-
-
-Overfull \hbox (1.10951pt too wide) in paragraph at lines 228--229
-[][] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 234--234
-[] 
- []
-
-[97]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 335--335
-[] 
- []
-
-[98]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 411--411
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 437--437
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 454--454
-[] 
- []
-
-[99]
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 483--483
-[] 
- []
-
-
-Overfull \hbox (14.22635pt too wide) in paragraph at lines 518--518
-[] 
- []
-
-[100]
-Overfull \hbox (66.07114pt too wide) in paragraph at lines 662--697
+[93]) (./Content/C16.tex [94] [95] [96] [97] [98]
+Overfull \hbox (9.16563pt too wide) in paragraph at lines 651--686
 []$[] []$ \OT1/cmr/m/n/12 = $[]$ 
  []
 
-[101]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 750--750
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 842--842
-[] 
- []
-
-[102]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 867--867
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 938--938
-[] 
- []
-
-[103]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1020--1020
-[] 
- []
-
-[104]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1224--1224
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1245--1245
-[] 
- []
-
-[105]
-Overfull \hbox (1.10951pt too wide) in paragraph at lines 1307--1308
-[][] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1390--1390
-[] 
- []
-
-[106]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1461--1461
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1515--1515
-[] 
- []
-
-[107]
-Overfull \hbox (1.10951pt too wide) in paragraph at lines 1600--1601
-[][] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1651--1651
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1668--1668
-[] 
- []
-
-[108]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1707--1707
-[] 
- []
-
-[109]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1822--1822
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1915--1915
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1947--1947
-[] 
- []
-
-) (./Content/C17.tex [110]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 82--82
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 123--123
-[] 
- []
-
-[111]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 145--145
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 198--198
-[] 
- []
-
-
-Underfull \hbox (badness 1097) in paragraph at lines 218--221
-[]\OT1/cmr/m/n/12 Suppose step func-tions \OMS/cmsy/m/n/12 f$\OML/cmm/m/it/12 f[]$\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 on [a,b] con-verge uni-formly to f. Then
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 275--275
-[] 
- []
-
-[112]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 305--305
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 345--345
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 423--423
-[] 
- []
-
-[113]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 469--469
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 516--516
-[] 
- []
-
-[114]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 633--633
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 700--700
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 721--721
-[] 
- []
-
-[115]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 756--756
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 782--782
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 826--826
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 872--872
-[] 
- []
-
-[116]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1020--1020
-[] 
- []
-
-[117]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1041--1041
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1087--1087
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1134--1134
-[] 
- []
-
-[118]
+[99] [100] [101] [102] [103] [104] [105] [106] [107]) (./Content/C17.tex [108] [109] [110] [111] [112] [113] [114] [115] [116]
 LaTeX Font Info:    Trying to load font information for U+euf on input line 1148.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1261--1261
-[] 
- []
-
-[119]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1311--1311
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1356--1356
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1397--1397
-[] 
- []
-
-[120]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1437--1437
-[] 
- []
-
-[121]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1546--1546
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1593--1593
-[] 
- []
-
-[122]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1683--1683
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1719--1719
-[] 
- []
-
-[123]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 1758--1758
-[] 
- []
-
-) (./Content/C18.tex [124]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 56--56
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 121--121
-[] 
- []
-
-[125]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 168--168
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 200--200
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 231--231
-[] 
- []
-
-[126]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 288--288
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 311--311
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 369--369
-[] 
- []
-
-[127]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 413--413
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 449--449
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 478--478
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 509--509
-[] 
- []
-
-[128]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 568--568
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 586--586
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 624--624
-[] 
- []
-
-[129]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 795--795
-[] 
- []
-
-[130]) (./Content/C19.tex [131]
+) [117] [118] [119] [120]) (./Content/C18.tex [121] [122] [123] [124] [125] [126] [127]) (./Content/C19.tex [128]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3.
@@ -2466,42 +751,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 5.
 
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 40--40
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 75--75
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 92--92
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 131--131
-[] 
- []
-
-[132]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 164--164
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 188--188
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 245--245
-[] 
- []
-
-[133]
+[129] [130]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 253.
@@ -2514,90 +764,34 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 253.
 
+[131] [132]
 
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 320--320
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 375--375
-[] 
- []
-
-[134]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 483--483
-[] 
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 524.
 
 
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 516--516
-[] 
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 524.
 
-[135]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 558--558
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 584--584
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 624--624
-[] 
- []
-
-[136]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 716--716
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 771--771
-[] 
- []
-
-[137]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 835--835
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 892--892
-[] 
- []
-
-
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 930--930
-[] 
- []
-
-[138]
-Overfull \hbox (14.22636pt too wide) in paragraph at lines 961--961
-[] 
- []
-
-) (./Bibliography/Bibliography.tex [139]) 
+[133] [134] [135]) (./Bibliography/Bibliography.tex [136]) 
 AED: lastpage setting LastPage
-[140] (./main.aux)
+[137] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5301C423E9C5D05A21BADE5B9BA24363;18408.
+(rerunfilecheck)             Checksum: 61D0EB5BEACA6156FA96F44156B37141;18383.
  ) 
 Here is how much of TeX's memory you used:
- 14037 strings out of 478599
- 210517 string characters out of 5858101
- 580018 words of memory out of 5000000
- 31087 multiletter control sequences out of 15000+600000
+ 14035 strings out of 478599
+ 210506 string characters out of 5858101
+ 585091 words of memory out of 5000000
+ 31088 multiletter control sequences out of 15000+600000
  421159 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,20n,69p,395b,542s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (140 pages, 1366038 bytes).
+Output written on main.pdf (137 pages, 1361708 bytes).
 PDF statistics:
- 1625 PDF objects out of 1728 (max. 8388607)
- 1371 compressed objects within 14 object streams
- 475 named destinations out of 1000 (max. 500000)
+ 1611 PDF objects out of 1728 (max. 8388607)
+ 1360 compressed objects within 14 object streams
+ 472 named destinations out of 1000 (max. 500000)
  947 words of extra memory for PDF output out of 10000 (max. 10000000)
 

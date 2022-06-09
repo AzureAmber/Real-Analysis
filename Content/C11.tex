@@ -4,7 +4,7 @@
 
 \subsection{ Limits of Functions }
 
-    \begin{definition}{Limits of functions}{14cm}
+    \begin{definition}{Limits of Functions}{16cm}
         For metric spaces X,Y, let E $\subset$ X, f maps E into Y,
         and p $\in$ E'.
         
@@ -29,11 +29,11 @@
 
 
 
-    \begin{wtheorem}{Sequence definition of $\lim_{x \rightarrow p} f(x) = q$}{14cm}
+    \begin{wtheorem}{Sequence definition of $\lim_{x \rightarrow p} f(x) = q$}{16cm}
         $\lim_{x \rightarrow p} f(x) = q$ if and only if
         $\lim_{n \rightarrow \infty} f(p_n) = q$ for every
         sequence \{$p_n$\} $\in$ E where $p_n \not = p$ and
-        $\lim_{n \rightarrow \infty} p_n = p$.
+        $\lim_{n \rightarrow \infty} p_n = p$
     \end{wtheorem}
 
     \begin{proof}
@@ -63,8 +63,8 @@
 
 
 
-    \begin{corollary}{A limit of a function is unique}{14cm}
-        If f has a limit at p, this limit is unique.
+    \begin{corollary}{A limit of a function is unique}{16cm}
+        If f has a limit at p, then the limit is unique
     \end{corollary}
 
     \begin{proof}
@@ -83,9 +83,9 @@
 
 
 
-    \begin{wtheorem}{Arithemtic operations on functions of limits}{14cm}
+    \begin{wtheorem}{Properties of the Limits of Functions}{16cm}
         Let E $\subset$ X, p $\in$ E', and f(x),g(x) $\in$ $\mathbb{C}$ so 
-        $\lim_{x \rightarrow p} f(x) = A$, $\lim_{x \rightarrow p} g(x) = B$.
+        $\lim_{x \rightarrow p} f(x) = A$, $\lim_{x \rightarrow p} g(x) = B$
     \end{wtheorem}
 
     \begin{enumerate}[label=(\alph*), leftmargin=2cm, itemsep=0.1cm]
@@ -102,18 +102,18 @@
 
 \subsection{ Continuous Functions }
 
-    \begin{definition}{Continuous functions on a set}{14cm}
+    \begin{definition}{Continuous Functions}{16cm}
         Suppose X,Y are metric spaces, E $\subset$ X, p $\in$ E, and
         f maps E into Y.
 
-        f is continuous at p if:
+        f is {\color{lblue} continuous} at p if:
         
-        \begin{adjustbox}{minipage=13cm, right, vspace=0.1cm 0cm}
+        \begin{adjustbox}{minipage=15cm, right, vspace=0.1cm 0cm}
             For every $\epsilon > 0$, there is a
             $\delta > 0$ such that
-            for all x $\in$ E
-            
-            where $d_X(x,p) < \delta$, then
+            for all x $\in$ E where $d_X(x,p) < \delta$, then:
+
+            \hspace{0.5cm}
             $d_Y(f(x),f(p)) < \epsilon$
         \end{adjustbox}
 
@@ -122,7 +122,7 @@
         If f is continuous at every p $\in$ E, then f is continuous on E.
 
         f is continuous at isolated points since regardless of $\epsilon$,
-        there is a $\delta > 0$ such that $d_X(x,p) < \delta$ is x = p so
+        there is a $\delta > 0$ where $d_X(x,p) < \delta$ is only x = p so
         $d_Y(f(x),f(p)) = 0 < \epsilon$.
     \end{definition}
 
@@ -135,7 +135,7 @@
 
 
 
-    \begin{wtheorem}{Continuity at p $\rightleftharpoons$ lim f(p) = f(p)}{14cm}
+    \begin{wtheorem}{Continuity at p $\rightleftharpoons$ lim f(p) = f(p)}{16cm}
         Suppose E $\subset$ X, p $\in$ E, and
         f maps E into Y. Let p $\in$ E'.
 
@@ -161,7 +161,7 @@
 
 
 
-    \begin{wtheorem}{Continuity Chain Rule}{14cm}
+    \begin{wtheorem}{Continuity Chain Rule}{16cm}
         Suppose E $\subset$ X, f: E $\rightarrow$ Y, g: f(E) $\rightarrow$ Z,
         and h: E $\rightarrow$ Z where h(x) = g(f(x)).
 
@@ -200,11 +200,11 @@
 
 
 
-    \begin{wtheorem}{Continuous functions map open sets to open sets}{14cm}
+    \begin{wtheorem}{Continuous functions map open sets to open sets}{16cm}
         f: X $\rightarrow$ Y is continuous on X if and only if:
 
-        \hspace{1cm}
-        $f^{-1}(V)$ is open in X for every open set V in Y.
+        \hspace{0.5cm}
+        $f^{-1}(V)$ is open in X for every open set V in Y
     \end{wtheorem}
 
     \begin{proof}
@@ -234,11 +234,11 @@
 
 
 
-    \begin{corollary}{Continuous functions map closed sets to closed sets}{14cm}
+    \begin{corollary}{Continuous functions map closed sets to closed sets}{16cm}
         f: X $\rightarrow$ Y is continuous on X if and only if:
 
-        \hspace{1cm}
-        $f^{-1}(C)$ is closed in X for every closed set C in Y.        
+        \hspace{0.5cm}
+        $f^{-1}(C)$ is closed in X for every closed set C in Y   
     \end{corollary}
 
     \begin{proof}
@@ -257,7 +257,7 @@
 
 
 
-    \begin{wtheorem}{Continuous functions}{14cm}
+    \begin{wtheorem}{Continuous functions}{16cm}
         Let f,g be complex continuous functions on X.
 
         Then f+g, fg, and $\frac{f}{g}$ where g $\not =$ 0 for all x $\in$ X
@@ -327,16 +327,16 @@
 
 \subsection{ Continuity and Compactness }
 
-    \begin{definition}{Bounded Functions}{14cm}
-        f: E $\rightarrow$ $\mathbb{R}^k$ is bounded if there is a
-        M $\in$ $\mathbb{R}$ such that f(x) $\leq$ M for all x $\in$ E.        
+    \begin{definition}{Bounded Functions}{16cm}
+        f: E $\rightarrow$ $\mathbb{R}^k$ is {\color{lblue} bounded} if there is a
+        M $\in$ $\mathbb{R}$ such that f(x) $\leq$ M for all x $\in$ E     
     \end{definition}
 
     \vspace{0.5cm}
 
 
 
-    \begin{wtheorem}{Continuous functions from compact spaces are compact}{14cm}
+    \begin{wtheorem}{Continuous functions from compact spaces are compact}{16cm}
         Suppose f is a continuous mapping of a compact metric space X
         into a metric space Y. Then f(X) is compact.        
     \end{wtheorem}
@@ -362,9 +362,9 @@
 
 
     \begin{wtheorem}{Continuous functions from compact to
-    $\mathbb{R}^k$ are bounded}{14cm}
-        If f is a continuous mapping of a compact metric space X
-        into $\mathbb{R}^k$, then f(X) is closed and bounded. 
+    $\mathbb{R}^k$ are bounded}{16cm}
+        For continuous f: compact X $\rightarrow$ $\mathbb{R}^k$,
+        then f(X) is closed and bounded
     \end{wtheorem}
 
     \begin{proof}
@@ -376,7 +376,7 @@
 
 
 
-    \begin{wtheorem}{Generalized extreme value theorem}{14cm}
+    \begin{wtheorem}{Generalized extreme value theorem}{16cm}
         Suppose f is a continuous real function of a compact metric space X
         such that M = sup$_{x \in X}$ f(x) and m = inf$_{x \in X}$ f(x).
 
@@ -397,7 +397,7 @@
 
 
 
-    \begin{wtheorem}{If f is continuous 1-1, then $f^{-1}$ is continuous}{14cm}
+    \begin{wtheorem}{If f is continuous 1-1, then $f^{-1}$ is continuous}{16cm}
         Suppose f is a continuous 1-1 mapping of a compact metric space X
         onto a metric space Y.
         Then $f^{-1}$ is a continuous mapping of Y onto X.
@@ -421,15 +421,16 @@
 
 
 
-    \begin{definition}{Uniformly Continuous}{14cm}
-        Let f: X $\rightarrow$ Y. Then f is uniformly continuous on X if:
+    \begin{definition}{Uniformly Continuous}{16cm}
+        Let f: X $\rightarrow$ Y. Then f is {\color{lblue} uniformly continuous}
+        on X if:
         
-        \begin{adjustbox}{minipage=13cm, right, vspace=0.1cm 0cm}
+        \begin{adjustbox}{minipage=15cm, right, vspace=0.1cm 0cm}
             For every $\epsilon > 0$, there is a $\delta > 0$
-            such that for all p,q $\in$ X
-            
-            where $d_X(p,q) < \delta$, then
-            $d_Y(f(p),f(q)) < \epsilon$.
+            such that for all p,q $\in$ X where $d_X(p,q) < \delta$, then:
+
+            \hspace{0.5cm}
+            $d_Y(f(p),f(q)) < \epsilon$
         \end{adjustbox}
     \end{definition}
 
@@ -437,7 +438,7 @@
 
 
 
-    \begin{wtheorem}{Continuous functions on compact are uniformly continuous}{14cm}
+    \begin{wtheorem}{Continuous functions on compact are uniformly continuous}{16cm}
         Let f be a continuous mapping of a compact metric space X into
         metric space Y.
         Then f is uniformly continuous on X.
@@ -473,17 +474,17 @@
 
 
     \begin{wtheorem}{Continuous functions from noncompact
-    $\not \rightarrow$ uniformly continuous}{14cm}
+    $\not \rightarrow$ uniformly continuous}{16cm}
         Let E be a noncompact set in $\mathbb{R}^1$.
 
         \begin{enumerate}[label=(\alph*), leftmargin=1cm, itemsep=0.1cm]
-            \item There exists a continuous function which is not bounded.
+            \item There exists a continuous function which is not bounded
             
             \item There exists a continuous, bounded function which is
-            has no maximum.
+            has no maximum
             
             \item If E is bounded, there exists a continuous function which
-            is not uniformly continuous.
+            is not uniformly continuous
         \end{enumerate}
     \end{wtheorem}
     
@@ -515,7 +516,7 @@
 
 \subsection{ Continuity and Connectedness }
 
-    \begin{wtheorem}{Continuous functions map connected to connected}{14cm}
+    \begin{wtheorem}{Continuous functions map connected to connected}{16cm}
         If f is a continuous mapping of X into Y and E is a connected
         subset of X, then f(E) is connected.
     \end{wtheorem}
@@ -542,7 +543,7 @@
 
 
 
-    \begin{wtheorem}{Generalized Intermediate Value Theorem}{14cm}
+    \begin{wtheorem}{Generalized Intermediate Value Theorem}{16cm}
         Let f be a continuous real function on [a,b]. If f(a) $<$ c $<$ f(b),
         then there exists x $\in$ (a,b) such that f(x) = c.
     \end{wtheorem}
@@ -555,7 +556,7 @@
         is c $\in$ f(x) for some x $\in$ [a,b].
     \end{proof}
 
-    \vspace{0.3cm}
+    \vspace{0.5cm}
 
 
 
@@ -563,7 +564,7 @@
 
 \subsection{ Discontinuities }
 
-    \begin{definition}{Right and Left Limits}{14cm}
+    \begin{definition}{Right and Left Limits}{16cm}
         \small
         Let f be defined on (a,b).
         
@@ -589,17 +590,17 @@
         f(x-) = f(x+) = $\lim_{t \rightarrow x}$ f(t).
     \end{definition}
 
-    \vspace{0.3cm}
+    \vspace{0.5cm}
 
 
 
-    \begin{definition}{Types of discontinuities}{14cm}
+    \begin{definition}{Types of discontinuities}{16cm}
         \small
         If f is discontinuous at x, but f(x+) and f(x-) exists,
         then f have a simple discontinuity of the first kind else
         it is a discontinuity of the second kind.
 
-        Thus, a simple discontinuity is either:
+        Thus, a {\color{lblue} simple discontinuity} is either:
 
         \begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
             \item f(x-) $\not = $ f(x+)
@@ -608,7 +609,7 @@
         \end{itemize}
     \end{definition}
 
-    \vspace{0.3cm}
+    \vspace{0.5cm}
 
 
 
@@ -616,7 +617,7 @@
 
 \subsection{ Monotonic Functions }
 
-    \begin{definition}{Monotonic}{14cm}
+    \begin{definition}{Monotonic}{16cm}
         \small
         f: (a,b) $\rightarrow$ $\mathbb{R}$ is monotonically increasing
         if f(x) $\leq$ f(y) for $a < x < y < b$.
@@ -629,7 +630,7 @@
 
 
 
-    \begin{wtheorem}{Right and Left Limits of monotonics on (a,b)}{14cm}
+    \begin{wtheorem}{Right and Left Limits of monotonics on (a,b)}{16cm}
         Let f be monotonically increasing on (a,b).
 
         Then f(x+) and f(x-) exists at every x $\in$ (a,b) where:
@@ -691,7 +692,7 @@
 
 
 
-    \begin{corollary}{Monotonics can only have simple discontinuities}{14cm}
+    \begin{corollary}{Monotonics can only have simple discontinuities}{16cm}
         Monotonic functions have no discontinuities of the second kind
     \end{corollary}
 
@@ -705,9 +706,8 @@
 
 
 
-    \begin{wtheorem}{Discontinuities of monotonics is at most countable}{14cm}
+    \begin{wtheorem}{Discontinuities of monotonics is at most countable}{16cm}
         Let f be monotonic on (a,b).
-
         Then the set of points of (a,b) where f is discontinuous is
         at most countable.
     \end{wtheorem}
@@ -741,7 +741,7 @@
 
 \subsection{ Infinite Limits / Limits at Infinity }
 
-    \begin{definition}{Neighborhoods in extended reals}{14cm}
+    \begin{definition}{Neighborhoods in the Extended Reals}{16cm}
         For any real c, a neighborhood of $+\infty$ = (c,$+\infty$).
 
         For any real c, a neighborhood of $-\infty$ = ($-\infty$,c).        
@@ -751,13 +751,13 @@
 
 
 
-    \begin{definition}{Infinite Limits}{14cm}
+    \begin{definition}{Infinite Limits}{16cm}
         Let real function f be defined on E $\subset$ $\mathbb{R}$.
 
         Then f(t) $\rightarrow$ A as t $\rightarrow$ x where A and x
         are extended reals if:
         
-        \begin{adjustbox}{minipage=13cm, right, vspace=0.1cm 0cm}
+        \begin{adjustbox}{minipage=15cm, right, vspace=0.1cm 0cm}
             For every neighborhood U of A,
             there is a neighborhood V of x such that V $\cap$ E $\not =$ $\emptyset$
             and f(t) $\in$ U for all t $\in$ V $\cap$ E where t $\not =$ x.
@@ -768,7 +768,7 @@
 
 
 
-    \begin{wtheorem}{Arithmetric operations on functions of infinite limits}{14cm}
+    \begin{wtheorem}{Arithmetric operations on functions of infinite limits}{16cm}
         Let f,g be defined on E $\subset$ $\mathbb{R}$ where
         f(t) $\rightarrow$ A and g(t) $\rightarrow$ B as t $\rightarrow$ x.
     \end{wtheorem}
