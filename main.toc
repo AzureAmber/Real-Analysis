@@ -89,15 +89,15 @@
 \contentsline {subsection}{\numberline {17.1} Regulated Integral }{109}{subsection.17.1}%
 \contentsline {subsection}{\numberline {17.2} Outer Measure }{112}{subsection.17.2}%
 \contentsline {subsection}{\numberline {17.3} Lebesgue Measure }{115}{subsection.17.3}%
-\contentsline {subsection}{\numberline {17.4} Lebesgue Integral }{117}{subsection.17.4}%
-\contentsline {subsection}{\numberline {17.5} Lebesgue Integral of Bounded Functions }{119}{subsection.17.5}%
-\contentsline {section}{\numberline {18}Day 18: Convergence Theorems}{122}{section.18}%
-\contentsline {subsection}{\numberline {18.1} Bounded Convergence Theorem }{122}{subsection.18.1}%
-\contentsline {subsection}{\numberline {18.2} Integral of Unbounded Functions }{123}{subsection.18.2}%
-\contentsline {subsection}{\numberline {18.3} Dominated Convergence Theorems }{124}{subsection.18.3}%
-\contentsline {subsection}{\numberline {18.4} General Lebesgue Integral }{126}{subsection.18.4}%
-\contentsline {section}{\numberline {19}Day 19: $L^2$ Space}{129}{section.19}%
-\contentsline {subsection}{\numberline {19.1} $L^2$: Square Integrable Functions }{129}{subsection.19.1}%
-\contentsline {subsection}{\numberline {19.2} Convergence in $L^2$ }{131}{subsection.19.2}%
-\contentsline {subsection}{\numberline {19.3} Hilbert Space: $\mathcal {H}$ }{133}{subsection.19.3}%
-\contentsline {subsection}{\numberline {19.4} Fourier Series }{135}{subsection.19.4}%
+\contentsline {subsection}{\numberline {17.4} Lebesgue Integral }{120}{subsection.17.4}%
+\contentsline {subsection}{\numberline {17.5} Lebesgue Integral of Bounded Functions }{122}{subsection.17.5}%
+\contentsline {section}{\numberline {18}Day 18: Convergence Theorems}{125}{section.18}%
+\contentsline {subsection}{\numberline {18.1} Bounded Convergence Theorem: BCT }{125}{subsection.18.1}%
+\contentsline {subsection}{\numberline {18.2} Integral of Unbounded Functions }{126}{subsection.18.2}%
+\contentsline {subsection}{\numberline {18.3} Dominated Convergence Theorem: DCT }{127}{subsection.18.3}%
+\contentsline {subsection}{\numberline {18.4} General Lebesgue Integral }{129}{subsection.18.4}%
+\contentsline {section}{\numberline {19}Day 19: $L^2$ Space}{132}{section.19}%
+\contentsline {subsection}{\numberline {19.1} $L^2$: Square Integrable Functions }{132}{subsection.19.1}%
+\contentsline {subsection}{\numberline {19.2} Convergence in $L^2$ }{134}{subsection.19.2}%
+\contentsline {subsection}{\numberline {19.3} Hilbert Space: $\mathcal {H}$ }{136}{subsection.19.3}%
+\contentsline {subsection}{\numberline {19.4} Fourier Series }{138}{subsection.19.4}%
