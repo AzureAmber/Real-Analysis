@@ -73,13 +73,6 @@
 		\end{itemize}
 
 		Then $\alpha$ = inf(E)
-
-		\vspace{0.3cm}
-
-		Even if sup(E) exists, it may or may not exists at S.
-
-		If sup(E) exists, then sup(E) is unique.
-		Statement also holds true for inf(E).
 	\end{definition}
 	
 	\vspace{0.5cm}
@@ -90,13 +83,65 @@
 		Let S = $ (1,2) \cup [3,4) \cup (5,6) $ with the
 		order $ < $ from $ \mathbb{R} $. For subsets E of S:
 
-		\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
-			\item E = (1,2) is bounded above with sup(E) = 3 and not bounded below
+		\begin{itemize}[leftmargin=0cm, itemsep=0.1cm]
+			\item E = (1,2)
+				
+				- Not bounded below since any n $<$ 1 do not exist in S
+				\hspace{0.5cm}
+				$\Rightarrow$
+				\hspace{0.5cm}
+				inf(E) = None
 		
-			\item E = [3,4) is bounded below with inf(E) = 3, but sup(E) = DNE
+				- Is bounded above by [3,4) $\cup$ (5,6)
+				\hspace{0.5cm}
+				(i.e. 3, $\pi$, 5.5, etc)
 
-			\item E = (5,6) is not bounded above or below so inf(E), sup(E) = DNE
-		\end{itemize}	
+				\hspace{0.2cm}
+				sup(E) = 3 since 3 is the smallest upper bound
+
+			\item E = [3,4)
+			
+				- Is bounded below by (1,2) $\cup$ 3
+				\hspace{0.5cm}
+				(i.e. 3, 1.1, 1.01, etc)
+				
+				\hspace{0.2cm}
+				inf(E) = 3 since any n $>$ 3 is not a lower bound of E 
+				
+				- Is bounded above by (5,6)
+				\hspace{0.5cm}
+				(i.e. 5.1, 5.01, etc)
+
+				\hspace{0.2cm}
+				sup(E) = None since any upper bound can be smaller
+				(i.e. ... , 5.001 , 5.01, 5.1)
+
+			\item E = (5,6)
+			
+				- Is bounded below by (1,2) $\cup$ [3,4)
+				\hspace{0.5cm}
+				(i.e. 3, 3.5, 1.1, 1.01, etc)
+			
+				\hspace{0.2cm}
+				inf(E) = None since any lower bounded can be larger
+				(i.e. 3.9, 3.99, 3.999, etc)
+
+				- Is not bounded above since any n $>$ 6 do not exist in S
+				\hspace{0.5cm}
+				$\Rightarrow$
+				\hspace{0.5cm}
+				sup(E) = None
+		\end{itemize}
+
+		\vspace{0.5cm}
+
+
+		Boundedness does not guarantee the existence of inf or sup.
+
+		Even if sup(E) has a value, it may or may not exists at S.
+
+		If sup(E) exists, then sup(E) is unique.
+		Statement also holds true for inf(E).
 	\end{example}
 
 	\newpage

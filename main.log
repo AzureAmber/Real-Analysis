@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.30)  11 JUN 2022 20:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.30)  9 SEP 2022 11:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -535,11 +535,11 @@ LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <14.4> not available
 <Images/1.2.2.png, id=548, 527.72156pt x 167.87718pt>
 File: Images/1.2.2.png Graphic file (type png)
 <use Images/1.2.2.png>
-Package pdftex.def Info: Images/1.2.2.png  used on input line 212.
+Package pdftex.def Info: Images/1.2.2.png  used on input line 257.
 (pdftex.def)             Requested size: 263.86014pt x 83.93839pt.
  [6 <./Images/1.2.2.png>] [7] [8]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 441.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 486.
 ) (./Content/C2.tex [9] [10] [11] [12] [13]) (./Content/C3.tex [14]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -550,17 +550,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--25
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
@@ -788,7 +778,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  65i,20n,69p,395b,542s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (140 pages, 1372836 bytes).
+Output written on main.pdf (140 pages, 1373371 bytes).
 PDF statistics:
  1625 PDF objects out of 1728 (max. 8388607)
  1371 compressed objects within 14 object streams
